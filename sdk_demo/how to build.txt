@@ -1,7 +1,4 @@
-how to build?
-if you met build error about path issue, pls correct me! 
-You can find all files you need in sdk package.
-such as:
+
 change include path to sdk package include path
 change lib path to sdk package lib path
 change output path to sdk package bin path
