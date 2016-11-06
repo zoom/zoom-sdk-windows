@@ -26,6 +26,8 @@ enum MeetingStatus
 	MEETING_STATUS_FAILED,///< Meeting connection error
 	MEETING_STATUS_ENDED,///< Meeting is ended
 	MEETING_STATUS_UNKNOW,
+	MEETING_STATUS_LOCKED,
+	MEETING_STATUS_UNLOCKED,
 };
 
 /*! \enum MeetingFailCode
@@ -71,11 +73,21 @@ enum LeaveMeetingCmd
 	END_MEETING,///< End meeting
 };
 
-/*! \struct tagJoinParam
-    \brief Join meeting Parameter.
+/*! \enum SDKUserType
+    \brief SDK User Type.
     A more detailed struct description.
 */
-typedef struct tagJoinParam
+enum SDKUserType
+{
+	SDK_UT_APIUSER     = 99,///< API User type
+	SDK_UT_NORMALUSER = 100,///< Normal user type
+};
+
+/*! \struct tagJoinParam4APIUser
+    \brief Join meeting Parameter for API user.
+    A more detailed struct description.
+*/
+typedef struct tagJoinParam4APIUser
 {
 	UINT64 meetingNumber;///< Meeting's number
 	const wchar_t* userName;///< User Name in meeting
@@ -84,52 +96,87 @@ typedef struct tagJoinParam
 	HWND		hDirectShareAppWnd;///< share application directly
 	const wchar_t* toke4enfrocelogin;///< enforce login when join meeting
 	const wchar_t* participantId;///< for meeting participant report list, need web backend enable.
+}JoinParam4APIUser;
+
+/*! \struct tagJoinParam4APIUser
+    \brief Join meeting Parameter for API user.
+    A more detailed struct description.
+*/
+typedef struct tagJoinParam4NormalUser
+{
+	UINT64 meetingNumber;///< Meeting's number
+	const wchar_t* userName;///< User Name in meeting
+	const wchar_t* psw;///< Meeting's password
+	bool		   isDirectShareDesktop;///< share desktop directly
+	HWND		hDirectShareAppWnd;///< share application directly
+	const wchar_t* participantId;///< for meeting participant report list, need web backend enable.
+}JoinParam4NormalUser;
+
+/*! \struct tagJoinParam
+    \brief Join meeting Parameter for API user.
+    A more detailed struct description.
+*/
+typedef struct tagJoinParam
+{
+	SDKUserType userType;///< User type
+	union 
+	{
+		JoinParam4APIUser apiuserJoin;
+		JoinParam4NormalUser normaluserJoin;
+	} param;    
 	tagJoinParam()
 	{
-		meetingNumber = 0;
-		userName = NULL;
-		psw = NULL;
-		isDirectShareDesktop = false;
-		hDirectShareAppWnd = NULL;
-		toke4enfrocelogin = NULL;
-		participantId = NULL;
+		userType = SDK_UT_APIUSER;
+		memset(&param, 0, sizeof(param));
 	}
 }JoinParam;
 
-/*! \enum SDKUserType
-    \brief SDK User Type.
-    A more detailed struct description.
-*/
-enum SDKUserType
-{
-	SDK_UT_APIUSER     = 99,///< API User type
-};
-
-/*! \struct tagStartParam
+/*! \struct tagStartParam4APIUser
     \brief Start meeting Parameter.
     A more detailed struct description.
 */
-typedef struct tagStartParam
+typedef struct tagStartParam4APIUser
 {
 	const wchar_t* userID;///< User Id
 	const wchar_t* userToken;///< User token
 	const wchar_t* userName;///< User name
 	UINT64		meetingNumber;///< Meeting's number
-	SDKUserType userType;///< User type
 	bool		isDirectShareDesktop;///< share desktop directly
 	HWND		hDirectShareAppWnd;///< share application directly
+	const wchar_t* participantId;///< for meeting participant report list, need web backend enable.
+}StartParam4APIUser;
+
+/*! \struct tagStartParam4NormalUser
+    \brief Start meeting Parameter.
+    A more detailed struct description.
+*/
+typedef struct tagStartParam4NormalUser
+{
+	UINT64		meetingNumber;///< Meeting's number
+	bool		isDirectShareDesktop;///< share desktop directly
+	HWND		hDirectShareAppWnd;///< share application directly
+	const wchar_t* participantId;///< for meeting participant report list, need web backend enable.
+}StartParam4NormalUser;
+
+
+/*! \struct tagJoinParam
+    \brief Join meeting Parameter for API user.
+    A more detailed struct description.
+*/
+typedef struct tagStartParam
+{
+	SDKUserType userType;///< User type
+	union 
+	{
+		StartParam4APIUser apiuserStart;
+		StartParam4NormalUser normaluserStart;
+	} param;    
 	tagStartParam()
 	{
-		userID = NULL;
-		userToken = NULL;
-		userName = NULL;
-		meetingNumber = 0;
 		userType = SDK_UT_APIUSER;
-		isDirectShareDesktop = false;
-		hDirectShareAppWnd = NULL;
+		memset(&param, 0, sizeof(param));
 	}
 }StartParam;
-
 
 /*! \struct tagShowChatDlgParam
     \brief Show meeting chat dialog Parameter.
@@ -356,7 +403,6 @@ public:
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError SwtichToAcitveSpeaker() = 0;
 
-
 	/// \brief Move Float Video window
 	/// \param left Specifies The left position of the Float Video window.
 	/// \param top Specifies The top position of the Float Video window.
@@ -488,6 +534,22 @@ enum AnnotationClearType
 class IAnnotationController
 {
 public:
+	/// \brief The Annotation of the current meeting is disabled or not.
+	/// \return Disabled or not.
+	virtual bool IsAnnoataionDisable() = 0;
+
+	/// \brief start annotation
+	/// \param left Specifies The left position of the annotation bar.
+	/// \param top Specifies The top position of the annotation bar.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StartAnnotation(int left, int top) = 0;
+
+	/// \brief Stop current annotation
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StopAnnotation() = 0;
+
 	/// \brief Set Annotation Tool
 	/// \param type The parameter to be used for annotation tool type, refer to AnnotationToolType. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -556,6 +618,22 @@ public:
 	/// \brief Disable waiting for host dialog
 	/// \param bDisable Specifies waiting for host dialog show or not.
 	virtual void DisableWaitingForHostDialog(bool bDisable) = 0;
+
+	/// \brief Hide the meeting information from meeting UI
+	/// \param bHide Specifies the meeting information of meeting UI hide or not.
+	virtual void HideMeetingInfoFromMeetingUITitle(bool bHide) = 0;
+
+	/// \brief Set the meeting ID to be showed in meeting ui title
+	/// \param meetingNumber Specifies the meeting ID to be showed in meeting ui title.
+	virtual void SetMeetingIDForMeetingUITitle(UINT64 meetingNumber) = 0;
+	
+	/// \brief Disable wrong password error dialog when join meeting.
+	/// \param bDisable Specifies wrong password error dialog disable or not, if disable, you will get the MEETING_FAIL_PASSWORD_ERR meeting failed error.
+	virtual void DisablePopupMeetingWrongPSWDlg(bool bDisable) = 0;
+
+	/// \brief Enable auto end other meeting when you start a new meeting.
+	/// \param bEnable Specifies auto end other meeting enable or not.
+	virtual void EnableAutoEndOtherMeetingWhenStartMeeting(bool bEnable) = 0;
 };
 
 /// \brief Meeting Service Interface
@@ -668,18 +746,6 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError BlockWindowFromScreenshare(bool bBlock, HWND hWnd) = 0;
-
-	/// \brief start annotation
-	/// \param left Specifies The left position of the annotation bar.
-	/// \param top Specifies The top position of the annotation bar.
-	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	virtual SDKError StartAnnotation(int left, int top) = 0;
-
-	/// \brief Stop current annotation
-	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	virtual SDKError StopAnnotation() = 0;
 
 	/// \brief Lock current meeting
 	/// \return If the function succeeds, the return value is SDKErr_Success.

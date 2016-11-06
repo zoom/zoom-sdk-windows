@@ -17,6 +17,7 @@ extern "C"
 	class IAuthService;
 	class ISettingService;
 	class ICalenderService;
+	class IPreMeetingService;
 	/// \brief Initialize Zoom SDK
 	/// \param initParam Initialize Zoom SDK Parameter
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -65,11 +66,23 @@ extern "C"
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	SDK_API SDKError CreateCalenderService(ICalenderService** ppCalenderService);
 
-	/// \brief Destroy Calender Service Interface
+	/// \brief Destroy Account Service Interface
 	/// \param pCalenderService A pointer to a ICalenderService to be destroyed. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	SDK_API SDKError DestroyCalenderService(ICalenderService* pCalenderService);
+
+	/// \brief Create Pre-Meeting Service Interface
+	/// \param ppPreMeetingService A pointer to a IPreMeetingService* that receives IPreMeetingService Object. 
+	/// \return If the function succeeds, the return value is SDKErr_Success, and ppCalenderService is not NULL
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	SDK_API SDKError CreatePreMeetingService(IPreMeetingService** ppPreMeetingService);
+
+	/// \brief Destroy Pre-Meeting Service Interface
+	/// \param pPreMeetingService A pointer to a IPreMeetingService to be destroyed. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	SDK_API SDKError DestroyPreMeetingService(IPreMeetingService* pPreMeetingService);
 
 	/// \brief Clean up Zoom SDK
 	/// \return If the function succeeds, the return value is SDKErr_Success.

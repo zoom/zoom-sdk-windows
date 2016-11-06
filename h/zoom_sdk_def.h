@@ -53,6 +53,10 @@ enum SDK_LANGUAGE_ID
 	LANGUAGE_English,
 	LANGUAGE_Chinese_Simplified,
 	LANGUAGE_Chinese_Traditional,
+	LANGUAGE_Japanese,
+	LANGUAGE_Spanish,
+	LANGUAGE_German,
+	LANGUAGE_French,
 };
 
 typedef struct tagWndPosition 

@@ -9,6 +9,7 @@
 #include "meeting_service_interface.h"
 #include "auth_service_interface.h"
 #include "setting_service_interface.h"
+#include "premeeting_service_interface.h"
 #define MAX_LOADSTRING 100
 
 // Global Variables:
@@ -153,7 +154,57 @@ public:
 	}
 };
 CMeetingServiceEvent g_meetingEvent;
+ZOOM_SDK_NAMESPACE::IAuthService* pAuthService = NULL;
 
+ZOOM_SDK_NAMESPACE::IPreMeetingService* g_preMeeting = NULL;
+class CPreMeetingServiceEvent : public ZOOM_SDK_NAMESPACE::IPreMeetingServiceEvent
+{
+public:
+	virtual void onListMeeting(ZOOM_SDK_NAMESPACE::PremeetingAPIResult result, ZOOM_SDK_NAMESPACE::IList<UINT64 >* lstMeetingList)
+	{
+		if (ZOOM_SDK_NAMESPACE::PREMETAPIRET_SUCCESS == result)
+		{
+			static bool doOnce(true);
+			if (doOnce && g_preMeeting)
+			{
+				doOnce = false;
+				if (lstMeetingList)
+				{
+					int count = lstMeetingList->GetCount();
+					for (int i = 0; i < count; i ++)
+					{
+						UINT64 meetingid = lstMeetingList->GetItem(i);
+						ZOOM_SDK_NAMESPACE::IMyMeetingItem* item = g_preMeeting->GetMeeingItem(meetingid);
+						if (item && 
+							!item->IsPersonalMeeting()
+							&& !item->IsWebinarMeeting()
+							&& !item->IsRecurringMeeting())
+						{
+							ZOOM_SDK_NAMESPACE::IScheduleMeetingItem* editItem = g_preMeeting->CreateScheduleMeetingItem();
+							if (editItem)
+							{
+								editItem->SetMeetingTopic(L"test edit");
+								g_preMeeting->EditMeeting(meetingid, editItem);
+								g_preMeeting->DestoryScheduleMeetingItem(editItem);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	virtual void onScheduleOrEditMeeting(ZOOM_SDK_NAMESPACE::PremeetingAPIResult result, UINT64 meetingUniqueID)
+	{
+
+	}
+
+	virtual void onDeleteMeeting(ZOOM_SDK_NAMESPACE::PremeetingAPIResult result)
+	{
+
+	}
+};
+CPreMeetingServiceEvent premeetingEvent;
 class CAuthServiceEvent : public ZOOM_SDK_NAMESPACE::IAuthServiceEvent
 {
 public:
@@ -165,9 +216,43 @@ public:
 		sprintf(szLog, "onAuthenticationReturn:%d\r\n", ret);
 		OutputDebugStringA(szLog);
 		MessageBoxA(NULL, szLog, "Authentication", MB_OK);
+
+		if (ZOOM_SDK_NAMESPACE::AUTHRET_SUCCESS == ret
+			&& pAuthService)
+		{
+			ZOOM_SDK_NAMESPACE::LoginParam param;
+#error	TODO:input your account info
+			param.userName = L"your account info";
+			param.password = L"password of your account";
+			param.bRememberMe = true;
+			pAuthService->Login(param);
+		}
+	}
+
+	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo)
+	{
+		char szLog[MAX_PATH] = { 0 };
+		sprintf(szLog, "onLoginRet:%d\r\n", status);
+		OutputDebugStringA(szLog);
+		MessageBoxA(NULL, szLog, "onLoginRet", MB_OK);
+		if (ZOOM_SDK_NAMESPACE::LOGIN_SUCCESS == status)
+		{
+			ZOOM_SDK_NAMESPACE::CreatePreMeetingService(&g_preMeeting);
+			if (g_preMeeting)
+			{
+				g_preMeeting->SetEvent(&premeetingEvent);
+				g_preMeeting->ListMeeting();
+			}
+		}
+
+	}
+
+	virtual void onLogout()
+	{
+
 	}
 };
-
+CAuthServiceEvent authEvent;
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
                      LPTSTR    lpCmdLine,
@@ -187,11 +272,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 	BOOL bSDKReady(FALSE);
 	ZOOM_SDK_NAMESPACE::InitParam param_;
-	ZOOM_SDK_NAMESPACE::IAuthService* pAuthService = NULL;
-	CAuthServiceEvent authEvent;
 	do 
 	{
-#error TODO:pass your domain
+#error	TODO:input your web domain
 		param_.strWebDomain = _T("");
 		if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS != ZOOM_SDK_NAMESPACE::InitSDK(param_))
 			break;
@@ -201,7 +284,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 			break;
 
 		pAuthService->SetEvent(&authEvent);
-#error	TODO:pass your appKey and appSecret
+#error	TODO:input your app Key and Secret
 		ZOOM_SDK_NAMESPACE::AuthParam authParam;
 		authParam.appKey = L"";
 		authParam.appSecret = L"";
@@ -356,15 +439,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				if (g_pMeetService
 					&& !IsInMeeting(g_pMeetService->GetMeetingStatus()))
 				{
-#error	TODO:pass your user and meeting information 
+					//normal user to start meeting, you need to login fistly
+					/**/
 					ZOOM_SDK_NAMESPACE::StartParam startParam;
-					startParam.userID = L"";
-					startParam.userToken = L"";
-					startParam.userName = L"";
-					startParam.meetingNumber = ;
-					startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_APIUSER;
-					startParam.isDirectShareDesktop = true;
+					startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_NORMALUSER;
+					ZOOM_SDK_NAMESPACE::StartParam4NormalUser& normalParam = startParam.param.normaluserStart;
+					normalParam.meetingNumber = 0;
+					normalParam.isDirectShareDesktop = false;///direct share desktop or not when you start meeting
+					normalParam.hDirectShareAppWnd = NULL;///direct share window or not when you start meeting
 					g_pMeetService->Start(startParam);
+
+					//api user to start meeting
+					/*
+					ZOOM_SDK_NAMESPACE::StartParam startParam;
+					startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_APIUSER;
+					ZOOM_SDK_NAMESPACE::StartParam4APIUser& apiuserParam = startParam.param.apiuserStart;
+					apiuserParam.userID = L"your user id, get this via RestAPI";
+					apiuserParam.userToken = L"your user id, get this via RestAPI";
+					apiuserParam.userName = L"your display name"
+					apiuserParam.meetingNumber = 111111111;///you can schedule meeting via RestAPI
+					apiuserParam.isDirectShareDesktop = false;///direct share desktop or not when you start meeting
+					apiuserParam.hDirectShareAppWnd = NULL;///direct share window or not when you start meeting
+					g_pMeetService->Start(startParam);
+					*/
 				}
 			}
 			break;
@@ -374,10 +471,32 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					&& !IsInMeeting(g_pMeetService->GetMeetingStatus()))
 				{
 					DialogBox(hInst, MAKEINTRESOURCE(IDD_DLG_JM), hWnd, JoinMeetingDlg);
+					//normal user to join meeting, you need to login fistly
+					/**/
 					ZOOM_SDK_NAMESPACE::JoinParam joinParam;
-					joinParam.meetingNumber = g_meetingNum;
-					joinParam.userName = L"sdk demo";
+					joinParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_NORMALUSER;
+					ZOOM_SDK_NAMESPACE::JoinParam4NormalUser& normalParam = joinParam.param.normaluserJoin;
+					normalParam.meetingNumber = g_meetingNum;
+					normalParam.userName = L"your display name";
+					normalParam.psw = L"Meeting's password";
+					normalParam.isDirectShareDesktop = false;///direct share desktop or not when you start meeting
+					normalParam.hDirectShareAppWnd = NULL;///direct share window or not when you start meeting
 					g_pMeetService->Join(joinParam);
+
+					//api user to join meeting
+					/*
+					ZOOM_SDK_NAMESPACE::JoinParam joinParam;
+					joinParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_APIUSER;
+					ZOOM_SDK_NAMESPACE::JoinParam4APIUser& apiParam = joinParam.param.apiuserJoin;
+					apiParam.meetingNumber = g_meetingNum;
+					apiParam.userName = L"your display name";
+					apiParam.psw = L"Meeting's password";
+					apiParam.isDirectShareDesktop = false;///direct share desktop or not when you start meeting
+					apiParam.hDirectShareAppWnd = NULL;///direct share window or not when you start meeting
+					apiParam.toke4enfrocelogin = L"token for enforce login meeting";
+					apiParam.participantId = L"participant Id";///for meeting participant report list, need web backend enable.
+					g_pMeetService->Join(joinParam);
+					*/
 				}
 			}
 			break;
@@ -622,14 +741,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			break;
 		case ID_SDK_STARTANNOTATION:
 			{
+				ZOOM_SDK_NAMESPACE::IAnnotationController* pAnno(NULL);
 				if (g_pMeetService)
-					g_pMeetService->StartAnnotation(0, 0);
+					pAnno = g_pMeetService->GetAnnotationController();
+
+				if (pAnno)
+					pAnno->StartAnnotation(0, 0);
 			}
 			break;
 		case ID_SDK_STOPANNOTATION:
 			{
+				ZOOM_SDK_NAMESPACE::IAnnotationController* pAnno(NULL);
 				if (g_pMeetService)
-					g_pMeetService->StopAnnotation();
+					pAnno = g_pMeetService->GetAnnotationController();
+
+				if (pAnno)
+					pAnno->StopAnnotation();
 			}
 			break;
 		case ID_ANNOTATIONCTRL_SETPENTOOL:
@@ -852,9 +979,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				{
 					ZOOM_SDK_NAMESPACE::IMeetingUIController* pCtrl = g_pMeetService->GetUIController();
 					pCtrl->ShowBottomFloatToolbarWnd(bShow);
-
-					HWND hFristView(NULL), hSecondView(NULL);
-					pCtrl->GetMeetingUIWnd(hFristView, hSecondView);
 				}
 			}
 			break;
