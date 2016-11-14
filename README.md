@@ -1,7 +1,7 @@
 # Windows
 
 
-Example App in VC++ using Zoom windows SDK - https://developer.zoom.us/windows
+Example App using the SDK is available inside this repository.
 
 This sample include a VS project. To use it:
 
