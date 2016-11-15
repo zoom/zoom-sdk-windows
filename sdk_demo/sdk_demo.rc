@@ -1,0 +1,348 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_JM DIALOGEX 0, 0, 141, 32
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Meeting Number"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,7,50,18
+    EDITTEXT        IDC_EDIT_METNUM,7,8,77,17,ES_AUTOHSCROLL
+END
+
+IDD_DLG_MONITORSHARE DIALOGEX 0, 0, 141, 32
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Monitor ID"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,7,50,18
+    EDITTEXT        IDC_EDIT_MONITORNUM,7,8,77,17,ES_AUTOHSCROLL
+END
+
+IDD_DLG_APPSHARE DIALOGEX 0, 0, 141, 32
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "App HWND"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,7,50,18
+    EDITTEXT        IDC_EDIT_APPHWND,7,8,77,17,ES_AUTOHSCROLL
+END
+
+IDD_DLG_SETDEFCAMERA DIALOGEX 0, 0, 141, 32
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Camera ID"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,7,50,18
+    EDITTEXT        IDC_EDIT_CAMERAID,7,8,77,17,ES_AUTOHSCROLL
+END
+
+IDD_DLG_MUTE DIALOGEX 0, 0, 141, 32
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "UserId"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,7,50,18
+    EDITTEXT        IDC_EDIT_METNUM,7,8,77,17,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_JM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 25
+    END
+
+    IDD_DLG_MONITORSHARE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 25
+    END
+
+    IDD_DLG_APPSHARE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 25
+    END
+
+    IDD_DLG_SETDEFCAMERA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 25
+    END
+
+    IDD_DLG_MUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 25
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About sdk_demo"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            128,IDC_STATIC,14,14,21,20
+    LTEXT           "sdk_demo, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SDK_DEMO            ICON                    "sdk_demo.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_SDK_DEMO MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+    POPUP "&SDK"
+    BEGIN
+        MENUITEM "&JOIN ...",                   IDM_JOIN
+        MENUITEM "&START ...",                  IDM_START
+        MENUITEM "&LEAVE ...",                  IDM_LEAVE
+        MENUITEM "&END ...",                    IDM_END
+        MENUITEM "StartRec",                    ID_SDK_STARTREC
+        MENUITEM "StopRec",                     ID_SDK_STOPREC
+        MENUITEM "MuteVideo",                   ID_SDK_MUTEVIDEO
+        MENUITEM "UnmuteVideo",                 ID_SDK_UNMUTEVIDEO
+        MENUITEM "StartMonitorShare",           ID_SDK_STARTMONITORSHARE
+        MENUITEM "StartAppShare",               ID_SDK_STARTAPPSHARE
+        MENUITEM "StopShare",                   ID_SDK_STOPSHARE
+        MENUITEM "ShowChatDialog",              ID_SDK_SHOWCHATDIALOG
+        MENUITEM "HideChatDialog",              ID_SDK_HIDECHATDIALOG
+        MENUITEM "GetCameraList",               ID_SDK_GETCAMERALIST
+        MENUITEM "SetDefCamera",                ID_SDK_SETDEFCAMERA
+        MENUITEM "EnterFullScreen",             ID_SDK_ENTERFULLSCREEN
+        MENUITEM "ExitFullScreen",              ID_SDK_EXITFULLSCREEN
+        MENUITEM "SwitchToVideoWall",           ID_SDK_SWITCHTOVIDEOWALL
+        MENUITEM "SwitchToActiveSpeaker",       ID_SDK_SWITCHTOACTIVESPEAKER
+        MENUITEM "DisableDualScreenMode",       ID_SDK_DisableDualScreenMode
+        MENUITEM "EnableDualScreenMode",        ID_SDK_ENABLEDUALSCREENMODE
+        MENUITEM "ShowSettingDialog",           ID_SDK_SHOWSETTINGDIALOG
+        MENUITEM "HideSettingDialog",           ID_SDK_HIDESETTINGDIALOG
+        MENUITEM "LockMeeting",                 ID_SDK_LOCKMEETING
+        MENUITEM "UnLockMeeting",               ID_SDK_UNLOCKMEETING
+        MENUITEM "StartAnnotation",             ID_SDK_STARTANNOTATION
+        MENUITEM "StopAnnotation",              ID_SDK_STOPANNOTATION
+        POPUP "AnnotationCtrl"
+        BEGIN
+            MENUITEM "SetPenTool",                  ID_ANNOTATIONCTRL_SETPENTOOL1
+            MENUITEM "SetRedColor",                 ID_ANNOTATIONCTRL_SETREDCOLOR
+            MENUITEM "SetLineWidth",                ID_ANNOTATIONCTRL_SETLINEWIDTH
+            MENUITEM "UnDo",                        ID_ANNOTATIONCTRL_UNDO
+            MENUITEM "Redo",                        ID_ANNOTATIONCTRL_REDO
+            MENUITEM "ClearAll",                    ID_ANNOTATIONCTRL_CLEARALL
+            MENUITEM "SwitchMouse",                 ID_ANNOTATIONCTRL_SWITCHMOUSE
+        END
+        MENUITEM "MoveFloatVideoWnd",           ID_SDK_MOVEFLOATVIDEOWND
+        POPUP "RemoteControl"
+        BEGIN
+            MENUITEM "RequestRemoteControl",        ID_REMOTECONTROL_REQUESTREMOTECONTROL
+            MENUITEM "GiveupRemoteControl",         ID_REMOTECONTROL_GIVEUPREMOTECONTROL
+            MENUITEM "CancelRemoteControl",         ID_REMOTECONTROL_CANCELREMOTECONTROL
+        END
+        MENUITEM "GetInviteEmailTemplate",      ID_SDK_GETINVITEEMAILTEMPLATE
+        POPUP "UI"
+        BEGIN
+            MENUITEM "ShowSharingFloatToolbar",     ID_UI_SHOWSHARINGFLOATTOOLBAR
+            MENUITEM "ShowSharingFrameWnd",         ID_UI_SHOWSHARINGFRAMEWND
+            MENUITEM "SwitchFloatVideoToActive",    ID_UI_SWITCHFLOATVIDEOTOACTIVE
+            MENUITEM "SwitchFloatVideoToList",      ID_UI_SWITCHFLOATVIDEOTOLIST
+            MENUITEM "GetAllUseOutputDebugStr",     ID_UI_GETALLUSEOUTPUTDEBUGSTR
+            MENUITEM "GetMeetingTopci",             ID_UI_G
+            MENUITEM "ShowUserList",                ID_UI_SHOWUSERLIST
+            MENUITEM "HideUserList",                ID_UI_HIDEUSERLIST
+            MENUITEM "Mute",                        ID_UI_MUTE
+        END
+    END
+    POPUP "SDK2"
+    BEGIN
+        MENUITEM "turnoffAeromode",             ID_SDK2_TURNOFFAEROMODE
+        MENUITEM "GetNetStatus",                ID_SDK2_GET
+        MENUITEM "GetCurRemoteCtrl",            ID_SDK2_GETCURREMOTE
+        POPUP "UI"
+        BEGIN
+            MENUITEM "ShowFloatACTModMax",          ID_UI_SHOWFLOATACTMODMAX
+            MENUITEM "ShowFloatACTModMin",          ID_UI_SHOWFLOATACTMODMIN
+            MENUITEM "HideBottomToolBar",           ID_UI_HIDEBOTTOMTOOLBAR
+        END
+        MENUITEM "SendHelloToAll",              ID_SDK2_SENDHELLOTOALL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_SDK_DEMO ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "sdk_demo"
+    IDC_SDK_DEMO            "SDK_DEMO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
