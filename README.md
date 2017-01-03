@@ -1,5 +1,6 @@
 # Windows
 
+Use of this software is subject to important terms and conditions as set forth in the License file
 
 Example App using the SDK is available inside this repository.
 
