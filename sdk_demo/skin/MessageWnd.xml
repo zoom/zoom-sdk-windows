@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,150" caption="0,0,0,32" >
+	<!--Font size 9-->
+	<Font name="Segoe UI" size="12" bold="true"/>
+	<Font name="Segoe UI" size="12" bold="false"/>
+	<!--Font size 10-->
+	<Font name="Segoe UI" size="13" bold="false"/>
+	<Font name="Segoe UI" size="13" bold="true"/>
+	<!--Font size 14-->
+	<Font name="Segoe UI" size="18" bold="false"/>
+	<!--Font size 8-->
+	<Font name="Segoe UI" size="11" bold="false"/>
+	<!--Font size 12-->
+	<Font name="Segoe UI" size="16" bold="false"/>
+	<!--7-->
+	<Font name="Segoe UI" size="14" bold="true" />
+	<Font name="Segoe UI" size="12" bold="false" underline="true"/>
+	<!--9-->
+	<Font name="Segoe UI" size="15" bold="true" />
+	<Font name="Segoe UI" size="14" bold="false" />	
+	
+	<Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; normalimage=&quot;res='BlueButtonnormal.png' restype='ZPIMGRES' &quot; hotimage=&quot;res='BlueButtonhover.png' restype='ZPIMGRES' &quot;  pushedimage=&quot;res='BlueButtonpress.png' restype='ZPIMGRES' &quot; disabledimage=&quot;res='BlueButtondisabled.png' restype='ZPIMGRES'&quot;  " />
+	
+	<VerticalLayout  bkcolor="#FFF0F0F0" bkcolor2="#FFAAAAA0">	
+		<Control />
+		<HorizontalLayout>
+			<Control />
+			<label name="lb_input_val" text="User ID:" font="10" width="80" height="30" />
+			<RichEdit name="edit_input_val" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="10" width="100" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+			<Control />
+		</HorizontalLayout>
+		<Control />
+		<HorizontalLayout>
+			<Control />
+			<Button name="btn_ok" text="OK" textcolor="#FFFFFFFF" font="10" width="80" height="30" />
+			<Control />
+		</HorizontalLayout>	
+		<Control height="20"/>		
+	</VerticalLayout >
+</Window>
