@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## 2017-06-06
+
+### Added
+
+1. Lock share status notify
+
+2. Support switch video wall to next page feature
+
+3. Support join leave VoIP feature
+
+4. Support get meeting type feature
+
+5. Support get user role feature
+
+6. Breakout room feature enhancement
+
+7. Webinar feature enhancement
+
+8. Waiting room feature enhancement
+
+9. More settings support:
+    1> Support disable input meeting password dialog
+    2> Allow or disallow "can unmute by self if mute by host" flag
+    3> Support hide enter and exit full screen button
+
+10. Bug fix
+
 ## 2017-04-12
 
 ### Added
