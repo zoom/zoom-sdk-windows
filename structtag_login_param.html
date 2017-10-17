@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -51,20 +51,28 @@ $(function() {
  <a href="structtag_login_param.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="auth__service__interface_8h_source.html">auth_service_interface.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for tagLoginParam:</div>
+<div class="dyncontent">
+<div class="center"><img src="structtag_login_param__coll__graph.png" border="0" usemap="#tag_login_param_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a50b7e4c575ef5731c90dd76cdcc82cad"><td class="memItemLeft" align="right" valign="top"><a id="a50b7e4c575ef5731c90dd76cdcc82cad"></a>
-const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_login_param.html#a50b7e4c575ef5731c90dd76cdcc82cad">userName</a></td></tr>
-<tr class="memdesc:a50b7e4c575ef5731c90dd76cdcc82cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Account name. email or something else. <br /></td></tr>
-<tr class="separator:a50b7e4c575ef5731c90dd76cdcc82cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af20e2aad75657a46e67e450795e9380b"><td class="memItemLeft" align="right" valign="top"><a id="af20e2aad75657a46e67e450795e9380b"></a>
-const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_login_param.html#af20e2aad75657a46e67e450795e9380b">password</a></td></tr>
-<tr class="memdesc:af20e2aad75657a46e67e450795e9380b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Account password. <br /></td></tr>
-<tr class="separator:af20e2aad75657a46e67e450795e9380b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1257e5cad4999a23ed8b51a71e962702"><td class="memItemLeft" align="right" valign="top"><a id="a1257e5cad4999a23ed8b51a71e962702"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>bRememberMe</b></td></tr>
-<tr class="separator:a1257e5cad4999a23ed8b51a71e962702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9799e5c8726733dfeb403d11ff8aa19e"><td class="memItemLeft" align="right" valign="top"><a id="a9799e5c8726733dfeb403d11ff8aa19e"></a>
+<a class="el" href="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17">LoginType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loginType</b></td></tr>
+<tr class="separator:a9799e5c8726733dfeb403d11ff8aa19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7fc42aa1d87095c877e7c97abae6f7"><td class="memItemLeft" ><a id="a1b7fc42aa1d87095c877e7c97abae6f7"></a>
+union {</td></tr>
+<tr class="memitem:a1e87f101996f09578c39ec10b46d58ca"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="structtag_login_param4_email.html">LoginParam4Email</a>&#160;&#160;&#160;<b>emailLogin</b></td></tr>
+<tr class="separator:a1e87f101996f09578c39ec10b46d58ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a71b9e87ebbda88f7b2fcf261d1d4d"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="structtag_login_param4_s_s_o.html">LoginParam4SSO</a>&#160;&#160;&#160;<b>ssoLogin</b></td></tr>
+<tr class="separator:aa0a71b9e87ebbda88f7b2fcf261d1d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7fc42aa1d87095c877e7c97abae6f7"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>ut</b></td></tr>
+<tr class="separator:a1b7fc42aa1d87095c877e7c97abae6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Account login Parameter. A more detailed struct description. </p>

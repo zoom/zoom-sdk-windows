@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -70,6 +70,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_auth_param.html">tagAuthParam</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK Authentication Parameter. A more detailed struct description.  <a href="structtag_auth_param.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_login_param4_email.html">tagLoginParam4Email</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_login_param4_s_s_o.html">tagLoginParam4SSO</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_login_param.html">tagLoginParam</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Account login Parameter. A more detailed struct description.  <a href="structtag_login_param.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -88,6 +92,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ae9ba8b7acfa4b8cd1f3989f0c79268d3"><td class="memItemLeft" align="right" valign="top"><a id="ae9ba8b7acfa4b8cd1f3989f0c79268d3"></a>
 typedef struct <a class="el" href="structtag_auth_param.html">tagAuthParam</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AuthParam</b></td></tr>
 <tr class="separator:ae9ba8b7acfa4b8cd1f3989f0c79268d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad76fabf61b3fb7ff964694f97a0704e"><td class="memItemLeft" align="right" valign="top"><a id="aad76fabf61b3fb7ff964694f97a0704e"></a>
+typedef struct <a class="el" href="structtag_login_param4_email.html">tagLoginParam4Email</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoginParam4Email</b></td></tr>
+<tr class="separator:aad76fabf61b3fb7ff964694f97a0704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba42574f1dd6ef57331d918c10f7865"><td class="memItemLeft" align="right" valign="top"><a id="aaba42574f1dd6ef57331d918c10f7865"></a>
+typedef struct <a class="el" href="structtag_login_param4_s_s_o.html">tagLoginParam4SSO</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoginParam4SSO</b></td></tr>
+<tr class="separator:aaba42574f1dd6ef57331d918c10f7865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea2a25fe22fce84fad6e54e16fb3f3f"><td class="memItemLeft" align="right" valign="top"><a id="a6ea2a25fe22fce84fad6e54e16fb3f3f"></a>
 typedef struct <a class="el" href="structtag_login_param.html">tagLoginParam</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoginParam</b></td></tr>
 <tr class="separator:a6ea2a25fe22fce84fad6e54e16fb3f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,6 +124,12 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a5b5add41f92daed16877ae15bb8e3a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login status. A more detailed struct description.  <a href="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6b">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a5b5add41f92daed16877ae15bb8e3a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d23c4249c4d0ef998c9309eeb084b17"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17">LoginType</a> { <b>LoginType_Unknown</b>, 
+<a class="el" href="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17a203b2132f69cc89dcea95bbf7d5a18a3">LoginType_Email</a>, 
+<a class="el" href="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17a44daaae9228eacfe94b613213d5d7910">LoginType_SSO</a>
+ }<tr class="memdesc:a2d23c4249c4d0ef998c9309eeb084b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of user login. A more detailed struct description.  <a href="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a2d23c4249c4d0ef998c9309eeb084b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Authentication Service Interface. </p>
@@ -172,6 +188,28 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a5b5add41f92daed16877ae15bb8e3a6baee62dab80d180773d80f882c0b84c535"></a>LOGIN_SUCCESS&#160;</td><td class="fielddoc"><p>Login success. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5b5add41f92daed16877ae15bb8e3a6bad57e6995e0b5105bfeb9bde15ed0a7a0"></a>LOGIN_FAILED&#160;</td><td class="fielddoc"><p>Login failed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2d23c4249c4d0ef998c9309eeb084b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d23c4249c4d0ef998c9309eeb084b17">&#9670;&nbsp;</a></span>LoginType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17">LoginType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type of user login. A more detailed struct description. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2d23c4249c4d0ef998c9309eeb084b17a203b2132f69cc89dcea95bbf7d5a18a3"></a>LoginType_Email&#160;</td><td class="fielddoc"><p>Login with work email. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2d23c4249c4d0ef998c9309eeb084b17a44daaae9228eacfe94b613213d5d7910"></a>LoginType_SSO&#160;</td><td class="fielddoc"><p>Login with SSO token. </p>
 </td></tr>
 </table>
 

@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -54,15 +54,21 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4ac02ca4a49e51dd91e7953efb6844ca"><td class="memItemLeft" align="right" valign="top"><a id="a4ac02ca4a49e51dd91e7953efb6844ca"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="el" href="structtag_calender_auth_param.html">CalenderAuthParam</a> &amp;authParam)=0</td></tr>
-<tr class="separator:a4ac02ca4a49e51dd91e7953efb6844ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76fd07f937e6ffda41b834d909fd0b4"><td class="memItemLeft" align="right" valign="top"><a id="aa76fd07f937e6ffda41b834d909fd0b4"></a>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="el" href="class_i_calender_service_event.html">ICalenderServiceEvent</a> *pEvent)=0</td></tr>
+<tr class="separator:aa76fd07f937e6ffda41b834d909fd0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad45dd1babcba4a448ef36516fd193f8c"><td class="memItemLeft" align="right" valign="top"><a id="ad45dd1babcba4a448ef36516fd193f8c"></a>
 virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Uninit</b> ()=0</td></tr>
 <tr class="separator:ad45dd1babcba4a448ef36516fd193f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b4373c007728f126dda2acc164a5142"><td class="memItemLeft" align="right" valign="top"><a id="a6b4373c007728f126dda2acc164a5142"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RetrieveCalEvents</b> (int uElapse, bool bStop)=0</td></tr>
-<tr class="separator:a6b4373c007728f126dda2acc164a5142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efe9ce0947fa52e8028200d67852d6b"><td class="memItemLeft" align="right" valign="top"><a id="a3efe9ce0947fa52e8028200d67852d6b"></a>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StartOutlookExchangeCalender</b> (<a class="el" href="structtag_outlook_exchage_auth.html">OutlookExchageAuth</a> &amp;param)=0</td></tr>
+<tr class="separator:a3efe9ce0947fa52e8028200d67852d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92f6424820f53e3037093202dd8acff"><td class="memItemLeft" align="right" valign="top"><a id="ad92f6424820f53e3037093202dd8acff"></a>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StopOutlookExchangeCalender</b> ()=0</td></tr>
+<tr class="separator:ad92f6424820f53e3037093202dd8acff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d8fef1a845d6ee41b309dbd358639c"><td class="memItemLeft" align="right" valign="top"><a id="ad6d8fef1a845d6ee41b309dbd358639c"></a>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RetrieveCalEvents</b> (CalenderAuthType type)=0</td></tr>
+<tr class="separator:ad6d8fef1a845d6ee41b309dbd358639c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Calender Service Interface. </p>

@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -70,6 +70,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae872fabba4acc33e123858e7ebfd0aa9"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__ext_8h.html#ae872fabba4acc33e123858e7ebfd0aa9">DestroyEmbeddedBrowser</a> (<a class="el" href="class_i_embedded_browser.html">IEmbeddedBrowser</a> *pEmbeddedBrowser)</td></tr>
 <tr class="memdesc:ae872fabba4acc33e123858e7ebfd0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy Embedded Browser Interface.  <a href="#ae872fabba4acc33e123858e7ebfd0aa9">More...</a><br /></td></tr>
 <tr class="separator:ae872fabba4acc33e123858e7ebfd0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480b96870f76f1fbe0d51b5d4e440acb"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb">RetrieveUIHooker</a> (<a class="el" href="class_i_u_i_hooker.html">IUIHooker</a> **ppUIHooker)</td></tr>
+<tr class="memdesc:a480b96870f76f1fbe0d51b5d4e440acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve UI Hooker Interface.  <a href="#a480b96870f76f1fbe0d51b5d4e440acb">More...</a><br /></td></tr>
+<tr class="separator:a480b96870f76f1fbe0d51b5d4e440acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Zoom Windows SDK. </p>
@@ -136,6 +139,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a480b96870f76f1fbe0d51b5d4e440acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480b96870f76f1fbe0d51b5d4e440acb">&#9670;&nbsp;</a></span>RetrieveUIHooker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> RetrieveUIHooker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_u_i_hooker.html">IUIHooker</a> **&#160;</td>
+          <td class="paramname"><em>ppUIHooker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve UI Hooker Interface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ppUIHooker</td><td>A pointer to a IUIHooker* that receives <a class="el" href="class_i_u_i_hooker.html" title="Embedded Browser Interface. ">IUIHooker</a> Object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
 
 </div>
 </div>

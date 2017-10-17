@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a984a93abff339fe54083f430499f98de"><td class="memItemLeft" align="right" valign="top">virtual PhoneStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a984a93abff339fe54083f430499f98de">GetCallMeStatus</a> ()=0</td></tr>
 <tr class="memdesc:a984a93abff339fe54083f430499f98de"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the status of the in progress callme.  <a href="#a984a93abff339fe54083f430499f98de">More...</a><br /></td></tr>
 <tr class="separator:a984a93abff339fe54083f430499f98de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebb5099a93459ae79ce1019b10d2e07"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_meeting_call_in_phone_number_info.html">IMeetingCallInPhoneNumberInfo</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#aeebb5099a93459ae79ce1019b10d2e07">GetCurrentMeetingCallinNumber</a> ()=0</td></tr>
+<tr class="memdesc:aeebb5099a93459ae79ce1019b10d2e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the callin number of current meeting.  <a href="#aeebb5099a93459ae79ce1019b10d2e07">More...</a><br /></td></tr>
+<tr class="separator:aeebb5099a93459ae79ce1019b10d2e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189718f24d9fd03374ccb41ea0646fcf"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a189718f24d9fd03374ccb41ea0646fcf">GetCurrentMeetingCallinParticipantID</a> ()=0</td></tr>
+<tr class="memdesc:a189718f24d9fd03374ccb41ea0646fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get your participant ID of current meeting for call in feature.  <a href="#a189718f24d9fd03374ccb41ea0646fcf">More...</a><br /></td></tr>
+<tr class="separator:a189718f24d9fd03374ccb41ea0646fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting phone Helper Interface. </p>
@@ -184,6 +190,62 @@ Public Member Functions</h2></td></tr>
 
 <p>get the status of the in progress callme. </p>
 <dl class="section return"><dt>Returns</dt><dd>the return value is current callme status.To get extended error information, refer to PhoneStatus enum </dd></dl>
+
+</div>
+</div>
+<a id="aeebb5099a93459ae79ce1019b10d2e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebb5099a93459ae79ce1019b10d2e07">&#9670;&nbsp;</a></span>GetCurrentMeetingCallinNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_list.html">IList</a>&lt;<a class="el" href="class_i_meeting_call_in_phone_number_info.html">IMeetingCallInPhoneNumberInfo</a>*&gt;* IMeetingPhoneHelper::GetCurrentMeetingCallinNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines the callin number of current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>the list of the callin number of current meeting. </dd></dl>
+
+</div>
+</div>
+<a id="a189718f24d9fd03374ccb41ea0646fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189718f24d9fd03374ccb41ea0646fcf">&#9670;&nbsp;</a></span>GetCurrentMeetingCallinParticipantID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int IMeetingPhoneHelper::GetCurrentMeetingCallinParticipantID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get your participant ID of current meeting for call in feature. </p>
+<dl class="section return"><dt>Returns</dt><dd>The participant ID. </dd></dl>
 
 </div>
 </div>
@@ -388,7 +450,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>h/<a class="el" href="meeting__phone__helper__interface_8h_source.html">meeting_phone_helper_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__phone__helper__interface_8h_source.html">meeting_phone_helper_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

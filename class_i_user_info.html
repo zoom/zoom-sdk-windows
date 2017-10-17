@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -50,7 +50,7 @@ $(function() {
 <p>User information Interface.  
  <a href="class_i_user_info.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="meeting__participants__ctrl__interface_8h_source.html">meeting_participants_ctrl_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -84,9 +84,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d9ef8956e515fd65aa1c03f1e3928e4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a3d9ef8956e515fd65aa1c03f1e3928e4">IsRaiseHand</a> ()=0</td></tr>
 <tr class="memdesc:a3d9ef8956e515fd65aa1c03f1e3928e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is raise hand or not.  <a href="#a3d9ef8956e515fd65aa1c03f1e3928e4">More...</a><br /></td></tr>
 <tr class="separator:a3d9ef8956e515fd65aa1c03f1e3928e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65990cb2b9664a38cbb42677a21af333"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__service__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">UserRole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a65990cb2b9664a38cbb42677a21af333">GetUserRole</a> ()=0</td></tr>
+<tr class="memitem:a65990cb2b9664a38cbb42677a21af333"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">UserRole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a65990cb2b9664a38cbb42677a21af333">GetUserRole</a> ()=0</td></tr>
 <tr class="memdesc:a65990cb2b9664a38cbb42677a21af333"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Role.  <a href="#a65990cb2b9664a38cbb42677a21af333">More...</a><br /></td></tr>
 <tr class="separator:a65990cb2b9664a38cbb42677a21af333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00b99a1f304f9a5af8ddd61e3b64038"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#aa00b99a1f304f9a5af8ddd61e3b64038">IsPurePhoneUser</a> ()=0</td></tr>
+<tr class="memdesc:aa00b99a1f304f9a5af8ddd61e3b64038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is pure phone user or not.  <a href="#aa00b99a1f304f9a5af8ddd61e3b64038">More...</a><br /></td></tr>
+<tr class="separator:aa00b99a1f304f9a5af8ddd61e3b64038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>User information Interface. </p>
@@ -213,7 +216,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="meeting__service__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">UserRole</a> IUserInfo::GetUserRole </td>
+          <td class="memname">virtual <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">UserRole</a> IUserInfo::GetUserRole </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -343,6 +346,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa00b99a1f304f9a5af8ddd61e3b64038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00b99a1f304f9a5af8ddd61e3b64038">&#9670;&nbsp;</a></span>IsPurePhoneUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IUserInfo::IsPurePhoneUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is pure phone user or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>Is pure phone user or not </dd></dl>
+
+</div>
+</div>
 <a id="a3d9ef8956e515fd65aa1c03f1e3928e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d9ef8956e515fd65aa1c03f1e3928e4">&#9670;&nbsp;</a></span>IsRaiseHand()</h2>
 
@@ -400,7 +431,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>h/<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__participants__ctrl__interface_8h_source.html">meeting_participants_ctrl_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

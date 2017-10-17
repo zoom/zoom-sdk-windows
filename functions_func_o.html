@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -42,6 +42,9 @@ $(function() {
 &#160;
 
 <h3><a id="index_o"></a>- o -</h3><ul>
+<li>onAirPlayInstructionWndNotification()
+: <a class="el" href="class_i_meeting_configuration_event.html#af04b457784ab2690801df796ca840dae">IMeetingConfigurationEvent</a>
+</li>
 <li>onAuthenticationReturn()
 : <a class="el" href="class_i_auth_service_event.html#ac6bf10b8e19789804f08e63ad6738d01">IAuthServiceEvent</a>
 </li>
@@ -55,13 +58,13 @@ $(function() {
 : <a class="el" href="class_i_meeting_h323_helper_event.html#ae17f9085dc3a72e3b32815b26edc700f">IMeetingH323HelperEvent</a>
 </li>
 <li>onChatMsgNotifcation()
-: <a class="el" href="class_i_meeting_service_event.html#a71ae269af7346f8e187376a04b9ea5ea">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_chat_ctrl_event.html#a599584f6ad8691d9824a9d709e1e92fa">IMeetingChatCtrlEvent</a>
 </li>
 <li>onDeleteMeeting()
 : <a class="el" href="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438">IPreMeetingServiceEvent</a>
 </li>
 <li>onHostChangeNotification()
-: <a class="el" href="class_i_meeting_service_event.html#a780b0a1953b1c9b4666ec750239137db">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_participants_ctrl_event.html#a4e11df0f729de9c76c3ec6c2cbe574e3">IMeetingParticipantsCtrlEvent</a>
 </li>
 <li>onInputMeetingPasswordAndScreenNameNotification()
 : <a class="el" href="class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f">IMeetingConfigurationEvent</a>
@@ -73,7 +76,7 @@ $(function() {
 : <a class="el" href="class_i_pre_meeting_service_event.html#a1ab53c8ca9c2aa5e941a82c275a6ec5c">IPreMeetingServiceEvent</a>
 </li>
 <li>onLockShareStatus()
-: <a class="el" href="class_i_meeting_service_event.html#acbc403d3b3d2d8a40e4bc3cf1d7ef184">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_share_ctrl_event.html#a6be48bff0445143193e3e0f8ec4d5894">IMeetingShareCtrlEvent</a>
 </li>
 <li>onLoginRet()
 : <a class="el" href="class_i_auth_service_event.html#acee90b340cb800597cd0f20ba5679ad4">IAuthServiceEvent</a>
@@ -82,7 +85,7 @@ $(function() {
 : <a class="el" href="class_i_auth_service_event.html#af2de61cfb87a505a9dc3f0123f443735">IAuthServiceEvent</a>
 </li>
 <li>onLowOrRaiseHandStatusChanged()
-: <a class="el" href="class_i_meeting_service_event.html#a04282d5e85e2139558b74da2fb2ade69">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_participants_ctrl_event.html#ae8dbbfab1f2b83dee0aca5a7e1bfa027">IMeetingParticipantsCtrlEvent</a>
 </li>
 <li>onMeetingStatusChanged()
 : <a class="el" href="class_i_meeting_service_event.html#ab05fa7545ddee7b5384fdcdc8bf8151b">IMeetingServiceEvent</a>
@@ -90,47 +93,62 @@ $(function() {
 <li>onParingH323Result()
 : <a class="el" href="class_i_meeting_h323_helper_event.html#a85b5ec37a55f647b0b13ab824a49547e">IMeetingH323HelperEvent</a>
 </li>
+<li>onProxyDetectComplete()
+: <a class="el" href="class_i_network_connection_handler.html#a224f41b865924554e7ab0c03c5a98e24">INetworkConnectionHandler</a>
+</li>
 <li>onProxySettingNotification()
 : <a class="el" href="class_i_network_connection_handler.html#a06cee1732cca5e116b9c56da4d3d45fa">INetworkConnectionHandler</a>
 </li>
 <li>onRecording2MP4Done()
-: <a class="el" href="class_i_meeting_service_event.html#a1a862f95a1ca18a19d538d30f692f1b3">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_recording_ctrl_event.html#a0e9b7d24032a5fe2a7aa62e210df6010">IMeetingRecordingCtrlEvent</a>
 </li>
 <li>onRecording2MP4Processing()
-: <a class="el" href="class_i_meeting_service_event.html#a0da1d322363c27520a1dc2385023f328">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_recording_ctrl_event.html#a9beea53ebaab8bf68bd0c35aaf3e24d5">IMeetingRecordingCtrlEvent</a>
 </li>
 <li>onRecordingStatus()
-: <a class="el" href="class_i_meeting_service_event.html#a1acb3d02079c004cb3c0875f2126288b">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_recording_ctrl_event.html#ab99cc2fa14c108a1e66cc3af88d9dc18">IMeetingRecordingCtrlEvent</a>
 </li>
 <li>onRecordPriviligeChanged()
-: <a class="el" href="class_i_meeting_service_event.html#a8bd134b49684bb79f27da993bbc0a303">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_recording_ctrl_event.html#a6a56a27df438bad6c5af620d2d96fa2b">IMeetingRecordingCtrlEvent</a>
 </li>
 <li>onRemoteControlStatus()
-: <a class="el" href="class_i_meeting_service_event.html#afb5d79c013088b5a0f843ee3a2b85159">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_remote_ctrl_event.html#a5e271c74caae37ba3bc350208406b4f0">IMeetingRemoteCtrlEvent</a>
 </li>
 <li>onScheduleOrEditMeeting()
 : <a class="el" href="class_i_pre_meeting_service_event.html#aedb678510dd79cb8723a6c39af62b83a">IPreMeetingServiceEvent</a>
 </li>
+<li>onShareContentNotification()
+: <a class="el" href="class_i_meeting_share_ctrl_event.html#a1424695c7881e14821f27ee48eefbe0e">IMeetingShareCtrlEvent</a>
+</li>
 <li>onSharingStatus()
-: <a class="el" href="class_i_meeting_service_event.html#afe15aacc60eda864aac666e1a6fc9f1c">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_share_ctrl_event.html#a94ddea0fcc47efe5a8f08306d7cf6c8d">IMeetingShareCtrlEvent</a>
 </li>
 <li>onSpotlightVideoChangeNotification()
-: <a class="el" href="class_i_meeting_service_event.html#aa20a7502955c8b07549c84fc824c6a7b">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_video_ctrl_event.html#aba9ec55d1870aec880c2b084cc482e03">IMeetingVideoCtrlEvent</a>
 </li>
 <li>onSSLCertVerifyNotification()
 : <a class="el" href="class_i_network_connection_handler.html#a30e8c3f98d472182ce0ba041a143f104">INetworkConnectionHandler</a>
 </li>
+<li>onUIActionNotify()
+: <a class="el" href="class_i_u_i_hooker_event.html#a6ff2c3cada4005c816b475a6760f9485">IUIHookerEvent</a>
+</li>
+<li>onUserActiveAudioChange()
+: <a class="el" href="class_i_meeting_audio_ctrl_event.html#afbfa1c7bba75ab2744cff63a8089c01a">IMeetingAudioCtrlEvent</a>
+</li>
 <li>onUserAudioStatusChange()
-: <a class="el" href="class_i_meeting_service_event.html#ad76e5955bf66c8702e298487db8b0e74">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_audio_ctrl_event.html#af1c8eaef123247b389046c1993759071">IMeetingAudioCtrlEvent</a>
 </li>
 <li>onUserJoin()
-: <a class="el" href="class_i_meeting_service_event.html#a6729a5cd7986993896385a1f239560f2">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_participants_ctrl_event.html#af5ebda0890733a8dd583e79570a6c75f">IMeetingParticipantsCtrlEvent</a>
 </li>
 <li>onUserLeft()
-: <a class="el" href="class_i_meeting_service_event.html#a120f6e1b375bdd07b5c8d13d97fade78">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_participants_ctrl_event.html#afbbaad24917f6fbf5b0123b88672eeaa">IMeetingParticipantsCtrlEvent</a>
+</li>
+<li>onUserNameChanged()
+: <a class="el" href="class_i_meeting_participants_ctrl_event.html#a16fc189a2638896a3fcfe52be85e03be">IMeetingParticipantsCtrlEvent</a>
 </li>
 <li>onUserVideoStatusChange()
-: <a class="el" href="class_i_meeting_service_event.html#aceea3a00a1393ee109e52fcabd067e33">IMeetingServiceEvent</a>
+: <a class="el" href="class_i_meeting_video_ctrl_event.html#a69c8e61c743d407e7bb85a46667fab73">IMeetingVideoCtrlEvent</a>
 </li>
 <li>onWatingRoomUserJoin()
 : <a class="el" href="class_i_meeting_waiting_room_event.html#a00e689caa9d41682a19c31b96cfb82bb">IMeetingWaitingRoomEvent</a>

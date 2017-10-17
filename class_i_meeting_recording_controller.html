@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -50,10 +50,13 @@ $(function() {
 <p>Meeting recording controller interface.  
  <a href="class_i_meeting_recording_controller.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="meeting__recording__interface_8h_source.html">meeting_recording_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a869687b9a4331b37a57069bf0806afcf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf">SetEvent</a> (<a class="el" href="class_i_meeting_recording_ctrl_event.html">IMeetingRecordingCtrlEvent</a> *pEvent)=0</td></tr>
+<tr class="memdesc:a869687b9a4331b37a57069bf0806afcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting chat callback event.  <a href="#a869687b9a4331b37a57069bf0806afcf">More...</a><br /></td></tr>
+<tr class="separator:a869687b9a4331b37a57069bf0806afcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae245fbbf98874ac906604a7eac72006c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#ae245fbbf98874ac906604a7eac72006c">StartRecording</a> (time_t &amp;startTimestamp, wchar_t *recPath)=0</td></tr>
 <tr class="memdesc:ae245fbbf98874ac906604a7eac72006c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start recording.  <a href="#ae245fbbf98874ac906604a7eac72006c">More...</a><br /></td></tr>
 <tr class="separator:ae245fbbf98874ac906604a7eac72006c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -64,6 +67,41 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting recording controller interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a869687b9a4331b37a57069bf0806afcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869687b9a4331b37a57069bf0806afcf">&#9670;&nbsp;</a></span>SetEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::SetEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_meeting_recording_ctrl_event.html">IMeetingRecordingCtrlEvent</a> *&#160;</td>
+          <td class="paramname"><em>pEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set meeting chat callback event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingRecordingCtrlEvent* that receives recording event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="ae245fbbf98874ac906604a7eac72006c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae245fbbf98874ac906604a7eac72006c">&#9670;&nbsp;</a></span>StartRecording()</h2>
 
@@ -146,7 +184,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>h/<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__recording__interface_8h_source.html">meeting_recording_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

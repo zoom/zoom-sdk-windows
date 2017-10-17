@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -54,6 +54,9 @@ $(function() {
 <li>GetAudioJoinType()
 : <a class="el" href="class_i_user_info.html#a0d359dc63f447647c073db2f94b1df69">IUserInfo</a>
 </li>
+<li>GetAudioSettings()
+: <a class="el" href="class_i_setting_service.html#abc7e0e422c681bc625fbfc9feb62b880">ISettingService</a>
+</li>
 <li>GetAuthResult()
 : <a class="el" href="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75">IAuthService</a>
 </li>
@@ -70,7 +73,7 @@ $(function() {
 : <a class="el" href="class_i_meeting_phone_helper.html#a984a93abff339fe54083f430499f98de">IMeetingPhoneHelper</a>
 </li>
 <li>GetCameraList()
-: <a class="el" href="class_i_setting_service.html#aaf8084f850ef85747d8aa7c0258a4aaa">ISettingService</a>
+: <a class="el" href="class_i_video_setting_context.html#ab35cbc29af8e66ddc90e25b0cb2f3fa0">IVideoSettingContext</a>
 </li>
 <li>GetCertFingerprint()
 : <a class="el" href="class_i_s_s_l_cert_verification_handler.html#a36599358a2a1d5506375c315f4d775b0">ISSLCertVerificationHandler</a>
@@ -78,8 +81,17 @@ $(function() {
 <li>GetContent()
 : <a class="el" href="class_i_chat_msg_info.html#a1e866235bfc65a466742a91dd488f659">IChatMsgInfo</a>
 </li>
+<li>GetCurrentMeetingCallinNumber()
+: <a class="el" href="class_i_meeting_phone_helper.html#aeebb5099a93459ae79ce1019b10d2e07">IMeetingPhoneHelper</a>
+</li>
+<li>GetCurrentMeetingCallinParticipantID()
+: <a class="el" href="class_i_meeting_phone_helper.html#a189718f24d9fd03374ccb41ea0646fcf">IMeetingPhoneHelper</a>
+</li>
 <li>GetCurrentRemoteController()
 : <a class="el" href="class_i_meeting_remote_controller.html#aa6dfaa5e4e2c37d252c988e662576ad8">IMeetingRemoteController</a>
+</li>
+<li>GetCurrentSplitScreenModeInfo()
+: <a class="el" href="class_i_meeting_u_i_controller.html#ab4c45ab45d9104f2c80568b7af9b2766">IMeetingUIController</a>
 </li>
 <li>GetDeviceId()
 : <a class="el" href="class_i_camera_info.html#af35738c368d69d8e5877839ba3254f2c">ICameraInfo</a>
@@ -100,6 +112,9 @@ $(function() {
 <li>GetEmail()
 : <a class="el" href="class_i_user_info.html#a569a4fdc6887874ff2112f0831d6d616">IUserInfo</a>
 </li>
+<li>GetGeneralSettings()
+: <a class="el" href="class_i_setting_service.html#a7460b49ab5c87fb6ff790628a8b68a85">ISettingService</a>
+</li>
 <li>GetH323Address()
 : <a class="el" href="class_i_meeting_h323_helper.html#af890ee91d9f09d1d615a28dbfda621a0">IMeetingH323Helper</a>
 </li>
@@ -113,16 +128,19 @@ $(function() {
 : <a class="el" href="class_i_meeting_phone_helper.html#ae8b8093c214a7c46e0e65e41b5d52a6a">IMeetingPhoneHelper</a>
 </li>
 <li>GetInviteEmailTeamplate()
-: <a class="el" href="class_i_meeting_service.html#a5e4abf251b4be62fd00f0a13b0f0fae6">IMeetingService</a>
+: <a class="el" href="class_i_meeting_info.html#a6ab3d67c2a5e4d8b9346dc1e4f0fcd67">IMeetingInfo</a>
 </li>
 <li>GetInviteEmailTitle()
-: <a class="el" href="class_i_meeting_service.html#a66a2b2a5c9c689be4502648d67c0084a">IMeetingService</a>
+: <a class="el" href="class_i_meeting_info.html#a2346a736ab0b3bcced638ea675238c13">IMeetingInfo</a>
 </li>
 <li>GetJoinMeetingUrl()
-: <a class="el" href="class_i_meeting_service.html#a4e4a3d2a560a6ac0c94f38a83a29af18">IMeetingService</a>
+: <a class="el" href="class_i_meeting_info.html#a27df4c4a5cf575f779e0df0b3cda1889">IMeetingInfo</a>
 </li>
 <li>GetLoginStatus()
 : <a class="el" href="class_i_auth_service.html#a70c1fec8ea849555968f062b9efec9bd">IAuthService</a>
+</li>
+<li>GetLoginType()
+: <a class="el" href="class_i_account_info.html#af0e9bf58fbeebc6eade414e782fd735f">IAccountInfo</a>
 </li>
 <li>GetMeeingItem()
 : <a class="el" href="class_i_pre_meeting_service.html#adeab9ae96c4751641a9765f7f3a9ac8d">IPreMeetingService</a>
@@ -145,8 +163,18 @@ $(function() {
 <li>GetMeetingConnQuality()
 : <a class="el" href="class_i_meeting_service.html#a25013aeb29d311561df8f4e95b316874">IMeetingService</a>
 </li>
+<li>GetMeetingHostTag()
+: <a class="el" href="class_i_meeting_info.html#a05a350fca6baa024167af81f878da4ef">IMeetingInfo</a>
+</li>
+<li>GetMeetingInfo()
+: <a class="el" href="class_i_meeting_service.html#ab279829baff0dee656bff3fc138c5a7d">IMeetingService</a>
+</li>
 <li>GetMeetingNumber()
-: <a class="el" href="class_i_my_meeting_item.html#a27a496a6fe334f885201c7dcf4a4d67a">IMyMeetingItem</a>
+: <a class="el" href="class_i_meeting_info.html#aa524d0a201f93ad1229bbf08d769f5b0">IMeetingInfo</a>
+, <a class="el" href="class_i_my_meeting_item.html#a27a496a6fe334f885201c7dcf4a4d67a">IMyMeetingItem</a>
+</li>
+<li>GetMeetingParticipantsController()
+: <a class="el" href="class_i_meeting_service.html#a72e2d5bc3131cc35830ce1aae70b2800">IMeetingService</a>
 </li>
 <li>GetMeetingPassword()
 : <a class="el" href="class_i_my_meeting_item.html#a004f9d3b58339401c9cb35fb45ab684d">IMyMeetingItem</a>
@@ -167,11 +195,11 @@ $(function() {
 : <a class="el" href="class_i_meeting_service.html#a4d68b045cef3a3de0f1f29b8e370fef8">IMeetingService</a>
 </li>
 <li>GetMeetingTopic()
-: <a class="el" href="class_i_meeting_service.html#aec3f7f0fa19639a79f077e4715d80b48">IMeetingService</a>
+: <a class="el" href="class_i_meeting_info.html#ab54d5cd39c465c017f9370549f169e0c">IMeetingInfo</a>
 , <a class="el" href="class_i_my_meeting_item.html#a7c4382b1f8141c1583e68c2cef4de982">IMyMeetingItem</a>
 </li>
 <li>GetMeetingType()
-: <a class="el" href="class_i_meeting_service.html#a9dd5dcfa065498069423926499854856">IMeetingService</a>
+: <a class="el" href="class_i_meeting_info.html#a29dc0c281aae7dc58848342768321780">IMeetingInfo</a>
 </li>
 <li>GetMeetingUIWnd()
 : <a class="el" href="class_i_meeting_u_i_controller.html#a174ffd06eb0658357a612c1f23b5b0ca">IMeetingUIController</a>
@@ -183,7 +211,7 @@ $(function() {
 : <a class="el" href="class_i_meeting_service.html#a06e19b9717c871513c84b3280a8e8b2a">IMeetingService</a>
 </li>
 <li>GetParticipantsList()
-: <a class="el" href="class_i_meeting_service.html#a736be2ac334acff6bbf598d38a5d3f18">IMeetingService</a>
+: <a class="el" href="class_i_meeting_participants_controller.html#a1b41a78318d60090da228bbb805114bf">IMeetingParticipantsController</a>
 </li>
 <li>GetProxyDescription()
 : <a class="el" href="class_i_proxy_setting_handler.html#adcc9d511f956a7cd96126d8b98dc9ea0">IProxySettingHandler</a>
@@ -200,8 +228,17 @@ $(function() {
 <li>GetReceiverUserId()
 : <a class="el" href="class_i_chat_msg_info.html#a632a77554d90850f37743d2fc56d7e4f">IChatMsgInfo</a>
 </li>
+<li>GetRecordingPath()
+: <a class="el" href="class_i_recording_setting_context.html#a1beb0ba47ed7e12554dbf8e63f1afc4c">IRecordingSettingContext</a>
+</li>
+<li>GetRecordingSettings()
+: <a class="el" href="class_i_setting_service.html#aabfb7854d3ea62ea475e88b596521bfc">ISettingService</a>
+</li>
 <li>GetRequiredInfoType()
 : <a class="el" href="class_i_meeting_password_and_screen_name_handler.html#a7b0ee44f562ebb0a67f58dd8b141753d">IMeetingPasswordAndScreenNameHandler</a>
+</li>
+<li>GetSDKIdentity()
+: <a class="el" href="class_i_auth_service.html#a68fac10c91f76468e17ad413435e04b5">IAuthService</a>
 </li>
 <li>GetSenderDisplayName()
 : <a class="el" href="class_i_chat_msg_info.html#a1c46a2206429624976156822a25c207a">IChatMsgInfo</a>
@@ -228,7 +265,7 @@ $(function() {
 : <a class="el" href="class_i_embedded_browser.html#a0ce8158066eebc14ed7b0e77c172417c">IEmbeddedBrowser</a>
 </li>
 <li>GetUserByUserID()
-: <a class="el" href="class_i_meeting_service.html#a665e3853912528e29a0dbf82e794ad8b">IMeetingService</a>
+: <a class="el" href="class_i_meeting_participants_controller.html#afa0887b5e66feb3204338a3260129989">IMeetingParticipantsController</a>
 </li>
 <li>GetUserID()
 : <a class="el" href="class_i_user_info.html#a529c83af69b48ec984c498f8c44e1ee0">IUserInfo</a>
@@ -241,6 +278,9 @@ $(function() {
 </li>
 <li>GetVideoConnQuality()
 : <a class="el" href="class_i_meeting_service.html#a8fd1703158c6d247a4453c85fddcf6ab">IMeetingService</a>
+</li>
+<li>GetVideoSettings()
+: <a class="el" href="class_i_setting_service.html#aee78dd3cec917287d8f35d838ab63018">ISettingService</a>
 </li>
 <li>GetViewableShareSourceList()
 : <a class="el" href="class_i_meeting_share_controller.html#a7307c8ad203e2414791e29a00ecf00ad">IMeetingShareController</a>

@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -50,17 +50,65 @@ $(function() {
 <p>Meeting Configuration Event callback.  
  <a href="class_i_meeting_configuration_event.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1405a6efb4d96f4e92dfc7e08494e6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f">onInputMeetingPasswordAndScreenNameNotification</a> (<a class="el" href="class_i_meeting_password_and_screen_name_handler.html">IMeetingPasswordAndScreenNameHandler</a> *pHandler)=0</td></tr>
 <tr class="memdesc:ab1405a6efb4d96f4e92dfc7e08494e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">meeting need password or screen name callback  <a href="#ab1405a6efb4d96f4e92dfc7e08494e6f">More...</a><br /></td></tr>
 <tr class="separator:ab1405a6efb4d96f4e92dfc7e08494e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af04b457784ab2690801df796ca840dae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration_event.html#af04b457784ab2690801df796ca840dae">onAirPlayInstructionWndNotification</a> (bool bShow, const wchar_t *airhostName)=0</td></tr>
+<tr class="memdesc:af04b457784ab2690801df796ca840dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">meeting need password or screen name callback  <a href="#af04b457784ab2690801df796ca840dae">More...</a><br /></td></tr>
+<tr class="separator:af04b457784ab2690801df796ca840dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Configuration Event callback. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af04b457784ab2690801df796ca840dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04b457784ab2690801df796ca840dae">&#9670;&nbsp;</a></span>onAirPlayInstructionWndNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingConfigurationEvent::onAirPlayInstructionWndNotification </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bShow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>airhostName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>meeting need password or screen name callback </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bShow</td><td>Specifies show or hide your own airplay instruction window. </td></tr>
+    <tr><td class="paramname">airhostName</td><td>the airhost name displayed on ios device </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab1405a6efb4d96f4e92dfc7e08494e6f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1405a6efb4d96f4e92dfc7e08494e6f">&#9670;&nbsp;</a></span>onInputMeetingPasswordAndScreenNameNotification()</h2>
 
@@ -96,7 +144,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>h/<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

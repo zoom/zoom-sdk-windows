@@ -5,8 +5,8 @@
 </OBJECT>
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4"><param name="Name" value="AdmitToMeeting"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc"><param name="Name" value="ANNOTOOL_ERASER"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a0156c28d15115bd0aa017fd8dabed81b"><param name="Name" value="ANNOTOOL_NONE_DRAWING"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc"><param name="Name" value="ANNOTOOL_ERASER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a0156c28d15115bd0aa017fd8dabed81b"><param name="Name" value="ANNOTOOL_NONE_DRAWING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_auth_param.html#a3c06e3061ceab88f814202e7df693949"><param name="Name" value="appKey"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_auth_param.html#aaf11838dd8faa517c8b58773650ab76c"><param name="Name" value="appSecret"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html"><param name="Name" value="auth_service_interface.h"></OBJECT>
@@ -24,8 +24,11 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6bad77d19ddfc74c75bd928a78c08721cf2"><param name="Name" value="LOGIN_PROCESSING"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6baee62dab80d180773d80f882c0b84c535"><param name="Name" value="LOGIN_SUCCESS"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a6ea2a25fe22fce84fad6e54e16fb3f3f"><param name="Name" value="LoginParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#aad76fabf61b3fb7ff964694f97a0704e"><param name="Name" value="LoginParam4Email"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#aaba42574f1dd6ef57331d918c10f7865"><param name="Name" value="LoginParam4SSO"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17a203b2132f69cc89dcea95bbf7d5a18a3"><param name="Name" value="LoginType_Email"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17a44daaae9228eacfe94b613213d5d7910"><param name="Name" value="LoginType_SSO"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_google_cal_auth.html#a356692b5d66452791286f23774fd7f24"><param name="Name" value="authCode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#ae9ba8b7acfa4b8cd1f3989f0c79268d3"><param name="Name" value="AuthParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fceaa2d509a8f5fa5650cf7221e4401b8742"><param name="Name" value="AUTHRET_ACCOUNTNOTENABLESDK"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea659b80bdcc8ed1cfe9fd3ee826266d15"><param name="Name" value="AUTHRET_ACCOUNTNOTSUPPORT"></OBJECT>
@@ -35,9 +38,12 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea4daabf4c01f3794044785bed33e53159"><param name="Name" value="AUTHRET_SUCCESS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea0f6578bf9de923965919dbe5025d5f19"><param name="Name" value="AUTHRET_UNKNOWN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aa4984eccf6d99e1c6af112f243803636"><param name="Name" value="BEGIN_ZOOM_SDK_NAMESPACE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_split_screen_info.html#a93f26993613c0c0a4a2b9c6b881a7408"><param name="Name" value="bInSplitScreenMode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#acb724b41278c22efa47b26ff2f73b669"><param name="Name" value="BlockWindowFromScreenshare"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a1257e5cad4999a23ed8b51a71e962702"><param name="Name" value="bRememberMe"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#aee61ee186c64efc985970fd7c2141d95"><param name="Name" value="bRememberMe"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_setting_dlg_param.html#a0c834ad2005ddc93847ddd8ee539380a"><param name="Name" value="bShow"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_split_screen_info.html#a62943c9f188cc23e94b55172e61229c6"><param name="Name" value="bSupportSplitScreen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#a3e3b3f86407df1df634dc34b4e37ec6a"><param name="Name" value="calendaremail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a3c611df480c304d15c831e417cddd734"><param name="Name" value="CallMe"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper.html#ad9fe2938e39a6f5228e96fc5c60f2f8d"><param name="Name" value="CallOutH323"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_password_and_screen_name_handler.html#a1be88e4f48515b5e7eb8d40ce0e209dc"><param name="Name" value="Cancel"></OBJECT>
@@ -51,8 +57,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#ab6816f3c48bfb400fd08754a550b3e95"><param name="Name" value="CanStartShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#a7edc020f44ef41f0a1361141f2cd07c9"><param name="Name" value="CanUnMuteBySelf"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ac5bd16a63dc8c0f4223f6aaa041ed769"><param name="Name" value="ChangeFloatoActiveSpkVideoSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#a08f977597c2e4c1f781627119b102b3f"><param name="Name" value="ChangeUserName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#a4d51ce7c15c3ca14851acaad646d3de9"><param name="Name" value="CleanUPSDK"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#a0481ca97a3614886d56b7a7ca83a78ab"><param name="Name" value="Clear"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aadbdab5105e3ed609fa5e44374c31b52"><param name="Name" value="ConfigurableOptions"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#a0a28faa960ba7b34671e1b56757d3778"><param name="Name" value="CreateAuthService"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#af93abafee95c7d19e1001d01e6b74f18"><param name="Name" value="CreateCalenderService"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__ext_8h.html#a6b85a452502a87105494c76afe535725"><param name="Name" value="CreateEmbeddedBrowser"></OBJECT>
@@ -61,6 +69,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#a00c56efacf439a9b94fb4a6065df037f"><param name="Name" value="CreatePreMeetingService"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#a0c2fa6b2827cfc8a0c70c98cc7bff513"><param name="Name" value="CreateScheduleMeetingItem"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#a37a644f0640f6126bf59f193c75bb19a"><param name="Name" value="CreateSettingService"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_configurable_options.html#a35413e705267ea2f00cb076e444ccce4"><param name="Name" value="customizedLang"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a8fed11d6fafd53130965e0dacbd6cd68"><param name="Name" value="CustomizedLanguageInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#ae4c749a8ee488d260992e55fff1aeb2b"><param name="Name" value="DeclineRemoteControlRequest"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#ad3268417a127fe091dc77783b478fa27"><param name="Name" value="DeleteMeeting"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#a2cfc5f48430ce74f3d5b2e5437eb7016"><param name="Name" value="DestoryScheduleMeetingItem"></OBJECT>
@@ -78,45 +88,51 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_h323_device.html#a0e1adcd9bd81b4babb9525481d1e7695"><param name="Name" value="e164num"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#aea2c5bd990f51aafb34887d65b2d18a8"><param name="Name" value="EditMeeting"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#a3c0fdbfe50e535bb7a424a3179640fb3"><param name="Name" value="emLanguageID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a71db0537cfe1574eb564f019de32647e"><param name="Name" value="EnableAirplayInstructionWindow"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a4f77e6aa3be86f962b08322525819627"><param name="Name" value="EnableApproveRemoteControlDlg"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a712c6031fb74ef3b6429cd31ca9d183d"><param name="Name" value="EnableAutoAdjustMic"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#ab2fb1175d69d459b39f7053d0120600d"><param name="Name" value="EnableAutoAdjustMic"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a6579b7d0ee21f82ed3a61e8993c7e43f"><param name="Name" value="EnableAutoAdjustMicVolumeWhenJoinAudio"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#acc56098e513efb5ea3a5bcc37e776661"><param name="Name" value="EnableAutoAdjustSpeakerVolumeWhenJoinAudio"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a1aadfdb983e9ac7eba27fd6d49457445"><param name="Name" value="EnableAutoEndOtherMeetingWhenStartMeeting"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a9cb7da077746c6562c755fbb36620f2a"><param name="Name" value="EnableAutoFitToWindowWhenViewSharing"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#ae90986e390549fe517f2cd9fa462de76"><param name="Name" value="EnableAutoFullScreenVideoWhenJoinMeeting"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aa8ec49ea4934b33d1ade78378c67651d"><param name="Name" value="EnableAutoJoinAudio"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a66586bacc38d09c3640b7df2bcab6436"><param name="Name" value="EnableAutoFitToWindowWhenViewSharing"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#aa2e920bf7ca9a7083f7741c85386c2b6"><param name="Name" value="EnableAutoFullScreenVideoWhenJoinMeeting"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#a860a1c8067d5bfe0ed98262a89bf6807"><param name="Name" value="EnableAutoJoinAudio"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aef77c9331d7de263852fbb7075d4f520"><param name="Name" value="EnableDeclineRemoteControlResponseDlg"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#abacdc3c4ba34cab91c295f20490a530e"><param name="Name" value="EnableDualScreenMode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a156c560b15c873203c91ea63e82f7f73"><param name="Name" value="EnableDualScreenMode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ab18547642657d3a0d9b1333565143d9b"><param name="Name" value="EnableEnterAndExitFullScreenButtonOnMeetingUI"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#a98bc1f8bac6d4b22492d986f896a1ad8"><param name="Name" value="EnableFaceBeautyEffect"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aa3e0a0d667cea67bcd93b68fae47ec6b"><param name="Name" value="EnableInputMeetingPasswordDlg"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aff512c146e8fbea41c0e0c4eb32bddac"><param name="Name" value="EnableInviteButtonOnMeetingUI"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a5a5908fd47921572f989af0716d4e31c"><param name="Name" value="EnableLButtonDBClick4SwitchFullScreenMode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a9aa8f43c014b93d441a89a32fbed37a0"><param name="Name" value="EnableLeaveMeetingOptionForHost"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#aeb08e908ef202a52b8ec4f9c168974e4"><param name="Name" value="EnableMuteOnEntry"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#aff192bd36e2eeb24d5137922a12d8eea"><param name="Name" value="EnablePlayChimeWhenEnterOrExit"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a8f4aedb0d5686d578bfee1cf8c2fa687"><param name="Name" value="EnableSplitScreenMode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a641b0977a12cd792cb6896cf354772fa"><param name="Name" value="EnableToolTipsShow"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#acc00ee6681039491b9edf4ff8cb28532"><param name="Name" value="EnableVideoMirrorEffect"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#a5379e285f8ba5e86571a6515de467172"><param name="Name" value="EnableWaitingRoomOnEntry"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134eabe5541871cc5b0ff7ff43bbd80ba48b9"><param name="Name" value="END_MEETING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a7382fbaf9b48daac8b6ce3af9cf2e153"><param name="Name" value="END_ZOOM_SDK_NAMESPACE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a075000e7ea2a3b74d4959ca8562eea36"><param name="Name" value="EnterFullScreen"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html#a699d1c9d27c69b1725ae7f31cc40c80e"><param name="Name" value="exchangeEMSURL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html#aed94acce6bc5d1ea6e6525ffa951b5e9"><param name="Name" value="exchangePassword"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html#ae9b8795680fd461c5f9ce9ea92dbd5fa"><param name="Name" value="exchangeResEmail"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_share_info.html#aaef6c340ed5166dd682a6ec5dc8f1124"><param name="Name" value="eShareType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#af64c2b92d8c9f8590613d0c51c9bda04"><param name="Name" value="ExitFullScreen"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a0a1f56ed2ca8628d26449652b714f9c8"><param name="Name" value="GetAccountInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a6f06487c5e996991a172926531f4ee4a"><param name="Name" value="GetAnnotationController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a4d0d430e4529c6bfe4a2853e2f45c5db"><param name="Name" value="GetAudioConnQuality"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a0d359dc63f447647c073db2f94b1df69"><param name="Name" value="GetAudioJoinType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#abc7e0e422c681bc625fbfc9feb62b880"><param name="Name" value="GetAudioSettings"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_audio_status.html#ad770ea0b87421d03c8a8e85590501d18"><param name="Name" value="GetAudioType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75"><param name="Name" value="GetAuthResult"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_breakout_rooms_info.html#ab470bf23d0f51f59c8613ff7dc3fdca1"><param name="Name" value="GetBID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_breakout_rooms_info.html#a14309eba2c5a8da092115a402554b5c1"><param name="Name" value="GetBreakoutRoomName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_controller.html#a1b6b4e38a9b6f9b348db84fca0a95c2f"><param name="Name" value="GetBreakoutRoomsInfoList"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a984a93abff339fe54083f430499f98de"><param name="Name" value="GetCallMeStatus"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aaf8084f850ef85747d8aa7c0258a4aaa"><param name="Name" value="GetCameraList"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#ab35cbc29af8e66ddc90e25b0cb2f3fa0"><param name="Name" value="GetCameraList"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#a36599358a2a1d5506375c315f4d775b0"><param name="Name" value="GetCertFingerprint"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#a298c57d64fb526456709f27411e28afb"><param name="Name" value="GetCertIssuedBy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#abe6c5c5c9b3748ec6c9a731f1499a09e"><param name="Name" value="GetCertIssuedTo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#a0e81d14fc6617e0734519c52de3de1d8"><param name="Name" value="GetCertSerialNum"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#add32e25e3dedca9d201224da0569da2c"><param name="Name" value="GetCode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_chat_msg_info.html#a1e866235bfc65a466742a91dd488f659"><param name="Name" value="GetContent"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_list.html#a0c309987bb5f5ee34f694397154fddfc"><param name="Name" value="GetCount"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_support_country_info.html#a1ffca6a791d28bbc98cc3a24dd57f9f0"><param name="Name" value="GetCountryCode"></OBJECT>
@@ -124,7 +140,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_support_country_info.html#a2e889775e74e034d291b51eaeff1335b"><param name="Name" value="GetCountryName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#a52a6b5830595558685045a686b1de87b"><param name="Name" value="GetCreatorEmail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#a3fcc1daf1a5907c138c73838ef70c4ec"><param name="Name" value="GetCreatorName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#aeebb5099a93459ae79ce1019b10d2e07"><param name="Name" value="GetCurrentMeetingCallinNumber"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a189718f24d9fd03374ccb41ea0646fcf"><param name="Name" value="GetCurrentMeetingCallinParticipantID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#aa6dfaa5e4e2c37d252c988e662576ad8"><param name="Name" value="GetCurrentRemoteController"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab4c45ab45d9104f2c80568b7af9b2766"><param name="Name" value="GetCurrentSplitScreenModeInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#a9bf370848dc49401ed8318de26276cd0"><param name="Name" value="GetDescription"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_camera_info.html#af35738c368d69d8e5877839ba3254f2c"><param name="Name" value="GetDeviceId"></OBJECT>
   <UL>
@@ -139,19 +158,23 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_speaker_info.html#a362754c63f6c6fc47476e346dc3383b2"><param name="Name" value="ISpeakerInfo"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_account_info.html#a75634456b472620972e2c407cdf15617"><param name="Name" value="GetDisplayName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#a485283d61df5b3b18b40eb4fe50c997b"><param name="Name" value="GetDisplayNumber"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#ae2dd1cc7a83d50e3cf08e29d01f502ae"><param name="Name" value="GetDurationInMinutes"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a569a4fdc6887874ff2112f0831d6d616"><param name="Name" value="GetEmail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#a32ad6801d1d95823ba46902504b57b7f"><param name="Name" value="GetEndTime"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#a02457d217c93cf73542f4cb06deb37a9"><param name="Name" value="GetEventID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a7460b49ab5c87fb6ff790628a8b68a85"><param name="Name" value="GetGeneralSettings"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper.html#af890ee91d9f09d1d615a28dbfda621a0"><param name="Name" value="GetH323Address"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a3a291aed3721f3cda080b9757f47e59b"><param name="Name" value="GetH323Helper"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper.html#ace2defdf72b8a38adbb6fbfd9b7bb1bd"><param name="Name" value="GetH323Password"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#aaaa6bbde3952f3cde35d474f3c9e91b2"><param name="Name" value="GetID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#ae8b8093c214a7c46e0e65e41b5d52a6a"><param name="Name" value="GetInviteCalloutUserStatus"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a5e4abf251b4be62fd00f0a13b0f0fae6"><param name="Name" value="GetInviteEmailTeamplate"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a66a2b2a5c9c689be4502648d67c0084a"><param name="Name" value="GetInviteEmailTitle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a6ab3d67c2a5e4d8b9346dc1e4f0fcd67"><param name="Name" value="GetInviteEmailTeamplate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a2346a736ab0b3bcced638ea675238c13"><param name="Name" value="GetInviteEmailTitle"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_list.html#a3b00fbf4cd6b333cb856f5b490dc2712"><param name="Name" value="GetItem"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a4e4a3d2a560a6ac0c94f38a83a29af18"><param name="Name" value="GetJoinMeetingUrl"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a27df4c4a5cf575f779e0df0b3cda1889"><param name="Name" value="GetJoinMeetingUrl"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a70c1fec8ea849555968f062b9efec9bd"><param name="Name" value="GetLoginStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_account_info.html#af0e9bf58fbeebc6eade414e782fd735f"><param name="Name" value="GetLoginType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#adeab9ae96c4751641a9765f7f3a9ac8d"><param name="Name" value="GetMeeingItem"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a1efc4504f434ff4e369992f2221760de"><param name="Name" value="GetMeeingUniqueID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a0d6d170e424c8e7c9174379e0937b33e"><param name="Name" value="GetMeetingAudioController"></OBJECT>
@@ -159,30 +182,42 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a8e4e9e547a4698fb6b0f92f85cb63d48"><param name="Name" value="GetMeetingChatController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a77118cf022a60bb3373dd327b3fd7e92"><param name="Name" value="GetMeetingConfiguration"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a25013aeb29d311561df8f4e95b316874"><param name="Name" value="GetMeetingConnQuality"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a05a350fca6baa024167af81f878da4ef"><param name="Name" value="GetMeetingHostTag"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ab279829baff0dee656bff3fc138c5a7d"><param name="Name" value="GetMeetingInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#a6c70f49fe82e5af806864530b9d37ace"><param name="Name" value="GetMeetingNum"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a27a496a6fe334f885201c7dcf4a4d67a"><param name="Name" value="GetMeetingNumber"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#aa524d0a201f93ad1229bbf08d769f5b0"><param name="Name" value="GetMeetingNumber"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#aa524d0a201f93ad1229bbf08d769f5b0"><param name="Name" value="IMeetingInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a27a496a6fe334f885201c7dcf4a4d67a"><param name="Name" value="IMyMeetingItem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a72e2d5bc3131cc35830ce1aae70b2800"><param name="Name" value="GetMeetingParticipantsController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a004f9d3b58339401c9cb35fb45ab684d"><param name="Name" value="GetMeetingPassword"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a8497d75db98faebe1ab88444fcd99a4b"><param name="Name" value="GetMeetingPhoneHelper"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a87419bd8516372b46dfed3db7864902c"><param name="Name" value="GetMeetingRecordingController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a7ddc197b0d19722be80e32772ae81359"><param name="Name" value="GetMeetingRemoteController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#adc04bb43107ceb29952df6d4116981aa"><param name="Name" value="GetMeetingShareController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a4d68b045cef3a3de0f1f29b8e370fef8"><param name="Name" value="GetMeetingStatus"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#aec3f7f0fa19639a79f077e4715d80b48"><param name="Name" value="GetMeetingTopic"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#ab54d5cd39c465c017f9370549f169e0c"><param name="Name" value="GetMeetingTopic"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#aec3f7f0fa19639a79f077e4715d80b48"><param name="Name" value="IMeetingService"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#ab54d5cd39c465c017f9370549f169e0c"><param name="Name" value="IMeetingInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a7c4382b1f8141c1583e68c2cef4de982"><param name="Name" value="IMyMeetingItem"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a9dd5dcfa065498069423926499854856"><param name="Name" value="GetMeetingType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a29dc0c281aae7dc58848342768321780"><param name="Name" value="GetMeetingType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a174ffd06eb0658357a612c1f23b5b0ca"><param name="Name" value="GetMeetingUIWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a3e08c41c9b6b7b85ca346d673b3a09fa"><param name="Name" value="GetMeetingVideoController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a06e19b9717c871513c84b3280a8e8b2a"><param name="Name" value="GetMeetingWaitingRoomController"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a736be2ac334acff6bbf598d38a5d3f18"><param name="Name" value="GetParticipantsList"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#a818ddfa5ea96d1298f6e585bb57f1804"><param name="Name" value="GetName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#a5bdf98fde633c1cf74b4e3f40aaeddf3"><param name="Name" value="GetNumber"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#a1b41a78318d60090da228bbb805114bf"><param name="Name" value="GetParticipantsList"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_proxy_setting_handler.html#adcc9d511f956a7cd96126d8b98dc9ea0"><param name="Name" value="GetProxyDescription"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_proxy_setting_handler.html#a7e42eb91c601b63e69deaba2469e92bd"><param name="Name" value="GetProxyHost"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_proxy_setting_handler.html#a98952d12564fb173afab67eef5e8315e"><param name="Name" value="GetProxyPort"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_chat_msg_info.html#a45d05993639fcbc215f9911c4be33154"><param name="Name" value="GetReceiverDisplayName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_chat_msg_info.html#a632a77554d90850f37743d2fc56d7e4f"><param name="Name" value="GetReceiverUserId"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_recording_setting_context.html#a1beb0ba47ed7e12554dbf8e63f1afc4c"><param name="Name" value="GetRecordingPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aabfb7854d3ea62ea475e88b596521bfc"><param name="Name" value="GetRecordingSettings"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_password_and_screen_name_handler.html#a7b0ee44f562ebb0a67f58dd8b141753d"><param name="Name" value="GetRequiredInfoType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a68fac10c91f76468e17ad413435e04b5"><param name="Name" value="GetSDKIdentity"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_chat_msg_info.html#a1c46a2206429624976156822a25c207a"><param name="Name" value="GetSenderDisplayName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_chat_msg_info.html#ae79dfb2e9d8e700fafcff5736f9c8bc2"><param name="Name" value="GetSenderUserId"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_event.html#ae2201f3646f905dc139e6d41b36be63f"><param name="Name" value="GetStartTime"></OBJECT>
@@ -195,15 +230,17 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a4cc98b98d358504c69e799c8473d9c67"><param name="Name" value="GetSupportCountryInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_chat_msg_info.html#a6a37976593cb1d4bb7da41d91c331969"><param name="Name" value="GetTimeStamp"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser.html#a70b01b04b0a63f9764745aa9804f268b"><param name="Name" value="GetTitle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#aa77fee27d56d9d0d77db686b6a212a09"><param name="Name" value="GetType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a5b84eade1ee29cdd4ca76c63efad49ec"><param name="Name" value="GetUIController"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser.html#a0ce8158066eebc14ed7b0e77c172417c"><param name="Name" value="GetURL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a665e3853912528e29a0dbf82e794ad8b"><param name="Name" value="GetUserByUserID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#afa0887b5e66feb3204338a3260129989"><param name="Name" value="GetUserByUserID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_audio_status.html#a3a9ee80ce867345442a57acbf01bdd1c"><param name="Name" value="GetUserId"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a529c83af69b48ec984c498f8c44e1ee0"><param name="Name" value="GetUserID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#afcd4ffc4bfb5dd87c6b459afc0861dbc"><param name="Name" value="GetUserName"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a65990cb2b9664a38cbb42677a21af333"><param name="Name" value="GetUserRole"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#ac94c3ec98c7c2187efed5390659ec536"><param name="Name" value="GetVersion"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a8fd1703158c6d247a4453c85fddcf6ab"><param name="Name" value="GetVideoConnQuality"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aee78dd3cec917287d8f35d838ab63018"><param name="Name" value="GetVideoSettings"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a7307c8ad203e2414791e29a00ecf00ad"><param name="Name" value="GetViewableShareSourceList"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a8b10a88dc7a58d13670118765b4edd7a"><param name="Name" value="GetViewabltShareSourceByUserID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#a800cb1a2c6bac68b39c0764790a942e1"><param name="Name" value="GetWaitingRoomLst"></OBJECT>
@@ -213,7 +250,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#a5a5b7a377dc56603c27e50d2139c338a"><param name="Name" value="GiveupRemoteControl"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser.html#a0d79130fa3d3ab3c1a358d26f2271f20"><param name="Name" value="GoBack"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser.html#acd59c9f5c42b68e29e344bb96ba167bd"><param name="Name" value="GoForward"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a34e501243f28e64f1338e4175564e8a0"><param name="Name" value="GoogleCalAuth"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#ad0c7b40573bcc100964afc48ddfeebb4"><param name="Name" value="Hangup"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_chat_dlg_param.html#ae5649a34e2f0a0570da90f4bd6705842"><param name="Name" value="hChatWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a59125ca7d3417845da1ae79cead4cc45"><param name="Name" value="hDirectShareAppWnd"></OBJECT>
@@ -232,12 +268,15 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950"><param name="Name" value="tagShowChatDlgParam"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_setting_dlg_param.html#acc2a6944153407b6e1715b58ef49ad20"><param name="Name" value="tagShowSettingDlgParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#a03529808c83dc9c592ad21f742abbc7d"><param name="Name" value="tagWndPosition"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#a230b388bec5685732b308bb13be2de1b"><param name="Name" value="hResInstance"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#a0005c79d2ba70a5beba57c244b0b98c8"><param name="Name" value="hSelfWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_setting_dlg_param.html#aa66ba5c5ba2987166cd4cd6f39bfa39e"><param name="Name" value="hSettingWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_account_info.html"><param name="Name" value="IAccountInfo"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_account_info.html#a75634456b472620972e2c407cdf15617"><param name="Name" value="GetDisplayName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_account_info.html#af0e9bf58fbeebc6eade414e782fd735f"><param name="Name" value="GetLoginType"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html"><param name="Name" value="IAnnotationController"></OBJECT>
   <UL>
@@ -251,11 +290,19 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#a77020f8c296b064186e54b53b2e1bf9d"><param name="Name" value="StopAnnotation"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#afb4f00df5783e82d6f851ce9826d58e9"><param name="Name" value="Undo"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html"><param name="Name" value="IAudioSettingContext"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#ab2fb1175d69d459b39f7053d0120600d"><param name="Name" value="EnableAutoAdjustMic"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#a860a1c8067d5bfe0ed98262a89bf6807"><param name="Name" value="EnableAutoJoinAudio"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#a5e90cf8551087ce78fc451b03a6fc503"><param name="Name" value="IsAutoAdjustMicEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#aadffc0c39bc4bd7080f75a6e1721c355"><param name="Name" value="IsAutoJoinAudioEnabled"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html"><param name="Name" value="IAuthService"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a0a1f56ed2ca8628d26449652b714f9c8"><param name="Name" value="GetAccountInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75"><param name="Name" value="GetAuthResult"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a70c1fec8ea849555968f062b9efec9bd"><param name="Name" value="GetLoginStatus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a68fac10c91f76468e17ad413435e04b5"><param name="Name" value="GetSDKIdentity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#ac325f257a69634778cb91dde969cd80b"><param name="Name" value="Login"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a7f056bca69ecd8056ed056a988e841a2"><param name="Name" value="LogOut"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#aa1872f545e785b30e18a33f84421c75e"><param name="Name" value="SDKAuth"></OBJECT>
@@ -285,13 +332,15 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html"><param name="Name" value="ICalenderService"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#a4ac02ca4a49e51dd91e7953efb6844ca"><param name="Name" value="Init"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#a6b4373c007728f126dda2acc164a5142"><param name="Name" value="RetrieveCalEvents"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#aa76fd07f937e6ffda41b834d909fd0b4"><param name="Name" value="Init"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#ad6d8fef1a845d6ee41b309dbd358639c"><param name="Name" value="RetrieveCalEvents"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#a3efe9ce0947fa52e8028200d67852d6b"><param name="Name" value="StartOutlookExchangeCalender"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#ad92f6424820f53e3037093202dd8acff"><param name="Name" value="StopOutlookExchangeCalender"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#ad45dd1babcba4a448ef36516fd193f8c"><param name="Name" value="Uninit"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service_event.html"><param name="Name" value="ICalenderServiceEvent"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service_event.html#af07a5fd4d28d768f382032b3ace28fac"><param name="Name" value="onCalenderEventsNotifcation"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service_event.html#a8b9fef3396cec06b0205e51067392fc3"><param name="Name" value="onCalenderEventsNotifcation"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_camera_info.html"><param name="Name" value="ICameraInfo"></OBJECT>
   <UL>
@@ -326,6 +375,19 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser_event.html#a9bdace96281c66fd8214d6ac8fb08365"><param name="Name" value="NotifyDocumentComplete"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser_event.html#a04efe213cf5dba4eb9b8da2f8a36eba8"><param name="Name" value="NotifyNavigateError"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html"><param name="Name" value="IGeneralSettingContext"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a66586bacc38d09c3640b7df2bcab6436"><param name="Name" value="EnableAutoFitToWindowWhenViewSharing"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#aa2e920bf7ca9a7083f7741c85386c2b6"><param name="Name" value="EnableAutoFullScreenVideoWhenJoinMeeting"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a156c560b15c873203c91ea63e82f7f73"><param name="Name" value="EnableDualScreenMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a8f4aedb0d5686d578bfee1cf8c2fa687"><param name="Name" value="EnableSplitScreenMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a845bcadea3df1da3e4087e945d62cc19"><param name="Name" value="IsAeroModeInSharingTurnOff"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#ad5d42b4bf6080358df359c67ef28bc55"><param name="Name" value="IsAutoFitToWindowWhenViewSharingEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a2d9a6bb7302831e3a601219f6abd157d"><param name="Name" value="IsAutoFullScreenVideoWhenJoinMeetingEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a6162c026776d1195c996ab551300442c"><param name="Name" value="IsDualScreenModeEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a39de3d363b45645a669d61ab699bcfa0"><param name="Name" value="IsSplitScreenModeEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a427f4ceffd204bfc1804f2db12d26726"><param name="Name" value="TurnOffAeroModeInSharing"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_list.html"><param name="Name" value="IList"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_list.html#a0c309987bb5f5ee34f694397154fddfc"><param name="Name" value="GetCount"></OBJECT>
@@ -339,7 +401,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#a3609743fac400f5e3dce236d4702ef87"><param name="Name" value="JoinVoip"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#a1cd13a115d54b504addc60c850568986"><param name="Name" value="LeaveVoip"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#a46ffad1f9a811c713086ac4663df2744"><param name="Name" value="MuteAudio"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#ad9dfa694b3e8c766c54002d686aeb1bc"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#adaebfe39b02fd039b71a987aa2297ec9"><param name="Name" value="UnMuteAudio"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_ctrl_event.html"><param name="Name" value="IMeetingAudioCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_ctrl_event.html#afbfa1c7bba75ab2744cff63a8089c01a"><param name="Name" value="onUserActiveAudioChange"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_ctrl_event.html#af1c8eaef123247b389046c1993759071"><param name="Name" value="onUserAudioStatusChange"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_controller.html"><param name="Name" value="IMeetingBreakoutRoomsController"></OBJECT>
   <UL>
@@ -352,14 +420,29 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_event.html#a074f2ad8b58cd36b62ba11fc65f33b5f"><param name="Name" value="OnBreakoutRoomsStartedNotification"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html"><param name="Name" value="IMeetingCallInPhoneNumberInfo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#add32e25e3dedca9d201224da0569da2c"><param name="Name" value="GetCode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#a485283d61df5b3b18b40eb4fe50c997b"><param name="Name" value="GetDisplayNumber"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#aaaa6bbde3952f3cde35d474f3c9e91b2"><param name="Name" value="GetID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#a818ddfa5ea96d1298f6e585bb57f1804"><param name="Name" value="GetName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#a5bdf98fde633c1cf74b4e3f40aaeddf3"><param name="Name" value="GetNumber"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_call_in_phone_number_info.html#aa77fee27d56d9d0d77db686b6a212a09"><param name="Name" value="GetType"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_controller.html"><param name="Name" value="IMeetingChatController"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_controller.html#a9b29bf32186da127ffc15d259e3deb75"><param name="Name" value="SendChatTo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_controller.html#a4668cac1958f1094db359bc9a86fb75a"><param name="Name" value="SetEvent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_ctrl_event.html"><param name="Name" value="IMeetingChatCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_ctrl_event.html#a599584f6ad8691d9824a9d709e1e92fa"><param name="Name" value="onChatMsgNotifcation"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html"><param name="Name" value="IMeetingConfiguration"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a3a24fc98a7efa435c3d65a7e80012023"><param name="Name" value="DisablePopupMeetingWrongPSWDlg"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a7c693638db7089facf7584f9c0142f55"><param name="Name" value="DisableWaitingForHostDialog"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a71db0537cfe1574eb564f019de32647e"><param name="Name" value="EnableAirplayInstructionWindow"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a4f77e6aa3be86f962b08322525819627"><param name="Name" value="EnableApproveRemoteControlDlg"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a6579b7d0ee21f82ed3a61e8993c7e43f"><param name="Name" value="EnableAutoAdjustMicVolumeWhenJoinAudio"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#acc56098e513efb5ea3a5bcc37e776661"><param name="Name" value="EnableAutoAdjustSpeakerVolumeWhenJoinAudio"></OBJECT>
@@ -370,18 +453,23 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aff512c146e8fbea41c0e0c4eb32bddac"><param name="Name" value="EnableInviteButtonOnMeetingUI"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a5a5908fd47921572f989af0716d4e31c"><param name="Name" value="EnableLButtonDBClick4SwitchFullScreenMode"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a9aa8f43c014b93d441a89a32fbed37a0"><param name="Name" value="EnableLeaveMeetingOptionForHost"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a641b0977a12cd792cb6896cf354772fa"><param name="Name" value="EnableToolTipsShow"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a4a920e864e65a60207045bc826b60fc2"><param name="Name" value="HideMeetingInfoFromMeetingUITitle"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aca827d1af2eeb3a01b80971eec8dec27"><param name="Name" value="PrePopulateWebinarRegistrationInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a693b7511908fb34d6746fd654aa260e3"><param name="Name" value="RedirectClickShareBTNEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a9fefbc010bb6fae0207859f90a721435"><param name="Name" value="Reset"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ab2a6b524e479eb69a785340fc5a42342"><param name="Name" value="SetBottomFloatToolbarWndVisibility"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a915bda0e7a83c0f3baa5cadd140e167d"><param name="Name" value="SetDirectShareMonitorID"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ae41a17e4ff47a6fc3cb943f7f1bed1d3"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ac489aa40084a39b6df427b343af43788"><param name="Name" value="SetFloatVideoPos"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aff3127b134118f94f164d25b7a36ee08"><param name="Name" value="SetFloatVideoWndVisibility"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a304a2aedd269f0dce87e58a4695c93ca"><param name="Name" value="SetMeetingIDForMeetingUITitle"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a950da515a6621962b64389e1525704f1"><param name="Name" value="SetMeetingUIPos"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a6dcb0411ecaec88ef74762e78b31616d"><param name="Name" value="SetSharingToolbarVisibility"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration_event.html"><param name="Name" value="IMeetingConfigurationEvent"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration_event.html#af04b457784ab2690801df796ca840dae"><param name="Name" value="onAirPlayInstructionWndNotification"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f"><param name="Name" value="onInputMeetingPasswordAndScreenNameNotification"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper.html"><param name="Name" value="IMeetingH323Helper"></OBJECT>
@@ -398,6 +486,33 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper_event.html#ae17f9085dc3a72e3b32815b26edc700f"><param name="Name" value="onCalloutStatusNotify"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper_event.html#a85b5ec37a55f647b0b13ab824a49547e"><param name="Name" value="onParingH323Result"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html"><param name="Name" value="IMeetingInfo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a6ab3d67c2a5e4d8b9346dc1e4f0fcd67"><param name="Name" value="GetInviteEmailTeamplate"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a2346a736ab0b3bcced638ea675238c13"><param name="Name" value="GetInviteEmailTitle"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a27df4c4a5cf575f779e0df0b3cda1889"><param name="Name" value="GetJoinMeetingUrl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a05a350fca6baa024167af81f878da4ef"><param name="Name" value="GetMeetingHostTag"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#aa524d0a201f93ad1229bbf08d769f5b0"><param name="Name" value="GetMeetingNumber"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#ab54d5cd39c465c017f9370549f169e0c"><param name="Name" value="GetMeetingTopic"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a29dc0c281aae7dc58848342768321780"><param name="Name" value="GetMeetingType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a3c8eda4f5f61aa71621a80844b2a772e"><param name="Name" value="IsInternalMeeting"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html"><param name="Name" value="IMeetingParticipantsController"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#a08f977597c2e4c1f781627119b102b3f"><param name="Name" value="ChangeUserName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#a1b41a78318d60090da228bbb805114bf"><param name="Name" value="GetParticipantsList"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#afa0887b5e66feb3204338a3260129989"><param name="Name" value="GetUserByUserID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#aafbeb657d79f824fccb7008af65dfcb7"><param name="Name" value="LowerAllHands"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#a02e8268a7928c04a6abd89907c44076b"><param name="Name" value="SetEvent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html"><param name="Name" value="IMeetingParticipantsCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#a4e11df0f729de9c76c3ec6c2cbe574e3"><param name="Name" value="onHostChangeNotification"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#ae8dbbfab1f2b83dee0aca5a7e1bfa027"><param name="Name" value="onLowOrRaiseHandStatusChanged"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#af5ebda0890733a8dd583e79570a6c75f"><param name="Name" value="onUserJoin"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#afbbaad24917f6fbf5b0123b88672eeaa"><param name="Name" value="onUserLeft"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#a16fc189a2638896a3fcfe52be85e03be"><param name="Name" value="onUserNameChanged"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_password_and_screen_name_handler.html"><param name="Name" value="IMeetingPasswordAndScreenNameHandler"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_password_and_screen_name_handler.html#a1be88e4f48515b5e7eb8d40ce0e209dc"><param name="Name" value="Cancel"></OBJECT>
@@ -412,6 +527,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a3c611df480c304d15c831e417cddd734"><param name="Name" value="CallMe"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a20fbf811d3d64d5c97c274c5fba682df"><param name="Name" value="CancelCallOut"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a984a93abff339fe54083f430499f98de"><param name="Name" value="GetCallMeStatus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#aeebb5099a93459ae79ce1019b10d2e07"><param name="Name" value="GetCurrentMeetingCallinNumber"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a189718f24d9fd03374ccb41ea0646fcf"><param name="Name" value="GetCurrentMeetingCallinParticipantID"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#ae8b8093c214a7c46e0e65e41b5d52a6a"><param name="Name" value="GetInviteCalloutUserStatus"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a4cc98b98d358504c69e799c8473d9c67"><param name="Name" value="GetSupportCountryInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#ad0c7b40573bcc100964afc48ddfeebb4"><param name="Name" value="Hangup"></OBJECT>
@@ -432,8 +549,16 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html"><param name="Name" value="IMeetingRecordingController"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html#ae245fbbf98874ac906604a7eac72006c"><param name="Name" value="StartRecording"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html#aec26b2b67027adabb7c7ec5452fb4059"><param name="Name" value="StopRecording"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html"><param name="Name" value="IMeetingRecordingCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#a0e9b7d24032a5fe2a7aa62e210df6010"><param name="Name" value="onRecording2MP4Done"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#a9beea53ebaab8bf68bd0c35aaf3e24d5"><param name="Name" value="onRecording2MP4Processing"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#ab99cc2fa14c108a1e66cc3af88d9dc18"><param name="Name" value="onRecordingStatus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#a6a56a27df438bad6c5af620d2d96fa2b"><param name="Name" value="onRecordPriviligeChanged"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html"><param name="Name" value="IMeetingRemoteController"></OBJECT>
   <UL>
@@ -443,59 +568,43 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#a5a5b7a377dc56603c27e50d2139c338a"><param name="Name" value="GiveupRemoteControl"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#a29e8645e1bf0b409c7db4673c6f803a2"><param name="Name" value="RequestRemoteControl"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37"><param name="Name" value="RevokeRemoteControl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#add8e6b1ec629053fdea8b588a78e966c"><param name="Name" value="SetEvent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_ctrl_event.html"><param name="Name" value="IMeetingRemoteCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_ctrl_event.html#a5e271c74caae37ba3bc350208406b4f0"><param name="Name" value="onRemoteControlStatus"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html"><param name="Name" value="IMeetingService"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a6f06487c5e996991a172926531f4ee4a"><param name="Name" value="GetAnnotationController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a4d0d430e4529c6bfe4a2853e2f45c5db"><param name="Name" value="GetAudioConnQuality"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a3a291aed3721f3cda080b9757f47e59b"><param name="Name" value="GetH323Helper"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a5e4abf251b4be62fd00f0a13b0f0fae6"><param name="Name" value="GetInviteEmailTeamplate"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a66a2b2a5c9c689be4502648d67c0084a"><param name="Name" value="GetInviteEmailTitle"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a4e4a3d2a560a6ac0c94f38a83a29af18"><param name="Name" value="GetJoinMeetingUrl"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a0d6d170e424c8e7c9174379e0937b33e"><param name="Name" value="GetMeetingAudioController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#aae3f11295301dbf9f11e2db59ba38861"><param name="Name" value="GetMeetingBreakoutRoomsController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a8e4e9e547a4698fb6b0f92f85cb63d48"><param name="Name" value="GetMeetingChatController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a77118cf022a60bb3373dd327b3fd7e92"><param name="Name" value="GetMeetingConfiguration"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a25013aeb29d311561df8f4e95b316874"><param name="Name" value="GetMeetingConnQuality"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ab279829baff0dee656bff3fc138c5a7d"><param name="Name" value="GetMeetingInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a72e2d5bc3131cc35830ce1aae70b2800"><param name="Name" value="GetMeetingParticipantsController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a8497d75db98faebe1ab88444fcd99a4b"><param name="Name" value="GetMeetingPhoneHelper"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a87419bd8516372b46dfed3db7864902c"><param name="Name" value="GetMeetingRecordingController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a7ddc197b0d19722be80e32772ae81359"><param name="Name" value="GetMeetingRemoteController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#adc04bb43107ceb29952df6d4116981aa"><param name="Name" value="GetMeetingShareController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a4d68b045cef3a3de0f1f29b8e370fef8"><param name="Name" value="GetMeetingStatus"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#aec3f7f0fa19639a79f077e4715d80b48"><param name="Name" value="GetMeetingTopic"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a9dd5dcfa065498069423926499854856"><param name="Name" value="GetMeetingType"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a3e08c41c9b6b7b85ca346d673b3a09fa"><param name="Name" value="GetMeetingVideoController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a06e19b9717c871513c84b3280a8e8b2a"><param name="Name" value="GetMeetingWaitingRoomController"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a736be2ac334acff6bbf598d38a5d3f18"><param name="Name" value="GetParticipantsList"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a5b84eade1ee29cdd4ca76c63efad49ec"><param name="Name" value="GetUIController"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a665e3853912528e29a0dbf82e794ad8b"><param name="Name" value="GetUserByUserID"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a8fd1703158c6d247a4453c85fddcf6ab"><param name="Name" value="GetVideoConnQuality"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a30d5819fe262b8ea0f5ee6fdca828a3b"><param name="Name" value="Join"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a212cb09a26a5c61987e4746598f14d7e"><param name="Name" value="Leave"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#afadc9f4e11d9c4968f6512266991731c"><param name="Name" value="LockMeeting"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ae65d8971aaf0314d3cfeb69686435265"><param name="Name" value="LowerAllHands"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a3e66427636ed90719978e3ecf6cae513"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ad92278a477742e6a1e4eab6469ed96f1"><param name="Name" value="Start"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a063eb6846ff504a8e0fb9dd0c708c41e"><param name="Name" value="UnlockMeeting"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html"><param name="Name" value="IMeetingServiceEvent"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a71ae269af7346f8e187376a04b9ea5ea"><param name="Name" value="onChatMsgNotifcation"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a780b0a1953b1c9b4666ec750239137db"><param name="Name" value="onHostChangeNotification"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#acbc403d3b3d2d8a40e4bc3cf1d7ef184"><param name="Name" value="onLockShareStatus"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a04282d5e85e2139558b74da2fb2ade69"><param name="Name" value="onLowOrRaiseHandStatusChanged"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#ab05fa7545ddee7b5384fdcdc8bf8151b"><param name="Name" value="onMeetingStatusChanged"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a1a862f95a1ca18a19d538d30f692f1b3"><param name="Name" value="onRecording2MP4Done"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a0da1d322363c27520a1dc2385023f328"><param name="Name" value="onRecording2MP4Processing"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a1acb3d02079c004cb3c0875f2126288b"><param name="Name" value="onRecordingStatus"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a8bd134b49684bb79f27da993bbc0a303"><param name="Name" value="onRecordPriviligeChanged"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#afb5d79c013088b5a0f843ee3a2b85159"><param name="Name" value="onRemoteControlStatus"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#afe15aacc60eda864aac666e1a6fc9f1c"><param name="Name" value="onSharingStatus"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#aa20a7502955c8b07549c84fc824c6a7b"><param name="Name" value="onSpotlightVideoChangeNotification"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#ad76e5955bf66c8702e298487db8b0e74"><param name="Name" value="onUserAudioStatusChange"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a6729a5cd7986993896385a1f239560f2"><param name="Name" value="onUserJoin"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a120f6e1b375bdd07b5c8d13d97fade78"><param name="Name" value="onUserLeft"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#aceea3a00a1393ee109e52fcabd067e33"><param name="Name" value="onUserVideoStatusChange"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html"><param name="Name" value="IMeetingShareController"></OBJECT>
   <UL>
@@ -507,7 +616,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a0db9bd1d5a9de7ac3937043f4885b641"><param name="Name" value="LockShare"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a1510afe45ded6a3bdb4b8af60d4eabeb"><param name="Name" value="PauseCurrentSharing"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a45226c08613c2a9453b1084f28c084d0"><param name="Name" value="ResumeCurrentSharing"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a2b047d16c486215a9b116ba11e7e97aa"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a9d2c0b5feeccf0f0b13fc4ae1e4f9ddd"><param name="Name" value="ShowShareOptionDialog"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#addee64cf38cfe941fe02f181854062f0"><param name="Name" value="StartAirPlayShare"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a380b9a9fc6d944814c18897e7e372383"><param name="Name" value="StartAppShare"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#abcf74e306adf12af98936c9eaccd1631"><param name="Name" value="StartMonitorShare"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a495a98fc979f9c9523750112ca347fa2"><param name="Name" value="StopShare"></OBJECT>
@@ -516,15 +627,23 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a81ac09dd0ac9286afd5d92918616b8c2"><param name="Name" value="UnlockShare"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#ad0063219ee80ff0703ad96f0b8f5296f"><param name="Name" value="ViewShare"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html"><param name="Name" value="IMeetingShareCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html#a6be48bff0445143193e3e0f8ec4d5894"><param name="Name" value="onLockShareStatus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html#a1424695c7881e14821f27ee48eefbe0e"><param name="Name" value="onShareContentNotification"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html#a94ddea0fcc47efe5a8f08306d7cf6c8d"><param name="Name" value="onSharingStatus"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html"><param name="Name" value="IMeetingUIController"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ac5bd16a63dc8c0f4223f6aaa041ed769"><param name="Name" value="ChangeFloatoActiveSpkVideoSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a075000e7ea2a3b74d4959ca8562eea36"><param name="Name" value="EnterFullScreen"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#af64c2b92d8c9f8590613d0c51c9bda04"><param name="Name" value="ExitFullScreen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab4c45ab45d9104f2c80568b7af9b2766"><param name="Name" value="GetCurrentSplitScreenModeInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a174ffd06eb0658357a612c1f23b5b0ca"><param name="Name" value="GetMeetingUIWnd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#abafd887b637250f0602001abb62f546b"><param name="Name" value="GetWallViewPageInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ac695fcc27de2b8a5f7498eeb36cfa17a"><param name="Name" value="HideChatDlg"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab28d1cd7f7fec5077585fbf8ddc89f4d"><param name="Name" value="HideJoinAudioDlg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#af82e0abf0b891bf72feb45652e9b039b"><param name="Name" value="IsMinimizeModeOfFristScreenMeetingUIWnd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab6b2c061aec9b89c0aabf6c14de7640e"><param name="Name" value="MoveFloatVideoWnd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#acbbab33757bb78cba171d6f8f8c1c86c"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a599a0ec8a1bd51a46238ec33a807df25"><param name="Name" value="ShowBottomFloatToolbarWnd"></OBJECT>
@@ -532,23 +651,33 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ac34b07d5699459d35e02691051a14c08"><param name="Name" value="ShowJoinAudioDlg"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#afca35e584552cf9667aeaee86eea76b0"><param name="Name" value="ShowParticipantsListWnd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a83bad388627a510ea534bb0cbbcbf0d9"><param name="Name" value="ShowPreOrNextPageVideo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#add81a532a3b07e870e452c1ef621f5af"><param name="Name" value="ShowSharingFrameWindows"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a3a697ad43b319ea645e19c871bf5396b"><param name="Name" value="ShowSharingToolbar"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ae5983832f16deb6a031dd9017a8e692c"><param name="Name" value="SwitchFloatVideoToActiveSpkMod"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ad514b42aad0ca02d66b0cae3ff3478ec"><param name="Name" value="SwitchFloatVideoToGalleryMod"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab3517dd63aa0e632793225b3eaf54b9d"><param name="Name" value="SwitchMinimizeUIMode4FristScreenMeetingUIWnd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a9817516584f78a98b1e7062d11247f12"><param name="Name" value="SwitchSplitScreenMode"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a09c2be0e51b6e5a95f00fc0b09a6b5dd"><param name="Name" value="SwitchToVideoWall"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a2581800ca361dbd5b63f1b3f210c044f"><param name="Name" value="SwtichToAcitveSpeaker"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller_event.html"><param name="Name" value="IMeetingUIControllerEvent"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller_event.html#a8b190b1bf65e0c3c186288d774b3a129"><param name="Name" value="onInviteBtnClicked"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller_event.html#a19c1a8e29ed6f3c100599fc2fcaeda49"><param name="Name" value="onStartShareBtnClicked"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html"><param name="Name" value="IMeetingVideoController"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a0a512517f5828ee32a0ded7127c6d8e4"><param name="Name" value="HideOrShowNoVideoUserOnVideoWall"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a0961f55d4152a7aa285e9c9acc99f3f5"><param name="Name" value="MuteVideo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#ad721080467a3493b7558c461be18dcf9"><param name="Name" value="PinVideo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a2ee83419c9f08639fce8fe9982a399f9"><param name="Name" value="SetEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a1844e14764f64c7944baed8fcd4ef36b"><param name="Name" value="SpotlightVideo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#ad8765f8b4a3eaba1dce699efe4e9617c"><param name="Name" value="UnmuteVideo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_ctrl_event.html"><param name="Name" value="IMeetingVideoCtrlEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_ctrl_event.html#aba9ec55d1870aec880c2b084cc482e03"><param name="Name" value="onSpotlightVideoChangeNotification"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_ctrl_event.html#a69c8e61c743d407e7bb85a46667fab73"><param name="Name" value="onUserVideoStatusChange"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html"><param name="Name" value="IMeetingWaitingRoomController"></OBJECT>
   <UL>
@@ -588,6 +717,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html"><param name="Name" value="INetworkConnectionHandler"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html#a224f41b865924554e7ab0c03c5a98e24"><param name="Name" value="onProxyDetectComplete"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html#a06cee1732cca5e116b9c56da4d3d45fa"><param name="Name" value="onProxySettingNotification"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html#a30e8c3f98d472182ce0ba041a143f104"><param name="Name" value="onSSLCertVerifyNotification"></OBJECT>
   </UL>
@@ -596,7 +726,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_helper.html#a53e1980370288349238f942cb18cf844"><param name="Name" value="RegisterNetworkConnectionHandler"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_helper.html#a9dd857503da7a91248db6b4dfd52f7b0"><param name="Name" value="UnRegisterNetworkConnectionHandler"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#a4ac02ca4a49e51dd91e7953efb6844ca"><param name="Name" value="Init"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#aa76fd07f937e6ffda41b834d909fd0b4"><param name="Name" value="Init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a18da275d45f5c249e6bc85c21438f2ea"><param name="Name" value="InitParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk_8h.html#ad2ef730cb6a637dc46747d0f2dc83893"><param name="Name" value="InitSDK"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_password_and_screen_name_handler.html#ab29a0db05dd700d209b76a05bbd7568c"><param name="Name" value="InputMeetingPasswordAndScreenName"></OBJECT>
@@ -628,6 +758,12 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_proxy_setting_handler.html#a98952d12564fb173afab67eef5e8315e"><param name="Name" value="GetProxyPort"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_proxy_setting_handler.html#a85ba7813bca0361849a36457cd7df71e"><param name="Name" value="InputUsernamePassword"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_recording_setting_context.html"><param name="Name" value="IRecordingSettingContext"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_recording_setting_context.html#a1beb0ba47ed7e12554dbf8e63f1afc4c"><param name="Name" value="GetRecordingPath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_recording_setting_context.html#a884f4c4307281f2460211c6568824a2a"><param name="Name" value="SetRecordingPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a845bcadea3df1da3e4087e945d62cc19"><param name="Name" value="IsAeroModeInSharingTurnOff"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a1f27a76ed2e9e2621360fd96f56c3f85"><param name="Name" value="IsAllowJoinBeforeHost"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#ae625b9c86c79e202900851f4f08533b8"><param name="Name" value="IsAnnoataionDisable"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a31130af1330952ec5435d9464b8020fe"><param name="Name" value="IsAudioMuted"></OBJECT>
@@ -637,6 +773,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_normal_user.html#a5e1717ce6770aa86840f086fc509041c"><param name="Name" value="tagJoinParam4NormalUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_normal_user.html#a750f835ef2522e318232622f9c1b7cb5"><param name="Name" value="tagStartParam4NormalUser"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#a5e90cf8551087ce78fc451b03a6fc503"><param name="Name" value="IsAutoAdjustMicEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#ad5d42b4bf6080358df359c67ef28bc55"><param name="Name" value="IsAutoFitToWindowWhenViewSharingEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a2d9a6bb7302831e3a601219f6abd157d"><param name="Name" value="IsAutoFullScreenVideoWhenJoinMeetingEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_audio_setting_context.html#aadffc0c39bc4bd7080f75a6e1721c355"><param name="Name" value="IsAutoJoinAudioEnabled"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_viewable_share_source.html#a6f708d39a7fcd1f96ba5597e9cc7e19c"><param name="Name" value="isCanBeRemoteControl"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html"><param name="Name" value="IScheduleMeetingItem"></OBJECT>
   <UL>
@@ -656,23 +796,21 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html#ae52804b4cd27597b0f29b228ad2fafea"><param name="Name" value="tagStartParam4APIUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_normal_user.html#a03263675d83a4666a59ae6eeeb279d45"><param name="Name" value="tagStartParam4NormalUser"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a6162c026776d1195c996ab551300442c"><param name="Name" value="IsDualScreenModeEnabled"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html"><param name="Name" value="ISettingService"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a712c6031fb74ef3b6429cd31ca9d183d"><param name="Name" value="EnableAutoAdjustMic"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a9cb7da077746c6562c755fbb36620f2a"><param name="Name" value="EnableAutoFitToWindowWhenViewSharing"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#ae90986e390549fe517f2cd9fa462de76"><param name="Name" value="EnableAutoFullScreenVideoWhenJoinMeeting"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aa8ec49ea4934b33d1ade78378c67651d"><param name="Name" value="EnableAutoJoinAudio"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#abacdc3c4ba34cab91c295f20490a530e"><param name="Name" value="EnableDualScreenMode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aaf8084f850ef85747d8aa7c0258a4aaa"><param name="Name" value="GetCameraList"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#abc7e0e422c681bc625fbfc9feb62b880"><param name="Name" value="GetAudioSettings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a7460b49ab5c87fb6ff790628a8b68a85"><param name="Name" value="GetGeneralSettings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aabfb7854d3ea62ea475e88b596521bfc"><param name="Name" value="GetRecordingSettings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aee78dd3cec917287d8f35d838ab63018"><param name="Name" value="GetVideoSettings"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a5c7bd7b92ad1e382a0ea6a840e6a193d"><param name="Name" value="HideSettingDlg"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a57f640d003816454b0681e0c7330ef5b"><param name="Name" value="SelectCamera"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#af47cd2bfa0f741d7eaf47f94ac788428"><param name="Name" value="SetRecordingPath"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aacb0c9fc1f1e695076b9f35c99cb731b"><param name="Name" value="ShowSettingDlg"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a8e48d229a3f7d7cf3527872ecaae8cab"><param name="Name" value="TurnOffAeroModeInSharing"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a4e07979fe5a2ab1a67bb2f2fb9161f88"><param name="Name" value="isGoogleCal"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#ae2c7cfb4086c9c6e90d497b06d9d8304"><param name="Name" value="IsFaceBeautyEffectEnabled"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a4dd3760d6fde8ad685d39fbcb425e1b7"><param name="Name" value="IsHost"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_info.html#a3c8eda4f5f61aa71621a80844b2a772e"><param name="Name" value="IsInternalMeeting"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a743eef3b1438bce58673e56c2d230107"><param name="Name" value="IsInWaitingRoom"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#af82e0abf0b891bf72feb45652e9b039b"><param name="Name" value="IsMinimizeModeOfFristScreenMeetingUIWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a3999c33e035045b1ab621380dd862121"><param name="Name" value="IsMySelf"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_speaker_info.html"><param name="Name" value="ISpeakerInfo"></OBJECT>
   <UL>
@@ -681,6 +819,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_speaker_info.html#a78aef7fe8fc1e07747ffb9fb1c0d4baa"><param name="Name" value="IsSelectedDevice"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a4a2c29f8c7d0224c03f7f87b576b5647"><param name="Name" value="IsPersonalMeeting"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#aa00b99a1f304f9a5af8ddd61e3b64038"><param name="Name" value="IsPurePhoneUser"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a3d9ef8956e515fd65aa1c03f1e3928e4"><param name="Name" value="IsRaiseHand"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#abcdad573ec17bf25e9553962888130c2"><param name="Name" value="IsRecurringMeeting"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_camera_info.html#a71964a6dcc04c2e1e1f035a698ea7812"><param name="Name" value="IsSelectedDevice"></OBJECT>
@@ -701,9 +840,11 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#a0e81d14fc6617e0734519c52de3de1d8"><param name="Name" value="GetCertSerialNum"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#a294932e428cb98f8ed0ce2323213cb1e"><param name="Name" value="Trust"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a39de3d363b45645a669d61ab699bcfa0"><param name="Name" value="IsSplitScreenModeEnabled"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a1332b3934e6491592f8b01f61effcd9d"><param name="Name" value="IsSupportPhoneFeature"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#ad253709e791b3d80e75f6774df7b4f68"><param name="Name" value="IsSupportWaitingRoom"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#a69b3d3c0288d3aa52d06a30eb876b197"><param name="Name" value="IsUsePMIAsMeetingID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#a506a0984f5353cd5612c6677a84028f2"><param name="Name" value="IsVideoMirrorEffectEnabled"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#ac137ab4cb1e395791846cbe64376dcae"><param name="Name" value="isVideoOff"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#ac137ab4cb1e395791846cbe64376dcae"><param name="Name" value="tagJoinParam4APIUser"></OBJECT>
@@ -713,8 +854,21 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a144eab618774c9652e9fcdaaeffa91be"><param name="Name" value="IsVideoOn"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#a0045bf2da3249b4974361a1090c6ec51"><param name="Name" value="IsWaitingRoomOnEntryFlagOn"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_my_meeting_item.html#aa83a5ee210884a198cb94c307613383f"><param name="Name" value="IsWebinarMeeting"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html"><param name="Name" value="IUIHooker"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#ae6e55f8b4fecb024235955a1e8c3a672"><param name="Name" value="MonitorWnd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a281dab2b8aaa1361cf02123c49ebcc82"><param name="Name" value="MonitorWndMessage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a6c41625d8bd23321b12e65a3e50abfb1"><param name="Name" value="SetEvent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a554ff7fd60eab0e59a6d6d1a7b0b0ef1"><param name="Name" value="Start"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a3927af2bd9bf9fb37fad4df2ee9859fe"><param name="Name" value="Stop"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker_event.html"><param name="Name" value="IUIHookerEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker_event.html#a6ff2c3cada4005c816b475a6760f9485"><param name="Name" value="onUIActionNotify"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_audio_status.html"><param name="Name" value="IUserAudioStatus"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_audio_status.html#ad770ea0b87421d03c8a8e85590501d18"><param name="Name" value="GetAudioType"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_audio_status.html#adcab40acd45760dde0fb2e3c341857ef"><param name="Name" value="GetStatus"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_audio_status.html#a3a9ee80ce867345442a57acbf01bdd1c"><param name="Name" value="GetUserId"></OBJECT>
   </UL>
@@ -729,8 +883,18 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a4dd3760d6fde8ad685d39fbcb425e1b7"><param name="Name" value="IsHost"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a743eef3b1438bce58673e56c2d230107"><param name="Name" value="IsInWaitingRoom"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a3999c33e035045b1ab621380dd862121"><param name="Name" value="IsMySelf"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#aa00b99a1f304f9a5af8ddd61e3b64038"><param name="Name" value="IsPurePhoneUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a3d9ef8956e515fd65aa1c03f1e3928e4"><param name="Name" value="IsRaiseHand"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_user_info.html#a144eab618774c9652e9fcdaaeffa91be"><param name="Name" value="IsVideoOn"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html"><param name="Name" value="IVideoSettingContext"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#a98bc1f8bac6d4b22492d986f896a1ad8"><param name="Name" value="EnableFaceBeautyEffect"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#acc00ee6681039491b9edf4ff8cb28532"><param name="Name" value="EnableVideoMirrorEffect"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#ab35cbc29af8e66ddc90e25b0cb2f3fa0"><param name="Name" value="GetCameraList"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#ae2c7cfb4086c9c6e90d497b06d9d8304"><param name="Name" value="IsFaceBeautyEffectEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#a506a0984f5353cd5612c6677a84028f2"><param name="Name" value="IsVideoMirrorEffectEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#a1a8d870cbc4e4f9ce6e3c3bd87f0b161"><param name="Name" value="SelectCamera"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a30d5819fe262b8ea0f5ee6fdca828a3b"><param name="Name" value="Join"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_controller.html#aa0ebb1c611553445064749f3960c4280"><param name="Name" value="JoinBreakoutRoom"></OBJECT>
@@ -738,6 +902,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a97202e23f1afc8d5390025056aeb23aa"><param name="Name" value="JoinParam4NormalUser"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#ac3e883173846a97181d8a8097b3ee076"><param name="Name" value="JoinParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#a3609743fac400f5e3dce236d4702ef87"><param name="Name" value="JoinVoip"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html#a49b1cad7677f30f83d440654efa5c8a1"><param name="Name" value="langInfo"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html#af0fc6581afa9d899bbe354be5f7cb1a9"><param name="Name" value="langName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html#aaac3fcba09d3af186b736ae9a49d9eb1"><param name="Name" value="langType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a212cb09a26a5c61987e4746598f14d7e"><param name="Name" value="Leave"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134eaac329903fff833dbc23da0c5b8069593"><param name="Name" value="LEAVE_MEETING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_controller.html#a096680b8c4c2d32d197d8eb38e2f12aa"><param name="Name" value="LeaveBreakoutRoom"></OBJECT>
@@ -755,15 +922,23 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6ba98c078310ad52569f6b0e645a717ea99"><param name="Name" value="LOGIN_IDLE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6bad77d19ddfc74c75bd928a78c08721cf2"><param name="Name" value="LOGIN_PROCESSING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6baee62dab80d180773d80f882c0b84c535"><param name="Name" value="LOGIN_SUCCESS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#aad76fabf61b3fb7ff964694f97a0704e"><param name="Name" value="LoginParam4Email"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#aaba42574f1dd6ef57331d918c10f7865"><param name="Name" value="LoginParam4SSO"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a6ea2a25fe22fce84fad6e54e16fb3f3f"><param name="Name" value="LoginParam"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a9799e5c8726733dfeb403d11ff8aa19e"><param name="Name" value="loginType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17a203b2132f69cc89dcea95bbf7d5a18a3"><param name="Name" value="LoginType_Email"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="auth__service__interface_8h.html#a2d23c4249c4d0ef998c9309eeb084b17a44daaae9228eacfe94b613213d5d7910"><param name="Name" value="LoginType_SSO"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a7f056bca69ecd8056ed056a988e841a2"><param name="Name" value="LogOut"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ae65d8971aaf0314d3cfeb69686435265"><param name="Name" value="LowerAllHands"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#aafbeb657d79f824fccb7008af65dfcb7"><param name="Name" value="LowerAllHands"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__annotation__interface_8h.html"><param name="Name" value="meeting_annotation_interface.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc"><param name="Name" value="ANNOTOOL_ERASER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a0156c28d15115bd0aa017fd8dabed81b"><param name="Name" value="ANNOTOOL_NONE_DRAWING"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4a283472f83d6d01841f631b5bad1381d8"><param name="Name" value="MEETING_FAIL_CLIENT_INCOMPATIBLE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4a968e4fe5cf85af157ab990acddcd1529"><param name="Name" value="MEETING_FAIL_WRITE_CONFIG_FILE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html"><param name="Name" value="meeting_service_interface.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc"><param name="Name" value="ANNOTOOL_ERASER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a0156c28d15115bd0aa017fd8dabed81b"><param name="Name" value="ANNOTOOL_NONE_DRAWING"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134eabe5541871cc5b0ff7ff43bbd80ba48b9"><param name="Name" value="END_MEETING"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#ac3e883173846a97181d8a8097b3ee076"><param name="Name" value="JoinParam"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#ac00c72f26f67afc9ec3e3f00c0efebd7"><param name="Name" value="JoinParam4APIUser"></OBJECT>
@@ -781,12 +956,14 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391a7dec033177e68f2a5b06418da001bd6b"><param name="Name" value="MEETING_STATUS_WAITINGFORHOST"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a35d39b5fd37bc538254a80c1bb949836a5638d230d48b921dc5c34678686fca85"><param name="Name" value="SDK_UT_APIUSER"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a35d39b5fd37bc538254a80c1bb949836a0e1f198e6a8da9c40d7da332fd297078"><param name="Name" value="SDK_UT_NORMALUSER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a2f358b7d2eac6c1ecba4ca5e232f2100"><param name="Name" value="ShowChatDlgParam"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aabe84e446e60d08643a702857abb1d79"><param name="Name" value="StartParam"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#af2ede21ee3cb73c3f35c3f8784037b48"><param name="Name" value="StartParam4APIUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8eb0ff526666424d7196490739f317c3"><param name="Name" value="StartParam4NormalUser"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a9c1a25a1bedd88a021c1f16b0d13d38d"><param name="Name" value="VideoWallPageInfoParam"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aad9397d517c380787e0605fa9429e5e8"><param name="Name" value="ViewableShareSource"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__sharing__interface_8h.html"><param name="Name" value="meeting_sharing_interface.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__sharing__interface_8h.html#a16c3032c590b9e543b3a5ba216d93dfb"><param name="Name" value="ShareInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__sharing__interface_8h.html#aad9397d517c380787e0605fa9429e5e8"><param name="Name" value="ViewableShareSource"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391a8fe7628121484cd3e1e5a4a2d3162abe"><param name="Name" value="MEETING_STATUS_CONNECTING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391a3c2b9971d204da5e61f13268f2fb5bff"><param name="Name" value="MEETING_STATUS_DISCONNECTING"></OBJECT>
@@ -796,6 +973,12 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391ad1e73065cb374ae2a30daee9c4ddaa27"><param name="Name" value="MEETING_STATUS_INMEETING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391a154b4ee544cb66e2ec2eab01612dca03"><param name="Name" value="MEETING_STATUS_RECONNECTING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391a7dec033177e68f2a5b06418da001bd6b"><param name="Name" value="MEETING_STATUS_WAITINGFORHOST"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html"><param name="Name" value="meeting_ui_ctrl_interface.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html#a2f358b7d2eac6c1ecba4ca5e232f2100"><param name="Name" value="ShowChatDlgParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html#a2aea98a6d4e369af81628c9f3c7f778d"><param name="Name" value="SplitScreenInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html#a9c1a25a1bedd88a021c1f16b0d13d38d"><param name="Name" value="VideoWallPageInfoParam"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a0f778ba74be0509f5c19f2dad4ce868b"><param name="Name" value="meetingNumber"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a0f778ba74be0509f5c19f2dad4ce868b"><param name="Name" value="tagJoinParam4APIUser"></OBJECT>
@@ -803,6 +986,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html#abe4e485280b82c0a38c4ba6b04d80777"><param name="Name" value="tagStartParam4APIUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_normal_user.html#a4e7cd6af311030ec679b093aadce2e29"><param name="Name" value="tagStartParam4NormalUser"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#ae6e55f8b4fecb024235955a1e8c3a672"><param name="Name" value="MonitorWnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a281dab2b8aaa1361cf02123c49ebcc82"><param name="Name" value="MonitorWndMessage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab6b2c061aec9b89c0aabf6c14de7640e"><param name="Name" value="MoveFloatVideoWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#a46ffad1f9a811c713086ac4663df2744"><param name="Name" value="MuteAudio"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a0961f55d4152a7aa285e9c9acc99f3f5"><param name="Name" value="MuteVideo"></OBJECT>
@@ -813,41 +998,48 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser_event.html#a9bdace96281c66fd8214d6ac8fb08365"><param name="Name" value="NotifyDocumentComplete"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser_event.html#a04efe213cf5dba4eb9b8da2f8a36eba8"><param name="Name" value="NotifyNavigateError"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_video_wall_page_info_param.html#af21244cecc699fae50ebce2f7e931c7d"><param name="Name" value="nTotalPages"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#aa5437efac4f1d4b3e57e816277f25d19"><param name="Name" value="obConfigOpts"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration_event.html#af04b457784ab2690801df796ca840dae"><param name="Name" value="onAirPlayInstructionWndNotification"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service_event.html#ac6bf10b8e19789804f08e63ad6738d01"><param name="Name" value="onAuthenticationReturn"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_event.html#a074f2ad8b58cd36b62ba11fc65f33b5f"><param name="Name" value="OnBreakoutRoomsStartedNotification"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service_event.html#af07a5fd4d28d768f382032b3ace28fac"><param name="Name" value="onCalenderEventsNotifcation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service_event.html#a8b9fef3396cec06b0205e51067392fc3"><param name="Name" value="onCalenderEventsNotifcation"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper_event.html#a01cfdbd5a1f8d9deca2f86ce9c3d1e92"><param name="Name" value="onCallMeStatus"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper_event.html#ae17f9085dc3a72e3b32815b26edc700f"><param name="Name" value="onCalloutStatusNotify"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a71ae269af7346f8e187376a04b9ea5ea"><param name="Name" value="onChatMsgNotifcation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_ctrl_event.html#a599584f6ad8691d9824a9d709e1e92fa"><param name="Name" value="onChatMsgNotifcation"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438"><param name="Name" value="onDeleteMeeting"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a780b0a1953b1c9b4666ec750239137db"><param name="Name" value="onHostChangeNotification"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#a4e11df0f729de9c76c3ec6c2cbe574e3"><param name="Name" value="onHostChangeNotification"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f"><param name="Name" value="onInputMeetingPasswordAndScreenNameNotification"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller_event.html#a8b190b1bf65e0c3c186288d774b3a129"><param name="Name" value="onInviteBtnClicked"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper_event.html#ac5f952bf79edf029be51e4877373ad08"><param name="Name" value="onInviteCallOutUserStatus"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service_event.html#a1ab53c8ca9c2aa5e941a82c275a6ec5c"><param name="Name" value="onListMeeting"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#acbc403d3b3d2d8a40e4bc3cf1d7ef184"><param name="Name" value="onLockShareStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html#a6be48bff0445143193e3e0f8ec4d5894"><param name="Name" value="onLockShareStatus"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service_event.html#acee90b340cb800597cd0f20ba5679ad4"><param name="Name" value="onLoginRet"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service_event.html#af2de61cfb87a505a9dc3f0123f443735"><param name="Name" value="onLogout"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a04282d5e85e2139558b74da2fb2ade69"><param name="Name" value="onLowOrRaiseHandStatusChanged"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#ae8dbbfab1f2b83dee0aca5a7e1bfa027"><param name="Name" value="onLowOrRaiseHandStatusChanged"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#ab05fa7545ddee7b5384fdcdc8bf8151b"><param name="Name" value="onMeetingStatusChanged"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper_event.html#a85b5ec37a55f647b0b13ab824a49547e"><param name="Name" value="onParingH323Result"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html#a224f41b865924554e7ab0c03c5a98e24"><param name="Name" value="onProxyDetectComplete"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html#a06cee1732cca5e116b9c56da4d3d45fa"><param name="Name" value="onProxySettingNotification"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a1a862f95a1ca18a19d538d30f692f1b3"><param name="Name" value="onRecording2MP4Done"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a0da1d322363c27520a1dc2385023f328"><param name="Name" value="onRecording2MP4Processing"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a1acb3d02079c004cb3c0875f2126288b"><param name="Name" value="onRecordingStatus"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a8bd134b49684bb79f27da993bbc0a303"><param name="Name" value="onRecordPriviligeChanged"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#afb5d79c013088b5a0f843ee3a2b85159"><param name="Name" value="onRemoteControlStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#a0e9b7d24032a5fe2a7aa62e210df6010"><param name="Name" value="onRecording2MP4Done"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#a9beea53ebaab8bf68bd0c35aaf3e24d5"><param name="Name" value="onRecording2MP4Processing"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#ab99cc2fa14c108a1e66cc3af88d9dc18"><param name="Name" value="onRecordingStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_ctrl_event.html#a6a56a27df438bad6c5af620d2d96fa2b"><param name="Name" value="onRecordPriviligeChanged"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_ctrl_event.html#a5e271c74caae37ba3bc350208406b4f0"><param name="Name" value="onRemoteControlStatus"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service_event.html#aedb678510dd79cb8723a6c39af62b83a"><param name="Name" value="onScheduleOrEditMeeting"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#afe15aacc60eda864aac666e1a6fc9f1c"><param name="Name" value="onSharingStatus"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#aa20a7502955c8b07549c84fc824c6a7b"><param name="Name" value="onSpotlightVideoChangeNotification"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html#a1424695c7881e14821f27ee48eefbe0e"><param name="Name" value="onShareContentNotification"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_ctrl_event.html#a94ddea0fcc47efe5a8f08306d7cf6c8d"><param name="Name" value="onSharingStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_ctrl_event.html#aba9ec55d1870aec880c2b084cc482e03"><param name="Name" value="onSpotlightVideoChangeNotification"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_handler.html#a30e8c3f98d472182ce0ba041a143f104"><param name="Name" value="onSSLCertVerifyNotification"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#ad76e5955bf66c8702e298487db8b0e74"><param name="Name" value="onUserAudioStatusChange"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a6729a5cd7986993896385a1f239560f2"><param name="Name" value="onUserJoin"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#a120f6e1b375bdd07b5c8d13d97fade78"><param name="Name" value="onUserLeft"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service_event.html#aceea3a00a1393ee109e52fcabd067e33"><param name="Name" value="onUserVideoStatusChange"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller_event.html#a19c1a8e29ed6f3c100599fc2fcaeda49"><param name="Name" value="onStartShareBtnClicked"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker_event.html#a6ff2c3cada4005c816b475a6760f9485"><param name="Name" value="onUIActionNotify"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_ctrl_event.html#afbfa1c7bba75ab2744cff63a8089c01a"><param name="Name" value="onUserActiveAudioChange"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_ctrl_event.html#af1c8eaef123247b389046c1993759071"><param name="Name" value="onUserAudioStatusChange"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#af5ebda0890733a8dd583e79570a6c75f"><param name="Name" value="onUserJoin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#afbbaad24917f6fbf5b0123b88672eeaa"><param name="Name" value="onUserLeft"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_ctrl_event.html#a16fc189a2638896a3fcfe52be85e03be"><param name="Name" value="onUserNameChanged"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_ctrl_event.html#a69c8e61c743d407e7bb85a46667fab73"><param name="Name" value="onUserVideoStatusChange"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_event.html#a00e689caa9d41682a19c31b96cfb82bb"><param name="Name" value="onWatingRoomUserJoin"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_event.html#a3fd272e33a268f11a3b7efacfc7f381d"><param name="Name" value="onWatingRoomUserLeft"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#afda12180ef490cc9911d2659375da695"><param name="Name" value="OutlookExchageAuth"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param.html#abfb30fb65d009dd6dcf8bb9cfda8989f"><param name="Name" value="param"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param.html#abfb30fb65d009dd6dcf8bb9cfda8989f"><param name="Name" value="tagJoinParam"></OBJECT>
@@ -860,12 +1052,16 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html#a785a19621aa7e325c609ca5917de6cea"><param name="Name" value="tagStartParam4APIUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_normal_user.html#a8efe3e68dbe6cb66e61466035f3f6c3e"><param name="Name" value="tagStartParam4NormalUser"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#af20e2aad75657a46e67e450795e9380b"><param name="Name" value="password"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#a58dfc5a39504b7b868e59ad70243efd2"><param name="Name" value="password"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#a58dfc5a39504b7b868e59ad70243efd2"><param name="Name" value="tagLoginParam4Email"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#abef5cb55f1c5b8b84d5daaea3a3a6c2b"><param name="Name" value="tagOutlookExchageAuth"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a1510afe45ded6a3bdb4b8af60d4eabeb"><param name="Name" value="PauseCurrentSharing"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a27d3ba9987fe4f86fa2808e49bd36de5"><param name="Name" value="pEvent"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#ad721080467a3493b7558c461be18dcf9"><param name="Name" value="PinVideo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#ab6e2655b2adc64c1f505832827e88543"><param name="Name" value="PLATFORM_EXPORT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a3d73476ddbfe6ec62ed514489bf91008"><param name="Name" value="PLATFORM_IMPORT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aca827d1af2eeb3a01b80971eec8dec27"><param name="Name" value="PrePopulateWebinarRegistrationInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a153fbd01ae306e402d93b4a95cfe2417"><param name="Name" value="psw"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a153fbd01ae306e402d93b4a95cfe2417"><param name="Name" value="tagJoinParam4APIUser"></OBJECT>
@@ -873,6 +1069,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#a4b1d3388c12bc5c85932143f73143f8b"><param name="Name" value="PutInWaitingRoom"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_chat_dlg_param.html#a71703923de2c90a207df7d9a497267bd"><param name="Name" value="rect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a693b7511908fb34d6746fd654aa260e3"><param name="Name" value="RedirectClickShareBTNEvent"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#ad6e167403d82159fa4651a56913122aa"><param name="Name" value="Redo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_helper.html#a53e1980370288349238f942cb18cf844"><param name="Name" value="RegisterNetworkConnectionHandler"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#a29e8645e1bf0b409c7db4673c6f803a2"><param name="Name" value="RequestRemoteControl"></OBJECT>
@@ -882,7 +1079,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a9fefbc010bb6fae0207859f90a721435"><param name="Name" value="Reset"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser.html#abe538d5982cc30ba2b3fd54d773f0374"><param name="Name" value="Resize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a45226c08613c2a9453b1084f28c084d0"><param name="Name" value="ResumeCurrentSharing"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#a6b4373c007728f126dda2acc164a5142"><param name="Name" value="RetrieveCalEvents"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#ad6d8fef1a845d6ee41b309dbd358639c"><param name="Name" value="RetrieveCalEvents"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb"><param name="Name" value="RetrieveUIHooker"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37"><param name="Name" value="RevokeRemoteControl"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#a47ce38da3ad051b1f6fd35207666ca57"><param name="Name" value="ScheduleMeeting"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a939c8d2e15d41e68a5525252eb597b28"><param name="Name" value="SDK_API"></OBJECT>
@@ -903,9 +1101,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a4483e6b9505eae9d14fbc8680f6b2657"><param name="Name" value="SDKERR_UNKNOWN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a2a7650373f087eb34eae9a5bd29e3964"><param name="Name" value="SDKERR_VIDEO_NOTREADY"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036aef54ec9885bd37cf8efabbab3b3d1e33"><param name="Name" value="SDKERR_WRONG_USEAGE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a57f640d003816454b0681e0c7330ef5b"><param name="Name" value="SelectCamera"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_video_setting_context.html#a1a8d870cbc4e4f9ce6e3c3bd87f0b161"><param name="Name" value="SelectCamera"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_controller.html#a9b29bf32186da127ffc15d259e3deb75"><param name="Name" value="SendChatTo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper.html#abf8ac02fd06f59aa94c5e8b1c519321c"><param name="Name" value="SendMeetingParingCode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#a21d458d4ec235bb7c039ca838fc469db"><param name="Name" value="serverUrl"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#a97a4803c971bc3a0922cc1a9917d18b2"><param name="Name" value="SetAllowJoinBeforeHost"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ab2a6b524e479eb69a785340fc5a42342"><param name="Name" value="SetBottomFloatToolbarWndVisibility"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#a10f9ecbe347e05470f289166452bd307"><param name="Name" value="SetColor"></OBJECT>
@@ -915,47 +1114,68 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_auth_service.html#a695df00b3184c09971bddd7d6ed4d5fa"><param name="Name" value="IAuthService"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_embedded_browser.html#a656bcaa342546f3c3f7516320cda5904"><param name="Name" value="IEmbeddedBrowser"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#ad9dfa694b3e8c766c54002d686aeb1bc"><param name="Name" value="IMeetingAudioController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_breakout_rooms_controller.html#a9a9ae588baab204e79b2bb539cbb1fd6"><param name="Name" value="IMeetingBreakoutRoomsController"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_chat_controller.html#a4668cac1958f1094db359bc9a86fb75a"><param name="Name" value="IMeetingChatController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ae41a17e4ff47a6fc3cb943f7f1bed1d3"><param name="Name" value="IMeetingConfiguration"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_h323_helper.html#a82c010dd70b63ddd1ec68bf2cd218afe"><param name="Name" value="IMeetingH323Helper"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_participants_controller.html#a02e8268a7928c04a6abd89907c44076b"><param name="Name" value="IMeetingParticipantsController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_phone_helper.html#a08af8196f279bd886a26e27bdf3cb442"><param name="Name" value="IMeetingPhoneHelper"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf"><param name="Name" value="IMeetingRecordingController"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_remote_controller.html#add8e6b1ec629053fdea8b588a78e966c"><param name="Name" value="IMeetingRemoteController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#a3e66427636ed90719978e3ecf6cae513"><param name="Name" value="IMeetingService"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a2b047d16c486215a9b116ba11e7e97aa"><param name="Name" value="IMeetingShareController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#acbbab33757bb78cba171d6f8f8c1c86c"><param name="Name" value="IMeetingUIController"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a2ee83419c9f08639fce8fe9982a399f9"><param name="Name" value="IMeetingVideoController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_waiting_room_controller.html#a4025dfba81c70c9f6f366ceef099ef6e"><param name="Name" value="IMeetingWaitingRoomController"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_pre_meeting_service.html#af1039b99059dfa58bf062382f661be42"><param name="Name" value="IPreMeetingService"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a6c41625d8bd23321b12e65a3e50abfb1"><param name="Name" value="IUIHooker"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#ac489aa40084a39b6df427b343af43788"><param name="Name" value="SetFloatVideoPos"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#aff3127b134118f94f164d25b7a36ee08"><param name="Name" value="SetFloatVideoWndVisibility"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#a193f0b76cd7615ab2fc9765ce78d43fe"><param name="Name" value="SetLineWidth"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a304a2aedd269f0dce87e58a4695c93ca"><param name="Name" value="SetMeetingIDForMeetingUITitle"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#a47091b31d72c695b5ab2ad1e2a8094fc"><param name="Name" value="SetMeetingPassword"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#a89a6be7e5759f5036f8993ea1e7487d2"><param name="Name" value="SetMeetingTopic"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a950da515a6621962b64389e1525704f1"><param name="Name" value="SetMeetingUIPos"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#af47cd2bfa0f741d7eaf47f94ac788428"><param name="Name" value="SetRecordingPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_recording_setting_context.html#a884f4c4307281f2460211c6568824a2a"><param name="Name" value="SetRecordingPath"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_configuration.html#a6dcb0411ecaec88ef74762e78b31616d"><param name="Name" value="SetSharingToolbarVisibility"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#a4fba920709c7178044d3baabbe78708c"><param name="Name" value="SetStartTime"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="setting__service__interface_8h.html#a590b0d7b169dc5ebe3acb50426cb65e8"><param name="Name" value="setting_service_interface.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#a37e68acfa2b854b8d738fa411fadb60a"><param name="Name" value="SetTool"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#a2451827cd1aacd2d322ca71fcd4f2de7"><param name="Name" value="SetUsePMIAsMeetingID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__sharing__interface_8h.html#a16c3032c590b9e543b3a5ba216d93dfb"><param name="Name" value="ShareInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a599a0ec8a1bd51a46238ec33a807df25"><param name="Name" value="ShowBottomFloatToolbarWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a63c299a20d44eec88244b955e2e0f5f4"><param name="Name" value="ShowChatDlg"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a2f358b7d2eac6c1ecba4ca5e232f2100"><param name="Name" value="ShowChatDlgParam"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html#a2f358b7d2eac6c1ecba4ca5e232f2100"><param name="Name" value="ShowChatDlgParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ac34b07d5699459d35e02691051a14c08"><param name="Name" value="ShowJoinAudioDlg"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#afca35e584552cf9667aeaee86eea76b0"><param name="Name" value="ShowParticipantsListWnd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a83bad388627a510ea534bb0cbbcbf0d9"><param name="Name" value="ShowPreOrNextPageVideo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#aacb0c9fc1f1e695076b9f35c99cb731b"><param name="Name" value="ShowSettingDlg"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="setting__service__interface_8h.html#a590b0d7b169dc5ebe3acb50426cb65e8"><param name="Name" value="ShowSettingDlgParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a9d2c0b5feeccf0f0b13fc4ae1e4f9ddd"><param name="Name" value="ShowShareOptionDialog"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#add81a532a3b07e870e452c1ef621f5af"><param name="Name" value="ShowSharingFrameWindows"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a3a697ad43b319ea645e19c871bf5396b"><param name="Name" value="ShowSharingToolbar"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html#a2aea98a6d4e369af81628c9f3c7f778d"><param name="Name" value="SplitScreenInfo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#a1844e14764f64c7944baed8fcd4ef36b"><param name="Name" value="SpotlightVideo"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_s_s_o.html#ada6aab024a9bc26d45a391bbd5d29d7f"><param name="Name" value="ssoToken"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ad92278a477742e6a1e4eab6469ed96f1"><param name="Name" value="Start"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_service.html#ad92278a477742e6a1e4eab6469ed96f1"><param name="Name" value="IMeetingService"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a554ff7fd60eab0e59a6d6d1a7b0b0ef1"><param name="Name" value="IUIHooker"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#addee64cf38cfe941fe02f181854062f0"><param name="Name" value="StartAirPlayShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#aa821d0b4bec7a50439ee4f4f559b4d30"><param name="Name" value="StartAnnotation"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a380b9a9fc6d944814c18897e7e372383"><param name="Name" value="StartAppShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#abcf74e306adf12af98936c9eaccd1631"><param name="Name" value="StartMonitorShare"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#a3efe9ce0947fa52e8028200d67852d6b"><param name="Name" value="StartOutlookExchangeCalender"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#af2ede21ee3cb73c3f35c3f8784037b48"><param name="Name" value="StartParam4APIUser"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a8eb0ff526666424d7196490739f317c3"><param name="Name" value="StartParam4NormalUser"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aabe84e446e60d08643a702857abb1d79"><param name="Name" value="StartParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html#ae245fbbf98874ac906604a7eac72006c"><param name="Name" value="StartRecording"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_u_i_hooker.html#a3927af2bd9bf9fb37fad4df2ee9859fe"><param name="Name" value="Stop"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_annotation_controller.html#a77020f8c296b064186e54b53b2e1bf9d"><param name="Name" value="StopAnnotation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_calender_service.html#ad92f6424820f53e3037093202dd8acff"><param name="Name" value="StopOutlookExchangeCalender"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_recording_controller.html#aec26b2b67027adabb7c7ec5452fb4059"><param name="Name" value="StopRecording"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a495a98fc979f9c9523750112ca347fa2"><param name="Name" value="StopShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#a5bddf02f8d0d581b2e680ad865ef5eb5"><param name="Name" value="strBrandingName"></OBJECT>
@@ -963,6 +1183,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#aef2cd89ca155d2a6d7c712cb0ba8913c"><param name="Name" value="strWebDomain"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ae5983832f16deb6a031dd9017a8e692c"><param name="Name" value="SwitchFloatVideoToActiveSpkMod"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ad514b42aad0ca02d66b0cae3ff3478ec"><param name="Name" value="SwitchFloatVideoToGalleryMod"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#ab3517dd63aa0e632793225b3eaf54b9d"><param name="Name" value="SwitchMinimizeUIMode4FristScreenMeetingUIWnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a9817516584f78a98b1e7062d11247f12"><param name="Name" value="SwitchSplitScreenMode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#aafe3087f7962c4ce8c582bfda68fde52"><param name="Name" value="SwitchToFitWindowModeWhenViewShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#a3c183aeb63df8f9529d55c9180ecae28"><param name="Name" value="SwitchToOriginalSizeModeWhenViewShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_u_i_controller.html#a09c2be0e51b6e5a95f00fc0b09a6b5dd"><param name="Name" value="SwitchToVideoWall"></OBJECT>
@@ -972,24 +1194,15 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_auth_param.html#a3c06e3061ceab88f814202e7df693949"><param name="Name" value="appKey"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_auth_param.html#aaf11838dd8faa517c8b58773650ab76c"><param name="Name" value="appSecret"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html"><param name="Name" value="tagCalenderAuthParam"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_google_cal_auth.html"><param name="Name" value="tagCalenderAuthParam::tagGoogleCalAuth"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_configurable_options.html"><param name="Name" value="tagConfigurableOptions"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_google_cal_auth.html#a356692b5d66452791286f23774fd7f24"><param name="Name" value="authCode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_configurable_options.html#a35413e705267ea2f00cb076e444ccce4"><param name="Name" value="customizedLang"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html"><param name="Name" value="tagCalenderAuthParam::tagOutlookExchageAuth"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html"><param name="Name" value="tagCustomizedLanguageInfo"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html#a699d1c9d27c69b1725ae7f31cc40c80e"><param name="Name" value="exchangeEMSURL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html#aed94acce6bc5d1ea6e6525ffa951b5e9"><param name="Name" value="exchangePassword"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param_1_1tag_outlook_exchage_auth.html#ae9b8795680fd461c5f9ce9ea92dbd5fa"><param name="Name" value="exchangeResEmail"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html"><param name="Name" value="tagCalenderAuthParam"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a34e501243f28e64f1338e4175564e8a0"><param name="Name" value="GoogleCalAuth"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a4e07979fe5a2ab1a67bb2f2fb9161f88"><param name="Name" value="isGoogleCal"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#afda12180ef490cc9911d2659375da695"><param name="Name" value="OutlookExchageAuth"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a27d3ba9987fe4f86fa2808e49bd36de5"><param name="Name" value="pEvent"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a457ce1eb130339c255a2d7c4ccbb3f97"><param name="Name" value="userEmail"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html#a49b1cad7677f30f83d440654efa5c8a1"><param name="Name" value="langInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html#af0fc6581afa9d899bbe354be5f7cb1a9"><param name="Name" value="langName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_customized_language_info.html#aaac3fcba09d3af186b736ae9a49d9eb1"><param name="Name" value="langType"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_h323_device.html"><param name="Name" value="tagH323Device"></OBJECT>
   <UL>
@@ -1002,6 +1215,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#a3c0fdbfe50e535bb7a424a3179640fb3"><param name="Name" value="emLanguageID"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#a230b388bec5685732b308bb13be2de1b"><param name="Name" value="hResInstance"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#aa5437efac4f1d4b3e57e816277f25d19"><param name="Name" value="obConfigOpts"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#a5bddf02f8d0d581b2e680ad865ef5eb5"><param name="Name" value="strBrandingName"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#ac4320988cee0097ec5a9c1fb2fb6a12f"><param name="Name" value="strSupportUrl"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_init_param.html#aef2cd89ca155d2a6d7c712cb0ba8913c"><param name="Name" value="strWebDomain"></OBJECT>
@@ -1040,10 +1254,32 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param.html#a3107566d750051f8eb5ca21139dc47bd"><param name="Name" value="userType"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html"><param name="Name" value="tagLoginParam"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html"><param name="Name" value="tagLoginParam4Email"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a1257e5cad4999a23ed8b51a71e962702"><param name="Name" value="bRememberMe"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#af20e2aad75657a46e67e450795e9380b"><param name="Name" value="password"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a50b7e4c575ef5731c90dd76cdcc82cad"><param name="Name" value="userName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#aee61ee186c64efc985970fd7c2141d95"><param name="Name" value="bRememberMe"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#a58dfc5a39504b7b868e59ad70243efd2"><param name="Name" value="password"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#a1e11e12b519609cae8a4a1a662540865"><param name="Name" value="userName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_s_s_o.html"><param name="Name" value="tagLoginParam4SSO"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_s_s_o.html#ada6aab024a9bc26d45a391bbd5d29d7f"><param name="Name" value="ssoToken"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html"><param name="Name" value="tagLoginParam"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a9799e5c8726733dfeb403d11ff8aa19e"><param name="Name" value="loginType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a1b7fc42aa1d87095c877e7c97abae6f7"><param name="Name" value="ut"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html"><param name="Name" value="tagOutlookExchageAuth"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#a3e3b3f86407df1df634dc34b4e37ec6a"><param name="Name" value="calendaremail"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#abef5cb55f1c5b8b84d5daaea3a3a6c2b"><param name="Name" value="password"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#a21d458d4ec235bb7c039ca838fc469db"><param name="Name" value="serverUrl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#afd9359902737e3427958b11467afa5b2"><param name="Name" value="userName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_share_info.html"><param name="Name" value="tagShareInfo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_share_info.html#aaef6c340ed5166dd682a6ec5dc8f1124"><param name="Name" value="eShareType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_share_info.html#a5f50f1f9005a5a6c5965dab36ee5ae0c"><param name="Name" value="ut"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_chat_dlg_param.html"><param name="Name" value="tagShowChatDlgParam"></OBJECT>
   <UL>
@@ -1058,6 +1294,11 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_setting_dlg_param.html#aa66ba5c5ba2987166cd4cd6f39bfa39e"><param name="Name" value="hSettingWnd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_setting_dlg_param.html#ac0f20eb9a6cfcd3edcadea08a419bf45"><param name="Name" value="left"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_show_setting_dlg_param.html#aaca9c27f9bdc9e82e8f4f75eaca48f34"><param name="Name" value="top"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_split_screen_info.html"><param name="Name" value="tagSplitScreenInfo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_split_screen_info.html#a93f26993613c0c0a4a2b9c6b881a7408"><param name="Name" value="bInSplitScreenMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_split_screen_info.html#a62943c9f188cc23e94b55172e61229c6"><param name="Name" value="bSupportSplitScreen"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param.html"><param name="Name" value="tagStartParam"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html"><param name="Name" value="tagStartParam4APIUser"></OBJECT>
@@ -1098,6 +1339,8 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html"><param name="Name" value="tagWndPosition"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#a03529808c83dc9c592ad21f742abbc7d"><param name="Name" value="hParent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#a0005c79d2ba70a5beba57c244b0b98c8"><param name="Name" value="hSelfWnd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#abcb74ca48cba729d7d778368385e0717"><param name="Name" value="left"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#a64a6cabaeceb6a087be795501286b718"><param name="Name" value="top"></OBJECT>
   </UL>
@@ -1108,7 +1351,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_wnd_position.html#a64a6cabaeceb6a087be795501286b718"><param name="Name" value="tagWndPosition"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_s_s_l_cert_verification_handler.html#a294932e428cb98f8ed0ce2323213cb1e"><param name="Name" value="Trust"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_setting_service.html#a8e48d229a3f7d7cf3527872ecaae8cab"><param name="Name" value="TurnOffAeroModeInSharing"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_general_setting_context.html#a427f4ceffd204bfc1804f2db12d26726"><param name="Name" value="TurnOffAeroModeInSharing"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#af0f448d93e76eea3328dc9a75f840786"><param name="Name" value="TurnOffVideoForAttendee"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_schedule_meeting_item.html#a7b5e4bc5f7c723bac54b0a6ac70a576c"><param name="Name" value="TurnOffVideoForHost"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_h323_device.html#ab5592260270972a1bf5aeeb56c48667f"><param name="Name" value="type"></OBJECT>
@@ -1121,14 +1364,14 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_audio_controller.html#adaebfe39b02fd039b71a987aa2297ec9"><param name="Name" value="UnMuteAudio"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_video_controller.html#ad8765f8b4a3eaba1dce699efe4e9617c"><param name="Name" value="UnmuteVideo"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_network_connection_helper.html#a9dd857503da7a91248db6b4dfd52f7b0"><param name="Name" value="UnRegisterNetworkConnectionHandler"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_calender_auth_param.html#a457ce1eb130339c255a2d7c4ccbb3f97"><param name="Name" value="userEmail"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html#a977065d630ce9f2f85c5af5e95d6cb7c"><param name="Name" value="userID"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_viewable_share_source.html#abbbf109f4f4e7e91c50e17a9b6aa5ab2"><param name="Name" value="userid"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a249db2a60f452bce1521fa3742a84850"><param name="Name" value="userName"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#a249db2a60f452bce1521fa3742a84850"><param name="Name" value="tagJoinParam4APIUser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_normal_user.html#ab5ac4a290729d2bf8bd7b7289d90986e"><param name="Name" value="tagJoinParam4NormalUser"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a50b7e4c575ef5731c90dd76cdcc82cad"><param name="Name" value="tagLoginParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param4_email.html#a1e11e12b519609cae8a4a1a662540865"><param name="Name" value="tagLoginParam4Email"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_outlook_exchage_auth.html#afd9359902737e3427958b11467afa5b2"><param name="Name" value="tagOutlookExchageAuth"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html#a1f4ee3c61972ccb51be7ad6551d2dab7"><param name="Name" value="tagStartParam4APIUser"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param4_a_p_i_user.html#a0c8a6a5e5a2a2d4e5b30783d1462e34b"><param name="Name" value="userToken"></OBJECT>
@@ -1138,8 +1381,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_start_param.html#a10db0a96e899d8e205fa8875e7e0f209"><param name="Name" value="tagStartParam"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a34426a55282d07af0efc4f649f5c4d4f"><param name="Name" value="USING_ZOOM_SDK_NAMESPACE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#a9c1a25a1bedd88a021c1f16b0d13d38d"><param name="Name" value="VideoWallPageInfoParam"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__service__interface_8h.html#aad9397d517c380787e0605fa9429e5e8"><param name="Name" value="ViewableShareSource"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a1b7fc42aa1d87095c877e7c97abae6f7"><param name="Name" value="ut"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_login_param.html#a1b7fc42aa1d87095c877e7c97abae6f7"><param name="Name" value="tagLoginParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_share_info.html#a5f50f1f9005a5a6c5965dab36ee5ae0c"><param name="Name" value="tagShareInfo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__ui__ctrl__interface_8h.html#a9c1a25a1bedd88a021c1f16b0d13d38d"><param name="Name" value="VideoWallPageInfoParam"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="meeting__sharing__interface_8h.html#aad9397d517c380787e0605fa9429e5e8"><param name="Name" value="ViewableShareSource"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_i_meeting_share_controller.html#ad0063219ee80ff0703ad96f0b8f5296f"><param name="Name" value="ViewShare"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structtag_join_param4_a_p_i_user.html#ac839bcd8ac9f44d1134c178775be29b9"><param name="Name" value="webinarToken"></OBJECT>
   <UL>
@@ -1168,6 +1416,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html"><param name="Name" value="zoom_sdk_def.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aa4984eccf6d99e1c6af112f243803636"><param name="Name" value="BEGIN_ZOOM_SDK_NAMESPACE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#aadbdab5105e3ed609fa5e44374c31b52"><param name="Name" value="ConfigurableOptions"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a8fed11d6fafd53130965e0dacbd6cd68"><param name="Name" value="CustomizedLanguageInfo"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a7382fbaf9b48daac8b6ce3af9cf2e153"><param name="Name" value="END_ZOOM_SDK_NAMESPACE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a18da275d45f5c249e6bc85c21438f2ea"><param name="Name" value="InitParam"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#ab6e2655b2adc64c1f505832827e88543"><param name="Name" value="PLATFORM_EXPORT"></OBJECT>
@@ -1195,6 +1445,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__ext_8h.html#a6b85a452502a87105494c76afe535725"><param name="Name" value="CreateEmbeddedBrowser"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__ext_8h.html#ae872fabba4acc33e123858e7ebfd0aa9"><param name="Name" value="DestroyEmbeddedBrowser"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb"><param name="Name" value="RetrieveUIHooker"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="zoom__sdk__def_8h.html#a93be733bb873f5d4a4fae32192cba0b8"><param name="Name" value="ZOOM_SDK_NAMESPACE"></OBJECT>
 </UL>

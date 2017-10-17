@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -50,10 +50,13 @@ $(function() {
 <p>Meeting chat controller interface.  
  <a href="class_i_meeting_chat_controller.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="meeting__chat__interface_8h_source.html">meeting_chat_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4668cac1958f1094db359bc9a86fb75a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#a4668cac1958f1094db359bc9a86fb75a">SetEvent</a> (<a class="el" href="class_i_meeting_chat_ctrl_event.html">IMeetingChatCtrlEvent</a> *pEvent)=0</td></tr>
+<tr class="memdesc:a4668cac1958f1094db359bc9a86fb75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting chat callback event.  <a href="#a4668cac1958f1094db359bc9a86fb75a">More...</a><br /></td></tr>
+<tr class="separator:a4668cac1958f1094db359bc9a86fb75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b29bf32186da127ffc15d259e3deb75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#a9b29bf32186da127ffc15d259e3deb75">SendChatTo</a> (unsigned int receiver, wchar_t *content)=0</td></tr>
 <tr class="memdesc:a9b29bf32186da127ffc15d259e3deb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message to somebody or All.  <a href="#a9b29bf32186da127ffc15d259e3deb75">More...</a><br /></td></tr>
 <tr class="separator:a9b29bf32186da127ffc15d259e3deb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,8 +110,43 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4668cac1958f1094db359bc9a86fb75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4668cac1958f1094db359bc9a86fb75a">&#9670;&nbsp;</a></span>SetEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingChatController::SetEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_meeting_chat_ctrl_event.html">IMeetingChatCtrlEvent</a> *&#160;</td>
+          <td class="paramname"><em>pEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set meeting chat callback event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingChatCtrlEvent* that receives chat event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>h/<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__chat__interface_8h_source.html">meeting_chat_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

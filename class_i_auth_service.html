@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -63,6 +63,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a07bf5515098bed28fc5833e307ae75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75">GetAuthResult</a> ()=0</td></tr>
 <tr class="memdesc:a3a07bf5515098bed28fc5833e307ae75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get authentication status.  <a href="#a3a07bf5515098bed28fc5833e307ae75">More...</a><br /></td></tr>
 <tr class="separator:a3a07bf5515098bed28fc5833e307ae75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68fac10c91f76468e17ad413435e04b5"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a68fac10c91f76468e17ad413435e04b5">GetSDKIdentity</a> ()=0</td></tr>
+<tr class="memdesc:a68fac10c91f76468e17ad413435e04b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SDK identity.  <a href="#a68fac10c91f76468e17ad413435e04b5">More...</a><br /></td></tr>
+<tr class="separator:a68fac10c91f76468e17ad413435e04b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac325f257a69634778cb91dde969cd80b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#ac325f257a69634778cb91dde969cd80b">Login</a> (<a class="el" href="structtag_login_param.html">LoginParam</a> &amp;param)=0</td></tr>
 <tr class="separator:ac325f257a69634778cb91dde969cd80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f056bca69ecd8056ed056a988e841a2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a7f056bca69ecd8056ed056a988e841a2">LogOut</a> ()=0</td></tr>
@@ -155,6 +158,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Get login status. </p>
 <dl class="section return"><dt>Returns</dt><dd>The return value is login status.To get extended error information, refer to LOGINSTATUS enum </dd></dl>
+
+</div>
+</div>
+<a id="a68fac10c91f76468e17ad413435e04b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68fac10c91f76468e17ad413435e04b5">&#9670;&nbsp;</a></span>GetSDKIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const wchar_t* IAuthService::GetSDKIdentity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get SDK identity. </p>
+<dl class="section return"><dt>Returns</dt><dd>the SDK identity. </dd></dl>
 
 </div>
 </div>

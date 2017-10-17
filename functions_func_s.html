@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.0.35674.0608</span>
+   &#160;<span id="projectnumber">4.1.9658.1010</span>
    </div>
   </td>
  </tr>
@@ -49,7 +49,7 @@ $(function() {
 : <a class="el" href="class_i_auth_service.html#aa1872f545e785b30e18a33f84421c75e">IAuthService</a>
 </li>
 <li>SelectCamera()
-: <a class="el" href="class_i_setting_service.html#a57f640d003816454b0681e0c7330ef5b">ISettingService</a>
+: <a class="el" href="class_i_video_setting_context.html#a1a8d870cbc4e4f9ce6e3c3bd87f0b161">IVideoSettingContext</a>
 </li>
 <li>SendChatTo()
 : <a class="el" href="class_i_meeting_chat_controller.html#a9b29bf32186da127ffc15d259e3deb75">IMeetingChatController</a>
@@ -75,17 +75,28 @@ $(function() {
 <li>SetEvent()
 : <a class="el" href="class_i_auth_service.html#a695df00b3184c09971bddd7d6ed4d5fa">IAuthService</a>
 , <a class="el" href="class_i_embedded_browser.html#a656bcaa342546f3c3f7516320cda5904">IEmbeddedBrowser</a>
+, <a class="el" href="class_i_meeting_audio_controller.html#ad9dfa694b3e8c766c54002d686aeb1bc">IMeetingAudioController</a>
 , <a class="el" href="class_i_meeting_breakout_rooms_controller.html#a9a9ae588baab204e79b2bb539cbb1fd6">IMeetingBreakoutRoomsController</a>
+, <a class="el" href="class_i_meeting_chat_controller.html#a4668cac1958f1094db359bc9a86fb75a">IMeetingChatController</a>
 , <a class="el" href="class_i_meeting_configuration.html#ae41a17e4ff47a6fc3cb943f7f1bed1d3">IMeetingConfiguration</a>
 , <a class="el" href="class_i_meeting_h323_helper.html#a82c010dd70b63ddd1ec68bf2cd218afe">IMeetingH323Helper</a>
+, <a class="el" href="class_i_meeting_participants_controller.html#a02e8268a7928c04a6abd89907c44076b">IMeetingParticipantsController</a>
 , <a class="el" href="class_i_meeting_phone_helper.html#a08af8196f279bd886a26e27bdf3cb442">IMeetingPhoneHelper</a>
+, <a class="el" href="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf">IMeetingRecordingController</a>
+, <a class="el" href="class_i_meeting_remote_controller.html#add8e6b1ec629053fdea8b588a78e966c">IMeetingRemoteController</a>
 , <a class="el" href="class_i_meeting_service.html#a3e66427636ed90719978e3ecf6cae513">IMeetingService</a>
+, <a class="el" href="class_i_meeting_share_controller.html#a2b047d16c486215a9b116ba11e7e97aa">IMeetingShareController</a>
 , <a class="el" href="class_i_meeting_u_i_controller.html#acbbab33757bb78cba171d6f8f8c1c86c">IMeetingUIController</a>
+, <a class="el" href="class_i_meeting_video_controller.html#a2ee83419c9f08639fce8fe9982a399f9">IMeetingVideoController</a>
 , <a class="el" href="class_i_meeting_waiting_room_controller.html#a4025dfba81c70c9f6f366ceef099ef6e">IMeetingWaitingRoomController</a>
 , <a class="el" href="class_i_pre_meeting_service.html#af1039b99059dfa58bf062382f661be42">IPreMeetingService</a>
+, <a class="el" href="class_i_u_i_hooker.html#a6c41625d8bd23321b12e65a3e50abfb1">IUIHooker</a>
 </li>
 <li>SetFloatVideoPos()
 : <a class="el" href="class_i_meeting_configuration.html#ac489aa40084a39b6df427b343af43788">IMeetingConfiguration</a>
+</li>
+<li>SetFloatVideoWndVisibility()
+: <a class="el" href="class_i_meeting_configuration.html#aff3127b134118f94f164d25b7a36ee08">IMeetingConfiguration</a>
 </li>
 <li>SetLineWidth()
 : <a class="el" href="class_i_annotation_controller.html#a193f0b76cd7615ab2fc9765ce78d43fe">IAnnotationController</a>
@@ -103,7 +114,7 @@ $(function() {
 : <a class="el" href="class_i_meeting_configuration.html#a950da515a6621962b64389e1525704f1">IMeetingConfiguration</a>
 </li>
 <li>SetRecordingPath()
-: <a class="el" href="class_i_setting_service.html#af47cd2bfa0f741d7eaf47f94ac788428">ISettingService</a>
+: <a class="el" href="class_i_recording_setting_context.html#a884f4c4307281f2460211c6568824a2a">IRecordingSettingContext</a>
 </li>
 <li>SetSharingToolbarVisibility()
 : <a class="el" href="class_i_meeting_configuration.html#a6dcb0411ecaec88ef74762e78b31616d">IMeetingConfiguration</a>
@@ -138,6 +149,9 @@ $(function() {
 <li>ShowShareOptionDialog()
 : <a class="el" href="class_i_meeting_share_controller.html#a9d2c0b5feeccf0f0b13fc4ae1e4f9ddd">IMeetingShareController</a>
 </li>
+<li>ShowSharingFrameWindows()
+: <a class="el" href="class_i_meeting_u_i_controller.html#add81a532a3b07e870e452c1ef621f5af">IMeetingUIController</a>
+</li>
 <li>ShowSharingToolbar()
 : <a class="el" href="class_i_meeting_u_i_controller.html#a3a697ad43b319ea645e19c871bf5396b">IMeetingUIController</a>
 </li>
@@ -146,6 +160,10 @@ $(function() {
 </li>
 <li>Start()
 : <a class="el" href="class_i_meeting_service.html#ad92278a477742e6a1e4eab6469ed96f1">IMeetingService</a>
+, <a class="el" href="class_i_u_i_hooker.html#a554ff7fd60eab0e59a6d6d1a7b0b0ef1">IUIHooker</a>
+</li>
+<li>StartAirPlayShare()
+: <a class="el" href="class_i_meeting_share_controller.html#addee64cf38cfe941fe02f181854062f0">IMeetingShareController</a>
 </li>
 <li>StartAnnotation()
 : <a class="el" href="class_i_annotation_controller.html#aa821d0b4bec7a50439ee4f4f559b4d30">IAnnotationController</a>
@@ -158,6 +176,9 @@ $(function() {
 </li>
 <li>StartRecording()
 : <a class="el" href="class_i_meeting_recording_controller.html#ae245fbbf98874ac906604a7eac72006c">IMeetingRecordingController</a>
+</li>
+<li>Stop()
+: <a class="el" href="class_i_u_i_hooker.html#a3927af2bd9bf9fb37fad4df2ee9859fe">IUIHooker</a>
 </li>
 <li>StopAnnotation()
 : <a class="el" href="class_i_annotation_controller.html#a77020f8c296b064186e54b53b2e1bf9d">IAnnotationController</a>
@@ -173,6 +194,12 @@ $(function() {
 </li>
 <li>SwitchFloatVideoToGalleryMod()
 : <a class="el" href="class_i_meeting_u_i_controller.html#ad514b42aad0ca02d66b0cae3ff3478ec">IMeetingUIController</a>
+</li>
+<li>SwitchMinimizeUIMode4FristScreenMeetingUIWnd()
+: <a class="el" href="class_i_meeting_u_i_controller.html#ab3517dd63aa0e632793225b3eaf54b9d">IMeetingUIController</a>
+</li>
+<li>SwitchSplitScreenMode()
+: <a class="el" href="class_i_meeting_u_i_controller.html#a9817516584f78a98b1e7062d11247f12">IMeetingUIController</a>
 </li>
 <li>SwitchToFitWindowModeWhenViewShare()
 : <a class="el" href="class_i_meeting_share_controller.html#aafe3087f7962c4ce8c582bfda68fde52">IMeetingShareController</a>
