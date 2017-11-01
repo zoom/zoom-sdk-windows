@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.9658.1010</span>
+   &#160;<span id="projectnumber">4.1.12147.1101</span>
    </div>
   </td>
  </tr>
@@ -54,6 +54,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:abda8b60c6203ac96e667a864e0f413f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_mic_info.html">IMicInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#abda8b60c6203ac96e667a864e0f413f4">GetMicList</a> ()=0</td></tr>
+<tr class="memdesc:abda8b60c6203ac96e667a864e0f413f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mic device list.  <a href="#abda8b60c6203ac96e667a864e0f413f4">More...</a><br /></td></tr>
+<tr class="separator:abda8b60c6203ac96e667a864e0f413f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d42355c98c3493dc8c5732a90fc4f34"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a5d42355c98c3493dc8c5732a90fc4f34">SelectMic</a> (const wchar_t *deviceId, const wchar_t *deviceName)=0</td></tr>
+<tr class="memdesc:a5d42355c98c3493dc8c5732a90fc4f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select mic device.  <a href="#a5d42355c98c3493dc8c5732a90fc4f34">More...</a><br /></td></tr>
+<tr class="separator:a5d42355c98c3493dc8c5732a90fc4f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebee65d95116498b732ccf509ce7671"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_speaker_info.html">ISpeakerInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a4ebee65d95116498b732ccf509ce7671">GetSpeakerList</a> ()=0</td></tr>
+<tr class="memdesc:a4ebee65d95116498b732ccf509ce7671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get speaker device list.  <a href="#a4ebee65d95116498b732ccf509ce7671">More...</a><br /></td></tr>
+<tr class="separator:a4ebee65d95116498b732ccf509ce7671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe33e55d91c30a2eab316fda3ce7999d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#abe33e55d91c30a2eab316fda3ce7999d">SelectSpeaker</a> (const wchar_t *deviceId, const wchar_t *deviceName)=0</td></tr>
+<tr class="memdesc:abe33e55d91c30a2eab316fda3ce7999d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select speaker device.  <a href="#abe33e55d91c30a2eab316fda3ce7999d">More...</a><br /></td></tr>
+<tr class="separator:abe33e55d91c30a2eab316fda3ce7999d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a860a1c8067d5bfe0ed98262a89bf6807"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a860a1c8067d5bfe0ed98262a89bf6807">EnableAutoJoinAudio</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a860a1c8067d5bfe0ed98262a89bf6807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable auto join audio when join meeting.  <a href="#a860a1c8067d5bfe0ed98262a89bf6807">More...</a><br /></td></tr>
 <tr class="separator:a860a1c8067d5bfe0ed98262a89bf6807"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +152,62 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abda8b60c6203ac96e667a864e0f413f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda8b60c6203ac96e667a864e0f413f4">&#9670;&nbsp;</a></span>GetMicList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_list.html">IList</a>&lt;<a class="el" href="class_i_mic_info.html">IMicInfo</a>* &gt;* IAudioSettingContext::GetMicList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get mic device list. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device list pointer. If the function fails, the return value is NULL. </dd></dl>
+
+</div>
+</div>
+<a id="a4ebee65d95116498b732ccf509ce7671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ebee65d95116498b732ccf509ce7671">&#9670;&nbsp;</a></span>GetSpeakerList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_list.html">IList</a>&lt;<a class="el" href="class_i_speaker_info.html">ISpeakerInfo</a>* &gt;* IAudioSettingContext::GetSpeakerList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get speaker device list. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device list pointer. If the function fails, the return value is NULL. </dd></dl>
+
+</div>
+</div>
 <a id="a5e90cf8551087ce78fc451b03a6fc503"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e90cf8551087ce78fc451b03a6fc503">&#9670;&nbsp;</a></span>IsAutoAdjustMicEnabled()</h2>
 
@@ -193,6 +261,96 @@ Public Member Functions</h2></td></tr>
 
 <p>Get Enable or disable flag of auto join audio when join meeting. </p>
 <dl class="section return"><dt>Returns</dt><dd>Enable or disable </dd></dl>
+
+</div>
+</div>
+<a id="a5d42355c98c3493dc8c5732a90fc4f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d42355c98c3493dc8c5732a90fc4f34">&#9670;&nbsp;</a></span>SelectMic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::SelectMic </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>deviceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>deviceName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Select mic device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceId</td><td>Specifies which device to select. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="abe33e55d91c30a2eab316fda3ce7999d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe33e55d91c30a2eab316fda3ce7999d">&#9670;&nbsp;</a></span>SelectSpeaker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::SelectSpeaker </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>deviceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>deviceName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Select speaker device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceId</td><td>Specifies which device to select. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
 
 </div>
 </div>

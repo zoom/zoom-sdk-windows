@@ -108,6 +108,8 @@ class_i_meeting_configuration.html
 class_i_meeting_configuration-members.html
 class_i_meeting_configuration_event.html
 class_i_meeting_configuration_event-members.html
+class_i_meeting_external_secure_key_handler.html
+class_i_meeting_external_secure_key_handler-members.html
 class_i_meeting_h323_helper.html
 class_i_meeting_h323_helper-members.html
 class_i_meeting_h323_helper_event.html
