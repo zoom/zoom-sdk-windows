@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['declineremotecontrolrequest',['DeclineRemoteControlRequest',['../class_i_meeting_remote_controller.html#ae4c749a8ee488d260992e55fff1aeb2b',1,'IMeetingRemoteController']]],
+  ['deletemeeting',['DeleteMeeting',['../class_i_pre_meeting_service.html#ad3268417a127fe091dc77783b478fa27',1,'IPreMeetingService']]],
+  ['destoryschedulemeetingitem',['DestoryScheduleMeetingItem',['../class_i_pre_meeting_service.html#a2cfc5f48430ce74f3d5b2e5437eb7016',1,'IPreMeetingService']]],
+  ['destroyauthservice',['DestroyAuthService',['../zoom__sdk_8h.html#a66c648a0f97f818e973cbad67764adc7',1,'zoom_sdk.h']]],
+  ['destroycalenderservice',['DestroyCalenderService',['../zoom__sdk_8h.html#aa847e0f54a52f772eb69b4e3ea548210',1,'zoom_sdk.h']]],
+  ['destroyembeddedbrowser',['DestroyEmbeddedBrowser',['../zoom__sdk__ext_8h.html#ae872fabba4acc33e123858e7ebfd0aa9',1,'zoom_sdk_ext.h']]],
+  ['destroymeetingservice',['DestroyMeetingService',['../zoom__sdk_8h.html#a3f7c32ce09b60bd323ba370ac297f465',1,'zoom_sdk.h']]],
+  ['destroynetworkconnectionhelper',['DestroyNetworkConnectionHelper',['../zoom__sdk_8h.html#a60226ec0a26465d947646f4bd3e6b4ce',1,'zoom_sdk.h']]],
+  ['destroypremeetingservice',['DestroyPreMeetingService',['../zoom__sdk_8h.html#a896664f6c6b499f6d23094d9bdc494ae',1,'zoom_sdk.h']]],
+  ['destroysettingservice',['DestroySettingService',['../zoom__sdk_8h.html#a78ffb9b4428fa6cb50319287491a15ce',1,'zoom_sdk.h']]],
+  ['disablepopupmeetingwrongpswdlg',['DisablePopupMeetingWrongPSWDlg',['../class_i_meeting_configuration.html#a3a24fc98a7efa435c3d65a7e80012023',1,'IMeetingConfiguration']]],
+  ['disableremotectrlcopypastefeature',['DisableRemoteCtrlCopyPasteFeature',['../class_i_meeting_configuration.html#a460c08c46a71cca73956795fcaa45365',1,'IMeetingConfiguration']]],
+  ['disablesplitscreenmodeuielements',['DisableSplitScreenModeUIElements',['../class_i_meeting_configuration.html#ae100b8b2681eb10b80eb03bb746b53e3',1,'IMeetingConfiguration']]],
+  ['disablewaitingforhostdialog',['DisableWaitingForHostDialog',['../class_i_meeting_configuration.html#a7c693638db7089facf7584f9c0142f55',1,'IMeetingConfiguration']]],
+  ['dorefresh',['DoRefresh',['../class_i_embedded_browser.html#a5879646535350ee694f42023295c0caf',1,'IEmbeddedBrowser']]],
+  ['dostop',['DoStop',['../class_i_embedded_browser.html#a07d43fb0c3db4f873a6d8b82f9e9dccb',1,'IEmbeddedBrowser']]]
+];
