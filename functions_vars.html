@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -95,6 +95,7 @@ $(function() {
 , <a class="el" href="structtag_join_param4_normal_user.html#a895b6a45c4425b03ee2de5bc37428990">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#ac274e1c72c3d798579f016b005562b6f">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_normal_user.html#a52ad2a4d5c51942daf0f274833499225">tagStartParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#ad94804c673d7afa365e81a0b7e900173">tagStartParam4WithoutLogin</a>
 </li>
 <li>hParent
 : <a class="el" href="structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950">tagShowChatDlgParam</a>
@@ -110,6 +111,9 @@ $(function() {
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>is_view_only
+: <a class="el" href="structtag_meeting_parameter.html#a73cc98d75e4f0911411722fad6c81245">tagMeetingParameter</a>
+</li>
 <li>isAudioOff
 : <a class="el" href="structtag_start_param4_normal_user.html#a750f835ef2522e318232622f9c1b7cb5">tagStartParam4NormalUser</a>
 </li>
@@ -118,6 +122,7 @@ $(function() {
 , <a class="el" href="structtag_join_param4_normal_user.html#a2517acaf92149a04f1ffb544b513286d">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#ae52804b4cd27597b0f29b228ad2fafea">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_normal_user.html#a03263675d83a4666a59ae6eeeb279d45">tagStartParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#a4cab5bab68a11fa17cbf07bc32e29c6a">tagStartParam4WithoutLogin</a>
 </li>
 <li>isVideoOff
 : <a class="el" href="structtag_start_param4_normal_user.html#ad68cb89ac2a1d8389ba48528992bae84">tagStartParam4NormalUser</a>
@@ -133,11 +138,21 @@ $(function() {
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>meeting_host
+: <a class="el" href="structtag_meeting_parameter.html#a0211a51506dd512bed2ee3365ef0024d">tagMeetingParameter</a>
+</li>
+<li>meeting_number
+: <a class="el" href="structtag_meeting_parameter.html#aa5988faca40ff9ef6d6e15e091b87531">tagMeetingParameter</a>
+</li>
+<li>meeting_topic
+: <a class="el" href="structtag_meeting_parameter.html#ab142f95d832ae873acff120521eaeb19">tagMeetingParameter</a>
+</li>
 <li>meetingNumber
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a0f778ba74be0509f5c19f2dad4ce868b">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#a3a1bef54cd5feb777972b66e3a72dade">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#abe4e485280b82c0a38c4ba6b04d80777">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_normal_user.html#a4e7cd6af311030ec679b093aadce2e29">tagStartParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#aabadfd8c4f2fdd5e76019952706e533d">tagStartParam4WithoutLogin</a>
 </li>
 </ul>
 
@@ -148,6 +163,7 @@ $(function() {
 , <a class="el" href="structtag_join_param4_normal_user.html#a848630bb945ca76a1d5f4aeba0609717">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#a785a19621aa7e325c609ca5917de6cea">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_normal_user.html#a8efe3e68dbe6cb66e61466035f3f6c3e">tagStartParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#ab98cae846066d8e871598de8bc4133d8">tagStartParam4WithoutLogin</a>
 </li>
 <li>password
 : <a class="el" href="structtag_login_param4_email.html#a58dfc5a39504b7b868e59ad70243efd2">tagLoginParam4Email</a>
@@ -201,19 +217,36 @@ $(function() {
 </li>
 <li>userID
 : <a class="el" href="structtag_start_param4_a_p_i_user.html#a977065d630ce9f2f85c5af5e95d6cb7c">tagStartParam4APIUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#ad165fd04d1f6e6aa066570a20bb7e429">tagStartParam4WithoutLogin</a>
 </li>
 <li>userName
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a249db2a60f452bce1521fa3742a84850">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#ab5ac4a290729d2bf8bd7b7289d90986e">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_login_param4_email.html#a1e11e12b519609cae8a4a1a662540865">tagLoginParam4Email</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#a1f4ee3c61972ccb51be7ad6551d2dab7">tagStartParam4APIUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#a4305b876286701a02dc7881d5cb04f78">tagStartParam4WithoutLogin</a>
 </li>
 <li>userToken
 : <a class="el" href="structtag_start_param4_a_p_i_user.html#a0c8a6a5e5a2a2d4e5b30783d1462e34b">tagStartParam4APIUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#ae52cda57b7bc244bc41511cb10074f88">tagStartParam4WithoutLogin</a>
 </li>
 <li>userType
 : <a class="el" href="structtag_join_param.html#a3107566d750051f8eb5ca21139dc47bd">tagJoinParam</a>
 , <a class="el" href="structtag_start_param.html#a10db0a96e899d8e205fa8875e7e0f209">tagStartParam</a>
+</li>
+<li>userZAK
+: <a class="el" href="structtag_start_param4_without_login.html#a71459533f7d78d930f8a0e3c2404007a">tagStartParam4WithoutLogin</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>vanityID
+: <a class="el" href="structtag_join_param4_a_p_i_user.html#a262d038b77a3ad78e88f3b34cd38b8dd">tagJoinParam4APIUser</a>
+, <a class="el" href="structtag_join_param4_normal_user.html#ae43727ebbe38e915eafeb5114f244a2e">tagJoinParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_a_p_i_user.html#a0f0ed2ae82efb8fa03993a595d1f1997">tagStartParam4APIUser</a>
+, <a class="el" href="structtag_start_param4_normal_user.html#aee4f6b27a95a996c33d98e5abd06d354">tagStartParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_without_login.html#a1093bd4e5fdaf8018164950be102e389">tagStartParam4WithoutLogin</a>
 </li>
 </ul>
 

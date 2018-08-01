@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -90,10 +90,145 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a08f977597c2e4c1f781627119b102b3f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a08f977597c2e4c1f781627119b102b3f">ChangeUserName</a> (const unsigned int userid, const wchar_t *userName, bool bSaveUserName)=0</td></tr>
 <tr class="memdesc:a08f977597c2e4c1f781627119b102b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change user name.if you want to change other user name, you should be the host or cohost.  <a href="#a08f977597c2e4c1f781627119b102b3f">More...</a><br /></td></tr>
 <tr class="separator:a08f977597c2e4c1f781627119b102b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ac0b85677af0733b5604d9236430a3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#aa2ac0b85677af0733b5604d9236430a3">LowerHand</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:aa2ac0b85677af0733b5604d9236430a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower attendee hands in meeting.  <a href="#aa2ac0b85677af0733b5604d9236430a3">More...</a><br /></td></tr>
+<tr class="separator:aa2ac0b85677af0733b5604d9236430a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2f2943faf1af30d767e0c763e085ad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a7b2f2943faf1af30d767e0c763e085ad">RaiseHand</a> ()=0</td></tr>
+<tr class="memdesc:a7b2f2943faf1af30d767e0c763e085ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise hands in meeting.  <a href="#a7b2f2943faf1af30d767e0c763e085ad">More...</a><br /></td></tr>
+<tr class="separator:a7b2f2943faf1af30d767e0c763e085ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d10adf741e9e061a7c205d1c170ec3f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a8d10adf741e9e061a7c205d1c170ec3f">MakeHost</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a8d10adf741e9e061a7c205d1c170ec3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make host.  <a href="#a8d10adf741e9e061a7c205d1c170ec3f">More...</a><br /></td></tr>
+<tr class="separator:a8d10adf741e9e061a7c205d1c170ec3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5fc692c3638521f3b3a5b30cf375c80"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#ab5fc692c3638521f3b3a5b30cf375c80">CanbeCohost</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:ab5fc692c3638521f3b3a5b30cf375c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">check can be the co-host.  <a href="#ab5fc692c3638521f3b3a5b30cf375c80">More...</a><br /></td></tr>
+<tr class="separator:ab5fc692c3638521f3b3a5b30cf375c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897789ec29954e794e28d435554b2b2f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a897789ec29954e794e28d435554b2b2f">AssignCoHost</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a897789ec29954e794e28d435554b2b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign co-host.  <a href="#a897789ec29954e794e28d435554b2b2f">More...</a><br /></td></tr>
+<tr class="separator:a897789ec29954e794e28d435554b2b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3fb36bb285a63b8009211ea4b1a97e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#aca3fb36bb285a63b8009211ea4b1a97e">RevokeCoHost</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:aca3fb36bb285a63b8009211ea4b1a97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revoke co-host.  <a href="#aca3fb36bb285a63b8009211ea4b1a97e">More...</a><br /></td></tr>
+<tr class="separator:aca3fb36bb285a63b8009211ea4b1a97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb582ceefdab8cc08fa755fcdf872a20"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#afb582ceefdab8cc08fa755fcdf872a20">ExpelUser</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:afb582ceefdab8cc08fa755fcdf872a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expel user.  <a href="#afb582ceefdab8cc08fa755fcdf872a20">More...</a><br /></td></tr>
+<tr class="separator:afb582ceefdab8cc08fa755fcdf872a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a779b8af2fe5f694eb3437bdc66f90b6f">ReclaimHost</a> ()=0</td></tr>
+<tr class="memdesc:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reclaim host.  <a href="#a779b8af2fe5f694eb3437bdc66f90b6f">More...</a><br /></td></tr>
+<tr class="separator:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8325a02f7d1f54955431048f590e5829"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a8325a02f7d1f54955431048f590e5829">CanReclaimHost</a> (bool &amp;bCanReclaimHost)=0</td></tr>
+<tr class="memdesc:a8325a02f7d1f54955431048f590e5829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the right of reclaim host.  <a href="#a8325a02f7d1f54955431048f590e5829">More...</a><br /></td></tr>
+<tr class="separator:a8325a02f7d1f54955431048f590e5829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693ffe4af49f8ee56eed298550aef588"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a693ffe4af49f8ee56eed298550aef588">ReclaimHostByHostKey</a> (const wchar_t *host_key)=0</td></tr>
+<tr class="memdesc:a693ffe4af49f8ee56eed298550aef588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reclaim host by key.  <a href="#a693ffe4af49f8ee56eed298550aef588">More...</a><br /></td></tr>
+<tr class="separator:a693ffe4af49f8ee56eed298550aef588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting waiting room controller interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a897789ec29954e794e28d435554b2b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a897789ec29954e794e28d435554b2b2f">&#9670;&nbsp;</a></span>AssignCoHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::AssignCoHost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign co-host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>Specifies which the user to be the co-host. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="ab5fc692c3638521f3b3a5b30cf375c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5fc692c3638521f3b3a5b30cf375c80">&#9670;&nbsp;</a></span>CanbeCohost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::CanbeCohost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check can be the co-host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>Specifies which the user can be the co-host. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a8325a02f7d1f54955431048f590e5829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8325a02f7d1f54955431048f590e5829">&#9670;&nbsp;</a></span>CanReclaimHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::CanReclaimHost </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bCanReclaimHost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the right of reclaim host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bCanReclaimHost</td><td>can reclaim host or not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="a08f977597c2e4c1f781627119b102b3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08f977597c2e4c1f781627119b102b3f">&#9670;&nbsp;</a></span>ChangeUserName()</h2>
 
@@ -147,6 +282,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afb582ceefdab8cc08fa755fcdf872a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb582ceefdab8cc08fa755fcdf872a20">&#9670;&nbsp;</a></span>ExpelUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::ExpelUser </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expel user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>Specifies which the user to expel. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="a1b41a78318d60090da228bbb805114bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b41a78318d60090da228bbb805114bf">&#9670;&nbsp;</a></span>GetParticipantsList()</h2>
 
@@ -171,7 +341,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get meeting participants list. </p>
-<dl class="section return"><dt>Returns</dt><dd>the return value is current meeting all participants list.if not in meeting, return NULL. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the return value is all participants list of current meeting.if not in meeting, return NULL. </dd></dl>
 
 </div>
 </div>
@@ -234,6 +404,202 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Lower all attendee hands in meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="aa2ac0b85677af0733b5604d9236430a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ac0b85677af0733b5604d9236430a3">&#9670;&nbsp;</a></span>LowerHand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::LowerHand </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lower attendee hands in meeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>Specifies which the user's hands to low. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a8d10adf741e9e061a7c205d1c170ec3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d10adf741e9e061a7c205d1c170ec3f">&#9670;&nbsp;</a></span>MakeHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::MakeHost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>Specifies which the user to be the host. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a7b2f2943faf1af30d767e0c763e085ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2f2943faf1af30d767e0c763e085ad">&#9670;&nbsp;</a></span>RaiseHand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::RaiseHand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Raise hands in meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a779b8af2fe5f694eb3437bdc66f90b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779b8af2fe5f694eb3437bdc66f90b6f">&#9670;&nbsp;</a></span>ReclaimHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::ReclaimHost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reclaim host. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a693ffe4af49f8ee56eed298550aef588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a693ffe4af49f8ee56eed298550aef588">&#9670;&nbsp;</a></span>ReclaimHostByHostKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::ReclaimHostByHostKey </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>host_key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reclaim host by key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host_key</td><td>host key. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="aca3fb36bb285a63b8009211ea4b1a97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3fb36bb285a63b8009211ea4b1a97e">&#9670;&nbsp;</a></span>RevokeCoHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingParticipantsController::RevokeCoHost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Revoke co-host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td>Specifies which the co-host user to be revoked. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
 
 </div>

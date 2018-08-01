@@ -1,12 +1,16 @@
 var searchData=
 [
   ['admittomeeting',['AdmitToMeeting',['../class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4',1,'IMeetingWaitingRoomController']]],
+  ['allowlocalrecording',['AllowLocalRecording',['../class_i_meeting_recording_controller.html#a98ea0dd9343ac688dd7b00782d3cca93',1,'IMeetingRecordingController']]],
+  ['alwaysshowiconontaskbar',['AlwaysShowIconOnTaskBar',['../class_i_meeting_configuration.html#a710bccde34940897b58b01f3c98fc3b0',1,'IMeetingConfiguration']]],
   ['annotationcleartype',['AnnotationClearType',['../meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2',1,'meeting_annotation_interface.h']]],
   ['annotationtooltype',['AnnotationToolType',['../meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7',1,'meeting_annotation_interface.h']]],
   ['annotool_5feraser',['ANNOTOOL_ERASER',['../meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc',1,'meeting_annotation_interface.h']]],
   ['annotool_5fnone_5fdrawing',['ANNOTOOL_NONE_DRAWING',['../meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a0156c28d15115bd0aa017fd8dabed81b',1,'meeting_annotation_interface.h']]],
   ['appkey',['appKey',['../structtag_auth_param.html#a3c06e3061ceab88f814202e7df693949',1,'tagAuthParam']]],
   ['appsecret',['appSecret',['../structtag_auth_param.html#aaf11838dd8faa517c8b58773650ab76c',1,'tagAuthParam']]],
+  ['askattendeetostartvideo',['AskAttendeeToStartVideo',['../class_i_meeting_video_controller.html#a6fbbaf6a3d3b9dd5598ebbf28e41c32c',1,'IMeetingVideoController']]],
+  ['assigncohost',['AssignCoHost',['../class_i_meeting_participants_controller.html#a897789ec29954e794e28d435554b2b2f',1,'IMeetingParticipantsController']]],
   ['audiostatus',['AudioStatus',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35',1,'meeting_audio_interface.h']]],
   ['auth_5fservice_5finterface_2eh',['auth_service_interface.h',['../auth__service__interface_8h.html',1,'']]],
   ['authresult',['AuthResult',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce',1,'auth_service_interface.h']]],

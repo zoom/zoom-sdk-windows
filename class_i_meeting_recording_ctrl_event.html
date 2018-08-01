@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -84,6 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab99cc2fa14c108a1e66cc3af88d9dc18"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_ctrl_event.html#ab99cc2fa14c108a1e66cc3af88d9dc18">onRecordingStatus</a> (<a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37">RecordingStatus</a> status)=0</td></tr>
 <tr class="memdesc:ab99cc2fa14c108a1e66cc3af88d9dc18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Self Recording status notify callback.  <a href="#ab99cc2fa14c108a1e66cc3af88d9dc18">More...</a><br /></td></tr>
 <tr class="separator:ab99cc2fa14c108a1e66cc3af88d9dc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390d2743eb4a845b1f9e973316a1a29d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_ctrl_event.html#a390d2743eb4a845b1f9e973316a1a29d">onCloudRecordingStatus</a> (<a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37">RecordingStatus</a> status)=0</td></tr>
+<tr class="memdesc:a390d2743eb4a845b1f9e973316a1a29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloud Recording status notify callback.  <a href="#a390d2743eb4a845b1f9e973316a1a29d">More...</a><br /></td></tr>
+<tr class="separator:a390d2743eb4a845b1f9e973316a1a29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a56a27df438bad6c5af620d2d96fa2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_ctrl_event.html#a6a56a27df438bad6c5af620d2d96fa2b">onRecordPriviligeChanged</a> (bool bCanRec)=0</td></tr>
 <tr class="memdesc:a6a56a27df438bad6c5af620d2d96fa2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">self record privilige change callback  <a href="#a6a56a27df438bad6c5af620d2d96fa2b">More...</a><br /></td></tr>
 <tr class="separator:a6a56a27df438bad6c5af620d2d96fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,6 +94,40 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting recording callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a390d2743eb4a845b1f9e973316a1a29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390d2743eb4a845b1f9e973316a1a29d">&#9670;&nbsp;</a></span>onCloudRecordingStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingRecordingCtrlEvent::onCloudRecordingStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37">RecordingStatus</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cloud Recording status notify callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Recording status value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0e9b7d24032a5fe2a7aa62e210df6010"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e9b7d24032a5fe2a7aa62e210df6010">&#9670;&nbsp;</a></span>onRecording2MP4Done()</h2>
 

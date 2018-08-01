@@ -10,10 +10,13 @@ var searchData=
   ['destroynetworkconnectionhelper',['DestroyNetworkConnectionHelper',['../zoom__sdk_8h.html#a60226ec0a26465d947646f4bd3e6b4ce',1,'zoom_sdk.h']]],
   ['destroypremeetingservice',['DestroyPreMeetingService',['../zoom__sdk_8h.html#a896664f6c6b499f6d23094d9bdc494ae',1,'zoom_sdk.h']]],
   ['destroysettingservice',['DestroySettingService',['../zoom__sdk_8h.html#a78ffb9b4428fa6cb50319287491a15ce',1,'zoom_sdk.h']]],
+  ['disableaccountsettingtabpage',['DisableAccountSettingTabPage',['../class_i_setting_u_i_strategy.html#a9597829bcf63574b317cadcaf6674592',1,'ISettingUIStrategy']]],
+  ['disableadvancedfeatures4generalsetting',['DisableAdvancedFeatures4GeneralSetting',['../class_i_setting_u_i_strategy.html#a8e3225c8ca8c912a80d87dc0d7c48a52',1,'ISettingUIStrategy']]],
   ['disablepopupmeetingwrongpswdlg',['DisablePopupMeetingWrongPSWDlg',['../class_i_meeting_configuration.html#a3a24fc98a7efa435c3d65a7e80012023',1,'IMeetingConfiguration']]],
   ['disableremotectrlcopypastefeature',['DisableRemoteCtrlCopyPasteFeature',['../class_i_meeting_configuration.html#a460c08c46a71cca73956795fcaa45365',1,'IMeetingConfiguration']]],
   ['disablesplitscreenmodeuielements',['DisableSplitScreenModeUIElements',['../class_i_meeting_configuration.html#ae100b8b2681eb10b80eb03bb746b53e3',1,'IMeetingConfiguration']]],
   ['disablewaitingforhostdialog',['DisableWaitingForHostDialog',['../class_i_meeting_configuration.html#a7c693638db7089facf7584f9c0142f55',1,'IMeetingConfiguration']]],
+  ['disallowlocalrecording',['DisAllowLocalRecording',['../class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237',1,'IMeetingRecordingController']]],
   ['dorefresh',['DoRefresh',['../class_i_embedded_browser.html#a5879646535350ee694f42023295c0caf',1,'IEmbeddedBrowser']]],
   ['dostop',['DoStop',['../class_i_embedded_browser.html#a07d43fb0c3db4f873a6d8b82f9e9dccb',1,'IEmbeddedBrowser']]]
 ];

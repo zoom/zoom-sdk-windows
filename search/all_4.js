@@ -24,6 +24,7 @@ var searchData=
   ['enablehdvideo',['EnableHDVideo',['../class_i_video_setting_context.html#a7dd885be9d8c3905ec161b59a88809b6',1,'IVideoSettingContext']]],
   ['enablehidefullphonenumber4purecallinuser',['EnableHideFullPhoneNumber4PureCallinUser',['../class_i_meeting_configuration.html#a95ab4bd4d0f10fd1bf242702811d3deb',1,'IMeetingConfiguration']]],
   ['enableinputmeetingpassworddlg',['EnableInputMeetingPasswordDlg',['../class_i_meeting_configuration.html#aa3e0a0d667cea67bcd93b68fae47ec6b',1,'IMeetingConfiguration']]],
+  ['enableinputmeetingscreennamedlg',['EnableInputMeetingScreenNameDlg',['../class_i_meeting_configuration.html#ab51fced96dfb370b473a0e937cda78c3',1,'IMeetingConfiguration']]],
   ['enableinvitebuttononmeetingui',['EnableInviteButtonOnMeetingUI',['../class_i_meeting_configuration.html#aff512c146e8fbea41c0e0c4eb32bddac',1,'IMeetingConfiguration']]],
   ['enablelbuttondbclick4switchfullscreenmode',['EnableLButtonDBClick4SwitchFullScreenMode',['../class_i_meeting_configuration.html#a5a5908fd47921572f989af0716d4e31c',1,'IMeetingConfiguration']]],
   ['enableleavemeetingoptionforhost',['EnableLeaveMeetingOptionForHost',['../class_i_meeting_configuration.html#a9aa8f43c014b93d441a89a32fbed37a0',1,'IMeetingConfiguration']]],
@@ -33,6 +34,8 @@ var searchData=
   ['enableoptimizeforfullscreenvideoclip',['EnableOptimizeForFullScreenVideoClip',['../class_i_meeting_share_controller.html#aecfba4bc367f26c95b13d89be358804d',1,'IMeetingShareController']]],
   ['enableplaychimewhenenterorexit',['EnablePlayChimeWhenEnterOrExit',['../class_i_meeting_audio_controller.html#aff192bd36e2eeb24d5137922a12d8eea',1,'IMeetingAudioController']]],
   ['enablesharecomputersound',['EnableShareComputerSound',['../class_i_meeting_share_controller.html#a47dd3db716f4491151b1d72deeae6472',1,'IMeetingShareController']]],
+  ['enableshareiosdevice',['EnableShareIOSDevice',['../class_i_meeting_configuration.html#a85b5e862322058cfbd899177038e9acd',1,'IMeetingConfiguration']]],
+  ['enablesharewhiteboard',['EnableShareWhiteBoard',['../class_i_meeting_configuration.html#a61361c105d94ffc9f65c5138a9491bb9',1,'IMeetingConfiguration']]],
   ['enablesplitscreenmode',['EnableSplitScreenMode',['../class_i_general_setting_context.html#a8f4aedb0d5686d578bfee1cf8c2fa687',1,'IGeneralSettingContext']]],
   ['enablestereoaudio',['EnableStereoAudio',['../class_i_audio_setting_context.html#a7dcac91e13ddf1cc1856d666d6302583',1,'IAudioSettingContext']]],
   ['enabletooltipsshow',['EnableToolTipsShow',['../class_i_meeting_configuration.html#a641b0977a12cd792cb6896cf354772fa',1,'IMeetingConfiguration']]],
@@ -40,5 +43,7 @@ var searchData=
   ['enablewaitingroomonentry',['EnableWaitingRoomOnEntry',['../class_i_meeting_waiting_room_controller.html#a5379e285f8ba5e86571a6515de467172',1,'IMeetingWaitingRoomController']]],
   ['end_5fmeeting',['END_MEETING',['../meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134eabe5541871cc5b0ff7ff43bbd80ba48b9',1,'meeting_service_interface.h']]],
   ['enterfullscreen',['EnterFullScreen',['../class_i_meeting_u_i_controller.html#a075000e7ea2a3b74d4959ca8562eea36',1,'IMeetingUIController']]],
-  ['exitfullscreen',['ExitFullScreen',['../class_i_meeting_u_i_controller.html#af64c2b92d8c9f8590613d0c51c9bda04',1,'IMeetingUIController']]]
+  ['enterremotecontrollingstatus',['EnterRemoteControllingStatus',['../class_i_meeting_remote_controller.html#ac8e09de574c154035236f11e8d321956',1,'IMeetingRemoteController']]],
+  ['exitfullscreen',['ExitFullScreen',['../class_i_meeting_u_i_controller.html#af64c2b92d8c9f8590613d0c51c9bda04',1,'IMeetingUIController']]],
+  ['expeluser',['ExpelUser',['../class_i_meeting_participants_controller.html#afb582ceefdab8cc08fa755fcdf872a20',1,'IMeetingParticipantsController']]]
 ];

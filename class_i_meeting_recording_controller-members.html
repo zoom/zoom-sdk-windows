@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -67,9 +67,16 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf">SetEvent</a>(IMeetingRecordingCtrlEvent *pEvent)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a98ea0dd9343ac688dd7b00782d3cca93">AllowLocalRecording</a>(unsigned int userid)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#ab13e7b97e1d3c7cee1f7232c6d468716">CanAllowDisAllowLocalRecording</a>()=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a38e35994b31159751ae11e56908fd2dc">CanStartRecording</a>(bool cloud_recording, unsigned int userid)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237">DisAllowLocalRecording</a>(unsigned int userid)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a104ca13e601ee6985e010f8d32a55327">IsSupportLocalRecording</a>(unsigned int userid)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf">SetEvent</a>(IMeetingRecordingCtrlEvent *pEvent)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a8e10f643857f0ac8920df049ef28e9b6">StartCloudRecording</a>()=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#ae245fbbf98874ac906604a7eac72006c">StartRecording</a>(time_t &amp;startTimestamp, wchar_t *recPath)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#aec26b2b67027adabb7c7ec5452fb4059">StopRecording</a>(time_t &amp;stopTimestamp)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#a619de4790b9a89136d62e0abd166c43a">StopCloudRecording</a>()=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html#aec26b2b67027adabb7c7ec5452fb4059">StopRecording</a>(time_t &amp;stopTimestamp)=0</td><td class="entry"><a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

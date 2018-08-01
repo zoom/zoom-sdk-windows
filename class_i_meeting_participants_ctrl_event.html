@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -90,10 +90,58 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16fc189a2638896a3fcfe52be85e03be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_ctrl_event.html#a16fc189a2638896a3fcfe52be85e03be">onUserNameChanged</a> (unsigned int userId, const wchar_t *userName)=0</td></tr>
 <tr class="memdesc:a16fc189a2638896a3fcfe52be85e03be"><td class="mdescLeft">&#160;</td><td class="mdescRight">User name change callback.  <a href="#a16fc189a2638896a3fcfe52be85e03be">More...</a><br /></td></tr>
 <tr class="separator:a16fc189a2638896a3fcfe52be85e03be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5815d653de59adfaeeb390fd003c8f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_ctrl_event.html#ae5815d653de59adfaeeb390fd003c8f1">onCoHostChangeNotification</a> (unsigned int userId, bool isCoHost)=0</td></tr>
+<tr class="memdesc:ae5815d653de59adfaeeb390fd003c8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">co-host change callback  <a href="#ae5815d653de59adfaeeb390fd003c8f1">More...</a><br /></td></tr>
+<tr class="separator:ae5815d653de59adfaeeb390fd003c8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Participants Controller Callback Event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae5815d653de59adfaeeb390fd003c8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5815d653de59adfaeeb390fd003c8f1">&#9670;&nbsp;</a></span>onCoHostChangeNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingParticipantsCtrlEvent::onCoHostChangeNotification </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isCoHost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>co-host change callback </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userId</td><td></td></tr>
+    <tr><td class="paramname">isCoHost</td><td>co-host or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4e11df0f729de9c76c3ec6c2cbe574e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e11df0f729de9c76c3ec6c2cbe574e3">&#9670;&nbsp;</a></span>onHostChangeNotification()</h2>
 

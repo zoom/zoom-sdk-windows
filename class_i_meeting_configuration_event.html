@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -81,6 +81,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af04b457784ab2690801df796ca840dae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration_event.html#af04b457784ab2690801df796ca840dae">onAirPlayInstructionWndNotification</a> (bool bShow, const wchar_t *airhostName)=0</td></tr>
 <tr class="memdesc:af04b457784ab2690801df796ca840dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">meeting need password or screen name callback  <a href="#af04b457784ab2690801df796ca840dae">More...</a><br /></td></tr>
 <tr class="separator:af04b457784ab2690801df796ca840dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b384a2535bba66da5e3ca9cc15fe16"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration_event.html#aa1b384a2535bba66da5e3ca9cc15fe16">onWebinarNeedRegisterNotification</a> (<a class="el" href="class_i_webinar_need_register_handler.html">IWebinarNeedRegisterHandler</a> *handler_)=0</td></tr>
+<tr class="memdesc:aa1b384a2535bba66da5e3ca9cc15fe16"><td class="mdescLeft">&#160;</td><td class="mdescRight">webinar need register callback  <a href="#aa1b384a2535bba66da5e3ca9cc15fe16">More...</a><br /></td></tr>
+<tr class="separator:aa1b384a2535bba66da5e3ca9cc15fe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0da5b736f518dd597422c8de5abdaa1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration_event.html#ad0da5b736f518dd597422c8de5abdaa1">onEndOtherMeetingToJoinMeetingNotification</a> (<a class="el" href="class_i_end_other_meeting_to_join_meeting_handler.html">IEndOtherMeetingToJoinMeetingHandler</a> *handler_)=0</td></tr>
+<tr class="memdesc:ad0da5b736f518dd597422c8de5abdaa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">meeting need to end other meeting to join this meeting callback  <a href="#ad0da5b736f518dd597422c8de5abdaa1">More...</a><br /></td></tr>
+<tr class="separator:ad0da5b736f518dd597422c8de5abdaa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd24128f77b52770454e793e9741d83"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration_event.html#a8cd24128f77b52770454e793e9741d83">onFreeMeetingEndingReminderNotification</a> (<a class="el" href="class_i_free_meeting_ending_reminder_handler.html">IFreeMeetingEndingReminderHandler</a> *handler_)=0</td></tr>
+<tr class="memdesc:a8cd24128f77b52770454e793e9741d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">the notification of free meeting will ending callback  <a href="#a8cd24128f77b52770454e793e9741d83">More...</a><br /></td></tr>
+<tr class="separator:a8cd24128f77b52770454e793e9741d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Configuration Event callback. </p>
@@ -130,6 +139,74 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad0da5b736f518dd597422c8de5abdaa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0da5b736f518dd597422c8de5abdaa1">&#9670;&nbsp;</a></span>onEndOtherMeetingToJoinMeetingNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_end_other_meeting_to_join_meeting_handler.html">IEndOtherMeetingToJoinMeetingHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>meeting need to end other meeting to join this meeting callback </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler_</td><td>which will be invoked for when this message type is received. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cd24128f77b52770454e793e9741d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd24128f77b52770454e793e9741d83">&#9670;&nbsp;</a></span>onFreeMeetingEndingReminderNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingConfigurationEvent::onFreeMeetingEndingReminderNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html">IFreeMeetingEndingReminderHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the notification of free meeting will ending callback </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler_</td><td>which will be invoked for when this message type is received. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab1405a6efb4d96f4e92dfc7e08494e6f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1405a6efb4d96f4e92dfc7e08494e6f">&#9670;&nbsp;</a></span>onInputMeetingPasswordAndScreenNameNotification()</h2>
 
@@ -158,6 +235,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pHandler</td><td>which will be invoked for when this message type is received. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1b384a2535bba66da5e3ca9cc15fe16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b384a2535bba66da5e3ca9cc15fe16">&#9670;&nbsp;</a></span>onWebinarNeedRegisterNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingConfigurationEvent::onWebinarNeedRegisterNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_webinar_need_register_handler.html">IWebinarNeedRegisterHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>webinar need register callback </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler_</td><td>which will be invoked for when this message type is received. </td></tr>
   </table>
   </dd>
 </dl>

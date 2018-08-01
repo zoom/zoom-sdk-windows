@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -78,6 +78,9 @@ $(function() {
 <li>GetAudioSettings()
 : <a class="el" href="class_i_setting_service.html#abc7e0e422c681bc625fbfc9feb62b880">ISettingService</a>
 </li>
+<li>GetAudioVoiceLevel()
+: <a class="el" href="class_i_user_info.html#abddb78473ca5ba28ea10f1931537f410">IUserInfo</a>
+</li>
 <li>GetAuthResult()
 : <a class="el" href="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75">IAuthService</a>
 </li>
@@ -104,6 +107,9 @@ $(function() {
 </li>
 <li>GetContent()
 : <a class="el" href="class_i_chat_msg_info.html#a1e866235bfc65a466742a91dd488f659">IChatMsgInfo</a>
+</li>
+<li>GetCurrentLiveStreamStatus()
+: <a class="el" href="class_i_meeting_live_stream_controller.html#adbb593fcf2c787d4dec5836b7bfca910">IMeetingLiveStreamController</a>
 </li>
 <li>GetCurrentMeetingCallinNumber()
 : <a class="el" href="class_i_meeting_phone_helper.html#aeebb5099a93459ae79ce1019b10d2e07">IMeetingPhoneHelper</a>
@@ -160,6 +166,12 @@ $(function() {
 <li>GetJoinMeetingUrl()
 : <a class="el" href="class_i_meeting_info.html#a27df4c4a5cf575f779e0df0b3cda1889">IMeetingInfo</a>
 </li>
+<li>GetLiveStreamURL()
+: <a class="el" href="class_i_meeting_live_stream_item.html#abc294f563b10ac47ba5ef08c084b745f">IMeetingLiveStreamItem</a>
+</li>
+<li>GetLiveStreamURLDescription()
+: <a class="el" href="class_i_meeting_live_stream_item.html#ab07d239393f03617991445ea562f5e0d">IMeetingLiveStreamItem</a>
+</li>
 <li>GetLoginStatus()
 : <a class="el" href="class_i_auth_service.html#a70c1fec8ea849555968f062b9efec9bd">IAuthService</a>
 </li>
@@ -196,6 +208,9 @@ $(function() {
 <li>GetMeetingInfo()
 : <a class="el" href="class_i_meeting_service.html#ab279829baff0dee656bff3fc138c5a7d">IMeetingService</a>
 </li>
+<li>GetMeetingLiveStreamController()
+: <a class="el" href="class_i_meeting_service.html#ae4a403760b17db904ac97a389ea0dc1d">IMeetingService</a>
+</li>
 <li>GetMeetingNumber()
 : <a class="el" href="class_i_meeting_info.html#aa524d0a201f93ad1229bbf08d769f5b0">IMeetingInfo</a>
 , <a class="el" href="class_i_my_meeting_item.html#a27a496a6fe334f885201c7dcf4a4d67a">IMyMeetingItem</a>
@@ -204,7 +219,8 @@ $(function() {
 : <a class="el" href="class_i_meeting_service.html#a72e2d5bc3131cc35830ce1aae70b2800">IMeetingService</a>
 </li>
 <li>GetMeetingPassword()
-: <a class="el" href="class_i_my_meeting_item.html#a004f9d3b58339401c9cb35fb45ab684d">IMyMeetingItem</a>
+: <a class="el" href="class_i_meeting_info.html#a90cd54e3bf5cb489f80717554341aaff">IMeetingInfo</a>
+, <a class="el" href="class_i_my_meeting_item.html#a004f9d3b58339401c9cb35fb45ab684d">IMyMeetingItem</a>
 </li>
 <li>GetMeetingPhoneHelper()
 : <a class="el" href="class_i_meeting_service.html#a8497d75db98faebe1ab88444fcd99a4b">IMeetingService</a>
@@ -276,6 +292,9 @@ $(function() {
 <li>GetSenderUserId()
 : <a class="el" href="class_i_chat_msg_info.html#ae79dfb2e9d8e700fafcff5736f9c8bc2">IChatMsgInfo</a>
 </li>
+<li>GetSettingUIStrategy()
+: <a class="el" href="class_i_setting_service.html#a328f3c09faa156e41c615b87795fee90">ISettingService</a>
+</li>
 <li>GetSharingConnQuality()
 : <a class="el" href="class_i_meeting_service.html#ae930cd4943c84e19ee3cfe0feda42c2d">IMeetingService</a>
 </li>
@@ -291,11 +310,17 @@ $(function() {
 <li>GetSupportCountryInfo()
 : <a class="el" href="class_i_meeting_phone_helper.html#a4cc98b98d358504c69e799c8473d9c67">IMeetingPhoneHelper</a>
 </li>
+<li>GetSupportLiveStreamURL()
+: <a class="el" href="class_i_meeting_live_stream_controller.html#a0d3aa32e787e20cf229d5a688cca1c09">IMeetingLiveStreamController</a>
+</li>
 <li>GetTimeStamp()
 : <a class="el" href="class_i_chat_msg_info.html#a6a37976593cb1d4bb7da41d91c331969">IChatMsgInfo</a>
 </li>
 <li>GetTitle()
 : <a class="el" href="class_i_embedded_browser.html#a70b01b04b0a63f9764745aa9804f268b">IEmbeddedBrowser</a>
+</li>
+<li>GetType()
+: <a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a3c3266e9cbac570c56eaaaea120afaa3">IFreeMeetingEndingReminderHandler</a>
 </li>
 <li>GetUIController()
 : <a class="el" href="class_i_meeting_service.html#a5b84eade1ee29cdd4ca76c63efad49ec">IMeetingService</a>
@@ -335,6 +360,9 @@ $(function() {
 </li>
 <li>GetWallViewPageInfo()
 : <a class="el" href="class_i_meeting_u_i_controller.html#abafd887b637250f0602001abb62f546b">IMeetingUIController</a>
+</li>
+<li>GetWebinarRegisterUrl()
+: <a class="el" href="class_i_webinar_need_register_handler_by_url.html#a6fd748673d9e72d3ec96782547669365">IWebinarNeedRegisterHandlerByUrl</a>
 </li>
 <li>GiveRemoteControlTo()
 : <a class="el" href="class_i_meeting_remote_controller.html#a307d95f1d5eaf11e871cb3cad408e467">IMeetingRemoteController</a>

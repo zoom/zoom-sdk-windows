@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -152,6 +152,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a72e2d5bc3131cc35830ce1aae70b2800"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_participants_controller.html">IMeetingParticipantsController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a72e2d5bc3131cc35830ce1aae70b2800">GetMeetingParticipantsController</a> ()=0</td></tr>
 <tr class="memdesc:a72e2d5bc3131cc35830ce1aae70b2800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Participants controller.  <a href="#a72e2d5bc3131cc35830ce1aae70b2800">More...</a><br /></td></tr>
 <tr class="separator:a72e2d5bc3131cc35830ce1aae70b2800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a403760b17db904ac97a389ea0dc1d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_live_stream_controller.html">IMeetingLiveStreamController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ae4a403760b17db904ac97a389ea0dc1d">GetMeetingLiveStreamController</a> ()=0</td></tr>
+<tr class="memdesc:ae4a403760b17db904ac97a389ea0dc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Live stream controller.  <a href="#ae4a403760b17db904ac97a389ea0dc1d">More...</a><br /></td></tr>
+<tr class="separator:ae4a403760b17db904ac97a389ea0dc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Service Interface. </p>
@@ -382,6 +385,34 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the meeting information, otherwise is NULL. </dd></dl>
+
+</div>
+</div>
+<a id="ae4a403760b17db904ac97a389ea0dc1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a403760b17db904ac97a389ea0dc1d">&#9670;&nbsp;</a></span>GetMeetingLiveStreamController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_meeting_live_stream_controller.html">IMeetingLiveStreamController</a>* IMeetingService::GetMeetingLiveStreamController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get Live stream controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is live stream controller interface. If the function fails, the return value is NULL. </dd></dl>
 
 </div>
 </div>

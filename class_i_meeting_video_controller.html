@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -93,10 +93,127 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a512517f5828ee32a0ded7127c6d8e4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_controller.html#a0a512517f5828ee32a0ded7127c6d8e4">HideOrShowNoVideoUserOnVideoWall</a> (bool bHide)=0</td></tr>
 <tr class="memdesc:a0a512517f5828ee32a0ded7127c6d8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide or show no video user on video wall mode.  <a href="#a0a512517f5828ee32a0ded7127c6d8e4">More...</a><br /></td></tr>
 <tr class="separator:a0a512517f5828ee32a0ded7127c6d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2160fc3701affb1fe0f9d85c062d1d37"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_controller.html#a2160fc3701affb1fe0f9d85c062d1d37">CanAskAttendeeToStartVideo</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a2160fc3701affb1fe0f9d85c062d1d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Can Ask Attendee To Start Video.  <a href="#a2160fc3701affb1fe0f9d85c062d1d37">More...</a><br /></td></tr>
+<tr class="separator:a2160fc3701affb1fe0f9d85c062d1d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fbbaf6a3d3b9dd5598ebbf28e41c32c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_controller.html#a6fbbaf6a3d3b9dd5598ebbf28e41c32c">AskAttendeeToStartVideo</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a6fbbaf6a3d3b9dd5598ebbf28e41c32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask Attendee To Start Video.  <a href="#a6fbbaf6a3d3b9dd5598ebbf28e41c32c">More...</a><br /></td></tr>
+<tr class="separator:a6fbbaf6a3d3b9dd5598ebbf28e41c32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efd51e8c5162388b38a2b11e5440b27"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_controller.html#a9efd51e8c5162388b38a2b11e5440b27">CanStopAttendeeVideo</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a9efd51e8c5162388b38a2b11e5440b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Can Stop Attendee Video.  <a href="#a9efd51e8c5162388b38a2b11e5440b27">More...</a><br /></td></tr>
+<tr class="separator:a9efd51e8c5162388b38a2b11e5440b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388aa26faee717c5ead8c0b83382c43d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_controller.html#a388aa26faee717c5ead8c0b83382c43d">StopAttendeeVideo</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a388aa26faee717c5ead8c0b83382c43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop Attendee Video.  <a href="#a388aa26faee717c5ead8c0b83382c43d">More...</a><br /></td></tr>
+<tr class="separator:a388aa26faee717c5ead8c0b83382c43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting video controller interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6fbbaf6a3d3b9dd5598ebbf28e41c32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fbbaf6a3d3b9dd5598ebbf28e41c32c">&#9670;&nbsp;</a></span>AskAttendeeToStartVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingVideoController::AskAttendeeToStartVideo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ask Attendee To Start Video. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to ask. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a2160fc3701affb1fe0f9d85c062d1d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2160fc3701affb1fe0f9d85c062d1d37">&#9670;&nbsp;</a></span>CanAskAttendeeToStartVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingVideoController::CanAskAttendeeToStartVideo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check Can Ask Attendee To Start Video. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If you can, the return value is SDKErr_Success. If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a9efd51e8c5162388b38a2b11e5440b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efd51e8c5162388b38a2b11e5440b27">&#9670;&nbsp;</a></span>CanStopAttendeeVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingVideoController::CanStopAttendeeVideo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check Can Stop Attendee Video. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If you can, the return value is SDKErr_Success. If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="a0a512517f5828ee32a0ded7127c6d8e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a512517f5828ee32a0ded7127c6d8e4">&#9670;&nbsp;</a></span>HideOrShowNoVideoUserOnVideoWall()</h2>
 
@@ -281,6 +398,41 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">bSpotlight</td><td>spotlight video or not </td></tr>
     <tr><td class="paramname">userid</td><td>Specifies which the user is to be spotlighted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a388aa26faee717c5ead8c0b83382c43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388aa26faee717c5ead8c0b83382c43d">&#9670;&nbsp;</a></span>StopAttendeeVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingVideoController::StopAttendeeVideo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop Attendee Video. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to stop. </td></tr>
   </table>
   </dd>
 </dl>

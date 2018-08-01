@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.25013.0522</span>
+   &#160;<span id="projectnumber">4.1.28966.0727</span>
    </div>
   </td>
  </tr>
@@ -84,10 +84,210 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec26b2b67027adabb7c7ec5452fb4059"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#aec26b2b67027adabb7c7ec5452fb4059">StopRecording</a> (time_t &amp;stopTimestamp)=0</td></tr>
 <tr class="memdesc:aec26b2b67027adabb7c7ec5452fb4059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop recording.  <a href="#aec26b2b67027adabb7c7ec5452fb4059">More...</a><br /></td></tr>
 <tr class="separator:aec26b2b67027adabb7c7ec5452fb4059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e35994b31159751ae11e56908fd2dc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a38e35994b31159751ae11e56908fd2dc">CanStartRecording</a> (bool cloud_recording, unsigned int userid)=0</td></tr>
+<tr class="memdesc:a38e35994b31159751ae11e56908fd2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Can Start recording or not.  <a href="#a38e35994b31159751ae11e56908fd2dc">More...</a><br /></td></tr>
+<tr class="separator:a38e35994b31159751ae11e56908fd2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#ab13e7b97e1d3c7cee1f7232c6d468716">CanAllowDisAllowLocalRecording</a> ()=0</td></tr>
+<tr class="memdesc:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Can allow or disallow other attendee to start local recording in the meeting.  <a href="#ab13e7b97e1d3c7cee1f7232c6d468716">More...</a><br /></td></tr>
+<tr class="separator:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e10f643857f0ac8920df049ef28e9b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a8e10f643857f0ac8920df049ef28e9b6">StartCloudRecording</a> ()=0</td></tr>
+<tr class="memdesc:a8e10f643857f0ac8920df049ef28e9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start cloud recording.  <a href="#a8e10f643857f0ac8920df049ef28e9b6">More...</a><br /></td></tr>
+<tr class="separator:a8e10f643857f0ac8920df049ef28e9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619de4790b9a89136d62e0abd166c43a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a619de4790b9a89136d62e0abd166c43a">StopCloudRecording</a> ()=0</td></tr>
+<tr class="memdesc:a619de4790b9a89136d62e0abd166c43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop cloud recording.  <a href="#a619de4790b9a89136d62e0abd166c43a">More...</a><br /></td></tr>
+<tr class="separator:a619de4790b9a89136d62e0abd166c43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104ca13e601ee6985e010f8d32a55327"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a104ca13e601ee6985e010f8d32a55327">IsSupportLocalRecording</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a104ca13e601ee6985e010f8d32a55327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check support local recoding feature or not.  <a href="#a104ca13e601ee6985e010f8d32a55327">More...</a><br /></td></tr>
+<tr class="separator:a104ca13e601ee6985e010f8d32a55327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ea0dd9343ac688dd7b00782d3cca93"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a98ea0dd9343ac688dd7b00782d3cca93">AllowLocalRecording</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a98ea0dd9343ac688dd7b00782d3cca93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow to start local recoding.  <a href="#a98ea0dd9343ac688dd7b00782d3cca93">More...</a><br /></td></tr>
+<tr class="separator:a98ea0dd9343ac688dd7b00782d3cca93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237">DisAllowLocalRecording</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="mdescLeft">&#160;</td><td class="mdescRight">DisAllow to start local recoding.  <a href="#a7ccf6b7f38bf50f77dd6d44ef8453237">More...</a><br /></td></tr>
+<tr class="separator:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting recording controller interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a98ea0dd9343ac688dd7b00782d3cca93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ea0dd9343ac688dd7b00782d3cca93">&#9670;&nbsp;</a></span>AllowLocalRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::AllowLocalRecording </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allow to start local recoding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to allow. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="ab13e7b97e1d3c7cee1f7232c6d468716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13e7b97e1d3c7cee1f7232c6d468716">&#9670;&nbsp;</a></span>CanAllowDisAllowLocalRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::CanAllowDisAllowLocalRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check Can allow or disallow other attendee to start local recording in the meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If you can, the return value is SDKErr_Success. If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a38e35994b31159751ae11e56908fd2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e35994b31159751ae11e56908fd2dc">&#9670;&nbsp;</a></span>CanStartRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::CanStartRecording </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cloud_recording</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check Can Start recording or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cloud_recording</td><td>cloud recording or not. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If can start recording, the return value is SDKErr_Success. If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a7ccf6b7f38bf50f77dd6d44ef8453237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ccf6b7f38bf50f77dd6d44ef8453237">&#9670;&nbsp;</a></span>DisAllowLocalRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::DisAllowLocalRecording </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DisAllow to start local recoding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to allow. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a104ca13e601ee6985e010f8d32a55327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a104ca13e601ee6985e010f8d32a55327">&#9670;&nbsp;</a></span>IsSupportLocalRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::IsSupportLocalRecording </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check support local recoding feature or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If support recording, the return value is SDKErr_Success. If don't support, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="a869687b9a4331b37a57069bf0806afcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a869687b9a4331b37a57069bf0806afcf">&#9670;&nbsp;</a></span>SetEvent()</h2>
 
@@ -119,6 +319,34 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a8e10f643857f0ac8920df049ef28e9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e10f643857f0ac8920df049ef28e9b6">&#9670;&nbsp;</a></span>StartCloudRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::StartCloudRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start cloud recording. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
 
 </div>
@@ -165,6 +393,34 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a619de4790b9a89136d62e0abd166c43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619de4790b9a89136d62e0abd166c43a">&#9670;&nbsp;</a></span>StopCloudRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::StopCloudRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop cloud recording. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
 
 </div>
