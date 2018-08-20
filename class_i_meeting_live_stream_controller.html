@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c65ad624cdda442a9f467b9ce51eea4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_controller.html#a8c65ad624cdda442a9f467b9ce51eea4">SetEvent</a> (<a class="el" href="class_i_meeting_live_stream_ctrl_event.html">IMeetingLiveStreamCtrlEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a8c65ad624cdda442a9f467b9ce51eea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set live stream controller callback event.  <a href="#a8c65ad624cdda442a9f467b9ce51eea4">More...</a><br /></td></tr>
+<tr class="memdesc:a8c65ad624cdda442a9f467b9ce51eea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting live stream callback event.  <a href="#a8c65ad624cdda442a9f467b9ce51eea4">More...</a><br /></td></tr>
 <tr class="separator:a8c65ad624cdda442a9f467b9ce51eea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a637f53134bd274c26feb56e0caa08ce0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_controller.html#a637f53134bd274c26feb56e0caa08ce0">CanStartLiveStream</a> ()=0</td></tr>
-<tr class="memdesc:a637f53134bd274c26feb56e0caa08ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">can start live stream or not.  <a href="#a637f53134bd274c26feb56e0caa08ce0">More...</a><br /></td></tr>
+<tr class="memdesc:a637f53134bd274c26feb56e0caa08ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check can start live stream or not.  <a href="#a637f53134bd274c26feb56e0caa08ce0">More...</a><br /></td></tr>
 <tr class="separator:a637f53134bd274c26feb56e0caa08ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d609e9d749705a4055bd530a5263e9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_controller.html#a46d609e9d749705a4055bd530a5263e9">StartLiveStream</a> (<a class="el" href="class_i_meeting_live_stream_item.html">IMeetingLiveStreamItem</a> *item_)=0</td></tr>
 <tr class="memdesc:a46d609e9d749705a4055bd530a5263e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start live stream.  <a href="#a46d609e9d749705a4055bd530a5263e9">More...</a><br /></td></tr>
@@ -91,10 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a863d26e8f1ad0aa78efe0020cfb217d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop live stream.  <a href="#a863d26e8f1ad0aa78efe0020cfb217d3">More...</a><br /></td></tr>
 <tr class="separator:a863d26e8f1ad0aa78efe0020cfb217d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d3aa32e787e20cf229d5a688cca1c09"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_meeting_live_stream_item.html">IMeetingLiveStreamItem</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_controller.html#a0d3aa32e787e20cf229d5a688cca1c09">GetSupportLiveStreamURL</a> ()=0</td></tr>
-<tr class="memdesc:a0d3aa32e787e20cf229d5a688cca1c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting live stream item list.  <a href="#a0d3aa32e787e20cf229d5a688cca1c09">More...</a><br /></td></tr>
+<tr class="memdesc:a0d3aa32e787e20cf229d5a688cca1c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting live stream information list of current meeting.  <a href="#a0d3aa32e787e20cf229d5a688cca1c09">More...</a><br /></td></tr>
 <tr class="separator:a0d3aa32e787e20cf229d5a688cca1c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbb593fcf2c787d4dec5836b7bfca910"><td class="memItemLeft" align="right" valign="top">virtual LiveStreamStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_controller.html#adbb593fcf2c787d4dec5836b7bfca910">GetCurrentLiveStreamStatus</a> ()=0</td></tr>
-<tr class="memdesc:adbb593fcf2c787d4dec5836b7bfca910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current live stream status.  <a href="#adbb593fcf2c787d4dec5836b7bfca910">More...</a><br /></td></tr>
+<tr class="memdesc:adbb593fcf2c787d4dec5836b7bfca910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get live stream status of current meeting.  <a href="#adbb593fcf2c787d4dec5836b7bfca910">More...</a><br /></td></tr>
 <tr class="separator:adbb593fcf2c787d4dec5836b7bfca910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>can start live stream or not. </p>
-<dl class="section return"><dt>Returns</dt><dd>can start live stream or not. </dd></dl>
+<p>Check can start live stream or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>If can start live stream, the return value is SDKErr_Success. If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
 
 </div>
 </div>
@@ -151,8 +151,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get current live stream status. </p>
-<dl class="section return"><dt>Returns</dt><dd>the status of current live stream. </dd></dl>
+<p>Get live stream status of current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the live stream status of current meeting, refer to LiveStreamStatus. </dd></dl>
 
 </div>
 </div>
@@ -179,8 +179,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting live stream item list. </p>
-<dl class="section return"><dt>Returns</dt><dd>the return value is all live stream item list of current meeting.if don't have, return NULL. </dd></dl>
+<p>Get meeting live stream information list of current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>the return value is current meeting all live stream information list.if not in meeting, return NULL. </dd></dl>
 
 </div>
 </div>
@@ -208,7 +208,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set live stream controller callback event. </p>
+<p>Set meeting live stream callback event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingLiveStreamCtrlEvent* that receives live stream event. </td></tr>
@@ -246,7 +246,7 @@ Public Member Functions</h2></td></tr>
 <p>Start live stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">item_</td><td>the live stream item to start, you can get this from GetSupportLiveStreamURL </td></tr>
+    <tr><td class="paramname">item_</td><td>A pointer to a IMeetingLiveStreamItem*, get this via GetSupportLiveStreamURL API. </td></tr>
   </table>
   </dd>
 </dl>
@@ -297,13 +297,13 @@ Public Member Functions</h2></td></tr>
 <p>Start live stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">streamingURL</td><td>streaming url </td></tr>
-    <tr><td class="paramname">streamingKey</td><td>streaming key </td></tr>
-    <tr><td class="paramname">broadcastURL</td><td>broadcast url </td></tr>
+    <tr><td class="paramname">streamingURL</td><td>url of live stream </td></tr>
+    <tr><td class="paramname">streamingKey</td><td>key of live stream </td></tr>
+    <tr><td class="paramname">broadcastURL</td><td>broadcast url of live stream </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. you get these parameters from third party live stream service </dd></dl>
 
 </div>
 </div>

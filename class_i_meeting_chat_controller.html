@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -81,10 +81,79 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b29bf32186da127ffc15d259e3deb75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#a9b29bf32186da127ffc15d259e3deb75">SendChatTo</a> (unsigned int receiver, wchar_t *content)=0</td></tr>
 <tr class="memdesc:a9b29bf32186da127ffc15d259e3deb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message to somebody or All.  <a href="#a9b29bf32186da127ffc15d259e3deb75">More...</a><br /></td></tr>
 <tr class="separator:a9b29bf32186da127ffc15d259e3deb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11c85cf34941d851f0112affa19a815"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#ad11c85cf34941d851f0112affa19a815">SendChat4WebinarMeeting</a> (<a class="el" href="structtag_send_chat_item4_webinar.html">SendChatItem4Webinar</a> &amp;chatIteam)=0</td></tr>
+<tr class="memdesc:ad11c85cf34941d851f0112affa19a815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message to somebody or All in webinar meeting.  <a href="#ad11c85cf34941d851f0112affa19a815">More...</a><br /></td></tr>
+<tr class="separator:ad11c85cf34941d851f0112affa19a815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structtag_chat_status.html">ChatStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#a3eaa1d75d94de5ca10f3d3b62a402442">GetChatStatus</a> ()=0</td></tr>
+<tr class="memdesc:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current privilege status of chat session.  <a href="#a3eaa1d75d94de5ca10f3d3b62a402442">More...</a><br /></td></tr>
+<tr class="separator:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting chat controller interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3eaa1d75d94de5ca10f3d3b62a402442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eaa1d75d94de5ca10f3d3b62a402442">&#9670;&nbsp;</a></span>GetChatStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="structtag_chat_status.html">ChatStatus</a>* IMeetingChatController::GetChatStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current privilege status of chat session. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the status of chat session. If the function fails, the return value is NULL.To get extended error information, refer to ChatStatus. </dd></dl>
+
+</div>
+</div>
+<a id="ad11c85cf34941d851f0112affa19a815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11c85cf34941d851f0112affa19a815">&#9670;&nbsp;</a></span>SendChat4WebinarMeeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingChatController::SendChat4WebinarMeeting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtag_send_chat_item4_webinar.html">SendChatItem4Webinar</a> &amp;&#160;</td>
+          <td class="paramname"><em>chatIteam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send chat message to somebody or All in webinar meeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatIteam</td><td>the chat message item. refer to SendChatItem4Webinar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="a9b29bf32186da127ffc15d259e3deb75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b29bf32186da127ffc15d259e3deb75">&#9670;&nbsp;</a></span>SendChatTo()</h2>
 

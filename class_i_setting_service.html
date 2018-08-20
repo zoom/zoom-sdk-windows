@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -78,8 +78,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacb0c9fc1f1e695076b9f35c99cb731b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_setting_service.html#aacb0c9fc1f1e695076b9f35c99cb731b">ShowSettingDlg</a> (<a class="el" href="structtag_show_setting_dlg_param.html">ShowSettingDlgParam</a> &amp;param)=0</td></tr>
 <tr class="memdesc:aacb0c9fc1f1e695076b9f35c99cb731b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show meeting setting dialog.  <a href="#aacb0c9fc1f1e695076b9f35c99cb731b">More...</a><br /></td></tr>
 <tr class="separator:aacb0c9fc1f1e695076b9f35c99cb731b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7bd7b92ad1e382a0ea6a840e6a193d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_setting_service.html#a5c7bd7b92ad1e382a0ea6a840e6a193d">HideSettingDlg</a> ()=0</td></tr>
-<tr class="memdesc:a5c7bd7b92ad1e382a0ea6a840e6a193d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide meeting setting dialog.  <a href="#a5c7bd7b92ad1e382a0ea6a840e6a193d">More...</a><br /></td></tr>
+<tr class="memitem:a5c7bd7b92ad1e382a0ea6a840e6a193d"><td class="memItemLeft" align="right" valign="top"><a id="a5c7bd7b92ad1e382a0ea6a840e6a193d"></a>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_setting_service.html#a5c7bd7b92ad1e382a0ea6a840e6a193d">HideSettingDlg</a> ()=0</td></tr>
+<tr class="memdesc:a5c7bd7b92ad1e382a0ea6a840e6a193d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide meeting setting dialog If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. <br /></td></tr>
 <tr class="separator:a5c7bd7b92ad1e382a0ea6a840e6a193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7460b49ab5c87fb6ff790628a8b68a85"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_general_setting_context.html">IGeneralSettingContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_setting_service.html#a7460b49ab5c87fb6ff790628a8b68a85">GetGeneralSettings</a> ()=0</td></tr>
 <tr class="memdesc:a7460b49ab5c87fb6ff790628a8b68a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get general settings.  <a href="#a7460b49ab5c87fb6ff790628a8b68a85">More...</a><br /></td></tr>
@@ -128,6 +129,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get audio settings. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is audio settings interface. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_audio_setting_context.html" title="Audio setting Interface. ">IAudioSettingContext</a> </dd></dl>
 
 </div>
 </div>
@@ -156,6 +158,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get general settings. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is general settings interface. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_general_setting_context.html" title="General setting Interface. ">IGeneralSettingContext</a> </dd></dl>
 
 </div>
 </div>
@@ -184,6 +187,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get recording settings. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is recording settings interface. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_recording_setting_context.html" title="Recording setting Interface. ">IRecordingSettingContext</a> </dd></dl>
 
 </div>
 </div>
@@ -212,6 +216,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get setting UI strategy. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is setting UI strategy interface. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_setting_u_i_strategy.html" title="Setting UI strategy Interface. ">ISettingUIStrategy</a> </dd></dl>
 
 </div>
 </div>
@@ -240,6 +245,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get statistic settings. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is statistic settings interface. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_statistic_setting_context.html" title="Statistic setting Interface. ">IStatisticSettingContext</a> </dd></dl>
 
 </div>
 </div>
@@ -268,34 +274,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get video settings. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is video settings interface. If the function fails, the return value is NULL. </dd></dl>
-
-</div>
-</div>
-<a id="a5c7bd7b92ad1e382a0ea6a840e6a193d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c7bd7b92ad1e382a0ea6a840e6a193d">&#9670;&nbsp;</a></span>HideSettingDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ISettingService::HideSettingDlg </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Hide meeting setting dialog. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device list pointer. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_video_setting_context.html" title="Video setting Interface. ">IVideoSettingContext</a> </dd></dl>
 
 </div>
 </div>
@@ -326,11 +305,10 @@ Public Member Functions</h2></td></tr>
 <p>Show meeting setting dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">param</td><td>Specifies how to show chat dialog. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>Specifies to show the chat dialog. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device list pointer. If the function fails, the return value is NULL. </dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rect',['rect',['../structtag_show_chat_dlg_param.html#a71703923de2c90a207df7d9a497267bd',1,'tagShowChatDlgParam']]]
+  ['normal_5fmeeting_5fstatus',['normal_meeting_status',['../structtag_chat_status.html#ac3c6335a63f4b36c435bf0647a1118e3',1,'tagChatStatus']]]
 ];

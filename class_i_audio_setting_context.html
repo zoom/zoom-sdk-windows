@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -111,22 +111,71 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6757b049eee93b56999b1c16b670aead"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a6757b049eee93b56999b1c16b670aead">IsMicOriginalInputEnable</a> ()=0</td></tr>
 <tr class="memdesc:a6757b049eee93b56999b1c16b670aead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Enable or disable flag of original input of mic.  <a href="#a6757b049eee93b56999b1c16b670aead">More...</a><br /></td></tr>
 <tr class="separator:a6757b049eee93b56999b1c16b670aead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ddf72eb2b9427fdbd873208b4099696"><td class="memItemLeft" align="right" valign="top"><a id="a6ddf72eb2b9427fdbd873208b4099696"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SetMicVol</b> (FLOAT &amp;value)=0</td></tr>
+<tr class="memitem:a62cfdc1e8f7e2faee74db2436721deb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a62cfdc1e8f7e2faee74db2436721deb5">EnableHoldSpaceKeyToSpeak</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a62cfdc1e8f7e2faee74db2436721deb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable hold and press space key to speak.  <a href="#a62cfdc1e8f7e2faee74db2436721deb5">More...</a><br /></td></tr>
+<tr class="separator:a62cfdc1e8f7e2faee74db2436721deb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade39229946fff6ad04bc630e4d923f7f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ade39229946fff6ad04bc630e4d923f7f">IsHoldSpaceKeyToSpeakEnabled</a> ()=0</td></tr>
+<tr class="memdesc:ade39229946fff6ad04bc630e4d923f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Enable or disable flag of hold and press space key to speak.  <a href="#ade39229946fff6ad04bc630e4d923f7f">More...</a><br /></td></tr>
+<tr class="separator:ade39229946fff6ad04bc630e4d923f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1999acd276e3bba895c4c7ebc69aa91"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ac1999acd276e3bba895c4c7ebc69aa91">EnableAlwaysMuteMicWhenJoinVoip</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:ac1999acd276e3bba895c4c7ebc69aa91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable always mute mic when join voip.  <a href="#ac1999acd276e3bba895c4c7ebc69aa91">More...</a><br /></td></tr>
+<tr class="separator:ac1999acd276e3bba895c4c7ebc69aa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c13be2cddc1e0a9710dd3c57b213ced"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a1c13be2cddc1e0a9710dd3c57b213ced">IsAlwaysMuteMicWhenJoinVoipEnabled</a> ()=0</td></tr>
+<tr class="memdesc:a1c13be2cddc1e0a9710dd3c57b213ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Enable or disable flag of always mute mic when join voip.  <a href="#a1c13be2cddc1e0a9710dd3c57b213ced">More...</a><br /></td></tr>
+<tr class="separator:a1c13be2cddc1e0a9710dd3c57b213ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe38965525d67c146934fa601bb5de10"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_test_audio_device_helper.html">ITestAudioDeviceHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#abe38965525d67c146934fa601bb5de10">GetTestAudioDeviceHelper</a> ()=0</td></tr>
+<tr class="separator:abe38965525d67c146934fa601bb5de10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddf72eb2b9427fdbd873208b4099696"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a6ddf72eb2b9427fdbd873208b4099696">SetMicVol</a> (FLOAT &amp;value)=0</td></tr>
+<tr class="memdesc:a6ddf72eb2b9427fdbd873208b4099696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the volume of the selected mic.  <a href="#a6ddf72eb2b9427fdbd873208b4099696">More...</a><br /></td></tr>
 <tr class="separator:a6ddf72eb2b9427fdbd873208b4099696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0022f8d5027140caa5ca16f7a30c352"><td class="memItemLeft" align="right" valign="top"><a id="ae0022f8d5027140caa5ca16f7a30c352"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetMicVol</b> (FLOAT &amp;value)=0</td></tr>
+<tr class="memitem:ae0022f8d5027140caa5ca16f7a30c352"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ae0022f8d5027140caa5ca16f7a30c352">GetMicVol</a> (FLOAT &amp;value)=0</td></tr>
+<tr class="memdesc:ae0022f8d5027140caa5ca16f7a30c352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the volume of the selected mic.  <a href="#ae0022f8d5027140caa5ca16f7a30c352">More...</a><br /></td></tr>
 <tr class="separator:ae0022f8d5027140caa5ca16f7a30c352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633ca9ae16b937d1685b2c83b5e8884e"><td class="memItemLeft" align="right" valign="top"><a id="a633ca9ae16b937d1685b2c83b5e8884e"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SetSpeakerVol</b> (FLOAT &amp;value)=0</td></tr>
+<tr class="memitem:a633ca9ae16b937d1685b2c83b5e8884e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a633ca9ae16b937d1685b2c83b5e8884e">SetSpeakerVol</a> (FLOAT &amp;value)=0</td></tr>
+<tr class="memdesc:a633ca9ae16b937d1685b2c83b5e8884e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the volume of the selected speaker.  <a href="#a633ca9ae16b937d1685b2c83b5e8884e">More...</a><br /></td></tr>
 <tr class="separator:a633ca9ae16b937d1685b2c83b5e8884e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab635939756fc6c03a60d64067493010a"><td class="memItemLeft" align="right" valign="top"><a id="ab635939756fc6c03a60d64067493010a"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetSpeakerVol</b> (FLOAT &amp;value)=0</td></tr>
+<tr class="memitem:ab635939756fc6c03a60d64067493010a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ab635939756fc6c03a60d64067493010a">GetSpeakerVol</a> (FLOAT &amp;value)=0</td></tr>
+<tr class="memdesc:ab635939756fc6c03a60d64067493010a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the volume of the selected speaker.  <a href="#ab635939756fc6c03a60d64067493010a">More...</a><br /></td></tr>
 <tr class="separator:ab635939756fc6c03a60d64067493010a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Audio setting Interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac1999acd276e3bba895c4c7ebc69aa91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1999acd276e3bba895c4c7ebc69aa91">&#9670;&nbsp;</a></span>EnableAlwaysMuteMicWhenJoinVoip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::EnableAlwaysMuteMicWhenJoinVoip </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable or disable always mute mic when join voip. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>[in] Specifies enable or disable always mute mic when join voip. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
 <a id="ab2fb1175d69d459b39f7053d0120600d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2fb1175d69d459b39f7053d0120600d">&#9670;&nbsp;</a></span>EnableAutoAdjustMic()</h2>
 
@@ -154,7 +203,7 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 <p>Enable or disable auto adjust mic volume. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies enable or disable auto adjust mic volume. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>[in] Specifies enable or disable auto adjust mic volume. </td></tr>
   </table>
   </dd>
 </dl>
@@ -189,7 +238,42 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 <p>Enable or disable auto join audio when join meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies enable or disable dual screen mode. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>[in] Specifies enable or disable dual screen mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a62cfdc1e8f7e2faee74db2436721deb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62cfdc1e8f7e2faee74db2436721deb5">&#9670;&nbsp;</a></span>EnableHoldSpaceKeyToSpeak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::EnableHoldSpaceKeyToSpeak </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable or disable hold and press space key to speak. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>[in] Specifies enable or disable hold and press space key to speak. </td></tr>
   </table>
   </dd>
 </dl>
@@ -224,7 +308,7 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 <p>Enable or disable original input of mic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies enable or disable original input of mic. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>[in] Specifies enable or disable original input of mic. </td></tr>
   </table>
   </dd>
 </dl>
@@ -259,7 +343,7 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 <p>Enable or disable stereo audio. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies enable or disable stereo audio. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>[in] Specifies enable or disable stereo audio. </td></tr>
   </table>
   </dd>
 </dl>
@@ -295,6 +379,40 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 
 </div>
 </div>
+<a id="ae0022f8d5027140caa5ca16f7a30c352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0022f8d5027140caa5ca16f7a30c352">&#9670;&nbsp;</a></span>GetMicVol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::GetMicVol </td>
+          <td>(</td>
+          <td class="paramtype">FLOAT &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the volume of the selected mic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>[out]Specifies the current volume of the mic. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4ebee65d95116498b732ccf509ce7671"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ebee65d95116498b732ccf509ce7671">&#9670;&nbsp;</a></span>GetSpeakerList()</h2>
 
@@ -320,6 +438,95 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 
 <p>Get speaker device list. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device list pointer. If the function fails, the return value is NULL. </dd></dl>
+
+</div>
+</div>
+<a id="ab635939756fc6c03a60d64067493010a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab635939756fc6c03a60d64067493010a">&#9670;&nbsp;</a></span>GetSpeakerVol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::GetSpeakerVol </td>
+          <td>(</td>
+          <td class="paramtype">FLOAT &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the volume of the selected speaker. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>[out]Specifies the current volume of the speaker. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abe38965525d67c146934fa601bb5de10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe38965525d67c146934fa601bb5de10">&#9670;&nbsp;</a></span>GetTestAudioDeviceHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_test_audio_device_helper.html">ITestAudioDeviceHelper</a>* IAudioSettingContext::GetTestAudioDeviceHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the pointer of <a class="el" href="class_i_test_audio_device_helper.html" title="Audio devices testing interface. ">ITestAudioDeviceHelper</a>. If the function fails, the pointer is NULL. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_test_audio_device_helper.html" title="Audio devices testing interface. ">ITestAudioDeviceHelper</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1c13be2cddc1e0a9710dd3c57b213ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c13be2cddc1e0a9710dd3c57b213ced">&#9670;&nbsp;</a></span>IsAlwaysMuteMicWhenJoinVoipEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IAudioSettingContext::IsAlwaysMuteMicWhenJoinVoipEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get Enable or disable flag of always mute mic when join voip. </p>
+<dl class="section return"><dt>Returns</dt><dd>Enable or disable </dd></dl>
 
 </div>
 </div>
@@ -375,6 +582,34 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </div><div class="memdoc">
 
 <p>Get Enable or disable flag of auto join audio when join meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>Enable or disable </dd></dl>
+
+</div>
+</div>
+<a id="ade39229946fff6ad04bc630e4d923f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade39229946fff6ad04bc630e4d923f7f">&#9670;&nbsp;</a></span>IsHoldSpaceKeyToSpeakEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IAudioSettingContext::IsHoldSpaceKeyToSpeakEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get Enable or disable flag of hold and press space key to speak. </p>
 <dl class="section return"><dt>Returns</dt><dd>Enable or disable </dd></dl>
 
 </div>
@@ -472,7 +707,8 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 <p>Select mic device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceId</td><td>Specifies which device to select. </td></tr>
+    <tr><td class="paramname">deviceId</td><td>[in] Specifies which device to select. </td></tr>
+    <tr><td class="paramname">deviceName</td><td>[in] Specifies which device to select. It should be the same device specified by deviceId. </td></tr>
   </table>
   </dd>
 </dl>
@@ -517,11 +753,80 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 <p>Select speaker device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceId</td><td>Specifies which device to select. </td></tr>
+    <tr><td class="paramname">deviceId</td><td>[in] Specifies which device to select. </td></tr>
+    <tr><td class="paramname">deviceName</td><td>[in] Specifies which device to select. It should be the same device specified by deviceId. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="a6ddf72eb2b9427fdbd873208b4099696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ddf72eb2b9427fdbd873208b4099696">&#9670;&nbsp;</a></span>SetMicVol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::SetMicVol </td>
+          <td>(</td>
+          <td class="paramtype">FLOAT &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the volume of the selected mic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>[in]Specifies the volume of the mic. The value interval is 0 to 255 SDK uses the default mic if no mic is selected via calling the function SelectMic. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a633ca9ae16b937d1685b2c83b5e8884e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633ca9ae16b937d1685b2c83b5e8884e">&#9670;&nbsp;</a></span>SetSpeakerVol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::SetSpeakerVol </td>
+          <td>(</td>
+          <td class="paramtype">FLOAT &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the volume of the selected speaker. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>[in]Specifies the volume of the speaker. The value interval is 0 to 255 SDK uses the default speaker if no speaker is selected via calling the function SelectSpeaker. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

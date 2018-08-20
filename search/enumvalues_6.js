@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['sdk_5fut_5fapiuser',['SDK_UT_APIUSER',['../meeting__service__interface_8h.html#a35d39b5fd37bc538254a80c1bb949836a5638d230d48b921dc5c34678686fca85',1,'meeting_service_interface.h']]],
+  ['sdk_5fut_5fnormaluser',['SDK_UT_NORMALUSER',['../meeting__service__interface_8h.html#a35d39b5fd37bc538254a80c1bb949836a0e1f198e6a8da9c40d7da332fd297078',1,'meeting_service_interface.h']]],
+  ['sdkerr_5finvalid_5fparameter',['SDKERR_INVALID_PARAMETER',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a780ac63275b8b93fda32e7087ddb5843',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fmemory_5ffailed',['SDKERR_MEMORY_FAILED',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a4c4985c4674158da4d7c352f8136b88e',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fmodule_5fload_5ffailed',['SDKERR_MODULE_LOAD_FAILED',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036ac0c5d535209e61708524486555136829',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fno_5faudiodevice_5fisfound',['SDKERR_NO_AUDIODEVICE_ISFOUND',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a0d1ada5bb2fd25473b8f51e22ae13738',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fno_5fimpl',['SDKERR_NO_IMPL',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a8566a97c43b1c56a457a6bb14a5d2faf',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fno_5fpermission',['SDKERR_NO_PERMISSION',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a42208dac2bf01ff729adee2632941fc1',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fno_5fvideodevice_5fisfound',['SDKERR_NO_VIDEODEVICE_ISFOUND',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a64753d0686019e4847e86bbf543c16fb',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fnorecordinginprocess',['SDKERR_NORECORDINGINPROCESS',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a95eb3dfc0448cdbffbd18b29c633cbcc',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fservice_5ffailed',['SDKERR_SERVICE_FAILED',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036af22a137ce8f383e0cafec79dea67c20d',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fsuccess',['SDKERR_SUCCESS',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a176159e9d595f438e0ebefd522e23359',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5ftranscoder_5fnofound',['SDKERR_TRANSCODER_NOFOUND',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a42fcbea8e4771e84c95dd06bc9f781b4',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5funauthentication',['SDKERR_UNAUTHENTICATION',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036aa9a3f084736a228f933d7643886a95f7',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5funinitialize',['SDKERR_UNINITIALIZE',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a02a0a965f5be510e0a4318aa377b3398',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5funknown',['SDKERR_UNKNOWN',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a4483e6b9505eae9d14fbc8680f6b2657',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fvideo_5fnotready',['SDKERR_VIDEO_NOTREADY',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a2a7650373f087eb34eae9a5bd29e3964',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5fwrong_5fuseage',['SDKERR_WRONG_USEAGE',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036aef54ec9885bd37cf8efabbab3b3d1e33',1,'zoom_sdk_def.h']]]
+];

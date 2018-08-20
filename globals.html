@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -121,6 +121,9 @@ $(function() {
 <li>CreateCalenderService()
 : <a class="el" href="zoom__sdk_8h.html#af93abafee95c7d19e1001d01e6b74f18">zoom_sdk.h</a>
 </li>
+<li>CreateCustomizedUIMgr()
+: <a class="el" href="zoom__customized__ui_8h.html#a38cfd2e34344eb92bf8ba8a355edaddc">zoom_customized_ui.h</a>
+</li>
 <li>CreateEmbeddedBrowser()
 : <a class="el" href="zoom__sdk__ext_8h.html#a6b85a452502a87105494c76afe535725">zoom_sdk_ext.h</a>
 </li>
@@ -136,6 +139,9 @@ $(function() {
 <li>CreateSettingService()
 : <a class="el" href="zoom__sdk_8h.html#a37a644f0640f6126bf59f193c75bb19a">zoom_sdk.h</a>
 </li>
+<li>CustomizedShareAnnotationStatus
+: <a class="el" href="customized__annotation_8h.html#acdb5ff6c2955b3f15f6ea8aed00e5064">customized_annotation.h</a>
+</li>
 </ul>
 
 
@@ -145,6 +151,9 @@ $(function() {
 </li>
 <li>DestroyCalenderService()
 : <a class="el" href="zoom__sdk_8h.html#aa847e0f54a52f772eb69b4e3ea548210">zoom_sdk.h</a>
+</li>
+<li>DestroyCustomizedUIMgr()
+: <a class="el" href="zoom__customized__ui_8h.html#aa5dee414c5e6ce00037ade3e87d14180">zoom_customized_ui.h</a>
 </li>
 <li>DestroyEmbeddedBrowser()
 : <a class="el" href="zoom__sdk__ext_8h.html#ae872fabba4acc33e123858e7ebfd0aa9">zoom_sdk_ext.h</a>
@@ -167,6 +176,15 @@ $(function() {
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>END_MEETING
 : <a class="el" href="meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134eabe5541871cc5b0ff7ff43bbd80ba48b9">meeting_service_interface.h</a>
+</li>
+<li>enuCanPlay
+: <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeeaaf82225b7fe09e897edcee0d40c02fa4">setting_service_interface.h</a>
+</li>
+<li>enuCanTest
+: <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeea7991d7e8e3c68f1ff2a2b2a0d7fdbb51">setting_service_interface.h</a>
+</li>
+<li>enuMicRecording
+: <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeea9e4549a2fade2c6e331bc40e661e1b37">setting_service_interface.h</a>
 </li>
 </ul>
 
@@ -276,6 +294,21 @@ $(function() {
 <li>PremeetingAPIResult
 : <a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">premeeting_service_interface.h</a>
 </li>
+<li>PREVIEW_VIDEO_ROTATION_ACTION
+: <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1">setting_service_interface.h</a>
+</li>
+<li>PREVIEW_VIDEO_ROTATION_ACTION_0
+: <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1af3d6871396dd6d666903df27a0301340">setting_service_interface.h</a>
+</li>
+<li>PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90
+: <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1acd495550035d8d7d3c7a793872f0095d">setting_service_interface.h</a>
+</li>
+<li>PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180
+: <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1a7f5e0c3219d2fa5b9d8edcf26c63c1a9">setting_service_interface.h</a>
+</li>
+<li>PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90
+: <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1abb18a2f976da8508a0cff777ad3a6f8b">setting_service_interface.h</a>
+</li>
 </ul>
 
 
@@ -293,6 +326,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>SDK_TESTMIC_STATUS
+: <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">setting_service_interface.h</a>
+</li>
 <li>SDK_UT_APIUSER
 : <a class="el" href="meeting__service__interface_8h.html#a35d39b5fd37bc538254a80c1bb949836a5638d230d48b921dc5c34678686fca85">meeting_service_interface.h</a>
 </li>
@@ -308,11 +344,17 @@ $(function() {
 <li>SDKERR_MODULE_LOAD_FAILED
 : <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036ac0c5d535209e61708524486555136829">zoom_sdk_def.h</a>
 </li>
+<li>SDKERR_NO_AUDIODEVICE_ISFOUND
+: <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a0d1ada5bb2fd25473b8f51e22ae13738">zoom_sdk_def.h</a>
+</li>
 <li>SDKERR_NO_IMPL
 : <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a8566a97c43b1c56a457a6bb14a5d2faf">zoom_sdk_def.h</a>
 </li>
 <li>SDKERR_NO_PERMISSION
 : <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a42208dac2bf01ff729adee2632941fc1">zoom_sdk_def.h</a>
+</li>
+<li>SDKERR_NO_VIDEODEVICE_ISFOUND
+: <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a64753d0686019e4847e86bbf543c16fb">zoom_sdk_def.h</a>
 </li>
 <li>SDKERR_NORECORDINGINPROCESS
 : <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a95eb3dfc0448cdbffbd18b29c633cbcc">zoom_sdk_def.h</a>
@@ -375,12 +417,73 @@ $(function() {
 <li>UserRole
 : <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">meeting_participants_ctrl_interface.h</a>
 </li>
+<li>USERROLE_ATTENDEE
+: <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775ab4c8094618143081dba20ef584d5c4c0">meeting_participants_ctrl_interface.h</a>
+</li>
+<li>USERROLE_BREAKOUTROOM_MODERATOR
+: <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775a8df58bec912e5810af9e80ccd8caddb4">meeting_participants_ctrl_interface.h</a>
+</li>
+<li>USERROLE_COHOST
+: <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775a4f30718ac595a1e48cbe8b1f86ea0050">meeting_participants_ctrl_interface.h</a>
+</li>
+<li>USERROLE_HOST
+: <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775acc1e9035a33c7f0ad6a984f680399972">meeting_participants_ctrl_interface.h</a>
+</li>
+<li>USERROLE_NONE
+: <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775ae70dc7aea548d0357326e87e9ed6e1e4">meeting_participants_ctrl_interface.h</a>
+</li>
+<li>USERROLE_PANELIST
+: <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775ae1cb2e7673bca6edfd1f007ec8aeb760">meeting_participants_ctrl_interface.h</a>
+</li>
 </ul>
 
 
 <h3><a id="index_v"></a>- v -</h3><ul>
+<li>VideoRenderData_Avatar
+: <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdcaabf03ebcb3b087c45c3819033959178f">customized_video_container.h</a>
+</li>
+<li>VideoRenderData_ScreenName
+: <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdca31e81a7c32fd38576698f2f6bc5dca73">customized_video_container.h</a>
+</li>
+<li>VideoRenderData_Video
+: <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdcad93b00c2cb560f9a715006718ea5883e">customized_video_container.h</a>
+</li>
+<li>VideoRenderDataType
+: <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc">customized_video_container.h</a>
+</li>
+<li>VideoRenderElement_ACTIVE
+: <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5a2878376254edb715fc784ca5d4f783ea">customized_video_container.h</a>
+</li>
+<li>VideoRenderElement_NORMAL
+: <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5a050b868c8a02f9747fc7e4ae6d333492">customized_video_container.h</a>
+</li>
+<li>VideoRenderElement_PRVIEW
+: <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5a7c3d6f2ff14d768f8e14a2b29207ee9e">customized_video_container.h</a>
+</li>
+<li>VideoRenderElementType
+: <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5">customized_video_container.h</a>
+</li>
 <li>VideoStatus
 : <a class="el" href="meeting__video__interface_8h.html#ab2c40afd7ac2f54f637c13d41e4a194a">meeting_video_interface.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_w"></a>- w -</h3><ul>
+<li>WebinarChatMsgType
+: <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433">meeting_chat_interface.h</a>
+</li>
+<li>WebinarChatMsgType_None
+: <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433aafa9964a23192d072a248dc0d5814bfd">meeting_chat_interface.h</a>
+</li>
+<li>WebinarChatMsgType_ToAllPanelist
+: <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433af384387c9339a191bdf9974feb374906">meeting_chat_interface.h</a>
+</li>
+<li>WebinarChatMsgType_ToAllPanelistAndAttendee
+: <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433a89e94265014ec4a63cb34090029ebd9c">meeting_chat_interface.h</a>
+</li>
+<li>WebinarChatMsgType_ToIndividualUser
+: <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433a6d4568441b0640cb2fac4c5361b745fa">meeting_chat_interface.h</a>
 </li>
 </ul>
 </div><!-- contents -->

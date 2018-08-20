@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sdk_5ftestmic_5fstatus',['SDK_TESTMIC_STATUS',['../setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee',1,'setting_service_interface.h']]],
   ['sdkerror',['SDKError',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036',1,'zoom_sdk_def.h']]],
   ['sdkfloatvideotype',['SDKFloatVideoType',['../meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7e',1,'meeting_ui_ctrl_interface.h']]],
   ['sdkmeetinguitype',['SDKMeetingUIType',['../meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41',1,'meeting_ui_ctrl_interface.h']]],

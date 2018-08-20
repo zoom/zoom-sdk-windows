@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a56a27df438bad6c5af620d2d96fa2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_ctrl_event.html#a6a56a27df438bad6c5af620d2d96fa2b">onRecordPriviligeChanged</a> (bool bCanRec)=0</td></tr>
 <tr class="memdesc:a6a56a27df438bad6c5af620d2d96fa2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">self record privilige change callback  <a href="#a6a56a27df438bad6c5af620d2d96fa2b">More...</a><br /></td></tr>
 <tr class="separator:a6a56a27df438bad6c5af620d2d96fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af856aeb7958a9d099519cbc700b5bbbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_ctrl_event.html#af856aeb7958a9d099519cbc700b5bbbf">onCustomizedLocalRecordingSourceNotification</a> (<a class="el" href="class_i_customized_local_recording_layout_helper.html">ICustomizedLocalRecordingLayoutHelper</a> *layout_helper)=0</td></tr>
+<tr class="memdesc:af856aeb7958a9d099519cbc700b5bbbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">local recording source callback for customized ui mode  <a href="#af856aeb7958a9d099519cbc700b5bbbf">More...</a><br /></td></tr>
+<tr class="separator:af856aeb7958a9d099519cbc700b5bbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting recording callback event. </p>
@@ -122,6 +125,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">status</td><td>Recording status value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af856aeb7958a9d099519cbc700b5bbbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af856aeb7958a9d099519cbc700b5bbbf">&#9670;&nbsp;</a></span>onCustomizedLocalRecordingSourceNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingRecordingCtrlEvent::onCustomizedLocalRecordingSourceNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_customized_local_recording_layout_helper.html">ICustomizedLocalRecordingLayoutHelper</a> *&#160;</td>
+          <td class="paramname"><em>layout_helper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>local recording source callback for customized ui mode </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layout_helper</td><td>layout local recording helper. the layout_helper will be released after call end, please do layout before this call end. </td></tr>
   </table>
   </dd>
 </dl>

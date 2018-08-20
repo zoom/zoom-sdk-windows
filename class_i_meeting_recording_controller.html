@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -105,6 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237">DisAllowLocalRecording</a> (unsigned int userid)=0</td></tr>
 <tr class="memdesc:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="mdescLeft">&#160;</td><td class="mdescRight">DisAllow to start local recoding.  <a href="#a7ccf6b7f38bf50f77dd6d44ef8453237">More...</a><br /></td></tr>
 <tr class="separator:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#aa4e63f5e1e60ee1d4209be8392af13fc">RequestCustomizedLocalRecordingSource</a> ()=0</td></tr>
+<tr class="memdesc:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request customized local recording source notification.  <a href="#aa4e63f5e1e60ee1d4209be8392af13fc">More...</a><br /></td></tr>
+<tr class="separator:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting recording controller interface. </p>
@@ -285,6 +288,34 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If support recording, the return value is SDKErr_Success. If don't support, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="aa4e63f5e1e60ee1d4209be8392af13fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e63f5e1e60ee1d4209be8392af13fc">&#9670;&nbsp;</a></span>RequestCustomizedLocalRecordingSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingRecordingController::RequestCustomizedLocalRecordingSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Request customized local recording source notification. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and you will got the onCustomizedLocalRecordingSourcenNotification callback. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. only for customized style ui mode </dd></dl>
 
 </div>
 </div>

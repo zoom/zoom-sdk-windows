@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -78,8 +78,23 @@ $(function() {
 <li>InviteCallOutUser()
 : <a class="el" href="class_i_meeting_phone_helper.html#a4989d435b33d06eda1424c97d89d09b4">IMeetingPhoneHelper</a>
 </li>
+<li>Is49VideoesInGallaryViewEnabled()
+: <a class="el" href="class_i_video_setting_context.html#a2179168f1e1b35cfc6fcdf99d1bef741">IVideoSettingContext</a>
+</li>
+<li>is_chat_off
+: <a class="el" href="structtag_chat_status.html#a2d7dbff639554859e4f60e86e4222407">tagChatStatus</a>
+</li>
+<li>is_only_can_chat_to_host
+: <a class="el" href="structtag_normal_meeting_chat_staus.html#a4ee80b15540d987eec4261fb564bfbe9">tagNormalMeetingChatStaus</a>
+</li>
 <li>is_view_only
 : <a class="el" href="structtag_meeting_parameter.html#a73cc98d75e4f0911411722fad6c81245">tagMeetingParameter</a>
+</li>
+<li>is_webinar_attendee
+: <a class="el" href="structtag_chat_status.html#a8e3f9cda50150f133148f18e37959e29">tagChatStatus</a>
+</li>
+<li>is_webinar_meeting
+: <a class="el" href="structtag_chat_status.html#a472555d164aa58985fcaa65256611284">tagChatStatus</a>
 </li>
 <li>IsAeroModeInSharingTurnOff()
 : <a class="el" href="class_i_general_setting_context.html#a845bcadea3df1da3e4087e945d62cc19">IGeneralSettingContext</a>
@@ -87,8 +102,14 @@ $(function() {
 <li>IsAllowJoinBeforeHost()
 : <a class="el" href="class_i_my_meeting_item.html#a1f27a76ed2e9e2621360fd96f56c3f85">IMyMeetingItem</a>
 </li>
+<li>IsAlwaysMuteMicWhenJoinVoipEnabled()
+: <a class="el" href="class_i_audio_setting_context.html#a1c13be2cddc1e0a9710dd3c57b213ced">IAudioSettingContext</a>
+</li>
 <li>IsAlwaysShowNameOnVideoEnabled()
 : <a class="el" href="class_i_video_setting_context.html#aaef7a6dbea356cb5e4eea0078be75e63">IVideoSettingContext</a>
+</li>
+<li>IsAlwaysUse16v9()
+: <a class="el" href="class_i_video_setting_context.html#a540ad3997a8cfe4ecf50707e4e5092c8">IVideoSettingContext</a>
 </li>
 <li>IsAnnoataionDisable()
 : <a class="el" href="class_i_annotation_controller.html#ae625b9c86c79e202900851f4f08533b8">IAnnotationController</a>
@@ -117,6 +138,12 @@ $(function() {
 <li>IsAutoTurnOffVideoWhenJoinMeetingEnabled()
 : <a class="el" href="class_i_video_setting_context.html#a953e105fcd1bc433bb0e9cf800d1728d">IVideoSettingContext</a>
 </li>
+<li>IsChatToAll()
+: <a class="el" href="class_i_chat_msg_info.html#a859545b0a6d868a43d03ea6fba924571">IChatMsgInfo</a>
+</li>
+<li>IsChatToAllPanelist()
+: <a class="el" href="class_i_chat_msg_info.html#a5028bee33d89b449bad785c7313b515e">IChatMsgInfo</a>
+</li>
 <li>isDirectShareDesktop
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a9b801feb1f9474d14e6dcc05be70716e">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#a2517acaf92149a04f1ffb544b513286d">tagJoinParam4NormalUser</a>
@@ -130,11 +157,20 @@ $(function() {
 <li>IsFaceBeautyEffectEnabled()
 : <a class="el" href="class_i_video_setting_context.html#ae2c7cfb4086c9c6e90d497b06d9d8304">IVideoSettingContext</a>
 </li>
+<li>IsHardwareEncodeEnabled()
+: <a class="el" href="class_i_video_setting_context.html#a9962ebc44027085f075d552775f6d682">IVideoSettingContext</a>
+</li>
 <li>IsHaveRemoteControlRight()
 : <a class="el" href="class_i_meeting_remote_controller.html#a5445899424f72d38f02c0f245207907b">IMeetingRemoteController</a>
 </li>
 <li>IsHDVideoEnabled()
 : <a class="el" href="class_i_video_setting_context.html#aed7fd830c17706e84f18b4b0c0f00a22">IVideoSettingContext</a>
+</li>
+<li>IsHideNoVideoUsersOnWallViewEnabled()
+: <a class="el" href="class_i_video_setting_context.html#a69452defde6dcf1a9aa86216d809f439">IVideoSettingContext</a>
+</li>
+<li>IsHoldSpaceKeyToSpeakEnabled()
+: <a class="el" href="class_i_audio_setting_context.html#ade39229946fff6ad04bc630e4d923f7f">IAudioSettingContext</a>
 </li>
 <li>IsHost()
 : <a class="el" href="class_i_user_info.html#a4dd3760d6fde8ad685d39fbcb425e1b7">IUserInfo</a>
@@ -183,8 +219,14 @@ $(function() {
 <li>IsSplitScreenModeEnabled()
 : <a class="el" href="class_i_general_setting_context.html#a39de3d363b45645a669d61ab699bcfa0">IGeneralSettingContext</a>
 </li>
+<li>IsSpotlightSelfEnabled()
+: <a class="el" href="class_i_video_setting_context.html#a8ff845c43aed166373accf2aac9a9020">IVideoSettingContext</a>
+</li>
 <li>IsStereoAudioEnable()
 : <a class="el" href="class_i_audio_setting_context.html#a248c41a1ce99872147e1f64ce358955e">IAudioSettingContext</a>
+</li>
+<li>IsSupportAttendeeTalk()
+: <a class="el" href="class_i_meeting_webinar_controller.html#a07303e4afcd886171c87412654527b0e">IMeetingWebinarController</a>
 </li>
 <li>IsSupportEnableOptimizeForFullScreenVideoClip()
 : <a class="el" href="class_i_meeting_share_controller.html#af1ca1b77ef43077daff04a9ade701e1b">IMeetingShareController</a>

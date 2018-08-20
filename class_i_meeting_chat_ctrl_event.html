@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -78,6 +78,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a599584f6ad8691d9824a9d709e1e92fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_ctrl_event.html#a599584f6ad8691d9824a9d709e1e92fa">onChatMsgNotifcation</a> (<a class="el" href="class_i_chat_msg_info.html">IChatMsgInfo</a> *chatMsg, const wchar_t *content=NULL)=0</td></tr>
 <tr class="memdesc:a599584f6ad8691d9824a9d709e1e92fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat message callback  <a href="#a599584f6ad8691d9824a9d709e1e92fa">More...</a><br /></td></tr>
 <tr class="separator:a599584f6ad8691d9824a9d709e1e92fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5448e29e61eb22dd563956df2c078f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_ctrl_event.html#aab5448e29e61eb22dd563956df2c078f">onChatStautsChangedNotification</a> (<a class="el" href="structtag_chat_status.html">ChatStatus</a> *status_)=0</td></tr>
+<tr class="memdesc:aab5448e29e61eb22dd563956df2c078f"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat status changed notification callback  <a href="#aab5448e29e61eb22dd563956df2c078f">More...</a><br /></td></tr>
+<tr class="separator:aab5448e29e61eb22dd563956df2c078f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting chat callback event. </p>
@@ -121,6 +124,40 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">chatMsg</td><td>chat message object. This param will invalid after this function call end. </td></tr>
     <tr><td class="paramname">content</td><td>chat message in json format,Reserved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab5448e29e61eb22dd563956df2c078f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5448e29e61eb22dd563956df2c078f">&#9670;&nbsp;</a></span>onChatStautsChangedNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingChatCtrlEvent::onChatStautsChangedNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtag_chat_status.html">ChatStatus</a> *&#160;</td>
+          <td class="paramname"><em>status_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>chat status changed notification callback </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_</td><td>chat status object. This param will invalid after this function call end. </td></tr>
   </table>
   </dd>
 </dl>

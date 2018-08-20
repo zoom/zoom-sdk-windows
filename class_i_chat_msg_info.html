@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -93,6 +93,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a37976593cb1d4bb7da41d91c331969"><td class="memItemLeft" align="right" valign="top">virtual time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a6a37976593cb1d4bb7da41d91c331969">GetTimeStamp</a> ()=0</td></tr>
 <tr class="memdesc:a6a37976593cb1d4bb7da41d91c331969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chat message timestamp.  <a href="#a6a37976593cb1d4bb7da41d91c331969">More...</a><br /></td></tr>
 <tr class="separator:a6a37976593cb1d4bb7da41d91c331969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859545b0a6d868a43d03ea6fba924571"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a859545b0a6d868a43d03ea6fba924571">IsChatToAll</a> ()=0</td></tr>
+<tr class="separator:a859545b0a6d868a43d03ea6fba924571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5028bee33d89b449bad785c7313b515e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a5028bee33d89b449bad785c7313b515e">IsChatToAllPanelist</a> ()=0</td></tr>
+<tr class="separator:a5028bee33d89b449bad785c7313b515e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Zoom SDK Namespace. </p>
@@ -263,6 +267,58 @@ Public Member Functions</h2></td></tr>
 
 <p>Get chat message timestamp. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is chat message timestamp. </dd></dl>
+
+</div>
+</div>
+<a id="a859545b0a6d868a43d03ea6fba924571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859545b0a6d868a43d03ea6fba924571">&#9670;&nbsp;</a></span>IsChatToAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IChatMsgInfo::IsChatToAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>If true, it is to all chat message, otherwise not </dd></dl>
+
+</div>
+</div>
+<a id="a5028bee33d89b449bad785c7313b515e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5028bee33d89b449bad785c7313b515e">&#9670;&nbsp;</a></span>IsChatToAllPanelist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IChatMsgInfo::IsChatToAllPanelist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>If true, it is to all panellist chat message, otherwise not </dd></dl>
 
 </div>
 </div>

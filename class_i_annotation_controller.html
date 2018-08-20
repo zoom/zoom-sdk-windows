@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -102,6 +102,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6e167403d82159fa4651a56913122aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#ad6e167403d82159fa4651a56913122aa">Redo</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype)=0</td></tr>
 <tr class="memdesc:ad6e167403d82159fa4651a56913122aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redo Annotation.  <a href="#ad6e167403d82159fa4651a56913122aa">More...</a><br /></td></tr>
 <tr class="separator:ad6e167403d82159fa4651a56913122aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a6b8050edf67cf58818100c76ce660"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_customized_annotation_controller.html">ICustomizedAnnotationController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a39a6b8050edf67cf58818100c76ce660">GetCustomizedAnnotationController</a> ()=0</td></tr>
+<tr class="memdesc:a39a6b8050edf67cf58818100c76ce660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get annotation controller for customized ui mode.  <a href="#a39a6b8050edf67cf58818100c76ce660">More...</a><br /></td></tr>
+<tr class="separator:a39a6b8050edf67cf58818100c76ce660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Annotation Controller Interface. </p>
@@ -148,7 +151,35 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+
+</div>
+</div>
+<a id="a39a6b8050edf67cf58818100c76ce660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a6b8050edf67cf58818100c76ce660">&#9670;&nbsp;</a></span>GetCustomizedAnnotationController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_customized_annotation_controller.html">ICustomizedAnnotationController</a>* IAnnotationController::GetCustomizedAnnotationController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get annotation controller for customized ui mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is annotation controller interface of customized ui mode. If the function fails, the return value is NULL.  for customized style ui mode </dd></dl>
 
 </div>
 </div>
@@ -176,7 +207,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The Annotation of the current meeting is disabled or not. </p>
-<dl class="section return"><dt>Returns</dt><dd>Disabled or not. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Disabled or not.  for zoom style and customized style ui mode </dd></dl>
 
 </div>
 </div>
@@ -211,7 +242,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>
@@ -257,7 +288,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>
@@ -303,7 +334,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>
@@ -349,7 +380,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>
@@ -402,7 +433,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>
@@ -437,7 +468,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>
@@ -472,7 +503,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['toke4enfrocelogin',['toke4enfrocelogin',['../structtag_join_param4_a_p_i_user.html#a84fde818800ed785c5d39f080cebd392',1,'tagJoinParam4APIUser']]],
-  ['top',['top',['../structtag_show_setting_dlg_param.html#aaca9c27f9bdc9e82e8f4f75eaca48f34',1,'tagShowSettingDlgParam']]]
+  ['rect',['rect',['../structtag_show_chat_dlg_param.html#a71703923de2c90a207df7d9a497267bd',1,'tagShowChatDlgParam']]]
 ];

@@ -28,6 +28,7 @@ var searchData=
   ['meeting_5fui_5fctrl_5finterface_2eh',['meeting_ui_ctrl_interface.h',['../meeting__ui__ctrl__interface_8h.html',1,'']]],
   ['meeting_5fvideo_5finterface_2eh',['meeting_video_interface.h',['../meeting__video__interface_8h.html',1,'']]],
   ['meeting_5fwaiting_5froom_5finterface_2eh',['meeting_waiting_room_interface.h',['../meeting__waiting__room__interface_8h.html',1,'']]],
+  ['meeting_5fwebinar_5finterface_2eh',['meeting_webinar_interface.h',['../meeting__webinar__interface_8h.html',1,'']]],
   ['meetingconntype',['MeetingConnType',['../meeting__service__interface_8h.html#a38bce272819fd34c55f29eeb0f55f728',1,'meeting_service_interface.h']]],
   ['meetingfailcode',['MeetingFailCode',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4',1,'meeting_service_interface.h']]],
   ['meetingnumber',['meetingNumber',['../structtag_join_param4_a_p_i_user.html#a0f778ba74be0509f5c19f2dad4ce868b',1,'tagJoinParam4APIUser::meetingNumber()'],['../structtag_join_param4_normal_user.html#a3a1bef54cd5feb777972b66e3a72dade',1,'tagJoinParam4NormalUser::meetingNumber()'],['../structtag_start_param4_a_p_i_user.html#abe4e485280b82c0a38c4ba6b04d80777',1,'tagStartParam4APIUser::meetingNumber()'],['../structtag_start_param4_without_login.html#aabadfd8c4f2fdd5e76019952706e533d',1,'tagStartParam4WithoutLogin::meetingNumber()'],['../structtag_start_param4_normal_user.html#a4e7cd6af311030ec679b093aadce2e29',1,'tagStartParam4NormalUser::meetingNumber()']]],
@@ -36,6 +37,7 @@ var searchData=
   ['monitorwnd',['MonitorWnd',['../class_i_u_i_hooker.html#ae6e55f8b4fecb024235955a1e8c3a672',1,'IUIHooker']]],
   ['monitorwndmessage',['MonitorWndMessage',['../class_i_u_i_hooker.html#a281dab2b8aaa1361cf02123c49ebcc82',1,'IUIHooker']]],
   ['movefloatvideownd',['MoveFloatVideoWnd',['../class_i_meeting_u_i_controller.html#ab6b2c061aec9b89c0aabf6c14de7640e',1,'IMeetingUIController']]],
+  ['msgtype',['msgType',['../structtag_send_chat_item4_webinar.html#a247408516474b7e56da598ae32c7ee0f',1,'tagSendChatItem4Webinar']]],
   ['muteaudio',['MuteAudio',['../class_i_meeting_audio_controller.html#a46ffad1f9a811c713086ac4663df2744',1,'IMeetingAudioController']]],
   ['mutevideo',['MuteVideo',['../class_i_meeting_video_controller.html#a0961f55d4152a7aa285e9c9acc99f3f5',1,'IMeetingVideoController']]]
 ];

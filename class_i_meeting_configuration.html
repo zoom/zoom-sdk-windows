@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -217,6 +217,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:af5a8b86cc52362df20b3da0c14d9b4d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#af5a8b86cc52362df20b3da0c14d9b4d0">SetAlwaysShowMeetingIDOnTitle</a> (bool bAlwaysShow)=0</td></tr>
 <tr class="memdesc:af5a8b86cc52362df20b3da0c14d9b4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always show the Meeting ID information on the main video-window's title bar.  <a href="#af5a8b86cc52362df20b3da0c14d9b4d0">More...</a><br /></td></tr>
 <tr class="separator:af5a8b86cc52362df20b3da0c14d9b4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54050e15edfe1f308be863c63b7a201"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ad54050e15edfe1f308be863c63b7a201">RedirectClickCustomLiveStreamMenuEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:ad54050e15edfe1f308be863c63b7a201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of custom live stream menu to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="#ad54050e15edfe1f308be863c63b7a201">More...</a><br /></td></tr>
+<tr class="separator:ad54050e15edfe1f308be863c63b7a201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Configuration Interface. </p>
@@ -1196,6 +1199,40 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<a id="ad54050e15edfe1f308be863c63b7a201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54050e15edfe1f308be863c63b7a201">&#9670;&nbsp;</a></span>RedirectClickCustomLiveStreamMenuEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingConfiguration::RedirectClickCustomLiveStreamMenuEvent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRedirect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redirect click event of custom live stream menu to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onCustomLiveStreamMenuClicked in <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aabb8d264a01b035e422875a49de69850"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabb8d264a01b035e422875a49de69850">&#9670;&nbsp;</a></span>RedirectClickEndMeetingBTNEvent()</h2>
 
@@ -1427,7 +1464,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>Always show the Meeting ID information on the main video-window's title bar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bAlwaysShow</td><td>specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow if false, the behavior will follow Zoom's default logic.Default is false. </td></tr>
+    <tr><td class="paramname">bAlwaysShow</td><td>specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow is false, the behavior will follow Zoom's default logic.Default is false. </td></tr>
   </table>
   </dd>
 </dl>

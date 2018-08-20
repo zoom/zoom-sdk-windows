@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -105,8 +105,17 @@ $(function() {
 <li>GetCertFingerprint()
 : <a class="el" href="class_i_s_s_l_cert_verification_handler.html#a36599358a2a1d5506375c315f4d775b0">ISSLCertVerificationHandler</a>
 </li>
+<li>GetChatStatus()
+: <a class="el" href="class_i_meeting_chat_controller.html#a3eaa1d75d94de5ca10f3d3b62a402442">IMeetingChatController</a>
+</li>
 <li>GetContent()
 : <a class="el" href="class_i_chat_msg_info.html#a1e866235bfc65a466742a91dd488f659">IChatMsgInfo</a>
+</li>
+<li>GetCurColor()
+: <a class="el" href="class_i_customized_annotation_obj.html#a4d22e1da4bcab272866d487aa2359df9">ICustomizedAnnotationObj</a>
+</li>
+<li>GetCurLineWidth()
+: <a class="el" href="class_i_customized_annotation_obj.html#ae7cc738b8fd61d07593530b5e456e0ed">ICustomizedAnnotationObj</a>
 </li>
 <li>GetCurrentLiveStreamStatus()
 : <a class="el" href="class_i_meeting_live_stream_controller.html#adbb593fcf2c787d4dec5836b7bfca910">IMeetingLiveStreamController</a>
@@ -120,8 +129,20 @@ $(function() {
 <li>GetCurrentRemoteController()
 : <a class="el" href="class_i_meeting_remote_controller.html#aa6dfaa5e4e2c37d252c988e662576ad8">IMeetingRemoteController</a>
 </li>
+<li>GetCurrentRenderDataType()
+: <a class="el" href="class_i_video_render_element.html#ab31df48dd79f9e2935dbf515805f5112">IVideoRenderElement</a>
+</li>
+<li>GetCurrentRenderUserId()
+: <a class="el" href="class_i_video_render_element.html#a29b4e7fa359148489f28966a7f140c4f">IVideoRenderElement</a>
+</li>
 <li>GetCurrentSplitScreenModeInfo()
 : <a class="el" href="class_i_meeting_u_i_controller.html#ab4c45ab45d9104f2c80568b7af9b2766">IMeetingUIController</a>
+</li>
+<li>GetCurTool()
+: <a class="el" href="class_i_customized_annotation_obj.html#adc7dac4674a700efccd8a5a3e6f52a63">ICustomizedAnnotationObj</a>
+</li>
+<li>GetCustomizedAnnotationController()
+: <a class="el" href="class_i_annotation_controller.html#a39a6b8050edf67cf58818100c76ce660">IAnnotationController</a>
 </li>
 <li>GetDeviceId()
 : <a class="el" href="class_i_camera_info.html#af35738c368d69d8e5877839ba3254f2c">ICameraInfo</a>
@@ -253,11 +274,23 @@ $(function() {
 <li>GetMeetingWaitingRoomController()
 : <a class="el" href="class_i_meeting_service.html#a06e19b9717c871513c84b3280a8e8b2a">IMeetingService</a>
 </li>
+<li>GetMeetingWebinarController()
+: <a class="el" href="class_i_meeting_service.html#ac321763d9557718765c20afcea949071">IMeetingService</a>
+</li>
 <li>GetMicList()
 : <a class="el" href="class_i_audio_setting_context.html#abda8b60c6203ac96e667a864e0f413f4">IAudioSettingContext</a>
 </li>
+<li>GetMicVol()
+: <a class="el" href="class_i_audio_setting_context.html#ae0022f8d5027140caa5ca16f7a30c352">IAudioSettingContext</a>
+</li>
+<li>GetOwnerWnd()
+: <a class="el" href="class_i_customized_share_render.html#a5772b2012777d062822c436067526877">ICustomizedShareRender</a>
+</li>
 <li>GetParticipantsList()
 : <a class="el" href="class_i_meeting_participants_controller.html#a1b41a78318d60090da228bbb805114bf">IMeetingParticipantsController</a>
+</li>
+<li>GetPos()
+: <a class="el" href="class_i_video_render_element.html#a529364596613fd61f40a33ee3c0671fe">IVideoRenderElement</a>
 </li>
 <li>GetProxyDescription()
 : <a class="el" href="class_i_proxy_setting_handler.html#adcc9d511f956a7cd96126d8b98dc9ea0">IProxySettingHandler</a>
@@ -301,6 +334,9 @@ $(function() {
 <li>GetSpeakerList()
 : <a class="el" href="class_i_audio_setting_context.html#a4ebee65d95116498b732ccf509ce7671">IAudioSettingContext</a>
 </li>
+<li>GetSpeakerVol()
+: <a class="el" href="class_i_audio_setting_context.html#ab635939756fc6c03a60d64067493010a">IAudioSettingContext</a>
+</li>
 <li>GetStartTime()
 : <a class="el" href="class_i_my_meeting_item.html#a7ec99c506c63b061e10cf590c99a2f40">IMyMeetingItem</a>
 </li>
@@ -313,6 +349,12 @@ $(function() {
 <li>GetSupportLiveStreamURL()
 : <a class="el" href="class_i_meeting_live_stream_controller.html#a0d3aa32e787e20cf229d5a688cca1c09">IMeetingLiveStreamController</a>
 </li>
+<li>GetTestAudioDeviceHelper()
+: <a class="el" href="class_i_audio_setting_context.html#abe38965525d67c146934fa601bb5de10">IAudioSettingContext</a>
+</li>
+<li>GetTestVideoDeviceHelper()
+: <a class="el" href="class_i_video_setting_context.html#a276e126a08ef72c261416e0c8b84c92b">IVideoSettingContext</a>
+</li>
 <li>GetTimeStamp()
 : <a class="el" href="class_i_chat_msg_info.html#a6a37976593cb1d4bb7da41d91c331969">IChatMsgInfo</a>
 </li>
@@ -321,6 +363,7 @@ $(function() {
 </li>
 <li>GetType()
 : <a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a3c3266e9cbac570c56eaaaea120afaa3">IFreeMeetingEndingReminderHandler</a>
+, <a class="el" href="class_i_video_render_element.html#a16d1d2a85f9df4ad6a2e143d35de17e3">IVideoRenderElement</a>
 </li>
 <li>GetUIController()
 : <a class="el" href="class_i_meeting_service.html#a5b84eade1ee29cdd4ca76c63efad49ec">IMeetingService</a>
@@ -332,7 +375,8 @@ $(function() {
 : <a class="el" href="class_i_meeting_participants_controller.html#afa0887b5e66feb3204338a3260129989">IMeetingParticipantsController</a>
 </li>
 <li>GetUserID()
-: <a class="el" href="class_i_user_info.html#a529c83af69b48ec984c498f8c44e1ee0">IUserInfo</a>
+: <a class="el" href="class_i_customized_share_render.html#a24058d1d3ecf8c7e63585a6b933cb158">ICustomizedShareRender</a>
+, <a class="el" href="class_i_user_info.html#a529c83af69b48ec984c498f8c44e1ee0">IUserInfo</a>
 </li>
 <li>GetUserName()
 : <a class="el" href="class_i_user_info.html#afcd4ffc4bfb5dd87c6b459afc0861dbc">IUserInfo</a>
@@ -342,6 +386,9 @@ $(function() {
 </li>
 <li>GetVideoConnQuality()
 : <a class="el" href="class_i_meeting_service.html#ad9ec27cb109d79dca396412fba8497ae">IMeetingService</a>
+</li>
+<li>GetVideoElementList()
+: <a class="el" href="class_i_customized_video_container.html#a9b11ec041f1a6e25be3cf5b37cd3d3c6">ICustomizedVideoContainer</a>
 </li>
 <li>GetVideoSettings()
 : <a class="el" href="class_i_setting_service.html#aee78dd3cec917287d8f35d838ab63018">ISettingService</a>
@@ -360,6 +407,12 @@ $(function() {
 </li>
 <li>GetWallViewPageInfo()
 : <a class="el" href="class_i_meeting_u_i_controller.html#abafd887b637250f0602001abb62f546b">IMeetingUIController</a>
+</li>
+<li>GetWebinarAttendeeStauts()
+: <a class="el" href="class_i_user_info.html#a623fb4f7021e1b067b4838333a4c6c01">IUserInfo</a>
+</li>
+<li>GetWebinarMeetingStatus()
+: <a class="el" href="class_i_meeting_webinar_controller.html#a045f0f02dc2388293ce058e06b123af1">IMeetingWebinarController</a>
 </li>
 <li>GetWebinarRegisterUrl()
 : <a class="el" href="class_i_webinar_need_register_handler_by_url.html#a6fd748673d9e72d3ec96782547669365">IWebinarNeedRegisterHandlerByUrl</a>

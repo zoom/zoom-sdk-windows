@@ -1,7 +1,13 @@
 var searchData=
 [
   ['admittomeeting',['AdmitToMeeting',['../class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4',1,'IMeetingWaitingRoomController']]],
+  ['allow_5fattendee_5fchat',['allow_attendee_chat',['../structtag_webinar_meeting_status.html#a9c2fa6364d02b69561021a0881c06461',1,'tagWebinarMeetingStatus']]],
+  ['allow_5fpanellist_5fstart_5fvideo',['allow_panellist_start_video',['../structtag_webinar_meeting_status.html#ac2e01b95c91b4b97813c522d5db8ec44',1,'tagWebinarMeetingStatus']]],
+  ['allow_5ftalk',['allow_talk',['../structtag_webinar_attendee_status.html#a10194dc69e3deb06e88436e89d60bf75',1,'tagWebinarAttendeeStatus']]],
+  ['allowattendeechat',['AllowAttendeeChat',['../class_i_meeting_webinar_controller.html#abed3ca7b5d3da977d8d4deafdf17c43f',1,'IMeetingWebinarController']]],
+  ['allowattendeetalk',['AllowAttendeeTalk',['../class_i_meeting_webinar_controller.html#a5125548b2a613639f7c9d5198a4d6b81',1,'IMeetingWebinarController']]],
   ['allowlocalrecording',['AllowLocalRecording',['../class_i_meeting_recording_controller.html#a98ea0dd9343ac688dd7b00782d3cca93',1,'IMeetingRecordingController']]],
+  ['allowpaneliststartvideo',['AllowPanelistStartVideo',['../class_i_meeting_webinar_controller.html#af8461cca994251c6a092c595100b5382',1,'IMeetingWebinarController']]],
   ['alwaysshowiconontaskbar',['AlwaysShowIconOnTaskBar',['../class_i_meeting_configuration.html#a710bccde34940897b58b01f3c98fc3b0',1,'IMeetingConfiguration']]],
   ['annotationcleartype',['AnnotationClearType',['../meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2',1,'meeting_annotation_interface.h']]],
   ['annotationtooltype',['AnnotationToolType',['../meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7',1,'meeting_annotation_interface.h']]],

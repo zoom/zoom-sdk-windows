@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -65,13 +65,15 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">meeting_chat_interface.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Chat of Meeting Service Interface.  
+<p>Chat of Meeting Service Interface  for zoom style and customized style ui mode.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -82,16 +84,86 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html">IChatMsgInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom SDK Namespace.  <a href="class_i_chat_msg_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_normal_meeting_chat_staus.html">tagNormalMeetingChatStaus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat status of normal meeting A more detailed struct description.  <a href="structtag_normal_meeting_chat_staus.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_webinar_attendee_chat_status.html">tagWebinarAttendeeChatStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat status of webinar attendee,only used for webinar attendee A more detailed struct description.  <a href="structtag_webinar_attendee_chat_status.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_webinar_other_user_role_chat_status.html">tagWebinarOtherUserRoleChatStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat status of webinar meeting,only used for webinar host/cohost/panellist A more detailed struct description.  <a href="structtag_webinar_other_user_role_chat_status.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_chat_status.html">tagChatStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat status of current meeting A more detailed struct description.  <a href="structtag_chat_status.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_ctrl_event.html">IMeetingChatCtrlEvent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting chat callback event.  <a href="class_i_meeting_chat_ctrl_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_send_chat_item4_webinar.html">tagSendChatItem4Webinar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat message item for webinar meeting A more detailed struct description.  <a href="structtag_send_chat_item4_webinar.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html">IMeetingChatController</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting chat controller interface.  <a href="class_i_meeting_chat_controller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a86cf6973a71332f1f7ae7c084946ea51"><td class="memItemLeft" align="right" valign="top"><a id="a86cf6973a71332f1f7ae7c084946ea51"></a>
+typedef struct <a class="el" href="structtag_normal_meeting_chat_staus.html">tagNormalMeetingChatStaus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NormalMeetingChatStaus</b></td></tr>
+<tr class="separator:a86cf6973a71332f1f7ae7c084946ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8948b05cfc017ec3bc43a40c1d9543"><td class="memItemLeft" align="right" valign="top"><a id="aab8948b05cfc017ec3bc43a40c1d9543"></a>
+typedef struct <a class="el" href="structtag_webinar_attendee_chat_status.html">tagWebinarAttendeeChatStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WebinarAttendeeChatStatus</b></td></tr>
+<tr class="separator:aab8948b05cfc017ec3bc43a40c1d9543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be03dac1e31db6fe47cbb2963f6000f"><td class="memItemLeft" align="right" valign="top"><a id="a1be03dac1e31db6fe47cbb2963f6000f"></a>
+typedef struct <a class="el" href="structtag_webinar_other_user_role_chat_status.html">tagWebinarOtherUserRoleChatStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WebinarOtherUserRoleChatStatus</b></td></tr>
+<tr class="separator:a1be03dac1e31db6fe47cbb2963f6000f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7a34b2371096f4cc7bfe91f2743adc"><td class="memItemLeft" align="right" valign="top"><a id="a6f7a34b2371096f4cc7bfe91f2743adc"></a>
+typedef struct <a class="el" href="structtag_chat_status.html">tagChatStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ChatStatus</b></td></tr>
+<tr class="separator:a6f7a34b2371096f4cc7bfe91f2743adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76291770c5cd7ee57b0560480e2d536"><td class="memItemLeft" align="right" valign="top"><a id="ab76291770c5cd7ee57b0560480e2d536"></a>
+typedef struct <a class="el" href="structtag_send_chat_item4_webinar.html">tagSendChatItem4Webinar</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SendChatItem4Webinar</b></td></tr>
+<tr class="separator:ab76291770c5cd7ee57b0560480e2d536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a9f078e0c18379bbb0275b701240a8433"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433">WebinarChatMsgType</a> { <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433aafa9964a23192d072a248dc0d5814bfd">WebinarChatMsgType_None</a>, 
+<a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433af384387c9339a191bdf9974feb374906">WebinarChatMsgType_ToAllPanelist</a>, 
+<a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433a89e94265014ec4a63cb34090029ebd9c">WebinarChatMsgType_ToAllPanelistAndAttendee</a>, 
+<a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433a6d4568441b0640cb2fac4c5361b745fa">WebinarChatMsgType_ToIndividualUser</a>
+ }<tr class="memdesc:a9f078e0c18379bbb0275b701240a8433"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat message type of webinar meeting. A more detailed struct description.  <a href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a9f078e0c18379bbb0275b701240a8433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Chat of Meeting Service Interface. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>Chat of Meeting Service Interface  for zoom style and customized style ui mode. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a9f078e0c18379bbb0275b701240a8433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f078e0c18379bbb0275b701240a8433">&#9670;&nbsp;</a></span>WebinarChatMsgType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433">WebinarChatMsgType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>chat message type of webinar meeting. A more detailed struct description. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9f078e0c18379bbb0275b701240a8433aafa9964a23192d072a248dc0d5814bfd"></a>WebinarChatMsgType_None&#160;</td><td class="fielddoc"><p>None. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f078e0c18379bbb0275b701240a8433af384387c9339a191bdf9974feb374906"></a>WebinarChatMsgType_ToAllPanelist&#160;</td><td class="fielddoc"><p>send chat to all panellist </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f078e0c18379bbb0275b701240a8433a89e94265014ec4a63cb34090029ebd9c"></a>WebinarChatMsgType_ToAllPanelistAndAttendee&#160;</td><td class="fielddoc"><p>send chat to all panellist and attendee </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f078e0c18379bbb0275b701240a8433a6d4568441b0640cb2fac4c5361b745fa"></a>WebinarChatMsgType_ToIndividualUser&#160;</td><td class="fielddoc"><p>send chat to individual user </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

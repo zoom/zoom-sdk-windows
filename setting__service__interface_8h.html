@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.28966.0727</span>
+   &#160;<span id="projectnumber">4.1.30420.0817</span>
    </div>
   </td>
  </tr>
@@ -92,8 +92,20 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_show_setting_dlg_param.html">tagShowSettingDlgParam</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper_event.html">ITestAudioDeviceHelperEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio Device testing Callback events.  <a href="class_i_test_audio_device_helper_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html">ITestAudioDeviceHelper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio devices testing interface.  <a href="class_i_test_audio_device_helper.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html">IGeneralSettingContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">General setting Interface.  <a href="class_i_general_setting_context.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_video_device_helper_event.html">ITestVideoDeviceHelperEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video Device testing Callback events.  <a href="class_i_test_video_device_helper_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_video_device_helper.html">ITestVideoDeviceHelper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video device testing interface.  <a href="class_i_test_video_device_helper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html">IVideoSettingContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video setting Interface.  <a href="class_i_video_setting_context.html#details">More...</a><br /></td></tr>
@@ -125,6 +137,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a590b0d7b169dc5ebe3acb50426cb65e8"><td class="memItemLeft" align="right" valign="top"><a id="a590b0d7b169dc5ebe3acb50426cb65e8"></a>
 typedef struct <a class="el" href="structtag_show_setting_dlg_param.html">tagShowSettingDlgParam</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ShowSettingDlgParam</b></td></tr>
 <tr class="separator:a590b0d7b169dc5ebe3acb50426cb65e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeadce82f0b5403d3ea996e10a87e9f39"><td class="memItemLeft" align="right" valign="top"><a id="aeadce82f0b5403d3ea996e10a87e9f39"></a>
+typedef enum <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1">PREVIEW_VIDEO_ROTATION_ACTION</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>PPREVIEW_VIDEO_ROTATION_ACTION</b></td></tr>
+<tr class="separator:aeadce82f0b5403d3ea996e10a87e9f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ddaf5098b4998bb577acd14418c18c5"><td class="memItemLeft" align="right" valign="top"><a id="a6ddaf5098b4998bb577acd14418c18c5"></a>
 typedef struct <a class="el" href="structtag_overall_statistic_info.html">tagOverallStatisticInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OverallStatisticInfo</b></td></tr>
 <tr class="separator:a6ddaf5098b4998bb577acd14418c18c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +157,19 @@ Enumerations</h2></td></tr>
 <b>SettingTabPage_Video</b>
  }</td></tr>
 <tr class="separator:ae6bcf6975b05017a30e879f0c47becc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b31724919f9219534affe62ee894eee"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">SDK_TESTMIC_STATUS</a> { <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeea7991d7e8e3c68f1ff2a2b2a0d7fdbb51">enuCanTest</a> = 0, 
+<a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeea9e4549a2fade2c6e331bc40e661e1b37">enuMicRecording</a>, 
+<a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeeaaf82225b7fe09e897edcee0d40c02fa4">enuCanPlay</a>
+ }<tr class="memdesc:a9b31724919f9219534affe62ee894eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the status of the mic during the mic testing.  <a href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a9b31724919f9219534affe62ee894eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ea723cb3e939daf7c4055e462451c1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1">PREVIEW_VIDEO_ROTATION_ACTION</a> { <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1af3d6871396dd6d666903df27a0301340">PREVIEW_VIDEO_ROTATION_ACTION_0</a>, 
+<a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1abb18a2f976da8508a0cff777ad3a6f8b">PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90</a>, 
+<a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1a7f5e0c3219d2fa5b9d8edcf26c63c1a9">PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180</a>, 
+<a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1acd495550035d8d7d3c7a793872f0095d">PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90</a>
+ }<tr class="memdesc:a00ea723cb3e939daf7c4055e462451c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the action to rotate the video preview based on current view.  <a href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a00ea723cb3e939daf7c4055e462451c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a943bfa6d3d08c2e1096ace5582123d4c"><td class="memItemLeft" align="right" valign="top"><a id="a943bfa6d3d08c2e1096ace5582123d4c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SettingsNetWorkType</b> { <br />
 &#160;&#160;<b>SETTINGS_NETWORK_WIRED</b> = 0, 
 <b>SETTINGS_NETWORK_WIFI</b> = 1, 
@@ -161,7 +189,58 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Setting Service Interface. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a00ea723cb3e939daf7c4055e462451c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ea723cb3e939daf7c4055e462451c1">&#9670;&nbsp;</a></span>PREVIEW_VIDEO_ROTATION_ACTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1">PREVIEW_VIDEO_ROTATION_ACTION</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the action to rotate the video preview based on current view. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a00ea723cb3e939daf7c4055e462451c1af3d6871396dd6d666903df27a0301340"></a>PREVIEW_VIDEO_ROTATION_ACTION_0&#160;</td><td class="fielddoc"><p>No rotation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a00ea723cb3e939daf7c4055e462451c1abb18a2f976da8508a0cff777ad3a6f8b"></a>PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90&#160;</td><td class="fielddoc"><p>Rotate left. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a00ea723cb3e939daf7c4055e462451c1a7f5e0c3219d2fa5b9d8edcf26c63c1a9"></a>PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180&#160;</td><td class="fielddoc"><p>Rotate 180 degrees. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a00ea723cb3e939daf7c4055e462451c1acd495550035d8d7d3c7a793872f0095d"></a>PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90&#160;</td><td class="fielddoc"><p>Rotate right. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9b31724919f9219534affe62ee894eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b31724919f9219534affe62ee894eee">&#9670;&nbsp;</a></span>SDK_TESTMIC_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">SDK_TESTMIC_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the status of the mic during the mic testing. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9b31724919f9219534affe62ee894eeea7991d7e8e3c68f1ff2a2b2a0d7fdbb51"></a>enuCanTest&#160;</td><td class="fielddoc"><p>Can call TestMicStartRecording to start testing mic. Useless to call TestMicStopTesting/TestMicPlayRecording. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b31724919f9219534affe62ee894eeea9e4549a2fade2c6e331bc40e661e1b37"></a>enuMicRecording&#160;</td><td class="fielddoc"><p>Can call TestMicStopTesting/TestMicPlayRecording. Useless to call TestMicStartRecording. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b31724919f9219534affe62ee894eeeaaf82225b7fe09e897edcee0d40c02fa4"></a>enuCanPlay&#160;</td><td class="fielddoc"><p>Can call TestMicStopTesting/TestMicPlayRecording. Useless to call TestMicStartRecording. enuCanPlay status means SDK has recorded the mic sound for the longest time (6 seconds). In this status, if the bHandled is not set to be 'true', SDK will call TestMicStopTesting itself. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
