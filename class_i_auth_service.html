@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.30420.0817</span>
+   &#160;<span id="projectnumber">4.1.31872.0905</span>
    </div>
   </td>
  </tr>
@@ -96,6 +96,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70c1fec8ea849555968f062b9efec9bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6b">LOGINSTATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a70c1fec8ea849555968f062b9efec9bd">GetLoginStatus</a> ()=0</td></tr>
 <tr class="memdesc:a70c1fec8ea849555968f062b9efec9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get login status.  <a href="#a70c1fec8ea849555968f062b9efec9bd">More...</a><br /></td></tr>
 <tr class="separator:a70c1fec8ea849555968f062b9efec9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7422f2a5680e8abeba92a1b4ec0bd4fd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_outlook_plugin_integration_helper.html">IOutlookPluginIntegrationHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a7422f2a5680e8abeba92a1b4ec0bd4fd">GetOutlookPluginHeler</a> ()=0</td></tr>
+<tr class="separator:a7422f2a5680e8abeba92a1b4ec0bd4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad23675d89938d57112c6db57c610ea76"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_direct_share_service_helper.html">IDirectShareServiceHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#ad23675d89938d57112c6db57c610ea76">GetDirectShareServiceHeler</a> ()=0</td></tr>
+<tr class="separator:ad23675d89938d57112c6db57c610ea76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Authentication Service Interface. </p>
@@ -154,6 +158,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad23675d89938d57112c6db57c610ea76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23675d89938d57112c6db57c610ea76">&#9670;&nbsp;</a></span>GetDirectShareServiceHeler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_direct_share_service_helper.html">IDirectShareServiceHelper</a>* IAuthService::GetDirectShareServiceHeler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>If you has login your account success, the return value is the pointer of the direct share service helper, otherwise is NULL. </dd></dl>
+
+</div>
+</div>
 <a id="a70c1fec8ea849555968f062b9efec9bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70c1fec8ea849555968f062b9efec9bd">&#9670;&nbsp;</a></span>GetLoginStatus()</h2>
 
@@ -179,6 +209,32 @@ Public Member Functions</h2></td></tr>
 
 <p>Get login status. </p>
 <dl class="section return"><dt>Returns</dt><dd>The return value is login status.To get extended error information, refer to LOGINSTATUS enum </dd></dl>
+
+</div>
+</div>
+<a id="a7422f2a5680e8abeba92a1b4ec0bd4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7422f2a5680e8abeba92a1b4ec0bd4fd">&#9670;&nbsp;</a></span>GetOutlookPluginHeler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_outlook_plugin_integration_helper.html">IOutlookPluginIntegrationHelper</a>* IAuthService::GetOutlookPluginHeler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>If you has login your account success, the return value is the pointer of the outlook plugin integreation helper, otherwise is NULL. </dd></dl>
 
 </div>
 </div>

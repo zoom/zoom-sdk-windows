@@ -12,6 +12,7 @@ var searchData=
   ['sdkerr_5fnorecordinginprocess',['SDKERR_NORECORDINGINPROCESS',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a95eb3dfc0448cdbffbd18b29c633cbcc',1,'zoom_sdk_def.h']]],
   ['sdkerr_5fservice_5ffailed',['SDKERR_SERVICE_FAILED',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036af22a137ce8f383e0cafec79dea67c20d',1,'zoom_sdk_def.h']]],
   ['sdkerr_5fsuccess',['SDKERR_SUCCESS',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a176159e9d595f438e0ebefd522e23359',1,'zoom_sdk_def.h']]],
+  ['sdkerr_5ftoo_5ffrequent_5fcall',['SDKERR_TOO_FREQUENT_CALL',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a75d4f7918f9c861630372629233e33d6',1,'zoom_sdk_def.h']]],
   ['sdkerr_5ftranscoder_5fnofound',['SDKERR_TRANSCODER_NOFOUND',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a42fcbea8e4771e84c95dd06bc9f781b4',1,'zoom_sdk_def.h']]],
   ['sdkerr_5funauthentication',['SDKERR_UNAUTHENTICATION',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036aa9a3f084736a228f933d7643886a95f7',1,'zoom_sdk_def.h']]],
   ['sdkerr_5funinitialize',['SDKERR_UNINITIALIZE',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a02a0a965f5be510e0a4318aa377b3398',1,'zoom_sdk_def.h']]],

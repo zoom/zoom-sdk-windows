@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.30420.0817</span>
+   &#160;<span id="projectnumber">4.1.31872.0905</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,8 @@ $(function() {
  <a href="class_i_meeting_configuration.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a>&gt;</code></p>
+
+<p>Inherits <a class="el" href="class_i_meeting_u_i_elem_configuration.html">IMeetingUIElemConfiguration</a>, and <a class="el" href="class_i_join_meeting_behavior_configuration.html">IJoinMeetingBehaviorConfiguration</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -82,105 +84,21 @@ Public Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a9fefbc010bb6fae0207859f90a721435">Reset</a> ()=0</td></tr>
 <tr class="memdesc:a9fefbc010bb6fae0207859f90a721435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset meeting configuration. <br /></td></tr>
 <tr class="separator:a9fefbc010bb6fae0207859f90a721435"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac489aa40084a39b6df427b343af43788"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ac489aa40084a39b6df427b343af43788">SetFloatVideoPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
-<tr class="memdesc:ac489aa40084a39b6df427b343af43788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set float video panel position.  <a href="#ac489aa40084a39b6df427b343af43788">More...</a><br /></td></tr>
-<tr class="separator:ac489aa40084a39b6df427b343af43788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dcb0411ecaec88ef74762e78b31616d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a6dcb0411ecaec88ef74762e78b31616d">SetSharingToolbarVisibility</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:a6dcb0411ecaec88ef74762e78b31616d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sharing toolbar visibility flag.  <a href="#a6dcb0411ecaec88ef74762e78b31616d">More...</a><br /></td></tr>
-<tr class="separator:a6dcb0411ecaec88ef74762e78b31616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2a6b524e479eb69a785340fc5a42342"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ab2a6b524e479eb69a785340fc5a42342">SetBottomFloatToolbarWndVisibility</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:ab2a6b524e479eb69a785340fc5a42342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set bottom float toolbar visibility flag.  <a href="#ab2a6b524e479eb69a785340fc5a42342">More...</a><br /></td></tr>
-<tr class="separator:ab2a6b524e479eb69a785340fc5a42342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915bda0e7a83c0f3baa5cadd140e167d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a915bda0e7a83c0f3baa5cadd140e167d">SetDirectShareMonitorID</a> (const wchar_t *monitorID)=0</td></tr>
 <tr class="memdesc:a915bda0e7a83c0f3baa5cadd140e167d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the monitor id for direct share.  <a href="#a915bda0e7a83c0f3baa5cadd140e167d">More...</a><br /></td></tr>
 <tr class="separator:a915bda0e7a83c0f3baa5cadd140e167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a950da515a6621962b64389e1525704f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a950da515a6621962b64389e1525704f1">SetMeetingUIPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
-<tr class="memdesc:a950da515a6621962b64389e1525704f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting UI position.  <a href="#a950da515a6621962b64389e1525704f1">More...</a><br /></td></tr>
-<tr class="separator:a950da515a6621962b64389e1525704f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c693638db7089facf7584f9c0142f55"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a7c693638db7089facf7584f9c0142f55">DisableWaitingForHostDialog</a> (bool bDisable)=0</td></tr>
-<tr class="memdesc:a7c693638db7089facf7584f9c0142f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable waiting for host dialog.  <a href="#a7c693638db7089facf7584f9c0142f55">More...</a><br /></td></tr>
-<tr class="separator:a7c693638db7089facf7584f9c0142f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a920e864e65a60207045bc826b60fc2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a4a920e864e65a60207045bc826b60fc2">HideMeetingInfoFromMeetingUITitle</a> (bool bHide)=0</td></tr>
-<tr class="memdesc:a4a920e864e65a60207045bc826b60fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the meeting information from meeting UI.  <a href="#a4a920e864e65a60207045bc826b60fc2">More...</a><br /></td></tr>
-<tr class="separator:a4a920e864e65a60207045bc826b60fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a304a2aedd269f0dce87e58a4695c93ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a304a2aedd269f0dce87e58a4695c93ca">SetMeetingIDForMeetingUITitle</a> (UINT64 meetingNumber)=0</td></tr>
-<tr class="memdesc:a304a2aedd269f0dce87e58a4695c93ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the meeting ID to be showed in meeting ui title.  <a href="#a304a2aedd269f0dce87e58a4695c93ca">More...</a><br /></td></tr>
-<tr class="separator:a304a2aedd269f0dce87e58a4695c93ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a24fc98a7efa435c3d65a7e80012023"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a3a24fc98a7efa435c3d65a7e80012023">DisablePopupMeetingWrongPSWDlg</a> (bool bDisable)=0</td></tr>
-<tr class="memdesc:a3a24fc98a7efa435c3d65a7e80012023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable wrong password error dialog when join meeting.  <a href="#a3a24fc98a7efa435c3d65a7e80012023">More...</a><br /></td></tr>
-<tr class="separator:a3a24fc98a7efa435c3d65a7e80012023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aadfdb983e9ac7eba27fd6d49457445"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a1aadfdb983e9ac7eba27fd6d49457445">EnableAutoEndOtherMeetingWhenStartMeeting</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a1aadfdb983e9ac7eba27fd6d49457445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable auto end other meeting when you start a new meeting.  <a href="#a1aadfdb983e9ac7eba27fd6d49457445">More...</a><br /></td></tr>
-<tr class="separator:a1aadfdb983e9ac7eba27fd6d49457445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc56098e513efb5ea3a5bcc37e776661"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#acc56098e513efb5ea3a5bcc37e776661">EnableAutoAdjustSpeakerVolumeWhenJoinAudio</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:acc56098e513efb5ea3a5bcc37e776661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable auto adjust the volume of the speaker when you join audio.  <a href="#acc56098e513efb5ea3a5bcc37e776661">More...</a><br /></td></tr>
 <tr class="separator:acc56098e513efb5ea3a5bcc37e776661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6579b7d0ee21f82ed3a61e8993c7e43f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a6579b7d0ee21f82ed3a61e8993c7e43f">EnableAutoAdjustMicVolumeWhenJoinAudio</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a6579b7d0ee21f82ed3a61e8993c7e43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable auto adjust the volume of the mic when you join audio.  <a href="#a6579b7d0ee21f82ed3a61e8993c7e43f">More...</a><br /></td></tr>
 <tr class="separator:a6579b7d0ee21f82ed3a61e8993c7e43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f77e6aa3be86f962b08322525819627"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a4f77e6aa3be86f962b08322525819627">EnableApproveRemoteControlDlg</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a4f77e6aa3be86f962b08322525819627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable approve remote control dialog when you get other's remote control request.  <a href="#a4f77e6aa3be86f962b08322525819627">More...</a><br /></td></tr>
-<tr class="separator:a4f77e6aa3be86f962b08322525819627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef77c9331d7de263852fbb7075d4f520"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aef77c9331d7de263852fbb7075d4f520">EnableDeclineRemoteControlResponseDlg</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:aef77c9331d7de263852fbb7075d4f520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable decline remote control response dialog.  <a href="#aef77c9331d7de263852fbb7075d4f520">More...</a><br /></td></tr>
-<tr class="separator:aef77c9331d7de263852fbb7075d4f520"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa8f43c014b93d441a89a32fbed37a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a9aa8f43c014b93d441a89a32fbed37a0">EnableLeaveMeetingOptionForHost</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a9aa8f43c014b93d441a89a32fbed37a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable leave meeting button in leave meeting window for host.  <a href="#a9aa8f43c014b93d441a89a32fbed37a0">More...</a><br /></td></tr>
-<tr class="separator:a9aa8f43c014b93d441a89a32fbed37a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff512c146e8fbea41c0e0c4eb32bddac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aff512c146e8fbea41c0e0c4eb32bddac">EnableInviteButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:aff512c146e8fbea41c0e0c4eb32bddac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable invite button in meeting window.  <a href="#aff512c146e8fbea41c0e0c4eb32bddac">More...</a><br /></td></tr>
-<tr class="separator:aff512c146e8fbea41c0e0c4eb32bddac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e0a0d667cea67bcd93b68fae47ec6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aa3e0a0d667cea67bcd93b68fae47ec6b">EnableInputMeetingPasswordDlg</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:aa3e0a0d667cea67bcd93b68fae47ec6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">config hide or show input meeting password dialog  <a href="#aa3e0a0d667cea67bcd93b68fae47ec6b">More...</a><br /></td></tr>
-<tr class="separator:aa3e0a0d667cea67bcd93b68fae47ec6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab51fced96dfb370b473a0e937cda78c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ab51fced96dfb370b473a0e937cda78c3">EnableInputMeetingScreenNameDlg</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:ab51fced96dfb370b473a0e937cda78c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">config hide or show input meeting screen name dialog  <a href="#ab51fced96dfb370b473a0e937cda78c3">More...</a><br /></td></tr>
-<tr class="separator:ab51fced96dfb370b473a0e937cda78c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05334005e231c851dc7d3c26d00d51ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a05334005e231c851dc7d3c26d00d51ad">RedirectWebinarNeedRegister</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:a05334005e231c851dc7d3c26d00d51ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect webinar register logic to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>.  <a href="#a05334005e231c851dc7d3c26d00d51ad">More...</a><br /></td></tr>
-<tr class="separator:a05334005e231c851dc7d3c26d00d51ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1590ec5be0724bcdfe442cb52b84de97"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a1590ec5be0724bcdfe442cb52b84de97">RedirectEndOtherMeeting</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:a1590ec5be0724bcdfe442cb52b84de97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect end other to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>.  <a href="#a1590ec5be0724bcdfe442cb52b84de97">More...</a><br /></td></tr>
-<tr class="separator:a1590ec5be0724bcdfe442cb52b84de97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18547642657d3a0d9b1333565143d9b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ab18547642657d3a0d9b1333565143d9b">EnableEnterAndExitFullScreenButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
-<tr class="separator:ab18547642657d3a0d9b1333565143d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a5908fd47921572f989af0716d4e31c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a5a5908fd47921572f989af0716d4e31c">EnableLButtonDBClick4SwitchFullScreenMode</a> (bool bEnable)=0</td></tr>
-<tr class="separator:a5a5908fd47921572f989af0716d4e31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff3127b134118f94f164d25b7a36ee08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aff3127b134118f94f164d25b7a36ee08">SetFloatVideoWndVisibility</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:aff3127b134118f94f164d25b7a36ee08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set float video windows visibility flag.  <a href="#aff3127b134118f94f164d25b7a36ee08">More...</a><br /></td></tr>
-<tr class="separator:aff3127b134118f94f164d25b7a36ee08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca827d1af2eeb3a01b80971eec8dec27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aca827d1af2eeb3a01b80971eec8dec27">PrePopulateWebinarRegistrationInfo</a> (const wchar_t *email, const wchar_t *username)=0</td></tr>
-<tr class="memdesc:aca827d1af2eeb3a01b80971eec8dec27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-populate registration information of webinar.  <a href="#aca827d1af2eeb3a01b80971eec8dec27">More...</a><br /></td></tr>
-<tr class="separator:aca827d1af2eeb3a01b80971eec8dec27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a693b7511908fb34d6746fd654aa260e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a693b7511908fb34d6746fd654aa260e3">RedirectClickShareBTNEvent</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:a693b7511908fb34d6746fd654aa260e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of start share btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="#a693b7511908fb34d6746fd654aa260e3">More...</a><br /></td></tr>
-<tr class="separator:a693b7511908fb34d6746fd654aa260e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb8d264a01b035e422875a49de69850"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aabb8d264a01b035e422875a49de69850">RedirectClickEndMeetingBTNEvent</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:aabb8d264a01b035e422875a49de69850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of end meeting btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="#aabb8d264a01b035e422875a49de69850">More...</a><br /></td></tr>
-<tr class="separator:aabb8d264a01b035e422875a49de69850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a641b0977a12cd792cb6896cf354772fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a641b0977a12cd792cb6896cf354772fa">EnableToolTipsShow</a> (bool bEnable)=0</td></tr>
-<tr class="separator:a641b0977a12cd792cb6896cf354772fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71db0537cfe1574eb564f019de32647e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a71db0537cfe1574eb564f019de32647e">EnableAirplayInstructionWindow</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a71db0537cfe1574eb564f019de32647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">config hide or show the instruction window of IOS device sharing.  <a href="#a71db0537cfe1574eb564f019de32647e">More...</a><br /></td></tr>
-<tr class="separator:a71db0537cfe1574eb564f019de32647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9a75b66be1c6c2f6d31591164e0e08a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#aa9a75b66be1c6c2f6d31591164e0e08a">EnableClaimHostFeature</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:aa9a75b66be1c6c2f6d31591164e0e08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable claim host feature.  <a href="#aa9a75b66be1c6c2f6d31591164e0e08a">More...</a><br /></td></tr>
-<tr class="separator:aa9a75b66be1c6c2f6d31591164e0e08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d86f74eed34c787ff58b8096619d5a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a3d86f74eed34c787ff58b8096619d5a1">ConfigDSCP</a> (int dscpAudio, int dscpVideo, bool bReset)=0</td></tr>
 <tr class="memdesc:a3d86f74eed34c787ff58b8096619d5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config DSCP.  <a href="#a3d86f74eed34c787ff58b8096619d5a1">More...</a><br /></td></tr>
 <tr class="separator:a3d86f74eed34c787ff58b8096619d5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a401b5d5706500729912e94e57a42c624"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a401b5d5706500729912e94e57a42c624">RedirectClickParticipantListBTNEvent</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:a401b5d5706500729912e94e57a42c624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of participant list btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="#a401b5d5706500729912e94e57a42c624">More...</a><br /></td></tr>
-<tr class="separator:a401b5d5706500729912e94e57a42c624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460c08c46a71cca73956795fcaa45365"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a460c08c46a71cca73956795fcaa45365">DisableRemoteCtrlCopyPasteFeature</a> (bool bDisable)=0</td></tr>
 <tr class="memdesc:a460c08c46a71cca73956795fcaa45365"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable copy and paste feature when remote control.  <a href="#a460c08c46a71cca73956795fcaa45365">More...</a><br /></td></tr>
 <tr class="separator:a460c08c46a71cca73956795fcaa45365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae100b8b2681eb10b80eb03bb746b53e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ae100b8b2681eb10b80eb03bb746b53e3">DisableSplitScreenModeUIElements</a> (bool bDisable)=0</td></tr>
-<tr class="memdesc:ae100b8b2681eb10b80eb03bb746b53e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable UI elements of split screen mode.  <a href="#ae100b8b2681eb10b80eb03bb746b53e3">More...</a><br /></td></tr>
-<tr class="separator:ae100b8b2681eb10b80eb03bb746b53e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affad88a402f6bf4664cb9368b263f3a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#affad88a402f6bf4664cb9368b263f3a1">EnableAutoHideJoinAudioDialog</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:affad88a402f6bf4664cb9368b263f3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable auto hide join audio dialog when it shown.  <a href="#affad88a402f6bf4664cb9368b263f3a1">More...</a><br /></td></tr>
-<tr class="separator:affad88a402f6bf4664cb9368b263f3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95ab4bd4d0f10fd1bf242702811d3deb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a95ab4bd4d0f10fd1bf242702811d3deb">EnableHideFullPhoneNumber4PureCallinUser</a> (bool bHide)=0</td></tr>
 <tr class="memdesc:a95ab4bd4d0f10fd1bf242702811d3deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable hide the full phone number for pure call in user.  <a href="#a95ab4bd4d0f10fd1bf242702811d3deb">More...</a><br /></td></tr>
 <tr class="separator:a95ab4bd4d0f10fd1bf242702811d3deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,71 +111,123 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a61361c105d94ffc9f65c5138a9491bb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a61361c105d94ffc9f65c5138a9491bb9">EnableShareWhiteBoard</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a61361c105d94ffc9f65c5138a9491bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable White Board share.  <a href="#a61361c105d94ffc9f65c5138a9491bb9">More...</a><br /></td></tr>
 <tr class="separator:a61361c105d94ffc9f65c5138a9491bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a710bccde34940897b58b01f3c98fc3b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a710bccde34940897b58b01f3c98fc3b0">AlwaysShowIconOnTaskBar</a> (bool bAlwaysShow)=0</td></tr>
-<tr class="memdesc:a710bccde34940897b58b01f3c98fc3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always show app icon on taskbar list.  <a href="#a710bccde34940897b58b01f3c98fc3b0">More...</a><br /></td></tr>
-<tr class="separator:a710bccde34940897b58b01f3c98fc3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0a8a397e4b34ba81b505daaddf379d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ac0a8a397e4b34ba81b505daaddf379d2">RedirectFreeMeetingEndingReminderDlg</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:ac0a8a397e4b34ba81b505daaddf379d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect free meeting will end message to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>.  <a href="#ac0a8a397e4b34ba81b505daaddf379d2">More...</a><br /></td></tr>
-<tr class="separator:ac0a8a397e4b34ba81b505daaddf379d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab41364243d5802447c76ea1b330d4d52"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ab41364243d5802447c76ea1b330d4d52">SetShowAudioUseComputerSoundChkbox</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:ab41364243d5802447c76ea1b330d4d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Share computer sound' checkbox.  <a href="#ab41364243d5802447c76ea1b330d4d52">More...</a><br /></td></tr>
-<tr class="separator:ab41364243d5802447c76ea1b330d4d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab55c4048a0c613a626cafa6b174ce292"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ab55c4048a0c613a626cafa6b174ce292">SetShowVideoOptimizeChkbox</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:ab55c4048a0c613a626cafa6b174ce292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Optimize for full screen video clip' checkbox.  <a href="#ab55c4048a0c613a626cafa6b174ce292">More...</a><br /></td></tr>
-<tr class="separator:ab55c4048a0c613a626cafa6b174ce292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a984cca7640fb3748a1c560aeb4fe418e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a984cca7640fb3748a1c560aeb4fe418e">SetShowCallInTab</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:a984cca7640fb3748a1c560aeb4fe418e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Phone Call' tab.  <a href="#a984cca7640fb3748a1c560aeb4fe418e">More...</a><br /></td></tr>
-<tr class="separator:a984cca7640fb3748a1c560aeb4fe418e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcde145df874d2e43d3162e1bd185d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#acbcde145df874d2e43d3162e1bd185d2">SetShowCallMeTab</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:acbcde145df874d2e43d3162e1bd185d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Call Me' tab.  <a href="#acbcde145df874d2e43d3162e1bd185d2">More...</a><br /></td></tr>
-<tr class="separator:acbcde145df874d2e43d3162e1bd185d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac09d6d64ccb9e97e0ee6aea008240d02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ac09d6d64ccb9e97e0ee6aea008240d02">ForceDisableMultiShare</a> (bool bDisable)=0</td></tr>
 <tr class="memdesc:ac09d6d64ccb9e97e0ee6aea008240d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force disable multiple share.  <a href="#ac09d6d64ccb9e97e0ee6aea008240d02">More...</a><br /></td></tr>
 <tr class="separator:ac09d6d64ccb9e97e0ee6aea008240d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5a8b86cc52362df20b3da0c14d9b4d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#af5a8b86cc52362df20b3da0c14d9b4d0">SetAlwaysShowMeetingIDOnTitle</a> (bool bAlwaysShow)=0</td></tr>
-<tr class="memdesc:af5a8b86cc52362df20b3da0c14d9b4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always show the Meeting ID information on the main video-window's title bar.  <a href="#af5a8b86cc52362df20b3da0c14d9b4d0">More...</a><br /></td></tr>
-<tr class="separator:af5a8b86cc52362df20b3da0c14d9b4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad54050e15edfe1f308be863c63b7a201"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#ad54050e15edfe1f308be863c63b7a201">RedirectClickCustomLiveStreamMenuEvent</a> (bool bRedirect)=0</td></tr>
-<tr class="memdesc:ad54050e15edfe1f308be863c63b7a201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of custom live stream menu to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="#ad54050e15edfe1f308be863c63b7a201">More...</a><br /></td></tr>
-<tr class="separator:ad54050e15edfe1f308be863c63b7a201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_meeting_u_i_elem_configuration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_meeting_u_i_elem_configuration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_meeting_u_i_elem_configuration.html">IMeetingUIElemConfiguration</a></td></tr>
+<tr class="memitem:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a2e906b3fe6c7297f414063597d7436d1">SetMeetingUIPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
+<tr class="memdesc:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting UI position.  <a href="class_i_meeting_u_i_elem_configuration.html#a2e906b3fe6c7297f414063597d7436d1">More...</a><br /></td></tr>
+<tr class="separator:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae3c3b0593ce8f7ebedb00e7b6caeb2 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#afae3c3b0593ce8f7ebedb00e7b6caeb2">SetFloatVideoPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
+<tr class="memdesc:afae3c3b0593ce8f7ebedb00e7b6caeb2 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set float video panel position.  <a href="class_i_meeting_u_i_elem_configuration.html#afae3c3b0593ce8f7ebedb00e7b6caeb2">More...</a><br /></td></tr>
+<tr class="separator:afae3c3b0593ce8f7ebedb00e7b6caeb2 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514db9e6b2030c08abd04f4e1ef749d2 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a514db9e6b2030c08abd04f4e1ef749d2">SetSharingToolbarVisibility</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:a514db9e6b2030c08abd04f4e1ef749d2 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sharing toolbar visibility flag.  <a href="class_i_meeting_u_i_elem_configuration.html#a514db9e6b2030c08abd04f4e1ef749d2">More...</a><br /></td></tr>
+<tr class="separator:a514db9e6b2030c08abd04f4e1ef749d2 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662a4221df9f1446cf93f9e7963b5884 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a662a4221df9f1446cf93f9e7963b5884">SetBottomFloatToolbarWndVisibility</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:a662a4221df9f1446cf93f9e7963b5884 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set bottom float toolbar visibility flag.  <a href="class_i_meeting_u_i_elem_configuration.html#a662a4221df9f1446cf93f9e7963b5884">More...</a><br /></td></tr>
+<tr class="separator:a662a4221df9f1446cf93f9e7963b5884 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274bca95a336bc60e74cc7101d08669a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a274bca95a336bc60e74cc7101d08669a">HideMeetingInfoFromMeetingUITitle</a> (bool bHide)=0</td></tr>
+<tr class="memdesc:a274bca95a336bc60e74cc7101d08669a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the meeting information from meeting UI.  <a href="class_i_meeting_u_i_elem_configuration.html#a274bca95a336bc60e74cc7101d08669a">More...</a><br /></td></tr>
+<tr class="separator:a274bca95a336bc60e74cc7101d08669a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8790999464063dbbff1bfcd7206bcb7a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a8790999464063dbbff1bfcd7206bcb7a">SetMeetingIDForMeetingUITitle</a> (UINT64 meetingNumber)=0</td></tr>
+<tr class="memdesc:a8790999464063dbbff1bfcd7206bcb7a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the meeting ID to be showed in meeting ui title.  <a href="class_i_meeting_u_i_elem_configuration.html#a8790999464063dbbff1bfcd7206bcb7a">More...</a><br /></td></tr>
+<tr class="separator:a8790999464063dbbff1bfcd7206bcb7a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd50dca011e02bdab8fa296ccbbb233 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#aacd50dca011e02bdab8fa296ccbbb233">EnableApproveRemoteControlDlg</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:aacd50dca011e02bdab8fa296ccbbb233 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable approve remote control dialog when you get other's remote control request.  <a href="class_i_meeting_u_i_elem_configuration.html#aacd50dca011e02bdab8fa296ccbbb233">More...</a><br /></td></tr>
+<tr class="separator:aacd50dca011e02bdab8fa296ccbbb233 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c5178f12354cbed711e77c36f5529e inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#ae7c5178f12354cbed711e77c36f5529e">EnableDeclineRemoteControlResponseDlg</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:ae7c5178f12354cbed711e77c36f5529e inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable decline remote control response dialog.  <a href="class_i_meeting_u_i_elem_configuration.html#ae7c5178f12354cbed711e77c36f5529e">More...</a><br /></td></tr>
+<tr class="separator:ae7c5178f12354cbed711e77c36f5529e inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58d38c519d3168d4923b5e4525c0649 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af58d38c519d3168d4923b5e4525c0649">EnableLeaveMeetingOptionForHost</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:af58d38c519d3168d4923b5e4525c0649 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable leave meeting button in leave meeting window for host.  <a href="class_i_meeting_u_i_elem_configuration.html#af58d38c519d3168d4923b5e4525c0649">More...</a><br /></td></tr>
+<tr class="separator:af58d38c519d3168d4923b5e4525c0649 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ec810cbf772b1744b032d158057c12 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a77ec810cbf772b1744b032d158057c12">EnableInviteButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a77ec810cbf772b1744b032d158057c12 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable invite button in meeting window.  <a href="class_i_meeting_u_i_elem_configuration.html#a77ec810cbf772b1744b032d158057c12">More...</a><br /></td></tr>
+<tr class="separator:a77ec810cbf772b1744b032d158057c12 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc34278083ee007ad51d37511325d986 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#abc34278083ee007ad51d37511325d986">EnableEnterAndExitFullScreenButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
+<tr class="separator:abc34278083ee007ad51d37511325d986 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50d28196a1d16e8d4fe9bcc862adef8 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af50d28196a1d16e8d4fe9bcc862adef8">EnableLButtonDBClick4SwitchFullScreenMode</a> (bool bEnable)=0</td></tr>
+<tr class="separator:af50d28196a1d16e8d4fe9bcc862adef8 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693a4af94d27153f85e53d1bde060711 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a693a4af94d27153f85e53d1bde060711">SetFloatVideoWndVisibility</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:a693a4af94d27153f85e53d1bde060711 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set float video windows visibility flag.  <a href="class_i_meeting_u_i_elem_configuration.html#a693a4af94d27153f85e53d1bde060711">More...</a><br /></td></tr>
+<tr class="separator:a693a4af94d27153f85e53d1bde060711 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0e2d4b14076391c268bf6df0f99d66 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a5a0e2d4b14076391c268bf6df0f99d66">RedirectClickShareBTNEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a5a0e2d4b14076391c268bf6df0f99d66 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of start share btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="class_i_meeting_u_i_elem_configuration.html#a5a0e2d4b14076391c268bf6df0f99d66">More...</a><br /></td></tr>
+<tr class="separator:a5a0e2d4b14076391c268bf6df0f99d66 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59601c1431ed919a97908ce0e4f1cf70 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a59601c1431ed919a97908ce0e4f1cf70">RedirectClickEndMeetingBTNEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a59601c1431ed919a97908ce0e4f1cf70 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of end meeting btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="class_i_meeting_u_i_elem_configuration.html#a59601c1431ed919a97908ce0e4f1cf70">More...</a><br /></td></tr>
+<tr class="separator:a59601c1431ed919a97908ce0e4f1cf70 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeae8676c8e4397d97cfeeeab3e6a18f inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#afeae8676c8e4397d97cfeeeab3e6a18f">RedirectFreeMeetingEndingReminderDlg</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:afeae8676c8e4397d97cfeeeab3e6a18f inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect free meeting will end message to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>.  <a href="class_i_meeting_u_i_elem_configuration.html#afeae8676c8e4397d97cfeeeab3e6a18f">More...</a><br /></td></tr>
+<tr class="separator:afeae8676c8e4397d97cfeeeab3e6a18f inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d99f3a31ee43a6095916a2bc0ba3b4 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a80d99f3a31ee43a6095916a2bc0ba3b4">RedirectClickCustomLiveStreamMenuEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a80d99f3a31ee43a6095916a2bc0ba3b4 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of custom live stream menu to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="class_i_meeting_u_i_elem_configuration.html#a80d99f3a31ee43a6095916a2bc0ba3b4">More...</a><br /></td></tr>
+<tr class="separator:a80d99f3a31ee43a6095916a2bc0ba3b4 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387a0bd34e3775c8e95fea89493a71b3 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a387a0bd34e3775c8e95fea89493a71b3">RedirectClickParticipantListBTNEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a387a0bd34e3775c8e95fea89493a71b3 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect click event of participant list btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>.  <a href="class_i_meeting_u_i_elem_configuration.html#a387a0bd34e3775c8e95fea89493a71b3">More...</a><br /></td></tr>
+<tr class="separator:a387a0bd34e3775c8e95fea89493a71b3 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d8ce9d6ff6e14155a5c053b0fdf183 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a62d8ce9d6ff6e14155a5c053b0fdf183">EnableToolTipsShow</a> (bool bEnable)=0</td></tr>
+<tr class="separator:a62d8ce9d6ff6e14155a5c053b0fdf183 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af670f3c319a935737f26c760bb145872 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af670f3c319a935737f26c760bb145872">EnableAirplayInstructionWindow</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:af670f3c319a935737f26c760bb145872 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">config hide or show the instruction window of IOS device sharing.  <a href="class_i_meeting_u_i_elem_configuration.html#af670f3c319a935737f26c760bb145872">More...</a><br /></td></tr>
+<tr class="separator:af670f3c319a935737f26c760bb145872 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22fba0dc435f232ad00a5ab9b36d3f06 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a22fba0dc435f232ad00a5ab9b36d3f06">EnableClaimHostFeature</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a22fba0dc435f232ad00a5ab9b36d3f06 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable claim host feature.  <a href="class_i_meeting_u_i_elem_configuration.html#a22fba0dc435f232ad00a5ab9b36d3f06">More...</a><br /></td></tr>
+<tr class="separator:a22fba0dc435f232ad00a5ab9b36d3f06 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e2fd5f00f95f5a2deb11f61d453835 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af0e2fd5f00f95f5a2deb11f61d453835">EnableAutoHideJoinAudioDialog</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:af0e2fd5f00f95f5a2deb11f61d453835 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable auto hide join audio dialog when it shown.  <a href="class_i_meeting_u_i_elem_configuration.html#af0e2fd5f00f95f5a2deb11f61d453835">More...</a><br /></td></tr>
+<tr class="separator:af0e2fd5f00f95f5a2deb11f61d453835 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6f63c58b1846e5794789610c9193ed inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#aff6f63c58b1846e5794789610c9193ed">AlwaysShowIconOnTaskBar</a> (bool bAlwaysShow)=0</td></tr>
+<tr class="memdesc:aff6f63c58b1846e5794789610c9193ed inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always show app icon on taskbar list.  <a href="class_i_meeting_u_i_elem_configuration.html#aff6f63c58b1846e5794789610c9193ed">More...</a><br /></td></tr>
+<tr class="separator:aff6f63c58b1846e5794789610c9193ed inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049df0d0b7f4e4a8b3200f5b8c226fc4 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a049df0d0b7f4e4a8b3200f5b8c226fc4">DisableSplitScreenModeUIElements</a> (bool bDisable)=0</td></tr>
+<tr class="memdesc:a049df0d0b7f4e4a8b3200f5b8c226fc4 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable UI elements of split screen mode.  <a href="class_i_meeting_u_i_elem_configuration.html#a049df0d0b7f4e4a8b3200f5b8c226fc4">More...</a><br /></td></tr>
+<tr class="separator:a049df0d0b7f4e4a8b3200f5b8c226fc4 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf234ef21fbfbe78ed995fe85c5f4643 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#abf234ef21fbfbe78ed995fe85c5f4643">SetShowAudioUseComputerSoundChkbox</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:abf234ef21fbfbe78ed995fe85c5f4643 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Share computer sound' checkbox.  <a href="class_i_meeting_u_i_elem_configuration.html#abf234ef21fbfbe78ed995fe85c5f4643">More...</a><br /></td></tr>
+<tr class="separator:abf234ef21fbfbe78ed995fe85c5f4643 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041031fb258e30a60012fd059c767271 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a041031fb258e30a60012fd059c767271">SetShowVideoOptimizeChkbox</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:a041031fb258e30a60012fd059c767271 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Optimize for full screen video clip' checkbox.  <a href="class_i_meeting_u_i_elem_configuration.html#a041031fb258e30a60012fd059c767271">More...</a><br /></td></tr>
+<tr class="separator:a041031fb258e30a60012fd059c767271 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf77fb554cf01f1c0672e9a56b8bf1a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a1bf77fb554cf01f1c0672e9a56b8bf1a">SetShowCallInTab</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:a1bf77fb554cf01f1c0672e9a56b8bf1a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Phone Call' tab.  <a href="class_i_meeting_u_i_elem_configuration.html#a1bf77fb554cf01f1c0672e9a56b8bf1a">More...</a><br /></td></tr>
+<tr class="separator:a1bf77fb554cf01f1c0672e9a56b8bf1a inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85b703676065ab69b9d3a9f480f17383 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a85b703676065ab69b9d3a9f480f17383">SetShowCallMeTab</a> (bool bShow)=0</td></tr>
+<tr class="memdesc:a85b703676065ab69b9d3a9f480f17383 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the 'Call Me' tab.  <a href="class_i_meeting_u_i_elem_configuration.html#a85b703676065ab69b9d3a9f480f17383">More...</a><br /></td></tr>
+<tr class="separator:a85b703676065ab69b9d3a9f480f17383 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa6438656ce1bb5483ccd44052ca71e inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a1fa6438656ce1bb5483ccd44052ca71e">SetAlwaysShowMeetingIDOnTitle</a> (bool bAlwaysShow)=0</td></tr>
+<tr class="memdesc:a1fa6438656ce1bb5483ccd44052ca71e inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always show the Meeting ID information on the main video-window's title bar.  <a href="class_i_meeting_u_i_elem_configuration.html#a1fa6438656ce1bb5483ccd44052ca71e">More...</a><br /></td></tr>
+<tr class="separator:a1fa6438656ce1bb5483ccd44052ca71e inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_join_meeting_behavior_configuration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_join_meeting_behavior_configuration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_join_meeting_behavior_configuration.html">IJoinMeetingBehaviorConfiguration</a></td></tr>
+<tr class="memitem:abfa5fa7264754cf14f30a938368a4668 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#abfa5fa7264754cf14f30a938368a4668">DisablePopupMeetingWrongPSWDlg</a> (bool bDisable)=0</td></tr>
+<tr class="memdesc:abfa5fa7264754cf14f30a938368a4668 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable wrong password error dialog when join meeting.  <a href="class_i_join_meeting_behavior_configuration.html#abfa5fa7264754cf14f30a938368a4668">More...</a><br /></td></tr>
+<tr class="separator:abfa5fa7264754cf14f30a938368a4668 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64454354179c06240bdc770db623d7eb inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a64454354179c06240bdc770db623d7eb">DisableWaitingForHostDialog</a> (bool bDisable)=0</td></tr>
+<tr class="memdesc:a64454354179c06240bdc770db623d7eb inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable waiting for host dialog.  <a href="class_i_join_meeting_behavior_configuration.html#a64454354179c06240bdc770db623d7eb">More...</a><br /></td></tr>
+<tr class="separator:a64454354179c06240bdc770db623d7eb inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a145d3bc8d36e0cba091cc155efe366 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a7a145d3bc8d36e0cba091cc155efe366">EnableAutoEndOtherMeetingWhenStartMeeting</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a7a145d3bc8d36e0cba091cc155efe366 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable auto end other meeting when you start a new meeting.  <a href="class_i_join_meeting_behavior_configuration.html#a7a145d3bc8d36e0cba091cc155efe366">More...</a><br /></td></tr>
+<tr class="separator:a7a145d3bc8d36e0cba091cc155efe366 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613daf0dd2a6f1f631b8c4f88544f246 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a613daf0dd2a6f1f631b8c4f88544f246">EnableInputMeetingPasswordDlg</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a613daf0dd2a6f1f631b8c4f88544f246 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">config hide or show input meeting password dialog  <a href="class_i_join_meeting_behavior_configuration.html#a613daf0dd2a6f1f631b8c4f88544f246">More...</a><br /></td></tr>
+<tr class="separator:a613daf0dd2a6f1f631b8c4f88544f246 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbff06b7d37f87fd1313a0800241ecd inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#aadbff06b7d37f87fd1313a0800241ecd">EnableInputMeetingScreenNameDlg</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:aadbff06b7d37f87fd1313a0800241ecd inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">config hide or show input meeting screen name dialog  <a href="class_i_join_meeting_behavior_configuration.html#aadbff06b7d37f87fd1313a0800241ecd">More...</a><br /></td></tr>
+<tr class="separator:aadbff06b7d37f87fd1313a0800241ecd inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34903d1224accd870c8f0bc9569e7e4 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#aa34903d1224accd870c8f0bc9569e7e4">RedirectWebinarNeedRegister</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:aa34903d1224accd870c8f0bc9569e7e4 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect webinar register logic to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>.  <a href="class_i_join_meeting_behavior_configuration.html#aa34903d1224accd870c8f0bc9569e7e4">More...</a><br /></td></tr>
+<tr class="separator:aa34903d1224accd870c8f0bc9569e7e4 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a3b14ddde8ceedb562b2a5703c7764 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#ab6a3b14ddde8ceedb562b2a5703c7764">PrePopulateWebinarRegistrationInfo</a> (const wchar_t *email, const wchar_t *username)=0</td></tr>
+<tr class="memdesc:ab6a3b14ddde8ceedb562b2a5703c7764 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-populate registration information of webinar.  <a href="class_i_join_meeting_behavior_configuration.html#ab6a3b14ddde8ceedb562b2a5703c7764">More...</a><br /></td></tr>
+<tr class="separator:ab6a3b14ddde8ceedb562b2a5703c7764 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8e4dbbf57b3e73a120ae220696fcd5 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a9f8e4dbbf57b3e73a120ae220696fcd5">RedirectEndOtherMeeting</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a9f8e4dbbf57b3e73a120ae220696fcd5 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirect end other to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>.  <a href="class_i_join_meeting_behavior_configuration.html#a9f8e4dbbf57b3e73a120ae220696fcd5">More...</a><br /></td></tr>
+<tr class="separator:a9f8e4dbbf57b3e73a120ae220696fcd5 inherit pub_methods_class_i_join_meeting_behavior_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Configuration Interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a710bccde34940897b58b01f3c98fc3b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a710bccde34940897b58b01f3c98fc3b0">&#9670;&nbsp;</a></span>AlwaysShowIconOnTaskBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::AlwaysShowIconOnTaskBar </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bAlwaysShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Always show app icon on taskbar list. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bAlwaysShow</td><td>specify always show or not, default is not. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a3d86f74eed34c787ff58b8096619d5a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d86f74eed34c787ff58b8096619d5a1">&#9670;&nbsp;</a></span>ConfigDSCP()</h2>
 
@@ -310,40 +280,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a3a24fc98a7efa435c3d65a7e80012023"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a24fc98a7efa435c3d65a7e80012023">&#9670;&nbsp;</a></span>DisablePopupMeetingWrongPSWDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::DisablePopupMeetingWrongPSWDlg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bDisable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Disable wrong password error dialog when join meeting. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bDisable</td><td>Specifies wrong password error dialog disable or not, if disable, you will get the MEETING_FAIL_PASSWORD_ERR meeting failed error. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a460c08c46a71cca73956795fcaa45365"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a460c08c46a71cca73956795fcaa45365">&#9670;&nbsp;</a></span>DisableRemoteCtrlCopyPasteFeature()</h2>
 
@@ -372,142 +308,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bDisable</td><td>specify this feature disable or not, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ae100b8b2681eb10b80eb03bb746b53e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae100b8b2681eb10b80eb03bb746b53e3">&#9670;&nbsp;</a></span>DisableSplitScreenModeUIElements()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::DisableSplitScreenModeUIElements </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bDisable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>disable UI elements of split screen mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bDisable</td><td>specify this feature disable or not, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a7c693638db7089facf7584f9c0142f55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c693638db7089facf7584f9c0142f55">&#9670;&nbsp;</a></span>DisableWaitingForHostDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::DisableWaitingForHostDialog </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bDisable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Disable waiting for host dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bDisable</td><td>Specifies waiting for host dialog show or not. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a71db0537cfe1574eb564f019de32647e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71db0537cfe1574eb564f019de32647e">&#9670;&nbsp;</a></span>EnableAirplayInstructionWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableAirplayInstructionWindow </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>config hide or show the instruction window of IOS device sharing. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>specify hide or show the instruction window of IOS device sharing, default is enable. if disable this option, you need to handle onAirPlayInstructionWndNotification event callback to show or hide your own windows. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a4f77e6aa3be86f962b08322525819627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f77e6aa3be86f962b08322525819627">&#9670;&nbsp;</a></span>EnableApproveRemoteControlDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableApproveRemoteControlDlg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable approve remote control dialog when you get other's remote control request. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies approve remote control dialog will show when you get other's remote control request, default is enable, if you disable this, please handle the onRemoteControlStatus callback event. </td></tr>
   </table>
   </dd>
 </dl>
@@ -582,174 +382,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a1aadfdb983e9ac7eba27fd6d49457445"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aadfdb983e9ac7eba27fd6d49457445">&#9670;&nbsp;</a></span>EnableAutoEndOtherMeetingWhenStartMeeting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableAutoEndOtherMeetingWhenStartMeeting </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable auto end other meeting when you start a new meeting. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies auto end other meeting enable or not. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="affad88a402f6bf4664cb9368b263f3a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affad88a402f6bf4664cb9368b263f3a1">&#9670;&nbsp;</a></span>EnableAutoHideJoinAudioDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableAutoHideJoinAudioDialog </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable auto hide join audio dialog when it shown. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>specify this feature enable or not, default is disable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa9a75b66be1c6c2f6d31591164e0e08a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9a75b66be1c6c2f6d31591164e0e08a">&#9670;&nbsp;</a></span>EnableClaimHostFeature()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableClaimHostFeature </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>enable claim host feature. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>specify claim host feature enable or not, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aef77c9331d7de263852fbb7075d4f520"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef77c9331d7de263852fbb7075d4f520">&#9670;&nbsp;</a></span>EnableDeclineRemoteControlResponseDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableDeclineRemoteControlResponseDlg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable decline remote control response dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies decline remote control response dialog will show when you get other's decline message, default is enable, if you disable this, please handle the onRemoteControlStatus callback event. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab18547642657d3a0d9b1333565143d9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab18547642657d3a0d9b1333565143d9b">&#9670;&nbsp;</a></span>EnableEnterAndExitFullScreenButtonOnMeetingUI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableEnterAndExitFullScreenButtonOnMeetingUI </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies enter and exit full screen button show or not in meeting window, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a95ab4bd4d0f10fd1bf242702811d3deb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95ab4bd4d0f10fd1bf242702811d3deb">&#9670;&nbsp;</a></span>EnableHideFullPhoneNumber4PureCallinUser()</h2>
 
@@ -778,174 +410,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bHide</td><td>specify this feature enable or not, default is not hide. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa3e0a0d667cea67bcd93b68fae47ec6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3e0a0d667cea67bcd93b68fae47ec6b">&#9670;&nbsp;</a></span>EnableInputMeetingPasswordDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableInputMeetingPasswordDlg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>config hide or show input meeting password dialog </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>specify hide or show input meeting password dialog, default is enable. if disable this option, you need to handle onInputMeetingPasswordAndScreenNameNotification event callback. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab51fced96dfb370b473a0e937cda78c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab51fced96dfb370b473a0e937cda78c3">&#9670;&nbsp;</a></span>EnableInputMeetingScreenNameDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableInputMeetingScreenNameDlg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>config hide or show input meeting screen name dialog </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>specify hide or show input meeting screen name dialog, default is enable. if disable this option, you need to handle onInputMeetingPasswordAndScreenNameNotification event callback. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aff512c146e8fbea41c0e0c4eb32bddac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff512c146e8fbea41c0e0c4eb32bddac">&#9670;&nbsp;</a></span>EnableInviteButtonOnMeetingUI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableInviteButtonOnMeetingUI </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable invite button in meeting window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies invite button show or not in meeting window, default is disable, if enable this feature, you need to handle onInviteBtnClicked event callback </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5a5908fd47921572f989af0716d4e31c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a5908fd47921572f989af0716d4e31c">&#9670;&nbsp;</a></span>EnableLButtonDBClick4SwitchFullScreenMode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableLButtonDBClick4SwitchFullScreenMode </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies Enable or disable switch full screen mode via left button double click, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a9aa8f43c014b93d441a89a32fbed37a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aa8f43c014b93d441a89a32fbed37a0">&#9670;&nbsp;</a></span>EnableLeaveMeetingOptionForHost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableLeaveMeetingOptionForHost </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable leave meeting button in leave meeting window for host. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies leave meeting button show or not in host leave meeting window, default is enable, </td></tr>
   </table>
   </dd>
 </dl>
@@ -1054,38 +518,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a641b0977a12cd792cb6896cf354772fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a641b0977a12cd792cb6896cf354772fa">&#9670;&nbsp;</a></span>EnableToolTipsShow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::EnableToolTipsShow </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bEnable</td><td>Specifies tooltips window show or not in meeting window, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ac09d6d64ccb9e97e0ee6aea008240d02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac09d6d64ccb9e97e0ee6aea008240d02">&#9670;&nbsp;</a></span>ForceDisableMultiShare()</h2>
 
@@ -1114,391 +546,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bDisable</td><td>specify this feature disable or not, default is enable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a4a920e864e65a60207045bc826b60fc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a920e864e65a60207045bc826b60fc2">&#9670;&nbsp;</a></span>HideMeetingInfoFromMeetingUITitle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::HideMeetingInfoFromMeetingUITitle </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bHide</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Hide the meeting information from meeting UI. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bHide</td><td>Specifies the meeting information of meeting UI hide or not. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aca827d1af2eeb3a01b80971eec8dec27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca827d1af2eeb3a01b80971eec8dec27">&#9670;&nbsp;</a></span>PrePopulateWebinarRegistrationInfo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::PrePopulateWebinarRegistrationInfo </td>
-          <td>(</td>
-          <td class="paramtype">const wchar_t *&#160;</td>
-          <td class="paramname"><em>email</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const wchar_t *&#160;</td>
-          <td class="paramname"><em>username</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pre-populate registration information of webinar. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">email</td><td>Specifies default email. </td></tr>
-    <tr><td class="paramname">username</td><td>Specifies default username. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ad54050e15edfe1f308be863c63b7a201"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad54050e15edfe1f308be863c63b7a201">&#9670;&nbsp;</a></span>RedirectClickCustomLiveStreamMenuEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectClickCustomLiveStreamMenuEvent </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect click event of custom live stream menu to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onCustomLiveStreamMenuClicked in <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aabb8d264a01b035e422875a49de69850"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabb8d264a01b035e422875a49de69850">&#9670;&nbsp;</a></span>RedirectClickEndMeetingBTNEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectClickEndMeetingBTNEvent </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect click event of end meeting btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onEndMeetingBtnClicked in <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a401b5d5706500729912e94e57a42c624"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a401b5d5706500729912e94e57a42c624">&#9670;&nbsp;</a></span>RedirectClickParticipantListBTNEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectClickParticipantListBTNEvent </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect click event of participant list btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onParticipantListBtnClicked in <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a693b7511908fb34d6746fd654aa260e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a693b7511908fb34d6746fd654aa260e3">&#9670;&nbsp;</a></span>RedirectClickShareBTNEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectClickShareBTNEvent </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect click event of start share btn to <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onStartShareBtnClicked in <a class="el" href="class_i_meeting_u_i_controller_event.html" title="Meeting UI Controller Callback Event. ">IMeetingUIControllerEvent</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a1590ec5be0724bcdfe442cb52b84de97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1590ec5be0724bcdfe442cb52b84de97">&#9670;&nbsp;</a></span>RedirectEndOtherMeeting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectEndOtherMeeting </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect end other to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onEndOtherMeetingToJoinMeetingNotification in <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>  is disable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac0a8a397e4b34ba81b505daaddf379d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0a8a397e4b34ba81b505daaddf379d2">&#9670;&nbsp;</a></span>RedirectFreeMeetingEndingReminderDlg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectFreeMeetingEndingReminderDlg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect free meeting will end message to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onFreeMeetingEndingReminderNotification in <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a05334005e231c851dc7d3c26d00d51ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05334005e231c851dc7d3c26d00d51ad">&#9670;&nbsp;</a></span>RedirectWebinarNeedRegister()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::RedirectWebinarNeedRegister </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bRedirect</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Redirect webinar register logic to <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bRedirect</td><td>Redirect or not. if true, you will recv onWebinarNeedRegisterNotification in <a class="el" href="class_i_meeting_configuration_event.html" title="Meeting Configuration Event callback. ">IMeetingConfigurationEvent</a>  is disable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af5a8b86cc52362df20b3da0c14d9b4d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5a8b86cc52362df20b3da0c14d9b4d0">&#9670;&nbsp;</a></span>SetAlwaysShowMeetingIDOnTitle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetAlwaysShowMeetingIDOnTitle </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bAlwaysShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Always show the Meeting ID information on the main video-window's title bar. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bAlwaysShow</td><td>specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow is false, the behavior will follow Zoom's default logic.Default is false. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab2a6b524e479eb69a785340fc5a42342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2a6b524e479eb69a785340fc5a42342">&#9670;&nbsp;</a></span>SetBottomFloatToolbarWndVisibility()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetBottomFloatToolbarWndVisibility </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set bottom float toolbar visibility flag. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>Specifies bottom float toolbar show or not during sharing. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1567,312 +614,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pEvent</td><td>which will be invoked for when this message type is received. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac489aa40084a39b6df427b343af43788"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac489aa40084a39b6df427b343af43788">&#9670;&nbsp;</a></span>SetFloatVideoPos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetFloatVideoPos </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structtag_wnd_position.html">WndPosition</a>&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set float video panel position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>Specifies where float video panel show. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aff3127b134118f94f164d25b7a36ee08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff3127b134118f94f164d25b7a36ee08">&#9670;&nbsp;</a></span>SetFloatVideoWndVisibility()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetFloatVideoWndVisibility </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set float video windows visibility flag. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>Specifies float video windows show or not during sharing. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a304a2aedd269f0dce87e58a4695c93ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a304a2aedd269f0dce87e58a4695c93ca">&#9670;&nbsp;</a></span>SetMeetingIDForMeetingUITitle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetMeetingIDForMeetingUITitle </td>
-          <td>(</td>
-          <td class="paramtype">UINT64&#160;</td>
-          <td class="paramname"><em>meetingNumber</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the meeting ID to be showed in meeting ui title. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">meetingNumber</td><td>Specifies the meeting ID to be showed in meeting ui title. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a950da515a6621962b64389e1525704f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a950da515a6621962b64389e1525704f1">&#9670;&nbsp;</a></span>SetMeetingUIPos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetMeetingUIPos </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structtag_wnd_position.html">WndPosition</a>&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set meeting UI position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>Specifies where meeting UI show. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a6dcb0411ecaec88ef74762e78b31616d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dcb0411ecaec88ef74762e78b31616d">&#9670;&nbsp;</a></span>SetSharingToolbarVisibility()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetSharingToolbarVisibility </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set sharing toolbar visibility flag. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>Specifies float tool bar show or not during sharing. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab41364243d5802447c76ea1b330d4d52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab41364243d5802447c76ea1b330d4d52">&#9670;&nbsp;</a></span>SetShowAudioUseComputerSoundChkbox()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetShowAudioUseComputerSoundChkbox </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Show the 'Share computer sound' checkbox. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>specify to show the checkbox or not, default is true. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a984cca7640fb3748a1c560aeb4fe418e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a984cca7640fb3748a1c560aeb4fe418e">&#9670;&nbsp;</a></span>SetShowCallInTab()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetShowCallInTab </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Show the 'Phone Call' tab. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>specify to hide the tab when it's value is false, default is true. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="acbcde145df874d2e43d3162e1bd185d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbcde145df874d2e43d3162e1bd185d2">&#9670;&nbsp;</a></span>SetShowCallMeTab()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetShowCallMeTab </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Show the 'Call Me' tab. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>specify to hide the tab when it's value is false, default is true. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab55c4048a0c613a626cafa6b174ce292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab55c4048a0c613a626cafa6b174ce292">&#9670;&nbsp;</a></span>SetShowVideoOptimizeChkbox()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMeetingConfiguration::SetShowVideoOptimizeChkbox </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Show the 'Optimize for full screen video clip' checkbox. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bShow</td><td>specify to show the checkbox or not, default is true. </td></tr>
   </table>
   </dd>
 </dl>

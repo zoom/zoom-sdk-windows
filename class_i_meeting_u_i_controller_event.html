@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.30420.0817</span>
+   &#160;<span id="projectnumber">4.1.31872.0905</span>
    </div>
   </td>
  </tr>
@@ -75,9 +75,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8b190b1bf65e0c3c186288d774b3a129"><td class="memItemLeft" align="right" valign="top"><a id="a8b190b1bf65e0c3c186288d774b3a129"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onInviteBtnClicked</b> ()=0</td></tr>
-<tr class="separator:a8b190b1bf65e0c3c186288d774b3a129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b219eca79283d9cbd4888a8cdcc6ad7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a3b219eca79283d9cbd4888a8cdcc6ad7">onInviteBtnClicked</a> (bool &amp;bHandled)=0</td></tr>
+<tr class="memdesc:a3b219eca79283d9cbd4888a8cdcc6ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback procedure when Invite button is clicked.  <a href="#a3b219eca79283d9cbd4888a8cdcc6ad7">More...</a><br /></td></tr>
+<tr class="separator:a3b219eca79283d9cbd4888a8cdcc6ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19c1a8e29ed6f3c100599fc2fcaeda49"><td class="memItemLeft" align="right" valign="top"><a id="a19c1a8e29ed6f3c100599fc2fcaeda49"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStartShareBtnClicked</b> ()=0</td></tr>
 <tr class="separator:a19c1a8e29ed6f3c100599fc2fcaeda49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,10 +90,50 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onParticipant
 <tr class="memitem:a69b271fc06266a214ef466cf35e91d06"><td class="memItemLeft" align="right" valign="top"><a id="a69b271fc06266a214ef466cf35e91d06"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCustomLiveStreamMenuClicked</b> ()=0</td></tr>
 <tr class="separator:a69b271fc06266a214ef466cf35e91d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609dfb363b8b2d4c64009f98b32a63c7"><td class="memItemLeft" align="right" valign="top"><a id="a609dfb363b8b2d4c64009f98b32a63c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a609dfb363b8b2d4c64009f98b32a63c7">onZoomInviteDialogFailed</a> ()=0</td></tr>
+<tr class="memdesc:a609dfb363b8b2d4c64009f98b32a63c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification when SDK fails to show the default Zoom invite dialog. It only occurs when the Zoom service has something wrong. <br /></td></tr>
+<tr class="separator:a609dfb363b8b2d4c64009f98b32a63c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting UI Controller Callback Event. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3b219eca79283d9cbd4888a8cdcc6ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b219eca79283d9cbd4888a8cdcc6ad7">&#9670;&nbsp;</a></span>onInviteBtnClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIControllerEvent::onInviteBtnClicked </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bHandled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback procedure when Invite button is clicked. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[in</td><td>out] bHandled Set it to be true if the application shows its own invite dialog. Default values if FALSE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If bHandled is not set to be true. The default Zoom invite dialog will be shown, no matter the application handles it or not. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/meeting_service_components/<a class="el" href="meeting__ui__ctrl__interface_8h_source.html">meeting_ui_ctrl_interface.h</a></li>
 </ul>
 </div><!-- contents -->

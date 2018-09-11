@@ -6,7 +6,7 @@ var searchData=
   ['pinvideo',['PinVideo',['../class_i_meeting_video_controller.html#ad721080467a3493b7558c461be18dcf9',1,'IMeetingVideoController']]],
   ['premeeting_5fservice_5finterface_2eh',['premeeting_service_interface.h',['../premeeting__service__interface_8h.html',1,'']]],
   ['premeetingapiresult',['PremeetingAPIResult',['../premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88',1,'premeeting_service_interface.h']]],
-  ['prepopulatewebinarregistrationinfo',['PrePopulateWebinarRegistrationInfo',['../class_i_meeting_configuration.html#aca827d1af2eeb3a01b80971eec8dec27',1,'IMeetingConfiguration']]],
+  ['prepopulatewebinarregistrationinfo',['PrePopulateWebinarRegistrationInfo',['../class_i_join_meeting_behavior_configuration.html#ab6a3b14ddde8ceedb562b2a5703c7764',1,'IJoinMeetingBehaviorConfiguration']]],
   ['preview_5fvideo_5frotation_5faction',['PREVIEW_VIDEO_ROTATION_ACTION',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1',1,'setting_service_interface.h']]],
   ['preview_5fvideo_5frotation_5faction_5f0',['PREVIEW_VIDEO_ROTATION_ACTION_0',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1af3d6871396dd6d666903df27a0301340',1,'setting_service_interface.h']]],
   ['preview_5fvideo_5frotation_5faction_5fanti_5fclock90',['PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1acd495550035d8d7d3c7a793872f0095d',1,'setting_service_interface.h']]],

@@ -17,12 +17,14 @@ var searchData=
   ['oncustomizedlocalrecordingsourcenotification',['onCustomizedLocalRecordingSourceNotification',['../class_i_meeting_recording_ctrl_event.html#af856aeb7958a9d099519cbc700b5bbbf',1,'IMeetingRecordingCtrlEvent']]],
   ['ondeletemeeting',['onDeleteMeeting',['../class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438',1,'IPreMeetingServiceEvent']]],
   ['ondepromptpanelist2attendeeresult',['onDepromptPanelist2AttendeeResult',['../class_i_meeting_webinar_ctrl_event.html#a7ee5edd01e37ff892a0920f4b2874882',1,'IMeetingWebinarCtrlEvent']]],
+  ['ondirectsharestatusupdate',['OnDirectShareStatusUpdate',['../class_i_direct_share_service_helper_event.html#a5bafc99f91b9da66edfae9ab0fca421d',1,'IDirectShareServiceHelperEvent']]],
   ['ondisallowattendeechatnotification',['onDisallowAttendeeChatNotification',['../class_i_meeting_webinar_ctrl_event.html#a726d39c56819670ef0c57d54b9782878',1,'IMeetingWebinarCtrlEvent']]],
   ['ondisallowpaneliststartvideonotification',['onDisallowPanelistStartVideoNotification',['../class_i_meeting_webinar_ctrl_event.html#a8a9236acde37f1d6e15b65e1ffd66b91',1,'IMeetingWebinarCtrlEvent']]],
   ['onendothermeetingtojoinmeetingnotification',['onEndOtherMeetingToJoinMeetingNotification',['../class_i_meeting_configuration_event.html#ad0da5b736f518dd597422c8de5abdaa1',1,'IMeetingConfigurationEvent']]],
   ['onfreemeetingendingremindernotification',['onFreeMeetingEndingReminderNotification',['../class_i_meeting_configuration_event.html#a8cd24128f77b52770454e793e9741d83',1,'IMeetingConfigurationEvent']]],
   ['onhostchangenotification',['onHostChangeNotification',['../class_i_meeting_participants_ctrl_event.html#a4e11df0f729de9c76c3ec6c2cbe574e3',1,'IMeetingParticipantsCtrlEvent']]],
   ['oninputmeetingpasswordandscreennamenotification',['onInputMeetingPasswordAndScreenNameNotification',['../class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f',1,'IMeetingConfigurationEvent']]],
+  ['oninvitebtnclicked',['onInviteBtnClicked',['../class_i_meeting_u_i_controller_event.html#a3b219eca79283d9cbd4888a8cdcc6ad7',1,'IMeetingUIControllerEvent']]],
   ['oninvitecalloutuserstatus',['onInviteCallOutUserStatus',['../class_i_meeting_phone_helper_event.html#ac5f952bf79edf029be51e4877373ad08',1,'IMeetingPhoneHelperEvent']]],
   ['onlayoutnotification',['onLayoutNotification',['../class_i_customized_video_container_event.html#a7166ce8a91da1c6d6e78fd9f879f8ffc',1,'ICustomizedVideoContainerEvent']]],
   ['onlistmeeting',['onListMeeting',['../class_i_pre_meeting_service_event.html#a1ab53c8ca9c2aa5e941a82c275a6ec5c',1,'IPreMeetingServiceEvent']]],
@@ -39,6 +41,9 @@ var searchData=
   ['onnoaudiodeviceisuseful',['OnNoAudioDeviceIsUseful',['../class_i_test_audio_device_helper_event.html#a2f5f230176f7d6cec0798813c2bfec9a',1,'ITestAudioDeviceHelperEvent']]],
   ['onnovideodeviceisuseful',['OnNoVideoDeviceIsUseful',['../class_i_test_video_device_helper_event.html#a8ed5107a668d71233e7b3280caf48b2f',1,'ITestVideoDeviceHelperEvent']]],
   ['onnowindowtoshowpreview',['OnNoWindowToShowPreview',['../class_i_test_video_device_helper_event.html#a419e8c4ed4ee098f86bc55f45dab3cf1',1,'ITestVideoDeviceHelperEvent']]],
+  ['onoutlookplugindefaultmeetingtopicrequestnotification',['onOutlookPluginDefaultMeetingTopicRequestNotification',['../class_i_outlook_plugin_integration_helper_event.html#a68afe2f00c78cb3ab19cf548b09d91f9',1,'IOutlookPluginIntegrationHelperEvent']]],
+  ['onoutlookpluginneedloginrequestnotification',['onOutlookPluginNeedLoginRequestNotification',['../class_i_outlook_plugin_integration_helper_event.html#a7cb441adf57068b57b51a8ad9bee9d06',1,'IOutlookPluginIntegrationHelperEvent']]],
+  ['onoutlookpluginschedulemeetingrequestnotification',['onOutlookPluginScheduleMeetingRequestNotification',['../class_i_outlook_plugin_integration_helper_event.html#a308039a110107e1fb68c3fcca720423c',1,'IOutlookPluginIntegrationHelperEvent']]],
   ['onparingh323result',['onParingH323Result',['../class_i_meeting_h323_helper_event.html#a85b5ec37a55f647b0b13ab824a49547e',1,'IMeetingH323HelperEvent']]],
   ['onpromptattendee2panelistresult',['onPromptAttendee2PanelistResult',['../class_i_meeting_webinar_ctrl_event.html#a153a43deb7e268911e676c0a4b3ead0e',1,'IMeetingWebinarCtrlEvent']]],
   ['onproxydetectcomplete',['onProxyDetectComplete',['../class_i_network_connection_handler.html#a224f41b865924554e7ab0c03c5a98e24',1,'INetworkConnectionHandler']]],
@@ -77,5 +82,7 @@ var searchData=
   ['onwatingroomuserleft',['onWatingRoomUserLeft',['../class_i_meeting_waiting_room_event.html#a3fd272e33a268f11a3b7efacfc7f381d',1,'IMeetingWaitingRoomEvent']]],
   ['onwebinarneedregisternotification',['onWebinarNeedRegisterNotification',['../class_i_meeting_configuration_event.html#aa1b384a2535bba66da5e3ca9cc15fe16',1,'IMeetingConfigurationEvent']]],
   ['onwindowmsgnotification',['onWindowMsgNotification',['../class_i_customized_share_render_event.html#a056cacd5254845359377ca77024ef455',1,'ICustomizedShareRenderEvent::onWindowMsgNotification()'],['../class_i_customized_video_container_event.html#a5ffd9a3e9d3f165c0602a55b19b4d74d',1,'ICustomizedVideoContainerEvent::onWindowMsgNotification()']]],
-  ['onzoomidentityexpired',['onZoomIdentityExpired',['../class_i_auth_service_event.html#a10ba896b40febc2b773592cb022a54a4',1,'IAuthServiceEvent']]]
+  ['onzoomidentityexpired',['onZoomIdentityExpired',['../class_i_auth_service_event.html#a10ba896b40febc2b773592cb022a54a4',1,'IAuthServiceEvent']]],
+  ['onzoominvitedialogfailed',['onZoomInviteDialogFailed',['../class_i_meeting_u_i_controller_event.html#a609dfb363b8b2d4c64009f98b32a63c7',1,'IMeetingUIControllerEvent']]],
+  ['outlook_5fplugin_5fintegration_5fhelper_5finterface_2eh',['outlook_plugin_integration_helper_interface.h',['../outlook__plugin__integration__helper__interface_8h.html',1,'']]]
 ];
