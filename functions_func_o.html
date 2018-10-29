@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -81,8 +81,14 @@ $(function() {
 <li>onAuthenticationReturn()
 : <a class="el" href="class_i_auth_service_event.html#ac6bf10b8e19789804f08e63ad6738d01">IAuthServiceEvent</a>
 </li>
+<li>onAutoRecordEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#af0978156e45dde8254ad502c831c2544">ISelectMeetingItemMeetingOptionHelperEvent</a>
+</li>
 <li>OnBreakoutRoomsStartedNotification()
 : <a class="el" href="class_i_meeting_breakout_rooms_event.html#a074f2ad8b58cd36b62ba11fc65f33b5f">IMeetingBreakoutRoomsEvent</a>
+</li>
+<li>onCalenderEventsNotifcation()
+: <a class="el" href="class_i_calender_service_event.html#a8b9fef3396cec06b0205e51067392fc3">ICalenderServiceEvent</a>
 </li>
 <li>onCallMeStatus()
 : <a class="el" href="class_i_meeting_phone_helper_event.html#a01cfdbd5a1f8d9deca2f86ce9c3d1e92">IMeetingPhoneHelperEvent</a>
@@ -102,11 +108,23 @@ $(function() {
 <li>onCoHostChangeNotification()
 : <a class="el" href="class_i_meeting_participants_ctrl_event.html#ae5815d653de59adfaeeb390fd003c8f1">IMeetingParticipantsCtrlEvent</a>
 </li>
+<li>onComputerCamDeviceChanged()
+: <a class="el" href="class_i_video_setting_context_event.html#a72cc7604859705a1acdd71221797fca9">IVideoSettingContextEvent</a>
+</li>
+<li>onComputerMicDeviceChanged()
+: <a class="el" href="class_i_audio_setting_context_event.html#a0f66fc7cea1f1bf358f1138f39c5c4b9">IAudioSettingContextEvent</a>
+</li>
+<li>onComputerSpeakerDeviceChanged()
+: <a class="el" href="class_i_audio_setting_context_event.html#a40ebb32694befab375698aeb90725cdb">IAudioSettingContextEvent</a>
+</li>
 <li>onCustomizedAnnotationObjDestroyed()
 : <a class="el" href="class_i_customized_annotation_controller_event.html#affa3b7cd1d58fc77cd726f16031fe281">ICustomizedAnnotationControllerEvent</a>
 </li>
 <li>onCustomizedLocalRecordingSourceNotification()
 : <a class="el" href="class_i_meeting_recording_ctrl_event.html#af856aeb7958a9d099519cbc700b5bbbf">IMeetingRecordingCtrlEvent</a>
+</li>
+<li>onCustomLiveStreamMenuClicked()
+: <a class="el" href="class_i_meeting_u_i_controller_event.html#a69b271fc06266a214ef466cf35e91d06">IMeetingUIControllerEvent</a>
 </li>
 <li>onDeleteMeeting()
 : <a class="el" href="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438">IPreMeetingServiceEvent</a>
@@ -123,6 +141,9 @@ $(function() {
 <li>onDisallowPanelistStartVideoNotification()
 : <a class="el" href="class_i_meeting_webinar_ctrl_event.html#a8a9236acde37f1d6e15b65e1ffd66b91">IMeetingWebinarCtrlEvent</a>
 </li>
+<li>onEndMeetingBtnClicked()
+: <a class="el" href="class_i_meeting_u_i_controller_event.html#a9313122e0e16b44a80802a54a6f9eb22">IMeetingUIControllerEvent</a>
+</li>
 <li>onEndOtherMeetingToJoinMeetingNotification()
 : <a class="el" href="class_i_meeting_configuration_event.html#ad0da5b736f518dd597422c8de5abdaa1">IMeetingConfigurationEvent</a>
 </li>
@@ -132,6 +153,12 @@ $(function() {
 <li>onHostChangeNotification()
 : <a class="el" href="class_i_meeting_participants_ctrl_event.html#a4e11df0f729de9c76c3ec6c2cbe574e3">IMeetingParticipantsCtrlEvent</a>
 </li>
+<li>onHostInChinaEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#a9abd5c226e16715f55dea1a854414049">ISelectMeetingItemMeetingOptionHelperEvent</a>
+</li>
+<li>onHostRequestStartVideo()
+: <a class="el" href="class_i_meeting_video_ctrl_event.html#a2f18d32d9fe703d62a05980c9e0c01d8">IMeetingVideoCtrlEvent</a>
+</li>
 <li>onInputMeetingPasswordAndScreenNameNotification()
 : <a class="el" href="class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f">IMeetingConfigurationEvent</a>
 </li>
@@ -140,6 +167,9 @@ $(function() {
 </li>
 <li>onInviteCallOutUserStatus()
 : <a class="el" href="class_i_meeting_phone_helper_event.html#ac5f952bf79edf029be51e4877373ad08">IMeetingPhoneHelperEvent</a>
+</li>
+<li>onJoinBeforeHostEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#a51a8f63b5db3515b100088794e6c20d3">ISelectMeetingItemMeetingOptionHelperEvent</a>
 </li>
 <li>onLayoutNotification()
 : <a class="el" href="class_i_customized_video_container_event.html#a7166ce8a91da1c6d6e78fd9f879f8ffc">ICustomizedVideoContainerEvent</a>
@@ -165,6 +195,9 @@ $(function() {
 <li>onMeetingParameterNotification()
 : <a class="el" href="class_i_meeting_service_event.html#af9a7e7a5fffe74682d05204c769bc355">IMeetingServiceEvent</a>
 </li>
+<li>onMeetingPasswordEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#aa0e662af629a8f7237d719648b3dc563">ISelectMeetingItemMeetingOptionHelperEvent</a>
+</li>
 <li>onMeetingSecureKeyNotification()
 : <a class="el" href="class_i_meeting_service_event.html#a00264bde8d2b829e2ed506c1b55098fd">IMeetingServiceEvent</a>
 </li>
@@ -177,6 +210,9 @@ $(function() {
 <li>OnMicSpkVolumnChanged()
 : <a class="el" href="class_i_test_audio_device_helper_event.html#a4dd5d99a9b554bf14f931e8a8a16c716">ITestAudioDeviceHelperEvent</a>
 </li>
+<li>onMuteUponEntryEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#a5953ac706c2d35cef4201e5ff5718be7">ISelectMeetingItemMeetingOptionHelperEvent</a>
+</li>
 <li>OnNoAudioDeviceIsUseful()
 : <a class="el" href="class_i_test_audio_device_helper_event.html#a2f5f230176f7d6cec0798813c2bfec9a">ITestAudioDeviceHelperEvent</a>
 </li>
@@ -185,6 +221,9 @@ $(function() {
 </li>
 <li>OnNoWindowToShowPreview()
 : <a class="el" href="class_i_test_video_device_helper_event.html#a419e8c4ed4ee098f86bc55f45dab3cf1">ITestVideoDeviceHelperEvent</a>
+</li>
+<li>onOnlySignedInUserCanJoinEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#ab699550bfe22fd9d7379a6766c4f715c">ISelectMeetingItemMeetingOptionHelperEvent</a>
 </li>
 <li>onOutlookPluginDefaultMeetingTopicRequestNotification()
 : <a class="el" href="class_i_outlook_plugin_integration_helper_event.html#a68afe2f00c78cb3ab19cf548b09d91f9">IOutlookPluginIntegrationHelperEvent</a>
@@ -196,7 +235,10 @@ $(function() {
 : <a class="el" href="class_i_outlook_plugin_integration_helper_event.html#a308039a110107e1fb68c3fcca720423c">IOutlookPluginIntegrationHelperEvent</a>
 </li>
 <li>onParingH323Result()
-: <a class="el" href="class_i_meeting_h323_helper_event.html#a85b5ec37a55f647b0b13ab824a49547e">IMeetingH323HelperEvent</a>
+: <a class="el" href="class_i_meeting_h323_helper_event.html#ae79281bf12c344e4cabdb3a78a4e7cd1">IMeetingH323HelperEvent</a>
+</li>
+<li>onParticipantListBtnClicked()
+: <a class="el" href="class_i_meeting_u_i_controller_event.html#a56eab13ffd254d48baa22251603b2816">IMeetingUIControllerEvent</a>
 </li>
 <li>onPromptAttendee2PanelistResult()
 : <a class="el" href="class_i_meeting_webinar_ctrl_event.html#a153a43deb7e268911e676c0a4b3ead0e">IMeetingWebinarCtrlEvent</a>
@@ -230,6 +272,9 @@ $(function() {
 </li>
 <li>onScheduleOrEditMeeting()
 : <a class="el" href="class_i_pre_meeting_service_event.html#aedb678510dd79cb8723a6c39af62b83a">IPreMeetingServiceEvent</a>
+</li>
+<li>onScheduleWithPmiEnabledStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#a524ceac94e79842bf41c8a584f1b617d">ISelectMeetingItemMeetingOptionHelperEvent</a>
 </li>
 <li>OnSelectedAudioDeviceIsChanged()
 : <a class="el" href="class_i_test_audio_device_helper_event.html#ad67814860b9a714d9c392ea0e8d208a8">ITestAudioDeviceHelperEvent</a>
@@ -266,6 +311,18 @@ $(function() {
 </li>
 <li>onSSLCertVerifyNotification()
 : <a class="el" href="class_i_network_connection_handler.html#a30e8c3f98d472182ce0ba041a143f104">INetworkConnectionHandler</a>
+</li>
+<li>onStartShareBtnClicked()
+: <a class="el" href="class_i_meeting_u_i_controller_event.html#a19c1a8e29ed6f3c100599fc2fcaeda49">IMeetingUIControllerEvent</a>
+</li>
+<li>onSupportScheduleForNotification()
+: <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#a8ff7995117ff8b7ee6c6ed5acae4cdb3">ISelectMeetingItemMeetingOptionHelperEvent</a>
+</li>
+<li>onSupportSelectDateStatusNotification()
+: <a class="el" href="class_i_select_meeting_item_date_helper_event.html#adfe40d28786a13db02d9f56876819267">ISelectMeetingItemDateHelperEvent</a>
+</li>
+<li>onSupportTelAudioNotification()
+: <a class="el" href="class_i_select_meeting_item_audio_option_helper_event.html#a3af6e351d0fdbdfe47100762a4946870">ISelectMeetingItemAudioOptionHelperEvent</a>
 </li>
 <li>OnTestMicStatusChanged()
 : <a class="el" href="class_i_test_audio_device_helper_event.html#a4ff89285bb2f7afd81e200335de602f2">ITestAudioDeviceHelperEvent</a>

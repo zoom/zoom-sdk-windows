@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -67,19 +67,125 @@ $(function() {
 <div class="title">IDirectShareViaMeetingIDOrPairingCodeHandler Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Direct sharing by meeting ID or pairing code helper interface.  
+ <a href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="direct__share__helper__interface_8h_source.html">direct_share_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3298496b3239b60bef14dac060e65074"><td class="memItemLeft" align="right" valign="top"><a id="a3298496b3239b60bef14dac060e65074"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TryWithMeetingNumber</b> (UINT64 meetingNumber)=0</td></tr>
+<tr class="memitem:a3298496b3239b60bef14dac060e65074"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html#a3298496b3239b60bef14dac060e65074">TryWithMeetingNumber</a> (UINT64 meetingNumber)=0</td></tr>
+<tr class="memdesc:a3298496b3239b60bef14dac060e65074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to match with the specified meeting number.  <a href="#a3298496b3239b60bef14dac060e65074">More...</a><br /></td></tr>
 <tr class="separator:a3298496b3239b60bef14dac060e65074"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47ae69cff48b48e7acddf3462ac8ea6d"><td class="memItemLeft" align="right" valign="top"><a id="a47ae69cff48b48e7acddf3462ac8ea6d"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TryWithPairingCode</b> (const wchar_t *pairingCode)=0</td></tr>
+<tr class="memitem:a47ae69cff48b48e7acddf3462ac8ea6d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html#a47ae69cff48b48e7acddf3462ac8ea6d">TryWithPairingCode</a> (const wchar_t *pairingCode)=0</td></tr>
+<tr class="memdesc:a47ae69cff48b48e7acddf3462ac8ea6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to match with the pairing code.  <a href="#a47ae69cff48b48e7acddf3462ac8ea6d">More...</a><br /></td></tr>
 <tr class="separator:a47ae69cff48b48e7acddf3462ac8ea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3f3e804b24bdeb55d0da6537a1b2ae0"><td class="memItemLeft" align="right" valign="top"><a id="aa3f3e804b24bdeb55d0da6537a1b2ae0"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cancel</b> ()=0</td></tr>
+<tr class="memitem:aa3f3e804b24bdeb55d0da6537a1b2ae0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html#aa3f3e804b24bdeb55d0da6537a1b2ae0">Cancel</a> ()=0</td></tr>
+<tr class="memdesc:aa3f3e804b24bdeb55d0da6537a1b2ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the present direct sharing.  <a href="#aa3f3e804b24bdeb55d0da6537a1b2ae0">More...</a><br /></td></tr>
 <tr class="separator:aa3f3e804b24bdeb55d0da6537a1b2ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Direct sharing by meeting ID or pairing code helper interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa3f3e804b24bdeb55d0da6537a1b2ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f3e804b24bdeb55d0da6537a1b2ae0">&#9670;&nbsp;</a></span>Cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IDirectShareViaMeetingIDOrPairingCodeHandler::Cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Delete the present direct sharing. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a3298496b3239b60bef14dac060e65074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3298496b3239b60bef14dac060e65074">&#9670;&nbsp;</a></span>TryWithMeetingNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IDirectShareViaMeetingIDOrPairingCodeHandler::TryWithMeetingNumber </td>
+          <td>(</td>
+          <td class="paramtype">UINT64&#160;</td>
+          <td class="paramname"><em>meetingNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Try to match with the specified meeting number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meetingNumber</td><td>Specifies the meeting number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a47ae69cff48b48e7acddf3462ac8ea6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ae69cff48b48e7acddf3462ac8ea6d">&#9670;&nbsp;</a></span>TryWithPairingCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IDirectShareViaMeetingIDOrPairingCodeHandler::TryWithPairingCode </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pairingCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Try to match with the pairing code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pairingCode</td><td>Specifies the pairing code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="direct__share__helper__interface_8h_source.html">direct_share_helper_interface.h</a></li>
 </ul>

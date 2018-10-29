@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Zoom Windows SDK Common Defines File.  
+<p>ZOOM windows SDK Common Definition File.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;tchar.h&gt;</code><br />
 </div>
@@ -84,13 +84,18 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_wnd_position.html">tagWndPosition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the window. The coordinate of position is that of monitor when the parent window is null. If the the parent window is not null, the position coordinate is that of the parent window. Here are more detailed structural descriptions.  <a href="structtag_wnd_position.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_customized_language_info.html">tagCustomizedLanguageInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_configurable_options.html">tagConfigurableOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK configuration options.  <a href="structtag_configurable_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_init_param.html">tagInitParam</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init SDK Parameter. A more detailed struct description.  <a href="structtag_init_param.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the SDK Parameter. Here are more detailed structural descriptions.  <a href="structtag_init_param.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_last_error.html">IZoomLastError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error mechanism interface provided by the SDK This feature is gradually improved, so some errors may not be supported.  <a href="class_i_zoom_last_error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_list.html">IList&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,37 +165,50 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a42208dac2bf01ff729adee2632941fc1">SDKERR_NO_PERMISSION</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a4483e6b9505eae9d14fbc8680f6b2657">SDKERR_UNKNOWN</a>, 
-<b>SDKERR_OTHER_SDK_INSTANCE_RUNNING</b>, 
-<b>SDKERR_INTELNAL_ERROR</b>, 
+<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036ad2b3b9be4bd02fb359bca7a6a5a01c1d">SDKERR_OTHER_SDK_INSTANCE_RUNNING</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a9f2ad73cc1eea19ba231ded78cb3f002">SDKERR_INTELNAL_ERROR</a>, 
 <br />
 &#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a0d1ada5bb2fd25473b8f51e22ae13738">SDKERR_NO_AUDIODEVICE_ISFOUND</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a64753d0686019e4847e86bbf543c16fb">SDKERR_NO_VIDEODEVICE_ISFOUND</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a75d4f7918f9c861630372629233e33d6">SDKERR_TOO_FREQUENT_CALL</a>
 <br />
- }<tr class="memdesc:aea74527af3b9f22cf00d38080c896036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom SDK Namespace.  <a href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">More...</a><br /></td></tr>
+ }<tr class="memdesc:aea74527af3b9f22cf00d38080c896036"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK error type. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:aea74527af3b9f22cf00d38080c896036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9747f9758092fe2d88bb5e2d45e717c5"><td class="memItemLeft" align="right" valign="top"><a id="a9747f9758092fe2d88bb5e2d45e717c5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SDK_LANGUAGE_ID</b> { <br />
-&#160;&#160;<b>LANGUAGE_Unknow</b> = 0, 
-<b>LANGUAGE_English</b>, 
-<b>LANGUAGE_Chinese_Simplified</b>, 
-<b>LANGUAGE_Chinese_Traditional</b>, 
+<tr class="memitem:a9747f9758092fe2d88bb5e2d45e717c5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5">SDK_LANGUAGE_ID</a> { <br />
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5acaa57c3ba7c60ae145eb947be2707a0f">LANGUAGE_Unknow</a> = 0, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a5a04af7342496274bbc9eddf688a2a3b">LANGUAGE_English</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5ac10216b6257fc7bc64f24056bec0be5a">LANGUAGE_Chinese_Simplified</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a14282a796bfe22f6556addc046ff8ba3">LANGUAGE_Chinese_Traditional</a>, 
 <br />
-&#160;&#160;<b>LANGUAGE_Japanese</b>, 
-<b>LANGUAGE_Spanish</b>, 
-<b>LANGUAGE_German</b>, 
-<b>LANGUAGE_French</b>, 
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a3a6842027771a23b09b78a7a40085771">LANGUAGE_Japanese</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a1631ec88d8de2657df4481e9f9f59c18">LANGUAGE_Spanish</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a79840a6e6881ca0c3dda569ca95c8435">LANGUAGE_German</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a12e4a08c02caa1ac071e7305f74d5496">LANGUAGE_French</a>, 
 <br />
-&#160;&#160;<b>LANGUAGE_Portuguese</b>, 
-<b>LANGUAGE_Russian</b>
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a7f746484b712c91fa4b3c77ebba63e77">LANGUAGE_Portuguese</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a063ba5dcf0b751d1692eb1c55696a8eb">LANGUAGE_Russian</a>
 <br />
- }</td></tr>
+ }<tr class="memdesc:a9747f9758092fe2d88bb5e2d45e717c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The text resource type used by the SDK. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a9747f9758092fe2d88bb5e2d45e717c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88da7caffb72cca848c4e4d9d07cda7e"><td class="memItemLeft" align="right" valign="top"><a id="a88da7caffb72cca848c4e4d9d07cda7e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CustomizedLanguageType</b> { <b>CustomizedLanguage_None</b>, 
-<b>CustomizedLanguage_FilePath</b>, 
-<b>CustomizedLanguage_Content</b>
- }</td></tr>
+<tr class="memitem:a88da7caffb72cca848c4e4d9d07cda7e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7e">CustomizedLanguageType</a> { <a class="el" href="zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7ea06cb1c7be1e7638653152f8011bff1b9">CustomizedLanguage_None</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7eafce29ac4b7577b336d3b8e324b454d05">CustomizedLanguage_FilePath</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7ea74fecf6be909a021ab73e3933f2ad7c9">CustomizedLanguage_Content</a>
+ }<tr class="memdesc:a88da7caffb72cca848c4e4d9d07cda7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom resource type used by the SDK. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7e">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a88da7caffb72cca848c4e4d9d07cda7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31314dfd3a5f42586ec29e0c53a532c3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a> { <br />
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a9fe99757cb97dec931b50f3f2423d75d">LastErrorType_None</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a16a9dc54c4e5c8ca05030e82a98ff0ca">LastErrorType_Auth</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a3d8e6590c98bfa3427226ee74a4226fb">LastErrorType_Login</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a7c50aadb83656b36e4084eff7d243996">LastErrorType_Meeting</a>, 
+<br />
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a70ab72c587d9cf9bc67a25a769164074">LastErrorType_System</a>
+<br />
+ }<tr class="memdesc:a31314dfd3a5f42586ec29e0c53a532c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last error type of the SDK. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a31314dfd3a5f42586ec29e0c53a532c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -199,8 +217,98 @@ const RECT&#160;</td><td class="memItemRight" valign="bottom"><b>_SDK_TEST_VIDEO
 <tr class="separator:aa7a9817ad517947793de86ccc8427034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Zoom Windows SDK Common Defines File. </p>
+<div class="textblock"><p>ZOOM windows SDK Common Definition File. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a88da7caffb72cca848c4e4d9d07cda7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88da7caffb72cca848c4e4d9d07cda7e">&#9670;&nbsp;</a></span>CustomizedLanguageType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="struct_customized_language_type.html">CustomizedLanguageType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Custom resource type used by the SDK. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a88da7caffb72cca848c4e4d9d07cda7ea06cb1c7be1e7638653152f8011bff1b9"></a>CustomizedLanguage_None&#160;</td><td class="fielddoc"><p>No use of the custom resource. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88da7caffb72cca848c4e4d9d07cda7eafce29ac4b7577b336d3b8e324b454d05"></a>CustomizedLanguage_FilePath&#160;</td><td class="fielddoc"><p>Use the specified file path to assign the custom resource. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88da7caffb72cca848c4e4d9d07cda7ea74fecf6be909a021ab73e3933f2ad7c9"></a>CustomizedLanguage_Content&#160;</td><td class="fielddoc"><p>Use the specified content to assign the custom ressorce. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a31314dfd3a5f42586ec29e0c53a532c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31314dfd3a5f42586ec29e0c53a532c3">&#9670;&nbsp;</a></span>LastErrorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The last error type of the SDK. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a31314dfd3a5f42586ec29e0c53a532c3a9fe99757cb97dec931b50f3f2423d75d"></a>LastErrorType_None&#160;</td><td class="fielddoc"><p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31314dfd3a5f42586ec29e0c53a532c3a16a9dc54c4e5c8ca05030e82a98ff0ca"></a>LastErrorType_Auth&#160;</td><td class="fielddoc"><p>Error during verification. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31314dfd3a5f42586ec29e0c53a532c3a3d8e6590c98bfa3427226ee74a4226fb"></a>LastErrorType_Login&#160;</td><td class="fielddoc"><p>Error during login. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31314dfd3a5f42586ec29e0c53a532c3a7c50aadb83656b36e4084eff7d243996"></a>LastErrorType_Meeting&#160;</td><td class="fielddoc"><p>The associated error with the meeting. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31314dfd3a5f42586ec29e0c53a532c3a70ab72c587d9cf9bc67a25a769164074"></a>LastErrorType_System&#160;</td><td class="fielddoc"><p>The associated error with the SDK bottom layer. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9747f9758092fe2d88bb5e2d45e717c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9747f9758092fe2d88bb5e2d45e717c5">&#9670;&nbsp;</a></span>SDK_LANGUAGE_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5">SDK_LANGUAGE_ID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The text resource type used by the SDK. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5acaa57c3ba7c60ae145eb947be2707a0f"></a>LANGUAGE_Unknow&#160;</td><td class="fielddoc"><p>For initialization. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a5a04af7342496274bbc9eddf688a2a3b"></a>LANGUAGE_English&#160;</td><td class="fielddoc"><p>In English. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5ac10216b6257fc7bc64f24056bec0be5a"></a>LANGUAGE_Chinese_Simplified&#160;</td><td class="fielddoc"><p>In simplified Chinese. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a14282a796bfe22f6556addc046ff8ba3"></a>LANGUAGE_Chinese_Traditional&#160;</td><td class="fielddoc"><p>In traditional Chinese. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a3a6842027771a23b09b78a7a40085771"></a>LANGUAGE_Japanese&#160;</td><td class="fielddoc"><p>In Japanese. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a1631ec88d8de2657df4481e9f9f59c18"></a>LANGUAGE_Spanish&#160;</td><td class="fielddoc"><p>In Spanish. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a79840a6e6881ca0c3dda569ca95c8435"></a>LANGUAGE_German&#160;</td><td class="fielddoc"><p>In German. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a12e4a08c02caa1ac071e7305f74d5496"></a>LANGUAGE_French&#160;</td><td class="fielddoc"><p>In French. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a7f746484b712c91fa4b3c77ebba63e77"></a>LANGUAGE_Portuguese&#160;</td><td class="fielddoc"><p>In Portuguese. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a063ba5dcf0b751d1692eb1c55696a8eb"></a>LANGUAGE_Russian&#160;</td><td class="fielddoc"><p>In Russian. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="aea74527af3b9f22cf00d38080c896036"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea74527af3b9f22cf00d38080c896036">&#9670;&nbsp;</a></span>SDKError</h2>
 
@@ -213,42 +321,45 @@ const RECT&#160;</td><td class="memItemRight" valign="bottom"><b>_SDK_TEST_VIDEO
       </table>
 </div><div class="memdoc">
 
-<p>Zoom SDK Namespace. </p>
-<p>Init SDK Parameter. A more detailed struct description. </p>
+<p>SDK error type. Here are more detailed structural descriptions. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a176159e9d595f438e0ebefd522e23359"></a>SDKERR_SUCCESS&#160;</td><td class="fielddoc"><p>Success Result. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a176159e9d595f438e0ebefd522e23359"></a>SDKERR_SUCCESS&#160;</td><td class="fielddoc"><p>Success. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a8566a97c43b1c56a457a6bb14a5d2faf"></a>SDKERR_NO_IMPL&#160;</td><td class="fielddoc"><p>Not support this feature now. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a8566a97c43b1c56a457a6bb14a5d2faf"></a>SDKERR_NO_IMPL&#160;</td><td class="fielddoc"><p>This feature is currently invalid. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036aef54ec9885bd37cf8efabbab3b3d1e33"></a>SDKERR_WRONG_USEAGE&#160;</td><td class="fielddoc"><p>Wrong useage about this feature. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036aef54ec9885bd37cf8efabbab3b3d1e33"></a>SDKERR_WRONG_USEAGE&#160;</td><td class="fielddoc"><p>Incorrect usage of the feature. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a780ac63275b8b93fda32e7087ddb5843"></a>SDKERR_INVALID_PARAMETER&#160;</td><td class="fielddoc"><p>Wrong parameter. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036ac0c5d535209e61708524486555136829"></a>SDKERR_MODULE_LOAD_FAILED&#160;</td><td class="fielddoc"><p>Load module failed. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036ac0c5d535209e61708524486555136829"></a>SDKERR_MODULE_LOAD_FAILED&#160;</td><td class="fielddoc"><p>Loading module failed. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a4c4985c4674158da4d7c352f8136b88e"></a>SDKERR_MEMORY_FAILED&#160;</td><td class="fielddoc"><p>No memory allocated. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036af22a137ce8f383e0cafec79dea67c20d"></a>SDKERR_SERVICE_FAILED&#160;</td><td class="fielddoc"><p>Internal service error. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a02a0a965f5be510e0a4318aa377b3398"></a>SDKERR_UNINITIALIZE&#160;</td><td class="fielddoc"><p>Not initialize before use. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a02a0a965f5be510e0a4318aa377b3398"></a>SDKERR_UNINITIALIZE&#160;</td><td class="fielddoc"><p>Uot initialized before the use. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036aa9a3f084736a228f933d7643886a95f7"></a>SDKERR_UNAUTHENTICATION&#160;</td><td class="fielddoc"><p>Not Authentication before use. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036aa9a3f084736a228f933d7643886a95f7"></a>SDKERR_UNAUTHENTICATION&#160;</td><td class="fielddoc"><p>Not authorized before the use. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a95eb3dfc0448cdbffbd18b29c633cbcc"></a>SDKERR_NORECORDINGINPROCESS&#160;</td><td class="fielddoc"><p>No recording in process. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a42fcbea8e4771e84c95dd06bc9f781b4"></a>SDKERR_TRANSCODER_NOFOUND&#160;</td><td class="fielddoc"><p>Can't find transcoder module. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a42fcbea8e4771e84c95dd06bc9f781b4"></a>SDKERR_TRANSCODER_NOFOUND&#160;</td><td class="fielddoc"><p>Transcoder module is not found. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a2a7650373f087eb34eae9a5bd29e3964"></a>SDKERR_VIDEO_NOTREADY&#160;</td><td class="fielddoc"><p>Video service not ready. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a2a7650373f087eb34eae9a5bd29e3964"></a>SDKERR_VIDEO_NOTREADY&#160;</td><td class="fielddoc"><p>The video service is not ready. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a42208dac2bf01ff729adee2632941fc1"></a>SDKERR_NO_PERMISSION&#160;</td><td class="fielddoc"><p>No premission to do this. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a42208dac2bf01ff729adee2632941fc1"></a>SDKERR_NO_PERMISSION&#160;</td><td class="fielddoc"><p>No premission. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a4483e6b9505eae9d14fbc8680f6b2657"></a>SDKERR_UNKNOWN&#160;</td><td class="fielddoc"><p>Unknown error. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a0d1ada5bb2fd25473b8f51e22ae13738"></a>SDKERR_NO_AUDIODEVICE_ISFOUND&#160;</td><td class="fielddoc"><p>No audio device is found. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036ad2b3b9be4bd02fb359bca7a6a5a01c1d"></a>SDKERR_OTHER_SDK_INSTANCE_RUNNING&#160;</td><td class="fielddoc"><p>The other instance of the SDK is in process. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a64753d0686019e4847e86bbf543c16fb"></a>SDKERR_NO_VIDEODEVICE_ISFOUND&#160;</td><td class="fielddoc"><p>No video device is found. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a9f2ad73cc1eea19ba231ded78cb3f002"></a>SDKERR_INTELNAL_ERROR&#160;</td><td class="fielddoc"><p>SDK internal error. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a75d4f7918f9c861630372629233e33d6"></a>SDKERR_TOO_FREQUENT_CALL&#160;</td><td class="fielddoc"><p>Call an API too frequent. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a0d1ada5bb2fd25473b8f51e22ae13738"></a>SDKERR_NO_AUDIODEVICE_ISFOUND&#160;</td><td class="fielddoc"><p>No audio device found. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a64753d0686019e4847e86bbf543c16fb"></a>SDKERR_NO_VIDEODEVICE_ISFOUND&#160;</td><td class="fielddoc"><p>No video device found. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a75d4f7918f9c861630372629233e33d6"></a>SDKERR_TOO_FREQUENT_CALL&#160;</td><td class="fielddoc"><p>API calls too frequently. </p>
 </td></tr>
 </table>
 

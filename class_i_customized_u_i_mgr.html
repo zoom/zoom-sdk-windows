@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Customized UI manager interface.  
+<p>Custom UI manager interface.  
  <a href="class_i_customized_u_i_mgr.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="customized__ui__mgr_8h_source.html">customized_ui_mgr.h</a>&gt;</code></p>
@@ -76,32 +76,32 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6dc703b2b5e9c537339a16760db6c582"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#a6dc703b2b5e9c537339a16760db6c582">HasLicense</a> ()=0</td></tr>
-<tr class="memdesc:a6dc703b2b5e9c537339a16760db6c582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check license.  <a href="#a6dc703b2b5e9c537339a16760db6c582">More...</a><br /></td></tr>
+<tr class="memdesc:a6dc703b2b5e9c537339a16760db6c582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the user owns the license to enable the custom UI module.  <a href="#a6dc703b2b5e9c537339a16760db6c582">More...</a><br /></td></tr>
 <tr class="separator:a6dc703b2b5e9c537339a16760db6c582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bfb2f8de8220f6ca1787d3018554ded"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#a2bfb2f8de8220f6ca1787d3018554ded">SetEvent</a> (<a class="el" href="class_i_customized_u_i_mgr_event.html">ICustomizedUIMgrEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a2bfb2f8de8220f6ca1787d3018554ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set customized ui manager callback event.  <a href="#a2bfb2f8de8220f6ca1787d3018554ded">More...</a><br /></td></tr>
+<tr class="memdesc:a2bfb2f8de8220f6ca1787d3018554ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set custom UI manager interface callback event handler.  <a href="#a2bfb2f8de8220f6ca1787d3018554ded">More...</a><br /></td></tr>
 <tr class="separator:a2bfb2f8de8220f6ca1787d3018554ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2113e27b645c1163dfed342720b0b78f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#a2113e27b645c1163dfed342720b0b78f">CreateVideoContainer</a> (<a class="el" href="class_i_customized_video_container.html">ICustomizedVideoContainer</a> **ppContainer, HWND hParentWnd, RECT rc)=0</td></tr>
-<tr class="memdesc:a2113e27b645c1163dfed342720b0b78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create video container Interface.  <a href="#a2113e27b645c1163dfed342720b0b78f">More...</a><br /></td></tr>
+<tr class="memdesc:a2113e27b645c1163dfed342720b0b78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the video container.  <a href="#a2113e27b645c1163dfed342720b0b78f">More...</a><br /></td></tr>
 <tr class="separator:a2113e27b645c1163dfed342720b0b78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44e4da3803c25b7cfb5b3ca2c238f247"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#a44e4da3803c25b7cfb5b3ca2c238f247">DestroyVideoContainer</a> (<a class="el" href="class_i_customized_video_container.html">ICustomizedVideoContainer</a> *pContainer)=0</td></tr>
-<tr class="memdesc:a44e4da3803c25b7cfb5b3ca2c238f247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy video container Interface.  <a href="#a44e4da3803c25b7cfb5b3ca2c238f247">More...</a><br /></td></tr>
+<tr class="memdesc:a44e4da3803c25b7cfb5b3ca2c238f247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the specified video container.  <a href="#a44e4da3803c25b7cfb5b3ca2c238f247">More...</a><br /></td></tr>
 <tr class="separator:a44e4da3803c25b7cfb5b3ca2c238f247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af77d8a19aac2eaa891ed3f1dd25c1145"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#af77d8a19aac2eaa891ed3f1dd25c1145">DestroyAllVideoContainer</a> ()=0</td></tr>
-<tr class="memdesc:af77d8a19aac2eaa891ed3f1dd25c1145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy all video containers.  <a href="#af77d8a19aac2eaa891ed3f1dd25c1145">More...</a><br /></td></tr>
+<tr class="memdesc:af77d8a19aac2eaa891ed3f1dd25c1145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy all the video containers.  <a href="#af77d8a19aac2eaa891ed3f1dd25c1145">More...</a><br /></td></tr>
 <tr class="separator:af77d8a19aac2eaa891ed3f1dd25c1145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6930703159aaa7f0839153d337ae064"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#ab6930703159aaa7f0839153d337ae064">CreateShareRender</a> (<a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> **ppRender, HWND hParentWnd, RECT rc)=0</td></tr>
-<tr class="memdesc:ab6930703159aaa7f0839153d337ae064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create share render Interface.  <a href="#ab6930703159aaa7f0839153d337ae064">More...</a><br /></td></tr>
+<tr class="memdesc:ab6930703159aaa7f0839153d337ae064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create shared render.  <a href="#ab6930703159aaa7f0839153d337ae064">More...</a><br /></td></tr>
 <tr class="separator:ab6930703159aaa7f0839153d337ae064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed0d9252aa6b2253c11f533200bcd8c7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#aed0d9252aa6b2253c11f533200bcd8c7">DestroyShareRender</a> (<a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> *pRender)=0</td></tr>
-<tr class="memdesc:aed0d9252aa6b2253c11f533200bcd8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy share render Interface.  <a href="#aed0d9252aa6b2253c11f533200bcd8c7">More...</a><br /></td></tr>
+<tr class="memdesc:aed0d9252aa6b2253c11f533200bcd8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the specified shared render.  <a href="#aed0d9252aa6b2253c11f533200bcd8c7">More...</a><br /></td></tr>
 <tr class="separator:aed0d9252aa6b2253c11f533200bcd8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a095bbd44150556fd5c64f6305187006a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr.html#a095bbd44150556fd5c64f6305187006a">DestroyAllShareRender</a> ()=0</td></tr>
-<tr class="memdesc:a095bbd44150556fd5c64f6305187006a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy all share render.  <a href="#a095bbd44150556fd5c64f6305187006a">More...</a><br /></td></tr>
+<tr class="memdesc:a095bbd44150556fd5c64f6305187006a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy all the shared renders.  <a href="#a095bbd44150556fd5c64f6305187006a">More...</a><br /></td></tr>
 <tr class="separator:a095bbd44150556fd5c64f6305187006a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Customized UI manager interface. </p>
+<div class="textblock"><p>Custom UI manager interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab6930703159aaa7f0839153d337ae064"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6930703159aaa7f0839153d337ae064">&#9670;&nbsp;</a></span>CreateShareRender()</h2>
@@ -143,16 +143,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create share render Interface. </p>
+<p>Create shared render. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ppRender</td><td>A pointer to a ICustomizedShareRender* that receives <a class="el" href="class_i_customized_share_render.html" title="Share render interface. ">ICustomizedShareRender</a> Object. </td></tr>
-    <tr><td class="paramname">hParentWnd</td><td>specify the parent window of the share render. </td></tr>
-    <tr><td class="paramname">rc</td><td>specify the position of a share render's client area. client coordinates are relative to the upper-left corner of a parent window's client area </td></tr>
+    <tr><td class="paramname">ppRender</td><td>Once the function is called successfully, this parameter will store the pointer to the ICustomizedShareRender*. </td></tr>
+    <tr><td class="paramname">hParentWnd</td><td>Specify the parent window of the shared render. </td></tr>
+    <tr><td class="paramname">rc</td><td>Specify the position of client area of the shared render. The client coordinates corresponds to the client area of the upper-left corner of the parent window. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and the return value of ppRender is not NULL. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -196,16 +196,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create video container Interface. </p>
+<p>Create the video container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ppContainer</td><td>A pointer to a ICustomizedVideoContainer* that receives <a class="el" href="class_i_customized_video_container.html" title="Video container interface. ">ICustomizedVideoContainer</a> Object. </td></tr>
-    <tr><td class="paramname">hParentWnd</td><td>specify the parent window of the video container. </td></tr>
-    <tr><td class="paramname">rc</td><td>specify the position of a video render element's client area. client coordinates are relative to the upper-left corner of a parent window's client area </td></tr>
+    <tr><td class="paramname">ppContainer</td><td>Once called the function successfully, this parameter will store the pointer to the ICustomizedVideoContainer*. </td></tr>
+    <tr><td class="paramname">hParentWnd</td><td>Specify the parent window of the video container. </td></tr>
+    <tr><td class="paramname">rc</td><td>Specify the position of client area of the video render elements. The client coordinates corresponds to the client area of the upper-left corner of the parent window. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and the return value of ppContainer is not NULL. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -232,8 +232,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy all share render. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Destroy all the shared renders. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -260,8 +260,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy all video containers. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Destroy all the video containers. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -289,14 +289,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy share render Interface. </p>
+<p>Destroy the specified shared render. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pRender</td><td>A pointer to a <a class="el" href="class_i_customized_share_render.html" title="Share render interface. ">ICustomizedShareRender</a> to be destroyed. </td></tr>
+    <tr><td class="paramname">pRender</td><td>A pointer to the <a class="el" href="class_i_customized_share_render.html" title="Share render interface. ">ICustomizedShareRender</a> to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -324,14 +324,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy video container Interface. </p>
+<p>Destroy the specified video container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pContainer</td><td>A pointer to a <a class="el" href="class_i_customized_video_container.html" title="Video container interface. ">ICustomizedVideoContainer</a> to be destroyed. </td></tr>
+    <tr><td class="paramname">pContainer</td><td>A pointer to the <a class="el" href="class_i_customized_video_container.html" title="Video container interface. ">ICustomizedVideoContainer</a> to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -358,8 +358,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check license. </p>
-<dl class="section return"><dt>Returns</dt><dd>If has license, the return value is SDKErr_Success. If no license, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Determine if the user owns the license to enable the custom UI module. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the user owns the license, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -387,14 +387,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set customized ui manager callback event. </p>
+<p>Set custom UI manager interface callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a ICustomizedUIMgrEvent* that receives customized ui manager event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_customized_u_i_mgr_event.html" title="The callback event of custom UI manager interface. ">ICustomizedUIMgrEvent</a> that receives user manager custom interface event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

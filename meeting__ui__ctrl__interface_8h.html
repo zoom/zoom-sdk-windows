@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>UI Controller of Meeting Service Interface  for zoom style ui mode.  
+<p>UI Controller of Meeting Service Interface Valid only for ZOOM style user interface mode.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -82,16 +82,16 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_video_wall_page_info_param.html">tagVideoWallPageInfoParam</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The information of video wall page. A more detailed struct description.  <a href="structtag_video_wall_page_info_param.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video wall page information. Here are more detailed structural descriptions.  <a href="structtag_video_wall_page_info_param.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_show_chat_dlg_param.html">tagShowChatDlgParam</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show meeting chat dialog Parameter. A more detailed struct description.  <a href="structtag_show_chat_dlg_param.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The configuration of the parameters to display the dialog. Here are more detailed structural descriptions.  <a href="structtag_show_chat_dlg_param.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_split_screen_info.html">tagSplitScreenInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The information of split screen mode. A more detailed struct description.  <a href="structtag_split_screen_info.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split screen mode information. Here are more detailed structural descriptions.  <a href="structtag_split_screen_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html">IMeetingUIControllerEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting UI Controller Callback Event.  <a href="class_i_meeting_u_i_controller_event.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback Event of Meeting UI Controller.  <a href="class_i_meeting_u_i_controller_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html">IMeetingUIController</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting UI Controller Interface.  <a href="class_i_meeting_u_i_controller.html#details">More...</a><br /></td></tr>
@@ -111,30 +111,56 @@ typedef struct <a class="el" href="structtag_split_screen_info.html">tagSplitScr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ae6e7bbba1825e454badcbd42c4368e41"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41">SDKMeetingUIType</a> { <b>SDK_Meeting_UI_None</b>, 
-<b>SDK_Meeting_UI_VideoWall_Mode</b>, 
-<b>SDK_Meeting_UI_ActiveRender_Mode</b>
- }<tr class="memdesc:ae6e7bbba1825e454badcbd42c4368e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom SDK Namespace.  <a href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41">More...</a><br /></td></tr>
+<tr class="memitem:ae6e7bbba1825e454badcbd42c4368e41"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41">SDKMeetingUIType</a> { <a class="el" href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41afa97c6378f7275d6126e244979b50750">SDK_Meeting_UI_None</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41ae2429db4657542371f955562adb6a7cd">SDK_Meeting_UI_VideoWall_Mode</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41a2c724cc7d7f597e90ca51e261873788e">SDK_Meeting_UI_ActiveRender_Mode</a>
+ }<tr class="memdesc:ae6e7bbba1825e454badcbd42c4368e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">The displayed type of the user videos in the meeting. Here are more detailed structural descriptions.  <a href="meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ae6e7bbba1825e454badcbd42c4368e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f30b86ec1bc3b88d0fa26f825415a7e"><td class="memItemLeft" align="right" valign="top"><a id="a3f30b86ec1bc3b88d0fa26f825415a7e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7e">SDKFloatVideoType</a> { <b>FLOATVIDEO_List</b>, 
-<b>FLOATVIDEO_Small</b>, 
-<b>FLOATVIDEO_Large</b>, 
-<b>FLOATVIDEO_Minimize</b>
- }<tr class="memdesc:a3f30b86ec1bc3b88d0fa26f825415a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of float video ui. A more detailed struct description. <br /></td></tr>
+<tr class="memitem:a3f30b86ec1bc3b88d0fa26f825415a7e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7e">SDKFloatVideoType</a> { <a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7ea63c6db28a5eed3ed0b957b881a9c66a6">FLOATVIDEO_List</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7eaeb52f83d3e1a84f9e294fdd39c25cc0c">FLOATVIDEO_Small</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7eaafa78bb3226dd662d5a8922c408c82a2">FLOATVIDEO_Large</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7ea0868290f9e5afc3c3ed2eee0b06e49f8">FLOATVIDEO_Minimize</a>
+ }<tr class="memdesc:a3f30b86ec1bc3b88d0fa26f825415a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user interface type of float video. Here are more detailed structural descriptions.  <a href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7e">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a3f30b86ec1bc3b88d0fa26f825415a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14f173ee99f4939f106af29f2fbaa950"><td class="memItemLeft" align="right" valign="top"><a id="a14f173ee99f4939f106af29f2fbaa950"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950">SDKMinimizeUIMode</a> { <b>MinimizeUIMode_NONE</b>, 
-<b>MinimizeUIMode_SHARE</b>, 
-<b>MinimizeUIMode_VIDEO</b>, 
-<b>MinimizeUIMode_ACTIVESPEAKER</b>
- }<tr class="memdesc:a14f173ee99f4939f106af29f2fbaa950"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of minimize UI mode. A more detailed struct description. <br /></td></tr>
+<tr class="memitem:a14f173ee99f4939f106af29f2fbaa950"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950">SDKMinimizeUIMode</a> { <a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950a1a065713c40e972f97d77011329a2ecd">MinimizeUIMode_NONE</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950a34e7c386c9401067537cff7333b8406d">MinimizeUIMode_SHARE</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950a1376f8d783d995ea889007ec8593a4f7">MinimizeUIMode_VIDEO</a>, 
+<a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950a996bb4d9a00b2511cbf3fa99d90d8c92">MinimizeUIMode_ACTIVESPEAKER</a>
+ }<tr class="memdesc:a14f173ee99f4939f106af29f2fbaa950"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of minimize user interface mode. Here are more detailed structural descriptions.  <a href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a14f173ee99f4939f106af29f2fbaa950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>UI Controller of Meeting Service Interface  for zoom style ui mode. </p>
+<div class="textblock"><p>UI Controller of Meeting Service Interface Valid only for ZOOM style user interface mode. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a3f30b86ec1bc3b88d0fa26f825415a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f30b86ec1bc3b88d0fa26f825415a7e">&#9670;&nbsp;</a></span>SDKFloatVideoType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7e">SDKFloatVideoType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The user interface type of float video. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3f30b86ec1bc3b88d0fa26f825415a7ea63c6db28a5eed3ed0b957b881a9c66a6"></a>FLOATVIDEO_List&#160;</td><td class="fielddoc"><p>Type of list. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3f30b86ec1bc3b88d0fa26f825415a7eaeb52f83d3e1a84f9e294fdd39c25cc0c"></a>FLOATVIDEO_Small&#160;</td><td class="fielddoc"><p>Small. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3f30b86ec1bc3b88d0fa26f825415a7eaafa78bb3226dd662d5a8922c408c82a2"></a>FLOATVIDEO_Large&#160;</td><td class="fielddoc"><p>Large. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3f30b86ec1bc3b88d0fa26f825415a7ea0868290f9e5afc3c3ed2eee0b06e49f8"></a>FLOATVIDEO_Minimize&#160;</td><td class="fielddoc"><p>Minimized. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ae6e7bbba1825e454badcbd42c4368e41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6e7bbba1825e454badcbd42c4368e41">&#9670;&nbsp;</a></span>SDKMeetingUIType</h2>
 
@@ -147,8 +173,41 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Zoom SDK Namespace. </p>
-<p>The type of meeting ui. A more detailed struct description. </p>
+<p>The displayed type of the user videos in the meeting. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae6e7bbba1825e454badcbd42c4368e41afa97c6378f7275d6126e244979b50750"></a>SDK_Meeting_UI_None&#160;</td><td class="fielddoc"><p>For initialization. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6e7bbba1825e454badcbd42c4368e41ae2429db4657542371f955562adb6a7cd"></a>SDK_Meeting_UI_VideoWall_Mode&#160;</td><td class="fielddoc"><p>Video wall mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae6e7bbba1825e454badcbd42c4368e41a2c724cc7d7f597e90ca51e261873788e"></a>SDK_Meeting_UI_ActiveRender_Mode&#160;</td><td class="fielddoc"><p>Active user mode. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a14f173ee99f4939f106af29f2fbaa950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f173ee99f4939f106af29f2fbaa950">&#9670;&nbsp;</a></span>SDKMinimizeUIMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950">SDKMinimizeUIMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of minimize user interface mode. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a14f173ee99f4939f106af29f2fbaa950a1a065713c40e972f97d77011329a2ecd"></a>MinimizeUIMode_NONE&#160;</td><td class="fielddoc"><p>For initialization. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a14f173ee99f4939f106af29f2fbaa950a34e7c386c9401067537cff7333b8406d"></a>MinimizeUIMode_SHARE&#160;</td><td class="fielddoc"><p>Minimized mode for sharing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a14f173ee99f4939f106af29f2fbaa950a1376f8d783d995ea889007ec8593a4f7"></a>MinimizeUIMode_VIDEO&#160;</td><td class="fielddoc"><p>Minimized mode for video. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a14f173ee99f4939f106af29f2fbaa950a996bb4d9a00b2511cbf3fa99d90d8c92"></a>MinimizeUIMode_ACTIVESPEAKER&#160;</td><td class="fielddoc"><p>Minimized mode for speaking. </p>
+</td></tr>
+</table>
 
 </div>
 </div>

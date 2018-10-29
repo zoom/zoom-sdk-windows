@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Start meeting Parameter. A more detailed struct description.  
+<p>The parameter of ordinary user when starts meeting. Here are more detailed structural descriptions.  
  <a href="structtag_start_param4_normal_user.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a>&gt;</code></p>
@@ -77,35 +77,35 @@ $(function() {
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4e7cd6af311030ec679b093aadce2e29"><td class="memItemLeft" align="right" valign="top"><a id="a4e7cd6af311030ec679b093aadce2e29"></a>
 UINT64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#a4e7cd6af311030ec679b093aadce2e29">meetingNumber</a></td></tr>
-<tr class="memdesc:a4e7cd6af311030ec679b093aadce2e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting's number. <br /></td></tr>
+<tr class="memdesc:a4e7cd6af311030ec679b093aadce2e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting number. <br /></td></tr>
 <tr class="separator:a4e7cd6af311030ec679b093aadce2e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4f6b27a95a996c33d98e5abd06d354"><td class="memItemLeft" align="right" valign="top"><a id="aee4f6b27a95a996c33d98e5abd06d354"></a>
 const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#aee4f6b27a95a996c33d98e5abd06d354">vanityID</a></td></tr>
-<tr class="memdesc:aee4f6b27a95a996c33d98e5abd06d354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting's vanityID, generate the zoom access token via REST api. <br /></td></tr>
+<tr class="memdesc:aee4f6b27a95a996c33d98e5abd06d354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting vanity ID. Generate a ZOOM access token via REST API. <br /></td></tr>
 <tr class="separator:aee4f6b27a95a996c33d98e5abd06d354"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52ad2a4d5c51942daf0f274833499225"><td class="memItemLeft" align="right" valign="top"><a id="a52ad2a4d5c51942daf0f274833499225"></a>
 HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#a52ad2a4d5c51942daf0f274833499225">hDirectShareAppWnd</a></td></tr>
-<tr class="memdesc:a52ad2a4d5c51942daf0f274833499225"><td class="mdescLeft">&#160;</td><td class="mdescRight">share application directly <br /></td></tr>
+<tr class="memdesc:a52ad2a4d5c51942daf0f274833499225"><td class="mdescLeft">&#160;</td><td class="mdescRight">The window handle of the direct sharing application. <br /></td></tr>
 <tr class="separator:a52ad2a4d5c51942daf0f274833499225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8efe3e68dbe6cb66e61466035f3f6c3e"><td class="memItemLeft" align="right" valign="top"><a id="a8efe3e68dbe6cb66e61466035f3f6c3e"></a>
 const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#a8efe3e68dbe6cb66e61466035f3f6c3e">participantId</a></td></tr>
-<tr class="memdesc:a8efe3e68dbe6cb66e61466035f3f6c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">for meeting participant report list, need web backend enable. <br /></td></tr>
+<tr class="memdesc:a8efe3e68dbe6cb66e61466035f3f6c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of attendees. The SDK will set this value when the associated settings are turned on. <br /></td></tr>
 <tr class="separator:a8efe3e68dbe6cb66e61466035f3f6c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad68cb89ac2a1d8389ba48528992bae84"><td class="memItemLeft" align="right" valign="top"><a id="ad68cb89ac2a1d8389ba48528992bae84"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#ad68cb89ac2a1d8389ba48528992bae84">isVideoOff</a></td></tr>
-<tr class="memdesc:ad68cb89ac2a1d8389ba48528992bae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">only instance meeting take effect <br /></td></tr>
+<tr class="memdesc:ad68cb89ac2a1d8389ba48528992bae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off video or not. Valid only for the instance meeting. True indicates to turn off. <br /></td></tr>
 <tr class="separator:ad68cb89ac2a1d8389ba48528992bae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a750f835ef2522e318232622f9c1b7cb5"><td class="memItemLeft" align="right" valign="top"><a id="a750f835ef2522e318232622f9c1b7cb5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#a750f835ef2522e318232622f9c1b7cb5">isAudioOff</a></td></tr>
-<tr class="memdesc:a750f835ef2522e318232622f9c1b7cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">only instance meeting take effect <br /></td></tr>
+<tr class="memdesc:a750f835ef2522e318232622f9c1b7cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off audio or not. Valid only for the instance meeting. True indicates to turn off. <br /></td></tr>
 <tr class="separator:a750f835ef2522e318232622f9c1b7cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03263675d83a4666a59ae6eeeb279d45"><td class="memItemLeft" align="right" valign="top"><a id="a03263675d83a4666a59ae6eeeb279d45"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_start_param4_normal_user.html#a03263675d83a4666a59ae6eeeb279d45">isDirectShareDesktop</a></td></tr>
-<tr class="memdesc:a03263675d83a4666a59ae6eeeb279d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">share desktop directly <br /></td></tr>
+<tr class="memdesc:a03263675d83a4666a59ae6eeeb279d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Share the desktop directly or not. True indicates to Share. <br /></td></tr>
 <tr class="separator:a03263675d83a4666a59ae6eeeb279d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Start meeting Parameter. A more detailed struct description. </p>
+<div class="textblock"><p>The parameter of ordinary user when starts meeting. Here are more detailed structural descriptions. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>h/<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a></li>
 </ul>

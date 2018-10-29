@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Recording setting Interface.  
+<p>Recording setting interface.  
  <a href="class_i_recording_setting_context.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a>&gt;</code></p>
@@ -76,14 +76,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a884f4c4307281f2460211c6568824a2a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_recording_setting_context.html#a884f4c4307281f2460211c6568824a2a">SetRecordingPath</a> (const wchar_t *szPath)=0</td></tr>
-<tr class="memdesc:a884f4c4307281f2460211c6568824a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the recording path in setting dialog.  <a href="#a884f4c4307281f2460211c6568824a2a">More...</a><br /></td></tr>
+<tr class="memdesc:a884f4c4307281f2460211c6568824a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the path to save the recording file.  <a href="#a884f4c4307281f2460211c6568824a2a">More...</a><br /></td></tr>
 <tr class="separator:a884f4c4307281f2460211c6568824a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1beb0ba47ed7e12554dbf8e63f1afc4c"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_recording_setting_context.html#a1beb0ba47ed7e12554dbf8e63f1afc4c">GetRecordingPath</a> ()=0</td></tr>
-<tr class="memdesc:a1beb0ba47ed7e12554dbf8e63f1afc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recording path in setting dialog.  <a href="#a1beb0ba47ed7e12554dbf8e63f1afc4c">More...</a><br /></td></tr>
+<tr class="memdesc:a1beb0ba47ed7e12554dbf8e63f1afc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to save the recording file.  <a href="#a1beb0ba47ed7e12554dbf8e63f1afc4c">More...</a><br /></td></tr>
 <tr class="separator:a1beb0ba47ed7e12554dbf8e63f1afc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Recording setting Interface. </p>
+<div class="textblock"><p>Recording setting interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1beb0ba47ed7e12554dbf8e63f1afc4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1beb0ba47ed7e12554dbf8e63f1afc4c">&#9670;&nbsp;</a></span>GetRecordingPath()</h2>
@@ -108,8 +108,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the recording path in setting dialog. </p>
-<dl class="section return"><dt>Returns</dt><dd>the path of recording. </dd></dl>
+<p>Get the path to save the recording file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The path to save the recording file. </dd></dl>
 
 </div>
 </div>
@@ -137,14 +137,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the recording path in setting dialog. </p>
+<p>Set the path to save the recording file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">szPath</td><td>[in] Specifies the path of recording. </td></tr>
+    <tr><td class="paramname">szPath</td><td>Specify the path to save the recording file. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device list pointer. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

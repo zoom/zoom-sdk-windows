@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Recording of Meeting Service Interface  for zoom style and customized style ui mode.  
+<p>Recording of Meeting Service Interface Valid for both ZOOM style and user custom interface mode.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
@@ -92,18 +92,18 @@ Classes</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:a23f918cd77dc684a2105bfe1ee0bdd37"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37">RecordingStatus</a> { <br />
 &#160;&#160;<b>Recording_Start</b>, 
-<b>Recording_Stop</b>, 
-<b>Recording_DiskFull</b>, 
-<b>Recording_Pause</b>, 
+<a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37a0078434a99e2ea30c83a542a0ae50082">Recording_Stop</a>, 
+<a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37a440470e7e2a40c062d711ac9ce67c9fd">Recording_DiskFull</a>, 
+<a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37ab844e63bcebdd4f73a03f9045a2512bb">Recording_Pause</a>, 
 <br />
-&#160;&#160;<b>Recording_Connecting</b>
+&#160;&#160;<a class="el" href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37a81b35bf41074aa57254fabd68778c47a">Recording_Connecting</a>
 <br />
- }<tr class="memdesc:a23f918cd77dc684a2105bfe1ee0bdd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom SDK Namespace.  <a href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37">More...</a><br /></td></tr>
+ }<tr class="memdesc:a23f918cd77dc684a2105bfe1ee0bdd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recording status. Here are more detailed structural descriptions.  <a href="meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a23f918cd77dc684a2105bfe1ee0bdd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Recording of Meeting Service Interface  for zoom style and customized style ui mode. </p>
+<div class="textblock"><p>Recording of Meeting Service Interface Valid for both ZOOM style and user custom interface mode. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a23f918cd77dc684a2105bfe1ee0bdd37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23f918cd77dc684a2105bfe1ee0bdd37">&#9670;&nbsp;</a></span>RecordingStatus</h2>
@@ -117,8 +117,17 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Zoom SDK Namespace. </p>
-<p>Recording status. A more detailed struct description. </p>
+<p>Recording status. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a23f918cd77dc684a2105bfe1ee0bdd37a0078434a99e2ea30c83a542a0ae50082"></a>Recording_Stop&#160;</td><td class="fielddoc"><p>Start, for both local and cloud recording. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a23f918cd77dc684a2105bfe1ee0bdd37a440470e7e2a40c062d711ac9ce67c9fd"></a>Recording_DiskFull&#160;</td><td class="fielddoc"><p>Stop, for both local and cloud recording. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a23f918cd77dc684a2105bfe1ee0bdd37ab844e63bcebdd4f73a03f9045a2512bb"></a>Recording_Pause&#160;</td><td class="fielddoc"><p>Error, for both local and cloud recording. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a23f918cd77dc684a2105bfe1ee0bdd37a81b35bf41074aa57254fabd68778c47a"></a>Recording_Connecting&#160;</td><td class="fielddoc"><p>Pause, for both local and cloud recording. </p>
+</td></tr>
+</table>
 
 </div>
 </div>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Direct share helper Callback Event.  
+<p>Direct sharing helper callback event.  
  <a href="class_i_direct_share_service_helper_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="direct__share__helper__interface_8h_source.html">direct_share_helper_interface.h</a>&gt;</code></p>
@@ -76,11 +76,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bafc99f91b9da66edfae9ab0fca421d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_service_helper_event.html#a5bafc99f91b9da66edfae9ab0fca421d">OnDirectShareStatusUpdate</a> (DirectShareStatus status, <a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html">IDirectShareViaMeetingIDOrPairingCodeHandler</a> *handler)=0</td></tr>
-<tr class="memdesc:a5bafc99f91b9da66edfae9ab0fca421d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct share status update login notification.  <a href="#a5bafc99f91b9da66edfae9ab0fca421d">More...</a><br /></td></tr>
+<tr class="memdesc:a5bafc99f91b9da66edfae9ab0fca421d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event will be triggered if the status of direct sharing changes.  <a href="#a5bafc99f91b9da66edfae9ab0fca421d">More...</a><br /></td></tr>
 <tr class="separator:a5bafc99f91b9da66edfae9ab0fca421d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Direct share helper Callback Event. </p>
+<div class="textblock"><p>Direct sharing helper callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5bafc99f91b9da66edfae9ab0fca421d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bafc99f91b9da66edfae9ab0fca421d">&#9670;&nbsp;</a></span>OnDirectShareStatusUpdate()</h2>
@@ -116,10 +116,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Direct share status update login notification. </p>
+<p>The callback event will be triggered if the status of direct sharing changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">Specifies</td><td>the status of direct share. If the value of direct_share_action is DirectShare_Need_MeetingID_Or_ParingCode, the user must set the value of the _paring_code or _meeting_number to start share. </td></tr>
+    <tr><td class="paramname">status</td><td>Specifies the status of direct sharing. For more details, see <a class="el" href="">DirectShareStatus</a> enum. </td></tr>
+    <tr><td class="paramname">handler</td><td>A pointer to the <a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html" title="Direct sharing by meeting ID or pairing code helper interface. ">IDirectShareViaMeetingIDOrPairingCodeHandler</a>. It is only valid when the value of status is DirectShare_Need_MeetingID_Or_ParingCode. The SDK user must set the value of the _paring_code or _meeting_number via the functions of <a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html" title="Direct sharing by meeting ID or pairing code helper interface. ">IDirectShareViaMeetingIDOrPairingCodeHandler</a> to start direct sharing. For more details, see <a class="el" href="class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html">IDirectShareViaMeetingIDOrPairingCodeHandler</a>. </td></tr>
   </table>
   </dd>
 </dl>

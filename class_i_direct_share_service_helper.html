@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Direct share helper Interface.  
+<p>Direct sharing helper Interface.  
  <a href="class_i_direct_share_service_helper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="direct__share__helper__interface_8h_source.html">direct_share_helper_interface.h</a>&gt;</code></p>
@@ -76,23 +76,80 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afd5582a74fc1cf3dae1b8293c825c89a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_service_helper.html#afd5582a74fc1cf3dae1b8293c825c89a">SetEvent</a> (<a class="el" href="class_i_direct_share_service_helper_event.html">IDirectShareServiceHelperEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:afd5582a74fc1cf3dae1b8293c825c89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct share helper callback event.  <a href="#afd5582a74fc1cf3dae1b8293c825c89a">More...</a><br /></td></tr>
+<tr class="memdesc:afd5582a74fc1cf3dae1b8293c825c89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct sharing helper callback event handler.  <a href="#afd5582a74fc1cf3dae1b8293c825c89a">More...</a><br /></td></tr>
 <tr class="separator:afd5582a74fc1cf3dae1b8293c825c89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a454a46a03023e56051a0d4a6d0b5e281"><td class="memItemLeft" align="right" valign="top"><a id="a454a46a03023e56051a0d4a6d0b5e281"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CanStartDirectShare</b> ()=0</td></tr>
+<tr class="memitem:a454a46a03023e56051a0d4a6d0b5e281"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_service_helper.html#a454a46a03023e56051a0d4a6d0b5e281">CanStartDirectShare</a> ()=0</td></tr>
+<tr class="memdesc:a454a46a03023e56051a0d4a6d0b5e281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is able to start the direct sharing.  <a href="#a454a46a03023e56051a0d4a6d0b5e281">More...</a><br /></td></tr>
 <tr class="separator:a454a46a03023e56051a0d4a6d0b5e281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2eba5d06ee403bd69d942f390fc6f3"><td class="memItemLeft" align="right" valign="top"><a id="a3c2eba5d06ee403bd69d942f390fc6f3"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDirectShareInProgress</b> ()=0</td></tr>
+<tr class="memitem:a3c2eba5d06ee403bd69d942f390fc6f3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_service_helper.html#a3c2eba5d06ee403bd69d942f390fc6f3">IsDirectShareInProgress</a> ()=0</td></tr>
+<tr class="memdesc:a3c2eba5d06ee403bd69d942f390fc6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if direct sharing is in progress.  <a href="#a3c2eba5d06ee403bd69d942f390fc6f3">More...</a><br /></td></tr>
 <tr class="separator:a3c2eba5d06ee403bd69d942f390fc6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27456ce7759bbdee499c5697b44cec9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_service_helper.html#ad27456ce7759bbdee499c5697b44cec9">StartDirectShare</a> ()=0</td></tr>
-<tr class="memdesc:ad27456ce7759bbdee499c5697b44cec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start direct share.  <a href="#ad27456ce7759bbdee499c5697b44cec9">More...</a><br /></td></tr>
+<tr class="memdesc:ad27456ce7759bbdee499c5697b44cec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start direct sharing.  <a href="#ad27456ce7759bbdee499c5697b44cec9">More...</a><br /></td></tr>
 <tr class="separator:ad27456ce7759bbdee499c5697b44cec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec01de1fa8edc3ea6f038b4f92dc949a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_direct_share_service_helper.html#aec01de1fa8edc3ea6f038b4f92dc949a">StopDirectShare</a> ()=0</td></tr>
+<tr class="memdesc:aec01de1fa8edc3ea6f038b4f92dc949a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop direct sharing.  <a href="#aec01de1fa8edc3ea6f038b4f92dc949a">More...</a><br /></td></tr>
 <tr class="separator:aec01de1fa8edc3ea6f038b4f92dc949a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Direct share helper Interface. </p>
+<div class="textblock"><p>Direct sharing helper Interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a454a46a03023e56051a0d4a6d0b5e281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454a46a03023e56051a0d4a6d0b5e281">&#9670;&nbsp;</a></span>CanStartDirectShare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IDirectShareServiceHelper::CanStartDirectShare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if it is able to start the direct sharing. </p>
+<dl class="section return"><dt>Returns</dt><dd>If it is enabled to start the direct sharing, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a3c2eba5d06ee403bd69d942f390fc6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2eba5d06ee403bd69d942f390fc6f3">&#9670;&nbsp;</a></span>IsDirectShareInProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IDirectShareServiceHelper::IsDirectShareInProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if direct sharing is in progress. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the direct sharing is in progress. </dd></dl>
+
+</div>
+</div>
 <a id="afd5582a74fc1cf3dae1b8293c825c89a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd5582a74fc1cf3dae1b8293c825c89a">&#9670;&nbsp;</a></span>SetEvent()</h2>
 
@@ -117,14 +174,14 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDirectShare
 </table>
 </div><div class="memdoc">
 
-<p>Direct share helper callback event. </p>
+<p>Direct sharing helper callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to an IDirectShareServiceHelperEvent* that receives direct share service event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_direct_share_service_helper_event.html" title="Direct sharing helper callback event. ">IDirectShareServiceHelperEvent</a> that receives the direct sharing service event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -151,9 +208,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDirectShare
 </table>
 </div><div class="memdoc">
 
-<p>Start direct share. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>Only login user can call this API. </dd></dl>
+<p>Start direct sharing. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This API can only be called by the logged in user. </dd></dl>
 
 </div>
 </div>
@@ -179,8 +236,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDirectShare
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>Only login user can call this API. </dd></dl>
+
+<p>Stop direct sharing. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This API can only be called by the logged in user. </dd></dl>
 
 </div>
 </div>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,12 @@ $(function() {
 <li>allow_talk
 : <a class="el" href="structtag_webinar_attendee_status.html#a10194dc69e3deb06e88436e89d60bf75">tagWebinarAttendeeStatus</a>
 </li>
+<li>apiuserJoin
+: <a class="el" href="structtag_join_param.html#a6031d5af8a68c4a025b8c733ebc1ccf8">tagJoinParam</a>
+</li>
+<li>apiuserStart
+: <a class="el" href="structtag_start_param.html#ae9f0619ce15ea4d4f24fd4c7cf0e0f38">tagStartParam</a>
+</li>
 <li>appKey
 : <a class="el" href="structtag_auth_param.html#a3c06e3061ceab88f814202e7df693949">tagAuthParam</a>
 </li>
@@ -82,13 +88,26 @@ $(function() {
 
 
 <h3><a id="index_b"></a>- b -</h3><ul>
+<li>bInSplitScreenMode
+: <a class="el" href="structtag_split_screen_info.html#a93f26993613c0c0a4a2b9c6b881a7408">tagSplitScreenInfo</a>
+</li>
+<li>bRememberMe
+: <a class="el" href="structtag_login_param4_email.html#aee61ee186c64efc985970fd7c2141d95">tagLoginParam4Email</a>
+, <a class="el" href="structtag_login_param4_s_s_o.html#a0f9f89b09bc2a702731f34b9ed4f3273">tagLoginParam4SSO</a>
+</li>
 <li>bShow
 : <a class="el" href="structtag_show_setting_dlg_param.html#a0c834ad2005ddc93847ddd8ee539380a">tagShowSettingDlgParam</a>
+</li>
+<li>bSupportSplitScreen
+: <a class="el" href="structtag_split_screen_info.html#a62943c9f188cc23e94b55172e61229c6">tagSplitScreenInfo</a>
 </li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>calendaremail
+: <a class="el" href="structtag_outlook_exchage_auth.html#a3e3b3f86407df1df634dc34b4e37ec6a">tagOutlookExchageAuth</a>
+</li>
 <li>can_chat
 : <a class="el" href="structtag_webinar_attendee_chat_status.html#add04503da4cc93dbb496fcacc3cd8a4a">tagWebinarAttendeeChatStatus</a>
 </li>
@@ -107,6 +126,9 @@ $(function() {
 : <a class="el" href="structtag_normal_meeting_chat_staus.html#a19cd82de22a14ddc2334d9e84393aca1">tagNormalMeetingChatStaus</a>
 , <a class="el" href="structtag_webinar_other_user_role_chat_status.html#aef76b7cdb3908bf9879bbfea368b0785">tagWebinarOtherUserRoleChatStatus</a>
 </li>
+<li>connection_type_
+: <a class="el" href="structtag_overall_statistic_info.html#af305ae1bbe188fe88b38de54ae3ef5fd">tagOverallStatisticInfo</a>
+</li>
 <li>content
 : <a class="el" href="structtag_send_chat_item4_webinar.html#ade16a38b6c515f585eb2aea0a1a24140">tagSendChatItem4Webinar</a>
 </li>
@@ -114,8 +136,33 @@ $(function() {
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>emailLogin
+: <a class="el" href="structtag_login_param.html#a412f627b0085c7b6ffb47c72ac89c8d6">tagLoginParam</a>
+</li>
 <li>emLanguageID
 : <a class="el" href="structtag_init_param.html#a3c0fdbfe50e535bb7a424a3179640fb3">tagInitParam</a>
+</li>
+<li>eShareType
+: <a class="el" href="structtag_share_info.html#aaef6c340ed5166dd682a6ec5dc8f1124">tagShareInfo</a>
+</li>
+<li>eTabPageType
+: <a class="el" href="structtag_show_setting_dlg_param.html#a500d67b27b028510140ac9407cf87c9d">tagShowSettingDlgParam</a>
+</li>
+</ul>
+
+
+<h3><a id="index_f"></a>- f -</h3><ul>
+<li>fps_recv_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#ac75decad0678829ed2de7f522be9abdd">tagASVSessionStatisticInfo</a>
+</li>
+<li>fps_send_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a60ed14c478d1d0d04dbfdbe18b2eaa48">tagASVSessionStatisticInfo</a>
+</li>
+<li>frequency_recv_
+: <a class="el" href="structtag_audio_session_statistic_info.html#ab8794c0e379eaaf4cc3a56e9a68779e0">tagAudioSessionStatisticInfo</a>
+</li>
+<li>frequency_send_
+: <a class="el" href="structtag_audio_session_statistic_info.html#a430c1a2526d418c1d3f251cb2854992c">tagAudioSessionStatisticInfo</a>
 </li>
 </ul>
 
@@ -134,12 +181,19 @@ $(function() {
 <li>hParent
 : <a class="el" href="structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950">tagShowChatDlgParam</a>
 , <a class="el" href="structtag_show_setting_dlg_param.html#acc2a6944153407b6e1715b58ef49ad20">tagShowSettingDlgParam</a>
+, <a class="el" href="structtag_wnd_position.html#a03529808c83dc9c592ad21f742abbc7d">tagWndPosition</a>
 </li>
 <li>hResInstance
 : <a class="el" href="structtag_init_param.html#a230b388bec5685732b308bb13be2de1b">tagInitParam</a>
 </li>
+<li>hSelfWnd
+: <a class="el" href="structtag_wnd_position.html#a0005c79d2ba70a5beba57c244b0b98c8">tagWndPosition</a>
+</li>
 <li>hSettingWnd
 : <a class="el" href="structtag_show_setting_dlg_param.html#aa66ba5c5ba2987166cd4cd6f39bfa39e">tagShowSettingDlgParam</a>
+</li>
+<li>hwndSharedApp
+: <a class="el" href="structtag_share_info.html#a5d8d6723fe57f5fc178eb4fddefc6e6a">tagShareInfo</a>
 </li>
 </ul>
 
@@ -161,7 +215,12 @@ $(function() {
 : <a class="el" href="structtag_chat_status.html#a472555d164aa58985fcaa65256611284">tagChatStatus</a>
 </li>
 <li>isAudioOff
-: <a class="el" href="structtag_start_param4_normal_user.html#a750f835ef2522e318232622f9c1b7cb5">tagStartParam4NormalUser</a>
+: <a class="el" href="structtag_join_param4_a_p_i_user.html#a9b6b82d1f577e0c06be803adfd5e02f9">tagJoinParam4APIUser</a>
+, <a class="el" href="structtag_join_param4_normal_user.html#a5e1717ce6770aa86840f086fc509041c">tagJoinParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_normal_user.html#a750f835ef2522e318232622f9c1b7cb5">tagStartParam4NormalUser</a>
+</li>
+<li>isCanBeRemoteControl
+: <a class="el" href="structtag_viewable_share_source.html#a6f708d39a7fcd1f96ba5597e9cc7e19c">tagViewableShareSource</a>
 </li>
 <li>isDirectShareDesktop
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a9b801feb1f9474d14e6dcc05be70716e">tagJoinParam4APIUser</a>
@@ -170,15 +229,56 @@ $(function() {
 , <a class="el" href="structtag_start_param4_normal_user.html#a03263675d83a4666a59ae6eeeb279d45">tagStartParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_without_login.html#a4cab5bab68a11fa17cbf07bc32e29c6a">tagStartParam4WithoutLogin</a>
 </li>
+<li>isShowingInFirstView
+: <a class="el" href="structtag_viewable_share_source.html#aaeb28b1a4b71a535ae00be3af8025edd">tagViewableShareSource</a>
+</li>
+<li>isShowingInSecondView
+: <a class="el" href="structtag_viewable_share_source.html#ab3222164d60bc33627a6a10923cd57d2">tagViewableShareSource</a>
+</li>
 <li>isVideoOff
-: <a class="el" href="structtag_start_param4_normal_user.html#ad68cb89ac2a1d8389ba48528992bae84">tagStartParam4NormalUser</a>
+: <a class="el" href="structtag_join_param4_a_p_i_user.html#ac137ab4cb1e395791846cbe64376dcae">tagJoinParam4APIUser</a>
+, <a class="el" href="structtag_join_param4_normal_user.html#abf734a910d7583b4d0e51db4c4292fa2">tagJoinParam4NormalUser</a>
+, <a class="el" href="structtag_start_param4_normal_user.html#ad68cb89ac2a1d8389ba48528992bae84">tagStartParam4NormalUser</a>
+</li>
+</ul>
+
+
+<h3><a id="index_j"></a>- j -</h3><ul>
+<li>jitter_recv_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a1f57f59e93b65ff15ac156bfcc1fb51f">tagASVSessionStatisticInfo</a>
+, <a class="el" href="structtag_audio_session_statistic_info.html#ad49e3efd014b3e95a5a6fdea45a3d876">tagAudioSessionStatisticInfo</a>
+</li>
+<li>jitter_send_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#aff8a7a04dd7b981645ec059aa0e9996c">tagASVSessionStatisticInfo</a>
+, <a class="el" href="structtag_audio_session_statistic_info.html#a0ee8f60ed3f37039872e259b7a033740">tagAudioSessionStatisticInfo</a>
 </li>
 </ul>
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
+<li>langInfo
+: <a class="el" href="structtag_customized_language_info.html#a49b1cad7677f30f83d440654efa5c8a1">tagCustomizedLanguageInfo</a>
+</li>
+<li>langName
+: <a class="el" href="structtag_customized_language_info.html#af0fc6581afa9d899bbe354be5f7cb1a9">tagCustomizedLanguageInfo</a>
+</li>
+<li>langType
+: <a class="el" href="structtag_customized_language_info.html#aaac3fcba09d3af186b736ae9a49d9eb1">tagCustomizedLanguageInfo</a>
+</li>
+<li>latency_recv_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#aecb60ec8956d6a347a06b22778f31320">tagASVSessionStatisticInfo</a>
+, <a class="el" href="structtag_audio_session_statistic_info.html#ac968febff4f470e4855c1199b80772cd">tagAudioSessionStatisticInfo</a>
+</li>
+<li>latency_send_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a8cb43a03b2466bceb2a2b01b8fb28916">tagASVSessionStatisticInfo</a>
+, <a class="el" href="structtag_audio_session_statistic_info.html#ac3d80fb1529682a460f410b09e093c63">tagAudioSessionStatisticInfo</a>
+</li>
 <li>left
 : <a class="el" href="structtag_show_setting_dlg_param.html#ac0f20eb9a6cfcd3edcadea08a419bf45">tagShowSettingDlgParam</a>
+, <a class="el" href="structtag_wnd_position.html#abcb74ca48cba729d7d778368385e0717">tagWndPosition</a>
+</li>
+<li>loginType
+: <a class="el" href="structtag_login_param.html#a9799e5c8726733dfeb403d11ff8aa19e">tagLoginParam</a>
 </li>
 </ul>
 
@@ -193,12 +293,18 @@ $(function() {
 <li>meeting_topic
 : <a class="el" href="structtag_meeting_parameter.html#ab142f95d832ae873acff120521eaeb19">tagMeetingParameter</a>
 </li>
+<li>meeting_type
+: <a class="el" href="structtag_meeting_parameter.html#a55a961a430d8c808e29167e73b90619c">tagMeetingParameter</a>
+</li>
 <li>meetingNumber
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a0f778ba74be0509f5c19f2dad4ce868b">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#a3a1bef54cd5feb777972b66e3a72dade">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#abe4e485280b82c0a38c4ba6b04d80777">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_normal_user.html#a4e7cd6af311030ec679b093aadce2e29">tagStartParam4NormalUser</a>
 , <a class="el" href="structtag_start_param4_without_login.html#aabadfd8c4f2fdd5e76019952706e533d">tagStartParam4WithoutLogin</a>
+</li>
+<li>monitorID
+: <a class="el" href="structtag_share_info.html#ad385d3c6660fc0623627aa0cd7153637">tagShareInfo</a>
 </li>
 <li>msgType
 : <a class="el" href="structtag_send_chat_item4_webinar.html#a247408516474b7e56da598ae32c7ee0f">tagSendChatItem4Webinar</a>
@@ -207,13 +313,53 @@ $(function() {
 
 
 <h3><a id="index_n"></a>- n -</h3><ul>
-<li>normal_meeting_status
-: <a class="el" href="structtag_chat_status.html#ac3c6335a63f4b36c435bf0647a1118e3">tagChatStatus</a>
+<li>nCurrentPage
+: <a class="el" href="structtag_video_wall_page_info_param.html#a9271fe16cafe20cb1470cfa61a3dc09d">tagVideoWallPageInfoParam</a>
+</li>
+<li>net_work_type_
+: <a class="el" href="structtag_overall_statistic_info.html#ad13d75c918304015775684020fd25c60">tagOverallStatisticInfo</a>
+</li>
+<li>normaluserJoin
+: <a class="el" href="structtag_join_param.html#a5c3dac4b425876309b2e5e35f2be39d6">tagJoinParam</a>
+</li>
+<li>normaluserStart
+: <a class="el" href="structtag_start_param.html#a1ba73f287780b4bd29fdc4ba386ef0f3">tagStartParam</a>
+</li>
+<li>nTotalPages
+: <a class="el" href="structtag_video_wall_page_info_param.html#af21244cecc699fae50ebce2f7e931c7d">tagVideoWallPageInfoParam</a>
+</li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>obConfigOpts
+: <a class="el" href="structtag_init_param.html#aa5437efac4f1d4b3e57e816277f25d19">tagInitParam</a>
+</li>
+<li>optionalFeatures
+: <a class="el" href="structtag_configurable_options.html#ae86fedd124d33f8cb47aa0dbc7912af7">tagConfigurableOptions</a>
 </li>
 </ul>
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>packetloss_recv_
+: <a class="el" href="structtag_audio_session_statistic_info.html#a26bd4c32e53ad9b109826221d35f1139">tagAudioSessionStatisticInfo</a>
+</li>
+<li>packetloss_recv_avg_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a1e8f175b961ba35f4ed62a2f539939ae">tagASVSessionStatisticInfo</a>
+</li>
+<li>packetloss_recv_max_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#aa93c63d41cd6f988a5119113cd3e7f32">tagASVSessionStatisticInfo</a>
+</li>
+<li>packetloss_send_
+: <a class="el" href="structtag_audio_session_statistic_info.html#a47d361663e604cf71a00914ce0a61c2e">tagAudioSessionStatisticInfo</a>
+</li>
+<li>packetloss_send_avg_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a5c1988420e5c59969bc9914ef984a929">tagASVSessionStatisticInfo</a>
+</li>
+<li>packetloss_send_max_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#ac05a085c67361d513804193ef7d4e24d">tagASVSessionStatisticInfo</a>
+</li>
 <li>participantId
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a13a364736bdcc6291377c4bbd8ba2f09">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#a848630bb945ca76a1d5f4aeba0609717">tagJoinParam4NormalUser</a>
@@ -223,6 +369,10 @@ $(function() {
 </li>
 <li>password
 : <a class="el" href="structtag_login_param4_email.html#a58dfc5a39504b7b868e59ad70243efd2">tagLoginParam4Email</a>
+, <a class="el" href="structtag_outlook_exchage_auth.html#abef5cb55f1c5b8b84d5daaea3a3a6c2b">tagOutlookExchageAuth</a>
+</li>
+<li>proxy_addr_
+: <a class="el" href="structtag_overall_statistic_info.html#ada4a5d6d6c2f3c61d3fda974022a09fb">tagOverallStatisticInfo</a>
 </li>
 <li>psw
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a153fbd01ae306e402d93b4a95cfe2417">tagJoinParam4APIUser</a>
@@ -235,10 +385,22 @@ $(function() {
 <li>rect
 : <a class="el" href="structtag_show_chat_dlg_param.html#a71703923de2c90a207df7d9a497267bd">tagShowChatDlgParam</a>
 </li>
+<li>resolution_recv_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a782b6c05eaac48b4f97c5b29b6b0777d">tagASVSessionStatisticInfo</a>
+</li>
+<li>resolution_send_
+: <a class="el" href="structtag_a_s_v_session_statistic_info.html#a90f68a4f0ee70b1561fc2153e72178d9">tagASVSessionStatisticInfo</a>
+</li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>serverUrl
+: <a class="el" href="structtag_outlook_exchage_auth.html#a21d458d4ec235bb7c039ca838fc469db">tagOutlookExchageAuth</a>
+</li>
+<li>ssoLogin
+: <a class="el" href="structtag_login_param.html#a0a2188eba132d597b003c8f20a9c4b66">tagLoginParam</a>
+</li>
 <li>ssoToken
 : <a class="el" href="structtag_login_param4_s_s_o.html#ada6aab024a9bc26d45a391bbd5d29d7f">tagLoginParam4SSO</a>
 </li>
@@ -260,6 +422,7 @@ $(function() {
 </li>
 <li>top
 : <a class="el" href="structtag_show_setting_dlg_param.html#aaca9c27f9bdc9e82e8f4f75eaca48f34">tagShowSettingDlgParam</a>
+, <a class="el" href="structtag_wnd_position.html#a64a6cabaeceb6a087be795501286b718">tagWndPosition</a>
 </li>
 </ul>
 
@@ -276,10 +439,14 @@ $(function() {
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#a977065d630ce9f2f85c5af5e95d6cb7c">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_without_login.html#ad165fd04d1f6e6aa066570a20bb7e429">tagStartParam4WithoutLogin</a>
 </li>
+<li>userid
+: <a class="el" href="structtag_viewable_share_source.html#abbbf109f4f4e7e91c50e17a9b6aa5ab2">tagViewableShareSource</a>
+</li>
 <li>userName
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#a249db2a60f452bce1521fa3742a84850">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#ab5ac4a290729d2bf8bd7b7289d90986e">tagJoinParam4NormalUser</a>
 , <a class="el" href="structtag_login_param4_email.html#a1e11e12b519609cae8a4a1a662540865">tagLoginParam4Email</a>
+, <a class="el" href="structtag_outlook_exchage_auth.html#afd9359902737e3427958b11467afa5b2">tagOutlookExchageAuth</a>
 , <a class="el" href="structtag_start_param4_a_p_i_user.html#a1f4ee3c61972ccb51be7ad6551d2dab7">tagStartParam4APIUser</a>
 , <a class="el" href="structtag_start_param4_without_login.html#a4305b876286701a02dc7881d5cb04f78">tagStartParam4WithoutLogin</a>
 </li>
@@ -293,6 +460,9 @@ $(function() {
 </li>
 <li>userZAK
 : <a class="el" href="structtag_start_param4_without_login.html#a71459533f7d78d930f8a0e3c2404007a">tagStartParam4WithoutLogin</a>
+</li>
+<li>ut
+: <a class="el" href="structtag_chat_status.html#a609453fdf918fe461258b3f433959ace">tagChatStatus</a>
 </li>
 </ul>
 
@@ -309,15 +479,22 @@ $(function() {
 
 
 <h3><a id="index_w"></a>- w -</h3><ul>
-<li>webinar_attendee_status
-: <a class="el" href="structtag_chat_status.html#a2e79834a416d484e377acf91fa6cc4f9">tagChatStatus</a>
-</li>
-<li>webinar_other_status
-: <a class="el" href="structtag_chat_status.html#aeb77b075b4c0772c038869a6bc881a2a">tagChatStatus</a>
-</li>
 <li>webinarToken
 : <a class="el" href="structtag_join_param4_a_p_i_user.html#ac839bcd8ac9f44d1134c178775be29b9">tagJoinParam4APIUser</a>
 , <a class="el" href="structtag_join_param4_normal_user.html#a65b7e6729686f85c9a9b6da544282ed7">tagJoinParam4NormalUser</a>
+</li>
+<li>withoutloginStart
+: <a class="el" href="structtag_start_param.html#aef58ad62c9f2c9a45eb9a53d6961dc46">tagStartParam</a>
+</li>
+<li>withoutloginuserJoin
+: <a class="el" href="structtag_join_param.html#acb53aa094aa91c440a6a2407c74eb4cd">tagJoinParam</a>
+</li>
+</ul>
+
+
+<h3><a id="index_z"></a>- z -</h3><ul>
+<li>zoomuserType
+: <a class="el" href="structtag_start_param4_without_login.html#af577dd99e2609ab321a223c362f679b1">tagStartParam4WithoutLogin</a>
 </li>
 </ul>
 </div><!-- contents -->

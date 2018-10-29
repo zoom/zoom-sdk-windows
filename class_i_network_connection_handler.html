@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>the network connection handler callback event  
+<p>The network connection handler callback event.  
  <a href="class_i_network_connection_handler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="network__connection__handler__interface_8h_source.html">network_connection_handler_interface.h</a>&gt;</code></p>
@@ -77,20 +77,77 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a224f41b865924554e7ab0c03c5a98e24"><td class="memItemLeft" align="right" valign="top"><a id="a224f41b865924554e7ab0c03c5a98e24"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_handler.html#a224f41b865924554e7ab0c03c5a98e24">onProxyDetectComplete</a> ()=0</td></tr>
-<tr class="memdesc:a224f41b865924554e7ab0c03c5a98e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proxy detect complete notify. <br /></td></tr>
+<tr class="memdesc:a224f41b865924554e7ab0c03c5a98e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification callback of completing the proxy detection. <br /></td></tr>
 <tr class="separator:a224f41b865924554e7ab0c03c5a98e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06cee1732cca5e116b9c56da4d3d45fa"><td class="memItemLeft" align="right" valign="top"><a id="a06cee1732cca5e116b9c56da4d3d45fa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_handler.html#a06cee1732cca5e116b9c56da4d3d45fa">onProxySettingNotification</a> (<a class="el" href="class_i_proxy_setting_handler.html">IProxySettingHandler</a> *handler)=0</td></tr>
-<tr class="memdesc:a06cee1732cca5e116b9c56da4d3d45fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">must prompt the user for their username and password of the proxy,when receive this message <br /></td></tr>
+<tr class="memitem:a06cee1732cca5e116b9c56da4d3d45fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_handler.html#a06cee1732cca5e116b9c56da4d3d45fa">onProxySettingNotification</a> (<a class="el" href="class_i_proxy_setting_handler.html">IProxySettingHandler</a> *handler)=0</td></tr>
+<tr class="memdesc:a06cee1732cca5e116b9c56da4d3d45fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered if the proxy requests to input the username and password.  <a href="#a06cee1732cca5e116b9c56da4d3d45fa">More...</a><br /></td></tr>
 <tr class="separator:a06cee1732cca5e116b9c56da4d3d45fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30e8c3f98d472182ce0ba041a143f104"><td class="memItemLeft" align="right" valign="top"><a id="a30e8c3f98d472182ce0ba041a143f104"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_handler.html#a30e8c3f98d472182ce0ba041a143f104">onSSLCertVerifyNotification</a> (<a class="el" href="class_i_s_s_l_cert_verification_handler.html">ISSLCertVerificationHandler</a> *handler)=0</td></tr>
-<tr class="memdesc:a30e8c3f98d472182ce0ba041a143f104"><td class="mdescLeft">&#160;</td><td class="mdescRight">must prompt the user for the SSL Certificate Verification,when receive this message <br /></td></tr>
+<tr class="memitem:a30e8c3f98d472182ce0ba041a143f104"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_handler.html#a30e8c3f98d472182ce0ba041a143f104">onSSLCertVerifyNotification</a> (<a class="el" href="class_i_s_s_l_cert_verification_handler.html">ISSLCertVerificationHandler</a> *handler)=0</td></tr>
+<tr class="memdesc:a30e8c3f98d472182ce0ba041a143f104"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered when the SSL is verified.  <a href="#a30e8c3f98d472182ce0ba041a143f104">More...</a><br /></td></tr>
 <tr class="separator:a30e8c3f98d472182ce0ba041a143f104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>the network connection handler callback event </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>The network connection handler callback event. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a06cee1732cca5e116b9c56da4d3d45fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06cee1732cca5e116b9c56da4d3d45fa">&#9670;&nbsp;</a></span>onProxySettingNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void INetworkConnectionHandler::onProxySettingNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_proxy_setting_handler.html">IProxySettingHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback will be triggered if the proxy requests to input the username and password. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Use the handler to configure the related information. For more details, see <a class="el" href="class_i_proxy_setting_handler.html">IProxySettingHandler</a>. The handler will be destroyed once the function calls end. </dd></dl>
+
+</div>
+</div>
+<a id="a30e8c3f98d472182ce0ba041a143f104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e8c3f98d472182ce0ba041a143f104">&#9670;&nbsp;</a></span>onSSLCertVerifyNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void INetworkConnectionHandler::onSSLCertVerifyNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_s_s_l_cert_verification_handler.html">ISSLCertVerificationHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback will be triggered when the SSL is verified. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>Use the handler to check the related information. For more details, see <a class="el" href="class_i_s_s_l_cert_verification_handler.html">ISSLCertVerificationHandler</a>. The handler will be destroyed once the function calls end. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="network__connection__handler__interface_8h_source.html">network_connection_handler_interface.h</a></li>
 </ul>
 </div><!-- contents -->

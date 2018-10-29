@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,22 +68,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting H323 Helper callback event.  
+<p>Meeting H.323 Helper callback event.  
  <a href="class_i_meeting_h323_helper_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__h323__helper__interface_8h_source.html">meeting_h323_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae17f9085dc3a72e3b32815b26edc700f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper_event.html#ae17f9085dc3a72e3b32815b26edc700f">onCalloutStatusNotify</a> (H323CalloutStatus status)=0</td></tr>
-<tr class="memdesc:ae17f9085dc3a72e3b32815b26edc700f"><td class="mdescLeft">&#160;</td><td class="mdescRight">H323 device call out status callback.  <a href="#ae17f9085dc3a72e3b32815b26edc700f">More...</a><br /></td></tr>
+<tr class="memitem:ae17f9085dc3a72e3b32815b26edc700f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper_event.html#ae17f9085dc3a72e3b32815b26edc700f">onCalloutStatusNotify</a> (<a class="el" href="meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9d">H323CalloutStatus</a> status)=0</td></tr>
+<tr class="memdesc:ae17f9085dc3a72e3b32815b26edc700f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event when the calling status of H.323 device changes.  <a href="#ae17f9085dc3a72e3b32815b26edc700f">More...</a><br /></td></tr>
 <tr class="separator:ae17f9085dc3a72e3b32815b26edc700f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85b5ec37a55f647b0b13ab824a49547e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper_event.html#a85b5ec37a55f647b0b13ab824a49547e">onParingH323Result</a> (H323ParingResult result)=0</td></tr>
-<tr class="memdesc:a85b5ec37a55f647b0b13ab824a49547e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paring H323 to meeting status callback.  <a href="#a85b5ec37a55f647b0b13ab824a49547e">More...</a><br /></td></tr>
-<tr class="separator:a85b5ec37a55f647b0b13ab824a49547e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79281bf12c344e4cabdb3a78a4e7cd1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper_event.html#ae79281bf12c344e4cabdb3a78a4e7cd1">onParingH323Result</a> (<a class="el" href="meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49">H323ParingResult</a> result, UINT64 meetingNumber)=0</td></tr>
+<tr class="memdesc:ae79281bf12c344e4cabdb3a78a4e7cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event is triggered when the result of using the H.323 device to pair the assigned meeting is out.  <a href="#ae79281bf12c344e4cabdb3a78a4e7cd1">More...</a><br /></td></tr>
+<tr class="separator:ae79281bf12c344e4cabdb3a78a4e7cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting H323 Helper callback event. </p>
+<div class="textblock"><p>Meeting H.323 Helper callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae17f9085dc3a72e3b32815b26edc700f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae17f9085dc3a72e3b32815b26edc700f">&#9670;&nbsp;</a></span>onCalloutStatusNotify()</h2>
@@ -97,7 +97,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IMeetingH323HelperEvent::onCalloutStatusNotify </td>
           <td>(</td>
-          <td class="paramtype">H323CalloutStatus&#160;</td>
+          <td class="paramtype"><a class="el" href="meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9d">H323CalloutStatus</a>&#160;</td>
           <td class="paramname"><em>status</em></td><td>)</td>
           <td></td>
         </tr>
@@ -109,18 +109,18 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>H323 device call out status callback. </p>
+<p>Callback event when the calling status of H.323 device changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>H323 device call out status value. </td></tr>
+    <tr><td class="paramname">status</td><td>H.323 device calling out status value. For more details, see <a class="el" href="meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9d">H323CalloutStatus</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a85b5ec37a55f647b0b13ab824a49547e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85b5ec37a55f647b0b13ab824a49547e">&#9670;&nbsp;</a></span>onParingH323Result()</h2>
+<a id="ae79281bf12c344e4cabdb3a78a4e7cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79281bf12c344e4cabdb3a78a4e7cd1">&#9670;&nbsp;</a></span>onParingH323Result()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,9 +131,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IMeetingH323HelperEvent::onParingH323Result </td>
           <td>(</td>
-          <td class="paramtype">H323ParingResult&#160;</td>
-          <td class="paramname"><em>result</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49">H323ParingResult</a>&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">UINT64&#160;</td>
+          <td class="paramname"><em>meetingNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -143,10 +153,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Paring H323 to meeting status callback. </p>
+<p>The callback event is triggered when the result of using the H.323 device to pair the assigned meeting is out. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>Paring result. </td></tr>
+    <tr><td class="paramname">result</td><td>Paring result. For more details, see <a class="el" href="meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49">H323ParingResult</a> enum. </td></tr>
+    <tr><td class="paramname">meetingNumber</td><td>The meeting number to be paired. </td></tr>
   </table>
   </dd>
 </dl>

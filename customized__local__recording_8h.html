@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>zoom customized local recording interface  
+<p>ZOOM Custom Local Recording Interface.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -85,21 +85,53 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a369e647ab2157bd8cfc2e4564ee92335"><td class="memItemLeft" align="right" valign="top"><a id="a369e647ab2157bd8cfc2e4564ee92335"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>RECORDING_LAYOUT_MODE</b> { <br />
-&#160;&#160;<b>RECORDING_LAYOUT_MODE_NONE</b> = 0, 
-<b>RECORDING_LAYOUT_MODE_ACTIVE_VIDEO_ONLY</b> = 1, 
-<b>RECORDING_LAYOUT_MODE_VIDEO_WALL</b> = (1&lt;&lt;1), 
-<b>RECORDING_LAYOUT_MODE_SHARE_AND_VIDEO</b> = (1&lt;&lt;2), 
+<tr class="memitem:a369e647ab2157bd8cfc2e4564ee92335"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a> { <br />
+&#160;&#160;<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335aa351703b0d9dff37da1bb21589a02a9e">RECORDING_LAYOUT_MODE_NONE</a> = 0, 
+<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335aa087d1ce2c72eea250ebe76f1eb936e9">RECORDING_LAYOUT_MODE_ACTIVE_VIDEO_ONLY</a> = 1, 
+<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335aadecf52ea580409091daf8ef5a9af916">RECORDING_LAYOUT_MODE_VIDEO_WALL</a> = (1&lt;&lt;1), 
+<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335af43c6ec2f9a0f780bea24b1084a24a1a">RECORDING_LAYOUT_MODE_SHARE_AND_VIDEO</a> = (1&lt;&lt;2), 
 <br />
-&#160;&#160;<b>RECORDING_LAYOUT_MODE_ONLY_AUDIO</b> = (1&lt;&lt;3), 
-<b>RECORDING_LAYOUT_MODE_ONLY_SHARE</b> = (1&lt;&lt;4)
+&#160;&#160;<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335a7d900bdb73ad9546cbc529bf7f5e2f9a">RECORDING_LAYOUT_MODE_ONLY_AUDIO</a> = (1&lt;&lt;3), 
+<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335ac74f2d5c403c7e7b3b85b89b07beed08">RECORDING_LAYOUT_MODE_ONLY_SHARE</a> = (1&lt;&lt;4)
 <br />
- }</td></tr>
+ }<tr class="memdesc:a369e647ab2157bd8cfc2e4564ee92335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layout mode of local recording. Here are more detailed structural descriptions.  <a href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a369e647ab2157bd8cfc2e4564ee92335"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>zoom customized local recording interface </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>ZOOM Custom Local Recording Interface. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a369e647ab2157bd8cfc2e4564ee92335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369e647ab2157bd8cfc2e4564ee92335">&#9670;&nbsp;</a></span>RECORDING_LAYOUT_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Layout mode of local recording. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a369e647ab2157bd8cfc2e4564ee92335aa351703b0d9dff37da1bb21589a02a9e"></a>RECORDING_LAYOUT_MODE_NONE&#160;</td><td class="fielddoc"><p>For initialization. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a369e647ab2157bd8cfc2e4564ee92335aa087d1ce2c72eea250ebe76f1eb936e9"></a>RECORDING_LAYOUT_MODE_ACTIVE_VIDEO_ONLY&#160;</td><td class="fielddoc"><p>Record only the active video for the moment. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a369e647ab2157bd8cfc2e4564ee92335aadecf52ea580409091daf8ef5a9af916"></a>RECORDING_LAYOUT_MODE_VIDEO_WALL&#160;</td><td class="fielddoc"><p>Record the video wall. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a369e647ab2157bd8cfc2e4564ee92335af43c6ec2f9a0f780bea24b1084a24a1a"></a>RECORDING_LAYOUT_MODE_SHARE_AND_VIDEO&#160;</td><td class="fielddoc"><p>Record the shared content, video or other specified videos. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a369e647ab2157bd8cfc2e4564ee92335a7d900bdb73ad9546cbc529bf7f5e2f9a"></a>RECORDING_LAYOUT_MODE_ONLY_AUDIO&#160;</td><td class="fielddoc"><p>Record only the audio. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a369e647ab2157bd8cfc2e4564ee92335ac74f2d5c403c7e7b3b85b89b07beed08"></a>RECORDING_LAYOUT_MODE_ONLY_SHARE&#160;</td><td class="fielddoc"><p>Record only the shared content. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

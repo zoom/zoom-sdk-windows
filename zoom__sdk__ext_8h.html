@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Zoom Windows SDK.  
+<p>ZOOM SDK Embedded Browser Interface.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -80,17 +80,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6b85a452502a87105494c76afe535725"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__ext_8h.html#a6b85a452502a87105494c76afe535725">CreateEmbeddedBrowser</a> (<a class="el" href="class_i_embedded_browser.html">IEmbeddedBrowser</a> **ppEmbeddedBrowser, HWND hwnd)</td></tr>
-<tr class="memdesc:a6b85a452502a87105494c76afe535725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Embedded Browser Interface.  <a href="#a6b85a452502a87105494c76afe535725">More...</a><br /></td></tr>
+<tr class="memdesc:a6b85a452502a87105494c76afe535725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create embedded browser interface.  <a href="#a6b85a452502a87105494c76afe535725">More...</a><br /></td></tr>
 <tr class="separator:a6b85a452502a87105494c76afe535725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae872fabba4acc33e123858e7ebfd0aa9"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__ext_8h.html#ae872fabba4acc33e123858e7ebfd0aa9">DestroyEmbeddedBrowser</a> (<a class="el" href="class_i_embedded_browser.html">IEmbeddedBrowser</a> *pEmbeddedBrowser)</td></tr>
-<tr class="memdesc:ae872fabba4acc33e123858e7ebfd0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy Embedded Browser Interface.  <a href="#ae872fabba4acc33e123858e7ebfd0aa9">More...</a><br /></td></tr>
+<tr class="memdesc:ae872fabba4acc33e123858e7ebfd0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy embedded browser interface.  <a href="#ae872fabba4acc33e123858e7ebfd0aa9">More...</a><br /></td></tr>
 <tr class="separator:ae872fabba4acc33e123858e7ebfd0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a480b96870f76f1fbe0d51b5d4e440acb"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb">RetrieveUIHooker</a> (<a class="el" href="class_i_u_i_hooker.html">IUIHooker</a> **ppUIHooker)</td></tr>
-<tr class="memdesc:a480b96870f76f1fbe0d51b5d4e440acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve UI Hooker Interface.  <a href="#a480b96870f76f1fbe0d51b5d4e440acb">More...</a><br /></td></tr>
+<tr class="memdesc:a480b96870f76f1fbe0d51b5d4e440acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve user Hooker interface.  <a href="#a480b96870f76f1fbe0d51b5d4e440acb">More...</a><br /></td></tr>
 <tr class="separator:a480b96870f76f1fbe0d51b5d4e440acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Zoom Windows SDK. </p>
+<div class="textblock"><p>ZOOM SDK Embedded Browser Interface. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a6b85a452502a87105494c76afe535725"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b85a452502a87105494c76afe535725">&#9670;&nbsp;</a></span>CreateEmbeddedBrowser()</h2>
@@ -118,15 +118,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create Embedded Browser Interface. </p>
+<p>Create embedded browser interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ppEmbeddedBrowser</td><td>A pointer to a IEmbeddedBrowser* that receives <a class="el" href="class_i_embedded_browser.html" title="Embedded Browser Interface. ">IEmbeddedBrowser</a> Object. </td></tr>
-    <tr><td class="paramname">hwnd</td><td>parent window of the embedded browser. </td></tr>
+    <tr><td class="paramname">ppEmbeddedBrowser</td><td>An object pointer to the IEmbeddedBrowser*. </td></tr>
+    <tr><td class="paramname">hwnd</td><td>The handle of the window in which the browser object is embedded. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -146,14 +146,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy Embedded Browser Interface. </p>
+<p>Destroy embedded browser interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEmbeddedBrowser</td><td>A pointer to a <a class="el" href="class_i_embedded_browser.html" title="Embedded Browser Interface. ">IEmbeddedBrowser</a> to be destroyed. </td></tr>
+    <tr><td class="paramname">pEmbeddedBrowser</td><td>A pointer to the <a class="el" href="class_i_embedded_browser.html" title="Embedded Browser Interface. ">IEmbeddedBrowser</a> to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -173,14 +173,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve UI Hooker Interface. </p>
+<p>Retrieve user Hooker interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ppUIHooker</td><td>A pointer to a IUIHooker* that receives <a class="el" href="class_i_u_i_hooker.html" title="Embedded Browser Interface. ">IUIHooker</a> Object. </td></tr>
+    <tr><td class="paramname">ppUIHooker</td><td>A pointer to the IUIHooker*. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

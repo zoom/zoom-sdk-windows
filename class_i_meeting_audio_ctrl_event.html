@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af1c8eaef123247b389046c1993759071"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_audio_ctrl_event.html#af1c8eaef123247b389046c1993759071">onUserAudioStatusChange</a> (<a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_user_audio_status.html">IUserAudioStatus</a> * &gt; *lstAudioStatusChange, const wchar_t *strAudioStatusList=NULL)=0</td></tr>
-<tr class="memdesc:af1c8eaef123247b389046c1993759071"><td class="mdescLeft">&#160;</td><td class="mdescRight">User's audio status change callback.  <a href="#af1c8eaef123247b389046c1993759071">More...</a><br /></td></tr>
+<tr class="memdesc:af1c8eaef123247b389046c1993759071"><td class="mdescLeft">&#160;</td><td class="mdescRight">User's audio status changed callback.  <a href="#af1c8eaef123247b389046c1993759071">More...</a><br /></td></tr>
 <tr class="separator:af1c8eaef123247b389046c1993759071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a220486be2d7fa30c6464e91b3754e114"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_audio_ctrl_event.html#a220486be2d7fa30c6464e91b3754e114">onUserActiveAudioChange</a> (<a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *plstActiveAudio)=0</td></tr>
-<tr class="memdesc:a220486be2d7fa30c6464e91b3754e114"><td class="mdescLeft">&#160;</td><td class="mdescRight">active audio change callback  <a href="#a220486be2d7fa30c6464e91b3754e114">More...</a><br /></td></tr>
+<tr class="memdesc:a220486be2d7fa30c6464e91b3754e114"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event that users whose audio is active changed.  <a href="#a220486be2d7fa30c6464e91b3754e114">More...</a><br /></td></tr>
 <tr class="separator:a220486be2d7fa30c6464e91b3754e114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -109,10 +109,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>active audio change callback </p>
+<p>The callback event that users whose audio is active changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lstActiveVideo</td><td>the list of active audio user. </td></tr>
+    <tr><td class="paramname">plstActiveAudio</td><td>List to store the ID of user whose audio is active. </td></tr>
   </table>
   </dd>
 </dl>
@@ -153,11 +153,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>User's audio status change callback. </p>
+<p>User's audio status changed callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lstAudioStatusChange</td><td>List of status changed user. This param will invalid after this function call end. </td></tr>
-    <tr><td class="paramname">strAudioStatusList</td><td>Audio status change list in json format,Reserved. </td></tr>
+    <tr><td class="paramname">lstAudioStatusChange</td><td>List of the user information with audio status changed. The list will be emptied once the function calls end. </td></tr>
+    <tr><td class="paramname">strAudioStatusList</td><td>List of the user information whose audio status changes, saved in json format. This parameter is currently invalid, hereby only for reservations. </td></tr>
   </table>
   </dd>
 </dl>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting phone Helper Interface.  
+<p>Meeting phone helper interface.  
  <a href="class_i_meeting_phone_helper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__phone__helper__interface_8h_source.html">meeting_phone_helper_interface.h</a>&gt;</code></p>
@@ -76,41 +76,41 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a08af8196f279bd886a26e27bdf3cb442"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a08af8196f279bd886a26e27bdf3cb442">SetEvent</a> (<a class="el" href="class_i_meeting_phone_helper_event.html">IMeetingPhoneHelperEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a08af8196f279bd886a26e27bdf3cb442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting phone helper callback event.  <a href="#a08af8196f279bd886a26e27bdf3cb442">More...</a><br /></td></tr>
+<tr class="memdesc:a08af8196f279bd886a26e27bdf3cb442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting phone helper callback event handler.  <a href="#a08af8196f279bd886a26e27bdf3cb442">More...</a><br /></td></tr>
 <tr class="separator:a08af8196f279bd886a26e27bdf3cb442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1332b3934e6491592f8b01f61effcd9d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a1332b3934e6491592f8b01f61effcd9d">IsSupportPhoneFeature</a> ()=0</td></tr>
-<tr class="memdesc:a1332b3934e6491592f8b01f61effcd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">support phone feature or not for current meeting  <a href="#a1332b3934e6491592f8b01f61effcd9d">More...</a><br /></td></tr>
+<tr class="memdesc:a1332b3934e6491592f8b01f61effcd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the meeting supports to join by the phone or not.  <a href="#a1332b3934e6491592f8b01f61effcd9d">More...</a><br /></td></tr>
 <tr class="separator:a1332b3934e6491592f8b01f61effcd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cc98b98d358504c69e799c8473d9c67"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_meeting_phone_support_country_info.html">IMeetingPhoneSupportCountryInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a4cc98b98d358504c69e799c8473d9c67">GetSupportCountryInfo</a> ()=0</td></tr>
-<tr class="memdesc:a4cc98b98d358504c69e799c8473d9c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the supported country for phone feature.  <a href="#a4cc98b98d358504c69e799c8473d9c67">More...</a><br /></td></tr>
+<tr class="memdesc:a4cc98b98d358504c69e799c8473d9c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of the country information where the meeting supports to join by telephone.  <a href="#a4cc98b98d358504c69e799c8473d9c67">More...</a><br /></td></tr>
 <tr class="separator:a4cc98b98d358504c69e799c8473d9c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4989d435b33d06eda1424c97d89d09b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a4989d435b33d06eda1424c97d89d09b4">InviteCallOutUser</a> (const wchar_t *countryCode, const wchar_t *phoneNumber, const wchar_t *name)=0</td></tr>
-<tr class="memdesc:a4989d435b33d06eda1424c97d89d09b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">invite the user to the meeting by phone  <a href="#a4989d435b33d06eda1424c97d89d09b4">More...</a><br /></td></tr>
+<tr class="memdesc:a4989d435b33d06eda1424c97d89d09b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invite the specified user to join the meeting by call out.  <a href="#a4989d435b33d06eda1424c97d89d09b4">More...</a><br /></td></tr>
 <tr class="separator:a4989d435b33d06eda1424c97d89d09b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20fbf811d3d64d5c97c274c5fba682df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a20fbf811d3d64d5c97c274c5fba682df">CancelCallOut</a> ()=0</td></tr>
-<tr class="memdesc:a20fbf811d3d64d5c97c274c5fba682df"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel in progress callout invite.  <a href="#a20fbf811d3d64d5c97c274c5fba682df">More...</a><br /></td></tr>
+<tr class="memdesc:a20fbf811d3d64d5c97c274c5fba682df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the invitation that is being called out by phone.  <a href="#a20fbf811d3d64d5c97c274c5fba682df">More...</a><br /></td></tr>
 <tr class="separator:a20fbf811d3d64d5c97c274c5fba682df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b8093c214a7c46e0e65e41b5d52a6a"><td class="memItemLeft" align="right" valign="top">virtual PhoneStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#ae8b8093c214a7c46e0e65e41b5d52a6a">GetInviteCalloutUserStatus</a> ()=0</td></tr>
-<tr class="memdesc:ae8b8093c214a7c46e0e65e41b5d52a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the status of the in progress callout invite.  <a href="#ae8b8093c214a7c46e0e65e41b5d52a6a">More...</a><br /></td></tr>
+<tr class="memitem:ae8b8093c214a7c46e0e65e41b5d52a6a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#ae8b8093c214a7c46e0e65e41b5d52a6a">GetInviteCalloutUserStatus</a> ()=0</td></tr>
+<tr class="memdesc:ae8b8093c214a7c46e0e65e41b5d52a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the process of the invitation by call out.  <a href="#ae8b8093c214a7c46e0e65e41b5d52a6a">More...</a><br /></td></tr>
 <tr class="separator:ae8b8093c214a7c46e0e65e41b5d52a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c611df480c304d15c831e417cddd734"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a3c611df480c304d15c831e417cddd734">CallMe</a> (const wchar_t *countryCode, const wchar_t *phoneNumber)=0</td></tr>
-<tr class="memdesc:a3c611df480c304d15c831e417cddd734"><td class="mdescLeft">&#160;</td><td class="mdescRight">call me to the meeting by phone  <a href="#a3c611df480c304d15c831e417cddd734">More...</a><br /></td></tr>
+<tr class="memdesc:a3c611df480c304d15c831e417cddd734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the CALL ME to invite the attendee who uses the specified number to join the meeting.  <a href="#a3c611df480c304d15c831e417cddd734">More...</a><br /></td></tr>
 <tr class="separator:a3c611df480c304d15c831e417cddd734"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c7b40573bcc100964afc48ddfeebb4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#ad0c7b40573bcc100964afc48ddfeebb4">Hangup</a> ()=0</td></tr>
-<tr class="memdesc:ad0c7b40573bcc100964afc48ddfeebb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel callme or leave phone  <a href="#ad0c7b40573bcc100964afc48ddfeebb4">More...</a><br /></td></tr>
+<tr class="memdesc:ad0c7b40573bcc100964afc48ddfeebb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the current invitation by CALL ME.  <a href="#ad0c7b40573bcc100964afc48ddfeebb4">More...</a><br /></td></tr>
 <tr class="separator:ad0c7b40573bcc100964afc48ddfeebb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a984a93abff339fe54083f430499f98de"><td class="memItemLeft" align="right" valign="top">virtual PhoneStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a984a93abff339fe54083f430499f98de">GetCallMeStatus</a> ()=0</td></tr>
-<tr class="memdesc:a984a93abff339fe54083f430499f98de"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the status of the in progress callme.  <a href="#a984a93abff339fe54083f430499f98de">More...</a><br /></td></tr>
+<tr class="memitem:a984a93abff339fe54083f430499f98de"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a984a93abff339fe54083f430499f98de">GetCallMeStatus</a> ()=0</td></tr>
+<tr class="memdesc:a984a93abff339fe54083f430499f98de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the process of the invitation by CALL ME.  <a href="#a984a93abff339fe54083f430499f98de">More...</a><br /></td></tr>
 <tr class="separator:a984a93abff339fe54083f430499f98de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeebb5099a93459ae79ce1019b10d2e07"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_meeting_call_in_phone_number_info.html">IMeetingCallInPhoneNumberInfo</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#aeebb5099a93459ae79ce1019b10d2e07">GetCurrentMeetingCallinNumber</a> ()=0</td></tr>
-<tr class="memdesc:aeebb5099a93459ae79ce1019b10d2e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the callin number of current meeting.  <a href="#aeebb5099a93459ae79ce1019b10d2e07">More...</a><br /></td></tr>
+<tr class="memdesc:aeebb5099a93459ae79ce1019b10d2e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of call in numbers supported by meeting.  <a href="#aeebb5099a93459ae79ce1019b10d2e07">More...</a><br /></td></tr>
 <tr class="separator:aeebb5099a93459ae79ce1019b10d2e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a189718f24d9fd03374ccb41ea0646fcf"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper.html#a189718f24d9fd03374ccb41ea0646fcf">GetCurrentMeetingCallinParticipantID</a> ()=0</td></tr>
-<tr class="memdesc:a189718f24d9fd03374ccb41ea0646fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get your participant ID of current meeting for call in feature.  <a href="#a189718f24d9fd03374ccb41ea0646fcf">More...</a><br /></td></tr>
+<tr class="memdesc:a189718f24d9fd03374ccb41ea0646fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of participant who joins the meeting by calling in.  <a href="#a189718f24d9fd03374ccb41ea0646fcf">More...</a><br /></td></tr>
 <tr class="separator:a189718f24d9fd03374ccb41ea0646fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting phone Helper Interface. </p>
+<div class="textblock"><p>Meeting phone helper interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3c611df480c304d15c831e417cddd734"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c611df480c304d15c831e417cddd734">&#9670;&nbsp;</a></span>CallMe()</h2>
@@ -146,15 +146,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>call me to the meeting by phone </p>
+<p>Use the CALL ME to invite the attendee who uses the specified number to join the meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">countryCode</td><td>country code, one of the list of the supported country. </td></tr>
-    <tr><td class="paramname">phoneNumber</td><td>which phone number invited </td></tr>
+    <tr><td class="paramname">countryCode</td><td>The country code of the specified user must be in the support list. </td></tr>
+    <tr><td class="paramname">phoneNumber</td><td>The specified phone number. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -181,8 +181,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>cancel in progress callout invite. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Cancel the invitation that is being called out by phone. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -196,7 +196,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual PhoneStatus IMeetingPhoneHelper::GetCallMeStatus </td>
+          <td class="memname">virtual <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> IMeetingPhoneHelper::GetCallMeStatus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -209,8 +209,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get the status of the in progress callme. </p>
-<dl class="section return"><dt>Returns</dt><dd>the return value is current callme status.To get extended error information, refer to PhoneStatus enum </dd></dl>
+<p>Get the process of the invitation by CALL ME. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the process of the invitation by CALL ME. Otherwise failed. To get extended error information, see <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -237,8 +237,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Determines the callin number of current meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>the list of the callin number of current meeting. </dd></dl>
+<p>Get the list of call in numbers supported by meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the list of the call-in numbers. Otherwise failed. For more details, see <a class="el" href="class_i_meeting_call_in_phone_number_info.html">IMeetingCallInPhoneNumberInfo</a>. </dd></dl>
 
 </div>
 </div>
@@ -265,8 +265,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get your participant ID of current meeting for call in feature. </p>
-<dl class="section return"><dt>Returns</dt><dd>The participant ID. </dd></dl>
+<p>Get the ID of participant who joins the meeting by calling in. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the participant ID. </dd></dl>
 
 </div>
 </div>
@@ -280,7 +280,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual PhoneStatus IMeetingPhoneHelper::GetInviteCalloutUserStatus </td>
+          <td class="memname">virtual <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> IMeetingPhoneHelper::GetInviteCalloutUserStatus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -293,8 +293,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get the status of the in progress callout invite. </p>
-<dl class="section return"><dt>Returns</dt><dd>the return value is current callout status.To get extended error information, refer to PhoneStatus enum </dd></dl>
+<p>Get the process of the invitation by call out. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the current callout process. To get extended error information, see <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> enum </dd></dl>
 
 </div>
 </div>
@@ -321,8 +321,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Determines the supported country for phone feature. </p>
-<dl class="section return"><dt>Returns</dt><dd>the list of the supported country. </dd></dl>
+<p>Get the list of the country information where the meeting supports to join by telephone. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of the country information returns if the meeting supports to join by telephone. Otherwise NULL. </dd></dl>
 
 </div>
 </div>
@@ -349,8 +349,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>cancel callme or leave phone </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Cancel the current invitation by CALL ME. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -394,16 +394,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>invite the user to the meeting by phone </p>
+<p>Invite the specified user to join the meeting by call out. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">countryCode</td><td>country code, one of the list of the supported country. </td></tr>
-    <tr><td class="paramname">phoneNumber</td><td>which phone number invited </td></tr>
-    <tr><td class="paramname">name</td><td>the name display in the meeting </td></tr>
+    <tr><td class="paramname">countryCode</td><td>The country code of the specified user must be in the support list. </td></tr>
+    <tr><td class="paramname">phoneNumber</td><td>The phone number of specified user. </td></tr>
+    <tr><td class="paramname">name</td><td>The screen name of the specified user in the meeting. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -430,8 +430,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>support phone feature or not for current meeting </p>
-<dl class="section return"><dt>Returns</dt><dd>support or not. </dd></dl>
+<p>Determine whether the meeting supports to join by the phone or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates to support to join by phone. FALSE not. </dd></dl>
 
 </div>
 </div>
@@ -459,14 +459,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set meeting phone helper callback event. </p>
+<p>Set meeting phone helper callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingPhoneHelperEvent* that receives phone event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_phone_helper_event.html">IMeetingPhoneHelperEvent</a> that receives the phone event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

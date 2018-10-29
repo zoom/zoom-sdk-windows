@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['preview_5fvideo_5frotation_5faction_5f0',['PREVIEW_VIDEO_ROTATION_ACTION_0',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1af3d6871396dd6d666903df27a0301340',1,'setting_service_interface.h']]],
-  ['preview_5fvideo_5frotation_5faction_5fanti_5fclock90',['PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1acd495550035d8d7d3c7a793872f0095d',1,'setting_service_interface.h']]],
-  ['preview_5fvideo_5frotation_5faction_5fclock180',['PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1a7f5e0c3219d2fa5b9d8edcf26c63c1a9',1,'setting_service_interface.h']]],
-  ['preview_5fvideo_5frotation_5faction_5fclock90',['PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1abb18a2f976da8508a0cff777ad3a6f8b',1,'setting_service_interface.h']]]
+  ['floatvideo_5flarge',['FLOATVIDEO_Large',['../meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7eaafa78bb3226dd662d5a8922c408c82a2',1,'meeting_ui_ctrl_interface.h']]],
+  ['floatvideo_5flist',['FLOATVIDEO_List',['../meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7ea63c6db28a5eed3ed0b957b881a9c66a6',1,'meeting_ui_ctrl_interface.h']]],
+  ['floatvideo_5fminimize',['FLOATVIDEO_Minimize',['../meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7ea0868290f9e5afc3c3ed2eee0b06e49f8',1,'meeting_ui_ctrl_interface.h']]],
+  ['floatvideo_5fsmall',['FLOATVIDEO_Small',['../meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7eaeb52f83d3e1a84f9e294fdd39c25cc0c',1,'meeting_ui_ctrl_interface.h']]],
+  ['freemeetingendingreminder_5fcan_5fupgradeaccount',['FreeMeetingEndingReminder_Can_UpgradeAccount',['../class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a0791e8d5e3a03ebcae518534636e883a',1,'IFreeMeetingEndingReminderHandler']]],
+  ['freemeetingendingreminder_5fcan_5fupgrademeeting_5ftopro_5fonce',['FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once',['../class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a2074aa4122e5cae1ff8da933c09fae2d',1,'IFreeMeetingEndingReminderHandler']]],
+  ['freemeetingendingreminder_5fnone',['FreeMeetingEndingReminder_NONE',['../class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a201c90268e0c577b884c0ab451fae86c',1,'IFreeMeetingEndingReminderHandler']]],
+  ['freemeetingendingreminder_5freminder',['FreeMeetingEndingReminder_Reminder',['../class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8ac9b223d3def116cbcbd7f421b9334351',1,'IFreeMeetingEndingReminderHandler']]],
+  ['freemeetingendingreminder_5fupgrademeeting_5ftopro_5ffailed',['FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Failed',['../class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8acce7de5e396462c5e355328ec08d2a78',1,'IFreeMeetingEndingReminderHandler']]],
+  ['freemeetingendingreminder_5fupgrademeeting_5ftopro_5fsuccess',['FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Success',['../class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a2081bc66f7817a1eca7e74a554bad535',1,'IFreeMeetingEndingReminderHandler']]]
 ];

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Audio speaker device information Interface.  
+<p>Audio speaker device information interface.  
  <a href="class_i_speaker_info.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a>&gt;</code></p>
@@ -76,17 +76,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a78d02704796363a8e4e4179fa178f153"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_speaker_info.html#a78d02704796363a8e4e4179fa178f153">GetDeviceId</a> ()=0</td></tr>
-<tr class="memdesc:a78d02704796363a8e4e4179fa178f153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get speaker device id.  <a href="#a78d02704796363a8e4e4179fa178f153">More...</a><br /></td></tr>
+<tr class="memdesc:a78d02704796363a8e4e4179fa178f153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the speaker device ID.  <a href="#a78d02704796363a8e4e4179fa178f153">More...</a><br /></td></tr>
 <tr class="separator:a78d02704796363a8e4e4179fa178f153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a362754c63f6c6fc47476e346dc3383b2"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_speaker_info.html#a362754c63f6c6fc47476e346dc3383b2">GetDeviceName</a> ()=0</td></tr>
-<tr class="memdesc:a362754c63f6c6fc47476e346dc3383b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get speaker device name.  <a href="#a362754c63f6c6fc47476e346dc3383b2">More...</a><br /></td></tr>
+<tr class="memdesc:a362754c63f6c6fc47476e346dc3383b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the speaker device name.  <a href="#a362754c63f6c6fc47476e346dc3383b2">More...</a><br /></td></tr>
 <tr class="separator:a362754c63f6c6fc47476e346dc3383b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78aef7fe8fc1e07747ffb9fb1c0d4baa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_speaker_info.html#a78aef7fe8fc1e07747ffb9fb1c0d4baa">IsSelectedDevice</a> ()=0</td></tr>
-<tr class="memdesc:a78aef7fe8fc1e07747ffb9fb1c0d4baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected device flag.  <a href="#a78aef7fe8fc1e07747ffb9fb1c0d4baa">More...</a><br /></td></tr>
+<tr class="memdesc:a78aef7fe8fc1e07747ffb9fb1c0d4baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the current device is slected to use.  <a href="#a78aef7fe8fc1e07747ffb9fb1c0d4baa">More...</a><br /></td></tr>
 <tr class="separator:a78aef7fe8fc1e07747ffb9fb1c0d4baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio speaker device information Interface. </p>
+<div class="textblock"><p>Audio speaker device information interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a78d02704796363a8e4e4179fa178f153"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78d02704796363a8e4e4179fa178f153">&#9670;&nbsp;</a></span>GetDeviceId()</h2>
@@ -111,8 +111,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get speaker device id. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device id. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the speaker device ID. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the camera device ID. Otherwise failed, returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -139,8 +139,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get speaker device name. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device name. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the speaker device name. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is speaker device name. Otherwise failed, returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -167,8 +167,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Selected device flag. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the return value is true, this device is selected. </dd></dl>
+<p>Determine if the current device is slected to use. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the current device is selected. </dd></dl>
 
 </div>
 </div>

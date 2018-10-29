@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,20 +68,74 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Calender Service Callback Event.  
+<p>calendar Service Callback Event.  
  <a href="class_i_calender_service_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="calender__service__interface_8h_source.html">calender_service_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8b9fef3396cec06b0205e51067392fc3"><td class="memItemLeft" align="right" valign="top"><a id="a8b9fef3396cec06b0205e51067392fc3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCalenderEventsNotifcation</b> (CalenderAuthType type, CalenderResult result, <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_calender_event.html">ICalenderEvent</a> * &gt; *plstEvents)=0</td></tr>
+<tr class="memitem:a8b9fef3396cec06b0205e51067392fc3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_calender_service_event.html#a8b9fef3396cec06b0205e51067392fc3">onCalenderEventsNotifcation</a> (CalenderAuthType type, CalenderResult result, <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_calender_event.html">ICalenderEvent</a> * &gt; *plstEvents)=0</td></tr>
+<tr class="memdesc:a8b9fef3396cec06b0205e51067392fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">calendar service callback.  <a href="#a8b9fef3396cec06b0205e51067392fc3">More...</a><br /></td></tr>
 <tr class="separator:a8b9fef3396cec06b0205e51067392fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Calender Service Callback Event. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>calendar Service Callback Event. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b9fef3396cec06b0205e51067392fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9fef3396cec06b0205e51067392fc3">&#9670;&nbsp;</a></span>onCalenderEventsNotifcation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ICalenderServiceEvent::onCalenderEventsNotifcation </td>
+          <td>(</td>
+          <td class="paramtype">CalenderAuthType&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CalenderResult&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_calender_event.html">ICalenderEvent</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>plstEvents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>calendar service callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of authority. For more details, see <a class="el" href="">CalenderAuthType</a> enum. </td></tr>
+    <tr><td class="paramname">result</td><td>The result of authority. For more details, see <a class="el" href="">CalenderResult</a> enum. </td></tr>
+    <tr><td class="paramname">plstEvents</td><td>A pointer to the ICalenderEvent* list. For more details, see <a class="el" href="class_i_calender_event.html">ICalenderEvent</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The plstEvents* will be destroyed once the function calls end. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="calender__service__interface_8h_source.html">calender_service_interface.h</a></li>
 </ul>
 </div><!-- contents -->

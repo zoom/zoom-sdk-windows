@@ -1,7 +1,24 @@
 var searchData=
 [
-  ['end_5fmeeting',['END_MEETING',['../meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134eabe5541871cc5b0ff7ff43bbd80ba48b9',1,'meeting_service_interface.h']]],
-  ['enucanplay',['enuCanPlay',['../setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeeaaf82225b7fe09e897edcee0d40c02fa4',1,'setting_service_interface.h']]],
-  ['enucantest',['enuCanTest',['../setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeea7991d7e8e3c68f1ff2a2b2a0d7fdbb51',1,'setting_service_interface.h']]],
-  ['enumicrecording',['enuMicRecording',['../setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eeea9e4549a2fade2c6e331bc40e661e1b37',1,'setting_service_interface.h']]]
+  ['callinnumtype_5fnone',['CALLINNUMTYPE_NONE',['../meeting__phone__helper__interface_8h.html#a25c741be3ed20fa717551e18c62f0623aeb57c477f1269e18da36ba2565100fb0',1,'meeting_phone_helper_interface.h']]],
+  ['callinnumtype_5ftoll',['CALLINNUMTYPE_TOLL',['../meeting__phone__helper__interface_8h.html#a25c741be3ed20fa717551e18c62f0623aa1347a9e4f493404e7718b58d9eb7aec',1,'meeting_phone_helper_interface.h']]],
+  ['callinnumtype_5ftollfree',['CALLINNUMTYPE_TOLLFREE',['../meeting__phone__helper__interface_8h.html#a25c741be3ed20fa717551e18c62f0623af5dccb7751b37fedc53e6666f6a78236',1,'meeting_phone_helper_interface.h']]],
+  ['conf_5ffail_5fdisallow_5fhost_5fmeeting',['CONF_FAIL_DISALLOW_HOST_MEETING',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4a89849cc0f24eb7bf26676683bf6d429e',1,'meeting_service_interface.h']]],
+  ['conf_5ffail_5fjoin_5fwebinar_5fwithsameemail',['CONF_FAIL_JOIN_WEBINAR_WITHSAMEEMAIL',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4a9078424007365dee4f7fea147a7cc64a',1,'meeting_service_interface.h']]],
+  ['conf_5ffail_5fremoved_5fby_5fhost',['CONF_FAIL_REMOVED_BY_HOST',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4af932c8970cc3bb7c8c849d72f1409e03',1,'meeting_service_interface.h']]],
+  ['conf_5ffail_5fvanity_5fnot_5fexist',['CONF_FAIL_VANITY_NOT_EXIST',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4aa0399125af162aef49fe610038238aea',1,'meeting_service_interface.h']]],
+  ['conf_5ffail_5fzc_5fcertificate_5fchanged',['CONF_FAIL_ZC_CERTIFICATE_CHANGED',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4a392ac96acdac9c39a59bfac0f3be5376',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5fbad',['Conn_Quality_Bad',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991da6232dc6677422828eb736ebb7c410345',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5fexcellent',['Conn_Quality_Excellent',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991da174b0b5303eb89b8649f55ac9b715786',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5fgood',['Conn_Quality_Good',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991dae95f547bd3422ba36c2428027af982ef',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5fnormal',['Conn_Quality_Normal',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991daeec22436fdc3442c9811cb5c31c0cb44',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5fnot_5fgood',['Conn_Quality_Not_Good',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991dadc0ecfa96f6619555d4a3f3bc2c8a0fa',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5funknow',['Conn_Quality_Unknow',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991da7aab9f934c7184b6ac96c442fc849720',1,'meeting_service_interface.h']]],
+  ['conn_5fquality_5fvery_5fbad',['Conn_Quality_Very_Bad',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991da6c12ceeb123c6d7da9f441df405a41ac',1,'meeting_service_interface.h']]],
+  ['cs_5fanno_5fclose',['CS_ANNO_CLOSE',['../customized__annotation_8h.html#acdb5ff6c2955b3f15f6ea8aed00e5064aff51365691b950d430f7960430309f01',1,'customized_annotation.h']]],
+  ['cs_5fanno_5freadytouse',['CS_ANNO_READYTOUSE',['../customized__annotation_8h.html#acdb5ff6c2955b3f15f6ea8aed00e5064a75ef39e50ab7d62c25293ac3f7febb94',1,'customized_annotation.h']]],
+  ['csm_5fletter_5fbox',['CSM_LETTER_BOX',['../customized__share__render_8h.html#a7fbb0a6a2387ea840303658a9c4737e0a186ac728e1e75ecab85a74900db73bf2',1,'customized_share_render.h']]],
+  ['customizedlanguage_5fcontent',['CustomizedLanguage_Content',['../zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7ea74fecf6be909a021ab73e3933f2ad7c9',1,'zoom_sdk_def.h']]],
+  ['customizedlanguage_5ffilepath',['CustomizedLanguage_FilePath',['../zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7eafce29ac4b7577b336d3b8e324b454d05',1,'zoom_sdk_def.h']]],
+  ['customizedlanguage_5fnone',['CustomizedLanguage_None',['../zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7ea06cb1c7be1e7638653152f8011bff1b9',1,'zoom_sdk_def.h']]]
 ];

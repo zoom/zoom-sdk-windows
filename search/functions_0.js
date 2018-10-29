@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['accept',['Accept',['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler']]],
+  ['addvideosourcetoreclist',['AddVideoSourceToRecList',['../class_i_customized_local_recording_layout_helper.html#a0bada5e6e82b4909130904a77d9f6d54',1,'ICustomizedLocalRecordingLayoutHelper']]],
   ['admittomeeting',['AdmitToMeeting',['../class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4',1,'IMeetingWaitingRoomController']]],
   ['allowattendeechat',['AllowAttendeeChat',['../class_i_meeting_webinar_controller.html#abed3ca7b5d3da977d8d4deafdf17c43f',1,'IMeetingWebinarController']]],
   ['allowattendeetalk',['AllowAttendeeTalk',['../class_i_meeting_webinar_controller.html#a5125548b2a613639f7c9d5198a4d6b81',1,'IMeetingWebinarController']]],

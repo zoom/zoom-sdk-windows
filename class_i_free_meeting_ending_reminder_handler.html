@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -69,46 +69,161 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Free meeting ending reminder Handler.  
+<p>Reminder handler of ending free meeting.  
  <a href="class_i_free_meeting_ending_reminder_handler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a63271fbfa8f9d27f39db5086854120d8"><td class="memItemLeft" align="right" valign="top"><a id="a63271fbfa8f9d27f39db5086854120d8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>FreeMeetingEndingReminderType</b> { <br />
-&#160;&#160;<b>FreeMeetingEndingReminder_NONE</b>, 
-<b>FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once</b>, 
-<b>FreeMeetingEndingReminder_Can_UpgradeAccount</b>, 
-<b>FreeMeetingEndingReminder_Reminder</b>, 
+<tr class="memitem:a63271fbfa8f9d27f39db5086854120d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8">FreeMeetingEndingReminderType</a> { <br />
+&#160;&#160;<a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a201c90268e0c577b884c0ab451fae86c">FreeMeetingEndingReminder_NONE</a>, 
+<a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a2074aa4122e5cae1ff8da933c09fae2d">FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once</a>, 
+<a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a0791e8d5e3a03ebcae518534636e883a">FreeMeetingEndingReminder_Can_UpgradeAccount</a>, 
+<a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8ac9b223d3def116cbcbd7f421b9334351">FreeMeetingEndingReminder_Reminder</a>, 
 <br />
-&#160;&#160;<b>FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Failed</b>, 
-<b>FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Success</b>
+&#160;&#160;<a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8acce7de5e396462c5e355328ec08d2a78">FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Failed</a>, 
+<a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8a2081bc66f7817a1eca7e74a554bad535">FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Success</a>
 <br />
- }</td></tr>
+ }<tr class="memdesc:a63271fbfa8f9d27f39db5086854120d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reminder type at the end of free meeting. Here are more detailed structural descriptions.  <a href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a63271fbfa8f9d27f39db5086854120d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c3266e9cbac570c56eaaaea120afaa3"><td class="memItemLeft" align="right" valign="top"><a id="a3c3266e9cbac570c56eaaaea120afaa3"></a>
-virtual FreeMeetingEndingReminderType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a3c3266e9cbac570c56eaaaea120afaa3">GetType</a> ()=0</td></tr>
-<tr class="memdesc:a3c3266e9cbac570c56eaaaea120afaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the reminder type. <br /></td></tr>
+virtual <a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8">FreeMeetingEndingReminderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a3c3266e9cbac570c56eaaaea120afaa3">GetType</a> ()=0</td></tr>
+<tr class="memdesc:a3c3266e9cbac570c56eaaaea120afaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reminder type of ending free meeting. <br /></td></tr>
 <tr class="separator:a3c3266e9cbac570c56eaaaea120afaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a268c78eb84efddf5bd90fd443f69369c"><td class="memItemLeft" align="right" valign="top"><a id="a268c78eb84efddf5bd90fd443f69369c"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a268c78eb84efddf5bd90fd443f69369c">UpgradeMeeting</a> ()=0</td></tr>
-<tr class="memdesc:a268c78eb84efddf5bd90fd443f69369c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrade meeting and release this object, only for FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once. <br /></td></tr>
+<tr class="memitem:a268c78eb84efddf5bd90fd443f69369c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a268c78eb84efddf5bd90fd443f69369c">UpgradeMeeting</a> ()=0</td></tr>
+<tr class="memdesc:a268c78eb84efddf5bd90fd443f69369c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrade the meeting if the inform is the FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once.  <a href="#a268c78eb84efddf5bd90fd443f69369c">More...</a><br /></td></tr>
 <tr class="separator:a268c78eb84efddf5bd90fd443f69369c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a223023cc2366889e7cbd0e8b121c41"><td class="memItemLeft" align="right" valign="top"><a id="a7a223023cc2366889e7cbd0e8b121c41"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a7a223023cc2366889e7cbd0e8b121c41">UpgradeAccount</a> ()=0</td></tr>
-<tr class="memdesc:a7a223023cc2366889e7cbd0e8b121c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrade account and release this object, only for FreeMeetingEndingReminder_Can_UpgradeAccount. <br /></td></tr>
+<tr class="memitem:a7a223023cc2366889e7cbd0e8b121c41"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a7a223023cc2366889e7cbd0e8b121c41">UpgradeAccount</a> ()=0</td></tr>
+<tr class="memdesc:a7a223023cc2366889e7cbd0e8b121c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrade the account if the inform is the FreeMeetingEndingReminder_Can_UpgradeAccount.  <a href="#a7a223023cc2366889e7cbd0e8b121c41">More...</a><br /></td></tr>
 <tr class="separator:a7a223023cc2366889e7cbd0e8b121c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b237d3340e330e60611fb7505fef977"><td class="memItemLeft" align="right" valign="top"><a id="a8b237d3340e330e60611fb7505fef977"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cancel</b> ()=0</td></tr>
+<tr class="memitem:a8b237d3340e330e60611fb7505fef977"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a8b237d3340e330e60611fb7505fef977">Cancel</a> ()=0</td></tr>
+<tr class="memdesc:a8b237d3340e330e60611fb7505fef977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore the ongoing inform.  <a href="#a8b237d3340e330e60611fb7505fef977">More...</a><br /></td></tr>
 <tr class="separator:a8b237d3340e330e60611fb7505fef977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Free meeting ending reminder Handler. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Reminder handler of ending free meeting. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a63271fbfa8f9d27f39db5086854120d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63271fbfa8f9d27f39db5086854120d8">&#9670;&nbsp;</a></span>FreeMeetingEndingReminderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_i_free_meeting_ending_reminder_handler.html#a63271fbfa8f9d27f39db5086854120d8">IFreeMeetingEndingReminderHandler::FreeMeetingEndingReminderType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reminder type at the end of free meeting. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a63271fbfa8f9d27f39db5086854120d8a201c90268e0c577b884c0ab451fae86c"></a>FreeMeetingEndingReminder_NONE&#160;</td><td class="fielddoc"><p>Initialization. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a63271fbfa8f9d27f39db5086854120d8a2074aa4122e5cae1ff8da933c09fae2d"></a>FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once&#160;</td><td class="fielddoc"><p>Upgrade to the priority meeting at once. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a63271fbfa8f9d27f39db5086854120d8a0791e8d5e3a03ebcae518534636e883a"></a>FreeMeetingEndingReminder_Can_UpgradeAccount&#160;</td><td class="fielddoc"><p>Upgrade the account. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a63271fbfa8f9d27f39db5086854120d8ac9b223d3def116cbcbd7f421b9334351"></a>FreeMeetingEndingReminder_Reminder&#160;</td><td class="fielddoc"><p>Remind to pay. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a63271fbfa8f9d27f39db5086854120d8acce7de5e396462c5e355328ec08d2a78"></a>FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Failed&#160;</td><td class="fielddoc"><p>Upgrade fialed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a63271fbfa8f9d27f39db5086854120d8a2081bc66f7817a1eca7e74a554bad535"></a>FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Success&#160;</td><td class="fielddoc"><p>Upgrade successfully. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b237d3340e330e60611fb7505fef977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b237d3340e330e60611fb7505fef977">&#9670;&nbsp;</a></span>Cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IFreeMeetingEndingReminderHandler::Cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ignore the ongoing inform. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The SDK will destroy this object instance after calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a7a223023cc2366889e7cbd0e8b121c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a223023cc2366889e7cbd0e8b121c41">&#9670;&nbsp;</a></span>UpgradeAccount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IFreeMeetingEndingReminderHandler::UpgradeAccount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Upgrade the account if the inform is the FreeMeetingEndingReminder_Can_UpgradeAccount. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The SDK will destroy this object instance after calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a268c78eb84efddf5bd90fd443f69369c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268c78eb84efddf5bd90fd443f69369c">&#9670;&nbsp;</a></span>UpgradeMeeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IFreeMeetingEndingReminderHandler::UpgradeMeeting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Upgrade the meeting if the inform is the FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The SDK will destroy this object instance after calling this function. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/meeting_service_components/<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a></li>
 </ul>
 </div><!-- contents -->

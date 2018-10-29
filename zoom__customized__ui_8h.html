@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>zoom customized ui interface  
+<p>ZOOM Custom UI interface.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -80,14 +80,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a38cfd2e34344eb92bf8ba8a355edaddc"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__customized__ui_8h.html#a38cfd2e34344eb92bf8ba8a355edaddc">CreateCustomizedUIMgr</a> (<a class="el" href="class_i_customized_u_i_mgr.html">ICustomizedUIMgr</a> **ppCustomizedUIMgr)</td></tr>
-<tr class="memdesc:a38cfd2e34344eb92bf8ba8a355edaddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Customized UI Manager Interface.  <a href="#a38cfd2e34344eb92bf8ba8a355edaddc">More...</a><br /></td></tr>
+<tr class="memdesc:a38cfd2e34344eb92bf8ba8a355edaddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a custom UI manager interface.  <a href="#a38cfd2e34344eb92bf8ba8a355edaddc">More...</a><br /></td></tr>
 <tr class="separator:a38cfd2e34344eb92bf8ba8a355edaddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5dee414c5e6ce00037ade3e87d14180"><td class="memItemLeft" align="right" valign="top">SDK_API <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__customized__ui_8h.html#aa5dee414c5e6ce00037ade3e87d14180">DestroyCustomizedUIMgr</a> (<a class="el" href="class_i_customized_u_i_mgr.html">ICustomizedUIMgr</a> *pCustomizedUIMgr)</td></tr>
-<tr class="memdesc:aa5dee414c5e6ce00037ade3e87d14180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy Customized UI Manager Interface.  <a href="#aa5dee414c5e6ce00037ade3e87d14180">More...</a><br /></td></tr>
+<tr class="memdesc:aa5dee414c5e6ce00037ade3e87d14180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the specified custom UI manager interface.  <a href="#aa5dee414c5e6ce00037ade3e87d14180">More...</a><br /></td></tr>
 <tr class="separator:aa5dee414c5e6ce00037ade3e87d14180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>zoom customized ui interface </p>
+<div class="textblock"><p>ZOOM Custom UI interface. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a38cfd2e34344eb92bf8ba8a355edaddc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38cfd2e34344eb92bf8ba8a355edaddc">&#9670;&nbsp;</a></span>CreateCustomizedUIMgr()</h2>
@@ -105,14 +105,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create Customized UI Manager Interface. </p>
+<p>Create a custom UI manager interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ppCustomizedUIMgr</td><td>A pointer to a ICustomizedUIMgr* that receives <a class="el" href="class_i_customized_u_i_mgr.html" title="Customized UI manager interface. ">ICustomizedUIMgr</a> Object. </td></tr>
+    <tr><td class="paramname">ppCustomizedUIMgr</td><td>The parameter stores the pointer to ICustomizedUIMgr* once the function calls successfully. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppCustomizedUIMgr is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, while the return value of ppCustomizedUIMgr is not NULL Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -132,14 +132,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy Customized UI Manager Interface. </p>
+<p>Destroy the specified custom UI manager interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pCustomizedUIMgr</td><td>A pointer to a <a class="el" href="class_i_customized_u_i_mgr.html" title="Customized UI manager interface. ">ICustomizedUIMgr</a> to be destroyed. </td></tr>
+    <tr><td class="paramname">pCustomizedUIMgr</td><td>A pointer to the <a class="el" href="class_i_customized_u_i_mgr.html" title="Custom UI manager interface. ">ICustomizedUIMgr</a> to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

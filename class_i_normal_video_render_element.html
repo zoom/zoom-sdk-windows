@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>normal video element interface(in-meeting)  
+<p>Normal video render element interface in the meeting.  
  <a href="class_i_normal_video_render_element.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="customized__video__container_8h_source.html">customized_video_container.h</a>&gt;</code></p>
@@ -78,41 +78,39 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afc6fdeebe1840109f9bbc502a485addd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_normal_video_render_element.html#afc6fdeebe1840109f9bbc502a485addd">Subscribe</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:afc6fdeebe1840109f9bbc502a485addd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe the user's video/avatar/screen name data.  <a href="#afc6fdeebe1840109f9bbc502a485addd">More...</a><br /></td></tr>
+<tr class="memdesc:afc6fdeebe1840109f9bbc502a485addd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the data of the specified user through normal render mode.  <a href="#afc6fdeebe1840109f9bbc502a485addd">More...</a><br /></td></tr>
 <tr class="separator:afc6fdeebe1840109f9bbc502a485addd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ee0fce2583b294c61272eaad6ab61a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_normal_video_render_element.html#af4ee0fce2583b294c61272eaad6ab61a">Unsubscribe</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:af4ee0fce2583b294c61272eaad6ab61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe the user's video/avatar/screen name data.  <a href="#af4ee0fce2583b294c61272eaad6ab61a">More...</a><br /></td></tr>
+<tr class="memdesc:af4ee0fce2583b294c61272eaad6ab61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe the data of the specified user.  <a href="#af4ee0fce2583b294c61272eaad6ab61a">More...</a><br /></td></tr>
 <tr class="separator:af4ee0fce2583b294c61272eaad6ab61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_video_render_element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_video_render_element')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_video_render_element.html">IVideoRenderElement</a></td></tr>
 <tr class="memitem:a16d1d2a85f9df4ad6a2e143d35de17e3 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5">VideoRenderElementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a16d1d2a85f9df4ad6a2e143d35de17e3">GetType</a> ()=0</td></tr>
-<tr class="memdesc:a16d1d2a85f9df4ad6a2e143d35de17e3 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the video render.  <a href="class_i_video_render_element.html#a16d1d2a85f9df4ad6a2e143d35de17e3">More...</a><br /></td></tr>
+<tr class="memdesc:a16d1d2a85f9df4ad6a2e143d35de17e3 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the video render element.  <a href="class_i_video_render_element.html#a16d1d2a85f9df4ad6a2e143d35de17e3">More...</a><br /></td></tr>
 <tr class="separator:a16d1d2a85f9df4ad6a2e143d35de17e3 inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a529364596613fd61f40a33ee3c0671fe inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual RECT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a529364596613fd61f40a33ee3c0671fe">GetPos</a> ()=0</td></tr>
-<tr class="memdesc:a529364596613fd61f40a33ee3c0671fe inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the coordinates of a video render element's client area.  <a href="class_i_video_render_element.html#a529364596613fd61f40a33ee3c0671fe">More...</a><br /></td></tr>
+<tr class="memdesc:a529364596613fd61f40a33ee3c0671fe inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the area where the current render element is.  <a href="class_i_video_render_element.html#a529364596613fd61f40a33ee3c0671fe">More...</a><br /></td></tr>
 <tr class="separator:a529364596613fd61f40a33ee3c0671fe inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80b2dd41dd1d3f39468027376f8078d inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#ae80b2dd41dd1d3f39468027376f8078d">SetPos</a> (RECT pos)=0</td></tr>
-<tr class="memdesc:ae80b2dd41dd1d3f39468027376f8078d inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the position of a video render element's client area.  <a href="class_i_video_render_element.html#ae80b2dd41dd1d3f39468027376f8078d">More...</a><br /></td></tr>
+<tr class="memdesc:ae80b2dd41dd1d3f39468027376f8078d inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a new display area of the current render element.  <a href="class_i_video_render_element.html#ae80b2dd41dd1d3f39468027376f8078d">More...</a><br /></td></tr>
 <tr class="separator:ae80b2dd41dd1d3f39468027376f8078d inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a09c86ccfd5b999d09e2a7a76f1cf00 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top"><a id="a2a09c86ccfd5b999d09e2a7a76f1cf00"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a2a09c86ccfd5b999d09e2a7a76f1cf00">Show</a> ()=0</td></tr>
-<tr class="memdesc:a2a09c86ccfd5b999d09e2a7a76f1cf00 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show video element If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. <br /></td></tr>
+<tr class="memitem:a2a09c86ccfd5b999d09e2a7a76f1cf00 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a2a09c86ccfd5b999d09e2a7a76f1cf00">Show</a> ()=0</td></tr>
+<tr class="memdesc:a2a09c86ccfd5b999d09e2a7a76f1cf00 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the render element.  <a href="class_i_video_render_element.html#a2a09c86ccfd5b999d09e2a7a76f1cf00">More...</a><br /></td></tr>
 <tr class="separator:a2a09c86ccfd5b999d09e2a7a76f1cf00 inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35ead52620d11e51bb0fda3f8022b344 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top"><a id="a35ead52620d11e51bb0fda3f8022b344"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344">Hide</a> ()=0</td></tr>
-<tr class="memdesc:a35ead52620d11e51bb0fda3f8022b344 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide video element If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. <br /></td></tr>
+<tr class="memitem:a35ead52620d11e51bb0fda3f8022b344 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344">Hide</a> ()=0</td></tr>
+<tr class="memdesc:a35ead52620d11e51bb0fda3f8022b344 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the render element.  <a href="class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344">More...</a><br /></td></tr>
 <tr class="separator:a35ead52620d11e51bb0fda3f8022b344 inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29b4e7fa359148489f28966a7f140c4f inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a29b4e7fa359148489f28966a7f140c4f">GetCurrentRenderUserId</a> ()=0</td></tr>
-<tr class="memdesc:a29b4e7fa359148489f28966a7f140c4f inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the user id of the video element.  <a href="class_i_video_render_element.html#a29b4e7fa359148489f28966a7f140c4f">More...</a><br /></td></tr>
+<tr class="memdesc:a29b4e7fa359148489f28966a7f140c4f inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the user ID corresponding to the current render element.  <a href="class_i_video_render_element.html#a29b4e7fa359148489f28966a7f140c4f">More...</a><br /></td></tr>
 <tr class="separator:a29b4e7fa359148489f28966a7f140c4f inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31df48dd79f9e2935dbf515805f5112 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc">VideoRenderDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#ab31df48dd79f9e2935dbf515805f5112">GetCurrentRenderDataType</a> ()=0</td></tr>
-<tr class="memdesc:ab31df48dd79f9e2935dbf515805f5112 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the render data type of the video element.  <a href="class_i_video_render_element.html#ab31df48dd79f9e2935dbf515805f5112">More...</a><br /></td></tr>
+<tr class="memdesc:ab31df48dd79f9e2935dbf515805f5112 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data type of the current render element.  <a href="class_i_video_render_element.html#ab31df48dd79f9e2935dbf515805f5112">More...</a><br /></td></tr>
 <tr class="separator:ab31df48dd79f9e2935dbf515805f5112 inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ca8656e5254c90427db2d21625c490 inherit pub_methods_class_i_video_render_element"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a11ca8656e5254c90427db2d21625c490">EnableShowScreenNameOnVideo</a> (bool enable_show)=0</td></tr>
-<tr class="memdesc:a11ca8656e5254c90427db2d21625c490 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable show screen name on video or not.  <a href="class_i_video_render_element.html#a11ca8656e5254c90427db2d21625c490">More...</a><br /></td></tr>
+<tr class="memdesc:a11ca8656e5254c90427db2d21625c490 inherit pub_methods_class_i_video_render_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the screen name on the current render element.  <a href="class_i_video_render_element.html#a11ca8656e5254c90427db2d21625c490">More...</a><br /></td></tr>
 <tr class="separator:a11ca8656e5254c90427db2d21625c490 inherit pub_methods_class_i_video_render_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>normal video element interface(in-meeting) </p>
+<div class="textblock"><p>Normal video render element interface in the meeting. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afc6fdeebe1840109f9bbc502a485addd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc6fdeebe1840109f9bbc502a485addd">&#9670;&nbsp;</a></span>Subscribe()</h2>
@@ -138,10 +136,10 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Subscribe the user's video/avatar/screen name data. </p>
+<p>Show the data of the specified user through normal render mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>specify which user you want to view </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -172,13 +170,14 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Unsubscribe the user's video/avatar/screen name data. </p>
+<p>Unsubscribe the data of the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>specify which user you want to unsubscribe if you want to switch to other user, just call Subscribe with the other user id if you want to recycle the video element, please call this API before the Hide API </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the ID of user that you want to unsubscribe his data. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Call Subscribe with the other ID if you want to view his data. Call the function to stop receiving the data before calling the parent class <a class="el" href="class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344" title="Hide the render element. ">Hide()</a> function if you no longer want to see the data of the specified user. </dd></dl>
 
 </div>
 </div>

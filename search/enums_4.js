@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['navigateerror',['NavigateError',['../embedded__browser__interface_8h.html#ae7569502a9ca0eb8dd2715228fc24b2d',1,'embedded_browser_interface.h']]]
+  ['h323calloutstatus',['H323CalloutStatus',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9d',1,'meeting_h323_helper_interface.h']]],
+  ['h323devicetype',['H323DeviceType',['../meeting__h323__helper__interface_8h.html#a5bfcc877c55d55af6e2ce5b99dddf15e',1,'meeting_h323_helper_interface.h']]],
+  ['h323paringresult',['H323ParingResult',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49',1,'meeting_h323_helper_interface.h']]]
 ];

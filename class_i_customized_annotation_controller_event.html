@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:affa3b7cd1d58fc77cd726f16031fe281"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_controller_event.html#affa3b7cd1d58fc77cd726f16031fe281">onCustomizedAnnotationObjDestroyed</a> (<a class="el" href="class_i_customized_annotation_obj.html">ICustomizedAnnotationObj</a> *obj_)=0</td></tr>
-<tr class="memdesc:affa3b7cd1d58fc77cd726f16031fe281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about annotation object destroyed.  <a href="#affa3b7cd1d58fc77cd726f16031fe281">More...</a><br /></td></tr>
+<tr class="memdesc:affa3b7cd1d58fc77cd726f16031fe281"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event to destroy the specified annotation object.  <a href="#affa3b7cd1d58fc77cd726f16031fe281">More...</a><br /></td></tr>
 <tr class="separator:affa3b7cd1d58fc77cd726f16031fe281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a6f0151b32068fcef684337652ce268"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_controller_event.html#a8a6f0151b32068fcef684337652ce268">onSharingShareAnnotationStatusChanged</a> (<a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> *share_render_, <a class="el" href="customized__annotation_8h.html#acdb5ff6c2955b3f15f6ea8aed00e5064">CustomizedShareAnnotationStatus</a> status_)=0</td></tr>
-<tr class="memdesc:a8a6f0151b32068fcef684337652ce268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about annotation status changed.  <a href="#a8a6f0151b32068fcef684337652ce268">More...</a><br /></td></tr>
+<tr class="memdesc:a8a6f0151b32068fcef684337652ce268"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event when the annotation status changes.  <a href="#a8a6f0151b32068fcef684337652ce268">More...</a><br /></td></tr>
 <tr class="separator:a8a6f0151b32068fcef684337652ce268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -109,10 +109,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about annotation object destroyed. </p>
+<p>The callback event to destroy the specified annotation object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj_</td><td>Specifies which annotation object destroyed </td></tr>
+    <tr><td class="paramname">obj_</td><td>Specify the annotation object to be destroyed. Once destroyed, it can no longer be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -153,11 +153,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about annotation status changed. </p>
+<p>The callback event when the annotation status changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">share_render_</td><td>Specifies annotation status of which share render changed </td></tr>
-    <tr><td class="paramname">status_</td><td>status </td></tr>
+    <tr><td class="paramname">share_render_</td><td>The annotate status of share_render changes. For more details, see <a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a>. </td></tr>
+    <tr><td class="paramname">status_</td><td>The changed status. For more details, see <a class="el" href="customized__annotation_8h.html#acdb5ff6c2955b3f15f6ea8aed00e5064">CustomizedShareAnnotationStatus</a>. </td></tr>
   </table>
   </dd>
 </dl>

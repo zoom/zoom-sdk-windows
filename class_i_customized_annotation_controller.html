@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,13 +76,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a881bceec0451b46788f8823877efd288"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_controller.html#a881bceec0451b46788f8823877efd288">SetEvent</a> (<a class="el" href="class_i_customized_annotation_controller_event.html">ICustomizedAnnotationControllerEvent</a> *event_)=0</td></tr>
-<tr class="memdesc:a881bceec0451b46788f8823877efd288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Annotation controller callback event.  <a href="#a881bceec0451b46788f8823877efd288">More...</a><br /></td></tr>
+<tr class="memdesc:a881bceec0451b46788f8823877efd288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set annotation controller callback event handler.  <a href="#a881bceec0451b46788f8823877efd288">More...</a><br /></td></tr>
 <tr class="separator:a881bceec0451b46788f8823877efd288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8d34b0ddd187c28ffc4091c8070817"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_controller.html#a9f8d34b0ddd187c28ffc4091c8070817">CreateAnnoObj</a> (<a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> *view_share_render, <a class="el" href="class_i_customized_annotation_obj.html">ICustomizedAnnotationObj</a> **pp_obj)=0</td></tr>
-<tr class="memdesc:a9f8d34b0ddd187c28ffc4091c8070817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create annotation object.  <a href="#a9f8d34b0ddd187c28ffc4091c8070817">More...</a><br /></td></tr>
+<tr class="memdesc:a9f8d34b0ddd187c28ffc4091c8070817"><td class="mdescLeft">&#160;</td><td class="mdescRight">An instance created on the specified render which is an object of <a class="el" href="class_i_customized_share_render.html" title="Share render interface. ">ICustomizedShareRender</a> created on the sharing window.  <a href="#a9f8d34b0ddd187c28ffc4091c8070817">More...</a><br /></td></tr>
 <tr class="separator:a9f8d34b0ddd187c28ffc4091c8070817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1a026dc487cca4f931051baf7f5e67f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_controller.html#aa1a026dc487cca4f931051baf7f5e67f">DestroyAnnoObj</a> (<a class="el" href="class_i_customized_annotation_obj.html">ICustomizedAnnotationObj</a> *anno_obj)=0</td></tr>
-<tr class="memdesc:aa1a026dc487cca4f931051baf7f5e67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy annotation object.  <a href="#aa1a026dc487cca4f931051baf7f5e67f">More...</a><br /></td></tr>
+<tr class="memdesc:aa1a026dc487cca4f931051baf7f5e67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the specified annotation object.  <a href="#aa1a026dc487cca4f931051baf7f5e67f">More...</a><br /></td></tr>
 <tr class="separator:aa1a026dc487cca4f931051baf7f5e67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -122,15 +122,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create annotation object. </p>
+<p>An instance created on the specified render which is an object of <a class="el" href="class_i_customized_share_render.html" title="Share render interface. ">ICustomizedShareRender</a> created on the sharing window. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">view_share_render</td><td>Specifies the owner of the annotation object, if create annotation for start sharing, pass NULL. </td></tr>
-    <tr><td class="paramname">pp_obj</td><td>A pointer to a ICustomizedAnnotationObj* that receives <a class="el" href="class_i_customized_annotation_obj.html" title="Annotation object interface. ">ICustomizedAnnotationObj</a> Object. </td></tr>
+    <tr><td class="paramname">view_share_render</td><td>Specify the render to receive the shared content. The sharer should set the value to NULL. </td></tr>
+    <tr><td class="paramname">pp_obj</td><td>A pointer to the ICustomizedAnnotationObj*. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppMeetingService is not NULL If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  you got onSharingShareAnnotationStatusChanged with CS_ANNO_READYTOUSE. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and ppMeetingService is not NULL Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>It is suggested to call this function if the value of status_ is CS_ANNO_READYTOUSE when you receive the <a class="el" href="class_i_customized_annotation_controller_event.html#a8a6f0151b32068fcef684337652ce268" title="The callback event when the annotation status changes. ">ICustomizedAnnotationControllerEvent::onSharingShareAnnotationStatusChanged</a> . </dd></dl>
 
 </div>
 </div>
@@ -158,14 +159,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy annotation object. </p>
+<p>Destroy the specified annotation object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">anno_obj</td><td>A pointer to a <a class="el" href="class_i_customized_annotation_obj.html" title="Annotation object interface. ">ICustomizedAnnotationObj</a> to be destroyed. </td></tr>
+    <tr><td class="paramname">anno_obj</td><td>Specify the annotation tool to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -193,14 +194,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set Annotation controller callback event. </p>
+<p>Set annotation controller callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a ICustomizedAnnotationControllerEvent* that receives annotation controller event. </td></tr>
+    <tr><td class="paramname">event_</td><td>A pointer to the <a class="el" href="class_i_customized_annotation_controller_event.html" title="Annotation controller callback event. ">ICustomizedAnnotationControllerEvent</a> that receives annotation controller event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

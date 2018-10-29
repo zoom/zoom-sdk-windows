@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -70,37 +70,341 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acf3cad2f294d276338f117acafaa10c1"><td class="memItemLeft" align="right" valign="top"><a id="acf3cad2f294d276338f117acafaa10c1"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetSupportLayout</b> ()=0</td></tr>
+<tr class="memitem:acf3cad2f294d276338f117acafaa10c1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#acf3cad2f294d276338f117acafaa10c1">GetSupportLayout</a> ()=0</td></tr>
+<tr class="memdesc:acf3cad2f294d276338f117acafaa10c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the layout mode supported by the current meeting. see <a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a> enum.  <a href="#acf3cad2f294d276338f117acafaa10c1">More...</a><br /></td></tr>
 <tr class="separator:acf3cad2f294d276338f117acafaa10c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d22b5b57b21238071fa51e348bd31c0"><td class="memItemLeft" align="right" valign="top"><a id="a0d22b5b57b21238071fa51e348bd31c0"></a>
-virtual <a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>GetValidVideoSourceList</b> ()=0</td></tr>
+<tr class="memitem:a0d22b5b57b21238071fa51e348bd31c0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a0d22b5b57b21238071fa51e348bd31c0">GetValidVideoSourceList</a> ()=0</td></tr>
+<tr class="memdesc:a0d22b5b57b21238071fa51e348bd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of users whose video source is available.  <a href="#a0d22b5b57b21238071fa51e348bd31c0">More...</a><br /></td></tr>
 <tr class="separator:a0d22b5b57b21238071fa51e348bd31c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92536e0d328c0729f50bd83d82f5e5d7"><td class="memItemLeft" align="right" valign="top"><a id="a92536e0d328c0729f50bd83d82f5e5d7"></a>
-virtual <a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>GetValidRecvSharingSourceList</b> ()=0</td></tr>
+<tr class="memitem:a92536e0d328c0729f50bd83d82f5e5d7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a92536e0d328c0729f50bd83d82f5e5d7">GetValidRecvSharingSourceList</a> ()=0</td></tr>
+<tr class="memdesc:a92536e0d328c0729f50bd83d82f5e5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the available list of users who can receive the shared content.  <a href="#a92536e0d328c0729f50bd83d82f5e5d7">More...</a><br /></td></tr>
 <tr class="separator:a92536e0d328c0729f50bd83d82f5e5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa307732cb461f06e170c033932182e4"><td class="memItemLeft" align="right" valign="top"><a id="aaa307732cb461f06e170c033932182e4"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSendSharingSourceAvailable</b> ()=0</td></tr>
+<tr class="memitem:aaa307732cb461f06e170c033932182e4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#aaa307732cb461f06e170c033932182e4">IsSendSharingSourceAvailable</a> ()=0</td></tr>
+<tr class="memdesc:aaa307732cb461f06e170c033932182e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if there exists user who is sharing the content.  <a href="#aaa307732cb461f06e170c033932182e4">More...</a><br /></td></tr>
 <tr class="separator:aaa307732cb461f06e170c033932182e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d5c7f574abaec53d93c133c6a91185"><td class="memItemLeft" align="right" valign="top"><a id="a65d5c7f574abaec53d93c133c6a91185"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasActiveVideoSource</b> ()=0</td></tr>
+<tr class="memitem:a65d5c7f574abaec53d93c133c6a91185"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a65d5c7f574abaec53d93c133c6a91185">HasActiveVideoSource</a> ()=0</td></tr>
+<tr class="memdesc:a65d5c7f574abaec53d93c133c6a91185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if there exists the active video source.  <a href="#a65d5c7f574abaec53d93c133c6a91185">More...</a><br /></td></tr>
 <tr class="separator:a65d5c7f574abaec53d93c133c6a91185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dedfd39a0dcfa4fd87d5315ad101e31"><td class="memItemLeft" align="right" valign="top"><a id="a1dedfd39a0dcfa4fd87d5315ad101e31"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SelectRecordingLayoutMode</b> (RECORDING_LAYOUT_MODE mode_)=0</td></tr>
+<tr class="memitem:a1dedfd39a0dcfa4fd87d5315ad101e31"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a1dedfd39a0dcfa4fd87d5315ad101e31">SelectRecordingLayoutMode</a> (<a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a> mode_)=0</td></tr>
+<tr class="memdesc:a1dedfd39a0dcfa4fd87d5315ad101e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the specified recording layout mode.  <a href="#a1dedfd39a0dcfa4fd87d5315ad101e31">More...</a><br /></td></tr>
 <tr class="separator:a1dedfd39a0dcfa4fd87d5315ad101e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bada5e6e82b4909130904a77d9f6d54"><td class="memItemLeft" align="right" valign="top"><a id="a0bada5e6e82b4909130904a77d9f6d54"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AddVideoSourceToRecList</b> (unsigned int user_id)=0</td></tr>
+<tr class="memitem:a0bada5e6e82b4909130904a77d9f6d54"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a0bada5e6e82b4909130904a77d9f6d54">AddVideoSourceToRecList</a> (unsigned int user_id)=0</td></tr>
+<tr class="memdesc:a0bada5e6e82b4909130904a77d9f6d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the video source of specified user to the list of videos recorded.  <a href="#a0bada5e6e82b4909130904a77d9f6d54">More...</a><br /></td></tr>
 <tr class="separator:a0bada5e6e82b4909130904a77d9f6d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a951ae4fe547685b6744200199b6919fc"><td class="memItemLeft" align="right" valign="top"><a id="a951ae4fe547685b6744200199b6919fc"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SelectActiveVideoSource</b> ()=0</td></tr>
+<tr class="memitem:a951ae4fe547685b6744200199b6919fc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a951ae4fe547685b6744200199b6919fc">SelectActiveVideoSource</a> ()=0</td></tr>
+<tr class="memdesc:a951ae4fe547685b6744200199b6919fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the current active video source.  <a href="#a951ae4fe547685b6744200199b6919fc">More...</a><br /></td></tr>
 <tr class="separator:a951ae4fe547685b6744200199b6919fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae01843af1e5acf16de70f05e8e991068"><td class="memItemLeft" align="right" valign="top"><a id="ae01843af1e5acf16de70f05e8e991068"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SelectRecvSharingSource</b> (unsigned int user_id)=0</td></tr>
+<tr class="memitem:ae01843af1e5acf16de70f05e8e991068"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#ae01843af1e5acf16de70f05e8e991068">SelectRecvSharingSource</a> (unsigned int user_id)=0</td></tr>
+<tr class="memdesc:ae01843af1e5acf16de70f05e8e991068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the video source in the list of shared content via specified user ID.  <a href="#ae01843af1e5acf16de70f05e8e991068">More...</a><br /></td></tr>
 <tr class="separator:ae01843af1e5acf16de70f05e8e991068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f32f66de20f4188ae2fe92880aca75"><td class="memItemLeft" align="right" valign="top"><a id="a32f32f66de20f4188ae2fe92880aca75"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SelectSendSharingSource</b> ()=0</td></tr>
+<tr class="memitem:a32f32f66de20f4188ae2fe92880aca75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_local_recording_layout_helper.html#a32f32f66de20f4188ae2fe92880aca75">SelectSendSharingSource</a> ()=0</td></tr>
+<tr class="memdesc:a32f32f66de20f4188ae2fe92880aca75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the found video source that sends shared content.  <a href="#a32f32f66de20f4188ae2fe92880aca75">More...</a><br /></td></tr>
 <tr class="separator:a32f32f66de20f4188ae2fe92880aca75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0bada5e6e82b4909130904a77d9f6d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bada5e6e82b4909130904a77d9f6d54">&#9670;&nbsp;</a></span>AddVideoSourceToRecList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICustomizedLocalRecordingLayoutHelper::AddVideoSourceToRecList </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add the video source of specified user to the list of videos recorded. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Specify the user ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_SUCCESS. If the specified user is out of the list of avalaible video source, it returns SDKERR_INVALID_PARAMETER. </dd></dl>
+
+</div>
+</div>
+<a id="acf3cad2f294d276338f117acafaa10c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3cad2f294d276338f117acafaa10c1">&#9670;&nbsp;</a></span>GetSupportLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ICustomizedLocalRecordingLayoutHelper::GetSupportLayout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the layout mode supported by the current meeting. see <a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a> enum. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the layout type supported by the current meeting. For more details, see <a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a92536e0d328c0729f50bd83d82f5e5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92536e0d328c0729f50bd83d82f5e5d7">&#9670;&nbsp;</a></span>GetValidRecvSharingSourceList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_list.html">IList</a>&lt;unsigned int &gt;* ICustomizedLocalRecordingLayoutHelper::GetValidRecvSharingSourceList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the available list of users who can receive the shared content. </p>
+<dl class="section return"><dt>Returns</dt><dd>The available list of users who can receive the shared content. ZERO(0) indicates that there is no available users. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The value saved in the list is the user ID. </dd></dl>
+
+</div>
+</div>
+<a id="a0d22b5b57b21238071fa51e348bd31c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d22b5b57b21238071fa51e348bd31c0">&#9670;&nbsp;</a></span>GetValidVideoSourceList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_list.html">IList</a>&lt;unsigned int &gt;* ICustomizedLocalRecordingLayoutHelper::GetValidVideoSourceList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the list of users whose video source is available. </p>
+<dl class="section return"><dt>Returns</dt><dd>The list of users. ZERO(0) indicates that there is no available video source of users. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The value saved in the list is the user ID. </dd></dl>
+
+</div>
+</div>
+<a id="a65d5c7f574abaec53d93c133c6a91185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d5c7f574abaec53d93c133c6a91185">&#9670;&nbsp;</a></span>HasActiveVideoSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ICustomizedLocalRecordingLayoutHelper::HasActiveVideoSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if there exists the active video source. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that there is the active video source. </dd></dl>
+
+</div>
+</div>
+<a id="aaa307732cb461f06e170c033932182e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa307732cb461f06e170c033932182e4">&#9670;&nbsp;</a></span>IsSendSharingSourceAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ICustomizedLocalRecordingLayoutHelper::IsSendSharingSourceAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if there exists user who is sharing the content. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that there is user who is sharing the content. </dd></dl>
+
+</div>
+</div>
+<a id="a951ae4fe547685b6744200199b6919fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951ae4fe547685b6744200199b6919fc">&#9670;&nbsp;</a></span>SelectActiveVideoSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICustomizedLocalRecordingLayoutHelper::SelectActiveVideoSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Choose the current active video source. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_SUCCESS. Otherwise returns the SDKERR_INVALID_PARAMETER。 </dd></dl>
+
+</div>
+</div>
+<a id="a1dedfd39a0dcfa4fd87d5315ad101e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dedfd39a0dcfa4fd87d5315ad101e31">&#9670;&nbsp;</a></span>SelectRecordingLayoutMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICustomizedLocalRecordingLayoutHelper::SelectRecordingLayoutMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a>&#160;</td>
+          <td class="paramname"><em>mode_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the specified recording layout mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode_</td><td>Specify the recording layout mode that you want. For more details, see <a class="el" href="customized__local__recording_8h.html#a369e647ab2157bd8cfc2e4564ee92335">RECORDING_LAYOUT_MODE</a> enum. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_SUCCESS. Otherwise returns the RECORDING_LAYOUT_MODE. </dd></dl>
+
+</div>
+</div>
+<a id="ae01843af1e5acf16de70f05e8e991068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01843af1e5acf16de70f05e8e991068">&#9670;&nbsp;</a></span>SelectRecvSharingSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICustomizedLocalRecordingLayoutHelper::SelectRecvSharingSource </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Choose the video source in the list of shared content via specified user ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Specify the user ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_SUCCESS. If the specified user ID is out of the list to receive the shared content, it returns SDKERR_INVALID_PARAMETER. </dd></dl>
+
+</div>
+</div>
+<a id="a32f32f66de20f4188ae2fe92880aca75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f32f66de20f4188ae2fe92880aca75">&#9670;&nbsp;</a></span>SelectSendSharingSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICustomizedLocalRecordingLayoutHelper::SelectSendSharingSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mark the found video source that sends shared content. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds,the return value is SDKErr_SUCCESS. If there is no user who is sending the sharing, it returns SDKERR_WRONG_USEAGE. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/customized_ui/<a class="el" href="customized__local__recording_8h_source.html">customized_local_recording.h</a></li>
 </ul>

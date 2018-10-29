@@ -43,8 +43,9 @@ var searchData=
   ['testvideostartpreview',['TestVideoStartPreview',['../class_i_test_video_device_helper.html#af4a8bae1014329ff05c0511f5027361b',1,'ITestVideoDeviceHelper']]],
   ['testvideostoppreview',['TestVideoStopPreview',['../class_i_test_video_device_helper.html#acf85bd511df4b3f96f9adbd5bdfa6716',1,'ITestVideoDeviceHelper']]],
   ['toke4enfrocelogin',['toke4enfrocelogin',['../structtag_join_param4_a_p_i_user.html#a84fde818800ed785c5d39f080cebd392',1,'tagJoinParam4APIUser']]],
-  ['top',['top',['../structtag_show_setting_dlg_param.html#aaca9c27f9bdc9e82e8f4f75eaca48f34',1,'tagShowSettingDlgParam']]],
-  ['turnoffaeromodeinsharing',['TurnOffAeroModeInSharing',['../class_i_general_setting_context.html#a427f4ceffd204bfc1804f2db12d26726',1,'IGeneralSettingContext']]],
-  ['turnoffvideoforattendee',['TurnOffVideoForAttendee',['../class_i_schedule_meeting_item.html#af0f448d93e76eea3328dc9a75f840786',1,'IScheduleMeetingItem']]],
-  ['turnoffvideoforhost',['TurnOffVideoForHost',['../class_i_schedule_meeting_item.html#a7b5e4bc5f7c723bac54b0a6ac70a576c',1,'IScheduleMeetingItem']]]
+  ['top',['top',['../structtag_show_setting_dlg_param.html#aaca9c27f9bdc9e82e8f4f75eaca48f34',1,'tagShowSettingDlgParam::top()'],['../structtag_wnd_position.html#a64a6cabaeceb6a087be795501286b718',1,'tagWndPosition::top()']]],
+  ['trust',['Trust',['../class_i_s_s_l_cert_verification_handler.html#a294932e428cb98f8ed0ce2323213cb1e',1,'ISSLCertVerificationHandler']]],
+  ['trywithmeetingnumber',['TryWithMeetingNumber',['../class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html#a3298496b3239b60bef14dac060e65074',1,'IDirectShareViaMeetingIDOrPairingCodeHandler']]],
+  ['trywithpairingcode',['TryWithPairingCode',['../class_i_direct_share_via_meeting_i_d_or_pairing_code_handler.html#a47ae69cff48b48e7acddf3462ac8ea6d',1,'IDirectShareViaMeetingIDOrPairingCodeHandler']]],
+  ['turnoffaeromodeinsharing',['TurnOffAeroModeInSharing',['../class_i_general_setting_context.html#a427f4ceffd204bfc1804f2db12d26726',1,'IGeneralSettingContext']]]
 ];

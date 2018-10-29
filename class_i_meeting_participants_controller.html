@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,49 +76,49 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a02e8268a7928c04a6abd89907c44076b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a02e8268a7928c04a6abd89907c44076b">SetEvent</a> (<a class="el" href="class_i_meeting_participants_ctrl_event.html">IMeetingParticipantsCtrlEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a02e8268a7928c04a6abd89907c44076b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set participants controller callback event.  <a href="#a02e8268a7928c04a6abd89907c44076b">More...</a><br /></td></tr>
+<tr class="memdesc:a02e8268a7928c04a6abd89907c44076b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the participants controller callback event handler.  <a href="#a02e8268a7928c04a6abd89907c44076b">More...</a><br /></td></tr>
 <tr class="separator:a02e8268a7928c04a6abd89907c44076b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b41a78318d60090da228bbb805114bf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a1b41a78318d60090da228bbb805114bf">GetParticipantsList</a> ()=0</td></tr>
-<tr class="memdesc:a1b41a78318d60090da228bbb805114bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting participants list.  <a href="#a1b41a78318d60090da228bbb805114bf">More...</a><br /></td></tr>
+<tr class="memdesc:a1b41a78318d60090da228bbb805114bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of all the panelists in the meeting.  <a href="#a1b41a78318d60090da228bbb805114bf">More...</a><br /></td></tr>
 <tr class="separator:a1b41a78318d60090da228bbb805114bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa0887b5e66feb3204338a3260129989"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_user_info.html">IUserInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#afa0887b5e66feb3204338a3260129989">GetUserByUserID</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:afa0887b5e66feb3204338a3260129989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user information via user id.  <a href="#afa0887b5e66feb3204338a3260129989">More...</a><br /></td></tr>
+<tr class="memdesc:afa0887b5e66feb3204338a3260129989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the information of specified user.  <a href="#afa0887b5e66feb3204338a3260129989">More...</a><br /></td></tr>
 <tr class="separator:afa0887b5e66feb3204338a3260129989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafbeb657d79f824fccb7008af65dfcb7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#aafbeb657d79f824fccb7008af65dfcb7">LowerAllHands</a> ()=0</td></tr>
-<tr class="memdesc:aafbeb657d79f824fccb7008af65dfcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower all attendee hands in meeting.  <a href="#aafbeb657d79f824fccb7008af65dfcb7">More...</a><br /></td></tr>
+<tr class="memdesc:aafbeb657d79f824fccb7008af65dfcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel all hands raised.  <a href="#aafbeb657d79f824fccb7008af65dfcb7">More...</a><br /></td></tr>
 <tr class="separator:aafbeb657d79f824fccb7008af65dfcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08f977597c2e4c1f781627119b102b3f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a08f977597c2e4c1f781627119b102b3f">ChangeUserName</a> (const unsigned int userid, const wchar_t *userName, bool bSaveUserName)=0</td></tr>
-<tr class="memdesc:a08f977597c2e4c1f781627119b102b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change user name.if you want to change other user name, you should be the host or cohost.  <a href="#a08f977597c2e4c1f781627119b102b3f">More...</a><br /></td></tr>
+<tr class="memdesc:a08f977597c2e4c1f781627119b102b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the screen name of specified user. Only the host or co-host can change the others' name.  <a href="#a08f977597c2e4c1f781627119b102b3f">More...</a><br /></td></tr>
 <tr class="separator:a08f977597c2e4c1f781627119b102b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2ac0b85677af0733b5604d9236430a3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#aa2ac0b85677af0733b5604d9236430a3">LowerHand</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:aa2ac0b85677af0733b5604d9236430a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower attendee hands in meeting.  <a href="#aa2ac0b85677af0733b5604d9236430a3">More...</a><br /></td></tr>
+<tr class="memdesc:aa2ac0b85677af0733b5604d9236430a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the hands raised of specified user.  <a href="#aa2ac0b85677af0733b5604d9236430a3">More...</a><br /></td></tr>
 <tr class="separator:aa2ac0b85677af0733b5604d9236430a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2f2943faf1af30d767e0c763e085ad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a7b2f2943faf1af30d767e0c763e085ad">RaiseHand</a> ()=0</td></tr>
-<tr class="memdesc:a7b2f2943faf1af30d767e0c763e085ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise hands in meeting.  <a href="#a7b2f2943faf1af30d767e0c763e085ad">More...</a><br /></td></tr>
+<tr class="memdesc:a7b2f2943faf1af30d767e0c763e085ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise hands in the meeting.  <a href="#a7b2f2943faf1af30d767e0c763e085ad">More...</a><br /></td></tr>
 <tr class="separator:a7b2f2943faf1af30d767e0c763e085ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d10adf741e9e061a7c205d1c170ec3f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a8d10adf741e9e061a7c205d1c170ec3f">MakeHost</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:a8d10adf741e9e061a7c205d1c170ec3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make host.  <a href="#a8d10adf741e9e061a7c205d1c170ec3f">More...</a><br /></td></tr>
+<tr class="memdesc:a8d10adf741e9e061a7c205d1c170ec3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the specified user as the host.  <a href="#a8d10adf741e9e061a7c205d1c170ec3f">More...</a><br /></td></tr>
 <tr class="separator:a8d10adf741e9e061a7c205d1c170ec3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5fc692c3638521f3b3a5b30cf375c80"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#ab5fc692c3638521f3b3a5b30cf375c80">CanbeCohost</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:ab5fc692c3638521f3b3a5b30cf375c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">check can be the co-host.  <a href="#ab5fc692c3638521f3b3a5b30cf375c80">More...</a><br /></td></tr>
+<tr class="memdesc:ab5fc692c3638521f3b3a5b30cf375c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is able to change the specified user role as the co-host.  <a href="#ab5fc692c3638521f3b3a5b30cf375c80">More...</a><br /></td></tr>
 <tr class="separator:ab5fc692c3638521f3b3a5b30cf375c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897789ec29954e794e28d435554b2b2f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a897789ec29954e794e28d435554b2b2f">AssignCoHost</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:a897789ec29954e794e28d435554b2b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign co-host.  <a href="#a897789ec29954e794e28d435554b2b2f">More...</a><br /></td></tr>
+<tr class="memdesc:a897789ec29954e794e28d435554b2b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the specified user as the co-host.  <a href="#a897789ec29954e794e28d435554b2b2f">More...</a><br /></td></tr>
 <tr class="separator:a897789ec29954e794e28d435554b2b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca3fb36bb285a63b8009211ea4b1a97e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#aca3fb36bb285a63b8009211ea4b1a97e">RevokeCoHost</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:aca3fb36bb285a63b8009211ea4b1a97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revoke co-host.  <a href="#aca3fb36bb285a63b8009211ea4b1a97e">More...</a><br /></td></tr>
+<tr class="memdesc:aca3fb36bb285a63b8009211ea4b1a97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get back the co-host role from the specified user.  <a href="#aca3fb36bb285a63b8009211ea4b1a97e">More...</a><br /></td></tr>
 <tr class="separator:aca3fb36bb285a63b8009211ea4b1a97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb582ceefdab8cc08fa755fcdf872a20"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#afb582ceefdab8cc08fa755fcdf872a20">ExpelUser</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:afb582ceefdab8cc08fa755fcdf872a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expel user.  <a href="#afb582ceefdab8cc08fa755fcdf872a20">More...</a><br /></td></tr>
+<tr class="memdesc:afb582ceefdab8cc08fa755fcdf872a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expel the specified user.  <a href="#afb582ceefdab8cc08fa755fcdf872a20">More...</a><br /></td></tr>
 <tr class="separator:afb582ceefdab8cc08fa755fcdf872a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a779b8af2fe5f694eb3437bdc66f90b6f">ReclaimHost</a> ()=0</td></tr>
-<tr class="memdesc:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reclaim host.  <a href="#a779b8af2fe5f694eb3437bdc66f90b6f">More...</a><br /></td></tr>
+<tr class="memdesc:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reclaim the role of the host.  <a href="#a779b8af2fe5f694eb3437bdc66f90b6f">More...</a><br /></td></tr>
 <tr class="separator:a779b8af2fe5f694eb3437bdc66f90b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8325a02f7d1f54955431048f590e5829"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a8325a02f7d1f54955431048f590e5829">CanReclaimHost</a> (bool &amp;bCanReclaimHost)=0</td></tr>
-<tr class="memdesc:a8325a02f7d1f54955431048f590e5829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the right of reclaim host.  <a href="#a8325a02f7d1f54955431048f590e5829">More...</a><br /></td></tr>
+<tr class="memdesc:a8325a02f7d1f54955431048f590e5829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the user has the right to reclaim the host role.  <a href="#a8325a02f7d1f54955431048f590e5829">More...</a><br /></td></tr>
 <tr class="separator:a8325a02f7d1f54955431048f590e5829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a693ffe4af49f8ee56eed298550aef588"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_controller.html#a693ffe4af49f8ee56eed298550aef588">ReclaimHostByHostKey</a> (const wchar_t *host_key)=0</td></tr>
-<tr class="memdesc:a693ffe4af49f8ee56eed298550aef588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reclaim host by key.  <a href="#a693ffe4af49f8ee56eed298550aef588">More...</a><br /></td></tr>
+<tr class="memdesc:a693ffe4af49f8ee56eed298550aef588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reclaim role of host via host_key.  <a href="#a693ffe4af49f8ee56eed298550aef588">More...</a><br /></td></tr>
 <tr class="separator:a693ffe4af49f8ee56eed298550aef588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -148,14 +148,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Assign co-host. </p>
+<p>Set the specified user as the co-host. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user to be the co-host. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID who is to be the co-host. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -183,14 +184,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>check can be the co-host. </p>
+<p>Determine if it is able to change the specified user role as the co-host. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user can be the co-host. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the specified user can be the co-host, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -218,14 +220,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check the right of reclaim host. </p>
+<p>Determine if the user has the right to reclaim the host role. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bCanReclaimHost</td><td>can reclaim host or not. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">bCanReclaimHost</td><td>TRUE indicates to have the right to reclaim the host role. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -269,16 +272,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Change user name.if you want to change other user name, you should be the host or cohost. </p>
+<p>Change the screen name of specified user. Only the host or co-host can change the others' name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies the user's name need change. </td></tr>
-    <tr><td class="paramname">userName</td><td>Specifies the new user name. </td></tr>
-    <tr><td class="paramname">bSaveUserName</td><td>Specifies which the user uses this name when join meeting next time. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID whose name needed to be changed. </td></tr>
+    <tr><td class="paramname">userName</td><td>Specify a new screen name for the user. </td></tr>
+    <tr><td class="paramname">bSaveUserName</td><td>Save the screen name to join the meeting next time. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -306,14 +310,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Expel user. </p>
+<p>Expel the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user to expel. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID to be expeled. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -340,8 +345,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting participants list. </p>
-<dl class="section return"><dt>Returns</dt><dd>the return value is current meeting all participants list.if not in meeting, return NULL.  for zoom style and customized style ui mode </dd></dl>
+<p>Get the list of all the panelists in the meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the list of the panelists in the meeting. Otherwise failed, the return value is NULL. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode. </dd></dl>
 
 </div>
 </div>
@@ -369,14 +375,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get user information via user id. </p>
+<p>Get the information of specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user's information to get.if zero,to get current user information. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID for which you want to get the information. Zero(0) indicates to get the informatioin of the current user. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is user information interface. If the function fails, the return value is NULL.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to the <a class="el" href="class_i_user_info.html" title="User information interface. ">IUserInfo</a>. For more details, see <a class="el" href="class_i_user_info.html">IUserInfo</a>. Otherwise failed, the return value is NULL. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -403,8 +410,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Lower all attendee hands in meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<p>Cancel all hands raised. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -432,14 +440,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Lower attendee hands in meeting. </p>
+<p>Cancel the hands raised of specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user's hands to low. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID to put down the hands. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -467,14 +476,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Make host. </p>
+<p>Set the specified user as the host. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user to be the host. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID to be the host. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -501,8 +511,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Raise hands in meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<p>Raise hands in the meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -529,8 +540,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reclaim host. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<p>Reclaim the role of the host. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for Zoom style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -558,14 +570,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reclaim host by key. </p>
+<p>Reclaim role of host via host_key. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">host_key</td><td>host key. </td></tr>
+    <tr><td class="paramname">host_key</td><td>The key to get the role of host. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -593,14 +606,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Revoke co-host. </p>
+<p>Get back the co-host role from the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the co-host user to be revoked. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the user ID to get back the co-host. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style and customized style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode.. </dd></dl>
 
 </div>
 </div>
@@ -628,14 +642,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set participants controller callback event. </p>
+<p>Set the participants controller callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IParticipantsControllerEvent* that receives participants event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the IParticipantsControllerEvent that receives the participants event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

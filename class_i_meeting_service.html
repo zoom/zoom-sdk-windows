@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e66427636ed90719978e3ecf6cae513"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a3e66427636ed90719978e3ecf6cae513">SetEvent</a> (<a class="el" href="class_i_meeting_service_event.html">IMeetingServiceEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a3e66427636ed90719978e3ecf6cae513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting service callback event.  <a href="#a3e66427636ed90719978e3ecf6cae513">More...</a><br /></td></tr>
+<tr class="memdesc:a3e66427636ed90719978e3ecf6cae513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting service callback event handler.  <a href="#a3e66427636ed90719978e3ecf6cae513">More...</a><br /></td></tr>
 <tr class="separator:a3e66427636ed90719978e3ecf6cae513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d5819fe262b8ea0f5ee6fdca828a3b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a30d5819fe262b8ea0f5ee6fdca828a3b">Join</a> (<a class="el" href="structtag_join_param.html">JoinParam</a> &amp;joinParam)=0</td></tr>
-<tr class="memdesc:a30d5819fe262b8ea0f5ee6fdca828a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join meeting.  <a href="#a30d5819fe262b8ea0f5ee6fdca828a3b">More...</a><br /></td></tr>
+<tr class="memdesc:a30d5819fe262b8ea0f5ee6fdca828a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join the meeting.  <a href="#a30d5819fe262b8ea0f5ee6fdca828a3b">More...</a><br /></td></tr>
 <tr class="separator:a30d5819fe262b8ea0f5ee6fdca828a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad92278a477742e6a1e4eab6469ed96f1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ad92278a477742e6a1e4eab6469ed96f1">Start</a> (<a class="el" href="structtag_start_param.html">StartParam</a> &amp;startParam)=0</td></tr>
 <tr class="memdesc:ad92278a477742e6a1e4eab6469ed96f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start meeting.  <a href="#ad92278a477742e6a1e4eab6469ed96f1">More...</a><br /></td></tr>
@@ -91,72 +91,73 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4d68b045cef3a3de0f1f29b8e370fef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting status.  <a href="#a4d68b045cef3a3de0f1f29b8e370fef8">More...</a><br /></td></tr>
 <tr class="separator:a4d68b045cef3a3de0f1f29b8e370fef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afadc9f4e11d9c4968f6512266991731c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#afadc9f4e11d9c4968f6512266991731c">LockMeeting</a> ()=0</td></tr>
-<tr class="memdesc:afadc9f4e11d9c4968f6512266991731c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock current meeting.  <a href="#afadc9f4e11d9c4968f6512266991731c">More...</a><br /></td></tr>
+<tr class="memdesc:afadc9f4e11d9c4968f6512266991731c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the current meeting.  <a href="#afadc9f4e11d9c4968f6512266991731c">More...</a><br /></td></tr>
 <tr class="separator:afadc9f4e11d9c4968f6512266991731c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a063eb6846ff504a8e0fb9dd0c708c41e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a063eb6846ff504a8e0fb9dd0c708c41e">UnlockMeeting</a> ()=0</td></tr>
-<tr class="memdesc:a063eb6846ff504a8e0fb9dd0c708c41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock current meeting.  <a href="#a063eb6846ff504a8e0fb9dd0c708c41e">More...</a><br /></td></tr>
+<tr class="memdesc:a063eb6846ff504a8e0fb9dd0c708c41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the current meeting.  <a href="#a063eb6846ff504a8e0fb9dd0c708c41e">More...</a><br /></td></tr>
 <tr class="separator:a063eb6846ff504a8e0fb9dd0c708c41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3861743a57a098c832f1fefae83fc17"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ab3861743a57a098c832f1fefae83fc17">IsMeetingLocked</a> ()=0</td></tr>
-<tr class="memdesc:ab3861743a57a098c832f1fefae83fc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting locked status.  <a href="#ab3861743a57a098c832f1fefae83fc17">More...</a><br /></td></tr>
+<tr class="memdesc:ab3861743a57a098c832f1fefae83fc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the meeting is locked.  <a href="#ab3861743a57a098c832f1fefae83fc17">More...</a><br /></td></tr>
 <tr class="separator:ab3861743a57a098c832f1fefae83fc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab279829baff0dee656bff3fc138c5a7d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_info.html">IMeetingInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ab279829baff0dee656bff3fc138c5a7d">GetMeetingInfo</a> ()=0</td></tr>
+<tr class="memdesc:ab279829baff0dee656bff3fc138c5a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting information.  <a href="#ab279829baff0dee656bff3fc138c5a7d">More...</a><br /></td></tr>
 <tr class="separator:ab279829baff0dee656bff3fc138c5a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae930cd4943c84e19ee3cfe0feda42c2d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991d">ConnectionQuality</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ae930cd4943c84e19ee3cfe0feda42c2d">GetSharingConnQuality</a> (bool bSending=true)=0</td></tr>
-<tr class="memdesc:ae930cd4943c84e19ee3cfe0feda42c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sharing connection quality.  <a href="#ae930cd4943c84e19ee3cfe0feda42c2d">More...</a><br /></td></tr>
+<tr class="memdesc:ae930cd4943c84e19ee3cfe0feda42c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the internet connection quality when sharing.  <a href="#ae930cd4943c84e19ee3cfe0feda42c2d">More...</a><br /></td></tr>
 <tr class="separator:ae930cd4943c84e19ee3cfe0feda42c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9ec27cb109d79dca396412fba8497ae"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991d">ConnectionQuality</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ad9ec27cb109d79dca396412fba8497ae">GetVideoConnQuality</a> (bool bSending=true)=0</td></tr>
-<tr class="memdesc:ad9ec27cb109d79dca396412fba8497ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get video connection quality.  <a href="#ad9ec27cb109d79dca396412fba8497ae">More...</a><br /></td></tr>
+<tr class="memdesc:ad9ec27cb109d79dca396412fba8497ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the internet connection quality of video.  <a href="#ad9ec27cb109d79dca396412fba8497ae">More...</a><br /></td></tr>
 <tr class="separator:ad9ec27cb109d79dca396412fba8497ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a476adeed6a994f3a617e782d10e7feab"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991d">ConnectionQuality</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a476adeed6a994f3a617e782d10e7feab">GetAudioConnQuality</a> (bool bSending=true)=0</td></tr>
-<tr class="memdesc:a476adeed6a994f3a617e782d10e7feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get audio connection quality.  <a href="#a476adeed6a994f3a617e782d10e7feab">More...</a><br /></td></tr>
+<tr class="memdesc:a476adeed6a994f3a617e782d10e7feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the internet connection quality of audio.  <a href="#a476adeed6a994f3a617e782d10e7feab">More...</a><br /></td></tr>
 <tr class="separator:a476adeed6a994f3a617e782d10e7feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77118cf022a60bb3373dd327b3fd7e92"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_configuration.html">IMeetingConfiguration</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a77118cf022a60bb3373dd327b3fd7e92">GetMeetingConfiguration</a> ()=0</td></tr>
-<tr class="memdesc:a77118cf022a60bb3373dd327b3fd7e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting configuration interface.  <a href="#a77118cf022a60bb3373dd327b3fd7e92">More...</a><br /></td></tr>
+<tr class="memdesc:a77118cf022a60bb3373dd327b3fd7e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the meeting configuration interface.  <a href="#a77118cf022a60bb3373dd327b3fd7e92">More...</a><br /></td></tr>
 <tr class="separator:a77118cf022a60bb3373dd327b3fd7e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b84eade1ee29cdd4ca76c63efad49ec"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_u_i_controller.html">IMeetingUIController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a5b84eade1ee29cdd4ca76c63efad49ec">GetUIController</a> ()=0</td></tr>
-<tr class="memdesc:a5b84eade1ee29cdd4ca76c63efad49ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting UI controller.  <a href="#a5b84eade1ee29cdd4ca76c63efad49ec">More...</a><br /></td></tr>
+<tr class="memdesc:a5b84eade1ee29cdd4ca76c63efad49ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the meeting UI controller interface.  <a href="#a5b84eade1ee29cdd4ca76c63efad49ec">More...</a><br /></td></tr>
 <tr class="separator:a5b84eade1ee29cdd4ca76c63efad49ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f06487c5e996991a172926531f4ee4a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_annotation_controller.html">IAnnotationController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a6f06487c5e996991a172926531f4ee4a">GetAnnotationController</a> ()=0</td></tr>
-<tr class="memdesc:a6f06487c5e996991a172926531f4ee4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get annotation controller.  <a href="#a6f06487c5e996991a172926531f4ee4a">More...</a><br /></td></tr>
+<tr class="memdesc:a6f06487c5e996991a172926531f4ee4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the annotation controller interface.  <a href="#a6f06487c5e996991a172926531f4ee4a">More...</a><br /></td></tr>
 <tr class="separator:a6f06487c5e996991a172926531f4ee4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e08c41c9b6b7b85ca346d673b3a09fa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_video_controller.html">IMeetingVideoController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a3e08c41c9b6b7b85ca346d673b3a09fa">GetMeetingVideoController</a> ()=0</td></tr>
-<tr class="memdesc:a3e08c41c9b6b7b85ca346d673b3a09fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get video controller.  <a href="#a3e08c41c9b6b7b85ca346d673b3a09fa">More...</a><br /></td></tr>
+<tr class="memdesc:a3e08c41c9b6b7b85ca346d673b3a09fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get video controller interface.  <a href="#a3e08c41c9b6b7b85ca346d673b3a09fa">More...</a><br /></td></tr>
 <tr class="separator:a3e08c41c9b6b7b85ca346d673b3a09fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ddc197b0d19722be80e32772ae81359"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_remote_controller.html">IMeetingRemoteController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a7ddc197b0d19722be80e32772ae81359">GetMeetingRemoteController</a> ()=0</td></tr>
-<tr class="memdesc:a7ddc197b0d19722be80e32772ae81359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get remote controller object.  <a href="#a7ddc197b0d19722be80e32772ae81359">More...</a><br /></td></tr>
+<tr class="memdesc:a7ddc197b0d19722be80e32772ae81359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the remote controller interface.  <a href="#a7ddc197b0d19722be80e32772ae81359">More...</a><br /></td></tr>
 <tr class="separator:a7ddc197b0d19722be80e32772ae81359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc04bb43107ceb29952df6d4116981aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_share_controller.html">IMeetingShareController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#adc04bb43107ceb29952df6d4116981aa">GetMeetingShareController</a> ()=0</td></tr>
-<tr class="memdesc:adc04bb43107ceb29952df6d4116981aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get share controller.  <a href="#adc04bb43107ceb29952df6d4116981aa">More...</a><br /></td></tr>
+<tr class="memdesc:adc04bb43107ceb29952df6d4116981aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sharing controller interface.  <a href="#adc04bb43107ceb29952df6d4116981aa">More...</a><br /></td></tr>
 <tr class="separator:adc04bb43107ceb29952df6d4116981aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d6d170e424c8e7c9174379e0937b33e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_audio_controller.html">IMeetingAudioController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a0d6d170e424c8e7c9174379e0937b33e">GetMeetingAudioController</a> ()=0</td></tr>
-<tr class="memdesc:a0d6d170e424c8e7c9174379e0937b33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get audio controller.  <a href="#a0d6d170e424c8e7c9174379e0937b33e">More...</a><br /></td></tr>
+<tr class="memdesc:a0d6d170e424c8e7c9174379e0937b33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the audio controller interface.  <a href="#a0d6d170e424c8e7c9174379e0937b33e">More...</a><br /></td></tr>
 <tr class="separator:a0d6d170e424c8e7c9174379e0937b33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87419bd8516372b46dfed3db7864902c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_recording_controller.html">IMeetingRecordingController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a87419bd8516372b46dfed3db7864902c">GetMeetingRecordingController</a> ()=0</td></tr>
-<tr class="memdesc:a87419bd8516372b46dfed3db7864902c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get recording controller.  <a href="#a87419bd8516372b46dfed3db7864902c">More...</a><br /></td></tr>
+<tr class="memdesc:a87419bd8516372b46dfed3db7864902c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recording controller interface.  <a href="#a87419bd8516372b46dfed3db7864902c">More...</a><br /></td></tr>
 <tr class="separator:a87419bd8516372b46dfed3db7864902c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e4e9e547a4698fb6b0f92f85cb63d48"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_chat_controller.html">IMeetingChatController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a8e4e9e547a4698fb6b0f92f85cb63d48">GetMeetingChatController</a> ()=0</td></tr>
-<tr class="memdesc:a8e4e9e547a4698fb6b0f92f85cb63d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chat controller.  <a href="#a8e4e9e547a4698fb6b0f92f85cb63d48">More...</a><br /></td></tr>
+<tr class="memdesc:a8e4e9e547a4698fb6b0f92f85cb63d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the chat controller interface.  <a href="#a8e4e9e547a4698fb6b0f92f85cb63d48">More...</a><br /></td></tr>
 <tr class="separator:a8e4e9e547a4698fb6b0f92f85cb63d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06e19b9717c871513c84b3280a8e8b2a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_waiting_room_controller.html">IMeetingWaitingRoomController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a06e19b9717c871513c84b3280a8e8b2a">GetMeetingWaitingRoomController</a> ()=0</td></tr>
-<tr class="memdesc:a06e19b9717c871513c84b3280a8e8b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get waiting room controller.  <a href="#a06e19b9717c871513c84b3280a8e8b2a">More...</a><br /></td></tr>
+<tr class="memdesc:a06e19b9717c871513c84b3280a8e8b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the waiting room controller interface.  <a href="#a06e19b9717c871513c84b3280a8e8b2a">More...</a><br /></td></tr>
 <tr class="separator:a06e19b9717c871513c84b3280a8e8b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a291aed3721f3cda080b9757f47e59b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_h323_helper.html">IMeetingH323Helper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a3a291aed3721f3cda080b9757f47e59b">GetH323Helper</a> ()=0</td></tr>
-<tr class="memdesc:a3a291aed3721f3cda080b9757f47e59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting H323 helper.  <a href="#a3a291aed3721f3cda080b9757f47e59b">More...</a><br /></td></tr>
+<tr class="memdesc:a3a291aed3721f3cda080b9757f47e59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the meeting H.323 helper interface.  <a href="#a3a291aed3721f3cda080b9757f47e59b">More...</a><br /></td></tr>
 <tr class="separator:a3a291aed3721f3cda080b9757f47e59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8497d75db98faebe1ab88444fcd99a4b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_phone_helper.html">IMeetingPhoneHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a8497d75db98faebe1ab88444fcd99a4b">GetMeetingPhoneHelper</a> ()=0</td></tr>
-<tr class="memdesc:a8497d75db98faebe1ab88444fcd99a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting phone helper.  <a href="#a8497d75db98faebe1ab88444fcd99a4b">More...</a><br /></td></tr>
+<tr class="memdesc:a8497d75db98faebe1ab88444fcd99a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the meeting phone helper interface.  <a href="#a8497d75db98faebe1ab88444fcd99a4b">More...</a><br /></td></tr>
 <tr class="separator:a8497d75db98faebe1ab88444fcd99a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae3f11295301dbf9f11e2db59ba38861"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_breakout_rooms_controller.html">IMeetingBreakoutRoomsController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#aae3f11295301dbf9f11e2db59ba38861">GetMeetingBreakoutRoomsController</a> ()=0</td></tr>
-<tr class="memdesc:aae3f11295301dbf9f11e2db59ba38861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Breakout Rooms controller.  <a href="#aae3f11295301dbf9f11e2db59ba38861">More...</a><br /></td></tr>
+<tr class="memdesc:aae3f11295301dbf9f11e2db59ba38861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the breakout rooms controller interface.  <a href="#aae3f11295301dbf9f11e2db59ba38861">More...</a><br /></td></tr>
 <tr class="separator:aae3f11295301dbf9f11e2db59ba38861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e2d5bc3131cc35830ce1aae70b2800"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_participants_controller.html">IMeetingParticipantsController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a72e2d5bc3131cc35830ce1aae70b2800">GetMeetingParticipantsController</a> ()=0</td></tr>
-<tr class="memdesc:a72e2d5bc3131cc35830ce1aae70b2800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Participants controller.  <a href="#a72e2d5bc3131cc35830ce1aae70b2800">More...</a><br /></td></tr>
+<tr class="memdesc:a72e2d5bc3131cc35830ce1aae70b2800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the participants controller interface.  <a href="#a72e2d5bc3131cc35830ce1aae70b2800">More...</a><br /></td></tr>
 <tr class="separator:a72e2d5bc3131cc35830ce1aae70b2800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4a403760b17db904ac97a389ea0dc1d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_live_stream_controller.html">IMeetingLiveStreamController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ae4a403760b17db904ac97a389ea0dc1d">GetMeetingLiveStreamController</a> ()=0</td></tr>
-<tr class="memdesc:ae4a403760b17db904ac97a389ea0dc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Live stream controller.  <a href="#ae4a403760b17db904ac97a389ea0dc1d">More...</a><br /></td></tr>
+<tr class="memdesc:ae4a403760b17db904ac97a389ea0dc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the live stream controller interface.  <a href="#ae4a403760b17db904ac97a389ea0dc1d">More...</a><br /></td></tr>
 <tr class="separator:ae4a403760b17db904ac97a389ea0dc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac321763d9557718765c20afcea949071"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_webinar_controller.html">IMeetingWebinarController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ac321763d9557718765c20afcea949071">GetMeetingWebinarController</a> ()=0</td></tr>
-<tr class="memdesc:ac321763d9557718765c20afcea949071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get webinar controller.  <a href="#ac321763d9557718765c20afcea949071">More...</a><br /></td></tr>
+<tr class="memdesc:ac321763d9557718765c20afcea949071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the webinar controller interface.  <a href="#ac321763d9557718765c20afcea949071">More...</a><br /></td></tr>
 <tr class="separator:ac321763d9557718765c20afcea949071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -185,8 +186,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get annotation controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is annotation controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the annotation controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer of <a class="el" href="class_i_annotation_controller.html" title="Meeting annotation tools interface. ">IAnnotationController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -214,14 +215,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get audio connection quality. </p>
+<p>Get the internet connection quality of audio. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bSending</td><td>if true, will return sending status, otherwise, will return receiving status. </td></tr>
+    <tr><td class="paramname">bSending</td><td>TRUE indicates to get the connection quality of sending the audio. FALSE indicates to get the connection quality of receiving the audio. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is ConnectionQuality enum value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is one of those enumerated in ConnectionQuality enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If you are not in the meeting, the Conn_Quality_Unknow will be returend. </dd></dl>
 
 </div>
 </div>
@@ -248,8 +250,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting H323 helper. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is meeting H323 helper interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the meeting H.323 helper interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_h323_helper.html" title="Meeting H323 Helper Interface. ">IMeetingH323Helper</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -276,8 +278,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get audio controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is audio controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the audio controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_audio_controller.html" title="Meeting audio controller interface. ">IMeetingAudioController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -304,8 +306,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get Breakout Rooms controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is Breakout Rooms controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the breakout rooms controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_breakout_rooms_controller.html" title="Breakout Rooms controller interface. ">IMeetingBreakoutRoomsController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -332,8 +334,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get chat controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is audio controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the chat controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_chat_controller.html" title="Meeting chat controller interface. ">IMeetingChatController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -360,8 +362,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting configuration interface. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is meeting configuration interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the meeting configuration interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the meeting configuration interface. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -387,7 +389,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the meeting information, otherwise is NULL. </dd></dl>
+
+<p>Get meeting information. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the meeting information. Otherwise returns NULL. For more details, see <a class="el" href="class_i_meeting_info.html">IMeetingInfo</a>. </dd></dl>
 
 </div>
 </div>
@@ -414,8 +418,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get Live stream controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is live stream controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the live stream controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_participants_controller.html" title="Meeting waiting room controller interface. ">IMeetingParticipantsController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -442,8 +446,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get Participants controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is participants controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the participants controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_participants_controller.html" title="Meeting waiting room controller interface. ">IMeetingParticipantsController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -470,8 +474,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting phone helper. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is meeting phone helper interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the meeting phone helper interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer of <a class="el" href="class_i_meeting_phone_helper.html" title="Meeting phone helper interface. ">IMeetingPhoneHelper</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -498,8 +502,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get recording controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is audio controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the recording controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_recording_controller.html" title="Meeting recording controller interface. ">IMeetingRecordingController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -526,8 +530,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get remote controller object. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is remote controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the remote controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer of <a class="el" href="class_i_meeting_video_controller.html" title="Meeting video controller interface. ">IMeetingVideoController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -554,8 +558,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get share controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is remote controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the sharing controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_video_controller.html" title="Meeting video controller interface. ">IMeetingVideoController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -583,7 +587,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get meeting status. </p>
-<dl class="section return"><dt>Returns</dt><dd>the return value is current meeting status.To get extended error information, refer to MeetingStatus enum </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the current meeting status. Otherwise failed. To get extended error information, see <a class="el" href="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391">MeetingStatus</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -610,8 +614,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get video controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is video controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get video controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_video_controller.html" title="Meeting video controller interface. ">IMeetingVideoController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -638,8 +642,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get waiting room controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is audio controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the waiting room controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_waiting_room_controller.html" title="Meeting waiting room controller interface. ">IMeetingWaitingRoomController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -666,8 +670,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get webinar controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is webinar controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the webinar controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_webinar_controller.html" title="Webinar controller interface. ">IMeetingWebinarController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -695,14 +699,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get sharing connection quality. </p>
+<p>Get the internet connection quality when sharing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bSending</td><td>if true, will return sending status, otherwise, will return receiving status. </td></tr>
+    <tr><td class="paramname">bSending</td><td>TRUE indicates to get the connection quality of sending the sharing statistics. FALSE indicates to get the connection quality of receiving the sharing statistics. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is ConnectionQuality enum value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return is one of those enumerated in ConnectionQuality enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If you are not in the meeting, the Conn_Quality_Unknow will be returend. </dd></dl>
 
 </div>
 </div>
@@ -729,8 +734,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting UI controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is meeting ui controller interface. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the meeting UI controller interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to the <a class="el" href="class_i_meeting_configuration.html" title="Meeting configuration interface. ">IMeetingConfiguration</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -758,14 +763,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get video connection quality. </p>
+<p>Get the internet connection quality of video. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bSending</td><td>if true, will return sending status, otherwise, will return receiving status. </td></tr>
+    <tr><td class="paramname">bSending</td><td>TRUE indicates to get the connection quality of sending the video. FALSE indicates to get the connection quality of receiving the video. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is ConnectionQuality enum value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return is one of those enumerated in ConnectionQuality enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If you are not in the meeting, the Conn_Quality_Unknow will be returend. </dd></dl>
 
 </div>
 </div>
@@ -792,8 +798,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting locked status. </p>
-<dl class="section return"><dt>Returns</dt><dd>locked status of current meeting. </dd></dl>
+<p>Determine if the meeting is locked. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates the meeting status is locked. </dd></dl>
 
 </div>
 </div>
@@ -821,14 +827,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Join meeting. </p>
+<p>Join the meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">joinParam</td><td>The parameter to be used for join meeting, refer to JoinParam. </td></tr>
+    <tr><td class="paramname">joinParam</td><td>The parameter is used to join meeting. For more details, see <a class="el" href="">JoinParam</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -859,11 +865,11 @@ Public Member Functions</h2></td></tr>
 <p>Leave meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">leaveCmd</td><td>Leave meeting command, refer to LeaveMeetingCmd. </td></tr>
+    <tr><td class="paramname">leaveCmd</td><td>Leave meeting command. For more details, see <a class="el" href="meeting__service__interface_8h.html#aab83ef4fc9fb56cbb5e57df3f297134e">LeaveMeetingCmd</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -890,8 +896,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Lock current meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Lock the current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -919,14 +925,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set meeting service callback event. </p>
+<p>Set meeting service callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingServiceEvent* that receives meeting event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_service_event.html" title="Meeting service callback event. ">IMeetingServiceEvent</a> that receives the meeting service callback event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -957,11 +963,11 @@ Public Member Functions</h2></td></tr>
 <p>Start meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">startParam</td><td>The parameter to be used for start meeting, refer to StartParam. </td></tr>
+    <tr><td class="paramname">startParam</td><td>The parameter is used to start meeting. For more details, see <a class="el" href="">StartParam</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -988,8 +994,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Unlock current meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Unlock the current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

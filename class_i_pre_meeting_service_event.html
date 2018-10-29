@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>PreMeeting service event interface.  
+<p>Pre-meeting service event interface.  
  <a href="class_i_pre_meeting_service_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="premeeting__service__interface_8h_source.html">premeeting_service_interface.h</a>&gt;</code></p>
@@ -76,17 +76,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ab53c8ca9c2aa5e941a82c275a6ec5c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_pre_meeting_service_event.html#a1ab53c8ca9c2aa5e941a82c275a6ec5c">onListMeeting</a> (<a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">PremeetingAPIResult</a> result, <a class="el" href="class_i_list.html">IList</a>&lt; UINT64 &gt; *lstMeetingList)=0</td></tr>
-<tr class="memdesc:a1ab53c8ca9c2aa5e941a82c275a6ec5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List meeting callback.  <a href="#a1ab53c8ca9c2aa5e941a82c275a6ec5c">More...</a><br /></td></tr>
+<tr class="memdesc:a1ab53c8ca9c2aa5e941a82c275a6ec5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List meeting callback event.  <a href="#a1ab53c8ca9c2aa5e941a82c275a6ec5c">More...</a><br /></td></tr>
 <tr class="separator:a1ab53c8ca9c2aa5e941a82c275a6ec5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedb678510dd79cb8723a6c39af62b83a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_pre_meeting_service_event.html#aedb678510dd79cb8723a6c39af62b83a">onScheduleOrEditMeeting</a> (<a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">PremeetingAPIResult</a> result, UINT64 meetingUniqueID)=0</td></tr>
-<tr class="memdesc:aedb678510dd79cb8723a6c39af62b83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule or edit meeting callback.  <a href="#aedb678510dd79cb8723a6c39af62b83a">More...</a><br /></td></tr>
+<tr class="memdesc:aedb678510dd79cb8723a6c39af62b83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule or edit meeting callback event.  <a href="#aedb678510dd79cb8723a6c39af62b83a">More...</a><br /></td></tr>
 <tr class="separator:aedb678510dd79cb8723a6c39af62b83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fb45d4b82e45c529363e4d8f42af438"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438">onDeleteMeeting</a> (<a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">PremeetingAPIResult</a> result)=0</td></tr>
 <tr class="memdesc:a9fb45d4b82e45c529363e4d8f42af438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete meeting callback.  <a href="#a9fb45d4b82e45c529363e4d8f42af438">More...</a><br /></td></tr>
 <tr class="separator:a9fb45d4b82e45c529363e4d8f42af438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>PreMeeting service event interface. </p>
+<div class="textblock"><p>Pre-meeting service event interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9fb45d4b82e45c529363e4d8f42af438"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fb45d4b82e45c529363e4d8f42af438">&#9670;&nbsp;</a></span>onDeleteMeeting()</h2>
@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
 <p>Delete meeting callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>Delete meeting result. refer enum PremeetingAPIResult. </td></tr>
+    <tr><td class="paramname">result</td><td>The result of calling <a class="el" href="class_i_pre_meeting_service.html#ad3268417a127fe091dc77783b478fa27" title="Delete the specified scheduled meeting. ">IPreMeetingService::DeleteMeeting()</a>. For more details, see <a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">PremeetingAPIResult</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -156,11 +156,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>List meeting callback. </p>
+<p>List meeting callback event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>List meeting result. refer enum PremeetingAPIResult. </td></tr>
-    <tr><td class="paramname">lstMeetingList</td><td>meeting's unique ID list. </td></tr>
+    <tr><td class="paramname">result</td><td>The result of calling <a class="el" href="class_i_pre_meeting_service.html#a5a0600ff2049b77a4cfa1d8ff1f04827" title="Get the list of current meetings. ">IPreMeetingService::ListMeeting()</a>. For more details, see <a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">PremeetingAPIResult</a> enum. </td></tr>
+    <tr><td class="paramname">lstMeetingList</td><td>A pointer to the list of meeting ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -201,11 +201,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Schedule or edit meeting callback. </p>
+<p>Schedule or edit meeting callback event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>Schedule or edit meeting result. refer enum PremeetingAPIResult. </td></tr>
-    <tr><td class="paramname">meetingUniqueID</td><td>the unique ID which meeting you scheduled or edited. </td></tr>
+    <tr><td class="paramname">result</td><td>The result of calling <a class="el" href="class_i_pre_meeting_service.html#a47ce38da3ad051b1f6fd35207666ca57" title="Schedule Meeting. ">IPreMeetingService::ScheduleMeeting()</a>. For more details, see <a class="el" href="premeeting__service__interface_8h.html#a4f59dfbe1b0b4a91415421c631b6cd88">PremeetingAPIResult</a> enum. </td></tr>
+    <tr><td class="paramname">meetingUniqueID</td><td>The meeting ID to schedule or edit the meeting. </td></tr>
   </table>
   </dd>
 </dl>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Zoom SDK Namespace.  
+<p>Webinar callback event.  
  <a href="class_i_meeting_webinar_ctrl_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__webinar__interface_8h_source.html">meeting_webinar_interface.h</a>&gt;</code></p>
@@ -76,42 +76,41 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a153a43deb7e268911e676c0a4b3ead0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a153a43deb7e268911e676c0a4b3ead0e">onPromptAttendee2PanelistResult</a> (int result)=0</td></tr>
-<tr class="memdesc:a153a43deb7e268911e676c0a4b3ead0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">change attendee to panlist result callback  <a href="#a153a43deb7e268911e676c0a4b3ead0e">More...</a><br /></td></tr>
+<tr class="memdesc:a153a43deb7e268911e676c0a4b3ead0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to promote attendees to panelist.  <a href="#a153a43deb7e268911e676c0a4b3ead0e">More...</a><br /></td></tr>
 <tr class="separator:a153a43deb7e268911e676c0a4b3ead0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee5edd01e37ff892a0920f4b2874882"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a7ee5edd01e37ff892a0920f4b2874882">onDepromptPanelist2AttendeeResult</a> (int result)=0</td></tr>
-<tr class="memdesc:a7ee5edd01e37ff892a0920f4b2874882"><td class="mdescLeft">&#160;</td><td class="mdescRight">change panlist to attendee result callback  <a href="#a7ee5edd01e37ff892a0920f4b2874882">More...</a><br /></td></tr>
+<tr class="memdesc:a7ee5edd01e37ff892a0920f4b2874882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to demote attendees to panelist.  <a href="#a7ee5edd01e37ff892a0920f4b2874882">More...</a><br /></td></tr>
 <tr class="separator:a7ee5edd01e37ff892a0920f4b2874882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6804f71aea1c114d711010acb026ea1b"><td class="memItemLeft" align="right" valign="top"><a id="a6804f71aea1c114d711010acb026ea1b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a6804f71aea1c114d711010acb026ea1b">onAllowPanelistStartVideoNotification</a> ()=0</td></tr>
-<tr class="memdesc:a6804f71aea1c114d711010acb026ea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow panelist to start video result callback <br /></td></tr>
+<tr class="memdesc:a6804f71aea1c114d711010acb026ea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to enable the panelist to start the video. <br /></td></tr>
 <tr class="separator:a6804f71aea1c114d711010acb026ea1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a9236acde37f1d6e15b65e1ffd66b91"><td class="memItemLeft" align="right" valign="top"><a id="a8a9236acde37f1d6e15b65e1ffd66b91"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a8a9236acde37f1d6e15b65e1ffd66b91">onDisallowPanelistStartVideoNotification</a> ()=0</td></tr>
-<tr class="memdesc:a8a9236acde37f1d6e15b65e1ffd66b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">disallow panelist to start video result callback <br /></td></tr>
+<tr class="memdesc:a8a9236acde37f1d6e15b65e1ffd66b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to disable the panelist to start the video. <br /></td></tr>
 <tr class="separator:a8a9236acde37f1d6e15b65e1ffd66b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97849889b0d53e17a377cd8865cbec2b"><td class="memItemLeft" align="right" valign="top"><a id="a97849889b0d53e17a377cd8865cbec2b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a97849889b0d53e17a377cd8865cbec2b">onSelfAllowTalkNotification</a> ()=0</td></tr>
-<tr class="memdesc:a97849889b0d53e17a377cd8865cbec2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">self allow to talk notification callback <br /></td></tr>
+<tr class="memdesc:a97849889b0d53e17a377cd8865cbec2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event that attendees are required to enable the mic in the view-only mode of webinar. <br /></td></tr>
 <tr class="separator:a97849889b0d53e17a377cd8865cbec2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad623680ad71b90e05c4cd6282c14da0e"><td class="memItemLeft" align="right" valign="top"><a id="ad623680ad71b90e05c4cd6282c14da0e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#ad623680ad71b90e05c4cd6282c14da0e">onSelfDisallowTalkNotification</a> ()=0</td></tr>
-<tr class="memdesc:ad623680ad71b90e05c4cd6282c14da0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">self disallow to talk notification callback <br /></td></tr>
+<tr class="memdesc:ad623680ad71b90e05c4cd6282c14da0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event that attendees are required to turn off the mic in the view-only mode of webinar. <br /></td></tr>
 <tr class="separator:ad623680ad71b90e05c4cd6282c14da0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeca24fd82c0a2d1b1f20c5e1a1353ea7"><td class="memItemLeft" align="right" valign="top"><a id="aeca24fd82c0a2d1b1f20c5e1a1353ea7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#aeca24fd82c0a2d1b1f20c5e1a1353ea7">onAllowAttendeeChatNotification</a> ()=0</td></tr>
-<tr class="memdesc:aeca24fd82c0a2d1b1f20c5e1a1353ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow attendee to chat result callback <br /></td></tr>
+<tr class="memdesc:aeca24fd82c0a2d1b1f20c5e1a1353ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to enable the attendees to chat. Available only for the host and the cohost. <br /></td></tr>
 <tr class="separator:aeca24fd82c0a2d1b1f20c5e1a1353ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a726d39c56819670ef0c57d54b9782878"><td class="memItemLeft" align="right" valign="top"><a id="a726d39c56819670ef0c57d54b9782878"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a726d39c56819670ef0c57d54b9782878">onDisallowAttendeeChatNotification</a> ()=0</td></tr>
-<tr class="memdesc:a726d39c56819670ef0c57d54b9782878"><td class="mdescLeft">&#160;</td><td class="mdescRight">disallow attendee to chat result callback <br /></td></tr>
+<tr class="memdesc:a726d39c56819670ef0c57d54b9782878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to disable the attendees to chat. Available only for the host and the cohost. <br /></td></tr>
 <tr class="separator:a726d39c56819670ef0c57d54b9782878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db8a195eedbe1f367a48fa9da7fd6c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_ctrl_event.html#a4db8a195eedbe1f367a48fa9da7fd6c9">onAttendeeAudioStatusNotification</a> (unsigned int userid, bool can_talk, bool is_muted)=0</td></tr>
-<tr class="memdesc:a4db8a195eedbe1f367a48fa9da7fd6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">attendee audio status notification callback  <a href="#a4db8a195eedbe1f367a48fa9da7fd6c9">More...</a><br /></td></tr>
+<tr class="memdesc:a4db8a195eedbe1f367a48fa9da7fd6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attendee will receive this callback if his audio status changes.  <a href="#a4db8a195eedbe1f367a48fa9da7fd6c9">More...</a><br /></td></tr>
 <tr class="separator:a4db8a195eedbe1f367a48fa9da7fd6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Zoom SDK Namespace. </p>
-<p>Meeting webinar callback event </p>
+<div class="textblock"><p>Webinar callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4db8a195eedbe1f367a48fa9da7fd6c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4db8a195eedbe1f367a48fa9da7fd6c9">&#9670;&nbsp;</a></span>onAttendeeAudioStatusNotification()</h2>
@@ -153,12 +152,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>attendee audio status notification callback </p>
+<p>Attendee will receive this callback if his audio status changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>which attendee's audio status changed </td></tr>
-    <tr><td class="paramname">can_talk</td><td>can talk or not </td></tr>
-    <tr><td class="paramname">is_muted</td><td>mute or not, if can_talk is true, available </td></tr>
+    <tr><td class="paramname">userid</td><td>The ID of the user whose audio status changes. </td></tr>
+    <tr><td class="paramname">can_talk</td><td>True indicates that it is able to use the audio. False not. </td></tr>
+    <tr><td class="paramname">is_muted</td><td>TRUE indicates muted, FALSE not. This parameter works only when the value of can_talk is TRUE. </td></tr>
   </table>
   </dd>
 </dl>
@@ -189,10 +188,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>change panlist to attendee result callback </p>
+<p>Callback to demote attendees to panelist. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>if success, result is zero, otherwise is the error code. </td></tr>
+    <tr><td class="paramname">result</td><td>If the demotion is successful, the result is zero(0), otherwise an error code. </td></tr>
   </table>
   </dd>
 </dl>
@@ -223,10 +222,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>change attendee to panlist result callback </p>
+<p>Callback to promote attendees to panelist. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">result</td><td>if success, result is zero, otherwise is the error code. </td></tr>
+    <tr><td class="paramname">result</td><td>If the promotion is successful, the result is zero(0). Otherwise it is an error code. </td></tr>
   </table>
   </dd>
 </dl>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting share controller callback event.  
+<p>Callback event of meeting share controller.  
  <a href="class_i_meeting_share_ctrl_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__sharing__interface_8h_source.html">meeting_sharing_interface.h</a>&gt;</code></p>
@@ -76,17 +76,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a94ddea0fcc47efe5a8f08306d7cf6c8d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_ctrl_event.html#a94ddea0fcc47efe5a8f08306d7cf6c8d">onSharingStatus</a> (<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7">SharingStatus</a> status, unsigned int userId)=0</td></tr>
-<tr class="memdesc:a94ddea0fcc47efe5a8f08306d7cf6c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sharing status notify callback.  <a href="#a94ddea0fcc47efe5a8f08306d7cf6c8d">More...</a><br /></td></tr>
+<tr class="memdesc:a94ddea0fcc47efe5a8f08306d7cf6c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of the changed sharing status.  <a href="#a94ddea0fcc47efe5a8f08306d7cf6c8d">More...</a><br /></td></tr>
 <tr class="separator:a94ddea0fcc47efe5a8f08306d7cf6c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be48bff0445143193e3e0f8ec4d5894"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_ctrl_event.html#a6be48bff0445143193e3e0f8ec4d5894">onLockShareStatus</a> (bool bLocked)=0</td></tr>
-<tr class="memdesc:a6be48bff0445143193e3e0f8ec4d5894"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock share status notify call back  <a href="#a6be48bff0445143193e3e0f8ec4d5894">More...</a><br /></td></tr>
+<tr class="memdesc:a6be48bff0445143193e3e0f8ec4d5894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of locked share status.  <a href="#a6be48bff0445143193e3e0f8ec4d5894">More...</a><br /></td></tr>
 <tr class="separator:a6be48bff0445143193e3e0f8ec4d5894"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1424695c7881e14821f27ee48eefbe0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_ctrl_event.html#a1424695c7881e14821f27ee48eefbe0e">onShareContentNotification</a> (<a class="el" href="structtag_share_info.html">ShareInfo</a> &amp;shareInfo)=0</td></tr>
-<tr class="memdesc:a1424695c7881e14821f27ee48eefbe0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sharing content changed callback.  <a href="#a1424695c7881e14821f27ee48eefbe0e">More...</a><br /></td></tr>
+<tr class="memdesc:a1424695c7881e14821f27ee48eefbe0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of changed sharing information.  <a href="#a1424695c7881e14821f27ee48eefbe0e">More...</a><br /></td></tr>
 <tr class="separator:a1424695c7881e14821f27ee48eefbe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting share controller callback event. </p>
+<div class="textblock"><p>Callback event of meeting share controller. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6be48bff0445143193e3e0f8ec4d5894"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6be48bff0445143193e3e0f8ec4d5894">&#9670;&nbsp;</a></span>onLockShareStatus()</h2>
@@ -112,10 +112,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>lock share status notify call back </p>
+<p>Callback event of locked share status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bLocked</td><td>specify if sharing is locked. </td></tr>
+    <tr><td class="paramname">bLocked</td><td>TRUE indicates that it is locked. FALSE unlocked. </td></tr>
   </table>
   </dd>
 </dl>
@@ -146,10 +146,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sharing content changed callback. </p>
+<p>Callback event of changed sharing information. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shareInfo</td><td>Sharing information such as, share type, handle of shared app and monitor id, refer to ShareInfo. </td></tr>
+    <tr><td class="paramname">shareInfo</td><td>Sharing information. For more details, see <a class="el" href="">ShareInfo</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
@@ -190,14 +190,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sharing status notify callback. </p>
+<p>Callback event of the changed sharing status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>Sharing status value. </td></tr>
-    <tr><td class="paramname">userId</td><td>Sharing user id. </td></tr>
+    <tr><td class="paramname">status</td><td>The valus of sharing status. For more details, see <a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7">SharingStatus</a> enum. </td></tr>
+    <tr><td class="paramname">userId</td><td>Sharer ID. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The userId changes according to the status value. When the status value is the Sharing_Self_Send_Begin or Sharing_Self_Send_End, the userId is the user own ID. Otherwise, the value of userId is the sharer ID. </dd></dl>
 
 </div>
 </div>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Zoom SDK Namespace.  
+<p>Proxy setting information callback interface.  
  <a href="class_i_proxy_setting_handler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="network__connection__handler__interface_8h_source.html">network_connection_handler_interface.h</a>&gt;</code></p>
@@ -77,29 +77,73 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e42eb91c601b63e69deaba2469e92bd"><td class="memItemLeft" align="right" valign="top"><a id="a7e42eb91c601b63e69deaba2469e92bd"></a>
 virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_proxy_setting_handler.html#a7e42eb91c601b63e69deaba2469e92bd">GetProxyHost</a> ()=0</td></tr>
-<tr class="memdesc:a7e42eb91c601b63e69deaba2469e92bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of the Proxy-Host. <br /></td></tr>
+<tr class="memdesc:a7e42eb91c601b63e69deaba2469e92bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of the proxy host. Return The address of the proxy host. <br /></td></tr>
 <tr class="separator:a7e42eb91c601b63e69deaba2469e92bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98952d12564fb173afab67eef5e8315e"><td class="memItemLeft" align="right" valign="top"><a id="a98952d12564fb173afab67eef5e8315e"></a>
 virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_proxy_setting_handler.html#a98952d12564fb173afab67eef5e8315e">GetProxyPort</a> ()=0</td></tr>
-<tr class="memdesc:a98952d12564fb173afab67eef5e8315e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of the Proxy-Port. <br /></td></tr>
+<tr class="memdesc:a98952d12564fb173afab67eef5e8315e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the proxy port. Return The value of the proxy port. <br /></td></tr>
 <tr class="separator:a98952d12564fb173afab67eef5e8315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc9d511f956a7cd96126d8b98dc9ea0"><td class="memItemLeft" align="right" valign="top"><a id="adcc9d511f956a7cd96126d8b98dc9ea0"></a>
 virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_proxy_setting_handler.html#adcc9d511f956a7cd96126d8b98dc9ea0">GetProxyDescription</a> ()=0</td></tr>
-<tr class="memdesc:adcc9d511f956a7cd96126d8b98dc9ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of the Proxy-Description. <br /></td></tr>
+<tr class="memdesc:adcc9d511f956a7cd96126d8b98dc9ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of the proxy. Return The description of the proxy. <br /></td></tr>
 <tr class="separator:adcc9d511f956a7cd96126d8b98dc9ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85ba7813bca0361849a36457cd7df71e"><td class="memItemLeft" align="right" valign="top"><a id="a85ba7813bca0361849a36457cd7df71e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_proxy_setting_handler.html#a85ba7813bca0361849a36457cd7df71e">InputUsernamePassword</a> (const wchar_t *userName, const wchar_t *psw)=0</td></tr>
-<tr class="memdesc:a85ba7813bca0361849a36457cd7df71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input the username and password of this proxy for continue connect. <br /></td></tr>
+<tr class="memitem:a85ba7813bca0361849a36457cd7df71e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_proxy_setting_handler.html#a85ba7813bca0361849a36457cd7df71e">InputUsernamePassword</a> (const wchar_t *userName, const wchar_t *psw)=0</td></tr>
+<tr class="memdesc:a85ba7813bca0361849a36457cd7df71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input the username and password when using the proxy.  <a href="#a85ba7813bca0361849a36457cd7df71e">More...</a><br /></td></tr>
 <tr class="separator:a85ba7813bca0361849a36457cd7df71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af79ad444aafff95cd969762de69d7258"><td class="memItemLeft" align="right" valign="top"><a id="af79ad444aafff95cd969762de69d7258"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_proxy_setting_handler.html#af79ad444aafff95cd969762de69d7258">Cancel</a> ()=0</td></tr>
-<tr class="memdesc:af79ad444aafff95cd969762de69d7258"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel to input the username and password of this proxy <br /></td></tr>
+<tr class="memdesc:af79ad444aafff95cd969762de69d7258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the process to input the username and password of the proxy. <br /></td></tr>
 <tr class="separator:af79ad444aafff95cd969762de69d7258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Zoom SDK Namespace. </p>
-<p>Proxy setting information callback interface </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Proxy setting information callback interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a85ba7813bca0361849a36457cd7df71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ba7813bca0361849a36457cd7df71e">&#9670;&nbsp;</a></span>InputUsernamePassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IProxySettingHandler::InputUsernamePassword </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>userName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>psw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Input the username and password when using the proxy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userName</td><td>The username when using the proxy. </td></tr>
+    <tr><td class="paramname">psw</td><td>The password when using the proxy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="network__connection__handler__interface_8h_source.html">network_connection_handler_interface.h</a></li>
 </ul>
 </div><!-- contents -->

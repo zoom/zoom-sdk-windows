@@ -1,6 +1,7 @@
 var searchData=
 [
   ['undo',['Undo',['../class_i_customized_annotation_obj.html#adb54b550ff4c39615f3936b542565c43',1,'ICustomizedAnnotationObj::Undo()'],['../class_i_annotation_controller.html#afb4f00df5783e82d6f851ce9826d58e9',1,'IAnnotationController::Undo()']]],
+  ['uninit',['Uninit',['../class_i_calender_service.html#ad45dd1babcba4a448ef36516fd193f8c',1,'ICalenderService']]],
   ['unlockmeeting',['UnlockMeeting',['../class_i_meeting_service.html#a063eb6846ff504a8e0fb9dd0c708c41e',1,'IMeetingService']]],
   ['unlockshare',['UnlockShare',['../class_i_meeting_share_controller.html#a81ac09dd0ac9286afd5d92918616b8c2',1,'IMeetingShareController']]],
   ['unmuteaudio',['UnMuteAudio',['../class_i_meeting_audio_controller.html#adaebfe39b02fd039b71a987aa2297ec9',1,'IMeetingAudioController']]],

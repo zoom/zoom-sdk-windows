@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,16 +76,16 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a9ae588baab204e79b2bb539cbb1fd6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_breakout_rooms_controller.html#a9a9ae588baab204e79b2bb539cbb1fd6">SetEvent</a> (<a class="el" href="class_i_meeting_breakout_rooms_event.html">IMeetingBreakoutRoomsEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a9a9ae588baab204e79b2bb539cbb1fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set a handler for IBreakoutRoomsEvent notification.  <a href="#a9a9ae588baab204e79b2bb539cbb1fd6">More...</a><br /></td></tr>
+<tr class="memdesc:a9a9ae588baab204e79b2bb539cbb1fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breakout room callback event handler.  <a href="#a9a9ae588baab204e79b2bb539cbb1fd6">More...</a><br /></td></tr>
 <tr class="separator:a9a9ae588baab204e79b2bb539cbb1fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0ebb1c611553445064749f3960c4280"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_breakout_rooms_controller.html#aa0ebb1c611553445064749f3960c4280">JoinBreakoutRoom</a> (const wchar_t *stBID)=0</td></tr>
-<tr class="memdesc:aa0ebb1c611553445064749f3960c4280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join Breakout Room.  <a href="#aa0ebb1c611553445064749f3960c4280">More...</a><br /></td></tr>
+<tr class="memdesc:aa0ebb1c611553445064749f3960c4280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join the assigned Breakout Room.  <a href="#aa0ebb1c611553445064749f3960c4280">More...</a><br /></td></tr>
 <tr class="separator:aa0ebb1c611553445064749f3960c4280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a096680b8c4c2d32d197d8eb38e2f12aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_breakout_rooms_controller.html#a096680b8c4c2d32d197d8eb38e2f12aa">LeaveBreakoutRoom</a> ()=0</td></tr>
 <tr class="memdesc:a096680b8c4c2d32d197d8eb38e2f12aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leave Breakout Room.  <a href="#a096680b8c4c2d32d197d8eb38e2f12aa">More...</a><br /></td></tr>
 <tr class="separator:a096680b8c4c2d32d197d8eb38e2f12aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6b4e38a9b6f9b348db84fca0a95c2f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_breakout_rooms_info.html">IBreakoutRoomsInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_breakout_rooms_controller.html#a1b6b4e38a9b6f9b348db84fca0a95c2f">GetBreakoutRoomsInfoList</a> ()=0</td></tr>
-<tr class="memdesc:a1b6b4e38a9b6f9b348db84fca0a95c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Breakout Room list which can join.  <a href="#a1b6b4e38a9b6f9b348db84fca0a95c2f">More...</a><br /></td></tr>
+<tr class="memdesc:a1b6b4e38a9b6f9b348db84fca0a95c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of the Breakout Rooms.  <a href="#a1b6b4e38a9b6f9b348db84fca0a95c2f">More...</a><br /></td></tr>
 <tr class="separator:a1b6b4e38a9b6f9b348db84fca0a95c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -114,8 +114,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get Breakout Room list which can join. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is Breakout Room list. If the function fails, the return value is NULL.  for zoom style ui mode </dd></dl>
+<p>Get the list of the Breakout Rooms. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return is a pointer to the list of Breakout Rooms. For more details, see <a class="el" href="class_i_breakout_rooms_info.html">IBreakoutRoomsInfo</a>. Otherwise failed, the return is NULL. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -143,14 +144,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Join Breakout Room. </p>
+<p>Join the assigned Breakout Room. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stBID</td><td>Specifies Breakout Room id. </td></tr>
+    <tr><td class="paramname">stBID</td><td>Specify the Breakout Room ID to join. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -178,7 +180,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Leave Breakout Room. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -206,13 +209,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>set a handler for IBreakoutRoomsEvent notification. </p>
+<p>Breakout room callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>which will be invoked for when this message type is received. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_breakout_rooms_event.html" title="Meeting Breakout Room callback event. ">IMeetingBreakoutRoomsEvent</a> that receives meeting Breakout out room callback event. If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The event is used by the SDK to pass the callback event to user's application. If this function is not called or failed, the user's application can not retrieve the callback event. </dd></dl>
 
 </div>
 </div>

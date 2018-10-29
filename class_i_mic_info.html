@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Microphone device information Interface.  
+<p>Microphone device information interface.  
  <a href="class_i_mic_info.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a>&gt;</code></p>
@@ -76,17 +76,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ad3c1aaa9fcbdd2600e43d3a6ed3a92"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mic_info.html#a0ad3c1aaa9fcbdd2600e43d3a6ed3a92">GetDeviceId</a> ()=0</td></tr>
-<tr class="memdesc:a0ad3c1aaa9fcbdd2600e43d3a6ed3a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get microphone device id.  <a href="#a0ad3c1aaa9fcbdd2600e43d3a6ed3a92">More...</a><br /></td></tr>
+<tr class="memdesc:a0ad3c1aaa9fcbdd2600e43d3a6ed3a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the microphone device ID.  <a href="#a0ad3c1aaa9fcbdd2600e43d3a6ed3a92">More...</a><br /></td></tr>
 <tr class="separator:a0ad3c1aaa9fcbdd2600e43d3a6ed3a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e954063609ecaa87f6d6f74ecb363ae"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mic_info.html#a2e954063609ecaa87f6d6f74ecb363ae">GetDeviceName</a> ()=0</td></tr>
-<tr class="memdesc:a2e954063609ecaa87f6d6f74ecb363ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get microphone device name.  <a href="#a2e954063609ecaa87f6d6f74ecb363ae">More...</a><br /></td></tr>
+<tr class="memdesc:a2e954063609ecaa87f6d6f74ecb363ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the microphone device name.  <a href="#a2e954063609ecaa87f6d6f74ecb363ae">More...</a><br /></td></tr>
 <tr class="separator:a2e954063609ecaa87f6d6f74ecb363ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a755066dbdf32f21b28c4d91ade0ba1fa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mic_info.html#a755066dbdf32f21b28c4d91ade0ba1fa">IsSelectedDevice</a> ()=0</td></tr>
-<tr class="memdesc:a755066dbdf32f21b28c4d91ade0ba1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected device flag.  <a href="#a755066dbdf32f21b28c4d91ade0ba1fa">More...</a><br /></td></tr>
+<tr class="memdesc:a755066dbdf32f21b28c4d91ade0ba1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the current device is slected to use.  <a href="#a755066dbdf32f21b28c4d91ade0ba1fa">More...</a><br /></td></tr>
 <tr class="separator:a755066dbdf32f21b28c4d91ade0ba1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Microphone device information Interface. </p>
+<div class="textblock"><p>Microphone device information interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0ad3c1aaa9fcbdd2600e43d3a6ed3a92"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ad3c1aaa9fcbdd2600e43d3a6ed3a92">&#9670;&nbsp;</a></span>GetDeviceId()</h2>
@@ -111,8 +111,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get microphone device id. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device id. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the microphone device ID. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the camera device ID. Otherwise failed, returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -139,8 +139,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get microphone device name. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is camera device name. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the microphone device name. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the camera device name. Otherwise failed, returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -167,8 +167,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Selected device flag. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the return value is true, this device is selected. </dd></dl>
+<p>Determine if the current device is slected to use. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the current device is selected. </dd></dl>
 
 </div>
 </div>

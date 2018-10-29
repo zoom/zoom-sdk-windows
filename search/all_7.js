@@ -1,7 +1,26 @@
 var searchData=
 [
+  ['h323callout_5ffailed',['H323Callout_Failed',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9da58213843e1f4b7c88059fd2236de69c1',1,'meeting_h323_helper_interface.h']]],
+  ['h323callout_5fring',['H323Callout_Ring',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9da835bd55f00624a382f15aeb063dc8540',1,'meeting_h323_helper_interface.h']]],
+  ['h323callout_5fsuccess',['H323Callout_Success',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9da9d3812efe03716f5b17f3ae42b348bdd',1,'meeting_h323_helper_interface.h']]],
+  ['h323callout_5ftimeout',['H323Callout_Timeout',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9dafa2edc44a2a4bda6b676d50482a6c4b3',1,'meeting_h323_helper_interface.h']]],
+  ['h323callout_5funknown',['H323Callout_Unknown',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9da3bda060ed9db031c9e0157c7fbdb781e',1,'meeting_h323_helper_interface.h']]],
+  ['h323calloutstatus',['H323CalloutStatus',['../meeting__h323__helper__interface_8h.html#a1e4469819652ba2679b4bb4fffeebf9d',1,'meeting_h323_helper_interface.h']]],
+  ['h323devicetype',['H323DeviceType',['../meeting__h323__helper__interface_8h.html#a5bfcc877c55d55af6e2ce5b99dddf15e',1,'meeting_h323_helper_interface.h']]],
+  ['h323devicetype_5fboth',['H323DeviceType_BOTH',['../meeting__h323__helper__interface_8h.html#a5bfcc877c55d55af6e2ce5b99dddf15eae5b9f527615ed149f2a4fb57cfe0ffe5',1,'meeting_h323_helper_interface.h']]],
+  ['h323devicetype_5fh323',['H323DeviceType_H323',['../meeting__h323__helper__interface_8h.html#a5bfcc877c55d55af6e2ce5b99dddf15ea5ebeda0e9a5feddae5617a7790687c58',1,'meeting_h323_helper_interface.h']]],
+  ['h323devicetype_5fsip',['H323DeviceType_SIP',['../meeting__h323__helper__interface_8h.html#a5bfcc877c55d55af6e2ce5b99dddf15eaecf133488a037d4a121b1bbe8d7cab0d',1,'meeting_h323_helper_interface.h']]],
+  ['h323devicetype_5funknown',['H323DeviceType_Unknown',['../meeting__h323__helper__interface_8h.html#a5bfcc877c55d55af6e2ce5b99dddf15eac6bef6b6d3a2138ef13fb9d4322a0033',1,'meeting_h323_helper_interface.h']]],
+  ['h323paring_5fmeeting_5fnot_5fexist',['H323Paring_Meeting_Not_Exist',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49a7dce129909803fc0d3a9423f96739eaa',1,'meeting_h323_helper_interface.h']]],
+  ['h323paring_5fno_5fprivilege',['H323Paring_No_Privilege',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49ac1e0ff25ddad3f57818c7d0c40ae2a97',1,'meeting_h323_helper_interface.h']]],
+  ['h323paring_5fother_5ferror',['H323Paring_Other_Error',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49ac5c6701b91783430e0e49203fd843e0e',1,'meeting_h323_helper_interface.h']]],
+  ['h323paring_5fparingcode_5fnot_5fexist',['H323Paring_Paringcode_Not_Exist',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49a28fbd4170e8a0667a5a230fbca615b6c',1,'meeting_h323_helper_interface.h']]],
+  ['h323paring_5fsuccess',['H323Paring_Success',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49ad12298d188a0a0282aeaa458d541748e',1,'meeting_h323_helper_interface.h']]],
+  ['h323paring_5funknown',['H323Paring_Unknown',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49a1dd85715c5e78a3cec3b4be0239456e2',1,'meeting_h323_helper_interface.h']]],
+  ['h323paringresult',['H323ParingResult',['../meeting__h323__helper__interface_8h.html#a1f719335ba56063f0ef65d747171ee49',1,'meeting_h323_helper_interface.h']]],
   ['handlewindowsmovemsg',['HandleWindowsMoveMsg',['../class_i_customized_share_render.html#a94650115b89dde9b6e2d98205bad398e',1,'ICustomizedShareRender']]],
   ['hangup',['Hangup',['../class_i_meeting_phone_helper.html#ad0c7b40573bcc100964afc48ddfeebb4',1,'IMeetingPhoneHelper']]],
+  ['hasactivevideosource',['HasActiveVideoSource',['../class_i_customized_local_recording_layout_helper.html#a65d5c7f574abaec53d93c133c6a91185',1,'ICustomizedLocalRecordingLayoutHelper']]],
   ['haslicense',['HasLicense',['../class_i_customized_u_i_mgr.html#a6dc703b2b5e9c537339a16760db6c582',1,'ICustomizedUIMgr']]],
   ['hchatwnd',['hChatWnd',['../structtag_show_chat_dlg_param.html#ae5649a34e2f0a0570da90f4bd6705842',1,'tagShowChatDlgParam']]],
   ['hdirectshareappwnd',['hDirectShareAppWnd',['../structtag_join_param4_a_p_i_user.html#a59125ca7d3417845da1ae79cead4cc45',1,'tagJoinParam4APIUser::hDirectShareAppWnd()'],['../structtag_join_param4_normal_user.html#a895b6a45c4425b03ee2de5bc37428990',1,'tagJoinParam4NormalUser::hDirectShareAppWnd()'],['../structtag_start_param4_a_p_i_user.html#ac274e1c72c3d798579f016b005562b6f',1,'tagStartParam4APIUser::hDirectShareAppWnd()'],['../structtag_start_param4_without_login.html#ad94804c673d7afa365e81a0b7e900173',1,'tagStartParam4WithoutLogin::hDirectShareAppWnd()'],['../structtag_start_param4_normal_user.html#a52ad2a4d5c51942daf0f274833499225',1,'tagStartParam4NormalUser::hDirectShareAppWnd()']]],
@@ -11,7 +30,9 @@ var searchData=
   ['hidemeetinginfofrommeetinguititle',['HideMeetingInfoFromMeetingUITitle',['../class_i_meeting_u_i_elem_configuration.html#a274bca95a336bc60e74cc7101d08669a',1,'IMeetingUIElemConfiguration']]],
   ['hideorshownovideouseronvideowall',['HideOrShowNoVideoUserOnVideoWall',['../class_i_meeting_video_controller.html#a0a512517f5828ee32a0ded7127c6d8e4',1,'IMeetingVideoController']]],
   ['hidesettingdlg',['HideSettingDlg',['../class_i_setting_service.html#a5c7bd7b92ad1e382a0ea6a840e6a193d',1,'ISettingService']]],
-  ['hparent',['hParent',['../structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950',1,'tagShowChatDlgParam::hParent()'],['../structtag_show_setting_dlg_param.html#acc2a6944153407b6e1715b58ef49ad20',1,'tagShowSettingDlgParam::hParent()']]],
+  ['hparent',['hParent',['../structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950',1,'tagShowChatDlgParam::hParent()'],['../structtag_show_setting_dlg_param.html#acc2a6944153407b6e1715b58ef49ad20',1,'tagShowSettingDlgParam::hParent()'],['../structtag_wnd_position.html#a03529808c83dc9c592ad21f742abbc7d',1,'tagWndPosition::hParent()']]],
   ['hresinstance',['hResInstance',['../structtag_init_param.html#a230b388bec5685732b308bb13be2de1b',1,'tagInitParam']]],
-  ['hsettingwnd',['hSettingWnd',['../structtag_show_setting_dlg_param.html#aa66ba5c5ba2987166cd4cd6f39bfa39e',1,'tagShowSettingDlgParam']]]
+  ['hselfwnd',['hSelfWnd',['../structtag_wnd_position.html#a0005c79d2ba70a5beba57c244b0b98c8',1,'tagWndPosition']]],
+  ['hsettingwnd',['hSettingWnd',['../structtag_show_setting_dlg_param.html#aa66ba5c5ba2987166cd4cd6f39bfa39e',1,'tagShowSettingDlgParam']]],
+  ['hwndsharedapp',['hwndSharedApp',['../structtag_share_info.html#a5d8d6723fe57f5fc178eb4fddefc6e6a',1,'tagShareInfo']]]
 ];

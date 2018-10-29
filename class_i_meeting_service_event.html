@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting Service Callback Event.  
+<p>Meeting service callback event.  
  <a href="class_i_meeting_service_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__service__interface_8h_source.html">meeting_service_interface.h</a>&gt;</code></p>
@@ -82,14 +82,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aaea8b84b264ed68e82d09fbe68faf458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting statistics warning notification callback.  <a href="#aaea8b84b264ed68e82d09fbe68faf458">More...</a><br /></td></tr>
 <tr class="separator:aaea8b84b264ed68e82d09fbe68faf458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00264bde8d2b829e2ed506c1b55098fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service_event.html#a00264bde8d2b829e2ed506c1b55098fd">onMeetingSecureKeyNotification</a> (const char *key, int len, <a class="el" href="class_i_meeting_external_secure_key_handler.html">IMeetingExternalSecureKeyHandler</a> *pHandler)=0</td></tr>
-<tr class="memdesc:a00264bde8d2b829e2ed506c1b55098fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting secure key notification, need to web backend and special account type support.  <a href="#a00264bde8d2b829e2ed506c1b55098fd">More...</a><br /></td></tr>
+<tr class="memdesc:a00264bde8d2b829e2ed506c1b55098fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback notification of meeting secure key, supported only by special account.  <a href="#a00264bde8d2b829e2ed506c1b55098fd">More...</a><br /></td></tr>
 <tr class="separator:a00264bde8d2b829e2ed506c1b55098fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9a7e7a5fffe74682d05204c769bc355"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service_event.html#af9a7e7a5fffe74682d05204c769bc355">onMeetingParameterNotification</a> (const <a class="el" href="structtag_meeting_parameter.html">MeetingParameter</a> *meeting_param)=0</td></tr>
 <tr class="memdesc:af9a7e7a5fffe74682d05204c769bc355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting parameter notification callback.  <a href="#af9a7e7a5fffe74682d05204c769bc355">More...</a><br /></td></tr>
 <tr class="separator:af9a7e7a5fffe74682d05204c769bc355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting Service Callback Event. </p>
+<div class="textblock"><p>Meeting service callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af9a7e7a5fffe74682d05204c769bc355"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9a7e7a5fffe74682d05204c769bc355">&#9670;&nbsp;</a></span>onMeetingParameterNotification()</h2>
@@ -118,10 +118,11 @@ Public Member Functions</h2></td></tr>
 <p>Meeting parameter notification callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">meeting_param</td><td>Meeting parameter. this callback will be invoked before in-meeting.the meeting_param will be released after call end. </td></tr>
+    <tr><td class="paramname">meeting_param</td><td>Meeting parameter. For more details, see <a class="el" href="">MeetingParameter</a>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The callback will be triggered right before the meeting starts. The meeting_param will be destroyed once the function calls end. </dd></dl>
 
 </div>
 </div>
@@ -165,15 +166,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Meeting secure key notification, need to web backend and special account type support. </p>
+<p>Callback notification of meeting secure key, supported only by special account. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key</td><td>the secure key of current meeting. </td></tr>
-    <tr><td class="paramname">len</td><td>the length of secure key. </td></tr>
-    <tr><td class="paramname">pHandler</td><td>the handler to set external secure key or leave meeting. </td></tr>
+    <tr><td class="paramname">key</td><td>The secure key of current meeting. </td></tr>
+    <tr><td class="paramname">len</td><td>The length of secure key. </td></tr>
+    <tr><td class="paramname">pHandler</td><td>The handler used to set the external secure key or leave meeting. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The pHandler will be destroyed by the SDK once the function calls end. </dd></dl>
 
 </div>
 </div>
@@ -204,7 +206,7 @@ Public Member Functions</h2></td></tr>
 <p>Meeting statistics warning notification callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The type of meeting statistics warning. </td></tr>
+    <tr><td class="paramname">type</td><td>The warning type of the meeting statistics. For more details, see <a class="el" href="meeting__service__interface_8h.html#a892cae2aedd1a8f460cd1c7bf6f8dc1a">StatisticsWarningType</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -248,8 +250,8 @@ Public Member Functions</h2></td></tr>
 <p>Meeting status changed callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>Meeting status value. </td></tr>
-    <tr><td class="paramname">iResult</td><td>details reason for special meeting status. if status is MEETING_STATUS_FAILED, the value of iResult is one of MeetingFailCode enum. </td></tr>
+    <tr><td class="paramname">status</td><td>The value of meeting. For more details, see <a class="el" href="meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391">MeetingStatus</a>. </td></tr>
+    <tr><td class="paramname">iResult</td><td>Detailed reasons for special meeting status. If the status is MEETING_STATUS_FAILED, the value of iResult is one of those listed in MeetingFailCode enum. </td></tr>
   </table>
   </dd>
 </dl>

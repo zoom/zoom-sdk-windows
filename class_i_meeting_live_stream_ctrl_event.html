@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,19 +68,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting live stream controller callback event.  
+<p>Live stream meeting controller callback event.  
  <a href="class_i_meeting_live_stream_ctrl_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__live__stream__interface_8h_source.html">meeting_live_stream_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a80e3b07ba3b7a0f101320820b14afc64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_ctrl_event.html#a80e3b07ba3b7a0f101320820b14afc64">onLiveStreamStatusChange</a> (LiveStreamStatus status)=0</td></tr>
-<tr class="memdesc:a80e3b07ba3b7a0f101320820b14afc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">live stream status changed callback  <a href="#a80e3b07ba3b7a0f101320820b14afc64">More...</a><br /></td></tr>
+<tr class="memitem:a80e3b07ba3b7a0f101320820b14afc64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_live_stream_ctrl_event.html#a80e3b07ba3b7a0f101320820b14afc64">onLiveStreamStatusChange</a> (<a class="el" href="meeting__live__stream__interface_8h.html#a95d8849df58f4106b263f7f403184efc">LiveStreamStatus</a> status)=0</td></tr>
+<tr class="memdesc:a80e3b07ba3b7a0f101320820b14afc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event that live stream status changes.  <a href="#a80e3b07ba3b7a0f101320820b14afc64">More...</a><br /></td></tr>
 <tr class="separator:a80e3b07ba3b7a0f101320820b14afc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting live stream controller callback event. </p>
+<div class="textblock"><p>Live stream meeting controller callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a80e3b07ba3b7a0f101320820b14afc64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80e3b07ba3b7a0f101320820b14afc64">&#9670;&nbsp;</a></span>onLiveStreamStatusChange()</h2>
@@ -94,7 +94,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IMeetingLiveStreamCtrlEvent::onLiveStreamStatusChange </td>
           <td>(</td>
-          <td class="paramtype">LiveStreamStatus&#160;</td>
+          <td class="paramtype"><a class="el" href="meeting__live__stream__interface_8h.html#a95d8849df58f4106b263f7f403184efc">LiveStreamStatus</a>&#160;</td>
           <td class="paramname"><em>status</em></td><td>)</td>
           <td></td>
         </tr>
@@ -106,10 +106,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>live stream status changed callback </p>
+<p>Callback event that live stream status changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>live stream status. </td></tr>
+    <tr><td class="paramname">status</td><td>Live stream status. For more details, see <a class="el" href="meeting__live__stream__interface_8h.html#a95d8849df58f4106b263f7f403184efc">LiveStreamStatus</a> enum. </td></tr>
   </table>
   </dd>
 </dl>

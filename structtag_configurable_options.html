@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -67,16 +67,42 @@ $(function() {
 <div class="title">tagConfigurableOptions Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>SDK configuration options.  
+ <a href="structtag_configurable_options.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__def_8h_source.html">zoom_sdk_def.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a35413e705267ea2f00cb076e444ccce4"><td class="memItemLeft" align="right" valign="top"><a id="a35413e705267ea2f00cb076e444ccce4"></a>
 <a class="el" href="structtag_customized_language_info.html">CustomizedLanguageInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>customizedLang</b></td></tr>
 <tr class="separator:a35413e705267ea2f00cb076e444ccce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae86fedd124d33f8cb47aa0dbc7912af7"><td class="memItemLeft" align="right" valign="top"><a id="ae86fedd124d33f8cb47aa0dbc7912af7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>optionalFeatures</b></td></tr>
+<tr class="memitem:ae86fedd124d33f8cb47aa0dbc7912af7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_configurable_options.html#ae86fedd124d33f8cb47aa0dbc7912af7">optionalFeatures</a></td></tr>
+<tr class="memdesc:ae86fedd124d33f8cb47aa0dbc7912af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The custom resource information.  <a href="#ae86fedd124d33f8cb47aa0dbc7912af7">More...</a><br /></td></tr>
 <tr class="separator:ae86fedd124d33f8cb47aa0dbc7912af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>SDK configuration options. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>This structure is used only for the SDK initialization to configure the custom resource file and choose whether to use the UI mode. Here are more detailed structural descriptions. </dd></dl>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae86fedd124d33f8cb47aa0dbc7912af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86fedd124d33f8cb47aa0dbc7912af7">&#9670;&nbsp;</a></span>optionalFeatures</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tagConfigurableOptions::optionalFeatures</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The custom resource information. </p>
+<p>Additional functional configuration. The function currently supports only whether to use the custom UI mode. When the value of the optionalFeatures&amp;ENABLE_CUSTOMIZED_UI_FLAG is TRUE, it means to the Use the custom UI mode. Otherwise use the traditional interface mode. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__def_8h_source.html">zoom_sdk_def.h</a></li>
 </ul>

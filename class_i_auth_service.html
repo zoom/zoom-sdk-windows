@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a695df00b3184c09971bddd7d6ed4d5fa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a695df00b3184c09971bddd7d6ed4d5fa">SetEvent</a> (<a class="el" href="class_i_auth_service_event.html">IAuthServiceEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a695df00b3184c09971bddd7d6ed4d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set authentication service callback event.  <a href="#a695df00b3184c09971bddd7d6ed4d5fa">More...</a><br /></td></tr>
+<tr class="memdesc:a695df00b3184c09971bddd7d6ed4d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the authentication service callback event handler.  <a href="#a695df00b3184c09971bddd7d6ed4d5fa">More...</a><br /></td></tr>
 <tr class="separator:a695df00b3184c09971bddd7d6ed4d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1872f545e785b30e18a33f84421c75e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#aa1872f545e785b30e18a33f84421c75e">SDKAuth</a> (<a class="el" href="structtag_auth_param.html">AuthParam</a> &amp;authParam)=0</td></tr>
-<tr class="memdesc:aa1872f545e785b30e18a33f84421c75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authentication sdk.  <a href="#aa1872f545e785b30e18a33f84421c75e">More...</a><br /></td></tr>
+<tr class="memdesc:aa1872f545e785b30e18a33f84421c75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK Authentication.  <a href="#aa1872f545e785b30e18a33f84421c75e">More...</a><br /></td></tr>
 <tr class="separator:aa1872f545e785b30e18a33f84421c75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a07bf5515098bed28fc5833e307ae75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75">GetAuthResult</a> ()=0</td></tr>
 <tr class="memdesc:a3a07bf5515098bed28fc5833e307ae75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get authentication status.  <a href="#a3a07bf5515098bed28fc5833e307ae75">More...</a><br /></td></tr>
@@ -88,17 +88,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a68fac10c91f76468e17ad413435e04b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SDK identity.  <a href="#a68fac10c91f76468e17ad413435e04b5">More...</a><br /></td></tr>
 <tr class="separator:a68fac10c91f76468e17ad413435e04b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac325f257a69634778cb91dde969cd80b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#ac325f257a69634778cb91dde969cd80b">Login</a> (<a class="el" href="structtag_login_param.html">LoginParam</a> &amp;param)=0</td></tr>
+<tr class="memdesc:ac325f257a69634778cb91dde969cd80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Account login.  <a href="#ac325f257a69634778cb91dde969cd80b">More...</a><br /></td></tr>
 <tr class="separator:ac325f257a69634778cb91dde969cd80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f056bca69ecd8056ed056a988e841a2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a7f056bca69ecd8056ed056a988e841a2">LogOut</a> ()=0</td></tr>
+<tr class="memdesc:a7f056bca69ecd8056ed056a988e841a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Account logout.  <a href="#a7f056bca69ecd8056ed056a988e841a2">More...</a><br /></td></tr>
 <tr class="separator:a7f056bca69ecd8056ed056a988e841a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a1f56ed2ca8628d26449652b714f9c8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_account_info.html">IAccountInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a0a1f56ed2ca8628d26449652b714f9c8">GetAccountInfo</a> ()=0</td></tr>
+<tr class="memdesc:a0a1f56ed2ca8628d26449652b714f9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get login account information.  <a href="#a0a1f56ed2ca8628d26449652b714f9c8">More...</a><br /></td></tr>
 <tr class="separator:a0a1f56ed2ca8628d26449652b714f9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c1fec8ea849555968f062b9efec9bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6b">LOGINSTATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a70c1fec8ea849555968f062b9efec9bd">GetLoginStatus</a> ()=0</td></tr>
 <tr class="memdesc:a70c1fec8ea849555968f062b9efec9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get login status.  <a href="#a70c1fec8ea849555968f062b9efec9bd">More...</a><br /></td></tr>
 <tr class="separator:a70c1fec8ea849555968f062b9efec9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7422f2a5680e8abeba92a1b4ec0bd4fd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_outlook_plugin_integration_helper.html">IOutlookPluginIntegrationHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a7422f2a5680e8abeba92a1b4ec0bd4fd">GetOutlookPluginHeler</a> ()=0</td></tr>
+<tr class="memdesc:a7422f2a5680e8abeba92a1b4ec0bd4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Outlook plugin integration helper interface.  <a href="#a7422f2a5680e8abeba92a1b4ec0bd4fd">More...</a><br /></td></tr>
 <tr class="separator:a7422f2a5680e8abeba92a1b4ec0bd4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23675d89938d57112c6db57c610ea76"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_direct_share_service_helper.html">IDirectShareServiceHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#ad23675d89938d57112c6db57c610ea76">GetDirectShareServiceHeler</a> ()=0</td></tr>
+<tr class="memdesc:ad23675d89938d57112c6db57c610ea76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get direct share service helper interface.  <a href="#ad23675d89938d57112c6db57c610ea76">More...</a><br /></td></tr>
 <tr class="separator:ad23675d89938d57112c6db57c610ea76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -126,7 +131,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If you has login your account success, the return value is the account information, otherwise is NULL. </dd></dl>
+
+<p>Get login account information. </p>
+<dl class="section return"><dt>Returns</dt><dd>If you has logged in your account successfully, the return value is a pointer to <a class="el" href="class_i_account_info.html" title="Account information interface. ">IAccountInfo</a>, otherwise is NULL. </dd></dl>
 
 </div>
 </div>
@@ -154,7 +161,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get authentication status. </p>
-<dl class="section return"><dt>Returns</dt><dd>The return value is authentication status.To get extended error information, refer to AuthResult enum </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The return value is authentication status. To get extended error information, see <a class="el" href="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -180,7 +187,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If you has login your account success, the return value is the pointer of the direct share service helper, otherwise is NULL. </dd></dl>
+
+<p>Get direct share service helper interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If you logged in your account successfully, the return value is the object pointer <a class="el" href="class_i_direct_share_service_helper.html" title="Direct sharing helper Interface. ">IDirectShareServiceHelper</a>. Otherwise is NULL. </dd></dl>
 
 </div>
 </div>
@@ -208,7 +217,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get login status. </p>
-<dl class="section return"><dt>Returns</dt><dd>The return value is login status.To get extended error information, refer to LOGINSTATUS enum </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The return value is login status. To get extended error information, see <a class="el" href="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6b">LOGINSTATUS</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -234,7 +243,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If you has login your account success, the return value is the pointer of the outlook plugin integreation helper, otherwise is NULL. </dd></dl>
+
+<p>Get Outlook plugin integration helper interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If you logged in your account successfully, the return value is the object pointer to <a class="el" href="class_i_outlook_plugin_integration_helper.html" title="Outlook plugin integration helper interface. ">IOutlookPluginIntegrationHelper</a>. Otherwise is NULL. </dd></dl>
 
 </div>
 </div>
@@ -262,7 +273,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get SDK identity. </p>
-<dl class="section return"><dt>Returns</dt><dd>the SDK identity. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The SDK identity. </dd></dl>
 
 </div>
 </div>
@@ -289,13 +300,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Account login. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">param</td><td>The parameter to be used for account login, refer to LoginParam. </td></tr>
+    <tr><td class="paramname">param</td><td>For the parameter to be used for account login, see <a class="el" href="">LoginParam</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. you need to call this APIs after onAuthenticationReturn return success status. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. You need to call this APIs after <a class="el" href="class_i_auth_service_event.html#ac6bf10b8e19789804f08e63ad6738d01" title="Authentication result callback. ">IAuthServiceEvent::onAuthenticationReturn()</a> return SDKErr_Success. </dd></dl>
 
 </div>
 </div>
@@ -321,7 +334,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+<p>Account logout. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -349,14 +364,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Authentication sdk. </p>
+<p>SDK Authentication. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">authParam</td><td>The parameter to be used for authentication sdk, refer to AuthParam. </td></tr>
+    <tr><td class="paramname">authParam</td><td>The parameter to be used for authentication sdk, see <a class="el" href="">AuthParam</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -384,14 +399,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set authentication service callback event. </p>
+<p>Set the authentication service callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IAuthServiceEvent* that receives authentication event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to receive authentication event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

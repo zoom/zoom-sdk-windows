@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>UI Hooker Callback Event.  
+<p>UI hooker callback event.  
  <a href="class_i_u_i_hooker_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ui__hook__interface_8h_source.html">ui_hook_interface.h</a>&gt;</code></p>
@@ -76,11 +76,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ff2c3cada4005c816b475a6760f9485"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_u_i_hooker_event.html#a6ff2c3cada4005c816b475a6760f9485">onUIActionNotify</a> (<a class="el" href="ui__hook__interface_8h.html#a44a74ee8633f8b12c79ef799b9b40b3f">UIHOOKHWNDTYPE</a> type, MSG msg)=0</td></tr>
-<tr class="memdesc:a6ff2c3cada4005c816b475a6760f9485"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Action callback. this call back will be in work thread, not in main thread.  <a href="#a6ff2c3cada4005c816b475a6760f9485">More...</a><br /></td></tr>
+<tr class="memdesc:a6ff2c3cada4005c816b475a6760f9485"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI relative action hooked callback. The callback works only in the working thread and does not feedback to the main thread.  <a href="#a6ff2c3cada4005c816b475a6760f9485">More...</a><br /></td></tr>
 <tr class="separator:a6ff2c3cada4005c816b475a6760f9485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>UI Hooker Callback Event. </p>
+<div class="textblock"><p>UI hooker callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6ff2c3cada4005c816b475a6760f9485"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ff2c3cada4005c816b475a6760f9485">&#9670;&nbsp;</a></span>onUIActionNotify()</h2>
@@ -116,11 +116,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>UI Action callback. this call back will be in work thread, not in main thread. </p>
+<p>UI relative action hooked callback. The callback works only in the working thread and does not feedback to the main thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>Windows type.refer to UIHOOKHWNDTYPE </td></tr>
-    <tr><td class="paramname">msg</td><td>Contains message information </td></tr>
+    <tr><td class="paramname">type</td><td>Hook type. For more details, see <a class="el" href="ui__hook__interface_8h.html#a44a74ee8633f8b12c79ef799b9b40b3f">UIHOOKHWNDTYPE</a> enum. </td></tr>
+    <tr><td class="paramname">msg</td><td>Hooked message. For more detials, see windows MSG structure. </td></tr>
   </table>
   </dd>
 </dl>

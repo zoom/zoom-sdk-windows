@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Register webinar Handler.  
+<p>Webinar register handler.  
  <a href="class_i_webinar_need_register_handler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a>&gt;</code></p>
@@ -78,21 +78,48 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a393563c702938a80088e8a9ed5d988d9"><td class="memItemLeft" align="right" valign="top"><a id="a393563c702938a80088e8a9ed5d988d9"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>WebinarNeedRegisterType</b> { <b>WebinarReg_NONE</b>, 
-<b>WebinarReg_By_Register_Url</b>, 
-<b>WebinarReg_By_Email_and_DisplayName</b>
- }</td></tr>
+<tr class="memitem:a393563c702938a80088e8a9ed5d988d9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9">WebinarNeedRegisterType</a> { <a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9aacfa49dbdbc9890fee160ceba4bda3f6">WebinarReg_NONE</a>, 
+<a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9abd4e036620d3d72f294a9cf7e144cab0">WebinarReg_By_Register_Url</a>, 
+<a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9a6d1f00ef976227a699453eaf04564feb">WebinarReg_By_Email_and_DisplayName</a>
+ }<tr class="memdesc:a393563c702938a80088e8a9ed5d988d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register type of webinar. Here are more detailed structural descriptions.  <a href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a393563c702938a80088e8a9ed5d988d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a28c1a83ccba92ac6793030cd54c0d9f2"><td class="memItemLeft" align="right" valign="top"><a id="a28c1a83ccba92ac6793030cd54c0d9f2"></a>
-virtual WebinarNeedRegisterType&#160;</td><td class="memItemRight" valign="bottom"><b>GetWebinarNeedRegisterType</b> ()=0</td></tr>
+virtual <a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9">WebinarNeedRegisterType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_webinar_need_register_handler.html#a28c1a83ccba92ac6793030cd54c0d9f2">GetWebinarNeedRegisterType</a> ()=0</td></tr>
+<tr class="memdesc:a28c1a83ccba92ac6793030cd54c0d9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type to register. For more details, see <a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9">WebinarNeedRegisterType</a> enum. <br /></td></tr>
 <tr class="separator:a28c1a83ccba92ac6793030cd54c0d9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Register webinar Handler. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Webinar register handler. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a393563c702938a80088e8a9ed5d988d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393563c702938a80088e8a9ed5d988d9">&#9670;&nbsp;</a></span>WebinarNeedRegisterType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9">IWebinarNeedRegisterHandler::WebinarNeedRegisterType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register type of webinar. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a393563c702938a80088e8a9ed5d988d9aacfa49dbdbc9890fee160ceba4bda3f6"></a>WebinarReg_NONE&#160;</td><td class="fielddoc"><p>Initialization. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a393563c702938a80088e8a9ed5d988d9abd4e036620d3d72f294a9cf7e144cab0"></a>WebinarReg_By_Register_Url&#160;</td><td class="fielddoc"><p>Register webinar account by URL. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a393563c702938a80088e8a9ed5d988d9a6d1f00ef976227a699453eaf04564feb"></a>WebinarReg_By_Email_and_DisplayName&#160;</td><td class="fielddoc"><p>Register webinar account by email and the screen name. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/meeting_service_components/<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a></li>
 </ul>
 </div><!-- contents -->

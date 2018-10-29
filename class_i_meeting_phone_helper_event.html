@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -70,11 +70,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5f952bf79edf029be51e4877373ad08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper_event.html#ac5f952bf79edf029be51e4877373ad08">onInviteCallOutUserStatus</a> (PhoneStatus status, PhoneFailedReason reason)=0</td></tr>
-<tr class="memdesc:ac5f952bf79edf029be51e4877373ad08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invite callout user to the meeting status changed callback.  <a href="#ac5f952bf79edf029be51e4877373ad08">More...</a><br /></td></tr>
+<tr class="memitem:ac5f952bf79edf029be51e4877373ad08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper_event.html#ac5f952bf79edf029be51e4877373ad08">onInviteCallOutUserStatus</a> (<a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> status, <a class="el" href="meeting__phone__helper__interface_8h.html#acdbafe44f5a42d3a08c63cee75b270f9">PhoneFailedReason</a> reason)=0</td></tr>
+<tr class="memdesc:ac5f952bf79edf029be51e4877373ad08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invite others by telephone callout and send the response to the application according to the status of others.  <a href="#ac5f952bf79edf029be51e4877373ad08">More...</a><br /></td></tr>
 <tr class="separator:ac5f952bf79edf029be51e4877373ad08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01cfdbd5a1f8d9deca2f86ce9c3d1e92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper_event.html#a01cfdbd5a1f8d9deca2f86ce9c3d1e92">onCallMeStatus</a> (PhoneStatus status, PhoneFailedReason reason)=0</td></tr>
-<tr class="memdesc:a01cfdbd5a1f8d9deca2f86ce9c3d1e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invite callme user to the meeting status changed callback.  <a href="#a01cfdbd5a1f8d9deca2f86ce9c3d1e92">More...</a><br /></td></tr>
+<tr class="memitem:a01cfdbd5a1f8d9deca2f86ce9c3d1e92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_phone_helper_event.html#a01cfdbd5a1f8d9deca2f86ce9c3d1e92">onCallMeStatus</a> (<a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> status, <a class="el" href="meeting__phone__helper__interface_8h.html#acdbafe44f5a42d3a08c63cee75b270f9">PhoneFailedReason</a> reason)=0</td></tr>
+<tr class="memdesc:a01cfdbd5a1f8d9deca2f86ce9c3d1e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invite others to join the meeting by CALL ME and give the response to the application according to the status.  <a href="#a01cfdbd5a1f8d9deca2f86ce9c3d1e92">More...</a><br /></td></tr>
 <tr class="separator:a01cfdbd5a1f8d9deca2f86ce9c3d1e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -90,13 +90,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IMeetingPhoneHelperEvent::onCallMeStatus </td>
           <td>(</td>
-          <td class="paramtype">PhoneStatus&#160;</td>
+          <td class="paramtype"><a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a>&#160;</td>
           <td class="paramname"><em>status</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">PhoneFailedReason&#160;</td>
+          <td class="paramtype"><a class="el" href="meeting__phone__helper__interface_8h.html#acdbafe44f5a42d3a08c63cee75b270f9">PhoneFailedReason</a>&#160;</td>
           <td class="paramname"><em>reason</em>&#160;</td>
         </tr>
         <tr>
@@ -112,11 +112,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Invite callme user to the meeting status changed callback. </p>
+<p>Invite others to join the meeting by CALL ME and give the response to the application according to the status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>status value. </td></tr>
-    <tr><td class="paramname">reason</td><td>if status is PhoneStatus_Failed, reason is the one of the PhoneFailedReason. </td></tr>
+    <tr><td class="paramname">status</td><td>The status of telephone. For more details, see <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> enum. </td></tr>
+    <tr><td class="paramname">reason</td><td>The reason for the failure if the status value is PhoneStatus_Failed. For more details, see <a class="el" href="meeting__phone__helper__interface_8h.html#acdbafe44f5a42d3a08c63cee75b270f9">PhoneFailedReason</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -135,13 +135,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IMeetingPhoneHelperEvent::onInviteCallOutUserStatus </td>
           <td>(</td>
-          <td class="paramtype">PhoneStatus&#160;</td>
+          <td class="paramtype"><a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a>&#160;</td>
           <td class="paramname"><em>status</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">PhoneFailedReason&#160;</td>
+          <td class="paramtype"><a class="el" href="meeting__phone__helper__interface_8h.html#acdbafe44f5a42d3a08c63cee75b270f9">PhoneFailedReason</a>&#160;</td>
           <td class="paramname"><em>reason</em>&#160;</td>
         </tr>
         <tr>
@@ -157,11 +157,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Invite callout user to the meeting status changed callback. </p>
+<p>Invite others by telephone callout and send the response to the application according to the status of others. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>status value. </td></tr>
-    <tr><td class="paramname">reason</td><td>if status is PhoneStatus_Failed, reason is the one of the PhoneFailedReason. </td></tr>
+    <tr><td class="paramname">status</td><td>The status of telephone. For more details, see <a class="el" href="meeting__phone__helper__interface_8h.html#a0065ec640b94ad21be31a876d052ef8f">PhoneStatus</a> enum. </td></tr>
+    <tr><td class="paramname">reason</td><td>The reason for the failure if the status value is PhoneStatus_Failed. For more details, see <a class="el" href="meeting__phone__helper__interface_8h.html#acdbafe44f5a42d3a08c63cee75b270f9">PhoneFailedReason</a> enum. </td></tr>
   </table>
   </dd>
 </dl>

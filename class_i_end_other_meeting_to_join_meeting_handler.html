@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -75,16 +75,73 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a44bbdf6489056faff5f845e634b4e186"><td class="memItemLeft" align="right" valign="top"><a id="a44bbdf6489056faff5f845e634b4e186"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>EndOtherMeeting</b> ()=0</td></tr>
+<tr class="memitem:a44bbdf6489056faff5f845e634b4e186"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_end_other_meeting_to_join_meeting_handler.html#a44bbdf6489056faff5f845e634b4e186">EndOtherMeeting</a> ()=0</td></tr>
+<tr class="memdesc:a44bbdf6489056faff5f845e634b4e186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close another ongoing meeting.  <a href="#a44bbdf6489056faff5f845e634b4e186">More...</a><br /></td></tr>
 <tr class="separator:a44bbdf6489056faff5f845e634b4e186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe66509ca1b117a51c3f4e0b470d70de"><td class="memItemLeft" align="right" valign="top"><a id="afe66509ca1b117a51c3f4e0b470d70de"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Cancel</b> ()=0</td></tr>
+<tr class="memitem:afe66509ca1b117a51c3f4e0b470d70de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_end_other_meeting_to_join_meeting_handler.html#afe66509ca1b117a51c3f4e0b470d70de">Cancel</a> ()=0</td></tr>
+<tr class="memdesc:afe66509ca1b117a51c3f4e0b470d70de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore the prompt of closing another ongoing meeting.  <a href="#afe66509ca1b117a51c3f4e0b470d70de">More...</a><br /></td></tr>
 <tr class="separator:afe66509ca1b117a51c3f4e0b470d70de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>End other meeting to join the new meeting Handler. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afe66509ca1b117a51c3f4e0b470d70de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe66509ca1b117a51c3f4e0b470d70de">&#9670;&nbsp;</a></span>Cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IEndOtherMeetingToJoinMeetingHandler::Cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ignore the prompt of closing another ongoing meeting. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The SDK will destroy this object instance after calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a44bbdf6489056faff5f845e634b4e186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44bbdf6489056faff5f845e634b4e186">&#9670;&nbsp;</a></span>EndOtherMeeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IEndOtherMeetingToJoinMeetingHandler::EndOtherMeeting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close another ongoing meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the another ongoing meeting is closed successfully, and the instance will be destroyed. Otherwise not. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/meeting_service_components/<a class="el" href="meeting__configuration__interface_8h_source.html">meeting_configuration_interface.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Customized UI manager callback event.  
+<p>The callback event of custom UI manager interface.  
  <a href="class_i_customized_u_i_mgr_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="customized__ui__mgr_8h_source.html">customized_ui_mgr.h</a>&gt;</code></p>
@@ -76,14 +76,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af1e0fbf447a2c006efd1fa566629cbd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr_event.html#af1e0fbf447a2c006efd1fa566629cbd8">onVideoContainerDestroyed</a> (<a class="el" href="class_i_customized_video_container.html">ICustomizedVideoContainer</a> *pContainer)=0</td></tr>
-<tr class="memdesc:af1e0fbf447a2c006efd1fa566629cbd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about the video container destroyed message.  <a href="#af1e0fbf447a2c006efd1fa566629cbd8">More...</a><br /></td></tr>
+<tr class="memdesc:af1e0fbf447a2c006efd1fa566629cbd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered before the video container is destroyed.  <a href="#af1e0fbf447a2c006efd1fa566629cbd8">More...</a><br /></td></tr>
 <tr class="separator:af1e0fbf447a2c006efd1fa566629cbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88b8059980fad8cc5983005bea77ff63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_u_i_mgr_event.html#a88b8059980fad8cc5983005bea77ff63">onShareRenderDestroyed</a> (<a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> *pRender)=0</td></tr>
-<tr class="memdesc:a88b8059980fad8cc5983005bea77ff63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about the share render destroyed message.  <a href="#a88b8059980fad8cc5983005bea77ff63">More...</a><br /></td></tr>
+<tr class="memdesc:a88b8059980fad8cc5983005bea77ff63"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered before the shared render is destroyed.  <a href="#a88b8059980fad8cc5983005bea77ff63">More...</a><br /></td></tr>
 <tr class="separator:a88b8059980fad8cc5983005bea77ff63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Customized UI manager callback event. </p>
+<div class="textblock"><p>The callback event of custom UI manager interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a88b8059980fad8cc5983005bea77ff63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88b8059980fad8cc5983005bea77ff63">&#9670;&nbsp;</a></span>onShareRenderDestroyed()</h2>
@@ -109,13 +109,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about the share render destroyed message. </p>
+<p>The callback will be triggered before the shared render is destroyed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pContainer</td><td>specify which share render will be destroyed </td></tr>
+    <tr><td class="paramname">pRender</td><td>Specify the shared render to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The specified shared render will be destroyed once the function calls end. The user should complete the operations related to the shared render before the function calls end. </dd></dl>
 
 </div>
 </div>
@@ -143,13 +144,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about the video container destroyed message. </p>
+<p>The callback will be triggered before the video container is destroyed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pContainer</td><td>specify which video container will be destroyed </td></tr>
+    <tr><td class="paramname">pContainer</td><td>Specify the video container to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The specified container will be destroyed once the function calls end. The user should complete the operations related to the video container before the function calls end. </dd></dl>
 
 </div>
 </div>

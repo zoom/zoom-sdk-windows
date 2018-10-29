@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Video container callback event.  
+<p>Callback event of custom video container.  
  <a href="class_i_customized_video_container_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="customized__video__container_8h_source.html">customized_video_container.h</a>&gt;</code></p>
@@ -76,24 +76,24 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a015d08277fa7f00b57bc28cdf1a7f837"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_video_container_event.html#a015d08277fa7f00b57bc28cdf1a7f837">onRenderUserChanged</a> (<a class="el" href="class_i_video_render_element.html">IVideoRenderElement</a> *pElement, unsigned int userid)=0</td></tr>
-<tr class="memdesc:a015d08277fa7f00b57bc28cdf1a7f837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about user id change of the video render element.  <a href="#a015d08277fa7f00b57bc28cdf1a7f837">More...</a><br /></td></tr>
+<tr class="memdesc:a015d08277fa7f00b57bc28cdf1a7f837"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered if the video render element corresponding to the user changes.  <a href="#a015d08277fa7f00b57bc28cdf1a7f837">More...</a><br /></td></tr>
 <tr class="separator:a015d08277fa7f00b57bc28cdf1a7f837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2525a7f159c913b6bc37ecc99df8091c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_video_container_event.html#a2525a7f159c913b6bc37ecc99df8091c">onRenderDataTypeChanged</a> (<a class="el" href="class_i_video_render_element.html">IVideoRenderElement</a> *pElement, <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc">VideoRenderDataType</a> dataType)=0</td></tr>
-<tr class="memdesc:a2525a7f159c913b6bc37ecc99df8091c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about render data type change of the video render element.  <a href="#a2525a7f159c913b6bc37ecc99df8091c">More...</a><br /></td></tr>
+<tr class="memdesc:a2525a7f159c913b6bc37ecc99df8091c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered if the video render element corresponding to data type changes.  <a href="#a2525a7f159c913b6bc37ecc99df8091c">More...</a><br /></td></tr>
 <tr class="separator:a2525a7f159c913b6bc37ecc99df8091c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7166ce8a91da1c6d6e78fd9f879f8ffc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_video_container_event.html#a7166ce8a91da1c6d6e78fd9f879f8ffc">onLayoutNotification</a> (RECT wnd_client_rect)=0</td></tr>
-<tr class="memdesc:a7166ce8a91da1c6d6e78fd9f879f8ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about size change of the video container when receive this message, need to layout all video elements of the video container.  <a href="#a7166ce8a91da1c6d6e78fd9f879f8ffc">More...</a><br /></td></tr>
+<tr class="memdesc:a7166ce8a91da1c6d6e78fd9f879f8ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered if the size of video container changes. The user should redeploy the video render elements displayed once received the callback event.  <a href="#a7166ce8a91da1c6d6e78fd9f879f8ffc">More...</a><br /></td></tr>
 <tr class="separator:a7166ce8a91da1c6d6e78fd9f879f8ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a465c4c1a38d647cec1955cb441bbbf7d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_video_container_event.html#a465c4c1a38d647cec1955cb441bbbf7d">onVideoRenderElementDestroyed</a> (<a class="el" href="class_i_video_render_element.html">IVideoRenderElement</a> *pElement)=0</td></tr>
-<tr class="memdesc:a465c4c1a38d647cec1955cb441bbbf7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about the video render element destroyed message.  <a href="#a465c4c1a38d647cec1955cb441bbbf7d">More...</a><br /></td></tr>
+<tr class="memdesc:a465c4c1a38d647cec1955cb441bbbf7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be triggered before the video render element is destroyed.  <a href="#a465c4c1a38d647cec1955cb441bbbf7d">More...</a><br /></td></tr>
 <tr class="separator:a465c4c1a38d647cec1955cb441bbbf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ffd9a3e9d3f165c0602a55b19b4d74d"><td class="memItemLeft" align="right" valign="top"><a id="a5ffd9a3e9d3f165c0602a55b19b4d74d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_video_container_event.html#a5ffd9a3e9d3f165c0602a55b19b4d74d">onWindowMsgNotification</a> (UINT uMsg, WPARAM wParam, LPARAM lParam)=0</td></tr>
-<tr class="memdesc:a5ffd9a3e9d3f165c0602a55b19b4d74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes message information to the app, message list as follow, WM_MOUSEMOVE WM_MOUSEENTER WM_MOUSELEAVE WM_LBUTTONDOWN WM_LBUTTONUP WM_RBUTTONUP WM_LBUTTONDBLCLK WM_KEYDOWN. <br /></td></tr>
+<tr class="memdesc:a5ffd9a3e9d3f165c0602a55b19b4d74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK will pass the window messages to users via the callback. Here are the messages. WM_MOUSEMOVE WM_MOUSEENTER WM_MOUSELEAVE WM_LBUTTONDOWN WM_LBUTTONUP WM_RBUTTONUP WM_LBUTTONDBLCLK WM_KEYDOWN. <br /></td></tr>
 <tr class="separator:a5ffd9a3e9d3f165c0602a55b19b4d74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Video container callback event. </p>
+<div class="textblock"><p>Callback event of custom video container. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7166ce8a91da1c6d6e78fd9f879f8ffc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7166ce8a91da1c6d6e78fd9f879f8ffc">&#9670;&nbsp;</a></span>onLayoutNotification()</h2>
@@ -119,10 +119,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about size change of the video container when receive this message, need to layout all video elements of the video container. </p>
+<p>The callback will be triggered if the size of video container changes. The user should redeploy the video render elements displayed once received the callback event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rc</td><td>the new video container position that contains the client coordinates of the rectangle, relative to the upper-left corner of a parent window's client area. </td></tr>
+    <tr><td class="paramname">wnd_client_rect</td><td>Specify a new display area. The coordinate value of the structure is that of the parent window of the video container. </td></tr>
   </table>
   </dd>
 </dl>
@@ -163,11 +163,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about render data type change of the video render element. </p>
+<p>The callback will be triggered if the video render element corresponding to data type changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pElement</td><td>specify which render element's data type changed </td></tr>
-    <tr><td class="paramname">dataType</td><td>the new render data type of the video render element </td></tr>
+    <tr><td class="paramname">pElement</td><td>The video render elements corresponding to data type that is changed. </td></tr>
+    <tr><td class="paramname">dataType</td><td>Specify a new render data type. For more details, see <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc">VideoRenderDataType</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -208,11 +208,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about user id change of the video render element. </p>
+<p>The callback will be triggered if the video render element corresponding to the user changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pElement</td><td>specify which render element's user id changed </td></tr>
-    <tr><td class="paramname">userid</td><td>the new user id of the video render element </td></tr>
+    <tr><td class="paramname">pElement</td><td>The video render element corresponding to the user who is changed. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specify the ID of new user. </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,13 +243,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about the video render element destroyed message. </p>
+<p>The callback will be triggered before the video render element is destroyed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pElement</td><td>specify which render element will be destroyed </td></tr>
+    <tr><td class="paramname">pElement</td><td>Specify the video render element to be destroyed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The specified video render element will be destroyed once the function calls end. The user should complete the operations to the related video render element. </dd></dl>
 
 </div>
 </div>

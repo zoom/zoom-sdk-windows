@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['vanityid',['vanityID',['../structtag_join_param4_a_p_i_user.html#a262d038b77a3ad78e88f3b34cd38b8dd',1,'tagJoinParam4APIUser::vanityID()'],['../structtag_join_param4_normal_user.html#ae43727ebbe38e915eafeb5114f244a2e',1,'tagJoinParam4NormalUser::vanityID()'],['../structtag_start_param4_a_p_i_user.html#a0f0ed2ae82efb8fa03993a595d1f1997',1,'tagStartParam4APIUser::vanityID()'],['../structtag_start_param4_without_login.html#a1093bd4e5fdaf8018164950be102e389',1,'tagStartParam4WithoutLogin::vanityID()'],['../structtag_start_param4_normal_user.html#aee4f6b27a95a996c33d98e5abd06d354',1,'tagStartParam4NormalUser::vanityID()']]]
+  ['serverurl',['serverUrl',['../structtag_outlook_exchage_auth.html#a21d458d4ec235bb7c039ca838fc469db',1,'tagOutlookExchageAuth']]],
+  ['ssologin',['ssoLogin',['../structtag_login_param.html#a0a2188eba132d597b003c8f20a9c4b66',1,'tagLoginParam']]],
+  ['ssotoken',['ssoToken',['../structtag_login_param4_s_s_o.html#ada6aab024a9bc26d45a391bbd5d29d7f',1,'tagLoginParam4SSO']]],
+  ['strbrandingname',['strBrandingName',['../structtag_init_param.html#a5bddf02f8d0d581b2e680ad865ef5eb5',1,'tagInitParam']]],
+  ['strsupporturl',['strSupportUrl',['../structtag_init_param.html#ac4320988cee0097ec5a9c1fb2fb6a12f',1,'tagInitParam']]],
+  ['strwebdomain',['strWebDomain',['../structtag_init_param.html#aef2cd89ca155d2a6d7c712cb0ba8913c',1,'tagInitParam']]]
 ];

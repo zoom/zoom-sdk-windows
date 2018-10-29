@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Participants Controller of Meeting Service Interface.  
+<p>Meeting Participants Controller Interface.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -82,10 +82,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_webinar_attendee_status.html">tagWebinarAttendeeStatus</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">webinar attendee status A more detailed struct description.  <a href="structtag_webinar_attendee_status.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of webinar attendee. Here are more detailed structural descriptions.  <a href="structtag_webinar_attendee_status.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html">IUserInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User information Interface.  <a href="class_i_user_info.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User information interface.  <a href="class_i_user_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_participants_ctrl_event.html">IMeetingParticipantsCtrlEvent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting Participants Controller Callback Event.  <a href="class_i_meeting_participants_ctrl_event.html#details">More...</a><br /></td></tr>
@@ -111,12 +111,12 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775a8df58bec912e5810af9e80ccd8caddb4">USERROLE_BREAKOUTROOM_MODERATOR</a>, 
 <a class="el" href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775ab4c8094618143081dba20ef584d5c4c0">USERROLE_ATTENDEE</a>
 <br />
- }<tr class="memdesc:a00dd1c1a522bd6fb15ecc021ffefb775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom SDK Namespace.  <a href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">More...</a><br /></td></tr>
+ }<tr class="memdesc:a00dd1c1a522bd6fb15ecc021ffefb775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Role of user. Here are more detailed structural descriptions.  <a href="meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a00dd1c1a522bd6fb15ecc021ffefb775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Participants Controller of Meeting Service Interface. </p>
+<div class="textblock"><p>Meeting Participants Controller Interface. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a00dd1c1a522bd6fb15ecc021ffefb775"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00dd1c1a522bd6fb15ecc021ffefb775">&#9670;&nbsp;</a></span>UserRole</h2>
@@ -130,20 +130,19 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Zoom SDK Namespace. </p>
-<p>User role. A more detailed struct description. </p>
+<p>Role of user. Here are more detailed structural descriptions. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775ae70dc7aea548d0357326e87e9ed6e1e4"></a>USERROLE_NONE&#160;</td><td class="fielddoc"><p>None. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775ae70dc7aea548d0357326e87e9ed6e1e4"></a>USERROLE_NONE&#160;</td><td class="fielddoc"><p>For initialization. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775acc1e9035a33c7f0ad6a984f680399972"></a>USERROLE_HOST&#160;</td><td class="fielddoc"><p>Host role. </p>
+<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775acc1e9035a33c7f0ad6a984f680399972"></a>USERROLE_HOST&#160;</td><td class="fielddoc"><p>Role of the host. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775a4f30718ac595a1e48cbe8b1f86ea0050"></a>USERROLE_COHOST&#160;</td><td class="fielddoc"><p>Cohost role. </p>
+<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775a4f30718ac595a1e48cbe8b1f86ea0050"></a>USERROLE_COHOST&#160;</td><td class="fielddoc"><p>Role of cohost. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775ae1cb2e7673bca6edfd1f007ec8aeb760"></a>USERROLE_PANELIST&#160;</td><td class="fielddoc"><p>Panelist role, only for webinar meeting. </p>
+<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775ae1cb2e7673bca6edfd1f007ec8aeb760"></a>USERROLE_PANELIST&#160;</td><td class="fielddoc"><p>Role of the panelist, valid only in webinar. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775a8df58bec912e5810af9e80ccd8caddb4"></a>USERROLE_BREAKOUTROOM_MODERATOR&#160;</td><td class="fielddoc"><p>Host role of BO meeting. </p>
+<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775a8df58bec912e5810af9e80ccd8caddb4"></a>USERROLE_BREAKOUTROOM_MODERATOR&#160;</td><td class="fielddoc"><p>Host role in breakout room. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775ab4c8094618143081dba20ef584d5c4c0"></a>USERROLE_ATTENDEE&#160;</td><td class="fielddoc"><p>Attendee role. </p>
+<tr><td class="fieldname"><a id="a00dd1c1a522bd6fb15ecc021ffefb775ab4c8094618143081dba20ef584d5c4c0"></a>USERROLE_ATTENDEE&#160;</td><td class="fielddoc"><p>Role of attendee. </p>
 </td></tr>
 </table>
 

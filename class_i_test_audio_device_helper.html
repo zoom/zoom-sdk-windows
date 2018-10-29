@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Audio devices testing interface.  
+<p>Audio device test interface.  
  <a href="class_i_test_audio_device_helper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a>&gt;</code></p>
@@ -76,29 +76,29 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a637a9883a7d2b956426955b778e0da29"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#a637a9883a7d2b956426955b778e0da29">SetEvent</a> (<a class="el" href="class_i_test_audio_device_helper_event.html">ITestAudioDeviceHelperEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a637a9883a7d2b956426955b778e0da29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio device testing callback event.  <a href="#a637a9883a7d2b956426955b778e0da29">More...</a><br /></td></tr>
+<tr class="memdesc:a637a9883a7d2b956426955b778e0da29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio device test callback handler.  <a href="#a637a9883a7d2b956426955b778e0da29">More...</a><br /></td></tr>
 <tr class="separator:a637a9883a7d2b956426955b778e0da29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a562f84d6c31a0397be263ab963527d78"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#a562f84d6c31a0397be263ab963527d78">TestMicStartRecording</a> (const wchar_t *deviceID=NULL)=0</td></tr>
 <tr class="memdesc:a562f84d6c31a0397be263ab963527d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start to test the mic.  <a href="#a562f84d6c31a0397be263ab963527d78">More...</a><br /></td></tr>
 <tr class="separator:a562f84d6c31a0397be263ab963527d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018f553b15ef4f3859582217d8ca923d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#a018f553b15ef4f3859582217d8ca923d">TestMicStopTesting</a> ()=0</td></tr>
-<tr class="memdesc:a018f553b15ef4f3859582217d8ca923d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the mic testing. If there is no mic testing, SDK return an error.  <a href="#a018f553b15ef4f3859582217d8ca923d">More...</a><br /></td></tr>
+<tr class="memdesc:a018f553b15ef4f3859582217d8ca923d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the mic test. The SDK will return an error if there is no mic test.  <a href="#a018f553b15ef4f3859582217d8ca923d">More...</a><br /></td></tr>
 <tr class="separator:a018f553b15ef4f3859582217d8ca923d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf039a39bcba2216b579f245e4f32d23"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#adf039a39bcba2216b579f245e4f32d23">TestMicPlayRecording</a> ()=0</td></tr>
 <tr class="memdesc:adf039a39bcba2216b579f245e4f32d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play the mic reocrded sound. If there is no mic testing, SDK return an error.  <a href="#adf039a39bcba2216b579f245e4f32d23">More...</a><br /></td></tr>
 <tr class="separator:adf039a39bcba2216b579f245e4f32d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a32a9912d5053e56ba58ca8e89c33b2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#a8a32a9912d5053e56ba58ca8e89c33b2">TestSpeakerStartPlaying</a> (const wchar_t *deviceID=NULL)=0</td></tr>
-<tr class="memdesc:a8a32a9912d5053e56ba58ca8e89c33b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start to test the speaker. \ param deviceID [in] Specified a speaker device to test. If the param is a wrong speaker ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one. If no param is passed in, SDK tests the default device.  <a href="#a8a32a9912d5053e56ba58ca8e89c33b2">More...</a><br /></td></tr>
+<tr class="memdesc:a8a32a9912d5053e56ba58ca8e89c33b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start to test the speaker.  <a href="#a8a32a9912d5053e56ba58ca8e89c33b2">More...</a><br /></td></tr>
 <tr class="separator:a8a32a9912d5053e56ba58ca8e89c33b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab14e0a019239732414e20c5a9fcd318c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#ab14e0a019239732414e20c5a9fcd318c">TestSpeakerStopPlaying</a> ()=0</td></tr>
-<tr class="memdesc:ab14e0a019239732414e20c5a9fcd318c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the speaker testing. If there is no speaker testing, SDK return an error.  <a href="#ab14e0a019239732414e20c5a9fcd318c">More...</a><br /></td></tr>
+<tr class="memdesc:ab14e0a019239732414e20c5a9fcd318c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the speaker test. The SDK will return an error if there is no speaker test.  <a href="#ab14e0a019239732414e20c5a9fcd318c">More...</a><br /></td></tr>
 <tr class="separator:ab14e0a019239732414e20c5a9fcd318c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9ad02fedf6c409b8bd9048201a57fe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper.html#aec9ad02fedf6c409b8bd9048201a57fe">SetTimerInterval</a> (unsigned int timerInterval)=0</td></tr>
 <tr class="memdesc:aec9ad02fedf6c409b8bd9048201a57fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time interval for audio test.  <a href="#aec9ad02fedf6c409b8bd9048201a57fe">More...</a><br /></td></tr>
 <tr class="separator:aec9ad02fedf6c409b8bd9048201a57fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio devices testing interface. </p>
+<div class="textblock"><p>Audio device test interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a637a9883a7d2b956426955b778e0da29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a637a9883a7d2b956426955b778e0da29">&#9670;&nbsp;</a></span>SetEvent()</h2>
@@ -124,17 +124,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Audio device testing callback event. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>It must be called before using any other interface in this class. </dd></dl>
+<p>Audio device test callback handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>[in] A pointer to an ITestAudioDeviceHelperEvent* that receives audio device testing event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_test_audio_device_helper_event.html" title="Audio device testing callback events. ">ITestAudioDeviceHelperEvent</a> that receives audio device test event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_test_audio_device_helper_event.html" title="Audio Device testing Callback events. ">ITestAudioDeviceHelperEvent</a> </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>It must be called before using any other interface in this class. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Call the function before using any other interface of the same class. </dd></dl>
 
 </div>
 </div>
@@ -165,11 +163,12 @@ Public Member Functions</h2></td></tr>
 <p>Set the time interval for audio test. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timerInterval</td><td>[in] SDK sends mic and speaker volumes every 200 ms by default. This function allows the user to set another time interval instead of 200. The unit of time interval is millisecond. If the value is bigger than 1000 or lesser than 50, SDK will change it to be 200. </td></tr>
+    <tr><td class="paramname">timerInterval</td><td>Usually the SDK sends the mic and speaker volumes every 200 ms by default via <a class="el" href="class_i_test_audio_device_helper_event.html#a4dd5d99a9b554bf14f931e8a8a16c716" title="Notify the current mic or speaker volume when testing. ">ITestAudioDeviceHelperEvent::OnMicSpkVolumnChanged()</a>. With this function, the user can modify the time interval instead of 200. The time interval varies only from 50 to 1000 in millisecond. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section remark"><dt>Remarks</dt><dd>Using this interface will stop the mic/speaker testing, if there is any. So, calling it before you do any audio test. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This interface will stop the mic/speaker test(if there is). It is suggested to call it before audio test. </dd></dl>
 
 </div>
 </div>
@@ -197,7 +196,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Play the mic reocrded sound. If there is no mic testing, SDK return an error. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>The function can not work if no event is set. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The function is disabled if no event handler is set. </dd></dl>
 
 </div>
 </div>
@@ -228,11 +228,12 @@ Public Member Functions</h2></td></tr>
 <p>Start to test the mic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceID</td><td>[in] Specifies a mic device to test. If the param is a wrong mic ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one. If no param is passed in, SDK tests the default device. </td></tr>
+    <tr><td class="paramname">deviceID</td><td>Specify to test a mic device. If the param is a wrong mic ID, the SDK will return an error. Otherwise the SDK tests the specified device and sets it as selected. The SDK will test the default device if no parameter is input. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section remark"><dt>Remarks</dt><dd>The function can not work if no event is set. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The function is disabled if no event handler is set. </dd></dl>
 
 </div>
 </div>
@@ -259,8 +260,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stop the mic testing. If there is no mic testing, SDK return an error. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>The function can not work if no event is set. </dd></dl>
+<p>Stop the mic test. The SDK will return an error if there is no mic test. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The function is disabled if no event handler is set. </dd></dl>
 
 </div>
 </div>
@@ -288,8 +290,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Start to test the speaker. \ param deviceID [in] Specified a speaker device to test. If the param is a wrong speaker ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one. If no param is passed in, SDK tests the default device. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>The function can not work if no event is set. </dd></dl>
+<p>Start to test the speaker. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceID</td><td>Specify to test a speaker device. If the param is a wrong speaker ID, the SDK will return an error. Otherwise the SDK tests the specified device and sets it as selected. The SDK will test the default device if no parameter is input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The function is disabled if no event handler is set. </dd></dl>
 
 </div>
 </div>
@@ -316,8 +325,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stop the speaker testing. If there is no speaker testing, SDK return an error. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>The function can not work if no event is set. </dd></dl>
+<p>Stop the speaker test. The SDK will return an error if there is no speaker test. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The function is disabled if no event handler is set. </dd></dl>
 
 </div>
 </div>

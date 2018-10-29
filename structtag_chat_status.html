@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>chat status of current meeting A more detailed struct description.  
+<p>The authority to chat in the specified meeting. Here are more detailed structural descriptions..  
  <a href="structtag_chat_status.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__chat__interface_8h_source.html">meeting_chat_interface.h</a>&gt;</code></p>
@@ -85,34 +85,32 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a609453fdf918fe461258b3f433959ace"><td class="memItemLeft" ><a id="a609453fdf918fe461258b3f433959ace"></a>
 union {</td></tr>
 <tr class="memitem:a3e562ea95cde68c0dc1576dcb7305a8b"><td class="memItemLeft" >
-&#160;&#160;&#160;<a class="el" href="structtag_normal_meeting_chat_staus.html">NormalMeetingChatStaus</a>&#160;&#160;&#160;<a class="el" href="structtag_chat_status.html#ac3c6335a63f4b36c435bf0647a1118e3">normal_meeting_status</a></td></tr>
-<tr class="memdesc:a3e562ea95cde68c0dc1576dcb7305a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">if is_webinar_meeting is false, available.refer to <a class="el" href="structtag_normal_meeting_chat_staus.html" title="chat status of normal meeting A more detailed struct description. ">tagNormalMeetingChatStaus</a> <br /></td></tr>
+&#160;&#160;&#160;<a class="el" href="struct_normal_meeting_chat_staus.html">NormalMeetingChatStaus</a>&#160;&#160;&#160;<b>normal_meeting_status</b></td></tr>
 <tr class="separator:a3e562ea95cde68c0dc1576dcb7305a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab51355ece43e552e2ea718ee08e2bf"><td class="memItemLeft" >
-&#160;&#160;&#160;<a class="el" href="structtag_webinar_attendee_chat_status.html">WebinarAttendeeChatStatus</a>&#160;&#160;&#160;<a class="el" href="structtag_chat_status.html#a2e79834a416d484e377acf91fa6cc4f9">webinar_attendee_status</a></td></tr>
-<tr class="memdesc:a9ab51355ece43e552e2ea718ee08e2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">if is_webinar_meeting is true and is_webinar_attendee is true, available.refer to <a class="el" href="structtag_webinar_attendee_chat_status.html" title="chat status of webinar attendee,only used for webinar attendee A more detailed struct description...">tagWebinarAttendeeChatStatus</a> <br /></td></tr>
+&#160;&#160;&#160;<a class="el" href="structtag_webinar_attendee_chat_status.html">WebinarAttendeeChatStatus</a>&#160;&#160;&#160;<b>webinar_attendee_status</b></td></tr>
 <tr class="separator:a9ab51355ece43e552e2ea718ee08e2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f54f7d4e6bb4c502206aea7c7b31186"><td class="memItemLeft" >
-&#160;&#160;&#160;<a class="el" href="structtag_webinar_other_user_role_chat_status.html">WebinarOtherUserRoleChatStatus</a>&#160;&#160;&#160;<a class="el" href="structtag_chat_status.html#aeb77b075b4c0772c038869a6bc881a2a">webinar_other_status</a></td></tr>
-<tr class="memdesc:a6f54f7d4e6bb4c502206aea7c7b31186"><td class="mdescLeft">&#160;</td><td class="mdescRight">if is_webinar_meeting is true and is_webinar_attendee is false, available.refer to <a class="el" href="structtag_webinar_other_user_role_chat_status.html" title="chat status of webinar meeting,only used for webinar host/cohost/panellist A more detailed struct des...">tagWebinarOtherUserRoleChatStatus</a> <br /></td></tr>
+&#160;&#160;&#160;<a class="el" href="structtag_webinar_other_user_role_chat_status.html">WebinarOtherUserRoleChatStatus</a>&#160;&#160;&#160;<b>webinar_other_status</b></td></tr>
 <tr class="separator:a6f54f7d4e6bb4c502206aea7c7b31186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a609453fdf918fe461258b3f433959ace"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>ut</b></td></tr>
+<tr class="memitem:a609453fdf918fe461258b3f433959ace"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_chat_status.html#a609453fdf918fe461258b3f433959ace">ut</a></td></tr>
+<tr class="memdesc:a609453fdf918fe461258b3f433959ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ut value depends on the value of the other member in the structure. When the value of is_webinar_meeting is false, the ut value is the NormalMeetingChatStausnormal_meeting_status. When the values of the is_webinar_meeting and the is_webinar_attendee are true, the ut value is WebinarAttendeeChatStatus webinar_attendee_status. The value of is_webinar_meeting is true while the is_webinar_attendee false, the ut value is WebinarOtherUserRoleChatStatus webinar_other_status. <br /></td></tr>
 <tr class="separator:a609453fdf918fe461258b3f433959ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7dbff639554859e4f60e86e4222407"><td class="memItemLeft" align="right" valign="top"><a id="a2d7dbff639554859e4f60e86e4222407"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_chat_status.html#a2d7dbff639554859e4f60e86e4222407">is_chat_off</a></td></tr>
-<tr class="memdesc:a2d7dbff639554859e4f60e86e4222407"><td class="mdescLeft">&#160;</td><td class="mdescRight">is chat off or not for current meeting <br /></td></tr>
+<tr class="memdesc:a2d7dbff639554859e4f60e86e4222407"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE indicates that it is disabled to chat in the assigned meeting. <br /></td></tr>
 <tr class="separator:a2d7dbff639554859e4f60e86e4222407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e3f9cda50150f133148f18e37959e29"><td class="memItemLeft" align="right" valign="top"><a id="a8e3f9cda50150f133148f18e37959e29"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_chat_status.html#a8e3f9cda50150f133148f18e37959e29">is_webinar_attendee</a></td></tr>
-<tr class="memdesc:a8e3f9cda50150f133148f18e37959e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">is webinar attendee role or not <br /></td></tr>
+<tr class="memdesc:a8e3f9cda50150f133148f18e37959e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE indicates that the owner of the current message is the attendee of the webinar. <br /></td></tr>
 <tr class="separator:a8e3f9cda50150f133148f18e37959e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472555d164aa58985fcaa65256611284"><td class="memItemLeft" align="right" valign="top"><a id="a472555d164aa58985fcaa65256611284"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_chat_status.html#a472555d164aa58985fcaa65256611284">is_webinar_meeting</a></td></tr>
-<tr class="memdesc:a472555d164aa58985fcaa65256611284"><td class="mdescLeft">&#160;</td><td class="mdescRight">is webinar meeting or not <br /></td></tr>
+<tr class="memdesc:a472555d164aa58985fcaa65256611284"><td class="mdescLeft">&#160;</td><td class="mdescRight">TRUE indicates that the current meeting is webinar. <br /></td></tr>
 <tr class="separator:a472555d164aa58985fcaa65256611284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>chat status of current meeting A more detailed struct description. </p>
+<div class="textblock"><p>The authority to chat in the specified meeting. Here are more detailed structural descriptions.. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>h/meeting_service_components/<a class="el" href="meeting__chat__interface_8h_source.html">meeting_chat_interface.h</a></li>
 </ul>

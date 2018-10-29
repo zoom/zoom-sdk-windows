@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting Annotation Controller Interface.  
+<p>Meeting annotation tools interface.  
  <a href="class_i_annotation_controller.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__annotation__interface_8h_source.html">meeting_annotation_interface.h</a>&gt;</code></p>
@@ -76,38 +76,38 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae625b9c86c79e202900851f4f08533b8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#ae625b9c86c79e202900851f4f08533b8">IsAnnoataionDisable</a> ()=0</td></tr>
-<tr class="memdesc:ae625b9c86c79e202900851f4f08533b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Annotation of the current meeting is disabled or not.  <a href="#ae625b9c86c79e202900851f4f08533b8">More...</a><br /></td></tr>
+<tr class="memdesc:ae625b9c86c79e202900851f4f08533b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the annotation tools are disabled or not during the current meeting.  <a href="#ae625b9c86c79e202900851f4f08533b8">More...</a><br /></td></tr>
 <tr class="separator:ae625b9c86c79e202900851f4f08533b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa821d0b4bec7a50439ee4f4f559b4d30"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#aa821d0b4bec7a50439ee4f4f559b4d30">StartAnnotation</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype, int left, int top)=0</td></tr>
-<tr class="memdesc:aa821d0b4bec7a50439ee4f4f559b4d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">start annotation  <a href="#aa821d0b4bec7a50439ee4f4f559b4d30">More...</a><br /></td></tr>
+<tr class="memdesc:aa821d0b4bec7a50439ee4f4f559b4d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display annotation toolbar.  <a href="#aa821d0b4bec7a50439ee4f4f559b4d30">More...</a><br /></td></tr>
 <tr class="separator:aa821d0b4bec7a50439ee4f4f559b4d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77020f8c296b064186e54b53b2e1bf9d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a77020f8c296b064186e54b53b2e1bf9d">StopAnnotation</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype)=0</td></tr>
-<tr class="memdesc:a77020f8c296b064186e54b53b2e1bf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop current annotation.  <a href="#a77020f8c296b064186e54b53b2e1bf9d">More...</a><br /></td></tr>
+<tr class="memdesc:a77020f8c296b064186e54b53b2e1bf9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the current annotation toolbar.  <a href="#a77020f8c296b064186e54b53b2e1bf9d">More...</a><br /></td></tr>
 <tr class="separator:a77020f8c296b064186e54b53b2e1bf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37e68acfa2b854b8d738fa411fadb60a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a37e68acfa2b854b8d738fa411fadb60a">SetTool</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype, <a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7">AnnotationToolType</a> type)=0</td></tr>
-<tr class="memdesc:a37e68acfa2b854b8d738fa411fadb60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Annotation Tool.  <a href="#a37e68acfa2b854b8d738fa411fadb60a">More...</a><br /></td></tr>
+<tr class="memdesc:a37e68acfa2b854b8d738fa411fadb60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose annotation tool.  <a href="#a37e68acfa2b854b8d738fa411fadb60a">More...</a><br /></td></tr>
 <tr class="separator:a37e68acfa2b854b8d738fa411fadb60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0481ca97a3614886d56b7a7ca83a78ab"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a0481ca97a3614886d56b7a7ca83a78ab">Clear</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype, <a class="el" href="meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2">AnnotationClearType</a> type)=0</td></tr>
-<tr class="memdesc:a0481ca97a3614886d56b7a7ca83a78ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Annotation.  <a href="#a0481ca97a3614886d56b7a7ca83a78ab">More...</a><br /></td></tr>
+<tr class="memdesc:a0481ca97a3614886d56b7a7ca83a78ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear present annotations.  <a href="#a0481ca97a3614886d56b7a7ca83a78ab">More...</a><br /></td></tr>
 <tr class="separator:a0481ca97a3614886d56b7a7ca83a78ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10f9ecbe347e05470f289166452bd307"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a10f9ecbe347e05470f289166452bd307">SetColor</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype, unsigned long color)=0</td></tr>
-<tr class="memdesc:a10f9ecbe347e05470f289166452bd307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Annotation Color.  <a href="#a10f9ecbe347e05470f289166452bd307">More...</a><br /></td></tr>
+<tr class="memdesc:a10f9ecbe347e05470f289166452bd307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the colors of annotation tools.  <a href="#a10f9ecbe347e05470f289166452bd307">More...</a><br /></td></tr>
 <tr class="separator:a10f9ecbe347e05470f289166452bd307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a193f0b76cd7615ab2fc9765ce78d43fe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a193f0b76cd7615ab2fc9765ce78d43fe">SetLineWidth</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype, long lineWidth)=0</td></tr>
-<tr class="memdesc:a193f0b76cd7615ab2fc9765ce78d43fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Annotation Line Width.  <a href="#a193f0b76cd7615ab2fc9765ce78d43fe">More...</a><br /></td></tr>
+<tr class="memdesc:a193f0b76cd7615ab2fc9765ce78d43fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the line width of annotation tools.  <a href="#a193f0b76cd7615ab2fc9765ce78d43fe">More...</a><br /></td></tr>
 <tr class="separator:a193f0b76cd7615ab2fc9765ce78d43fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb4f00df5783e82d6f851ce9826d58e9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#afb4f00df5783e82d6f851ce9826d58e9">Undo</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype)=0</td></tr>
-<tr class="memdesc:afb4f00df5783e82d6f851ce9826d58e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo Annotation.  <a href="#afb4f00df5783e82d6f851ce9826d58e9">More...</a><br /></td></tr>
+<tr class="memdesc:afb4f00df5783e82d6f851ce9826d58e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo the last annotation.  <a href="#afb4f00df5783e82d6f851ce9826d58e9">More...</a><br /></td></tr>
 <tr class="separator:afb4f00df5783e82d6f851ce9826d58e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6e167403d82159fa4651a56913122aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#ad6e167403d82159fa4651a56913122aa">Redo</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype)=0</td></tr>
-<tr class="memdesc:ad6e167403d82159fa4651a56913122aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redo Annotation.  <a href="#ad6e167403d82159fa4651a56913122aa">More...</a><br /></td></tr>
+<tr class="memdesc:ad6e167403d82159fa4651a56913122aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redo the last-undo annotation.  <a href="#ad6e167403d82159fa4651a56913122aa">More...</a><br /></td></tr>
 <tr class="separator:ad6e167403d82159fa4651a56913122aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a6b8050edf67cf58818100c76ce660"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_customized_annotation_controller.html">ICustomizedAnnotationController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a39a6b8050edf67cf58818100c76ce660">GetCustomizedAnnotationController</a> ()=0</td></tr>
-<tr class="memdesc:a39a6b8050edf67cf58818100c76ce660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get annotation controller for customized ui mode.  <a href="#a39a6b8050edf67cf58818100c76ce660">More...</a><br /></td></tr>
+<tr class="memdesc:a39a6b8050edf67cf58818100c76ce660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the controller of annotation tools used in user custom interface mode.  <a href="#a39a6b8050edf67cf58818100c76ce660">More...</a><br /></td></tr>
 <tr class="separator:a39a6b8050edf67cf58818100c76ce660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting Annotation Controller Interface. </p>
+<div class="textblock"><p>Meeting annotation tools interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0481ca97a3614886d56b7a7ca83a78ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0481ca97a3614886d56b7a7ca83a78ab">&#9670;&nbsp;</a></span>Clear()</h2>
@@ -143,15 +143,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Clear Annotation. </p>
+<p>Clear present annotations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
-    <tr><td class="paramname">type</td><td>The parameter to be used for annotation earse operator type, refer to AnnotationClearType. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>Specify on which view to clear the annotations. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
+    <tr><td class="paramname">type</td><td>Specify the ways to clear annotations. For the definitions of the tools, see <a class="el" href="meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2">AnnotationClearType</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -178,8 +179,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get annotation controller for customized ui mode. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is annotation controller interface of customized ui mode. If the function fails, the return value is NULL.  for customized style ui mode </dd></dl>
+<p>Get the controller of annotation tools used in user custom interface mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the controller of annotation tools used in user custom interface mode. If the function fails, the return value is NULL. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for user custom interface mode. </dd></dl>
 
 </div>
 </div>
@@ -206,8 +208,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The Annotation of the current meeting is disabled or not. </p>
-<dl class="section return"><dt>Returns</dt><dd>Disabled or not.  for zoom style and customized style ui mode </dd></dl>
+<p>Determine if the annotation tools are disabled or not during the current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>FALSE indicates enabled while TRUE indicates disabled. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode. </dd></dl>
 
 </div>
 </div>
@@ -235,14 +238,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Redo Annotation. </p>
+<p>Redo the last-undo annotation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>Specify on which view to redo the last-undo annotation. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -280,15 +284,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set Annotation Color. </p>
+<p>Set the colors of annotation tools. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
-    <tr><td class="paramname">color</td><td>The parameter to be used for annotation color, ABGR formats. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>The specified color is used on which view. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
+    <tr><td class="paramname">color</td><td>Specify the color of the annontation tools in RGB format. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -326,15 +331,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set Annotation Line Width. </p>
+<p>Set the line width of annotation tools. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
-    <tr><td class="paramname">lineWidth</td><td>The parameter to be used for annotation line width. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>The specified line width is used on which view. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
+    <tr><td class="paramname">lineWidth</td><td>Specify the line width to annotate. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -372,15 +378,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set Annotation Tool. </p>
+<p>Choose annotation tool. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
-    <tr><td class="paramname">type</td><td>The parameter to be used for annotation tool type, refer to AnnotationToolType. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>Specify which view to display the toolbar. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
+    <tr><td class="paramname">type</td><td>Specify the annotation tool to be used. For the definitions of the tools, see <a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7">AnnotationToolType</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -424,16 +431,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>start annotation </p>
+<p>Display annotation toolbar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
-    <tr><td class="paramname">left</td><td>Specifies The left position of the annotation bar. </td></tr>
-    <tr><td class="paramname">top</td><td>Specifies The top position of the annotation bar. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>Specify which view to display the toolbar. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
+    <tr><td class="paramname">left</td><td>Specify X-axis coordinate of the upper-left corner for the toolbar. </td></tr>
+    <tr><td class="paramname">top</td><td>Specify Y-axis coordinate of the upper-left corner for the toolbar. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. For extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -461,14 +469,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stop current annotation. </p>
+<p>Close the current annotation toolbar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>Specify which view to close the toolbar. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. For extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>
@@ -496,14 +505,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Undo Annotation. </p>
+<p>Undo the last annotation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">viewtype</td><td>Specifies which view you want to set, first monitor or second monitor. </td></tr>
+    <tr><td class="paramname">viewtype</td><td>Specify on which view to undo the last annotation. For more details, see <a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.  for zoom style ui mode </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for ZOOM style user interface mode. </dd></dl>
 
 </div>
 </div>

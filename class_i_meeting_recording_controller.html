@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,7 +76,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a869687b9a4331b37a57069bf0806afcf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a869687b9a4331b37a57069bf0806afcf">SetEvent</a> (<a class="el" href="class_i_meeting_recording_ctrl_event.html">IMeetingRecordingCtrlEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a869687b9a4331b37a57069bf0806afcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting chat callback event.  <a href="#a869687b9a4331b37a57069bf0806afcf">More...</a><br /></td></tr>
+<tr class="memdesc:a869687b9a4331b37a57069bf0806afcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting recording callback event handler.  <a href="#a869687b9a4331b37a57069bf0806afcf">More...</a><br /></td></tr>
 <tr class="separator:a869687b9a4331b37a57069bf0806afcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae245fbbf98874ac906604a7eac72006c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#ae245fbbf98874ac906604a7eac72006c">StartRecording</a> (time_t &amp;startTimestamp, wchar_t *recPath)=0</td></tr>
 <tr class="memdesc:ae245fbbf98874ac906604a7eac72006c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start recording.  <a href="#ae245fbbf98874ac906604a7eac72006c">More...</a><br /></td></tr>
@@ -85,10 +85,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aec26b2b67027adabb7c7ec5452fb4059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop recording.  <a href="#aec26b2b67027adabb7c7ec5452fb4059">More...</a><br /></td></tr>
 <tr class="separator:aec26b2b67027adabb7c7ec5452fb4059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e35994b31159751ae11e56908fd2dc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a38e35994b31159751ae11e56908fd2dc">CanStartRecording</a> (bool cloud_recording, unsigned int userid)=0</td></tr>
-<tr class="memdesc:a38e35994b31159751ae11e56908fd2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Can Start recording or not.  <a href="#a38e35994b31159751ae11e56908fd2dc">More...</a><br /></td></tr>
+<tr class="memdesc:a38e35994b31159751ae11e56908fd2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the specified user is enabled to start recording.  <a href="#a38e35994b31159751ae11e56908fd2dc">More...</a><br /></td></tr>
 <tr class="separator:a38e35994b31159751ae11e56908fd2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#ab13e7b97e1d3c7cee1f7232c6d468716">CanAllowDisAllowLocalRecording</a> ()=0</td></tr>
-<tr class="memdesc:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check Can allow or disallow other attendee to start local recording in the meeting.  <a href="#ab13e7b97e1d3c7cee1f7232c6d468716">More...</a><br /></td></tr>
+<tr class="memdesc:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the current user own the authority to change the recording permission of the others.  <a href="#ab13e7b97e1d3c7cee1f7232c6d468716">More...</a><br /></td></tr>
 <tr class="separator:ab13e7b97e1d3c7cee1f7232c6d468716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e10f643857f0ac8920df049ef28e9b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a8e10f643857f0ac8920df049ef28e9b6">StartCloudRecording</a> ()=0</td></tr>
 <tr class="memdesc:a8e10f643857f0ac8920df049ef28e9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start cloud recording.  <a href="#a8e10f643857f0ac8920df049ef28e9b6">More...</a><br /></td></tr>
@@ -97,16 +97,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a619de4790b9a89136d62e0abd166c43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop cloud recording.  <a href="#a619de4790b9a89136d62e0abd166c43a">More...</a><br /></td></tr>
 <tr class="separator:a619de4790b9a89136d62e0abd166c43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104ca13e601ee6985e010f8d32a55327"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a104ca13e601ee6985e010f8d32a55327">IsSupportLocalRecording</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:a104ca13e601ee6985e010f8d32a55327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check support local recoding feature or not.  <a href="#a104ca13e601ee6985e010f8d32a55327">More...</a><br /></td></tr>
+<tr class="memdesc:a104ca13e601ee6985e010f8d32a55327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the user owns the authority to enable the local recording.  <a href="#a104ca13e601ee6985e010f8d32a55327">More...</a><br /></td></tr>
 <tr class="separator:a104ca13e601ee6985e010f8d32a55327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98ea0dd9343ac688dd7b00782d3cca93"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a98ea0dd9343ac688dd7b00782d3cca93">AllowLocalRecording</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:a98ea0dd9343ac688dd7b00782d3cca93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow to start local recoding.  <a href="#a98ea0dd9343ac688dd7b00782d3cca93">More...</a><br /></td></tr>
+<tr class="memdesc:a98ea0dd9343ac688dd7b00782d3cca93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give the specified user authority for local recording.  <a href="#a98ea0dd9343ac688dd7b00782d3cca93">More...</a><br /></td></tr>
 <tr class="separator:a98ea0dd9343ac688dd7b00782d3cca93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237">DisAllowLocalRecording</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="mdescLeft">&#160;</td><td class="mdescRight">DisAllow to start local recoding.  <a href="#a7ccf6b7f38bf50f77dd6d44ef8453237">More...</a><br /></td></tr>
+<tr class="memdesc:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abrogate the authority of the specified user for local recoding.  <a href="#a7ccf6b7f38bf50f77dd6d44ef8453237">More...</a><br /></td></tr>
 <tr class="separator:a7ccf6b7f38bf50f77dd6d44ef8453237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_recording_controller.html#aa4e63f5e1e60ee1d4209be8392af13fc">RequestCustomizedLocalRecordingSource</a> ()=0</td></tr>
-<tr class="memdesc:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request customized local recording source notification.  <a href="#aa4e63f5e1e60ee1d4209be8392af13fc">More...</a><br /></td></tr>
+<tr class="memdesc:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request to enable the SDK to call <a class="el" href="class_i_meeting_recording_ctrl_event.html#af856aeb7958a9d099519cbc700b5bbbf" title="Callback event that the local recording source changes in the custom user interface mode...">IMeetingRecordingCtrlEvent::onCustomizedLocalRecordingSourceNotification()</a>.  <a href="#aa4e63f5e1e60ee1d4209be8392af13fc">More...</a><br /></td></tr>
 <tr class="separator:aa4e63f5e1e60ee1d4209be8392af13fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -136,14 +136,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Allow to start local recoding. </p>
+<p>Give the specified user authority for local recording. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to allow. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specifies the user ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -170,8 +170,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check Can allow or disallow other attendee to start local recording in the meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If you can, the return value is SDKErr_Success. If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Determine if the current user own the authority to change the recording permission of the others. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the user own the authority, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -209,15 +209,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check Can Start recording or not. </p>
+<p>Determine if the specified user is enabled to start recording. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cloud_recording</td><td>cloud recording or not. </td></tr>
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+    <tr><td class="paramname">cloud_recording</td><td>TRUE indicates to determine whether to enable the cloud recording. FALSE local recording. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specifies the user ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If can start recording, the return value is SDKErr_Success. If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the value of cloud_recording is set to TRUE and the cloud recording is enabled, the return value is SDKErr_Success. If the value of cloud_recording is set to FALSE and the local recording is enabled, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -245,14 +245,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>DisAllow to start local recoding. </p>
+<p>Abrogate the authority of the specified user for local recoding. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to allow. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specifies the user ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -280,14 +280,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check support local recoding feature or not. </p>
+<p>Determine if the user owns the authority to enable the local recording. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+    <tr><td class="paramname">userid</td><td>Specifies the user ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If support recording, the return value is SDKErr_Success. If don't support, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the specified user is enabled to start local recording, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -314,8 +314,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Request customized local recording source notification. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and you will got the onCustomizedLocalRecordingSourcenNotification callback. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. only for customized style ui mode </dd></dl>
+<p>Send a request to enable the SDK to call <a class="el" href="class_i_meeting_recording_ctrl_event.html#af856aeb7958a9d099519cbc700b5bbbf" title="Callback event that the local recording source changes in the custom user interface mode...">IMeetingRecordingCtrlEvent::onCustomizedLocalRecordingSourceNotification()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success, and you will receive the onCustomizedLocalRecordingSourcenNotification callback event. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Valid only for custom style user interface mode only when recording. </dd></dl>
 
 </div>
 </div>
@@ -343,14 +344,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set meeting chat callback event. </p>
+<p>Set meeting recording callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingRecordingCtrlEvent* that receives recording event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_recording_ctrl_event.html" title="Meeting recording callback event. ">IMeetingRecordingCtrlEvent</a> that receives the recording event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -378,7 +379,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Start cloud recording. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -419,12 +420,12 @@ Public Member Functions</h2></td></tr>
 <p>Start recording. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">startTimestamp</td><td>Start recording timestamp. </td></tr>
-    <tr><td class="paramname">recPath</td><td>Specifies where the recording is to be saved, if the path is not exist, return SDKERR_INVALID_PARAMETER error code. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">startTimestamp</td><td>The timestamp when start recording. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">recPath</td><td>Specifies the path of saving the recording. The SDK will try to creat this path if the specified path does not exist. If the creation failed, an error code SDKERR_INVALID_PARAMETER returns. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -452,7 +453,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stop cloud recording. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -483,11 +484,11 @@ Public Member Functions</h2></td></tr>
 <p>Stop recording. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stopTimestamp</td><td>Stop recording timestamp. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">stopTimestamp</td><td>The timestamp when stop recording. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

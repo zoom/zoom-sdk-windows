@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['premeeting_5fservice_5finterface_2eh',['premeeting_service_interface.h',['../premeeting__service__interface_8h.html',1,'']]]
+  ['outlook_5fplugin_5fintegration_5fhelper_5finterface_2eh',['outlook_plugin_integration_helper_interface.h',['../outlook__plugin__integration__helper__interface_8h.html',1,'']]]
 ];

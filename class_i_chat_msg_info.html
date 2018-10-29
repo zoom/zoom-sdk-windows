@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Zoom SDK Namespace.  
+<p>Chat message interface.  
  <a href="class_i_chat_msg_info.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__chat__interface_8h_source.html">meeting_chat_interface.h</a>&gt;</code></p>
@@ -76,31 +76,32 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae79dfb2e9d8e700fafcff5736f9c8bc2"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#ae79dfb2e9d8e700fafcff5736f9c8bc2">GetSenderUserId</a> ()=0</td></tr>
-<tr class="memdesc:ae79dfb2e9d8e700fafcff5736f9c8bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sender user id.  <a href="#ae79dfb2e9d8e700fafcff5736f9c8bc2">More...</a><br /></td></tr>
+<tr class="memdesc:ae79dfb2e9d8e700fafcff5736f9c8bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sender ID of the current message.  <a href="#ae79dfb2e9d8e700fafcff5736f9c8bc2">More...</a><br /></td></tr>
 <tr class="separator:ae79dfb2e9d8e700fafcff5736f9c8bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c46a2206429624976156822a25c207a"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a1c46a2206429624976156822a25c207a">GetSenderDisplayName</a> ()=0</td></tr>
-<tr class="memdesc:a1c46a2206429624976156822a25c207a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sender user display name.  <a href="#a1c46a2206429624976156822a25c207a">More...</a><br /></td></tr>
+<tr class="memdesc:a1c46a2206429624976156822a25c207a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sender screen name of the current message.  <a href="#a1c46a2206429624976156822a25c207a">More...</a><br /></td></tr>
 <tr class="separator:a1c46a2206429624976156822a25c207a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a632a77554d90850f37743d2fc56d7e4f"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a632a77554d90850f37743d2fc56d7e4f">GetReceiverUserId</a> ()=0</td></tr>
-<tr class="memdesc:a632a77554d90850f37743d2fc56d7e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get receiver user id.  <a href="#a632a77554d90850f37743d2fc56d7e4f">More...</a><br /></td></tr>
+<tr class="memdesc:a632a77554d90850f37743d2fc56d7e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the receiver ID of the current message.  <a href="#a632a77554d90850f37743d2fc56d7e4f">More...</a><br /></td></tr>
 <tr class="separator:a632a77554d90850f37743d2fc56d7e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45d05993639fcbc215f9911c4be33154"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a45d05993639fcbc215f9911c4be33154">GetReceiverDisplayName</a> ()=0</td></tr>
-<tr class="memdesc:a45d05993639fcbc215f9911c4be33154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get receiver user display name.  <a href="#a45d05993639fcbc215f9911c4be33154">More...</a><br /></td></tr>
+<tr class="memdesc:a45d05993639fcbc215f9911c4be33154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the receiver screen name of the current message.  <a href="#a45d05993639fcbc215f9911c4be33154">More...</a><br /></td></tr>
 <tr class="separator:a45d05993639fcbc215f9911c4be33154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e866235bfc65a466742a91dd488f659"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a1e866235bfc65a466742a91dd488f659">GetContent</a> ()=0</td></tr>
-<tr class="memdesc:a1e866235bfc65a466742a91dd488f659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chat message content.  <a href="#a1e866235bfc65a466742a91dd488f659">More...</a><br /></td></tr>
+<tr class="memdesc:a1e866235bfc65a466742a91dd488f659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the content of the current message.  <a href="#a1e866235bfc65a466742a91dd488f659">More...</a><br /></td></tr>
 <tr class="separator:a1e866235bfc65a466742a91dd488f659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a37976593cb1d4bb7da41d91c331969"><td class="memItemLeft" align="right" valign="top">virtual time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a6a37976593cb1d4bb7da41d91c331969">GetTimeStamp</a> ()=0</td></tr>
-<tr class="memdesc:a6a37976593cb1d4bb7da41d91c331969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chat message timestamp.  <a href="#a6a37976593cb1d4bb7da41d91c331969">More...</a><br /></td></tr>
+<tr class="memdesc:a6a37976593cb1d4bb7da41d91c331969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timestamp of the current message.  <a href="#a6a37976593cb1d4bb7da41d91c331969">More...</a><br /></td></tr>
 <tr class="separator:a6a37976593cb1d4bb7da41d91c331969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a859545b0a6d868a43d03ea6fba924571"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a859545b0a6d868a43d03ea6fba924571">IsChatToAll</a> ()=0</td></tr>
+<tr class="memdesc:a859545b0a6d868a43d03ea6fba924571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the current messsage is sent to all.  <a href="#a859545b0a6d868a43d03ea6fba924571">More...</a><br /></td></tr>
 <tr class="separator:a859545b0a6d868a43d03ea6fba924571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5028bee33d89b449bad785c7313b515e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_chat_msg_info.html#a5028bee33d89b449bad785c7313b515e">IsChatToAllPanelist</a> ()=0</td></tr>
+<tr class="memdesc:a5028bee33d89b449bad785c7313b515e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the current message is sent to all the panelists.  <a href="#a5028bee33d89b449bad785c7313b515e">More...</a><br /></td></tr>
 <tr class="separator:a5028bee33d89b449bad785c7313b515e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Zoom SDK Namespace. </p>
-<p>Chat message information Interface </p>
+<div class="textblock"><p>Chat message interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1e866235bfc65a466742a91dd488f659"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e866235bfc65a466742a91dd488f659">&#9670;&nbsp;</a></span>GetContent()</h2>
@@ -125,8 +126,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get chat message content. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is chat message content. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the content of the current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the pointer to the content of the current message. Otherwise failed, the return value is NULL. </dd></dl>
 
 </div>
 </div>
@@ -153,8 +154,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get receiver user display name. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is receiver user display name. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the receiver screen name of the current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the receiver screen name of the current message. Otherwise failed, the return value is the string of length zero(0). </dd></dl>
 
 </div>
 </div>
@@ -181,8 +182,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get receiver user id. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is receiver user id. if return value is 0, this message is send to everyone If the function fails, the return value is -1. </dd></dl>
+<p>Get the receiver ID of the current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the receiver ID of the current message. ZERO(0) indicates that the message is sent to all. ONE(1) indicates that the messages are sent to all the panelistes. Otherwise failed, the return value is negative ONE(-1). </dd></dl>
 
 </div>
 </div>
@@ -209,8 +210,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get sender user display name. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is sender user display name. If the function fails, the return value is NULL. </dd></dl>
+<p>Get the sender screen name of the current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is sender screen name of the current message. Otherwise failed, the return value is NULL. </dd></dl>
 
 </div>
 </div>
@@ -237,8 +238,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get sender user id. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is sender user id. If the function fails, the return value is -1. </dd></dl>
+<p>Get the sender ID of the current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the sender ID of the current message. Otherwise failed, the return value is -1. </dd></dl>
 
 </div>
 </div>
@@ -265,8 +266,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get chat message timestamp. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is chat message timestamp. </dd></dl>
+<p>Get the timestamp of the current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the timestamp of the current message. </dd></dl>
 
 </div>
 </div>
@@ -292,7 +293,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If true, it is to all chat message, otherwise not </dd></dl>
+
+<p>Determine if the current messsage is sent to all. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the current message is sent to all. Otherwise not. </dd></dl>
 
 </div>
 </div>
@@ -318,7 +321,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If true, it is to all panellist chat message, otherwise not </dd></dl>
+
+<p>Determine if the current message is sent to all the panelists. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the current message is sent to all the panelists. Otherwise not. </dd></dl>
 
 </div>
 </div>

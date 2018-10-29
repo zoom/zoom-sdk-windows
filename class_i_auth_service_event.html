@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Authentication Service Callback Event.  
+<p>Authentication service callback event.  
  <a href="class_i_auth_service_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="auth__service__interface_8h_source.html">auth_service_interface.h</a>&gt;</code></p>
@@ -76,22 +76,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6bf10b8e19789804f08e63ad6738d01"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service_event.html#ac6bf10b8e19789804f08e63ad6738d01">onAuthenticationReturn</a> (<a class="el" href="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> ret)=0</td></tr>
-<tr class="memdesc:ac6bf10b8e19789804f08e63ad6738d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authentication Result callback.  <a href="#ac6bf10b8e19789804f08e63ad6738d01">More...</a><br /></td></tr>
+<tr class="memdesc:ac6bf10b8e19789804f08e63ad6738d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authentication result callback.  <a href="#ac6bf10b8e19789804f08e63ad6738d01">More...</a><br /></td></tr>
 <tr class="separator:ac6bf10b8e19789804f08e63ad6738d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acee90b340cb800597cd0f20ba5679ad4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service_event.html#acee90b340cb800597cd0f20ba5679ad4">onLoginRet</a> (<a class="el" href="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6b">LOGINSTATUS</a> ret, <a class="el" href="class_i_account_info.html">IAccountInfo</a> *pAccountInfo)=0</td></tr>
-<tr class="memdesc:acee90b340cb800597cd0f20ba5679ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login Result callback.  <a href="#acee90b340cb800597cd0f20ba5679ad4">More...</a><br /></td></tr>
+<tr class="memdesc:acee90b340cb800597cd0f20ba5679ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback of login result.  <a href="#acee90b340cb800597cd0f20ba5679ad4">More...</a><br /></td></tr>
 <tr class="separator:acee90b340cb800597cd0f20ba5679ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2de61cfb87a505a9dc3f0123f443735"><td class="memItemLeft" align="right" valign="top"><a id="af2de61cfb87a505a9dc3f0123f443735"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service_event.html#af2de61cfb87a505a9dc3f0123f443735">onLogout</a> ()=0</td></tr>
-<tr class="memdesc:af2de61cfb87a505a9dc3f0123f443735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logout Result callback. <br /></td></tr>
+<tr class="memdesc:af2de61cfb87a505a9dc3f0123f443735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logout result callback. <br /></td></tr>
 <tr class="separator:af2de61cfb87a505a9dc3f0123f443735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10ba896b40febc2b773592cb022a54a4"><td class="memItemLeft" align="right" valign="top"><a id="a10ba896b40febc2b773592cb022a54a4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service_event.html#a10ba896b40febc2b773592cb022a54a4">onZoomIdentityExpired</a> ()=0</td></tr>
-<tr class="memdesc:a10ba896b40febc2b773592cb022a54a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom identity expired, please re-login or generate new zoom access token via REST api. <br /></td></tr>
+<tr class="memdesc:a10ba896b40febc2b773592cb022a54a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom identity has expired, please re-login or generate a new zoom access token via REST api. <br /></td></tr>
 <tr class="separator:a10ba896b40febc2b773592cb022a54a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Authentication Service Callback Event. </p>
+<div class="textblock"><p>Authentication service callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac6bf10b8e19789804f08e63ad6738d01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6bf10b8e19789804f08e63ad6738d01">&#9670;&nbsp;</a></span>onAuthenticationReturn()</h2>
@@ -117,10 +117,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Authentication Result callback. </p>
+<p>Authentication result callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ret</td><td>Authentication Result value. </td></tr>
+    <tr><td class="paramname">ret</td><td>Authentication result value. For more details, see <a class="el" href="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -161,11 +161,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Login Result callback. </p>
+<p>Callback of login result. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ret</td><td>Login status. refer LOGINSTATUS. </td></tr>
-    <tr><td class="paramname">pAccountInfo</td><td>if the ret is LOGINRET_SUCCESS, it is not NULL value, otherwise is NULL </td></tr>
+    <tr><td class="paramname">ret</td><td>Login status. see <a class="el" href="auth__service__interface_8h.html#a5b5add41f92daed16877ae15bb8e3a6b">LOGINSTATUS</a> enum. </td></tr>
+    <tr><td class="paramname">pAccountInfo</td><td>Valid when the ret is LOGINRET_SUCCESS. Otherwise NULL. </td></tr>
   </table>
   </dd>
 </dl>

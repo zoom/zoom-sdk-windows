@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a599584f6ad8691d9824a9d709e1e92fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_ctrl_event.html#a599584f6ad8691d9824a9d709e1e92fa">onChatMsgNotifcation</a> (<a class="el" href="class_i_chat_msg_info.html">IChatMsgInfo</a> *chatMsg, const wchar_t *content=NULL)=0</td></tr>
-<tr class="memdesc:a599584f6ad8691d9824a9d709e1e92fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat message callback  <a href="#a599584f6ad8691d9824a9d709e1e92fa">More...</a><br /></td></tr>
+<tr class="memdesc:a599584f6ad8691d9824a9d709e1e92fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chat message callback. This function is used to inform the user once received the message sent by others.  <a href="#a599584f6ad8691d9824a9d709e1e92fa">More...</a><br /></td></tr>
 <tr class="separator:a599584f6ad8691d9824a9d709e1e92fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab5448e29e61eb22dd563956df2c078f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_ctrl_event.html#aab5448e29e61eb22dd563956df2c078f">onChatStautsChangedNotification</a> (<a class="el" href="structtag_chat_status.html">ChatStatus</a> *status_)=0</td></tr>
-<tr class="memdesc:aab5448e29e61eb22dd563956df2c078f"><td class="mdescLeft">&#160;</td><td class="mdescRight">chat status changed notification callback  <a href="#aab5448e29e61eb22dd563956df2c078f">More...</a><br /></td></tr>
+<tr class="memdesc:aab5448e29e61eb22dd563956df2c078f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The authority of chat changes callback. This function is used to inform the user when the authority of chat changes in the meeting or webinar.  <a href="#aab5448e29e61eb22dd563956df2c078f">More...</a><br /></td></tr>
 <tr class="separator:aab5448e29e61eb22dd563956df2c078f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -119,11 +119,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>chat message callback </p>
+<p>Chat message callback. This function is used to inform the user once received the message sent by others. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatMsg</td><td>chat message object. This param will invalid after this function call end. </td></tr>
-    <tr><td class="paramname">content</td><td>chat message in json format,Reserved. </td></tr>
+    <tr><td class="paramname">chatMsg</td><td>An object pointer to the chat message. </td></tr>
+    <tr><td class="paramname">content</td><td>A pointer to the chat message in json format. This parameter is currently invalid, hereby only for reservations. </td></tr>
   </table>
   </dd>
 </dl>
@@ -154,10 +154,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>chat status changed notification callback </p>
+<p>The authority of chat changes callback. This function is used to inform the user when the authority of chat changes in the meeting or webinar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_</td><td>chat status object. This param will invalid after this function call end. </td></tr>
+    <tr><td class="paramname">status_</td><td>The chat status. For more details, see <a class="el" href="">ChatStatus</a>. </td></tr>
   </table>
   </dd>
 </dl>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Outlook plugin integration helper Interface.  
+<p>Outlook plugin integration helper interface.  
  <a href="class_i_outlook_plugin_integration_helper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="outlook__plugin__integration__helper__interface_8h_source.html">outlook_plugin_integration_helper_interface.h</a>&gt;</code></p>
@@ -76,15 +76,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afa5b12aff8723b070e619b3aa62b70bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_outlook_plugin_integration_helper.html#afa5b12aff8723b070e619b3aa62b70bd">SetEvent</a> (<a class="el" href="class_i_outlook_plugin_integration_helper_event.html">IOutlookPluginIntegrationHelperEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:afa5b12aff8723b070e619b3aa62b70bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outlook plugin integration helper callback event.  <a href="#afa5b12aff8723b070e619b3aa62b70bd">More...</a><br /></td></tr>
+<tr class="memdesc:afa5b12aff8723b070e619b3aa62b70bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outlook plugin integration helper callback handler.  <a href="#afa5b12aff8723b070e619b3aa62b70bd">More...</a><br /></td></tr>
 <tr class="separator:afa5b12aff8723b070e619b3aa62b70bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3290a1d17444a9254ea7eb9ecf794e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_outlook_plugin_integration_helper.html#a1e3290a1d17444a9254ea7eb9ecf794e">Start</a> (const wchar_t *ipc_channel_name=NULL)=0</td></tr>
+<tr class="memdesc:a1e3290a1d17444a9254ea7eb9ecf794e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start outlook plugin integration.  <a href="#a1e3290a1d17444a9254ea7eb9ecf794e">More...</a><br /></td></tr>
 <tr class="separator:a1e3290a1d17444a9254ea7eb9ecf794e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e74d5329db6fb76a4efa9f2a72d211a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_outlook_plugin_integration_helper.html#a4e74d5329db6fb76a4efa9f2a72d211a">Stop</a> ()=0</td></tr>
+<tr class="memdesc:a4e74d5329db6fb76a4efa9f2a72d211a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop Outlook plugin integration.  <a href="#a4e74d5329db6fb76a4efa9f2a72d211a">More...</a><br /></td></tr>
 <tr class="separator:a4e74d5329db6fb76a4efa9f2a72d211a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Outlook plugin integration helper Interface. </p>
+<div class="textblock"><p>Outlook plugin integration helper interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afa5b12aff8723b070e619b3aa62b70bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa5b12aff8723b070e619b3aa62b70bd">&#9670;&nbsp;</a></span>SetEvent()</h2>
@@ -110,14 +112,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Outlook plugin integration helper callback event. </p>
+<p>Outlook plugin integration helper callback handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IOutlookPluginIntegrationHelperEvent* that receives outlook plugin event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_outlook_plugin_integration_helper_event.html" title="Outlook plugin integration helper Callback event. ">IOutlookPluginIntegrationHelperEvent</a> that receives outlook plugin event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -144,13 +146,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Start outlook plugin integration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ipc_channel_name</td><td>IPC channel, default use zoom outlook plugin ipc channel, otherwise, please contact us . </td></tr>
+    <tr><td class="paramname">ipc_channel_name</td><td>Currently only the default value is supported. If you have any special requirements, please contact the vendor. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. you need to call this APIs after onAuthenticationReturn return success status. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -176,7 +180,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. you need to call this APIs after onAuthenticationReturn return success status. </dd></dl>
+
+<p>Stop Outlook plugin integration. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

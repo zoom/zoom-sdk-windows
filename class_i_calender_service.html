@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,32 +68,194 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Calender Service Interface.  
+<p>calendar Service Interface  
  <a href="class_i_calender_service.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="calender__service__interface_8h_source.html">calender_service_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa76fd07f937e6ffda41b834d909fd0b4"><td class="memItemLeft" align="right" valign="top"><a id="aa76fd07f937e6ffda41b834d909fd0b4"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="el" href="class_i_calender_service_event.html">ICalenderServiceEvent</a> *pEvent)=0</td></tr>
+<tr class="memitem:aa76fd07f937e6ffda41b834d909fd0b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_calender_service.html#aa76fd07f937e6ffda41b834d909fd0b4">Init</a> (<a class="el" href="class_i_calender_service_event.html">ICalenderServiceEvent</a> *pEvent)=0</td></tr>
+<tr class="memdesc:aa76fd07f937e6ffda41b834d909fd0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the calendar service callback event handler, and initialize the calendar service.  <a href="#aa76fd07f937e6ffda41b834d909fd0b4">More...</a><br /></td></tr>
 <tr class="separator:aa76fd07f937e6ffda41b834d909fd0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad45dd1babcba4a448ef36516fd193f8c"><td class="memItemLeft" align="right" valign="top"><a id="ad45dd1babcba4a448ef36516fd193f8c"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Uninit</b> ()=0</td></tr>
+<tr class="memitem:ad45dd1babcba4a448ef36516fd193f8c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_calender_service.html#ad45dd1babcba4a448ef36516fd193f8c">Uninit</a> ()=0</td></tr>
+<tr class="memdesc:ad45dd1babcba4a448ef36516fd193f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uninitialized the calendar service.  <a href="#ad45dd1babcba4a448ef36516fd193f8c">More...</a><br /></td></tr>
 <tr class="separator:ad45dd1babcba4a448ef36516fd193f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3efe9ce0947fa52e8028200d67852d6b"><td class="memItemLeft" align="right" valign="top"><a id="a3efe9ce0947fa52e8028200d67852d6b"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StartOutlookExchangeCalender</b> (<a class="el" href="structtag_outlook_exchage_auth.html">OutlookExchageAuth</a> &amp;param)=0</td></tr>
+<tr class="memitem:a3efe9ce0947fa52e8028200d67852d6b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_calender_service.html#a3efe9ce0947fa52e8028200d67852d6b">StartOutlookExchangeCalender</a> (<a class="el" href="structtag_outlook_exchage_auth.html">OutlookExchageAuth</a> &amp;param)=0</td></tr>
+<tr class="memdesc:a3efe9ce0947fa52e8028200d67852d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule the meeting by the calendar of Outlook Exchange.  <a href="#a3efe9ce0947fa52e8028200d67852d6b">More...</a><br /></td></tr>
 <tr class="separator:a3efe9ce0947fa52e8028200d67852d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad92f6424820f53e3037093202dd8acff"><td class="memItemLeft" align="right" valign="top"><a id="ad92f6424820f53e3037093202dd8acff"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StopOutlookExchangeCalender</b> ()=0</td></tr>
+<tr class="memitem:ad92f6424820f53e3037093202dd8acff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_calender_service.html#ad92f6424820f53e3037093202dd8acff">StopOutlookExchangeCalender</a> ()=0</td></tr>
+<tr class="memdesc:ad92f6424820f53e3037093202dd8acff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop using the Outlook Exchange to schedule the meeting.  <a href="#ad92f6424820f53e3037093202dd8acff">More...</a><br /></td></tr>
 <tr class="separator:ad92f6424820f53e3037093202dd8acff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d8fef1a845d6ee41b309dbd358639c"><td class="memItemLeft" align="right" valign="top"><a id="ad6d8fef1a845d6ee41b309dbd358639c"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RetrieveCalEvents</b> (CalenderAuthType type)=0</td></tr>
+<tr class="memitem:ad6d8fef1a845d6ee41b309dbd358639c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_calender_service.html#ad6d8fef1a845d6ee41b309dbd358639c">RetrieveCalEvents</a> (CalenderAuthType type)=0</td></tr>
+<tr class="memdesc:ad6d8fef1a845d6ee41b309dbd358639c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the calendar event. The SDK will inform the user via <a class="el" href="class_i_calender_service_event.html#a8b9fef3396cec06b0205e51067392fc3" title="calendar service callback. ">ICalenderServiceEvent::onCalenderEventsNotifcation()</a>.  <a href="#ad6d8fef1a845d6ee41b309dbd358639c">More...</a><br /></td></tr>
 <tr class="separator:ad6d8fef1a845d6ee41b309dbd358639c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Calender Service Interface. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>calendar Service Interface </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa76fd07f937e6ffda41b834d909fd0b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76fd07f937e6ffda41b834d909fd0b4">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICalenderService::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_calender_service_event.html">ICalenderServiceEvent</a> *&#160;</td>
+          <td class="paramname"><em>pEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the calendar service callback event handler, and initialize the calendar service. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pEvent</td><td>Specifies a pointer to <a class="el" href="class_i_calender_service_event.html" title="calendar Service Callback Event. ">ICalenderServiceEvent</a> which will handle the callback events. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ad6d8fef1a845d6ee41b309dbd358639c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d8fef1a845d6ee41b309dbd358639c">&#9670;&nbsp;</a></span>RetrieveCalEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICalenderService::RetrieveCalEvents </td>
+          <td>(</td>
+          <td class="paramtype">CalenderAuthType&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the calendar event. The SDK will inform the user via <a class="el" href="class_i_calender_service_event.html#a8b9fef3396cec06b0205e51067392fc3" title="calendar service callback. ">ICalenderServiceEvent::onCalenderEventsNotifcation()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Specifies the type to get. The only type supported for the moment is the CalenderAuth_OutlookExchage. For more details, see <a class="el" href="">CalenderAuthType</a> enum. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a3efe9ce0947fa52e8028200d67852d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efe9ce0947fa52e8028200d67852d6b">&#9670;&nbsp;</a></span>StartOutlookExchangeCalender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICalenderService::StartOutlookExchangeCalender </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtag_outlook_exchage_auth.html">OutlookExchageAuth</a> &amp;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Schedule the meeting by the calendar of Outlook Exchange. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Specifies the parameter. For more details, see <a class="el" href="">OutlookExchageAuth</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ad92f6424820f53e3037093202dd8acff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92f6424820f53e3037093202dd8acff">&#9670;&nbsp;</a></span>StopOutlookExchangeCalender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICalenderService::StopOutlookExchangeCalender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop using the Outlook Exchange to schedule the meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ad45dd1babcba4a448ef36516fd193f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad45dd1babcba4a448ef36516fd193f8c">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICalenderService::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uninitialized the calendar service. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="calender__service__interface_8h_source.html">calender_service_interface.h</a></li>
 </ul>
 </div><!-- contents -->

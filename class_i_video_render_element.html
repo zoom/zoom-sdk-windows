@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>base class of the video element interface  
+<p>The base class for the video element interface.  
  <a href="class_i_video_render_element.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="customized__video__container_8h_source.html">customized_video_container.h</a>&gt;</code></p>
@@ -78,34 +78,32 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a16d1d2a85f9df4ad6a2e143d35de17e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5">VideoRenderElementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a16d1d2a85f9df4ad6a2e143d35de17e3">GetType</a> ()=0</td></tr>
-<tr class="memdesc:a16d1d2a85f9df4ad6a2e143d35de17e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the video render.  <a href="#a16d1d2a85f9df4ad6a2e143d35de17e3">More...</a><br /></td></tr>
+<tr class="memdesc:a16d1d2a85f9df4ad6a2e143d35de17e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the video render element.  <a href="#a16d1d2a85f9df4ad6a2e143d35de17e3">More...</a><br /></td></tr>
 <tr class="separator:a16d1d2a85f9df4ad6a2e143d35de17e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a529364596613fd61f40a33ee3c0671fe"><td class="memItemLeft" align="right" valign="top">virtual RECT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a529364596613fd61f40a33ee3c0671fe">GetPos</a> ()=0</td></tr>
-<tr class="memdesc:a529364596613fd61f40a33ee3c0671fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the coordinates of a video render element's client area.  <a href="#a529364596613fd61f40a33ee3c0671fe">More...</a><br /></td></tr>
+<tr class="memdesc:a529364596613fd61f40a33ee3c0671fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the area where the current render element is.  <a href="#a529364596613fd61f40a33ee3c0671fe">More...</a><br /></td></tr>
 <tr class="separator:a529364596613fd61f40a33ee3c0671fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80b2dd41dd1d3f39468027376f8078d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#ae80b2dd41dd1d3f39468027376f8078d">SetPos</a> (RECT pos)=0</td></tr>
-<tr class="memdesc:ae80b2dd41dd1d3f39468027376f8078d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the position of a video render element's client area.  <a href="#ae80b2dd41dd1d3f39468027376f8078d">More...</a><br /></td></tr>
+<tr class="memdesc:ae80b2dd41dd1d3f39468027376f8078d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a new display area of the current render element.  <a href="#ae80b2dd41dd1d3f39468027376f8078d">More...</a><br /></td></tr>
 <tr class="separator:ae80b2dd41dd1d3f39468027376f8078d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a09c86ccfd5b999d09e2a7a76f1cf00"><td class="memItemLeft" align="right" valign="top"><a id="a2a09c86ccfd5b999d09e2a7a76f1cf00"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a2a09c86ccfd5b999d09e2a7a76f1cf00">Show</a> ()=0</td></tr>
-<tr class="memdesc:a2a09c86ccfd5b999d09e2a7a76f1cf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show video element If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. <br /></td></tr>
+<tr class="memitem:a2a09c86ccfd5b999d09e2a7a76f1cf00"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a2a09c86ccfd5b999d09e2a7a76f1cf00">Show</a> ()=0</td></tr>
+<tr class="memdesc:a2a09c86ccfd5b999d09e2a7a76f1cf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the render element.  <a href="#a2a09c86ccfd5b999d09e2a7a76f1cf00">More...</a><br /></td></tr>
 <tr class="separator:a2a09c86ccfd5b999d09e2a7a76f1cf00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35ead52620d11e51bb0fda3f8022b344"><td class="memItemLeft" align="right" valign="top"><a id="a35ead52620d11e51bb0fda3f8022b344"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344">Hide</a> ()=0</td></tr>
-<tr class="memdesc:a35ead52620d11e51bb0fda3f8022b344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide video element If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. <br /></td></tr>
+<tr class="memitem:a35ead52620d11e51bb0fda3f8022b344"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344">Hide</a> ()=0</td></tr>
+<tr class="memdesc:a35ead52620d11e51bb0fda3f8022b344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the render element.  <a href="#a35ead52620d11e51bb0fda3f8022b344">More...</a><br /></td></tr>
 <tr class="separator:a35ead52620d11e51bb0fda3f8022b344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29b4e7fa359148489f28966a7f140c4f"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a29b4e7fa359148489f28966a7f140c4f">GetCurrentRenderUserId</a> ()=0</td></tr>
-<tr class="memdesc:a29b4e7fa359148489f28966a7f140c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the user id of the video element.  <a href="#a29b4e7fa359148489f28966a7f140c4f">More...</a><br /></td></tr>
+<tr class="memdesc:a29b4e7fa359148489f28966a7f140c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the user ID corresponding to the current render element.  <a href="#a29b4e7fa359148489f28966a7f140c4f">More...</a><br /></td></tr>
 <tr class="separator:a29b4e7fa359148489f28966a7f140c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31df48dd79f9e2935dbf515805f5112"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc">VideoRenderDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#ab31df48dd79f9e2935dbf515805f5112">GetCurrentRenderDataType</a> ()=0</td></tr>
-<tr class="memdesc:ab31df48dd79f9e2935dbf515805f5112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the render data type of the video element.  <a href="#ab31df48dd79f9e2935dbf515805f5112">More...</a><br /></td></tr>
+<tr class="memdesc:ab31df48dd79f9e2935dbf515805f5112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data type of the current render element.  <a href="#ab31df48dd79f9e2935dbf515805f5112">More...</a><br /></td></tr>
 <tr class="separator:ab31df48dd79f9e2935dbf515805f5112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ca8656e5254c90427db2d21625c490"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_render_element.html#a11ca8656e5254c90427db2d21625c490">EnableShowScreenNameOnVideo</a> (bool enable_show)=0</td></tr>
-<tr class="memdesc:a11ca8656e5254c90427db2d21625c490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable show screen name on video or not.  <a href="#a11ca8656e5254c90427db2d21625c490">More...</a><br /></td></tr>
+<tr class="memdesc:a11ca8656e5254c90427db2d21625c490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the screen name on the current render element.  <a href="#a11ca8656e5254c90427db2d21625c490">More...</a><br /></td></tr>
 <tr class="separator:a11ca8656e5254c90427db2d21625c490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>base class of the video element interface </p>
+<div class="textblock"><p>The base class for the video element interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a11ca8656e5254c90427db2d21625c490"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11ca8656e5254c90427db2d21625c490">&#9670;&nbsp;</a></span>EnableShowScreenNameOnVideo()</h2>
@@ -131,10 +129,10 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Enable show screen name on video or not. </p>
+<p>Set the visibility of the screen name on the current render element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable_show</td><td>enable or not. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </td></tr>
+    <tr><td class="paramname">enable_show</td><td>TRUE indicates to show the screen name. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -164,8 +162,8 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Get the render data type of the video element. </p>
-<dl class="section return"><dt>Returns</dt><dd>The data type of the video element </dd></dl>
+<p>Get the data type of the current render element. </p>
+<dl class="section return"><dt>Returns</dt><dd>The data type of the current render elements. For more details, see <a class="el" href="customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc">VideoRenderDataType</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -192,8 +190,8 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Get the user id of the video element. </p>
-<dl class="section return"><dt>Returns</dt><dd>The user id specify which user was viewing. </dd></dl>
+<p>Get the user ID corresponding to the current render element. </p>
+<dl class="section return"><dt>Returns</dt><dd>The ID of the user. </dd></dl>
 
 </div>
 </div>
@@ -220,8 +218,8 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves the coordinates of a video render element's client area. </p>
-<dl class="section return"><dt>Returns</dt><dd>a RECT structure that receives the client coordinates. client coordinates are relative to the upper-left corner of a video container's client area </dd></dl>
+<p>Get the area where the current render element is. </p>
+<dl class="section return"><dt>Returns</dt><dd>A RECT structure. The value in the structure corresponding to the coordinate system is the client area of the video container. The client coordinates corresponds to the client area of the upper-left corner of the parent window. </dd></dl>
 
 </div>
 </div>
@@ -248,8 +246,36 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Get the type of the video render. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the render type.refer VideoRenderElementType If the function fails, the return value is VideoRenderElement_None. </dd></dl>
+<p>Get the type of the video render element. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the type of the render element. For more details, see <a class="el" href="customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5">VideoRenderElementType</a> enum. Otherwise failed, the return value is VideoRenderElement_None. </dd></dl>
+
+</div>
+</div>
+<a id="a35ead52620d11e51bb0fda3f8022b344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ead52620d11e51bb0fda3f8022b344">&#9670;&nbsp;</a></span>Hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IVideoRenderElement::Hide </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Hide the render element. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -277,13 +303,42 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </table>
 </div><div class="memdoc">
 
-<p>Changes the position of a video render element's client area. </p>
+<p>Specify a new display area of the current render element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>specify the position of a video render element's client area. </td></tr>
+    <tr><td class="paramname">pos</td><td>Specify a new area through RECT structure. The value in the structure corresponding to the coordinate system is that of the client area of the video main window. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a2a09c86ccfd5b999d09e2a7a76f1cf00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a09c86ccfd5b999d09e2a7a76f1cf00">&#9670;&nbsp;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IVideoRenderElement::Show </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show the render element. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

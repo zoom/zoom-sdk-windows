@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Audio Device testing Callback events.  
+<p>Audio device testing callback events.  
  <a href="class_i_test_audio_device_helper_event.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a>&gt;</code></p>
@@ -76,21 +76,21 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4dd5d99a9b554bf14f931e8a8a16c716"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper_event.html#a4dd5d99a9b554bf14f931e8a8a16c716">OnMicSpkVolumnChanged</a> (unsigned int MicVolume, unsigned int SpkVolume)=0</td></tr>
-<tr class="memdesc:a4dd5d99a9b554bf14f931e8a8a16c716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the current mic volume and speaker volume during the mic/speaker testing.  <a href="#a4dd5d99a9b554bf14f931e8a8a16c716">More...</a><br /></td></tr>
+<tr class="memdesc:a4dd5d99a9b554bf14f931e8a8a16c716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the current mic or speaker volume when testing.  <a href="#a4dd5d99a9b554bf14f931e8a8a16c716">More...</a><br /></td></tr>
 <tr class="separator:a4dd5d99a9b554bf14f931e8a8a16c716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5f230176f7d6cec0798813c2bfec9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper_event.html#a2f5f230176f7d6cec0798813c2bfec9a">OnNoAudioDeviceIsUseful</a> (bool bMicOrSpk)=0</td></tr>
-<tr class="memdesc:a2f5f230176f7d6cec0798813c2bfec9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that no mic device or speaker device is found.  <a href="#a2f5f230176f7d6cec0798813c2bfec9a">More...</a><br /></td></tr>
+<tr class="memdesc:a2f5f230176f7d6cec0798813c2bfec9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that either mic device or speaker device is not found.  <a href="#a2f5f230176f7d6cec0798813c2bfec9a">More...</a><br /></td></tr>
 <tr class="separator:a2f5f230176f7d6cec0798813c2bfec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ff89285bb2f7afd81e200335de602f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper_event.html#a4ff89285bb2f7afd81e200335de602f2">OnTestMicStatusChanged</a> (<a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">SDK_TESTMIC_STATUS</a> status, bool &amp;bHandled)=0</td></tr>
-<tr class="memdesc:a4ff89285bb2f7afd81e200335de602f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the status of the mic duing the mic testing.  <a href="#a4ff89285bb2f7afd81e200335de602f2">More...</a><br /></td></tr>
+<tr class="memdesc:a4ff89285bb2f7afd81e200335de602f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the mic status when testing.  <a href="#a4ff89285bb2f7afd81e200335de602f2">More...</a><br /></td></tr>
 <tr class="separator:a4ff89285bb2f7afd81e200335de602f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67814860b9a714d9c392ea0e8d208a8"><td class="memItemLeft" align="right" valign="top"><a id="ad67814860b9a714d9c392ea0e8d208a8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_test_audio_device_helper_event.html#ad67814860b9a714d9c392ea0e8d208a8">OnSelectedAudioDeviceIsChanged</a> ()=0</td></tr>
-<tr class="memdesc:ad67814860b9a714d9c392ea0e8d208a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the user that a mic/speaker device is selected during the testing. SDK will close the mic/speaker testing. User should restart the test again manually. <br /></td></tr>
+<tr class="memdesc:ad67814860b9a714d9c392ea0e8d208a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the user that a mic/speaker device is selected when testing. Then the SDK will close the mic/speaker testing. The user shall restart the test manually if he still wants to test. <br /></td></tr>
 <tr class="separator:ad67814860b9a714d9c392ea0e8d208a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio Device testing Callback events. </p>
+<div class="textblock"><p>Audio device testing callback events. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4dd5d99a9b554bf14f931e8a8a16c716"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4dd5d99a9b554bf14f931e8a8a16c716">&#9670;&nbsp;</a></span>OnMicSpkVolumnChanged()</h2>
@@ -126,11 +126,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notify the current mic volume and speaker volume during the mic/speaker testing. </p>
+<p>Notify the current mic or speaker volume when testing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">MicVolume</td><td>[out] Specifies the voulme of the mic. </td></tr>
-    <tr><td class="paramname">SpkVolume</td><td>[out] Specifies the voulme of the speaker. These values can be used to show a volume process bar during mic/speaker testing. </td></tr>
+    <tr><td class="paramname">MicVolume</td><td>Specify the voulme of the mic. </td></tr>
+    <tr><td class="paramname">SpkVolume</td><td>Specify the voulme of the speaker. </td></tr>
   </table>
   </dd>
 </dl>
@@ -161,10 +161,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notify that no mic device or speaker device is found. </p>
+<p>Notify that either mic device or speaker device is not found. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bMicOrSpk</td><td>True means no mic device. False means no speaker device. </td></tr>
+    <tr><td class="paramname">bMicOrSpk</td><td>TRUE indicates no mic device. False no speaker device. </td></tr>
   </table>
   </dd>
 </dl>
@@ -205,15 +205,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notify the status of the mic duing the mic testing. </p>
+<p>Notify the mic status when testing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status</td><td>Refer to the enum SDK_TESTMIC_STATUS for more details. </td></tr>
-    <tr><td class="paramname">bHandled</td><td>Set it to be 'true' to notify the SDK that the default logic in SDK should be ignored to handle the mic status. </td></tr>
+    <tr><td class="paramname">status</td><td>The mic status. For more details, see <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">SDK_TESTMIC_STATUS</a> enum. </td></tr>
+    <tr><td class="paramname">bHandled</td><td>The SDK default logic won't handle the mic status the value is set to be TRUE. For more details, see <a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee">SDK_TESTMIC_STATUS</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee" title="Notify the status of the mic during the mic testing. ">SDK_TESTMIC_STATUS</a> </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The enuCanPlay status indicates that the SDK has recorded the microphone sound for the longest time (6 seconds). If the bHandled is not set to TURE hereby, the SDK will call TestMicStopTesting() itself. </dd></dl>
 
 </div>
 </div>

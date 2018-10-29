@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -79,13 +79,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4668cac1958f1094db359bc9a86fb75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting chat callback event.  <a href="#a4668cac1958f1094db359bc9a86fb75a">More...</a><br /></td></tr>
 <tr class="separator:a4668cac1958f1094db359bc9a86fb75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b29bf32186da127ffc15d259e3deb75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#a9b29bf32186da127ffc15d259e3deb75">SendChatTo</a> (unsigned int receiver, wchar_t *content)=0</td></tr>
-<tr class="memdesc:a9b29bf32186da127ffc15d259e3deb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message to somebody or All.  <a href="#a9b29bf32186da127ffc15d259e3deb75">More...</a><br /></td></tr>
+<tr class="memdesc:a9b29bf32186da127ffc15d259e3deb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message in the normal meeting.  <a href="#a9b29bf32186da127ffc15d259e3deb75">More...</a><br /></td></tr>
 <tr class="separator:a9b29bf32186da127ffc15d259e3deb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad11c85cf34941d851f0112affa19a815"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#ad11c85cf34941d851f0112affa19a815">SendChat4WebinarMeeting</a> (<a class="el" href="structtag_send_chat_item4_webinar.html">SendChatItem4Webinar</a> &amp;chatIteam)=0</td></tr>
-<tr class="memdesc:ad11c85cf34941d851f0112affa19a815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message to somebody or All in webinar meeting.  <a href="#ad11c85cf34941d851f0112affa19a815">More...</a><br /></td></tr>
+<tr class="memdesc:ad11c85cf34941d851f0112affa19a815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send chat message in webinar.  <a href="#ad11c85cf34941d851f0112affa19a815">More...</a><br /></td></tr>
 <tr class="separator:ad11c85cf34941d851f0112affa19a815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structtag_chat_status.html">ChatStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_chat_controller.html#a3eaa1d75d94de5ca10f3d3b62a402442">GetChatStatus</a> ()=0</td></tr>
-<tr class="memdesc:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current privilege status of chat session.  <a href="#a3eaa1d75d94de5ca10f3d3b62a402442">More...</a><br /></td></tr>
+<tr class="memdesc:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the authority status to send current message.  <a href="#a3eaa1d75d94de5ca10f3d3b62a402442">More...</a><br /></td></tr>
 <tr class="separator:a3eaa1d75d94de5ca10f3d3b62a402442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -114,8 +114,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get current privilege status of chat session. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the status of chat session. If the function fails, the return value is NULL.To get extended error information, refer to ChatStatus. </dd></dl>
+<p>Get the authority status to send current message. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to the structure of ChatStatus. For more details, see <a class="el" href="">ChatStatus</a> structure. Otherwise failed, the return value is NULL. To get extended error information, see <a class="el" href="">ChatStatus</a>. </dd></dl>
 
 </div>
 </div>
@@ -143,14 +143,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Send chat message to somebody or All in webinar meeting. </p>
+<p>Send chat message in webinar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chatIteam</td><td>the chat message item. refer to SendChatItem4Webinar </td></tr>
+    <tr><td class="paramname">chatIteam</td><td>An instance of the structure of the chat message. For more details, see <a class="el" href="">SendChatItem4Webinar</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -188,15 +188,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Send chat message to somebody or All. </p>
+<p>Send chat message in the normal meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">receiver</td><td>the chat message receiver. if this parameter is zero, this message send to all </td></tr>
-    <tr><td class="paramname">content</td><td>the chat message content. </td></tr>
+    <tr><td class="paramname">receiver</td><td>Specify the user ID who receives the chat message. The message will be sent to all when the value is zero(0). </td></tr>
+    <tr><td class="paramname">content</td><td>The content of the chat message. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -227,11 +227,12 @@ Public Member Functions</h2></td></tr>
 <p>Set meeting chat callback event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingChatCtrlEvent* that receives chat event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_chat_ctrl_event.html" title="Meeting chat callback event. ">IMeetingChatCtrlEvent</a> to receive chat callback event. For more details, see <a class="el" href="class_i_meeting_chat_ctrl_event.html">IMeetingChatCtrlEvent</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The event is used by SDK to pass the callback event to user's application. If this function is not called or fails, the user's application can not retrieve the callback event. </dd></dl>
 
 </div>
 </div>

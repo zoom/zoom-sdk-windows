@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Sharing of Meeting Service Interface.  
+<p>Meeting Service Sharing Interface.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="zoom__sdk__def_8h_source.html">..\zoom_sdk_def.h</a>&quot;</code><br />
 </div>
@@ -82,13 +82,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_viewable_share_source.html">tagViewableShareSource</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Viewable share source info. A more detailed struct description.  <a href="structtag_viewable_share_source.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visible shared source information. Here are more detailed structural descriptions..  <a href="structtag_viewable_share_source.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_share_info.html">tagShareInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information of current sharing. A more detailed struct description.  <a href="structtag_share_info.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information of current sharing. Here are more detailed structural descriptions.  <a href="structtag_share_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_ctrl_event.html">IMeetingShareCtrlEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting share controller callback event.  <a href="class_i_meeting_share_ctrl_event.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of meeting share controller.  <a href="class_i_meeting_share_ctrl_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_controller.html">IMeetingShareController</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting share controller interface.  <a href="class_i_meeting_share_controller.html#details">More...</a><br /></td></tr>
@@ -106,34 +106,93 @@ typedef struct <a class="el" href="structtag_share_info.html">tagShareInfo</a>&#
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:af3883373806c1fd83920292447f67ee7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7">SharingStatus</a> { <br />
-&#160;&#160;<b>Sharing_Self_Send_Begin</b>, 
-<b>Sharing_Self_Send_End</b>, 
-<b>Sharing_Other_Share_Begin</b>, 
-<b>Sharing_Other_Share_End</b>, 
+&#160;&#160;<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7a45fc638b437dd70f0c31b4bc3ef61383">Sharing_Self_Send_Begin</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7ad331d8c1cf6794d148f31b1e75e6ce41">Sharing_Self_Send_End</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7ae3b263290e87ffd7e9982820bddcf002">Sharing_Other_Share_Begin</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7ae8d96910cf818828b539b0bc91af82f6">Sharing_Other_Share_End</a>, 
 <br />
-&#160;&#160;<b>Sharing_View_Other_Sharing</b>, 
-<b>Sharing_Pause</b>, 
-<b>Sharing_Resume</b>
+&#160;&#160;<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7a721bd0f0dd627813e32c347f2870bbfd">Sharing_View_Other_Sharing</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7ab82c869ed4ab954bdd779b5046ae3b3f">Sharing_Pause</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7ac96882b543f66f1586fa3f2482ee6704">Sharing_Resume</a>
 <br />
- }<tr class="memdesc:af3883373806c1fd83920292447f67ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom SDK Namespace.  <a href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7">More...</a><br /></td></tr>
+ }<tr class="memdesc:af3883373806c1fd83920292447f67ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sharing status. Here are more detailed structural descriptions..  <a href="meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:af3883373806c1fd83920292447f67ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b3d6c9646f4a8e5c2e0df6a114820f"><td class="memItemLeft" align="right" valign="top"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ShareType</b> { <br />
-&#160;&#160;<b>SHARE_TYPE_UNKNOWN</b>, 
-<b>SHARE_TYPE_AS</b>, 
-<b>SHARE_TYPE_DS</b>, 
-<b>SHARE_TYPE_WB</b>, 
+<tr class="memitem:ad9b3d6c9646f4a8e5c2e0df6a114820f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820f">ShareType</a> { <br />
+&#160;&#160;<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820faa5b630e70edb564146adf0b227223dc2">SHARE_TYPE_UNKNOWN</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820fa7d78938afd389b5ab5b4493bc3e1ef53">SHARE_TYPE_AS</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820fa5fa37bec191d27aebb2d19aa57e91e04">SHARE_TYPE_DS</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820fae745e040b8976cbf3cc7e26dcf855044">SHARE_TYPE_WB</a>, 
 <br />
-&#160;&#160;<b>SHARE_TYPE_AIRHOST</b>, 
-<b>SHARE_TYPE_CAMERA</b>, 
-<b>SHARE_TYPE_DATA</b>
+&#160;&#160;<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820fa038e1a039c174c757670463a91b28ed9">SHARE_TYPE_AIRHOST</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820fae73f3353c95e84473e6f1970cd01c0a8">SHARE_TYPE_CAMERA</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820fa1ed3d04c53b84e8f7399571776b04a50">SHARE_TYPE_DATA</a>
 <br />
  }</td></tr>
 <tr class="separator:ad9b3d6c9646f4a8e5c2e0df6a114820f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3697d0b78b9744800337b3ff9840bb01"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01">AdvanceShareOption</a> { <a class="el" href="meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01a7f2b66d3b28ceb786629e14c7bc2ae97">AdvanceShareOption_ShareFrame</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01ad2bb5f2490ff5fb1f9f782220da4ff1e">AdvanceShareOption_PureComputerAudio</a>, 
+<a class="el" href="meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01a0c6cf21231131126f5012e6dfb15d543">AdvanceShareOption_ShareCamera</a>
+ }</td></tr>
+<tr class="separator:a3697d0b78b9744800337b3ff9840bb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Sharing of Meeting Service Interface. </p>
+<div class="textblock"><p>Meeting Service Sharing Interface. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a3697d0b78b9744800337b3ff9840bb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3697d0b78b9744800337b3ff9840bb01">&#9670;&nbsp;</a></span>AdvanceShareOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01">AdvanceShareOption</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Additional type of current sharing sent to others. Here are more detailed structural descriptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3697d0b78b9744800337b3ff9840bb01a7f2b66d3b28ceb786629e14c7bc2ae97"></a>AdvanceShareOption_ShareFrame&#160;</td><td class="fielddoc"><p>Type of sharing a selected area of desktop. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3697d0b78b9744800337b3ff9840bb01ad2bb5f2490ff5fb1f9f782220da4ff1e"></a>AdvanceShareOption_PureComputerAudio&#160;</td><td class="fielddoc"><p>Type of sharing only the computer audio. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3697d0b78b9744800337b3ff9840bb01a0c6cf21231131126f5012e6dfb15d543"></a>AdvanceShareOption_ShareCamera&#160;</td><td class="fielddoc"><p>Type of sharing the camera. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad9b3d6c9646f4a8e5c2e0df6a114820f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b3d6c9646f4a8e5c2e0df6a114820f">&#9670;&nbsp;</a></span>ShareType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820f">ShareType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type of current sharing received by the user. Here are more detailed structural descriptions.. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820faa5b630e70edb564146adf0b227223dc2"></a>SHARE_TYPE_UNKNOWN&#160;</td><td class="fielddoc"><p>Type unknown. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820fa7d78938afd389b5ab5b4493bc3e1ef53"></a>SHARE_TYPE_AS&#160;</td><td class="fielddoc"><p>Type of sharing the application. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820fa5fa37bec191d27aebb2d19aa57e91e04"></a>SHARE_TYPE_DS&#160;</td><td class="fielddoc"><p>Type of sharing the desktop. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820fae745e040b8976cbf3cc7e26dcf855044"></a>SHARE_TYPE_WB&#160;</td><td class="fielddoc"><p>Type of sharing the whiteboard. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820fa038e1a039c174c757670463a91b28ed9"></a>SHARE_TYPE_AIRHOST&#160;</td><td class="fielddoc"><p>Type of sharing data from the device connected WIFI. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820fae73f3353c95e84473e6f1970cd01c0a8"></a>SHARE_TYPE_CAMERA&#160;</td><td class="fielddoc"><p>Type of sharing the camera. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9b3d6c9646f4a8e5c2e0df6a114820fa1ed3d04c53b84e8f7399571776b04a50"></a>SHARE_TYPE_DATA&#160;</td><td class="fielddoc"><p>Type of sharing the data. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="af3883373806c1fd83920292447f67ee7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3883373806c1fd83920292447f67ee7">&#9670;&nbsp;</a></span>SharingStatus</h2>
 
@@ -146,8 +205,23 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Zoom SDK Namespace. </p>
-<p>Sharing status. A more detailed struct description. </p>
+<p>Sharing status. Here are more detailed structural descriptions.. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7a45fc638b437dd70f0c31b4bc3ef61383"></a>Sharing_Self_Send_Begin&#160;</td><td class="fielddoc"><p>Begin to share by the user himself. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7ad331d8c1cf6794d148f31b1e75e6ce41"></a>Sharing_Self_Send_End&#160;</td><td class="fielddoc"><p>Stop sharing by the user. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7ae3b263290e87ffd7e9982820bddcf002"></a>Sharing_Other_Share_Begin&#160;</td><td class="fielddoc"><p>Others begin to share. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7ae8d96910cf818828b539b0bc91af82f6"></a>Sharing_Other_Share_End&#160;</td><td class="fielddoc"><p>Others stop sharing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7a721bd0f0dd627813e32c347f2870bbfd"></a>Sharing_View_Other_Sharing&#160;</td><td class="fielddoc"><p>View the sharing of others. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7ab82c869ed4ab954bdd779b5046ae3b3f"></a>Sharing_Pause&#160;</td><td class="fielddoc"><p>Pause sharing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af3883373806c1fd83920292447f67ee7ac96882b543f66f1586fa3f2482ee6704"></a>Sharing_Resume&#160;</td><td class="fielddoc"><p>Resume sharing. </p>
+</td></tr>
+</table>
 
 </div>
 </div>

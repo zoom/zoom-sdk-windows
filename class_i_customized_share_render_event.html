@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -77,14 +77,14 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a08b5517d7375197b282dd6af7e0e3ff1"><td class="memItemLeft" align="right" valign="top"><a id="a08b5517d7375197b282dd6af7e0e3ff1"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_share_render_event.html#a08b5517d7375197b282dd6af7e0e3ff1">onSharingContentStartRecving</a> ()=0</td></tr>
-<tr class="memdesc:a08b5517d7375197b282dd6af7e0e3ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about sharing content start to receiving. <br /></td></tr>
+<tr class="memdesc:a08b5517d7375197b282dd6af7e0e3ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event the moment received the shared content. <br /></td></tr>
 <tr class="separator:a08b5517d7375197b282dd6af7e0e3ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d1c036b67eec9d28e78b48e6f543275"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_share_render_event.html#a3d1c036b67eec9d28e78b48e6f543275">onSharingSourceUserIDNotification</a> (unsigned int userid)=0</td></tr>
-<tr class="memdesc:a3d1c036b67eec9d28e78b48e6f543275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the app about user id change of the share render.  <a href="#a3d1c036b67eec9d28e78b48e6f543275">More...</a><br /></td></tr>
+<tr class="memdesc:a3d1c036b67eec9d28e78b48e6f543275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of changed sender or sharing closed when receiving the shared content.  <a href="#a3d1c036b67eec9d28e78b48e6f543275">More...</a><br /></td></tr>
 <tr class="separator:a3d1c036b67eec9d28e78b48e6f543275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056cacd5254845359377ca77024ef455"><td class="memItemLeft" align="right" valign="top"><a id="a056cacd5254845359377ca77024ef455"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_share_render_event.html#a056cacd5254845359377ca77024ef455">onWindowMsgNotification</a> (UINT uMsg, WPARAM wParam, LPARAM lParam)=0</td></tr>
-<tr class="memdesc:a056cacd5254845359377ca77024ef455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes message information to the app, message list as follow, WM_MOUSEMOVE WM_MOUSEENTER WM_MOUSELEAVE WM_LBUTTONDOWN WM_LBUTTONUP WM_RBUTTONUP WM_LBUTTONDBLCLK WM_KEYDOWN. <br /></td></tr>
+<tr class="memdesc:a056cacd5254845359377ca77024ef455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event when the App receives the window messages from the sharer. Here are the list of the window messages. WM_MOUSEMOVE WM_MOUSEENTER WM_MOUSELEAVE WM_LBUTTONDOWN WM_LBUTTONUP WM_RBUTTONUP WM_LBUTTONDBLCLK WM_KEYDOWN. <br /></td></tr>
 <tr class="separator:a056cacd5254845359377ca77024ef455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -114,10 +114,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Notifies the app about user id change of the share render. </p>
+<p>Callback event of changed sender or sharing closed when receiving the shared content. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>the user id of the sharing sender </td></tr>
+    <tr><td class="paramname">userid</td><td>The new sender or the sender of new sharing content. </td></tr>
   </table>
   </dd>
 </dl>

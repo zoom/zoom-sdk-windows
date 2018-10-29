@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Meeting remote controller interface.  
+<p>Meeting remote control interface.  
  <a href="class_i_meeting_remote_controller.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="meeting__remote__ctrl__interface_8h_source.html">meeting_remote_ctrl_interface.h</a>&gt;</code></p>
@@ -76,44 +76,44 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:add8e6b1ec629053fdea8b588a78e966c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#add8e6b1ec629053fdea8b588a78e966c">SetEvent</a> (<a class="el" href="class_i_meeting_remote_ctrl_event.html">IMeetingRemoteCtrlEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:add8e6b1ec629053fdea8b588a78e966c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting remote controller callback event.  <a href="#add8e6b1ec629053fdea8b588a78e966c">More...</a><br /></td></tr>
+<tr class="memdesc:add8e6b1ec629053fdea8b588a78e966c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting remote control callback event handler.  <a href="#add8e6b1ec629053fdea8b588a78e966c">More...</a><br /></td></tr>
 <tr class="separator:add8e6b1ec629053fdea8b588a78e966c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d0a5bb6c6152f1be77247288566d7bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a8d0a5bb6c6152f1be77247288566d7bd">CanRequestControl</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a8d0a5bb6c6152f1be77247288566d7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check can remote control or not.  <a href="#a8d0a5bb6c6152f1be77247288566d7bd">More...</a><br /></td></tr>
+<tr class="memdesc:a8d0a5bb6c6152f1be77247288566d7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is able to ask for controlling the specified user by long-distance.  <a href="#a8d0a5bb6c6152f1be77247288566d7bd">More...</a><br /></td></tr>
 <tr class="separator:a8d0a5bb6c6152f1be77247288566d7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5445899424f72d38f02c0f245207907b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a5445899424f72d38f02c0f245207907b">IsHaveRemoteControlRight</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a5445899424f72d38f02c0f245207907b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check have remote control right or not.  <a href="#a5445899424f72d38f02c0f245207907b">More...</a><br /></td></tr>
+<tr class="memdesc:a5445899424f72d38f02c0f245207907b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is able to control the specified user by long-distance.  <a href="#a5445899424f72d38f02c0f245207907b">More...</a><br /></td></tr>
 <tr class="separator:a5445899424f72d38f02c0f245207907b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a746f7a5017350eee4003c86db892e29c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a746f7a5017350eee4003c86db892e29c">IsInRemoteControllingStatus</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a746f7a5017350eee4003c86db892e29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">check in remote control somebody status or not  <a href="#a746f7a5017350eee4003c86db892e29c">More...</a><br /></td></tr>
+<tr class="memdesc:a746f7a5017350eee4003c86db892e29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the specified user is in process of remote control.  <a href="#a746f7a5017350eee4003c86db892e29c">More...</a><br /></td></tr>
 <tr class="separator:a746f7a5017350eee4003c86db892e29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8e09de574c154035236f11e8d321956"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#ac8e09de574c154035236f11e8d321956">EnterRemoteControllingStatus</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:ac8e09de574c154035236f11e8d321956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter remote control somebody status if you have right.  <a href="#ac8e09de574c154035236f11e8d321956">More...</a><br /></td></tr>
+<tr class="memdesc:ac8e09de574c154035236f11e8d321956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control the specified user by long-distance.  <a href="#ac8e09de574c154035236f11e8d321956">More...</a><br /></td></tr>
 <tr class="separator:ac8e09de574c154035236f11e8d321956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cdfb1ef1083ac7ef52d30773a4bfeda"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a5cdfb1ef1083ac7ef52d30773a4bfeda">LeaveRemoteControllingStatus</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a5cdfb1ef1083ac7ef52d30773a4bfeda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leave remote control somebody status if you have right.  <a href="#a5cdfb1ef1083ac7ef52d30773a4bfeda">More...</a><br /></td></tr>
+<tr class="memdesc:a5cdfb1ef1083ac7ef52d30773a4bfeda"><td class="mdescLeft">&#160;</td><td class="mdescRight">End controlling the specified user by long distance.  <a href="#a5cdfb1ef1083ac7ef52d30773a4bfeda">More...</a><br /></td></tr>
 <tr class="separator:a5cdfb1ef1083ac7ef52d30773a4bfeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e8645e1bf0b409c7db4673c6f803a2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a29e8645e1bf0b409c7db4673c6f803a2">RequestRemoteControl</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a29e8645e1bf0b409c7db4673c6f803a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request meeting Remote control.  <a href="#a29e8645e1bf0b409c7db4673c6f803a2">More...</a><br /></td></tr>
+<tr class="memdesc:a29e8645e1bf0b409c7db4673c6f803a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the request of remote control to the specified user.  <a href="#a29e8645e1bf0b409c7db4673c6f803a2">More...</a><br /></td></tr>
 <tr class="separator:a29e8645e1bf0b409c7db4673c6f803a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a5b7a377dc56603c27e50d2139c338a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a5a5b7a377dc56603c27e50d2139c338a">GiveupRemoteControl</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a5a5b7a377dc56603c27e50d2139c338a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give up meeting Remote control.  <a href="#a5a5b7a377dc56603c27e50d2139c338a">More...</a><br /></td></tr>
+<tr class="memdesc:a5a5b7a377dc56603c27e50d2139c338a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abandon the remote control to the specified user.  <a href="#a5a5b7a377dc56603c27e50d2139c338a">More...</a><br /></td></tr>
 <tr class="separator:a5a5b7a377dc56603c27e50d2139c338a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a307d95f1d5eaf11e871cb3cad408e467"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a307d95f1d5eaf11e871cb3cad408e467">GiveRemoteControlTo</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:a307d95f1d5eaf11e871cb3cad408e467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give meeting Remote control right to other attendee.  <a href="#a307d95f1d5eaf11e871cb3cad408e467">More...</a><br /></td></tr>
+<tr class="memdesc:a307d95f1d5eaf11e871cb3cad408e467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give the authority of remote control to the specified user.  <a href="#a307d95f1d5eaf11e871cb3cad408e467">More...</a><br /></td></tr>
 <tr class="separator:a307d95f1d5eaf11e871cb3cad408e467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4c749a8ee488d260992e55fff1aeb2b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#ae4c749a8ee488d260992e55fff1aeb2b">DeclineRemoteControlRequest</a> (unsigned int userId)=0</td></tr>
-<tr class="memdesc:ae4c749a8ee488d260992e55fff1aeb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decline meeting Remote control request.  <a href="#ae4c749a8ee488d260992e55fff1aeb2b">More...</a><br /></td></tr>
+<tr class="memdesc:ae4c749a8ee488d260992e55fff1aeb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refuse the request to remote control from the specified user.  <a href="#ae4c749a8ee488d260992e55fff1aeb2b">More...</a><br /></td></tr>
 <tr class="separator:ae4c749a8ee488d260992e55fff1aeb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc9426033f72b2a39362590f6de9f37"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37">RevokeRemoteControl</a> ()=0</td></tr>
-<tr class="memdesc:a4bc9426033f72b2a39362590f6de9f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revoke Current Remote Controller's right.  <a href="#a4bc9426033f72b2a39362590f6de9f37">More...</a><br /></td></tr>
+<tr class="memdesc:a4bc9426033f72b2a39362590f6de9f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get back all the authority of remote control.  <a href="#a4bc9426033f72b2a39362590f6de9f37">More...</a><br /></td></tr>
 <tr class="separator:a4bc9426033f72b2a39362590f6de9f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6dfaa5e4e2c37d252c988e662576ad8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_remote_controller.html#aa6dfaa5e4e2c37d252c988e662576ad8">GetCurrentRemoteController</a> (unsigned int &amp;userId)=0</td></tr>
-<tr class="memdesc:aa6dfaa5e4e2c37d252c988e662576ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meeting current remote controller.  <a href="#aa6dfaa5e4e2c37d252c988e662576ad8">More...</a><br /></td></tr>
+<tr class="memdesc:aa6dfaa5e4e2c37d252c988e662576ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the controller ID who is currently controlling by long-distance.  <a href="#aa6dfaa5e4e2c37d252c988e662576ad8">More...</a><br /></td></tr>
 <tr class="separator:aa6dfaa5e4e2c37d252c988e662576ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Meeting remote controller interface. </p>
+<div class="textblock"><p>Meeting remote control interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8d0a5bb6c6152f1be77247288566d7bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d0a5bb6c6152f1be77247288566d7bd">&#9670;&nbsp;</a></span>CanRequestControl()</h2>
@@ -139,14 +139,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check can remote control or not. </p>
+<p>Determine if it is able to ask for controlling the specified user by long-distance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID to check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If can, the return value is SDKErr_Success. If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If it is able to request to control the specified user by long-distance, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -174,14 +174,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Decline meeting Remote control request. </p>
+<p>Refuse the request to remote control from the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user can't to control your screen. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID to be disabled to remote control. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -209,14 +209,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Enter remote control somebody status if you have right. </p>
+<p>Control the specified user by long-distance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to remote control. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID to be controlled. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -244,14 +244,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get meeting current remote controller. </p>
+<p>Get the controller ID who is currently controlling by long-distance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Store the current remote controller userid, if zero, now meeting don't have remote controller. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">userId</td><td>The user ID who is currently controlling by long-distance. ZERO(0) indicates that there is no controller for the moment. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -279,14 +279,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Give meeting Remote control right to other attendee. </p>
+<p>Give the authority of remote control to the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user to control your screen. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID that you want to give the authority. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -314,14 +314,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Give up meeting Remote control. </p>
+<p>Abandon the remote control to the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user you want to give up the remote control right. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -349,14 +349,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check have remote control right or not. </p>
+<p>Determine if it is able to control the specified user by long-distance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID to check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If have, the return value is SDKErr_Success. If don't have, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If it is able to control the specified user by long-distance, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -384,14 +384,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>check in remote control somebody status or not </p>
+<p>Determine if the specified user is in process of remote control. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to check. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID to check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If yes, the return value is SDKErr_Success. If no, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -419,14 +419,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Leave remote control somebody status if you have right. </p>
+<p>End controlling the specified user by long distance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userid</td><td>Specifies which user you want to leave. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID that you want to end the remote control. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -454,14 +454,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Request meeting Remote control. </p>
+<p>Send the request of remote control to the specified user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userId</td><td>Specifies which the user you want to remote control. </td></tr>
+    <tr><td class="paramname">userId</td><td>Specify the user ID that you want to send the request. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -488,8 +488,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Revoke Current Remote Controller's right. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Get back all the authority of remote control. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -517,14 +517,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set meeting remote controller callback event. </p>
+<p>Set meeting remote control callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingRemoteCtrlEvent* that receives remote control event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_remote_ctrl_event.html" title="Meeting remote control callback event. ">IMeetingRemoteCtrlEvent</a> that receives the remote control event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>When the remote control or the authority changes, the user will receive a callback event. </dd></dl>
 
 </div>
 </div>

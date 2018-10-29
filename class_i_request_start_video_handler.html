@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -67,22 +67,61 @@ $(function() {
 <div class="title">IRequestStartVideoHandler Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Process after the user receives the requirement from the host to turn on the video.  
+ <a href="class_i_request_start_video_handler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="meeting__video__interface_8h_source.html">meeting_video_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7bbf4775974259ae91aaba490283b0fc"><td class="memItemLeft" align="right" valign="top"><a id="a7bbf4775974259ae91aaba490283b0fc"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetReqFromUserId</b> ()=0</td></tr>
+<tr class="memitem:a7bbf4775974259ae91aaba490283b0fc"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_request_start_video_handler.html#a7bbf4775974259ae91aaba490283b0fc">GetReqFromUserId</a> ()=0</td></tr>
+<tr class="memdesc:a7bbf4775974259ae91aaba490283b0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the user ID who asks to turn on the video.  <a href="#a7bbf4775974259ae91aaba490283b0fc">More...</a><br /></td></tr>
 <tr class="separator:a7bbf4775974259ae91aaba490283b0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ebcc69822ce26f9cda519e9f460938"><td class="memItemLeft" align="right" valign="top"><a id="ae2ebcc69822ce26f9cda519e9f460938"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Ignore</b> ()=0</td></tr>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_request_start_video_handler.html#ae2ebcc69822ce26f9cda519e9f460938">Ignore</a> ()=0</td></tr>
+<tr class="memdesc:ae2ebcc69822ce26f9cda519e9f460938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance to ignore the requirement, return nothing and finally self-destroy. <br /></td></tr>
 <tr class="separator:ae2ebcc69822ce26f9cda519e9f460938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f0f0513aee953e27516341156d7110b"><td class="memItemLeft" align="right" valign="top"><a id="a3f0f0513aee953e27516341156d7110b"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Accept</b> ()=0</td></tr>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b">Accept</a> ()=0</td></tr>
+<tr class="memdesc:a3f0f0513aee953e27516341156d7110b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance to accept the requirement, turn on the video and finally self-destroy. <br /></td></tr>
 <tr class="separator:a3f0f0513aee953e27516341156d7110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d92f756fd0d989b6b6175c2e25a85e9"><td class="memItemLeft" align="right" valign="top"><a id="a3d92f756fd0d989b6b6175c2e25a85e9"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cancel</b> ()=0</td></tr>
+virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_request_start_video_handler.html#a3d92f756fd0d989b6b6175c2e25a85e9">Cancel</a> ()=0</td></tr>
+<tr class="memdesc:a3d92f756fd0d989b6b6175c2e25a85e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore the request to enable the video in the meeting and finally the instance self-destroys. <br /></td></tr>
 <tr class="separator:a3d92f756fd0d989b6b6175c2e25a85e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Process after the user receives the requirement from the host to turn on the video. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7bbf4775974259ae91aaba490283b0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bbf4775974259ae91aaba490283b0fc">&#9670;&nbsp;</a></span>GetReqFromUserId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int IRequestStartVideoHandler::GetReqFromUserId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the user ID who asks to turn on the video. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the user ID. FALSE 0. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/meeting_service_components/<a class="el" href="meeting__video__interface_8h_source.html">meeting_video_interface.h</a></li>
 </ul>

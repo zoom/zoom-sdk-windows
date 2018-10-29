@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,13 +76,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0cdb0de2f5822df80a3d589b38e5f075"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_embedded_browser_event.html#a0cdb0de2f5822df80a3d589b38e5f075">NotifyBeforeNavigate</a> (const char *url)=0</td></tr>
-<tr class="memdesc:a0cdb0de2f5822df80a3d589b38e5f075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fires before navigation occurs in the given object (on either a window element or a frameset element).  <a href="#a0cdb0de2f5822df80a3d589b38e5f075">More...</a><br /></td></tr>
+<tr class="memdesc:a0cdb0de2f5822df80a3d589b38e5f075"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event will be triggered before the embedded browser starts to navigate.  <a href="#a0cdb0de2f5822df80a3d589b38e5f075">More...</a><br /></td></tr>
 <tr class="separator:a0cdb0de2f5822df80a3d589b38e5f075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bdace96281c66fd8214d6ac8fb08365"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_embedded_browser_event.html#a9bdace96281c66fd8214d6ac8fb08365">NotifyDocumentComplete</a> (const char *url)=0</td></tr>
-<tr class="memdesc:a9bdace96281c66fd8214d6ac8fb08365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fires when a document is completely loaded and initialized.  <a href="#a9bdace96281c66fd8214d6ac8fb08365">More...</a><br /></td></tr>
+<tr class="memdesc:a9bdace96281c66fd8214d6ac8fb08365"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event will be triggered once the embedded browser receives all the information.  <a href="#a9bdace96281c66fd8214d6ac8fb08365">More...</a><br /></td></tr>
 <tr class="separator:a9bdace96281c66fd8214d6ac8fb08365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04efe213cf5dba4eb9b8da2f8a36eba8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_embedded_browser_event.html#a04efe213cf5dba4eb9b8da2f8a36eba8">NotifyNavigateError</a> (const char *url, <a class="el" href="embedded__browser__interface_8h.html#ae7569502a9ca0eb8dd2715228fc24b2d">NavigateError</a> err, int component_err)=0</td></tr>
-<tr class="memdesc:a04efe213cf5dba4eb9b8da2f8a36eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fires when an error occurs during navigation.  <a href="#a04efe213cf5dba4eb9b8da2f8a36eba8">More...</a><br /></td></tr>
+<tr class="memdesc:a04efe213cf5dba4eb9b8da2f8a36eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event will be triggered the moment an error occurs while the embedded browser visits the website.  <a href="#a04efe213cf5dba4eb9b8da2f8a36eba8">More...</a><br /></td></tr>
 <tr class="separator:a04efe213cf5dba4eb9b8da2f8a36eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -112,10 +112,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fires before navigation occurs in the given object (on either a window element or a frameset element). </p>
+<p>The callback event will be triggered before the embedded browser starts to navigate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">url</td><td>the URL to which the browser is navigating(UTF8). </td></tr>
+    <tr><td class="paramname">url</td><td>The URL used by embedded browser in UTF8 encoding format. </td></tr>
   </table>
   </dd>
 </dl>
@@ -146,10 +146,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fires when a document is completely loaded and initialized. </p>
+<p>The callback event will be triggered once the embedded browser receives all the information. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">url</td><td>that specifies the URL, UNC file name, or PIDL of the loaded document(UTF8). </td></tr>
+    <tr><td class="paramname">url</td><td>The URL used by embedded browser in UTF8 encoding format. </td></tr>
   </table>
   </dd>
 </dl>
@@ -196,12 +196,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fires when an error occurs during navigation. </p>
+<p>The callback event will be triggered the moment an error occurs while the embedded browser visits the website. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">url</td><td>the URL for which navigation failed(UTF8). </td></tr>
-    <tr><td class="paramname">err</td><td>a status code corresponding to the error, if available. For a list of the possible status codes, see NavigateError. </td></tr>
-    <tr><td class="paramname">component_err</td><td>Original error code </td></tr>
+    <tr><td class="paramname">url</td><td>The URL used by embedded browser in UTF8 encoding format. </td></tr>
+    <tr><td class="paramname">err</td><td>Specifies the error information. For more details, see <a class="el" href="embedded__browser__interface_8h.html#ae7569502a9ca0eb8dd2715228fc24b2d">NavigateError</a> enum. </td></tr>
+    <tr><td class="paramname">component_err</td><td>Original error code. </td></tr>
   </table>
   </dd>
 </dl>

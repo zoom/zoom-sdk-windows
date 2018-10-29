@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.1.31872.0905</span>
+   &#160;<span id="projectnumber">4.1.30384.1029</span>
    </div>
   </td>
  </tr>
@@ -76,25 +76,28 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a82c010dd70b63ddd1ec68bf2cd218afe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#a82c010dd70b63ddd1ec68bf2cd218afe">SetEvent</a> (<a class="el" href="class_i_meeting_h323_helper_event.html">IMeetingH323HelperEvent</a> *pEvent)=0</td></tr>
-<tr class="memdesc:a82c010dd70b63ddd1ec68bf2cd218afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting h323 helper callback event.  <a href="#a82c010dd70b63ddd1ec68bf2cd218afe">More...</a><br /></td></tr>
+<tr class="memdesc:a82c010dd70b63ddd1ec68bf2cd218afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting H.323 helper callback event handler.  <a href="#a82c010dd70b63ddd1ec68bf2cd218afe">More...</a><br /></td></tr>
 <tr class="separator:a82c010dd70b63ddd1ec68bf2cd218afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af890ee91d9f09d1d615a28dbfda621a0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; const wchar_t *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#af890ee91d9f09d1d615a28dbfda621a0">GetH323Address</a> ()=0</td></tr>
-<tr class="memdesc:af890ee91d9f09d1d615a28dbfda621a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get h323 address for current meeting.  <a href="#af890ee91d9f09d1d615a28dbfda621a0">More...</a><br /></td></tr>
+<tr class="memdesc:af890ee91d9f09d1d615a28dbfda621a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of H.323 call-in number supported by the current meeting.  <a href="#af890ee91d9f09d1d615a28dbfda621a0">More...</a><br /></td></tr>
 <tr class="separator:af890ee91d9f09d1d615a28dbfda621a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2defdf72b8a38adbb6fbfd9b7bb1bd"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#ace2defdf72b8a38adbb6fbfd9b7bb1bd">GetH323Password</a> ()=0</td></tr>
-<tr class="memdesc:ace2defdf72b8a38adbb6fbfd9b7bb1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get h323 password for current meeting.  <a href="#ace2defdf72b8a38adbb6fbfd9b7bb1bd">More...</a><br /></td></tr>
+<tr class="memdesc:ace2defdf72b8a38adbb6fbfd9b7bb1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the H.323 password for the current meeting.  <a href="#ace2defdf72b8a38adbb6fbfd9b7bb1bd">More...</a><br /></td></tr>
 <tr class="separator:ace2defdf72b8a38adbb6fbfd9b7bb1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5cb9f2ff9f4f6112758a7bcea57c35"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#a7b5cb9f2ff9f4f6112758a7bcea57c35">CanPairingMeeting</a> (UINT64 meetingNum)=0</td></tr>
+<tr class="memdesc:a7b5cb9f2ff9f4f6112758a7bcea57c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is enabled to pairing meeting.  <a href="#a7b5cb9f2ff9f4f6112758a7bcea57c35">More...</a><br /></td></tr>
+<tr class="separator:a7b5cb9f2ff9f4f6112758a7bcea57c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf8ac02fd06f59aa94c5e8b1c519321c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#abf8ac02fd06f59aa94c5e8b1c519321c">SendMeetingParingCode</a> (UINT64 meetingNum, wchar_t *paringCode)=0</td></tr>
 <tr class="memdesc:abf8ac02fd06f59aa94c5e8b1c519321c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send Meeting paring code.  <a href="#abf8ac02fd06f59aa94c5e8b1c519321c">More...</a><br /></td></tr>
 <tr class="separator:abf8ac02fd06f59aa94c5e8b1c519321c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75f524c242418b74aacb83cc0fdd3c84"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_h323_device.html">IH323Device</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#a75f524c242418b74aacb83cc0fdd3c84">GetCalloutH323DviceList</a> ()=0</td></tr>
-<tr class="memdesc:a75f524c242418b74aacb83cc0fdd3c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get h323 device for current meeting.  <a href="#a75f524c242418b74aacb83cc0fdd3c84">More...</a><br /></td></tr>
+<tr class="memdesc:a75f524c242418b74aacb83cc0fdd3c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of the call-out devices supported by the current meeting.  <a href="#a75f524c242418b74aacb83cc0fdd3c84">More...</a><br /></td></tr>
 <tr class="separator:a75f524c242418b74aacb83cc0fdd3c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec0aaf694f286f805567655c79386dbc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#aec0aaf694f286f805567655c79386dbc">CallOutH323</a> (<a class="el" href="class_i_h323_device.html">IH323Device</a> *deviceInfo)=0</td></tr>
-<tr class="memdesc:aec0aaf694f286f805567655c79386dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call out a H323 device.  <a href="#aec0aaf694f286f805567655c79386dbc">More...</a><br /></td></tr>
+<tr class="memdesc:aec0aaf694f286f805567655c79386dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call out with the assigned H.323 device.  <a href="#aec0aaf694f286f805567655c79386dbc">More...</a><br /></td></tr>
 <tr class="separator:aec0aaf694f286f805567655c79386dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e6313cd6b58795c1db28b0ecf11afce"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_h323_helper.html#a9e6313cd6b58795c1db28b0ecf11afce">CancelCallOutH323</a> ()=0</td></tr>
-<tr class="memdesc:a9e6313cd6b58795c1db28b0ecf11afce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a h323 device call out.  <a href="#a9e6313cd6b58795c1db28b0ecf11afce">More...</a><br /></td></tr>
+<tr class="memdesc:a9e6313cd6b58795c1db28b0ecf11afce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel current outgoing call.  <a href="#a9e6313cd6b58795c1db28b0ecf11afce">More...</a><br /></td></tr>
 <tr class="separator:a9e6313cd6b58795c1db28b0ecf11afce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -124,14 +127,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Call out a H323 device. </p>
+<p>Call out with the assigned H.323 device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceInfo</td><td>Specifies which h323 device you want to call out. </td></tr>
+    <tr><td class="paramname">deviceInfo</td><td>Specify the H.323 device to use. For more details, see <a class="el" href="class_i_h323_device.html">IH323Device</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the function succeeds, the <a class="el" href="class_i_meeting_h323_helper_event.html#ae17f9085dc3a72e3b32815b26edc700f" title="Callback event when the calling status of H.323 device changes. ">IMeetingH323HelperEvent::onCalloutStatusNotify()</a> will be triggered once the callout status of H.323 device changes. </dd></dl>
 
 </div>
 </div>
@@ -158,8 +162,43 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Cancel a h323 device call out. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<p>Cancel current outgoing call. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a7b5cb9f2ff9f4f6112758a7bcea57c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b5cb9f2ff9f4f6112758a7bcea57c35">&#9670;&nbsp;</a></span>CanPairingMeeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingH323Helper::CanPairingMeeting </td>
+          <td>(</td>
+          <td class="paramtype">UINT64&#160;</td>
+          <td class="paramname"><em>meetingNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if it is enabled to pairing meeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meetingNum</td><td>TRUE Specifies the meeting number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If pairing meeting is enabled, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -186,8 +225,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get h323 device for current meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is not NULL. </dd></dl>
+<p>Get the list of the call-out devices supported by the current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the pointer to the list of devices. Otherwise failed, the return value is an empty list. For more details, see <a class="el" href="class_i_h323_device.html">IH323Device</a>. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The list will be cleared each time the function is called. </dd></dl>
 
 </div>
 </div>
@@ -214,8 +254,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get h323 address for current meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is not NULL. </dd></dl>
+<p>Get the list of H.323 call-in number supported by the current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the pointer to the list of the call-in number. Otherwise failed, the return value is NULL. </dd></dl>
 
 </div>
 </div>
@@ -242,8 +282,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get h323 password for current meeting. </p>
-<dl class="section return"><dt>Returns</dt><dd>h323 password </dd></dl>
+<p>Get the H.323 password for the current meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the H.323 meeting connect password. Otherwise failed, the return value is the length of zero(0）. </dd></dl>
 
 </div>
 </div>
@@ -289,7 +329,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the function succeeds, the <a class="el" href="class_i_meeting_h323_helper_event.html#ae79281bf12c344e4cabdb3a78a4e7cd1" title="The callback event is triggered when the result of using the H.323 device to pair the assigned meetin...">IMeetingH323HelperEvent::onParingH323Result()</a> will be triggered once received the response of the H.323 device. </dd></dl>
 
 </div>
 </div>
@@ -317,10 +358,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set meeting h323 helper callback event. </p>
+<p>Set meeting H.323 helper callback event handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pEvent</td><td>A pointer to a IMeetingH323HelperEvent* that receives h323 helper event. </td></tr>
+    <tr><td class="paramname">pEvent</td><td>A pointer to the <a class="el" href="class_i_meeting_h323_helper_event.html" title="Meeting H.323 Helper callback event. ">IMeetingH323HelperEvent</a> that receives H.323 helper event. </td></tr>
   </table>
   </dd>
 </dl>
