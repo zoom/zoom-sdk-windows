@@ -37,6 +37,7 @@ var searchData=
   ['appkey',['appKey',['../structtag_auth_param.html#a3c06e3061ceab88f814202e7df693949',1,'tagAuthParam']]],
   ['appsecret',['appSecret',['../structtag_auth_param.html#aaf11838dd8faa517c8b58773650ab76c',1,'tagAuthParam']]],
   ['askattendeetostartvideo',['AskAttendeeToStartVideo',['../class_i_meeting_video_controller.html#a6fbbaf6a3d3b9dd5598ebbf28e41c32c',1,'IMeetingVideoController']]],
+  ['assignccpriviledge',['AssignCCPriviledge',['../class_i_closed_caption_controller.html#ae3f9ff0824a7aab3dfa49207a6ecd2d9',1,'IClosedCaptionController']]],
   ['assigncohost',['AssignCoHost',['../class_i_meeting_participants_controller.html#a897789ec29954e794e28d435554b2b2f',1,'IMeetingParticipantsController']]],
   ['audio_5fmuted',['Audio_Muted',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35afb2baf569ca0e6093fcb63fe43d2b665',1,'meeting_audio_interface.h']]],
   ['audio_5fmuted_5fbyhost',['Audio_Muted_ByHost',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35a27b55f4ce437e8328862fd7033e83568',1,'meeting_audio_interface.h']]],

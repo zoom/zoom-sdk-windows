@@ -16,6 +16,7 @@ var searchData=
   ['recording_5fstop',['Recording_Stop',['../meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37a0078434a99e2ea30c83a542a0ae50082',1,'meeting_recording_interface.h']]],
   ['recordingstatus',['RecordingStatus',['../meeting__recording__interface_8h.html#a23f918cd77dc684a2105bfe1ee0bdd37',1,'meeting_recording_interface.h']]],
   ['rect',['rect',['../structtag_show_chat_dlg_param.html#a71703923de2c90a207df7d9a497267bd',1,'tagShowChatDlgParam']]],
+  ['redirectclickccbtnevent',['RedirectClickCCBTNEvent',['../class_i_meeting_u_i_elem_configuration.html#a3e6015638e2e87b5d27395382d91b6c1',1,'IMeetingUIElemConfiguration']]],
   ['redirectclickcustomlivestreammenuevent',['RedirectClickCustomLiveStreamMenuEvent',['../class_i_meeting_u_i_elem_configuration.html#a80d99f3a31ee43a6095916a2bc0ba3b4',1,'IMeetingUIElemConfiguration']]],
   ['redirectclickendmeetingbtnevent',['RedirectClickEndMeetingBTNEvent',['../class_i_meeting_u_i_elem_configuration.html#a59601c1431ed919a97908ce0e4f1cf70',1,'IMeetingUIElemConfiguration']]],
   ['redirectclickparticipantlistbtnevent',['RedirectClickParticipantListBTNEvent',['../class_i_meeting_u_i_elem_configuration.html#a387a0bd34e3775c8e95fea89493a71b3',1,'IMeetingUIElemConfiguration']]],

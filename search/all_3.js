@@ -32,6 +32,7 @@ var searchData=
   ['disableaccountsettingtabpage',['DisableAccountSettingTabPage',['../class_i_setting_u_i_strategy.html#a9597829bcf63574b317cadcaf6674592',1,'ISettingUIStrategy']]],
   ['disableadvancedfeatures4generalsetting',['DisableAdvancedFeatures4GeneralSetting',['../class_i_setting_u_i_strategy.html#a8e3225c8ca8c912a80d87dc0d7c48a52',1,'ISettingUIStrategy']]],
   ['disableautoshowselectjoinaudiodlgwhenjoinmeeting',['DisableAutoShowSelectJoinAudioDlgWhenJoinMeeting',['../class_i_join_meeting_behavior_configuration.html#a75a7c39cf7cb9f9fb6e0b4962922ac9f',1,'IJoinMeetingBehaviorConfiguration']]],
+  ['disablefreemeetingremaintimenotify',['DisableFreeMeetingRemainTimeNotify',['../class_i_meeting_u_i_elem_configuration.html#ae8d95c6d40ca9a75a09e10a355f12a87',1,'IMeetingUIElemConfiguration']]],
   ['disablepopupmeetingwrongpswdlg',['DisablePopupMeetingWrongPSWDlg',['../class_i_join_meeting_behavior_configuration.html#abfa5fa7264754cf14f30a938368a4668',1,'IJoinMeetingBehaviorConfiguration']]],
   ['disableremotectrlcopypastefeature',['DisableRemoteCtrlCopyPasteFeature',['../class_i_meeting_configuration.html#a460c08c46a71cca73956795fcaa45365',1,'IMeetingConfiguration']]],
   ['disablesplitscreenmodeuielements',['DisableSplitScreenModeUIElements',['../class_i_meeting_u_i_elem_configuration.html#a049df0d0b7f4e4a8b3200f5b8c226fc4',1,'IMeetingUIElemConfiguration']]],

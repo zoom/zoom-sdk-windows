@@ -3,6 +3,7 @@ var searchData=
   ['raisehand',['RaiseHand',['../class_i_meeting_participants_controller.html#a7b2f2943faf1af30d767e0c763e085ad',1,'IMeetingParticipantsController']]],
   ['reclaimhost',['ReclaimHost',['../class_i_meeting_participants_controller.html#a779b8af2fe5f694eb3437bdc66f90b6f',1,'IMeetingParticipantsController']]],
   ['reclaimhostbyhostkey',['ReclaimHostByHostKey',['../class_i_meeting_participants_controller.html#a693ffe4af49f8ee56eed298550aef588',1,'IMeetingParticipantsController']]],
+  ['redirectclickccbtnevent',['RedirectClickCCBTNEvent',['../class_i_meeting_u_i_elem_configuration.html#a3e6015638e2e87b5d27395382d91b6c1',1,'IMeetingUIElemConfiguration']]],
   ['redirectclickcustomlivestreammenuevent',['RedirectClickCustomLiveStreamMenuEvent',['../class_i_meeting_u_i_elem_configuration.html#a80d99f3a31ee43a6095916a2bc0ba3b4',1,'IMeetingUIElemConfiguration']]],
   ['redirectclickendmeetingbtnevent',['RedirectClickEndMeetingBTNEvent',['../class_i_meeting_u_i_elem_configuration.html#a59601c1431ed919a97908ce0e4f1cf70',1,'IMeetingUIElemConfiguration']]],
   ['redirectclickparticipantlistbtnevent',['RedirectClickParticipantListBTNEvent',['../class_i_meeting_u_i_elem_configuration.html#a387a0bd34e3775c8e95fea89493a71b3',1,'IMeetingUIElemConfiguration']]],

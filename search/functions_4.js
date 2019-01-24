@@ -51,6 +51,7 @@ var searchData=
   ['enableshareiosdevice',['EnableShareIOSDevice',['../class_i_meeting_configuration.html#a85b5e862322058cfbd899177038e9acd',1,'IMeetingConfiguration']]],
   ['enablesharewhiteboard',['EnableShareWhiteBoard',['../class_i_meeting_configuration.html#a61361c105d94ffc9f65c5138a9491bb9',1,'IMeetingConfiguration']]],
   ['enableshowscreennameonvideo',['EnableShowScreenNameOnVideo',['../class_i_video_render_element.html#a11ca8656e5254c90427db2d21625c490',1,'IVideoRenderElement']]],
+  ['enableshowshareswitchmultitosingleconfirmdlg',['EnableShowShareSwitchMultiToSingleConfirmDlg',['../class_i_meeting_u_i_elem_configuration.html#a1a931a53fbae7f9a354089050b7cdc1f',1,'IMeetingUIElemConfiguration']]],
   ['enablesplitscreenmode',['EnableSplitScreenMode',['../class_i_general_setting_context.html#a8f4aedb0d5686d578bfee1cf8c2fa687',1,'IGeneralSettingContext']]],
   ['enablespotlightself',['EnableSpotlightSelf',['../class_i_video_setting_context.html#af8a26d559087198c9e1519a2423f145c',1,'IVideoSettingContext']]],
   ['enablestereoaudio',['EnableStereoAudio',['../class_i_audio_setting_context.html#a7dcac91e13ddf1cc1856d666d6302583',1,'IAudioSettingContext']]],

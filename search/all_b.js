@@ -83,6 +83,7 @@ var searchData=
   ['monitorwndmessage',['MonitorWndMessage',['../class_i_u_i_hooker.html#a281dab2b8aaa1361cf02123c49ebcc82',1,'IUIHooker']]],
   ['movefloatvideownd',['MoveFloatVideoWnd',['../class_i_meeting_u_i_controller.html#ab6b2c061aec9b89c0aabf6c14de7640e',1,'IMeetingUIController']]],
   ['msgtype',['msgType',['../structtag_send_chat_item4_webinar.html#a247408516474b7e56da598ae32c7ee0f',1,'tagSendChatItem4Webinar']]],
+  ['multishareoption',['MultiShareOption',['../meeting__sharing__interface_8h.html#a6cb18658183b85c1fdfc97db567ee2fa',1,'meeting_sharing_interface.h']]],
   ['muteaudio',['MuteAudio',['../class_i_meeting_audio_controller.html#a46ffad1f9a811c713086ac4663df2744',1,'IMeetingAudioController']]],
   ['mutevideo',['MuteVideo',['../class_i_meeting_video_controller.html#a0961f55d4152a7aa285e9c9acc99f3f5',1,'IMeetingVideoController']]]
 ];
