@@ -27,6 +27,8 @@ var searchData=
   ['disablepopupmeetingwrongpswdlg',['DisablePopupMeetingWrongPSWDlg',['../class_i_join_meeting_behavior_configuration.html#abfa5fa7264754cf14f30a938368a4668',1,'IJoinMeetingBehaviorConfiguration']]],
   ['disableremotectrlcopypastefeature',['DisableRemoteCtrlCopyPasteFeature',['../class_i_meeting_configuration.html#a460c08c46a71cca73956795fcaa45365',1,'IMeetingConfiguration']]],
   ['disablesplitscreenmodeuielements',['DisableSplitScreenModeUIElements',['../class_i_meeting_u_i_elem_configuration.html#a049df0d0b7f4e4a8b3200f5b8c226fc4',1,'IMeetingUIElemConfiguration']]],
+  ['disabletopmostattr4settingdialog',['DisableTopMostAttr4SettingDialog',['../class_i_meeting_u_i_elem_configuration.html#a55b101c298a15f81fd87f5f2e87eec28',1,'IMeetingUIElemConfiguration']]],
+  ['disableviewerannotation',['DisableViewerAnnotation',['../class_i_annotation_controller.html#ab71797c93dbd9de68217dccd15157211',1,'IAnnotationController']]],
   ['disablewaitingforhostdialog',['DisableWaitingForHostDialog',['../class_i_join_meeting_behavior_configuration.html#a64454354179c06240bdc770db623d7eb',1,'IJoinMeetingBehaviorConfiguration']]],
   ['disallowattendeechat',['DisallowAttendeeChat',['../class_i_meeting_webinar_controller.html#a5072d1e0c08be53b8d6e6d3b19378d05',1,'IMeetingWebinarController']]],
   ['disallowattendeetalk',['DisallowAttendeeTalk',['../class_i_meeting_webinar_controller.html#aa8c6ba835a04c77200023473dd25ed80',1,'IMeetingWebinarController']]],

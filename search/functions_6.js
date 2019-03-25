@@ -54,6 +54,7 @@ var searchData=
   ['getemail',['GetEmail',['../class_i_user_info.html#a569a4fdc6887874ff2112f0831d6d616',1,'IUserInfo::GetEmail()'],['../class_i_schedule_for_user.html#a9328cd4d20a10538db21d8923de2947b',1,'IScheduleForUser::GetEmail()']]],
   ['getendtime',['GetEndTime',['../class_i_calender_event.html#a32ad6801d1d95823ba46902504b57b7f',1,'ICalenderEvent']]],
   ['geterrorcode',['GetErrorCode',['../class_i_zoom_last_error.html#ad74d894135c7f5db81f3b70884c04d25',1,'IZoomLastError']]],
+  ['geterrordescription',['GetErrorDescription',['../class_i_zoom_last_error.html#a588918362152c0ac8cccabb9f4c5848e',1,'IZoomLastError']]],
   ['geterrortype',['GetErrorType',['../class_i_zoom_last_error.html#a1b18e101ff1f30c08d069df248b1d270',1,'IZoomLastError']]],
   ['geteventid',['GetEventID',['../class_i_calender_event.html#a02457d217c93cf73542f4cb06deb37a9',1,'ICalenderEvent']]],
   ['getgeneralsettings',['GetGeneralSettings',['../class_i_setting_service.html#a7460b49ab5c87fb6ff790628a8b68a85',1,'ISettingService']]],

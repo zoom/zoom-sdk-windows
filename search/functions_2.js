@@ -11,6 +11,8 @@ var searchData=
   ['cancelcallout',['CancelCallOut',['../class_i_meeting_phone_helper.html#a20fbf811d3d64d5c97c274c5fba682df',1,'IMeetingPhoneHelper']]],
   ['cancelcallouth323',['CancelCallOutH323',['../class_i_meeting_h323_helper.html#a9e6313cd6b58795c1db28b0ecf11afce',1,'IMeetingH323Helper']]],
   ['canclear',['CanClear',['../class_i_customized_annotation_obj.html#af47f0037582dbaf9a5eb0a4ffb8342e4',1,'ICustomizedAnnotationObj']]],
+  ['candisableviewerannotation',['CanDisableViewerAnnotation',['../class_i_annotation_controller.html#a256a4adc38e6930402b894b308514ba5',1,'IAnnotationController']]],
+  ['candoannotation',['CanDoAnnotation',['../class_i_annotation_controller.html#a2762d6fd583a647bf6a04c3f01579ad4',1,'IAnnotationController']]],
   ['canpairingmeeting',['CanPairingMeeting',['../class_i_meeting_h323_helper.html#a7b5cb9f2ff9f4f6112758a7bcea57c35',1,'IMeetingH323Helper']]],
   ['canreclaimhost',['CanReclaimHost',['../class_i_meeting_participants_controller.html#a8325a02f7d1f54955431048f590e5829',1,'IMeetingParticipantsController']]],
   ['canrequestcontrol',['CanRequestControl',['../class_i_meeting_remote_controller.html#a8d0a5bb6c6152f1be77247288566d7bd',1,'IMeetingRemoteController']]],

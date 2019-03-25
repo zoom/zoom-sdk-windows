@@ -73,6 +73,7 @@ var searchData=
   ['issuppressaudionotifyenabled',['IsSuppressAudioNotifyEnabled',['../class_i_audio_setting_context.html#a20fabb5d8212a16d7d6e2ece261dc5a7',1,'IAudioSettingContext']]],
   ['isvideomirroreffectenabled',['IsVideoMirrorEffectEnabled',['../class_i_video_setting_context.html#a506a0984f5353cd5612c6677a84028f2',1,'IVideoSettingContext']]],
   ['isvideoon',['IsVideoOn',['../class_i_user_info.html#a144eab618774c9652e9fcdaaeffa91be',1,'IUserInfo']]],
+  ['isviewerannotationdisabled',['IsViewerAnnotationDisabled',['../class_i_annotation_controller.html#afe545b018aed7260c1a9362a6dabdf1c',1,'IAnnotationController']]],
   ['iswaitingroomonentryflagon',['IsWaitingRoomOnEntryFlagOn',['../class_i_meeting_waiting_room_controller.html#a0045bf2da3249b4974361a1090c6ec51',1,'IMeetingWaitingRoomController']]],
   ['iswebinar',['IsWebinar',['../class_i_meeting_item_info.html#ae96429887cb05cf97a673a9501768b88',1,'IMeetingItemInfo']]]
 ];

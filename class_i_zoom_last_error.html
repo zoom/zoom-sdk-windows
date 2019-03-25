@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.30730.0118</span>
+   &#160;<span id="projectnumber">4.3.47204.0325</span>
    </div>
   </td>
  </tr>
@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -105,11 +106,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b18e101ff1f30c08d069df248b1d270"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_last_error.html#a1b18e101ff1f30c08d069df248b1d270">GetErrorType</a> () const =0</td></tr>
+<tr class="memdesc:a1b18e101ff1f30c08d069df248b1d270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last error type.  <a href="#a1b18e101ff1f30c08d069df248b1d270">More...</a><br /></td></tr>
 <tr class="separator:a1b18e101ff1f30c08d069df248b1d270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74d894135c7f5db81f3b70884c04d25"><td class="memItemLeft" align="right" valign="top">virtual UINT64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_last_error.html#ad74d894135c7f5db81f3b70884c04d25">GetErrorCode</a> () const =0</td></tr>
+<tr class="memdesc:ad74d894135c7f5db81f3b70884c04d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last error code.  <a href="#ad74d894135c7f5db81f3b70884c04d25">More...</a><br /></td></tr>
 <tr class="separator:ad74d894135c7f5db81f3b70884c04d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a588918362152c0ac8cccabb9f4c5848e"><td class="memItemLeft" align="right" valign="top"><a id="a588918362152c0ac8cccabb9f4c5848e"></a>
-virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetErrorDescription</b> () const =0</td></tr>
+<tr class="memitem:a588918362152c0ac8cccabb9f4c5848e"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_last_error.html#a588918362152c0ac8cccabb9f4c5848e">GetErrorDescription</a> () const =0</td></tr>
+<tr class="memdesc:a588918362152c0ac8cccabb9f4c5848e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description for the last error.  <a href="#a588918362152c0ac8cccabb9f4c5848e">More...</a><br /></td></tr>
 <tr class="separator:a588918362152c0ac8cccabb9f4c5848e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -137,7 +140,37 @@ virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
   </tr>
 </table>
 </div><div class="memdoc">
-<p>brief Get the description for the last error. </p><dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the error description will be returned. If there is no error, it will return an empty string of length zero(0). </dd></dl>
+
+<p>Get the last error code. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the error code will be returned. </dd></dl>
+
+</div>
+</div>
+<a id="a588918362152c0ac8cccabb9f4c5848e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a588918362152c0ac8cccabb9f4c5848e">&#9670;&nbsp;</a></span>GetErrorDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const wchar_t* IZoomLastError::GetErrorDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the description for the last error. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the error description will be returned. If there is no error, it will return an empty string of length zero(0). </dd></dl>
 
 </div>
 </div>
@@ -163,9 +196,9 @@ virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
   </tr>
 </table>
 </div><div class="memdoc">
-<p>&lt;brief Get the last error type. </p><dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the error type will be returned. For more details, see <a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a> enum. brief Get the last error code. </dd>
-<dd>
-If the function succeeds, the error code will be returned. </dd></dl>
+
+<p>Get the last error type. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the error type will be returned. For more details, see <a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a> enum. </dd></dl>
 
 </div>
 </div>

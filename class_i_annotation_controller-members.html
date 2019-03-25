@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.30730.0118</span>
+   &#160;<span id="projectnumber">4.3.47204.0325</span>
    </div>
   </td>
  </tr>
@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -96,16 +97,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_i_annotation_controller.html">IAnnotationController</a>, including all inherited members.</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a256a4adc38e6930402b894b308514ba5">CanDisableViewerAnnotation</a>(SDKViewType viewtype, bool &amp;bCan)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#a2762d6fd583a647bf6a04c3f01579ad4">CanDoAnnotation</a>(SDKViewType viewtype, bool &amp;bCan)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a0481ca97a3614886d56b7a7ca83a78ab">Clear</a>(SDKViewType viewtype, AnnotationClearType type)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#a39a6b8050edf67cf58818100c76ce660">GetCustomizedAnnotationController</a>()=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#ae625b9c86c79e202900851f4f08533b8">IsAnnoataionDisable</a>()=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#ab71797c93dbd9de68217dccd15157211">DisableViewerAnnotation</a>(SDKViewType viewtype, bool bDisable)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a39a6b8050edf67cf58818100c76ce660">GetCustomizedAnnotationController</a>()=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#ae625b9c86c79e202900851f4f08533b8">IsAnnoataionDisable</a>()=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#afe545b018aed7260c1a9362a6dabdf1c">IsViewerAnnotationDisabled</a>(SDKViewType viewtype, bool &amp;bDisabled)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#ad6e167403d82159fa4651a56913122aa">Redo</a>(SDKViewType viewtype)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a10f9ecbe347e05470f289166452bd307">SetColor</a>(SDKViewType viewtype, unsigned long color)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#a193f0b76cd7615ab2fc9765ce78d43fe">SetLineWidth</a>(SDKViewType viewtype, long lineWidth)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a37e68acfa2b854b8d738fa411fadb60a">SetTool</a>(SDKViewType viewtype, AnnotationToolType type)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#aa821d0b4bec7a50439ee4f4f559b4d30">StartAnnotation</a>(SDKViewType viewtype, int left, int top)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a77020f8c296b064186e54b53b2e1bf9d">StopAnnotation</a>(SDKViewType viewtype)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#afb4f00df5783e82d6f851ce9826d58e9">Undo</a>(SDKViewType viewtype)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#a50218a0a794cc547daf012af34df8197">SetEvent</a>(IMeetingAnnotationSupportEvent *pEvent)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#a193f0b76cd7615ab2fc9765ce78d43fe">SetLineWidth</a>(SDKViewType viewtype, long lineWidth)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#a37e68acfa2b854b8d738fa411fadb60a">SetTool</a>(SDKViewType viewtype, AnnotationToolType type)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#aa821d0b4bec7a50439ee4f4f559b4d30">StartAnnotation</a>(SDKViewType viewtype, int left, int top)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_annotation_controller.html#a77020f8c296b064186e54b53b2e1bf9d">StopAnnotation</a>(SDKViewType viewtype)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_annotation_controller.html#afb4f00df5783e82d6f851ce9826d58e9">Undo</a>(SDKViewType viewtype)=0</td><td class="entry"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

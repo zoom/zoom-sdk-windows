@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.30730.0118</span>
+   &#160;<span id="projectnumber">4.3.47204.0325</span>
    </div>
   </td>
  </tr>
@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -107,8 +108,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_annotation_support_event.html">IMeetingAnnotationSupportEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback interface that viewer's annotation status changes.  <a href="class_i_meeting_annotation_support_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html">IAnnotationController</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting annotation tools interface.  <a href="class_i_annotation_controller.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting annotation tool interface.  <a href="class_i_annotation_controller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -127,10 +131,25 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a0f7962bc6cd739f84d925666e05d0a75">ANNOTOOL_AUTO_ELLIPSE_FILL</a>, 
 <a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a7417b17f21119810c1f8890d06be72ad">ANNOTOOL_SPOTLIGHT</a>, 
 <a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a7c5b793d042cddaab700e7a88e7b868f">ANNOTOOL_ARROW</a>, 
-<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc">ANNOTOOL_ERASER</a>
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc">ANNOTOOL_ERASER</a>, 
+<br />
+&#160;&#160;<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a8b1f26248c1aa24f4911e5e336a10f6c">ANNOTOOL_TEXTBOX</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a6fdb75d4def4714e866fd31c848f802b">ANNOTOOL_PICKER</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7af98dda9cf2788e0ad4efb8434e682922">ANNOTOOL_AUTO_RECTANGLE_SEMI_FILL</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7adaa0192402e82b0307c2e066e7d807e8">ANNOTOOL_AUTO_ELLIPSE_SEMI_FILL</a>, 
+<br />
+&#160;&#160;<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a3743c02cfcb9188ab50b36ca59e963bb">ANNOTOOL_AUTO_DOUBLE_ARROW</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a4c19c770bd4ac6439e15c0ba2b973a7e">ANNOTOOL_AUTO_DIAMOND</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a290ec937048cb46467829c84e3be0eab">ANNOTOOL_AUTO_STAMP_ARROW</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7aa888d5ad397ca5996ca42d62022db582">ANNOTOOL_AUTO_STAMP_CHECK</a>, 
+<br />
+&#160;&#160;<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a14807efda8b47e7657e0fc3e822bb0ac">ANNOTOOL_AUTO_STAMP_X</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a569db2c0413120596cb404c12c92213b">ANNOTOOL_AUTO_STAMP_STAR</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7ad2b0c42e2e8101a19f35607894bea456">ANNOTOOL_AUTO_STAMP_HEART</a>, 
+<a class="el" href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7a992ee322b3bfb87de5dd4918fa467e35">ANNOTOOL_AUTO_STAMP_QM</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a03cf8fd710f56092fd4d5bd81fcad8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of annotation Tools. Here are more detailed structural descriptions.  <a href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7">More...</a><br /></td></tr>
+<tr class="memdesc:a03cf8fd710f56092fd4d5bd81fcad8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of annotation tool. Here are more detailed structural descriptions.  <a href="meeting__annotation__interface_8h.html#a03cf8fd710f56092fd4d5bd81fcad8b7">More...</a><br /></td></tr>
 <tr class="separator:a03cf8fd710f56092fd4d5bd81fcad8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c031218c907eaf93f5a1f9e74a9e8d2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2">AnnotationClearType</a> { <a class="el" href="meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2a1718f99b074d2514b231eceadddd7054">ANNOCLEAR_ALL</a>, 
 <a class="el" href="meeting__annotation__interface_8h.html#a0c031218c907eaf93f5a1f9e74a9e8d2a17c7b67bb0c76d126256547e41dbb6d8">ANNOCLEAR_SELF</a>, 
@@ -178,7 +197,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Type of annotation Tools. Here are more detailed structural descriptions. </p>
+<p>Types of annotation tool. Here are more detailed structural descriptions. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a0156c28d15115bd0aa017fd8dabed81b"></a>ANNOTOOL_NONE_DRAWING&#160;</td><td class="fielddoc"><p>Switch to mouse cursor. </p>
 </td></tr>
@@ -200,9 +219,33 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a7417b17f21119810c1f8890d06be72ad"></a>ANNOTOOL_SPOTLIGHT&#160;</td><td class="fielddoc"><p>Laser pointer. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a7c5b793d042cddaab700e7a88e7b868f"></a>ANNOTOOL_ARROW&#160;</td><td class="fielddoc"><p>An arrow. </p>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a7c5b793d042cddaab700e7a88e7b868f"></a>ANNOTOOL_ARROW&#160;</td><td class="fielddoc"><p>An arrow showing the name of whom click on the sharing content. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a94aaef49fcd67f4ca1de01fbeb95b2fc"></a>ANNOTOOL_ERASER&#160;</td><td class="fielddoc"><p>An eraser. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a8b1f26248c1aa24f4911e5e336a10f6c"></a>ANNOTOOL_TEXTBOX&#160;</td><td class="fielddoc"><p>Insert a textbox in order to input letters. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a6fdb75d4def4714e866fd31c848f802b"></a>ANNOTOOL_PICKER&#160;</td><td class="fielddoc"><p>Select the annotations. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7af98dda9cf2788e0ad4efb8434e682922"></a>ANNOTOOL_AUTO_RECTANGLE_SEMI_FILL&#160;</td><td class="fielddoc"><p>A fair rectangle changes automatically in pace with the mouse cursor. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7adaa0192402e82b0307c2e066e7d807e8"></a>ANNOTOOL_AUTO_ELLIPSE_SEMI_FILL&#160;</td><td class="fielddoc"><p>A fair ellipse changes automatically in pace with the mouse cursor. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a3743c02cfcb9188ab50b36ca59e963bb"></a>ANNOTOOL_AUTO_DOUBLE_ARROW&#160;</td><td class="fielddoc"><p>A line with double-arrow. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a4c19c770bd4ac6439e15c0ba2b973a7e"></a>ANNOTOOL_AUTO_DIAMOND&#160;</td><td class="fielddoc"><p>A hollow rhombus. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a290ec937048cb46467829c84e3be0eab"></a>ANNOTOOL_AUTO_STAMP_ARROW&#160;</td><td class="fielddoc"><p>A fixed-size arrow for marking. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7aa888d5ad397ca5996ca42d62022db582"></a>ANNOTOOL_AUTO_STAMP_CHECK&#160;</td><td class="fielddoc"><p>A sign marking that something is correct. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a14807efda8b47e7657e0fc3e822bb0ac"></a>ANNOTOOL_AUTO_STAMP_X&#160;</td><td class="fielddoc"><p>A sign marking that something is wrong. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a569db2c0413120596cb404c12c92213b"></a>ANNOTOOL_AUTO_STAMP_STAR&#160;</td><td class="fielddoc"><p>A star for marking. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7ad2b0c42e2e8101a19f35607894bea456"></a>ANNOTOOL_AUTO_STAMP_HEART&#160;</td><td class="fielddoc"><p>A heart for marking. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03cf8fd710f56092fd4d5bd81fcad8b7a992ee322b3bfb87de5dd4918fa467e35"></a>ANNOTOOL_AUTO_STAMP_QM&#160;</td><td class="fielddoc"><p>An interrogation. </p>
 </td></tr>
 </table>
 

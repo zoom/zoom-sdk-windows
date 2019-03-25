@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['calenderauthtype',['CalenderAuthType',['../calender__service__interface_8h.html#a0ef8dff9ade92e535aa52179190f7637',1,'calender_service_interface.h']]],
+  ['calenderresult',['CalenderResult',['../calender__service__interface_8h.html#ad3f01773b39f005c29a24274c66dcec4',1,'calender_service_interface.h']]],
   ['callinnumtype',['CALLINNUMTYPE',['../meeting__phone__helper__interface_8h.html#a25c741be3ed20fa717551e18c62f0623',1,'meeting_phone_helper_interface.h']]],
   ['connectionquality',['ConnectionQuality',['../meeting__service__interface_8h.html#a5fb3a31ef1393dbccc4b0e1963ed991d',1,'meeting_service_interface.h']]],
   ['customizedlanguagetype',['CustomizedLanguageType',['../zoom__sdk__def_8h.html#a88da7caffb72cca848c4e4d9d07cda7e',1,'zoom_sdk_def.h']]],

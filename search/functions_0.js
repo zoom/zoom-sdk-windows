@@ -1,6 +1,9 @@
 var searchData=
 [
   ['accept',['Accept',['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler']]],
+  ['addcustomizedpictureresource',['AddCustomizedPictureResource',['../class_i_customized_resource_helper.html#a8c7766166e0e1019621437be31607061',1,'ICustomizedResourceHelper']]],
+  ['addcustomizedstringresource',['AddCustomizedStringResource',['../class_i_customized_resource_helper.html#a687a3184c4f515f9204ccef45b3cdaa4',1,'ICustomizedResourceHelper']]],
+  ['addcustomizedurlresource',['AddCustomizedURLResource',['../class_i_customized_resource_helper.html#a8450215f576f54fcd9bc03c72ab4b2ea',1,'ICustomizedResourceHelper']]],
   ['addvideosourcetoreclist',['AddVideoSourceToRecList',['../class_i_customized_local_recording_layout_helper.html#a0bada5e6e82b4909130904a77d9f6d54',1,'ICustomizedLocalRecordingLayoutHelper']]],
   ['admittomeeting',['AdmitToMeeting',['../class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4',1,'IMeetingWaitingRoomController']]],
   ['allowattendeechat',['AllowAttendeeChat',['../class_i_meeting_webinar_controller.html#abed3ca7b5d3da977d8d4deafdf17c43f',1,'IMeetingWebinarController']]],

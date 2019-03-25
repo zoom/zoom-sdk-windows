@@ -51,6 +51,7 @@ var searchData=
   ['resolution_5fsend_5f',['resolution_send_',['../structtag_a_s_v_session_statistic_info.html#a90f68a4f0ee70b1561fc2153e72178d9',1,'tagASVSessionStatisticInfo']]],
   ['resumecurrentsharing',['ResumeCurrentSharing',['../class_i_meeting_share_controller.html#a45226c08613c2a9453b1084f28c084d0',1,'IMeetingShareController']]],
   ['retrievecalevents',['RetrieveCalEvents',['../class_i_calender_service.html#ad6d8fef1a845d6ee41b309dbd358639c',1,'ICalenderService']]],
+  ['retrievecustomizedresourcehelper',['RetrieveCustomizedResourceHelper',['../zoom__sdk__ext_8h.html#a8bbab4e64bd743e7656d088d429354da',1,'zoom_sdk_ext.h']]],
   ['retrieveuihooker',['RetrieveUIHooker',['../zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb',1,'zoom_sdk_ext.h']]],
   ['revokecohost',['RevokeCoHost',['../class_i_meeting_participants_controller.html#aca3fb36bb285a63b8009211ea4b1a97e',1,'IMeetingParticipantsController']]],
   ['revokeremotecontrol',['RevokeRemoteControl',['../class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37',1,'IMeetingRemoteController']]]
