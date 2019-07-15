@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6757b049eee93b56999b1c16b670aead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable the original input of mic.  <a href="#a6757b049eee93b56999b1c16b670aead">More...</a><br /></td></tr>
 <tr class="separator:a6757b049eee93b56999b1c16b670aead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62cfdc1e8f7e2faee74db2436721deb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a62cfdc1e8f7e2faee74db2436721deb5">EnableHoldSpaceKeyToSpeak</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a62cfdc1e8f7e2faee74db2436721deb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable to press and hold the Space-bar to speak.  <a href="#a62cfdc1e8f7e2faee74db2436721deb5">More...</a><br /></td></tr>
+<tr class="memdesc:a62cfdc1e8f7e2faee74db2436721deb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable to press and hold the Space-bar to speak when muted.  <a href="#a62cfdc1e8f7e2faee74db2436721deb5">More...</a><br /></td></tr>
 <tr class="separator:a62cfdc1e8f7e2faee74db2436721deb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade39229946fff6ad04bc630e4d923f7f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ade39229946fff6ad04bc630e4d923f7f">IsHoldSpaceKeyToSpeakEnabled</a> ()=0</td></tr>
 <tr class="memdesc:ade39229946fff6ad04bc630e4d923f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable to press and hold the Space-bar to speak.  <a href="#ade39229946fff6ad04bc630e4d923f7f">More...</a><br /></td></tr>
@@ -177,6 +177,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a99d9132f6d461e7c6b0db3a70055dfc2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a99d9132f6d461e7c6b0db3a70055dfc2">SetAudioDeviceEvent</a> (<a class="el" href="class_i_audio_setting_context_event.html">IAudioSettingContextEvent</a> *pEvent)=0</td></tr>
 <tr class="memdesc:a99d9132f6d461e7c6b0db3a70055dfc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio device monitor callback event.  <a href="#a99d9132f6d461e7c6b0db3a70055dfc2">More...</a><br /></td></tr>
 <tr class="separator:a99d9132f6d461e7c6b0db3a70055dfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03108d39e0d7605de3211e781aedd4e4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a03108d39e0d7605de3211e781aedd4e4">EnableEchoCancellation</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a03108d39e0d7605de3211e781aedd4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to enable the function of echo cancellation or not.  <a href="#a03108d39e0d7605de3211e781aedd4e4">More...</a><br /></td></tr>
+<tr class="separator:a03108d39e0d7605de3211e781aedd4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8adfa9fda2f42387a3320031c8b3fa28"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a8adfa9fda2f42387a3320031c8b3fa28">IsEchoCancellationEnabled</a> ()=0</td></tr>
+<tr class="memdesc:a8adfa9fda2f42387a3320031c8b3fa28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the echo cancellation is enabled or not.  <a href="#a8adfa9fda2f42387a3320031c8b3fa28">More...</a><br /></td></tr>
+<tr class="separator:a8adfa9fda2f42387a3320031c8b3fa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Audio setting interface. </p>
@@ -286,6 +292,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a03108d39e0d7605de3211e781aedd4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03108d39e0d7605de3211e781aedd4e4">&#9670;&nbsp;</a></span>EnableEchoCancellation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::EnableEchoCancellation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set whether to enable the function of echo cancellation or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>True means to enable the function, FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
 <a id="a62cfdc1e8f7e2faee74db2436721deb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62cfdc1e8f7e2faee74db2436721deb5">&#9670;&nbsp;</a></span>EnableHoldSpaceKeyToSpeak()</h2>
 
@@ -310,7 +351,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Enable or disable to press and hold the Space-bar to speak. </p>
+<p>Enable or disable to press and hold the Space-bar to speak when muted. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to press and hold the Space-bar to speak. </td></tr>
@@ -659,6 +700,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the flag to enable/disable the audio automatically when join meeting. </p>
 <dl class="section return"><dt>Returns</dt><dd>Enabled or disabled. </dd></dl>
+
+</div>
+</div>
+<a id="a8adfa9fda2f42387a3320031c8b3fa28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8adfa9fda2f42387a3320031c8b3fa28">&#9670;&nbsp;</a></span>IsEchoCancellationEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IAudioSettingContext::IsEchoCancellationEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether the echo cancellation is enabled or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>If it is TRUE, it means the echo cancellation is enabled </dd></dl>
 
 </div>
 </div>

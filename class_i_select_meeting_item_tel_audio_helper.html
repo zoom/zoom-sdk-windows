@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a1e7190e40b253f0dc927830855539b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_select_meeting_item_tel_audio_helper.html#a5a1e7190e40b253f0dc927830855539b">SelectDefaultDialInCountry</a> (const wchar_t *countryId)=0</td></tr>
 <tr class="memdesc:a5a1e7190e40b253f0dc927830855539b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the telephone number via specified country ID as the default call-in number.  <a href="#a5a1e7190e40b253f0dc927830855539b">More...</a><br /></td></tr>
 <tr class="separator:a5a1e7190e40b253f0dc927830855539b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b6be952492f9a1a716b0f030a00f50"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_select_meeting_item_tel_audio_helper.html#af0b6be952492f9a1a716b0f030a00f50">RemoveDefaultDialInCountry</a> (const wchar_t *countryId)=0</td></tr>
+<tr class="memdesc:af0b6be952492f9a1a716b0f030a00f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the telephone number in the default call-in number via specified country ID.  <a href="#af0b6be952492f9a1a716b0f030a00f50">More...</a><br /></td></tr>
+<tr class="separator:af0b6be952492f9a1a716b0f030a00f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa97a07406f8ebafa30931413ef0c915"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_select_meeting_item_tel_audio_helper.html#aaa97a07406f8ebafa30931413ef0c915">EnableIncludeTollFree</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:aaa97a07406f8ebafa30931413ef0c915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if the toll-free numbers are enabled in the call-in number list.  <a href="#aaa97a07406f8ebafa30931413ef0c915">More...</a><br /></td></tr>
 <tr class="separator:aaa97a07406f8ebafa30931413ef0c915"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +147,41 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable. <br />
  </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="af0b6be952492f9a1a716b0f030a00f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b6be952492f9a1a716b0f030a00f50">&#9670;&nbsp;</a></span>RemoveDefaultDialInCountry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ISelectMeetingItemTelAudioHelper::RemoveDefaultDialInCountry </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>countryId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove the telephone number in the default call-in number via specified country ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">countryId</td><td>The ID of the specified country. </td></tr>
   </table>
   </dd>
 </dl>

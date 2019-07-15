@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -201,12 +201,13 @@ Enumerations</h2></td></tr>
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a75d4f7918f9c861630372629233e33d6">SDKERR_TOO_FREQUENT_CALL</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036ab0b55f42daedc7e679244dbaa4f825ea">SDKERR_FAIL_ASSIGN_USER_PRIVILEGE</a>, 
 <br />
-&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a54094727ac52e1c3aba06e1fbbd2f347">SDKERR_MEETING_DONT_SUUPORT_FEATURE</a>, 
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036af7a4010701ac202d6ef670a8115136ef">SDKERR_MEETING_DONT_SUPPORT_FEATURE</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036acbbd86b7eb668d935d24978d9fed2bed">SDKERR_MEETING_NOT_SHARE_SENDER</a>, 
-<b>SDKERR_MEETING_YOU_HAVE_NO_SHARE</b>, 
+<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036afc0b517e93d13c26af9a0ed3721bd624">SDKERR_MEETING_YOU_HAVE_NO_SHARE</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036ab404b2bec0822ca57c470729fba04f95">SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG</a>, 
 <br />
-&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036adb97477ea7e5fdb7ae408c157a6f88ed">SDKERR_MEETING_ANNOTATION_IS_OFF</a>
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036adb97477ea7e5fdb7ae408c157a6f88ed">SDKERR_MEETING_ANNOTATION_IS_OFF</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a2dfd340bb8fd1c67474a402716b9e930">SDKERR_SETTING_OS_DONT_SUPPORT</a>
 <br />
  }</td></tr>
 <tr class="memdesc:aea74527af3b9f22cf00d38080c896036"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK error types. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">More...</a><br /></td></tr>
@@ -400,13 +401,17 @@ const RECT&#160;</td><td class="memItemRight" valign="bottom"><b>_SDK_TEST_VIDEO
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036ab0b55f42daedc7e679244dbaa4f825ea"></a>SDKERR_FAIL_ASSIGN_USER_PRIVILEGE&#160;</td><td class="fielddoc"><p>User can't be assigned with new privilege. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a54094727ac52e1c3aba06e1fbbd2f347"></a>SDKERR_MEETING_DONT_SUUPORT_FEATURE&#160;</td><td class="fielddoc"><p>The current meeting doesn't support the feature. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036af7a4010701ac202d6ef670a8115136ef"></a>SDKERR_MEETING_DONT_SUPPORT_FEATURE&#160;</td><td class="fielddoc"><p>The current meeting doesn't support the feature. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036acbbd86b7eb668d935d24978d9fed2bed"></a>SDKERR_MEETING_NOT_SHARE_SENDER&#160;</td><td class="fielddoc"><p>The current user is not the presenter. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036ab404b2bec0822ca57c470729fba04f95"></a>SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG&#160;</td><td class="fielddoc"><p>There is no sharing. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036afc0b517e93d13c26af9a0ed3721bd624"></a>SDKERR_MEETING_YOU_HAVE_NO_SHARE&#160;</td><td class="fielddoc"><p>There is no sharing. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036adb97477ea7e5fdb7ae408c157a6f88ed"></a>SDKERR_MEETING_ANNOTATION_IS_OFF&#160;</td><td class="fielddoc"><p>Incorrect ViewType parameters. </p>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036ab404b2bec0822ca57c470729fba04f95"></a>SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG&#160;</td><td class="fielddoc"><p>Incorrect ViewType parameters. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036adb97477ea7e5fdb7ae408c157a6f88ed"></a>SDKERR_MEETING_ANNOTATION_IS_OFF&#160;</td><td class="fielddoc"><p>Annotation is disabled. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a2dfd340bb8fd1c67474a402716b9e930"></a>SDKERR_SETTING_OS_DONT_SUPPORT&#160;</td><td class="fielddoc"><p>Current OS doesn't support the setting. </p>
 </td></tr>
 </table>
 

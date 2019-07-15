@@ -33,6 +33,7 @@ var searchData=
   ['hiderecorditemonmeetingui',['HideRecordItemOnMeetingUI',['../class_i_meeting_u_i_elem_configuration.html#afd7066de099b092c120980e24b840dbc',1,'IMeetingUIElemConfiguration']]],
   ['hidesettingdlg',['HideSettingDlg',['../class_i_setting_service.html#a5c7bd7b92ad1e382a0ea6a840e6a193d',1,'ISettingService']]],
   ['hideupgradefreemeetingbutton',['HideUpgradeFreeMeetingButton',['../class_i_meeting_u_i_elem_configuration.html#ac0ace0a88402dca8a94fc8d3b746eedb',1,'IMeetingUIElemConfiguration']]],
+  ['hideupgradewarningmsgforfreeuserwhenschedule',['HideUpgradeWarningMsgForFreeUserWhenSchedule',['../class_i_meeting_u_i_elem_configuration.html#a1e84b3a59a735ce3680a7922ec0a619d',1,'IMeetingUIElemConfiguration']]],
   ['hparent',['hParent',['../structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950',1,'tagShowChatDlgParam::hParent()'],['../structtag_show_setting_dlg_param.html#acc2a6944153407b6e1715b58ef49ad20',1,'tagShowSettingDlgParam::hParent()'],['../structtag_wnd_position.html#a03529808c83dc9c592ad21f742abbc7d',1,'tagWndPosition::hParent()']]],
   ['hresinstance',['hResInstance',['../structtag_init_param.html#a230b388bec5685732b308bb13be2de1b',1,'tagInitParam']]],
   ['hselfwnd',['hSelfWnd',['../structtag_wnd_position.html#a0005c79d2ba70a5beba57c244b0b98c8',1,'tagWndPosition']]],

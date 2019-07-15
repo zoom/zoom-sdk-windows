@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -139,12 +139,74 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8f4aedb0d5686d578bfee1cf8c2fa687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable to use the split screen mode, which enables the attendees to view the lectures or the gallery.  <a href="#a8f4aedb0d5686d578bfee1cf8c2fa687">More...</a><br /></td></tr>
 <tr class="separator:a8f4aedb0d5686d578bfee1cf8c2fa687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39de3d363b45645a669d61ab699bcfa0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#a39de3d363b45645a669d61ab699bcfa0">IsSplitScreenModeEnabled</a> ()=0</td></tr>
-<tr class="memdesc:a39de3d363b45645a669d61ab699bcfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is enable to use the split screen mode.  <a href="#a39de3d363b45645a669d61ab699bcfa0">More...</a><br /></td></tr>
+<tr class="memdesc:a39de3d363b45645a669d61ab699bcfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the split screen mode is enabled.  <a href="#a39de3d363b45645a669d61ab699bcfa0">More...</a><br /></td></tr>
 <tr class="separator:a39de3d363b45645a669d61ab699bcfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0cdeb2838916a8174b5876fe25d6d94"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#aa0cdeb2838916a8174b5876fe25d6d94">EnableDisplayReminderWindowWhenExit</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:aa0cdeb2838916a8174b5876fe25d6d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/Disable reminder window when user exits the meeting. Available only for normal attendees (non-host).  <a href="#aa0cdeb2838916a8174b5876fe25d6d94">More...</a><br /></td></tr>
+<tr class="separator:aa0cdeb2838916a8174b5876fe25d6d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa265d53152382a11080728dc24e5f903"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#aa265d53152382a11080728dc24e5f903">IsDisplayReminderWindowWhenExitEnabled</a> ()=0</td></tr>
+<tr class="memdesc:aa265d53152382a11080728dc24e5f903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if reminder window is enabled when user exits the meeting.  <a href="#aa265d53152382a11080728dc24e5f903">More...</a><br /></td></tr>
+<tr class="separator:aa265d53152382a11080728dc24e5f903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042b2841210aa558259506733dc59bfa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#a042b2841210aa558259506733dc59bfa">EnableShowMyMeetingElapseTime</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a042b2841210aa558259506733dc59bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/Disable to show the elapsed time of the meeting.  <a href="#a042b2841210aa558259506733dc59bfa">More...</a><br /></td></tr>
+<tr class="separator:a042b2841210aa558259506733dc59bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea02e08afbf74ac7cf947fff0d57f05"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#adea02e08afbf74ac7cf947fff0d57f05">IsShowMyMeetingElapseTimeEnabled</a> ()=0</td></tr>
+<tr class="memdesc:adea02e08afbf74ac7cf947fff0d57f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if showing elapsed time of the meeting is enabled.  <a href="#adea02e08afbf74ac7cf947fff0d57f05">More...</a><br /></td></tr>
+<tr class="separator:adea02e08afbf74ac7cf947fff0d57f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9469e242fadd4ba7d5e2d116801d09a1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#a9469e242fadd4ba7d5e2d116801d09a1">IsCurrentOSSupportAccelerateGPUWhenShare</a> ()=0</td></tr>
+<tr class="memdesc:a9469e242fadd4ba7d5e2d116801d09a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the operating system supports the GPU acceleration when user shares.  <a href="#a9469e242fadd4ba7d5e2d116801d09a1">More...</a><br /></td></tr>
+<tr class="separator:a9469e242fadd4ba7d5e2d116801d09a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4692d2ce2b4b15f2e46d0759d31747"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#aeb4692d2ce2b4b15f2e46d0759d31747">EnableAccelerateGPUWhenShare</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:aeb4692d2ce2b4b15f2e46d0759d31747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/Disable the GPU acceleration when user shares.  <a href="#aeb4692d2ce2b4b15f2e46d0759d31747">More...</a><br /></td></tr>
+<tr class="separator:aeb4692d2ce2b4b15f2e46d0759d31747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273b556a2b2153ac598f9ca98de5c0a1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#a273b556a2b2153ac598f9ca98de5c0a1">IsAccelerateGPUWhenShareEnabled</a> (bool &amp;bEnable)=0</td></tr>
+<tr class="memdesc:a273b556a2b2153ac598f9ca98de5c0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if GPU acceleration is enabled when user shares.  <a href="#a273b556a2b2153ac598f9ca98de5c0a1">More...</a><br /></td></tr>
+<tr class="separator:a273b556a2b2153ac598f9ca98de5c0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925a23fa1cb0d2c5746ff26008e9c337"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#a925a23fa1cb0d2c5746ff26008e9c337">EnableRemoteControlAllApplications</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a925a23fa1cb0d2c5746ff26008e9c337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable remote control of all applications.  <a href="#a925a23fa1cb0d2c5746ff26008e9c337">More...</a><br /></td></tr>
+<tr class="separator:a925a23fa1cb0d2c5746ff26008e9c337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a0b55c59d2a5f0d0770392351abe78"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_general_setting_context.html#a38a0b55c59d2a5f0d0770392351abe78">IsRemoteControlAllApplicationsEnabled</a> ()=0</td></tr>
+<tr class="memdesc:a38a0b55c59d2a5f0d0770392351abe78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if remote control of all applications is enabled.  <a href="#a38a0b55c59d2a5f0d0770392351abe78">More...</a><br /></td></tr>
+<tr class="separator:a38a0b55c59d2a5f0d0770392351abe78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>General setting interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeb4692d2ce2b4b15f2e46d0759d31747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb4692d2ce2b4b15f2e46d0759d31747">&#9670;&nbsp;</a></span>EnableAccelerateGPUWhenShare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IGeneralSettingContext::EnableAccelerateGPUWhenShare </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable/Disable the GPU acceleration when user shares. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable the acceleration. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
 <a id="a66586bacc38d09c3640b7df2bcab6436"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66586bacc38d09c3640b7df2bcab6436">&#9670;&nbsp;</a></span>EnableAutoFitToWindowWhenViewSharing()</h2>
 
@@ -250,6 +312,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa0cdeb2838916a8174b5876fe25d6d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0cdeb2838916a8174b5876fe25d6d94">&#9670;&nbsp;</a></span>EnableDisplayReminderWindowWhenExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IGeneralSettingContext::EnableDisplayReminderWindowWhenExit </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable/Disable reminder window when user exits the meeting. Available only for normal attendees (non-host). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable reminder window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
 <a id="a156c560b15c873203c91ea63e82f7f73"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a156c560b15c873203c91ea63e82f7f73">&#9670;&nbsp;</a></span>EnableDualScreenMode()</h2>
 
@@ -278,6 +375,76 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to set to enable the dual screen mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a925a23fa1cb0d2c5746ff26008e9c337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925a23fa1cb0d2c5746ff26008e9c337">&#9670;&nbsp;</a></span>EnableRemoteControlAllApplications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IGeneralSettingContext::EnableRemoteControlAllApplications </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable/disable remote control of all applications. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable the remote control. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a042b2841210aa558259506733dc59bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042b2841210aa558259506733dc59bfa">&#9670;&nbsp;</a></span>EnableShowMyMeetingElapseTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IGeneralSettingContext::EnableShowMyMeetingElapseTime </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable/Disable to show the elapsed time of the meeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to show the elapsed time. FALSE not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -317,6 +484,40 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a273b556a2b2153ac598f9ca98de5c0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a273b556a2b2153ac598f9ca98de5c0a1">&#9670;&nbsp;</a></span>IsAccelerateGPUWhenShareEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IGeneralSettingContext::IsAccelerateGPUWhenShareEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if GPU acceleration is enabled when user shares. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -432,6 +633,62 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9469e242fadd4ba7d5e2d116801d09a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9469e242fadd4ba7d5e2d116801d09a1">&#9670;&nbsp;</a></span>IsCurrentOSSupportAccelerateGPUWhenShare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGeneralSettingContext::IsCurrentOSSupportAccelerateGPUWhenShare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if the operating system supports the GPU acceleration when user shares. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates support. FALSE not. </dd></dl>
+
+</div>
+</div>
+<a id="aa265d53152382a11080728dc24e5f903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa265d53152382a11080728dc24e5f903">&#9670;&nbsp;</a></span>IsDisplayReminderWindowWhenExitEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGeneralSettingContext::IsDisplayReminderWindowWhenExitEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if reminder window is enabled when user exits the meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates enabled. FALSE not. </dd></dl>
+
+</div>
+</div>
 <a id="a6162c026776d1195c996ab551300442c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6162c026776d1195c996ab551300442c">&#9670;&nbsp;</a></span>IsDualScreenModeEnabled()</h2>
 
@@ -460,6 +717,62 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a38a0b55c59d2a5f0d0770392351abe78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a0b55c59d2a5f0d0770392351abe78">&#9670;&nbsp;</a></span>IsRemoteControlAllApplicationsEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGeneralSettingContext::IsRemoteControlAllApplicationsEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if remote control of all applications is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates enabled. FALSE not. </dd></dl>
+
+</div>
+</div>
+<a id="adea02e08afbf74ac7cf947fff0d57f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea02e08afbf74ac7cf947fff0d57f05">&#9670;&nbsp;</a></span>IsShowMyMeetingElapseTimeEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGeneralSettingContext::IsShowMyMeetingElapseTimeEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if showing elapsed time of the meeting is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates to show. FALSE not. </dd></dl>
+
+</div>
+</div>
 <a id="a39de3d363b45645a669d61ab699bcfa0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39de3d363b45645a669d61ab699bcfa0">&#9670;&nbsp;</a></span>IsSplitScreenModeEnabled()</h2>
 
@@ -483,8 +796,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Determine if it is enable to use the split screen mode. </p>
-<dl class="section return"><dt>Returns</dt><dd>TRUE indicates to use the split mode. </dd></dl>
+<p>Determine if the split screen mode is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates enabled. FALSE not. </dd></dl>
 
 </div>
 </div>

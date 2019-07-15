@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -111,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abfa5fa7264754cf14f30a938368a4668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box if the password is wrong when join the meeting. Default: FALSE.  <a href="#abfa5fa7264754cf14f30a938368a4668">More...</a><br /></td></tr>
 <tr class="separator:abfa5fa7264754cf14f30a938368a4668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64454354179c06240bdc770db623d7eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a64454354179c06240bdc770db623d7eb">DisableWaitingForHostDialog</a> (bool bDisable)=0</td></tr>
-<tr class="memdesc:a64454354179c06240bdc770db623d7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box of waiting for the host after joining the meeting. Default: TRUE.  <a href="#a64454354179c06240bdc770db623d7eb">More...</a><br /></td></tr>
+<tr class="memdesc:a64454354179c06240bdc770db623d7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box of waiting for the host after joining the meeting. Only invalidate when the host is not in the meeting. Default: FALSE.  <a href="#a64454354179c06240bdc770db623d7eb">More...</a><br /></td></tr>
 <tr class="separator:a64454354179c06240bdc770db623d7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a145d3bc8d36e0cba091cc155efe366"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a7a145d3bc8d36e0cba091cc155efe366">EnableAutoEndOtherMeetingWhenStartMeeting</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a7a145d3bc8d36e0cba091cc155efe366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to end automatically another ongoing meeting when joining a new meeting. Default: FALSE.  <a href="#a7a145d3bc8d36e0cba091cc155efe366">More...</a><br /></td></tr>
@@ -132,10 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9f8e4dbbf57b3e73a120ae220696fcd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to redirect the process to end another meeting by user's own program. Default: FALSE.  <a href="#a9f8e4dbbf57b3e73a120ae220696fcd5">More...</a><br /></td></tr>
 <tr class="separator:a9f8e4dbbf57b3e73a120ae220696fcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91528d18d5d7e0d2ebe3bfead17860cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a91528d18d5d7e0d2ebe3bfead17860cc">EnableForceAutoStartMyVideoWhenJoinMeeting</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a91528d18d5d7e0d2ebe3bfead17860cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to force participants to start video when joining the meeting.  <a href="#a91528d18d5d7e0d2ebe3bfead17860cc">More...</a><br /></td></tr>
+<tr class="memdesc:a91528d18d5d7e0d2ebe3bfead17860cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force to enable the video when join meeting.  <a href="#a91528d18d5d7e0d2ebe3bfead17860cc">More...</a><br /></td></tr>
 <tr class="separator:a91528d18d5d7e0d2ebe3bfead17860cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e85b167fcdfe5bde42b6ef1ed6a5d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a19e85b167fcdfe5bde42b6ef1ed6a5d6">EnableForceAutoStopMyVideoWhenJoinMeeting</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a19e85b167fcdfe5bde42b6ef1ed6a5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to force participants to turn off video when joining the meeting.  <a href="#a19e85b167fcdfe5bde42b6ef1ed6a5d6">More...</a><br /></td></tr>
+<tr class="memdesc:a19e85b167fcdfe5bde42b6ef1ed6a5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force to turn off video when joining the meeting.  <a href="#a19e85b167fcdfe5bde42b6ef1ed6a5d6">More...</a><br /></td></tr>
 <tr class="separator:a19e85b167fcdfe5bde42b6ef1ed6a5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75a7c39cf7cb9f9fb6e0b4962922ac9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a75a7c39cf7cb9f9fb6e0b4962922ac9f">DisableAutoShowSelectJoinAudioDlgWhenJoinMeeting</a> (bool bDisable)=0</td></tr>
 <tr class="memdesc:a75a7c39cf7cb9f9fb6e0b4962922ac9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog SELECT JOIN AUDIO when joining meeting. Default: FALSE.  <a href="#a75a7c39cf7cb9f9fb6e0b4962922ac9f">More...</a><br /></td></tr>
@@ -237,7 +237,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the visibility of the dialog box of waiting for the host after joining the meeting. Default: TRUE. </p>
+<p>Set the visibility of the dialog box of waiting for the host after joining the meeting. Only invalidate when the host is not in the meeting. Default: FALSE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bDisable</td><td>TRUE indicates to hide the dialog box. FALSE not. </td></tr>
@@ -305,10 +305,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set if it is able to force participants to start video when joining the meeting. </p>
+<p>Force to enable the video when join meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>TRUE indicates to force participants to start video. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to force to start video. </td></tr>
   </table>
   </dd>
 </dl>
@@ -340,10 +340,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set if it is able to force participants to turn off video when joining the meeting. </p>
+<p>Force to turn off video when joining the meeting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>TRUE indicates to force participants to turn off video. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to force to turn off the video. </td></tr>
   </table>
   </dd>
 </dl>

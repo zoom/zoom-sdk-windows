@@ -18,6 +18,7 @@ var searchData=
   ['onchatstautschangednotification',['onChatStautsChangedNotification',['../class_i_meeting_chat_ctrl_event.html#aab5448e29e61eb22dd563956df2c078f',1,'IMeetingChatCtrlEvent']]],
   ['onclosedcaptionmsgreceived',['onClosedCaptionMsgReceived',['../class_i_closed_caption_controller_event.html#aae92315cb63a5bf1ba9d847c9c7ec1e4',1,'IClosedCaptionControllerEvent']]],
   ['oncloudrecordingstatus',['onCloudRecordingStatus',['../class_i_meeting_recording_ctrl_event.html#a390d2743eb4a845b1f9e973316a1a29d',1,'IMeetingRecordingCtrlEvent']]],
+  ['oncloudrecordingstorageinfo',['onCloudRecordingStorageInfo',['../class_i_recording_setting_context_event.html#a2ef18ee945ed11817ea94d8b158261df',1,'IRecordingSettingContextEvent']]],
   ['oncohostchangenotification',['onCoHostChangeNotification',['../class_i_meeting_participants_ctrl_event.html#ae5815d653de59adfaeeb390fd003c8f1',1,'IMeetingParticipantsCtrlEvent']]],
   ['oncomputercamdevicechanged',['onComputerCamDeviceChanged',['../class_i_video_setting_context_event.html#a72cc7604859705a1acdd71221797fca9',1,'IVideoSettingContextEvent']]],
   ['oncomputermicdevicechanged',['onComputerMicDeviceChanged',['../class_i_audio_setting_context_event.html#a0f66fc7cea1f1bf358f1138f39c5c4b9',1,'IAudioSettingContextEvent']]],

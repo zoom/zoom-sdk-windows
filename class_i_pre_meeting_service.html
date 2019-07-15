@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -173,7 +173,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the object pointer to <a class="el" href="class_i_schedule_meeting_item.html" title="Schedule meeting item interface. The APIs are used to schedule meeting and edit scheduled meeting...">IScheduleMeetingItem</a>. Otherwise failed, returns NULL. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the object pointer to <a class="el" href="class_i_schedule_meeting_item.html" title="Schedule meeting item interface. The APIs are used to schedule meeting and edit scheduled meeting...">IScheduleMeetingItem</a>. Otherwise failed, returns NULL. Notice that if the specified meeting is a webinar, NULL will be returned. This infterface doesn't support a webinar or a recurring one. </dd></dl>
 
 </div>
 </div>
@@ -237,7 +237,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>Once the function is called successfully, the user will receive the callback event via <a class="el" href="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438" title="Delete meeting callback. ">IPreMeetingServiceEvent::onDeleteMeeting</a> (). It is forbidden to delete personal meeting or webinar or the recurring one. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Once the function is called successfully, the user will receive the callback event via <a class="el" href="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438" title="Delete meeting callback. ">IPreMeetingServiceEvent::onDeleteMeeting</a> (). It is forbidden to delete personal meeting or webinar or a recurring one. </dd></dl>
 
 </div>
 </div>

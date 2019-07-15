@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -111,10 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2e906b3fe6c7297f414063597d7436d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the primary view meeting window.  <a href="#a2e906b3fe6c7297f414063597d7436d1">More...</a><br /></td></tr>
 <tr class="separator:a2e906b3fe6c7297f414063597d7436d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae3c3b0593ce8f7ebedb00e7b6caeb2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#afae3c3b0593ce8f7ebedb00e7b6caeb2">SetFloatVideoPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
-<tr class="memdesc:afae3c3b0593ce8f7ebedb00e7b6caeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of meeting window when the sharing begins.  <a href="#afae3c3b0593ce8f7ebedb00e7b6caeb2">More...</a><br /></td></tr>
+<tr class="memdesc:afae3c3b0593ce8f7ebedb00e7b6caeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the floating video window when sharing.  <a href="#afae3c3b0593ce8f7ebedb00e7b6caeb2">More...</a><br /></td></tr>
 <tr class="separator:afae3c3b0593ce8f7ebedb00e7b6caeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a514db9e6b2030c08abd04f4e1ef749d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a514db9e6b2030c08abd04f4e1ef749d2">SetSharingToolbarVisibility</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:a514db9e6b2030c08abd04f4e1ef749d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the sharing toolbar. Default value: FALSE.  <a href="#a514db9e6b2030c08abd04f4e1ef749d2">More...</a><br /></td></tr>
+<tr class="memdesc:a514db9e6b2030c08abd04f4e1ef749d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the sharing toolbar. Default value: TRUE.  <a href="#a514db9e6b2030c08abd04f4e1ef749d2">More...</a><br /></td></tr>
 <tr class="separator:a514db9e6b2030c08abd04f4e1ef749d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a662a4221df9f1446cf93f9e7963b5884"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a662a4221df9f1446cf93f9e7963b5884">SetBottomFloatToolbarWndVisibility</a> (bool bShow)=0</td></tr>
 <tr class="memdesc:a662a4221df9f1446cf93f9e7963b5884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the toolbar at the bottom of the meeting window. Default value: TRUE.  <a href="#a662a4221df9f1446cf93f9e7963b5884">More...</a><br /></td></tr>
@@ -132,11 +132,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae7c5178f12354cbed711e77c36f5529e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box when the request of the remote control is refused. Default value: TRUE.  <a href="#ae7c5178f12354cbed711e77c36f5529e">More...</a><br /></td></tr>
 <tr class="separator:ae7c5178f12354cbed711e77c36f5529e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58d38c519d3168d4923b5e4525c0649"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af58d38c519d3168d4923b5e4525c0649">EnableLeaveMeetingOptionForHost</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:af58d38c519d3168d4923b5e4525c0649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the LEAVE MEETING button when the host leaves the meeting. Default value: TRUE.  <a href="#af58d38c519d3168d4923b5e4525c0649">More...</a><br /></td></tr>
+<tr class="memdesc:af58d38c519d3168d4923b5e4525c0649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the LEAVE MEETING button on the pop-up dialogue box when the host leaves the meeting. Default value: TRUE.  <a href="#af58d38c519d3168d4923b5e4525c0649">More...</a><br /></td></tr>
 <tr class="separator:af58d38c519d3168d4923b5e4525c0649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77ec810cbf772b1744b032d158057c12"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a77ec810cbf772b1744b032d158057c12">EnableInviteButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a77ec810cbf772b1744b032d158057c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the INVITE button in the toolbar during the meeting. Default value: TRUE.  <a href="#a77ec810cbf772b1744b032d158057c12">More...</a><br /></td></tr>
 <tr class="separator:a77ec810cbf772b1744b032d158057c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f3cfff75cc35af3feb635569886407"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a48f3cfff75cc35af3feb635569886407">EnableVideoButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a48f3cfff75cc35af3feb635569886407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the Video button in the toolbar during the meeting. Default value: TRUE.  <a href="#a48f3cfff75cc35af3feb635569886407">More...</a><br /></td></tr>
+<tr class="separator:a48f3cfff75cc35af3feb635569886407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc34278083ee007ad51d37511325d986"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#abc34278083ee007ad51d37511325d986">EnableEnterAndExitFullScreenButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:abc34278083ee007ad51d37511325d986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the buttons to enter or exit the full screen in the meeting window. Default value: TRUE.  <a href="#abc34278083ee007ad51d37511325d986">More...</a><br /></td></tr>
 <tr class="separator:abc34278083ee007ad51d37511325d986"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,20 +167,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e6015638e2e87b5d27395382d91b6c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a3e6015638e2e87b5d27395382d91b6c1">RedirectClickCCBTNEvent</a> (bool bRedirect)=0</td></tr>
 <tr class="memdesc:a3e6015638e2e87b5d27395382d91b6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to handle the event with SDK user's own program by clicking Closed Caption button in the meeting. Default value: FALSE.  <a href="#a3e6015638e2e87b5d27395382d91b6c1">More...</a><br /></td></tr>
 <tr class="separator:a3e6015638e2e87b5d27395382d91b6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13f28838a724fa88ad6e2f8fa83077f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#ac13f28838a724fa88ad6e2f8fa83077f">RedirectMeetingWarningMsg</a> (<a class="el" href="structtag_redirect_warning_msg_option.html">RedirectWarningMsgOption</a> redirectOption)=0</td></tr>
+<tr class="memdesc:ac13f28838a724fa88ad6e2f8fa83077f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to handle the warning message with SDK user's own program in the meeting. Default value: None.  <a href="#ac13f28838a724fa88ad6e2f8fa83077f">More...</a><br /></td></tr>
+<tr class="separator:ac13f28838a724fa88ad6e2f8fa83077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d8ce9d6ff6e14155a5c053b0fdf183"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a62d8ce9d6ff6e14155a5c053b0fdf183">EnableToolTipsShow</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a62d8ce9d6ff6e14155a5c053b0fdf183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to show tool-tip in the meeting. Default value: TRUE.  <a href="#a62d8ce9d6ff6e14155a5c053b0fdf183">More...</a><br /></td></tr>
+<tr class="memdesc:a62d8ce9d6ff6e14155a5c053b0fdf183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to temporarily show tooltip of the button in the toolbar of the meeting and user can close it by click the "x". Default value: TRUE.  <a href="#a62d8ce9d6ff6e14155a5c053b0fdf183">More...</a><br /></td></tr>
 <tr class="separator:a62d8ce9d6ff6e14155a5c053b0fdf183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af670f3c319a935737f26c760bb145872"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af670f3c319a935737f26c760bb145872">EnableAirplayInstructionWindow</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:af670f3c319a935737f26c760bb145872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the introduction window when sharing on the iOS device. Default value: TRUE.  <a href="#af670f3c319a935737f26c760bb145872">More...</a><br /></td></tr>
 <tr class="separator:af670f3c319a935737f26c760bb145872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22fba0dc435f232ad00a5ab9b36d3f06"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a22fba0dc435f232ad00a5ab9b36d3f06">EnableClaimHostFeature</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a22fba0dc435f232ad00a5ab9b36d3f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to claim host. Default value: TRUE.  <a href="#a22fba0dc435f232ad00a5ab9b36d3f06">More...</a><br /></td></tr>
+<tr class="memdesc:a22fba0dc435f232ad00a5ab9b36d3f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to retrieve the permission of host (when the original host gives up the host permission). Default value: TRUE.  <a href="#a22fba0dc435f232ad00a5ab9b36d3f06">More...</a><br /></td></tr>
 <tr class="separator:a22fba0dc435f232ad00a5ab9b36d3f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0e2fd5f00f95f5a2deb11f61d453835"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af0e2fd5f00f95f5a2deb11f61d453835">EnableAutoHideJoinAudioDialog</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:af0e2fd5f00f95f5a2deb11f61d453835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box of choosing audio when joining the meeting. Default value: FALSE.  <a href="#af0e2fd5f00f95f5a2deb11f61d453835">More...</a><br /></td></tr>
 <tr class="separator:af0e2fd5f00f95f5a2deb11f61d453835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff6f63c58b1846e5794789610c9193ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#aff6f63c58b1846e5794789610c9193ed">AlwaysShowIconOnTaskBar</a> (bool bAlwaysShow)=0</td></tr>
-<tr class="memdesc:aff6f63c58b1846e5794789610c9193ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to display always the icon on the task-bar. Default value: FALSE.  <a href="#aff6f63c58b1846e5794789610c9193ed">More...</a><br /></td></tr>
+<tr class="memdesc:aff6f63c58b1846e5794789610c9193ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to display the preview window of the Meeting Controls on the task bar during sharing. Default value: FALSE.  <a href="#aff6f63c58b1846e5794789610c9193ed">More...</a><br /></td></tr>
 <tr class="separator:aff6f63c58b1846e5794789610c9193ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049df0d0b7f4e4a8b3200f5b8c226fc4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a049df0d0b7f4e4a8b3200f5b8c226fc4">DisableSplitScreenModeUIElements</a> (bool bDisable)=0</td></tr>
 <tr class="memdesc:a049df0d0b7f4e4a8b3200f5b8c226fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to enable split screen during the meeting. Default value: FALSE.  <a href="#a049df0d0b7f4e4a8b3200f5b8c226fc4">More...</a><br /></td></tr>
@@ -204,7 +210,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a55b101c298a15f81fd87f5f2e87eec28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to remove the topmost attribute of setting dialog. Default is not removed.  <a href="#a55b101c298a15f81fd87f5f2e87eec28">More...</a><br /></td></tr>
 <tr class="separator:a55b101c298a15f81fd87f5f2e87eec28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a8a8733d741d000178df41bad66798e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a7a8a8733d741d000178df41bad66798e">EnableGrabShareWithoutReminder</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a7a8a8733d741d000178df41bad66798e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to close the current sharing content without prompt and directly beginning a new sharing content. Default value: FALSE(prompt).  <a href="#a7a8a8733d741d000178df41bad66798e">More...</a><br /></td></tr>
+<tr class="memdesc:a7a8a8733d741d000178df41bad66798e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to close the current sharing of another user without prompt and directly beginning a new sharing content by the closer. Default value: FALSE(prompt).  <a href="#a7a8a8733d741d000178df41bad66798e">More...</a><br /></td></tr>
 <tr class="separator:a7a8a8733d741d000178df41bad66798e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a931a53fbae7f9a354089050b7cdc1f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a1a931a53fbae7f9a354089050b7cdc1f">EnableShowShareSwitchMultiToSingleConfirmDlg</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a1a931a53fbae7f9a354089050b7cdc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the SWITCH TO SINGLE PARTICIPANT SHARE dialog box when multiple participants are sharing and the user try to change the setting to single share. Default: TURE.  <a href="#a1a931a53fbae7f9a354089050b7cdc1f">More...</a><br /></td></tr>
@@ -222,11 +228,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac0ace0a88402dca8a94fc8d3b746eedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to display the button UPGRADE when prompt the tooltip of free meeting counts down. Default is displaying.  <a href="#ac0ace0a88402dca8a94fc8d3b746eedb">More...</a><br /></td></tr>
 <tr class="separator:ac0ace0a88402dca8a94fc8d3b746eedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0956b697ec41149e894d8fe654f1c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a6f0956b697ec41149e894d8fe654f1c5">SetShowInviteDlgTabPage</a> (<a class="el" href="meeting__configuration__interface_8h.html#a967a63deada4d25d8f84e4bf64a8b3a0">SDKInviteDlgTabPage</a> tabPage, bool bShow)=0</td></tr>
-<tr class="memdesc:a6f0956b697ec41149e894d8fe654f1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of specified tab in the invite dialog box when the dialog is shown. Default value: All are shown.  <a href="#a6f0956b697ec41149e894d8fe654f1c5">More...</a><br /></td></tr>
+<tr class="memdesc:a6f0956b697ec41149e894d8fe654f1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of some specified tabs in the invite dialog. Default: Show all the content.  <a href="#a6f0956b697ec41149e894d8fe654f1c5">More...</a><br /></td></tr>
 <tr class="separator:a6f0956b697ec41149e894d8fe654f1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af51561d7b6ae7b6d3057006bcfa04dc5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#af51561d7b6ae7b6d3057006bcfa04dc5">SetShowH323SubTabPage</a> (<a class="el" href="meeting__configuration__interface_8h.html#a74b90253d82554f68facd1cbad8db3fd">SDKH323TabPage</a> tabPage, bool bShow)=0</td></tr>
-<tr class="memdesc:af51561d7b6ae7b6d3057006bcfa04dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of specified tab in the Room System tab page of the invite dialog box when the dialog is shown. Default value: All are shown.  <a href="#af51561d7b6ae7b6d3057006bcfa04dc5">More...</a><br /></td></tr>
+<tr class="memdesc:af51561d7b6ae7b6d3057006bcfa04dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of some specified tabs in the Room System invitation dialog. Default: show all the content.Default: show all the content.  <a href="#af51561d7b6ae7b6d3057006bcfa04dc5">More...</a><br /></td></tr>
 <tr class="separator:af51561d7b6ae7b6d3057006bcfa04dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e84b3a59a735ce3680a7922ec0a619d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a1e84b3a59a735ce3680a7922ec0a619d">HideUpgradeWarningMsgForFreeUserWhenSchedule</a> (bool bHide)=0</td></tr>
+<tr class="memdesc:a1e84b3a59a735ce3680a7922ec0a619d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of upgrade warning message for free user when the user schedules a meeting. Default: FALSE.  <a href="#a1e84b3a59a735ce3680a7922ec0a619d">More...</a><br /></td></tr>
+<tr class="separator:a1e84b3a59a735ce3680a7922ec0a619d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949dfb63eb582b4c029daa56f780bd57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a949dfb63eb582b4c029daa56f780bd57">EnableLocalRecordingConvertProgressBarDialog</a> (bool bShow)=0</td></tr>
+<tr class="separator:a949dfb63eb582b4c029daa56f780bd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting user configuration interface. </p>
@@ -255,7 +266,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set if it is able to display always the icon on the task-bar. Default value: FALSE. </p>
+<p>Set if it is able to display the preview window of the Meeting Controls on the task bar during sharing. Default value: FALSE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bAlwaysShow</td><td>TRUE indicates to display always the icon on the task-bar. </td></tr>
@@ -497,10 +508,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set if it is able to claim host. Default value: TRUE. </p>
+<p>Set if it is able to retrieve the permission of host (when the original host gives up the host permission). Default value: TRUE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>TRUE indicates to claim host. FALSE not. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates that he can retrieve the permission of host. FALSE not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -599,7 +610,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set whether to close the current sharing content without prompt and directly beginning a new sharing content. Default value: FALSE(prompt). </p>
+<p>Set whether to close the current sharing of another user without prompt and directly beginning a new sharing content by the closer. Default value: FALSE(prompt). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates no prompt. FALSE not. </td></tr>
@@ -703,10 +714,42 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the visibility of the LEAVE MEETING button when the host leaves the meeting. Default value: TRUE. </p>
+<p>Set the visibility of the LEAVE MEETING button on the pop-up dialogue box when the host leaves the meeting. Default value: TRUE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to display the button. Otherwise not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a949dfb63eb582b4c029daa56f780bd57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949dfb63eb582b4c029daa56f780bd57">&#9670;&nbsp;</a></span>EnableLocalRecordingConvertProgressBarDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::EnableLocalRecordingConvertProgressBarDialog </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bShow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bShow</td><td>TRUE indicates to show the dialog box. FALSE not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -740,7 +783,7 @@ Public Member Functions</h2></td></tr>
 <p>Set the visibility of the SWITCH TO SINGLE PARTICIPANT SHARE dialog box when multiple participants are sharing and the user try to change the setting to single share. Default: TURE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>TRUE indicates to show dialog box when join the meeting. FALSE not. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to show dialog box if the multishare option is changed. FALSE not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -772,10 +815,44 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set if it is able to show tool-tip in the meeting. Default value: TRUE. </p>
+<p>Set if it is able to temporarily show tooltip of the button in the toolbar of the meeting and user can close it by click the "x". Default value: TRUE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable the tool-tip in the meeting. FALSE not. </td></tr>
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable to show the tooltip in the meeting. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a48f3cfff75cc35af3feb635569886407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f3cfff75cc35af3feb635569886407">&#9670;&nbsp;</a></span>EnableVideoButtonOnMeetingUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::EnableVideoButtonOnMeetingUI </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of the Video button in the toolbar during the meeting. Default value: TRUE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to display the button. Otherwise not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -912,6 +989,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">bHide</td><td>TRUE means hiding, otherwise not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1e84b3a59a735ce3680a7922ec0a619d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e84b3a59a735ce3680a7922ec0a619d">&#9670;&nbsp;</a></span>HideUpgradeWarningMsgForFreeUserWhenSchedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::HideUpgradeWarningMsgForFreeUserWhenSchedule </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bHide</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of upgrade warning message for free user when the user schedules a meeting. Default: FALSE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bHide</td><td>TRUE indicates to hide the warning message.FALSE not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1128,6 +1239,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac13f28838a724fa88ad6e2f8fa83077f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac13f28838a724fa88ad6e2f8fa83077f">&#9670;&nbsp;</a></span>RedirectMeetingWarningMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::RedirectMeetingWarningMsg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtag_redirect_warning_msg_option.html">RedirectWarningMsgOption</a>&#160;</td>
+          <td class="paramname"><em>redirectOption</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set if it is able to handle the warning message with SDK user's own program in the meeting. Default value: None. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">redirectOption</td><td>The parameter indicates the warning messages to be handled with user's own program. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the user calls this function to convert, the SDK will trigger the <a class="el" href="class_i_meeting_service_event.html#aaea8b84b264ed68e82d09fbe68faf458" title="Meeting statistics warning notification callback. ">IMeetingServiceEvent::onMeetingStatisticsWarningNotification()</a>, and the user shall deal with the subsequent logic himself. </dd></dl>
+
+</div>
+</div>
 <a id="a1fa6438656ce1bb5483ccd44052ca71e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fa6438656ce1bb5483ccd44052ca71e">&#9670;&nbsp;</a></span>SetAlwaysShowMeetingIDOnTitle()</h2>
 
@@ -1221,10 +1367,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the position of meeting window when the sharing begins. </p>
+<p>Set the position of the floating video window when sharing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>Specify the position of meeting window when the sharing begins. </td></tr>
+    <tr><td class="paramname">pos</td><td>Specify the position of the floating video window when sharing. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1358,13 +1504,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the visibility of the sharing toolbar. Default value: FALSE. </p>
+<p>Set the visibility of the sharing toolbar. Default value: TRUE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bShow</td><td>TRUE means to enable the display sharing toolbar. Otherwise not. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This function works only before the meeting or the sharing starts. </dd></dl>
 
 </div>
 </div>
@@ -1504,10 +1651,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the visibility of specified tab in the Room System tab page of the invite dialog box when the dialog is shown. Default value: All are shown. </p>
+<p>Set the visibility of some specified tabs in the Room System invitation dialog. Default: show all the content.Default: show all the content. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tabPage</td><td>Specifies a tab, see <a class="el" href="meeting__configuration__interface_8h.html#a74b90253d82554f68facd1cbad8db3fd">SDKH323TabPage</a> enum. </td></tr>
+    <tr><td class="paramname">tabPage</td><td>Specify a tab, see <a class="el" href="meeting__configuration__interface_8h.html#a74b90253d82554f68facd1cbad8db3fd">SDKH323TabPage</a> enum. </td></tr>
     <tr><td class="paramname">bShow</td><td>TRUE indicates to display the tab. FALSE not. </td></tr>
   </table>
   </dd>
@@ -1549,10 +1696,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the visibility of specified tab in the invite dialog box when the dialog is shown. Default value: All are shown. </p>
+<p>Set the visibility of some specified tabs in the invite dialog. Default: Show all the content. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tabPage</td><td>Specifies a tab, see <a class="el" href="meeting__configuration__interface_8h.html#a967a63deada4d25d8f84e4bf64a8b3a0">SDKInviteDlgTabPage</a> enum. </td></tr>
+    <tr><td class="paramname">tabPage</td><td>Specify a tab page, see <a class="el" href="meeting__configuration__interface_8h.html#a967a63deada4d25d8f84e4bf64a8b3a0">SDKInviteDlgTabPage</a> enum. </td></tr>
     <tr><td class="paramname">bShow</td><td>TRUE indicates to display the tab. FALSE not. </td></tr>
   </table>
   </dd>

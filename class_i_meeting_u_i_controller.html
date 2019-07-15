@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.3.47204.0325</span>
+   &#160;<span id="projectnumber">4.4.55130.0712</span>
    </div>
   </td>
  </tr>
@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a83bad388627a510ea534bb0cbbcbf0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the video users on previous page or next page in video wall mode.  <a href="#a83bad388627a510ea534bb0cbbcbf0d9">More...</a><br /></td></tr>
 <tr class="separator:a83bad388627a510ea534bb0cbbcbf0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add81a532a3b07e870e452c1ef621f5af"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html#add81a532a3b07e870e452c1ef621f5af">ShowSharingFrameWindows</a> (bool bShow)=0</td></tr>
-<tr class="memdesc:add81a532a3b07e870e452c1ef621f5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display or close a dialog box which enables the user to share the application or the screen.  <a href="#add81a532a3b07e870e452c1ef621f5af">More...</a><br /></td></tr>
+<tr class="memdesc:add81a532a3b07e870e452c1ef621f5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the green frame when sharing the application.  <a href="#add81a532a3b07e870e452c1ef621f5af">More...</a><br /></td></tr>
 <tr class="separator:add81a532a3b07e870e452c1ef621f5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82e0abf0b891bf72feb45652e9b039b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html#af82e0abf0b891bf72feb45652e9b039b">IsMinimizeModeOfFristScreenMeetingUIWnd</a> (<a class="el" href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950">SDKMinimizeUIMode</a> &amp;mode)=0</td></tr>
 <tr class="memdesc:af82e0abf0b891bf72feb45652e9b039b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the minimize state of the first view.  <a href="#af82e0abf0b891bf72feb45652e9b039b">More...</a><br /></td></tr>
@@ -180,6 +180,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9817516584f78a98b1e7062d11247f12"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html#a9817516584f78a98b1e7062d11247f12">SwitchSplitScreenMode</a> (bool bSplit)=0</td></tr>
 <tr class="memdesc:a9817516584f78a98b1e7062d11247f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch to the split screen mode or cancel.  <a href="#a9817516584f78a98b1e7062d11247f12">More...</a><br /></td></tr>
 <tr class="separator:a9817516584f78a98b1e7062d11247f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f56280537f9ce543321725c553d4e8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html#ab8f56280537f9ce543321725c553d4e8">SwapToShowShareViewOrVideo</a> (bool bToDisplayShare)=0</td></tr>
+<tr class="memdesc:ab8f56280537f9ce543321725c553d4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">when someone else shares, and meeting window is not full screen. you can call the api to switch video &amp; share display postion.  <a href="#ab8f56280537f9ce543321725c553d4e8">More...</a><br /></td></tr>
+<tr class="separator:ab8f56280537f9ce543321725c553d4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37573286ce97177dd6862ba365a4f996"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html#a37573286ce97177dd6862ba365a4f996">IsDisplayingShareViewOrVideo</a> (bool &amp;bIsShare)=0</td></tr>
+<tr class="memdesc:a37573286ce97177dd6862ba365a4f996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the meeting is displaying the sharing screen now.  <a href="#a37573286ce97177dd6862ba365a4f996">More...</a><br /></td></tr>
+<tr class="separator:a37573286ce97177dd6862ba365a4f996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b41cb343a89d7ee2439f7c52c1cc65"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller.html#ab3b41cb343a89d7ee2439f7c52c1cc65">CanSwapToShowShareViewOrVideo</a> (bool &amp;bCan)=0</td></tr>
+<tr class="memdesc:ab3b41cb343a89d7ee2439f7c52c1cc65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the user can swap to show sharing screen or video now.  <a href="#ab3b41cb343a89d7ee2439f7c52c1cc65">More...</a><br /></td></tr>
+<tr class="separator:ab3b41cb343a89d7ee2439f7c52c1cc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting UI Controller Interface. </p>
@@ -209,6 +218,41 @@ Public Member Functions</h2></td></tr>
 
 <p>Active the principal window of meeting and place it on top. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum. </dd></dl>
+
+</div>
+</div>
+<a id="ab3b41cb343a89d7ee2439f7c52c1cc65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b41cb343a89d7ee2439f7c52c1cc65">&#9670;&nbsp;</a></span>CanSwapToShowShareViewOrVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingUIController::CanSwapToShowShareViewOrVideo </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bCan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if the user can swap to show sharing screen or video now. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">bCan</td><td>TRUE means Can, otherwise not </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SDKErr_Success means success, otherwise not Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>
@@ -507,6 +551,41 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Hide the dialog to choose the audio to join the meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a37573286ce97177dd6862ba365a4f996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37573286ce97177dd6862ba365a4f996">&#9670;&nbsp;</a></span>IsDisplayingShareViewOrVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingUIController::IsDisplayingShareViewOrVideo </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bIsShare</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if the meeting is displaying the sharing screen now. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">bIsShare</td><td>TRUE means is showing sharing screen, FALSE means is showing video. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
@@ -832,10 +911,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display or close a dialog box which enables the user to share the application or the screen. </p>
+<p>Set the visibility of the green frame when sharing the application. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bShow</td><td>TRUE indicates to display the dialog. FALSE hide. </td></tr>
+    <tr><td class="paramname">bShow</td><td>TRUE indicates to display the frame. FALSE hide. </td></tr>
   </table>
   </dd>
 </dl>
@@ -876,6 +955,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This function works only in the share mode. </dd></dl>
+
+</div>
+</div>
+<a id="ab8f56280537f9ce543321725c553d4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f56280537f9ce543321725c553d4e8">&#9670;&nbsp;</a></span>SwapToShowShareViewOrVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingUIController::SwapToShowShareViewOrVideo </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bToDisplayShare</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>when someone else shares, and meeting window is not full screen. you can call the api to switch video &amp; share display postion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bToDisplayShare</td><td>TRUE means to display share, otherwise video. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

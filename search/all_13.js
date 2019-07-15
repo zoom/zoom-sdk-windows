@@ -5,6 +5,7 @@ var searchData=
   ['uihookwndtype_5fbottomtoolbar',['UIHOOKWNDTYPE_BOTTOMTOOLBAR',['../ui__hook__interface_8h.html#a44a74ee8633f8b12c79ef799b9b40b3facedb6b6385c406aec0bc029729b41a5b',1,'ui_hook_interface.h']]],
   ['uihookwndtype_5fmainwnd',['UIHOOKWNDTYPE_MAINWND',['../ui__hook__interface_8h.html#a44a74ee8633f8b12c79ef799b9b40b3faceeb39e2d800bd345102a2700b7cd9b8',1,'ui_hook_interface.h']]],
   ['uihookwndtype_5fuserdefiend',['UIHOOKWNDTYPE_USERDEFIEND',['../ui__hook__interface_8h.html#a44a74ee8633f8b12c79ef799b9b40b3fa4dd5deabc002219a5b714e4e7ba73b81',1,'ui_hook_interface.h']]],
+  ['uilogfilesize',['uiLogFileSize',['../structtag_init_param.html#abea3502ad84c7b52c71aa2a7511358a6',1,'tagInitParam']]],
   ['uiwindowiconbigid',['uiWindowIconBigID',['../structtag_init_param.html#ada97ecb60384849dfaf10c73ae86ef10',1,'tagInitParam']]],
   ['uiwindowiconsmallid',['uiWindowIconSmallID',['../structtag_init_param.html#aae908722d99433f3eb877bb4a2fe31ac',1,'tagInitParam']]],
   ['undo',['Undo',['../class_i_customized_annotation_obj.html#adb54b550ff4c39615f3936b542565c43',1,'ICustomizedAnnotationObj::Undo()'],['../class_i_annotation_controller.html#afb4f00df5783e82d6f851ce9826d58e9',1,'IAnnotationController::Undo()']]],

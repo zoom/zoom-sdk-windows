@@ -45,7 +45,9 @@ var searchData=
   ['authret_5faccountnotsupport',['AUTHRET_ACCOUNTNOTSUPPORT',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea659b80bdcc8ed1cfe9fd3ee826266d15',1,'auth_service_interface.h']]],
   ['authret_5fkeyorsecretempty',['AUTHRET_KEYORSECRETEMPTY',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea798510f2b24793b0b260f96c8c1b4f90',1,'auth_service_interface.h']]],
   ['authret_5fkeyorsecretwrong',['AUTHRET_KEYORSECRETWRONG',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fceae5a46faea55081e885866378d274dbf6',1,'auth_service_interface.h']]],
+  ['authret_5fnetworkissue',['AUTHRET_NETWORKISSUE',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea9b88db2ef9a428fe4de5bdc2aaa02432',1,'auth_service_interface.h']]],
   ['authret_5fnone',['AUTHRET_NONE',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea036365ce6cca9c34e12180e0392946d9',1,'auth_service_interface.h']]],
+  ['authret_5fovertime',['AUTHRET_OVERTIME',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea30a019736dace642d6d1c6f69c089658',1,'auth_service_interface.h']]],
   ['authret_5fservice_5fbusy',['AUTHRET_SERVICE_BUSY',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea3e57c6ef9e9336aeb532905c41ab3d1e',1,'auth_service_interface.h']]],
   ['authret_5fsuccess',['AUTHRET_SUCCESS',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea4daabf4c01f3794044785bed33e53159',1,'auth_service_interface.h']]],
   ['authret_5funknown',['AUTHRET_UNKNOWN',['../auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fcea0f6578bf9de923965919dbe5025d5f19',1,'auth_service_interface.h']]]

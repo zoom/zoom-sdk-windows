@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getaccessibilitysettings',['GetAccessibilitySettings',['../class_i_setting_service.html#af162114aa1b002bd3ebdb61f89b5c8a1',1,'ISettingService']]],
   ['getaccountinfo',['GetAccountInfo',['../class_i_auth_service.html#a0a1f56ed2ca8628d26449652b714f9c8',1,'IAuthService']]],
   ['getannotationcontroller',['GetAnnotationController',['../class_i_meeting_service.html#a6f06487c5e996991a172926531f4ee4a',1,'IMeetingService']]],
   ['getaudioconnquality',['GetAudioConnQuality',['../class_i_meeting_service.html#a476adeed6a994f3a617e782d10e7feab',1,'IMeetingService']]],
@@ -23,6 +24,7 @@ var searchData=
   ['getchatstatus',['GetChatStatus',['../class_i_meeting_chat_controller.html#a3eaa1d75d94de5ca10f3d3b62a402442',1,'IMeetingChatController']]],
   ['getclosedcaptionhistorysavedpath',['GetClosedCaptionHistorySavedPath',['../class_i_closed_caption_controller.html#ad0d1e82ccafff041f60e347296af3b83',1,'IClosedCaptionController']]],
   ['getclosedcaptionurlfor3rdparty',['GetClosedCaptionUrlFor3rdParty',['../class_i_closed_caption_controller.html#ab5b26b379112f71468169bdaa36c9f07',1,'IClosedCaptionController']]],
+  ['getcloudrecordingstorageinfo',['GetCloudRecordingStorageInfo',['../class_i_recording_setting_context.html#a6bdc2b66e7afaf953ea140459ae4e543',1,'IRecordingSettingContext']]],
   ['getcode',['GetCode',['../class_i_meeting_call_in_phone_number_info.html#add32e25e3dedca9d201224da0569da2c',1,'IMeetingCallInPhoneNumberInfo']]],
   ['getcontent',['GetContent',['../class_i_chat_msg_info.html#a1e866235bfc65a466742a91dd488f659',1,'IChatMsgInfo']]],
   ['getcountrycode',['GetCountryCode',['../class_i_meeting_phone_support_country_info.html#a1ffca6a791d28bbc98cc3a24dd57f9f0',1,'IMeetingPhoneSupportCountryInfo']]],
@@ -115,6 +117,7 @@ var searchData=
   ['getquerytelaudioinfohelper',['GetQueryTelAudioInfoHelper',['../class_i_query_meeting_item_audio_option_helper.html#add9638f1e8a051c71adf57c0a0af9d92',1,'IQueryMeetingItemAudioOptionHelper']]],
   ['getreceiverdisplayname',['GetReceiverDisplayName',['../class_i_chat_msg_info.html#a45d05993639fcbc215f9911c4be33154',1,'IChatMsgInfo']]],
   ['getreceiveruserid',['GetReceiverUserId',['../class_i_chat_msg_info.html#a632a77554d90850f37743d2fc56d7e4f',1,'IChatMsgInfo']]],
+  ['getrecordingmanagementurl',['GetRecordingManagementURL',['../class_i_recording_setting_context.html#a6704ea941664ef6750f34e793a45b242',1,'IRecordingSettingContext']]],
   ['getrecordingpath',['GetRecordingPath',['../class_i_recording_setting_context.html#a1beb0ba47ed7e12554dbf8e63f1afc4c',1,'IRecordingSettingContext']]],
   ['getrecordingsettings',['GetRecordingSettings',['../class_i_setting_service.html#aabfb7854d3ea62ea475e88b596521bfc',1,'ISettingService']]],
   ['getreqfromuserid',['GetReqFromUserId',['../class_i_request_start_video_handler.html#a7bbf4775974259ae91aaba490283b0fc',1,'IRequestStartVideoHandler']]],

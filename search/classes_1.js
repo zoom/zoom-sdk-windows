@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['iaccessibilitysettingcontext',['IAccessibilitySettingContext',['../class_i_accessibility_setting_context.html',1,'']]],
   ['iaccountinfo',['IAccountInfo',['../class_i_account_info.html',1,'']]],
   ['iactivevideorenderelement',['IActiveVideoRenderElement',['../class_i_active_video_render_element.html',1,'']]],
   ['iannotationcontroller',['IAnnotationController',['../class_i_annotation_controller.html',1,'']]],
@@ -101,6 +102,7 @@ var searchData=
   ['iquerymeetingitemtelaudioinfohelper',['IQueryMeetingItemTelAudioInfoHelper',['../class_i_query_meeting_item_tel_audio_info_helper.html',1,'']]],
   ['iquerymeetingitemvideooptionhelper',['IQueryMeetingItemVideoOptionHelper',['../class_i_query_meeting_item_video_option_helper.html',1,'']]],
   ['irecordingsettingcontext',['IRecordingSettingContext',['../class_i_recording_setting_context.html',1,'']]],
+  ['irecordingsettingcontextevent',['IRecordingSettingContextEvent',['../class_i_recording_setting_context_event.html',1,'']]],
   ['irequeststartvideohandler',['IRequestStartVideoHandler',['../class_i_request_start_video_handler.html',1,'']]],
   ['ischeduleforuser',['IScheduleForUser',['../class_i_schedule_for_user.html',1,'']]],
   ['ischedulemeetingitem',['IScheduleMeetingItem',['../class_i_schedule_meeting_item.html',1,'']]],
