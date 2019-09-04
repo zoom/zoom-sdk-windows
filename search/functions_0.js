@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['accept',['Accept',['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler']]],
+  ['accept',['Accept',['../class_i_request_start_audio_handler.html#a0565e25525af95bd01919e981dd5d843',1,'IRequestStartAudioHandler::Accept()'],['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler::Accept()']]],
   ['addcustomizedpictureresource',['AddCustomizedPictureResource',['../class_i_customized_resource_helper.html#a8c7766166e0e1019621437be31607061',1,'ICustomizedResourceHelper']]],
   ['addcustomizedstringresource',['AddCustomizedStringResource',['../class_i_customized_resource_helper.html#a687a3184c4f515f9204ccef45b3cdaa4',1,'ICustomizedResourceHelper']]],
   ['addcustomizedurlresource',['AddCustomizedURLResource',['../class_i_customized_resource_helper.html#a8450215f576f54fcd9bc03c72ab4b2ea',1,'ICustomizedResourceHelper']]],

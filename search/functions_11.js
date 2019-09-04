@@ -107,6 +107,7 @@ var searchData=
   ['switchsplitscreenmode',['SwitchSplitScreenMode',['../class_i_meeting_u_i_controller.html#a9817516584f78a98b1e7062d11247f12',1,'IMeetingUIController']]],
   ['switchtofitwindowmodewhenviewshare',['SwitchToFitWindowModeWhenViewShare',['../class_i_meeting_share_controller.html#aafe3087f7962c4ce8c582bfda68fde52',1,'IMeetingShareController']]],
   ['switchtooriginalsizemodewhenviewshare',['SwitchToOriginalSizeModeWhenViewShare',['../class_i_meeting_share_controller.html#a3c183aeb63df8f9529d55c9180ecae28',1,'IMeetingShareController']]],
+  ['switchtosharenextcamera',['SwitchToShareNextCamera',['../class_i_meeting_share_controller.html#a3d30c942399004a2e9021c0357c19f80',1,'IMeetingShareController']]],
   ['switchtovideowall',['SwitchToVideoWall',['../class_i_meeting_u_i_controller.html#a09c2be0e51b6e5a95f00fc0b09a6b5dd',1,'IMeetingUIController']]],
   ['swtichtoacitvespeaker',['SwtichToAcitveSpeaker',['../class_i_meeting_u_i_controller.html#a2581800ca361dbd5b63f1b3f210c044f',1,'IMeetingUIController']]]
 ];

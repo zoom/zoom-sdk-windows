@@ -1,6 +1,8 @@
 var searchData=
 [
   ['obconfigopts',['obConfigOpts',['../structtag_init_param.html#aa5437efac4f1d4b3e57e816277f25d19',1,'tagInitParam']]],
+  ['onactivespeakervideouserchanged',['onActiveSpeakerVideoUserChanged',['../class_i_meeting_video_ctrl_event.html#ac131115ad436955fea4b415e8d33908b',1,'IMeetingVideoCtrlEvent']]],
+  ['onactivevideouserchanged',['onActiveVideoUserChanged',['../class_i_meeting_video_ctrl_event.html#a88f3ca0bc9d10d300d466403b47b648f',1,'IMeetingVideoCtrlEvent']]],
   ['onairplayinstructionwndnotification',['onAirPlayInstructionWndNotification',['../class_i_meeting_configuration_event.html#af04b457784ab2690801df796ca840dae',1,'IMeetingConfigurationEvent']]],
   ['onallowattendeechatnotification',['onAllowAttendeeChatNotification',['../class_i_meeting_webinar_ctrl_event.html#aeca24fd82c0a2d1b1f20c5e1a1353ea7',1,'IMeetingWebinarCtrlEvent']]],
   ['onallowpaneliststartvideonotification',['onAllowPanelistStartVideoNotification',['../class_i_meeting_webinar_ctrl_event.html#a6804f71aea1c114d711010acb026ea1b',1,'IMeetingWebinarCtrlEvent']]],
@@ -27,6 +29,9 @@ var searchData=
   ['oncustomizedannotationobjdestroyed',['onCustomizedAnnotationObjDestroyed',['../class_i_customized_annotation_controller_event.html#affa3b7cd1d58fc77cd726f16031fe281',1,'ICustomizedAnnotationControllerEvent']]],
   ['oncustomizedlocalrecordingsourcenotification',['onCustomizedLocalRecordingSourceNotification',['../class_i_meeting_recording_ctrl_event.html#af856aeb7958a9d099519cbc700b5bbbf',1,'IMeetingRecordingCtrlEvent']]],
   ['oncustomlivestreammenuclicked',['onCustomLiveStreamMenuClicked',['../class_i_meeting_u_i_controller_event.html#a69b271fc06266a214ef466cf35e91d06',1,'IMeetingUIControllerEvent']]],
+  ['ondefaultcamdevicechanged',['onDefaultCamDeviceChanged',['../class_i_video_setting_context_event.html#a0119b5b109c590d58fda2a2fdd7cc0cd',1,'IVideoSettingContextEvent']]],
+  ['ondefaultmicdevicechanged',['onDefaultMicDeviceChanged',['../class_i_audio_setting_context_event.html#ae1fcdd3a93511eb2b62d804a459c6f9e',1,'IAudioSettingContextEvent']]],
+  ['ondefaultspeakerdevicechanged',['onDefaultSpeakerDeviceChanged',['../class_i_audio_setting_context_event.html#a68bbf29994e96864c1b388255672ab87',1,'IAudioSettingContextEvent']]],
   ['ondeletemeeting',['onDeleteMeeting',['../class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438',1,'IPreMeetingServiceEvent']]],
   ['ondepromptpanelist2attendeeresult',['onDepromptPanelist2AttendeeResult',['../class_i_meeting_webinar_ctrl_event.html#a7ee5edd01e37ff892a0920f4b2874882',1,'IMeetingWebinarCtrlEvent']]],
   ['ondirectsharestatusupdate',['OnDirectShareStatusUpdate',['../class_i_direct_share_service_helper_event.html#a5bafc99f91b9da66edfae9ab0fca421d',1,'IDirectShareServiceHelperEvent']]],
@@ -43,6 +48,7 @@ var searchData=
   ['onfreemeetingupgradetopromeeting',['onFreeMeetingUpgradeToProMeeting',['../class_i_meeting_configuration_free_meeting_event.html#a9ffcb014a03cea0b2e2b648586384dc9',1,'IMeetingConfigurationFreeMeetingEvent']]],
   ['onhostchangenotification',['onHostChangeNotification',['../class_i_meeting_participants_ctrl_event.html#a4e11df0f729de9c76c3ec6c2cbe574e3',1,'IMeetingParticipantsCtrlEvent']]],
   ['onhostinchinaenabledstatusnotification',['onHostInChinaEnabledStatusNotification',['../class_i_select_meeting_item_meeting_option_helper_event.html#a9abd5c226e16715f55dea1a854414049',1,'ISelectMeetingItemMeetingOptionHelperEvent']]],
+  ['onhostrequeststartaudio',['onHostRequestStartAudio',['../class_i_meeting_audio_ctrl_event.html#ac0129a61d0c6f53ede950e126ca6607c',1,'IMeetingAudioCtrlEvent']]],
   ['onhostrequeststartvideo',['onHostRequestStartVideo',['../class_i_meeting_video_ctrl_event.html#a2f18d32d9fe703d62a05980c9e0c01d8',1,'IMeetingVideoCtrlEvent']]],
   ['oninputmeetingpasswordandscreennamenotification',['onInputMeetingPasswordAndScreenNameNotification',['../class_i_meeting_configuration_event.html#ab1405a6efb4d96f4e92dfc7e08494e6f',1,'IMeetingConfigurationEvent']]],
   ['oninvitebtnclicked',['onInviteBtnClicked',['../class_i_meeting_u_i_controller_event.html#a3b219eca79283d9cbd4888a8cdcc6ad7',1,'IMeetingUIControllerEvent']]],

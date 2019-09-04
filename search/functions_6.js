@@ -120,7 +120,7 @@ var searchData=
   ['getrecordingmanagementurl',['GetRecordingManagementURL',['../class_i_recording_setting_context.html#a6704ea941664ef6750f34e793a45b242',1,'IRecordingSettingContext']]],
   ['getrecordingpath',['GetRecordingPath',['../class_i_recording_setting_context.html#a1beb0ba47ed7e12554dbf8e63f1afc4c',1,'IRecordingSettingContext']]],
   ['getrecordingsettings',['GetRecordingSettings',['../class_i_setting_service.html#aabfb7854d3ea62ea475e88b596521bfc',1,'ISettingService']]],
-  ['getreqfromuserid',['GetReqFromUserId',['../class_i_request_start_video_handler.html#a7bbf4775974259ae91aaba490283b0fc',1,'IRequestStartVideoHandler']]],
+  ['getreqfromuserid',['GetReqFromUserId',['../class_i_request_start_audio_handler.html#ad3c64ce360d39aef20b9368f3eead41d',1,'IRequestStartAudioHandler::GetReqFromUserId()'],['../class_i_request_start_video_handler.html#a7bbf4775974259ae91aaba490283b0fc',1,'IRequestStartVideoHandler::GetReqFromUserId()']]],
   ['getrequiredinfotype',['GetRequiredInfoType',['../class_i_meeting_password_and_screen_name_handler.html#a7b0ee44f562ebb0a67f58dd8b141753d',1,'IMeetingPasswordAndScreenNameHandler']]],
   ['getscheduleforhelper',['GetScheduleForHelper',['../class_i_select_meeting_item_meeting_option_helper.html#a7df229ed6d3507e900c075a838e5b0e4',1,'ISelectMeetingItemMeetingOptionHelper']]],
   ['getscheduletelaudiohelper',['GetScheduleTelAudioHelper',['../class_i_select_meeting_item_audio_option_helper.html#a358a3910035e72fd891fe8e7848ea281',1,'ISelectMeetingItemAudioOptionHelper']]],

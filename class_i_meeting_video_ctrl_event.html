@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.55130.0712</span>
+   &#160;<span id="projectnumber">4.4.55968.0904</span>
    </div>
   </td>
  </tr>
@@ -114,16 +114,84 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f18d32d9fe703d62a05980c9e0c01d8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_ctrl_event.html#a2f18d32d9fe703d62a05980c9e0c01d8">onHostRequestStartVideo</a> (<a class="el" href="class_i_request_start_video_handler.html">IRequestStartVideoHandler</a> *handler_)=0</td></tr>
 <tr class="memdesc:a2f18d32d9fe703d62a05980c9e0c01d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of the requirement to turn on the video from the host.  <a href="#a2f18d32d9fe703d62a05980c9e0c01d8">More...</a><br /></td></tr>
 <tr class="separator:a2f18d32d9fe703d62a05980c9e0c01d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac131115ad436955fea4b415e8d33908b"><td class="memItemLeft" align="right" valign="top"><a id="ac131115ad436955fea4b415e8d33908b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onActiveSpeakerVideoUserChanged</b> (unsigned int userid)=0</td></tr>
+<tr class="memitem:ac131115ad436955fea4b415e8d33908b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_ctrl_event.html#ac131115ad436955fea4b415e8d33908b">onActiveSpeakerVideoUserChanged</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:ac131115ad436955fea4b415e8d33908b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of the active speaker video user changes.  <a href="#ac131115ad436955fea4b415e8d33908b">More...</a><br /></td></tr>
 <tr class="separator:ac131115ad436955fea4b415e8d33908b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88f3ca0bc9d10d300d466403b47b648f"><td class="memItemLeft" align="right" valign="top"><a id="a88f3ca0bc9d10d300d466403b47b648f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onActiveVideoUserChanged</b> (unsigned int userid)=0</td></tr>
+<tr class="memitem:a88f3ca0bc9d10d300d466403b47b648f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_video_ctrl_event.html#a88f3ca0bc9d10d300d466403b47b648f">onActiveVideoUserChanged</a> (unsigned int userid)=0</td></tr>
+<tr class="memdesc:a88f3ca0bc9d10d300d466403b47b648f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of the active video user changes.  <a href="#a88f3ca0bc9d10d300d466403b47b648f">More...</a><br /></td></tr>
 <tr class="separator:a88f3ca0bc9d10d300d466403b47b648f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting video controller event callback. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac131115ad436955fea4b415e8d33908b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac131115ad436955fea4b415e8d33908b">&#9670;&nbsp;</a></span>onActiveSpeakerVideoUserChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingVideoCtrlEvent::onActiveSpeakerVideoUserChanged </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of the active speaker video user changes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>The ID of user who becomes the new active speaker. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88f3ca0bc9d10d300d466403b47b648f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f3ca0bc9d10d300d466403b47b648f">&#9670;&nbsp;</a></span>onActiveVideoUserChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingVideoCtrlEvent::onActiveVideoUserChanged </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>userid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of the active video user changes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userid</td><td>The ID of user who becomes the new active speaker. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2f18d32d9fe703d62a05980c9e0c01d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f18d32d9fe703d62a05980c9e0c01d8">&#9670;&nbsp;</a></span>onHostRequestStartVideo()</h2>
 
@@ -249,7 +317,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onActiveVideo
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>zoomsdk/h/meeting_service_components/<a class="el" href="meeting__video__interface_8h_source.html">meeting_video_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__video__interface_8h_source.html">meeting_video_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

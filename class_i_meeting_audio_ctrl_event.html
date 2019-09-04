@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.55130.0712</span>
+   &#160;<span id="projectnumber">4.4.55968.0904</span>
    </div>
   </td>
  </tr>
@@ -111,10 +111,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a220486be2d7fa30c6464e91b3754e114"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_audio_ctrl_event.html#a220486be2d7fa30c6464e91b3754e114">onUserActiveAudioChange</a> (<a class="el" href="class_i_list.html">IList</a>&lt; unsigned int &gt; *plstActiveAudio)=0</td></tr>
 <tr class="memdesc:a220486be2d7fa30c6464e91b3754e114"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event that users whose audio is active changed.  <a href="#a220486be2d7fa30c6464e91b3754e114">More...</a><br /></td></tr>
 <tr class="separator:a220486be2d7fa30c6464e91b3754e114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0129a61d0c6f53ede950e126ca6607c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_audio_ctrl_event.html#ac0129a61d0c6f53ede950e126ca6607c">onHostRequestStartAudio</a> (<a class="el" href="class_i_request_start_audio_handler.html">IRequestStartAudioHandler</a> *handler_)=0</td></tr>
+<tr class="memdesc:ac0129a61d0c6f53ede950e126ca6607c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of the requirement to turn on the audio from the host.  <a href="#ac0129a61d0c6f53ede950e126ca6607c">More...</a><br /></td></tr>
+<tr class="separator:ac0129a61d0c6f53ede950e126ca6607c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting audio callback event. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac0129a61d0c6f53ede950e126ca6607c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0129a61d0c6f53ede950e126ca6607c">&#9670;&nbsp;</a></span>onHostRequestStartAudio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingAudioCtrlEvent::onHostRequestStartAudio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_request_start_audio_handler.html">IRequestStartAudioHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of the requirement to turn on the audio from the host. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler_</td><td>A pointer to the <a class="el" href="class_i_request_start_audio_handler.html" title="Process after the user receives the requirement from the host to turn on the audio. ">IRequestStartAudioHandler</a>. For more details, see <a class="el" href="class_i_request_start_audio_handler.html">IRequestStartAudioHandler</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a220486be2d7fa30c6464e91b3754e114"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a220486be2d7fa30c6464e91b3754e114">&#9670;&nbsp;</a></span>onUserActiveAudioChange()</h2>
 
@@ -195,7 +232,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>zoomsdk/h/meeting_service_components/<a class="el" href="meeting__audio__interface_8h_source.html">meeting_audio_interface.h</a></li>
+<li>h/meeting_service_components/<a class="el" href="meeting__audio__interface_8h_source.html">meeting_audio_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

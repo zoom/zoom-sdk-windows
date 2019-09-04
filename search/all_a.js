@@ -36,6 +36,7 @@ var searchData=
   ['livestreamstatus_5fnone',['LiveStreamStatus_None',['../meeting__live__stream__interface_8h.html#a95d8849df58f4106b263f7f403184efca83e257740f5ef4a0f63df50e39ee12c4',1,'meeting_live_stream_interface.h']]],
   ['livestreamstatus_5fstart_5ffailed',['LiveStreamStatus_Start_Failed',['../meeting__live__stream__interface_8h.html#a95d8849df58f4106b263f7f403184efca52527a96db8a0c7494f4a909381d44b3',1,'meeting_live_stream_interface.h']]],
   ['livestreamstatus_5fstart_5ffailed_5ftimeout',['LiveStreamStatus_Start_Failed_Timeout',['../meeting__live__stream__interface_8h.html#a95d8849df58f4106b263f7f403184efca774b9fb0e4c33d3afb331c0eb0b3d0b0',1,'meeting_live_stream_interface.h']]],
+  ['localvideodevicestatus',['LocalVideoDeviceStatus',['../struct_local_video_device_status.html',1,'']]],
   ['lockmeeting',['LockMeeting',['../class_i_meeting_service.html#afadc9f4e11d9c4968f6512266991731c',1,'IMeetingService']]],
   ['lockshare',['LockShare',['../class_i_meeting_share_controller.html#a0db9bd1d5a9de7ac3937043f4885b641',1,'IMeetingShareController']]],
   ['login',['Login',['../class_i_auth_service.html#ac325f257a69634778cb91dde969cd80b',1,'IAuthService']]],

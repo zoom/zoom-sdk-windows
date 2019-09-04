@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['accept',['Accept',['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler']]],
+  ['accept',['Accept',['../class_i_request_start_audio_handler.html#a0565e25525af95bd01919e981dd5d843',1,'IRequestStartAudioHandler::Accept()'],['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler::Accept()']]],
   ['addcustomizedpictureresource',['AddCustomizedPictureResource',['../class_i_customized_resource_helper.html#a8c7766166e0e1019621437be31607061',1,'ICustomizedResourceHelper']]],
   ['addcustomizedstringresource',['AddCustomizedStringResource',['../class_i_customized_resource_helper.html#a687a3184c4f515f9204ccef45b3cdaa4',1,'ICustomizedResourceHelper']]],
   ['addcustomizedurlresource',['AddCustomizedURLResource',['../class_i_customized_resource_helper.html#a8450215f576f54fcd9bc03c72ab4b2ea',1,'ICustomizedResourceHelper']]],
@@ -61,6 +61,7 @@ var searchData=
   ['audio_5funmuted',['Audio_UnMuted',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35aed5fc16fdeac04db04d2d99e1ea8050e',1,'meeting_audio_interface.h']]],
   ['audio_5funmuted_5fbyhost',['Audio_UnMuted_ByHost',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35aed098202fc9443c1d1bbf4353a495838',1,'meeting_audio_interface.h']]],
   ['audio_5funmutedall_5fbyhost',['Audio_UnMutedAll_ByHost',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35a11b9f84a682faae5e39d64bb4014590f',1,'meeting_audio_interface.h']]],
+  ['audiorawdata',['AudioRawData',['../class_audio_raw_data.html',1,'']]],
   ['audiostatus',['AudioStatus',['../meeting__audio__interface_8h.html#a29fe721c7ad1269a9fb39ce5a134ce35',1,'meeting_audio_interface.h']]],
   ['audiotype',['AudioType',['../meeting__audio__interface_8h.html#a5356e05a1ded2cb9e065e0203c4acbcf',1,'meeting_audio_interface.h']]],
   ['audiotype_5fnone',['AUDIOTYPE_NONE',['../meeting__audio__interface_8h.html#a5356e05a1ded2cb9e065e0203c4acbcfa7cfd03e1d449fd1461d011a33b86a8f4',1,'meeting_audio_interface.h']]],

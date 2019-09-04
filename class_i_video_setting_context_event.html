@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.55130.0712</span>
+   &#160;<span id="projectnumber">4.4.55968.0904</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a72cc7604859705a1acdd71221797fca9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context_event.html#a72cc7604859705a1acdd71221797fca9">onComputerCamDeviceChanged</a> (<a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_camera_info.html">ICameraInfo</a> *&gt; *pNewCameraList)=0</td></tr>
 <tr class="memdesc:a72cc7604859705a1acdd71221797fca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event if the SDK detects that the computer camera devices have been changed.  <a href="#a72cc7604859705a1acdd71221797fca9">More...</a><br /></td></tr>
 <tr class="separator:a72cc7604859705a1acdd71221797fca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0119b5b109c590d58fda2a2fdd7cc0cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context_event.html#a0119b5b109c590d58fda2a2fdd7cc0cd">onDefaultCamDeviceChanged</a> (const wchar_t *deviceId, const wchar_t *deviceName)=0</td></tr>
+<tr class="memdesc:a0119b5b109c590d58fda2a2fdd7cc0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the user that a camera device is selected.  <a href="#a0119b5b109c590d58fda2a2fdd7cc0cd">More...</a><br /></td></tr>
+<tr class="separator:a0119b5b109c590d58fda2a2fdd7cc0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Video setting context callback event. </p>
@@ -146,8 +149,53 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0119b5b109c590d58fda2a2fdd7cc0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0119b5b109c590d58fda2a2fdd7cc0cd">&#9670;&nbsp;</a></span>onDefaultCamDeviceChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoSettingContextEvent::onDefaultCamDeviceChanged </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>deviceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>deviceName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notify the user that a camera device is selected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceId</td><td>Specify a device to be selected. </td></tr>
+    <tr><td class="paramname">deviceName</td><td>Specify the device name assigned by deviceId. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>zoomsdk/h/<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a></li>
+<li>h/<a class="el" href="setting__service__interface_8h_source.html">setting_service_interface.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

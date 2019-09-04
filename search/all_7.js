@@ -32,6 +32,7 @@ var searchData=
   ['hideorshownovideouseronvideowall',['HideOrShowNoVideoUserOnVideoWall',['../class_i_meeting_video_controller.html#a0a512517f5828ee32a0ded7127c6d8e4',1,'IMeetingVideoController']]],
   ['hiderecorditemonmeetingui',['HideRecordItemOnMeetingUI',['../class_i_meeting_u_i_elem_configuration.html#afd7066de099b092c120980e24b840dbc',1,'IMeetingUIElemConfiguration']]],
   ['hidesettingdlg',['HideSettingDlg',['../class_i_setting_service.html#a5c7bd7b92ad1e382a0ea6a840e6a193d',1,'ISettingService']]],
+  ['hideswitchcamerabutton',['HideSwitchCameraButton',['../class_i_meeting_u_i_elem_configuration.html#a24badfb46c502e54df7d225b49ef5a92',1,'IMeetingUIElemConfiguration']]],
   ['hideupgradefreemeetingbutton',['HideUpgradeFreeMeetingButton',['../class_i_meeting_u_i_elem_configuration.html#ac0ace0a88402dca8a94fc8d3b746eedb',1,'IMeetingUIElemConfiguration']]],
   ['hideupgradewarningmsgforfreeuserwhenschedule',['HideUpgradeWarningMsgForFreeUserWhenSchedule',['../class_i_meeting_u_i_elem_configuration.html#a1e84b3a59a735ce3680a7922ec0a619d',1,'IMeetingUIElemConfiguration']]],
   ['hparent',['hParent',['../structtag_show_chat_dlg_param.html#a3c6b249cf9ee90c798b62b1b8a460950',1,'tagShowChatDlgParam::hParent()'],['../structtag_show_setting_dlg_param.html#acc2a6944153407b6e1715b58ef49ad20',1,'tagShowSettingDlgParam::hParent()'],['../structtag_wnd_position.html#a03529808c83dc9c592ad21f742abbc7d',1,'tagWndPosition::hParent()']]],

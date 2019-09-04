@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ignore',['Ignore',['../class_i_request_start_video_handler.html#ae2ebcc69822ce26f9cda519e9f460938',1,'IRequestStartVideoHandler']]],
+  ['ignore',['Ignore',['../class_i_request_start_audio_handler.html#a0237e8be7e7b7771ca9d313f4246810b',1,'IRequestStartAudioHandler::Ignore()'],['../class_i_request_start_video_handler.html#ae2ebcc69822ce26f9cda519e9f460938',1,'IRequestStartVideoHandler::Ignore()']]],
   ['init',['Init',['../class_i_calender_service.html#aa76fd07f937e6ffda41b834d909fd0b4',1,'ICalenderService']]],
   ['initsdk',['InitSDK',['../zoom__sdk_8h.html#ad2ef730cb6a637dc46747d0f2dc83893',1,'zoom_sdk.h']]],
   ['inputmeetingpasswordandscreenname',['InputMeetingPasswordAndScreenName',['../class_i_meeting_password_and_screen_name_handler.html#ab29a0db05dd700d209b76a05bbd7568c',1,'IMeetingPasswordAndScreenNameHandler']]],
@@ -16,7 +16,7 @@ var searchData=
   ['isalwaysshowmeetingcontrolsenable',['IsAlwaysShowMeetingControlsEnable',['../class_i_accessibility_setting_context.html#aab960069560f50989e094fb077dc4543',1,'IAccessibilitySettingContext']]],
   ['isalwaysshownameonvideoenabled',['IsAlwaysShowNameOnVideoEnabled',['../class_i_video_setting_context.html#aaef7a6dbea356cb5e4eea0078be75e63',1,'IVideoSettingContext']]],
   ['isalwaysuse16v9',['IsAlwaysUse16v9',['../class_i_video_setting_context.html#a540ad3997a8cfe4ecf50707e4e5092c8',1,'IVideoSettingContext']]],
-  ['isannoataiondisable',['IsAnnoataionDisable',['../class_i_annotation_controller.html#ae625b9c86c79e202900851f4f08533b8',1,'IAnnotationController']]],
+  ['isannoataiondisable',['IsAnnoataionDisable',['../class_i_annotation_controller.html#a239c4381e484c69b5896797dfdab1b69',1,'IAnnotationController']]],
   ['isattendeevideoonoroff',['IsAttendeeVideoOnOrOff',['../class_i_query_meeting_item_video_option_helper.html#a4c13adf32c38abeee383a2a89deefc17',1,'IQueryMeetingItemVideoOptionHelper']]],
   ['isaudiomuted',['IsAudioMuted',['../class_i_user_info.html#a31130af1330952ec5435d9464b8020fe',1,'IUserInfo']]],
   ['isautoadjustmicenabled',['IsAutoAdjustMicEnabled',['../class_i_audio_setting_context.html#a5e90cf8551087ce78fc451b03a6fc503',1,'IAudioSettingContext']]],
