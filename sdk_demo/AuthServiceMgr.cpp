@@ -9,7 +9,7 @@ CAuthServiceMgr::CAuthServiceMgr()
 	m_bLogined = false;
 }
 
-CAuthServiceMgr::CAuthServiceMgr(CDemoUI* pSink)
+CAuthServiceMgr::CAuthServiceMgr(IAuthServiceMgrEvent* pSink)
 {
 	m_pSink = pSink;
 	m_bInited = false;
@@ -98,46 +98,27 @@ bool CAuthServiceMgr::LogOut()
 
 void CAuthServiceMgr::onAuthenticationReturn(ZOOM_SDK_NAMESPACE::AuthResult ret)
 {
-	TCHAR szLog[MAX_PATH] = { 0 };
-	wsprintf(szLog, _T("onAuthenticationReturn:ret=%d\r\n"), ret);
-	OutputDebugString(szLog);
-
-	if (m_pSink == NULL)
-		return;
-
-	if (ZOOM_SDK_NAMESPACE::AUTHRET_SUCCESS == ret)
-		m_pSink->SwitchUIPageByType(UIPAGE_USER);
-	else
+	if (m_pSink)
 	{
-		m_pSink->ShowStatus(UIPAGE_AUTH, ERROR_AUTH);
+		m_pSink->onAuthenticationReturn(ret);
 	}
 }
 
 
 void CAuthServiceMgr::onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo)
 {
-	TCHAR szLog[MAX_PATH] = { 0 };
-	wsprintf(szLog, _T("onLoginRet:status=%d\r\n"), status);
-	OutputDebugString(szLog);
-
-	if (m_pSink == NULL)
-		return;
-
-	if (status == ZOOM_SDK_NAMESPACE::LOGIN_SUCCESS)
+	m_bLogined = (ZOOM_SDK_NAMESPACE::LOGIN_SUCCESS == status) ? true : false;
+	if (m_pSink)
 	{
-		m_pSink->SwitchUIPageByType(UIPAGE_PT);
-		m_bLogined = true;
+		m_pSink->onLoginRet(status, pAccountInfo);
 	}
-	else if (status == ZOOM_SDK_NAMESPACE::LOGIN_IDLE)
-		;
-	else if (status == ZOOM_SDK_NAMESPACE::LOGIN_PROCESSING)
-		;
-	else
-		m_pSink->ShowStatus(UIPAGE_LOGIN, ERROR_LOGIN);
 
 }
 
 void CAuthServiceMgr::onLogout()
 {
-	OutputDebugString(_T("onLogout successful!\r\n"));
+	if (m_pSink)
+	{
+		m_pSink->onLogout();
+	}
 }

@@ -151,6 +151,10 @@ protected:
 	bool m_bDrawCaret;
 	bool m_bInited;
 	RECT	m_rcTextPadding;
+	CDuiString m_sPromptText;
+	DWORD m_dwPromptTextColor;
+	UINT	m_uPromptTextStyle;
+	CDuiString m_sValids;
 };
 
 } // namespace DuiLib

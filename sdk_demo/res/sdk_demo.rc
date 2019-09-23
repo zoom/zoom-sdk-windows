@@ -20,6 +20,7 @@
 LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
 #endif //_WIN32
 
+IDI_ICON_LOGO           ICON                    "SaaSbeeLogo.ico"
 /////////////////////////////////////////////////////////////////////////////
 //
 // ZPIMGRES
@@ -32,6 +33,8 @@ BLUEBUTTONPRESS.PNG		                ZPIMGRES                "BlueButtonpress.pn
 CLOSE_BTN.PNG			                ZPIMGRES                "close_btn.png"
 VSCROLL_BAR.PNG		     	            ZPIMGRES                "vscroll_bar.png"
 CHECKBOX_BK.PNG		     	            ZPIMGRES                "checkbox_bk.png"
+ZOOM_LOGO.PNG							ZPIMGRES				"zoom_logo.png"
+waiting.gif								ZPIMGRES				"waiting.gif"
 
 /////////////////////////////////////////////////////////////////////////////
 //

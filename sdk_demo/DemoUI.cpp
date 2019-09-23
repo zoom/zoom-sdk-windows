@@ -62,6 +62,8 @@ void CDemoUI::InitAllControls()
 	m_containerLoginUI = static_cast<CContainerUI*>(m_PaintManager.FindControl(_T("container_login")));
 	m_containerPTApi = static_cast<CContainerUI*>(m_PaintManager.FindControl(_T("container_pt_api")));
 	m_containerStart = static_cast<CContainerUI*>(m_PaintManager.FindControl(_T("container_start")));
+	m_containerWaitingUI = static_cast<CContainerUI*>(m_PaintManager.FindControl(_T("waiting_panel")));
+
 	m_containerMeetingApi = static_cast<CContainerUI*>(m_PaintManager.FindControl(_T("container_meeting_api")));
 	m_containerShareApi = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("container_share_api")));
 	m_containerVideoApi = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("container_video_api")));
@@ -110,6 +112,10 @@ void CDemoUI::InitAllControls()
 	m_btnAudioApi = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_audio_api")));
 
 	m_listUsers = static_cast<CListUI*>(m_PaintManager.FindControl(_T("list_users")));
+
+	m_gifWaiting = static_cast<CGifAnimUI*>(m_PaintManager.FindControl(_T("gif_waiting"))); 
+
+	ShowWaiting(false);
 }
 
 void CDemoUI::ResetAllControls()
@@ -169,6 +175,7 @@ void CDemoUI::ResetAllControls()
 
 void CDemoUI::SwitchUIPageByType(UIPageType emPageType /* = UIPAGE_AUTH */)
 {
+	ShowWaiting(false);
 	bool bAuth(false), bUser(false), bLogin(false), bPT(false), bStart(false), bJoin(false), bMeetingApi(false);
 	if (emPageType == UIPAGE_AUTH)
 	{
@@ -305,7 +312,13 @@ bool CDemoUI::SDKAuth()
 	authParam.appKey = strKey.c_str();
 	authParam.appSecret = strSecret.c_str();
 
-	return m_pAuthServiceMgr->SDKAuth(authParam);
+	bool bAuth = m_pAuthServiceMgr->SDKAuth(authParam);
+	if (bAuth)
+	{
+		ShowWaiting(true);
+	}
+
+	return bAuth;
 }
 
 bool CDemoUI::Login()
@@ -325,7 +338,13 @@ bool CDemoUI::Login()
 	param.password = strPassword.c_str();
 	param.bRememberMe = bRememberMe;
 
-	return m_pAuthServiceMgr->Login(param);
+	bool bRet = m_pAuthServiceMgr->Login(param);
+	if (bRet)
+	{
+		ShowWaiting(true);
+	}
+
+	return bRet;
 }
 
 bool CDemoUI::Start()
@@ -336,6 +355,11 @@ bool CDemoUI::Start()
 		bRet = NormalUserStart();
 	else
 		bRet = APIUserStart();
+
+	if (bRet)
+	{
+		ShowWaiting(true);
+	}
 
 	return bRet;
 }
@@ -390,6 +414,11 @@ bool CDemoUI::Join()
 		bRet = NormalUserJoin();
 	else
 		bRet = APIUserJoin();
+
+	if (bRet)
+	{
+		ShowWaiting(true);
+	}
 
 	return bRet;
 }
@@ -863,6 +892,20 @@ void CDemoUI::CleanUpUserList()
 	m_listUsers->RemoveAll();
 }
 
+void CDemoUI::ShowWaiting(bool bWaiting)
+{
+	if (m_gifWaiting)
+	{
+		bWaiting ? m_gifWaiting->PlayGif() : m_gifWaiting->StopGif();
+	}
+
+	if (m_containerWaitingUI)
+	{
+		m_containerWaitingUI->SetVisible(bWaiting);
+	}
+
+}
+
 LRESULT CDemoUI::OnClose(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
 {
 	bHandled = FALSE;
@@ -903,5 +946,119 @@ LRESULT CDemoUI::OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHan
 	}
 
 	return HTCLIENT;
+}
+
+void CDemoUI::onAuthenticationReturn(ZOOM_SDK_NAMESPACE::AuthResult ret)
+{
+	TCHAR szLog[MAX_PATH] = { 0 };
+	wsprintf(szLog, _T("onAuthenticationReturn:ret=%d\r\n"), ret);
+	OutputDebugString(szLog);
+	ShowWaiting(false);
+	if (ZOOM_SDK_NAMESPACE::AUTHRET_SUCCESS == ret)
+		SwitchUIPageByType(UIPAGE_USER);
+	else
+	{
+		ShowStatus(UIPAGE_AUTH, ERROR_AUTH);
+	}
+}
+
+void CDemoUI::onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo)
+{
+	switch (status)
+	{
+	case ZOOM_SDK_NAMESPACE::LOGIN_SUCCESS:
+		{
+			SwitchUIPageByType(UIPAGE_PT);
+		}
+		break;
+	case ZOOM_SDK_NAMESPACE::LOGIN_PROCESSING:
+		{
+			ShowWaiting(true);
+		}
+		break;
+	case ZOOM_SDK_NAMESPACE::LOGIN_FAILED:
+		{
+			ShowStatus(UIPAGE_LOGIN, ERROR_LOGIN);
+		}
+		break;
+	}
+}
+
+void CDemoUI::onLogout()
+{
+
+}
+
+void CDemoUI::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult /*= 0*/)
+{
+	switch (status)
+	{
+	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_CONNECTING:
+	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_RECONNECTING:
+	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_DISCONNECTING:
+		{
+			CleanUpUserList();
+			ShowWaiting(true);
+		}
+		break;
+	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_ENDED:
+	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_FAILED:
+		{
+			CleanUpUserList();
+			SwitchUIPageByType(UIPAGE_PT);
+		}
+		break;
+	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_INMEETING:
+		{
+			SwitchUIPageByType(UIPAGE_MEETING);
+		}
+	default:
+		break;
+	}
+}
+
+void CDemoUI::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList /*= NULL*/)
+{
+	if (lstUserID && m_pMeetingServiceMgr)
+	{
+		int count = lstUserID->GetCount();
+		for (int i = 0; i < count; i++)
+		{
+			int userId = lstUserID->GetItem(i);
+			ZOOM_SDK_NAMESPACE::IUserInfo* pUserInfo = m_pMeetingServiceMgr->GetUserByUserID(userId);
+			if (pUserInfo)
+			{
+				TCHAR szUserID[MAX_PATH] = {0};
+				wsprintf(szUserID, _T("%d"), pUserInfo->GetUserID());
+				UpdateUserList(i, pUserInfo->GetUserName(), szUserID, true);
+
+				TCHAR szLog[MAX_PATH] = { 0 };
+				wsprintf(szUserID, _T("onUserJoin:User (%s) join meeting, userid(%d), Is host(%d), Video is on(%d)\r\n"), pUserInfo->GetUserName(), pUserInfo->GetUserID(), pUserInfo->IsHost(), pUserInfo->IsVideoOn());
+				OutputDebugString(szLog);
+			}
+		}
+
+		SwitchUIPageByType(UIPAGE_MEETING);
+	}
+	else
+		ShowStatus(UIPAGE_START, ERROR_START);
+}
+
+void CDemoUI::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList /*= NULL*/)
+{
+	if (lstUserID)
+	{
+		int count = lstUserID->GetCount();
+		for (int i = 0; i < count; i++)
+		{
+			TCHAR szUserID[MAX_PATH] = {0};
+			wsprintf(szUserID, _T("%d"), lstUserID->GetItem(i));
+			UpdateUserList(i, _T(""), szUserID, false);
+
+			TCHAR szLog[MAX_PATH] = {0};
+			wsprintf(szLog, _T("onUserLeft:userid (%d) left the meeting\r\n"), lstUserID->GetItem(i));
+			OutputDebugString(szLog);
+		}
+	}
 }
 

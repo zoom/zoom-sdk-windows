@@ -101,6 +101,10 @@ extern "C"
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	SDK_API SDKError CleanUPSDK();
+
+	/// \brief Get Zoom SDK Version
+	/// \return the zoom sdk version information.
+	SDK_API const wchar_t* GetVersion();
 }
 
 END_ZOOM_SDK_NAMESPACE

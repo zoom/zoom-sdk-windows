@@ -2,7 +2,7 @@
 // Microsoft Visual C++ generated include file.
 // Used by sdk_demo.rc
 //
-
+#define IDI_ICON_LOGO                      123
 #define IDXML_DEMO_UI 151
 #define IDXML_MESSAGE_WND 152
 

@@ -8,7 +8,7 @@ CMeetingServiceMgr::CMeetingServiceMgr()
 	m_bInited = false;
 }
 
-CMeetingServiceMgr::CMeetingServiceMgr(CDemoUI* pSink)
+CMeetingServiceMgr::CMeetingServiceMgr(IMeetingserviceMgrEvent* pSink)
 {
 	m_pSink = pSink;
 	m_strCamera = _T("");
@@ -275,17 +275,9 @@ bool CMeetingServiceMgr::UnMuteAudio(unsigned int userid)
 
 void CMeetingServiceMgr::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult)
 {
-	TCHAR szLog[MAX_PATH] = { 0 };
-	wsprintf(szLog, _T("meeting status:%d, details result:%d\r\n"), status, iResult);
-	OutputDebugString(szLog);
-
-	if (m_pSink == NULL)
-		return;
-
-	if (status == ZOOM_SDK_NAMESPACE::MEETING_STATUS_ENDED || status == ZOOM_SDK_NAMESPACE::MEETING_STATUS_FAILED)
+	if (m_pSink)
 	{
-		m_pSink->CleanUpUserList();
-		m_pSink->SwitchUIPageByType(UIPAGE_PT);
+		m_pSink->onMeetingStatusChanged(status, iResult);
 	}
 }
 
@@ -299,50 +291,17 @@ void CMeetingServiceMgr::onRecording2MP4Processing(int iPercentage)
 
 void CMeetingServiceMgr::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList)
 {
-	if (m_pSink == NULL)
-		return;
-
-	if (lstUserID && m_pMeetingService)
+	if (m_pSink)
 	{
-		int count = lstUserID->GetCount();
-		for (int i = 0; i < count; i++)
-		{
-			int userId = lstUserID->GetItem(i);
-			ZOOM_SDK_NAMESPACE::IUserInfo* pUserInfo = m_pMeetingService->GetUserByUserID(userId);
-			if (pUserInfo)
-			{
-				TCHAR szUserID[MAX_PATH] = {0};
-				wsprintf(szUserID, _T("%d"), pUserInfo->GetUserID());
-				m_pSink->UpdateUserList(i, pUserInfo->GetUserName(), szUserID, true);
-
-				TCHAR szLog[MAX_PATH] = { 0 };
-				wsprintf(szUserID, _T("onUserJoin:User (%s) join meeting, userid(%d), Is host(%d), Video is on(%d)\r\n"), pUserInfo->GetUserName(), pUserInfo->GetUserID(), pUserInfo->IsHost(), pUserInfo->IsVideoOn());
-				OutputDebugString(szLog);
-			}
-		}
-
-		m_pSink->SwitchUIPageByType(UIPAGE_MEETING);
+		m_pSink->onUserJoin(lstUserID, strUserList);
 	}
-	else
-		m_pSink->ShowStatus(UIPAGE_START, ERROR_START);
-		
 }
 
 void CMeetingServiceMgr::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList)
 {
-	if (lstUserID && m_pMeetingService)
+	if (m_pSink)
 	{
-		int count = lstUserID->GetCount();
-		for (int i = 0; i < count; i++)
-		{
-			TCHAR szUserID[MAX_PATH] = {0};
-			wsprintf(szUserID, _T("%d"), lstUserID->GetItem(i));
-			m_pSink->UpdateUserList(i, _T(""), szUserID, false);
-
-			TCHAR szLog[MAX_PATH] = {0};
-			wsprintf(szLog, _T("onUserLeft:userid (%d) left the meeting\r\n"), lstUserID->GetItem(i));
-			OutputDebugString(szLog);
-		}
+		m_pSink->onUserJoin(lstUserID, strUserList);
 	}
 }
 
@@ -355,55 +314,10 @@ void CMeetingServiceMgr::onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus statu
 	TCHAR szLog[MAX_PATH] = { 0 };
 	wsprintf(szLog, _T("onSharingStatus:status=%d, userid=%d\r\n"), status, userId);
 	OutputDebugString(szLog);
-
-	if (m_pSink == NULL)
-		return;
-
-	std::wstring strStatus = _T("Share failed!");
-	
-	if (status == ZOOM_SDK_NAMESPACE::Sharing_Self_Send_Begin)
-		strStatus = _T("Sharing_Self_Send_Begin");
-	else if (status == ZOOM_SDK_NAMESPACE::Sharing_Self_Send_End)
-		strStatus = _T("Sharing_Self_Send_End");
-	else if (status == ZOOM_SDK_NAMESPACE::Sharing_Other_Share_Begin)
-		strStatus = _T("Sharing_Other_Share_Begin");
-	else if (status == ZOOM_SDK_NAMESPACE::Sharing_Other_Share_End)
-		strStatus = _T("Sharing_Other_Share_End");
-	else if (status == ZOOM_SDK_NAMESPACE::Sharing_View_Other_Sharing)
-		strStatus = _T("Sharing_View_Other_Sharing");
-	else if (status == ZOOM_SDK_NAMESPACE::Sharing_Pause)
-		strStatus = _T("Sharing_Pause");
-	else if (status == ZOOM_SDK_NAMESPACE::Sharing_Resume)
-		strStatus = _T("Sharing_Resume");
-
-	m_pSink->ShowStatus(UIPAGE_MEETING, strStatus);
 }
 
 void CMeetingServiceMgr::onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList)
-{
-	std::wstring strStatus = _T("Audio failed!");
-	int count = lstAudioStatusChange->GetCount();
-	for (int i = 0; i < count; i ++)
-	{
-		ZOOM_SDK_NAMESPACE::IUserAudioStatus* audioStatus = lstAudioStatusChange->GetItem(i);
-		
-		if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_None)
-			strStatus = _T("Audio_None");
-		else if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_Muted)
-			strStatus = _T("Audio_Muted");
-		else if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_UnMuted)
-			strStatus = _T("Audio_UnMuted");
-		else if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_Muted_ByHost)
-			strStatus = _T("Audio_Muted_ByHost");
-		else if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_UnMuted_ByHost)
-			strStatus = _T("Audio_UnMuted_ByHost");
-		else if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_MutedAll_ByHost)
-			strStatus = _T("Audio_MutedAll_ByHost");
-		else if (audioStatus->GetStatus() == ZOOM_SDK_NAMESPACE::Audio_UnMutedAll_ByHost)
-			strStatus = _T("Audio_UnMutedAll_ByHost");
-
-		m_pSink->ShowStatus(UIPAGE_MEETING, strStatus);
-	}	
+{	
 }
 void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status)
 {
@@ -411,6 +325,11 @@ void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_N
 }
 
 void CMeetingServiceMgr::onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status)
+{
+
+}
+
+void CMeetingServiceMgr::onLockShareStatus(bool bLocked)
 {
 
 }
@@ -424,4 +343,14 @@ void CMeetingServiceMgr::onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* 
 	wsprintf(szLog, _T("%d:%s-->%d:%s:%s\r\n"), chatMsg->GetSenderUserId(), chatMsg->GetSenderDisplayName(),
 		chatMsg->GetReceiverUserId(), chatMsg->GetReceiverDisplayName(), chatMsg->GetContent());
 	OutputDebugString(szLog);
+}
+
+ZOOM_SDK_NAMESPACE::IUserInfo* CMeetingServiceMgr::GetUserByUserID(unsigned int userid)
+{
+	if (m_pMeetingService)
+	{
+		return m_pMeetingService->GetUserByUserID(userid);
+	}
+
+	return NULL;
 }

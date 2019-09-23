@@ -68,6 +68,18 @@ enum MeetingFailCode
 	MEETING_FAIL_WRITE_CONFIG_FILE			= 50,	///< Failed to write configure file
 };  
 
+/*! \enum MeetingType
+    \brief Meeting type.
+    A more detailed struct description.
+*/
+enum MeetingType
+{
+	MEETING_TYPE_NONE,
+	MEETING_TYPE_NORMAL,
+	MEETING_TYPE_WEBINAR,
+	MEETING_TYPE_BREAKOUTROOM,
+};
+
 /*! \enum LeaveMeetingCmd
     \brief Leave Meeting command.
     A more detailed struct description.
@@ -207,6 +219,12 @@ typedef struct tagStartParam
 		memset(&param, 0, sizeof(param));
 	}
 }StartParam;
+
+typedef struct tagVideoWallPageInfoParam
+{
+	int nCurrentPage;
+	int nTotalPages;
+}VideoWallPageInfoParam;
 
 /*! \struct tagShowChatDlgParam
     \brief Show meeting chat dialog Parameter.
@@ -400,6 +418,10 @@ public:
 	/// \param userId Sharing user id.
 	virtual void onSharingStatus(SharingStatus status, unsigned int userId) = 0;
 
+	/// \brief lock share status notify call back 
+	/// \param bLocked specify if sharing is locked.
+	virtual void onLockShareStatus(bool bLocked) = 0;
+
 	/// \brief User's audio status change callback
 	/// \param lstAudioStatusChange List of status changed user. This param will invalid after this function call end.
 	/// \param strAudioStatusList Audio status change list in json format,Reserved.
@@ -553,6 +575,18 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError HideJoinAudioDlg() = 0;
+
+	/// \brief get page info on video wall mode.
+	/// \param videoWallPageInfoParam store current page index and total pages.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError GetWallViewPageInfo(VideoWallPageInfoParam& videoWallPageInfoParam) = 0;
+
+	/// \brief show previous or next page video user on video wall mode.
+	/// \param bPageUp specifies previous or next page.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ShowPreOrNextPageVideo(bool bPageUp) = 0;
 };
 
 enum AudioType
@@ -562,6 +596,36 @@ enum AudioType
 	AUDIOTYPE_PHONE,
 	AUDIOTYPE_UNKNOW,
 };
+
+/*! \enum UserRole
+    \brief User role.
+    A more detailed struct description.
+*/
+enum UserRole
+{
+	USERROLE_NONE,
+	USERROLE_HOST,
+	USERROLE_COHOST,
+	USERROLE_PANELIST,
+	USERROLE_BREAKOUTROOM_MODERATOR,
+	USERROLE_ATTENDEE,
+};
+
+class IBreakoutRoomsInfo
+{
+public:
+	virtual ~IBreakoutRoomsInfo() {};
+	/// \brief Get Breakout Room ID
+	/// \return If the function succeeds, the return value is Breakout Room ID.
+	///If the function fails, the return value is NULL.
+	virtual const wchar_t* GetBID() = 0;
+
+	/// \brief Get Breakout Room name
+	/// \return If the function succeeds, the return value is Breakout Room name.
+	///If the function fails, the return value is NULL.
+	virtual const wchar_t* GetBreakoutRoomName() = 0;
+};
+
 /// \brief User information Interface
 ///
 class IUserInfo
@@ -609,6 +673,10 @@ public:
 	/// \brief Is raise hand or not
 	/// \return Is raise hand or not
 	virtual bool IsRaiseHand() = 0;
+
+	/// \brief User Role
+	/// \return User Role
+	virtual UserRole GetUserRole() = 0;
 };
 
 /*! \enum AnnotationToolType
@@ -709,11 +777,48 @@ public:
 	virtual SDKError Redo(SDKViewType viewtype) = 0;
 };
 
+/// \brief Meeting Password And Screen Name Handler
+///
+class IMeetingPasswordAndScreenNameHandler
+{
+public:
+	enum RequiredInfoType
+	{
+		REQUIRED_INFO_TYPE_NONE,
+		REQUIRED_INFO_TYPE_Password, ///< if you want to join meeting, you need input password
+		REQUIRED_INFO_TYPE_Password4WrongPassword,///< you input a wrong password, please input again
+		REQUIRED_INFO_TYPE_PasswordAndScreenName,///< if you want to join meeting, you need input password and screen name
+	};
+
+	/// \brief get the required information you need to input.
+	virtual RequiredInfoType GetRequiredInfoType() = 0;
+
+	/// \brief Input the meeting password and screen name.
+	virtual bool InputMeetingPasswordAndScreenName(const wchar_t* meetingPassword, const wchar_t* screenName) = 0;
+
+	// \brief cancel to input the meeting password and screen name.
+	virtual void Cancel() = 0;
+};
+
+/// \brief Meeting Configuration Event callback
+///
+class IMeetingConfigurationEvent
+{
+public:
+	/// \brief meeting need password or screen name callback
+	/// \param pHandler which will be invoked for when this message type is received.
+	virtual void onInputMeetingPasswordAndScreenNameNotification(IMeetingPasswordAndScreenNameHandler* pHandler) = 0;
+};
+
 /// \brief Meeting Configuration Interface
 ///
 class IMeetingConfiguration
 {
 public:
+	/// \brief set a handler for meeting configuration notification.
+	/// \param pEvent which will be invoked for when this message type is received.
+	virtual void SetEvent(IMeetingConfigurationEvent* pEvent) = 0;
+
 	/// \brief Reset meeting configuration
 	virtual void Reset() = 0;
 
@@ -784,6 +889,19 @@ public:
 	/// \param bEnable Specifies invite button show or not in meeting window, default is disable,
 	/// if enable this feature, you need to handle onInviteBtnClicked event callback
 	virtual void EnableInviteButtonOnMeetingUI(bool bEnable) = 0;
+
+	/// \brief config hide or show input meeting password dialog
+	/// \param bEnable specify hide or show input meeting password dialog, default is enable.
+	/// if disable this option, you need to handle onInputMeetingPasswordAndScreenNameNotification event callback.
+	virtual void EnableInputMeetingPasswordDlg(bool bEnable) = 0;
+
+	// \brief Enable enter and exit full screen button on meeting ui. 
+	/// \param bEnable Specifies enter and exit full screen button show or not in meeting window, default is enable.
+	virtual void EnableEnterAndExitFullScreenButtonOnMeetingUI(bool bEnable) = 0;
+
+	// \brief Enable left button double click for enter and exit full screen feature. 
+	/// \param bEnable Specifies Enable or disable switch full screen mode via left button double click, default is enable.
+	virtual void EnableLButtonDBClick4SwitchFullScreenMode(bool bEnable) = 0;
 };
 
 /// \brief Meeting video controller interface
@@ -974,6 +1092,12 @@ public:
 	/// \brief can start share or not.
 	/// \return can start share or not.
 	virtual bool CanStartShare() = 0;
+
+	/// \brief query if sharing is locked.
+	/// \param bLocked store if sharing is locked.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError IsShareLocked(bool& bLocked) = 0;
 };
 
 /// \brief Meeting audio controller interface
@@ -981,17 +1105,32 @@ public:
 class IMeetingAudioController
 {
 public:
-	/// \brief Mute audio
-	/// \param userId Specifies which the user's audio to mute.if is zero, mute all of users
+	/// \brief Join Voip audio
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	virtual SDKError MuteAudio(unsigned int userid) = 0;
+	virtual SDKError JoinVoip() = 0;
+
+	/// \brief Leave Voip audio
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError LeaveVoip() = 0;
+
+	/// \brief Mute audio
+	/// \param userId Specifies which the user's audio to mute.if is zero, mute all of users
+	/// \param allowUnmuteBySelf Specifies can unmute by self or not when mute all.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError MuteAudio(unsigned int userid, bool allowUnmuteBySelf = true) = 0;
 
 	/// \brief Unmute audio
 	/// \param userId Specifies which the user's audio to unmute.if is zero, unmute all of users
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError UnMuteAudio(unsigned int userid) = 0;
+
+	/// \brief Can unmute by self?
+	/// \return Can unmute by self or not
+	virtual bool CanUnMuteBySelf() = 0;
 
 	/// \brief Enable mute on entry feature when User join meeting
 	/// \param bEnable Specifies mute on entry feature enable or disable.
@@ -1004,6 +1143,44 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError EnablePlayChimeWhenEnterOrExit(bool bEnable) = 0;
+};
+
+class IMeetingBreakoutRoomsEvent
+{
+public:
+	//////////////////Callback for ATTENDEES///////////////////
+	//Receive join BO request
+
+	/// \brief host open Breakout Rooms callback
+	/// \param stBID Specifies Breakout Room id.
+	virtual void OnBreakoutRoomsStartedNotification(const wchar_t* stBID) = 0;
+};
+
+/// \brief Breakout Rooms controller interface
+///
+class IMeetingBreakoutRoomsController
+{
+public:
+	/// \brief set a handler for IBreakoutRoomsEvent notification.
+	/// \param pEvent which will be invoked for when this message type is received.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SetEvent(IMeetingBreakoutRoomsEvent* pEvent) = 0;
+
+	/// \brief Join Breakout Room
+	/// \param stBID Specifies Breakout Room id.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError JoinBreakoutRoom(const wchar_t* stBID) = 0;
+
+	/// \brief Leave Breakout Room
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError LeaveBreakoutRoom() = 0;
+
+	/// \brief Get Breakout Room list which can join
+	/// \return If the function succeeds, the return value is Breakout Room list.
+	///If the function fails, the return value is NULL.
+	virtual IList<IBreakoutRoomsInfo* >* GetBreakoutRoomsInfoList() = 0;
 };
 
 /// \brief Meeting recording controller interface
@@ -1037,6 +1214,69 @@ public:
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError SendChatTo(unsigned int receiver, wchar_t* content) = 0;
 };
+
+/// \brief Meeting Waiting Room Callback Event
+///
+class IMeetingWaitingRoomEvent
+{
+public:
+	/// \brief User join waiting room notify callback
+	/// \param userID ID of the user join waiting room.
+	virtual void onWatingRoomUserJoin(unsigned int userID) = 0;
+
+	/// \brief User left waiting room notify callback
+	/// \param userID ID of the user left waiting room.
+	virtual void onWatingRoomUserLeft(unsigned int userID) = 0;
+
+};
+/// \brief Meeting waiting room controller interface
+///
+class IMeetingWaitingRoomController
+{
+public:
+	/// \brief Set meeting waiting room callback event
+	/// \param pEvent A pointer to a IMeetingWaitingRoomEvent* that receives waiting room event. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SetEvent(IMeetingWaitingRoomEvent* pEvent) = 0;
+	
+	/// \brief Current meeting support waiting room or not.
+	/// \return true, support waiting room.
+	virtual bool IsSupportWaitingRoom() = 0;
+
+	/// \brief Get the flag of put attendee in waiting room on entry for the current meeting.
+	/// \return true, enabled.
+	virtual bool IsWaitingRoomOnEntryFlagOn() = 0;
+
+	/// \brief Enable the flag of put attendee in waiting room on entry for the current meeting.
+	/// \param bEnable enable waiting room or not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableWaitingRoomOnEntry(bool bEnable) = 0;
+
+	/// \brief Get meeting participants list in the waiting room
+	/// \return the return value is current meeting all waiting room participants list.if not in meeting, return NULL.
+	virtual IList<unsigned int >* GetWaitingRoomLst() = 0;
+
+	/// \brief Get waiting room user information via user id
+	/// \param userId Specifies which the user's information to get.
+	/// \return If the function succeeds, the return value is user information interface.
+	///If the function fails, the return value is NULL.
+	virtual IUserInfo* GetWaitingRoomUserInfoByID(unsigned int userid) = 0;
+
+	/// \brief Admit user to the meeting
+	/// \param userId Specifies which the user to admitted.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError AdmitToMeeting(unsigned int userid) = 0;
+
+	/// \brief Put user into the waiting room
+	/// \param userId Specifies which the user to put in.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError PutInWaitingRoom(unsigned int userid) = 0;
+};
+
 
 class IMeetingH323Helper;
 class IMeetingPhoneHelper;
@@ -1080,6 +1320,10 @@ public:
 	/// \brief Get meeting topic
 	/// \return the return value is current meeting topic.
 	virtual const wchar_t* GetMeetingTopic() = 0;
+
+	/// \brief Get meeting type
+	/// \return the return value is current meeting type.To get extended error information, refer to MeetingType enum
+	virtual MeetingType GetMeetingType() = 0;
 
 	/// \brief Lock current meeting
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -1176,6 +1420,11 @@ public:
 	/// \return If the function succeeds, the return value is audio controller interface.
 	///If the function fails, the return value is NULL.
 	virtual IMeetingChatController* GetMeetingChatController() = 0;
+
+	/// \brief Get waiting room controller
+	/// \return If the function succeeds, the return value is audio controller interface.
+	///If the function fails, the return value is NULL.
+	virtual IMeetingWaitingRoomController* GetMeetingWaitingRoomController() = 0;
 	
 	/// \brief Get meeting H323 helper
 	/// \return If the function succeeds, the return value is meeting H323 helper interface.
@@ -1186,6 +1435,11 @@ public:
 	/// \return If the function succeeds, the return value is meeting phone helper interface.
 	///If the function fails, the return value is NULL.
 	virtual IMeetingPhoneHelper* GetMeetingPhoneHelper() = 0;
+
+	/// \brief Get Breakout Rooms controller
+	/// \return If the function succeeds, the return value is Breakout Rooms controller interface.
+	///If the function fails, the return value is NULL.
+	virtual IMeetingBreakoutRoomsController* GetMeetingBreakoutRoomsController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

@@ -2,6 +2,8 @@
 
 #include "UIlib.h"
 #include "resource.h"
+#include "AuthServiceMgr.h"
+#include "MeetingServiceMgr.h"
 
 using namespace DuiLib;
 
@@ -34,7 +36,11 @@ enum UIApiType
 	UIAPI_AUDIO		= 2,
 };
 
-class CDemoUI : public CWindowWnd, public INotifyUI/*public WindowImplBase*/
+class CDemoUI : 
+	 public CWindowWnd, 
+	 public INotifyUI,
+	 public IAuthServiceMgrEvent,
+	 public IMeetingserviceMgrEvent
 {
 public:
 	CDemoUI();
@@ -59,11 +65,34 @@ public:
 	void ShowStatus(UIPageType emUIPageType, std::wstring strStatus);
 	void UpdateUserList(int nIndex, std::wstring strUserName, std::wstring strUserId, bool bAdd = true);
 	void CleanUpUserList();
+	void ShowWaiting(bool bWaiting);
 
 public:
 	LRESULT OnClose(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/);
 	LRESULT OnDestroy(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/);
 	LRESULT OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+
+	//
+	virtual void onAuthenticationReturn(ZOOM_SDK_NAMESPACE::AuthResult ret);
+	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo);
+	virtual void onLogout();
+
+	//
+	virtual void onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult = 0);
+	virtual void onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath){};
+	virtual void onRecording2MP4Processing(int iPercentage){};
+	virtual void onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList = NULL);
+	virtual void onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList = NULL);
+	virtual void onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId){};
+	virtual void onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId){};
+	virtual void onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList = NULL){};
+	virtual void onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status){};
+	virtual void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc){};
+	virtual void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status){};
+	virtual void onHostChangeNotification(unsigned int userId){};
+	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid){};
+	virtual void onRecordPriviligeChanged(bool bCanRec){};
+	virtual void onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid){};
 
 private:
 	void InitAllControls();
@@ -145,6 +174,9 @@ private:
 	CButtonUI*				m_btnVideoApi;
 	CButtonUI*				m_btnAudioApi;
 	CListUI*				m_listUsers;
+
+	CContainerUI*			m_containerWaitingUI;
+	CGifAnimUI*				m_gifWaiting;
 
 	CAuthServiceMgr*		m_pAuthServiceMgr;
 	CPreMeetingServiceMgr*	m_preMeetingServiceMgr;

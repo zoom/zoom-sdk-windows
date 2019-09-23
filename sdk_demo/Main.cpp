@@ -12,7 +12,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 	if (!pDemoUI)
 		return -1;
 
-	pDemoUI->Create(NULL, _T("sdk_demo"), UI_WNDSTYLE_DIALOG, WS_EX_WINDOWEDGE);
+	pDemoUI->Create(NULL, _T("Windows app using zoom win sdk"), UI_WNDSTYLE_DIALOG, WS_EX_WINDOWEDGE);
+	pDemoUI->SetIcon(IDI_ICON_LOGO);
 	pDemoUI->CenterWindow();
 	pDemoUI->ShowModal();
 
