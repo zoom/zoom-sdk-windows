@@ -58,11 +58,13 @@ public:
 	/// \brief Mute video
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError MuteVideo() = 0;
 
 	/// \brief Unmute video
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError UnmuteVideo() = 0;
 
 	/// \brief Pin or Unpin video
@@ -71,6 +73,7 @@ public:
 	/// \param userid Specifies which the user is to be pinned.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \only for zoom style ui mode
 	virtual SDKError PinVideo(bool bPin, bool bFirstView, unsigned int userid) = 0;
 
 	/// \brief Spotlight video
@@ -78,35 +81,41 @@ public:
 	/// \param userid Specifies which the user is to be spotlighted.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError SpotlightVideo(bool bSpotlight, unsigned int userid) = 0;
 
 	/// \brief Hide or show no video user on video wall mode
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \only for zoom style ui mode
 	virtual SDKError HideOrShowNoVideoUserOnVideoWall(bool bHide) = 0;
 
 	/// \brief Check Can Ask Attendee To Start Video
 	/// \param userid Specifies which user you want to check.
 	/// \return If you can, the return value is SDKErr_Success.
 	///If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError CanAskAttendeeToStartVideo(unsigned int userid) = 0;
 
 	/// \brief Ask Attendee To Start Video
 	/// \param userid Specifies which user you want to ask.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError AskAttendeeToStartVideo(unsigned int userid) = 0;
 
 	/// \brief Check Can Stop Attendee Video
 	/// \param userid Specifies which user you want to check.
 	/// \return If you can, the return value is SDKErr_Success.
 	///If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError CanStopAttendeeVideo(unsigned int userid) = 0;
 
 	/// \brief Stop Attendee Video
 	/// \param userid Specifies which user you want to stop.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError StopAttendeeVideo(unsigned int userid) = 0;
 };
 END_ZOOM_SDK_NAMESPACE

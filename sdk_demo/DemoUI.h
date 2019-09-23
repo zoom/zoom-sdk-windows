@@ -1,11 +1,12 @@
 #pragma once
-
+#define PROXY_DETECT_LOGIC
 #include "UIlib.h"
 #include "resource.h"
 #include "AuthServiceMgr.h"
 #include "MeetingServiceMgr.h"
 #include "zoom_sdk.h"
 #include "network_connection_handler_interface.h"
+#include "CustomizedUI.h"
 
 using namespace DuiLib;
 
@@ -85,8 +86,7 @@ public:
 	virtual void onRecording2MP4Processing(int iPercentage){};
 	virtual void onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList = NULL);
 	virtual void onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList = NULL);
-	virtual void onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId){};
-	virtual void onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId){};
+	virtual void onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId);
 	virtual void onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList = NULL){};
 	virtual void onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status){};
 	virtual void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc){};
@@ -95,6 +95,8 @@ public:
 	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid){};
 	virtual void onRecordPriviligeChanged(bool bCanRec){};
 	virtual void onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid){};
+	virtual void onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId);
+	virtual void onCustomizedLocalRecordingSourceNotification(ZOOM_SDK_NAMESPACE::ICustomizedLocalRecordingLayoutHelper* layout_helper);
 
 private:
 	void InitAllControls();
@@ -117,6 +119,7 @@ private:
 	bool Leave();
 	bool End();
 	bool StartMonitorShare();
+	bool StartWhiteBoardShare();
 	bool StartAppShare();
 	bool StopShare();
 	bool MuteVideo();
@@ -170,6 +173,7 @@ private:
 	CButtonUI*				m_btnAuth;	
 	CButtonUI*				m_btnNormal;
 	CButtonUI*				m_btnApi;
+	CButtonUI*				m_btnNextVideoPage;
 	CButtonUI*				m_btnLogin;
 	CButtonUI*				m_btnStart;
 	CButtonUI*				m_btnJoin;
@@ -178,6 +182,7 @@ private:
 	CButtonUI*				m_btnLeave;
 	CButtonUI*				m_btnCancel;
 	CButtonUI*				m_btnStartMonitorShare;
+	CButtonUI*				m_btnStartWBShare;
 	CButtonUI*				m_btnStartAppShare;
 	CButtonUI*				m_btnStopShare;
 	CButtonUI*				m_btnMuteVideo;
@@ -190,6 +195,7 @@ private:
 	CButtonUI*				m_btnVideoApi;
 	CButtonUI*				m_btnAudioApi;
 	CButtonUI*				m_btnLeaveWhenConnecting;
+	CButtonUI*				m_btnAnnotationSnapshot;
 	CListUI*				m_listUsers;
 
 	CContainerUI*			m_containerWaitingUI;
@@ -203,4 +209,8 @@ private:
 	CMessageWnd*			m_pMessageWnd;
 	bool					m_bSDKInit;
 	ZOOM_SDK_NAMESPACE::INetworkConnectionHelper* m_pNetworkConnectionHelper;
+
+#if (defined ENABLE_CUSTOMIZED_UI)
+	CustomizeInMeetingUI m_inMeetingUI;
+#endif
 };

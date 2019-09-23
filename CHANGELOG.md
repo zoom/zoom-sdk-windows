@@ -1,6 +1,68 @@
 # CHANGELOG
 
-## 2017-07-26
+## 2018-08-20
+
+* Custom Meeting UI (support basic meeting function, except for Webinar and Breakout Session)
+
+Meeting Service
+
+meeting_webinar_interface.h
+```
+support common feature of webinar meeting in sdk layer
+```
+
+meeting_annotation_interface.h
+```
+add new interface to get customized annotation controller
+```
+
+meeting_chat_interface.h
+```
+1.add new callback  event for chat status changed. 
+onChatStautsChangedNotification
+2.add new interface to send chat for webinar meeting. 
+SendChat4WebinarMeeting
+3.add new interface to get current privilege status of chat session.
+ GetChatStatus
+```
+
+meeting_configuration_interface.h
+```
+support redirect click evnet of custom live stream menu. 
+ClickCustomLiveStreamMenuEvent
+```
+
+meeting_recording_interface.h
+```
+1.add callback event for customized ui local recroding source changed
+onCustomizedLocalRecordingSourceNotification
+2.add new interface to request customized local recording source notification.
+RequestCustomizedLocalRecordingSource
+```
+
+Setting Service
+```
+1.add more audio settings interface 
+IAudioSettingContext
+2.add more video settings interface
+IVideoSettingContext
+3.support test audio mic and speaker
+4.support video device preview
+```
+
+Customized UI support
+```
+./h/customized_ui
+1.support customized video ui
+2.support customized share ui
+3.support local recording for customized ui
+4.support customized annotation ui
+5.support customized remote control
+6.now don't support Q&A
+7.now don't support Polling
+```
+
+## 2018-07-26
 
 The start meeting logic for API users has changed. Please read below before upgrading to this version.
 

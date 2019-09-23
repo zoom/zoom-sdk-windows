@@ -1,6 +1,7 @@
 /*!
 * \file meeting_ui_ctrl_interface.h
 * \brief UI Controller of Meeting Service Interface
+* \only for zoom style ui mode
 */
 #ifndef _MEETING_UI_CTRL_INTERFACE_H_
 #define _MEETING_UI_CTRL_INTERFACE_H_
@@ -99,6 +100,7 @@ public:
 	virtual void onStartShareBtnClicked() = 0;
 	virtual void onEndMeetingBtnClicked() = 0;
 	virtual void onParticipantListBtnClicked() = 0;
+	virtual void onCustomLiveStreamMenuClicked() = 0;
 };
 
 /// \brief Meeting UI Controller Interface

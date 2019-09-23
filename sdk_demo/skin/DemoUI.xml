@@ -146,8 +146,10 @@
 				<Button name="btn_video_api" float="true" pos="10,45,0,0" text="Show Video APIs" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
 				<Button name="btn_audio_api" float="true" pos="10,80,0,0" text="Show Audio APIs" textcolor="#FFFFFFFF" font="5" height="30" width="120" />	
 				<Button name="btn_end" float="true" pos="10,115,0,0" text="End" textcolor="#FFFFFFFF" font="5" height="30" width="120" />				
-				<Button name="btn_leave" float="true" pos="10,150,0,0" text="Leave" textcolor="#FFFFFFFF" font="5" height="30" width="120" />	
-				<!--
+				<Button name="btn_leave" float="true" pos="10,150,0,0" text="Leave" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+        <Button name="btn_next_video_page" float="true" pos="10,185,0,0" text="Next Video Page" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+         <Button name="btn_save_snapshot" float="true" pos="10,185,0,0" text="Annotation Sanpshot" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <!--
 					<Button name="btn_start_monitor_share" float="true" pos="10,10,0,0" text="Start Monitor Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
 					<Button name="btn_start_app_share" float="true" pos="10,45,0,0" text="Start App Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
 					<Button name="btn_stop_share" float="true" pos="10,80,0,0" text="Stop Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
@@ -167,6 +169,7 @@
 						<VerticalLayout name="container_share_api" width="150" visible="false">
 							<Button name="btn_start_monitor_share" float="true" pos="10,10,0,0" text="Start Monitor Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
 							<Button name="btn_start_app_share" float="true" pos="10,45,0,0" text="Start App Share..." textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_start_wb_share" float="true" pos="10,45,0,0" text="Start White Board Share" textcolor="#FFFFFFFF" font="5" height="30" width="140" />
 							<Button name="btn_stop_share" float="true" pos="10,80,0,0" text="Stop Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
 						<!--
 							<Label name="lb_meeting_api_status" float="true" pos="0,10,0,0" font="0" textcolor="#FFE6413C" valign="top" width="140" height="60" align="left,multiline"/>

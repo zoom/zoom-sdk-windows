@@ -461,6 +461,7 @@ class IMeetingUIController;
 class IMeetingVideoController;
 class IMeetingWaitingRoomController;
 class IMeetingLiveStreamController;
+class IMeetingWebinarController;
 /// \brief Meeting Service Interface
 ///
 class IMeetingService
@@ -603,6 +604,11 @@ public:
 	/// \return If the function succeeds, the return value is live stream controller interface.
 	///If the function fails, the return value is NULL.
 	virtual IMeetingLiveStreamController* GetMeetingLiveStreamController() = 0;
+
+	/// \brief Get webinar controller
+	/// \return If the function succeeds, the return value is webinar controller interface.
+	///If the function fails, the return value is NULL.
+	virtual IMeetingWebinarController* GetMeetingWebinarController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

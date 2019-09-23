@@ -1,6 +1,7 @@
 /*!
 * \file meeting_remote_ctrl_interface.h
 * \brief Remote Controller of Meeting Service Interface
+* \support for zoom style and customized style ui mode
 */
 #ifndef _MEETING_REMOTE_CTRL_INTERFACE_H_
 #define _MEETING_REMOTE_CTRL_INTERFACE_H_

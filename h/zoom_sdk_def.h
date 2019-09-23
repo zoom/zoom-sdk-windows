@@ -41,12 +41,14 @@ enum SDKError
 	SDKERR_UNINITIALIZE,///< Not initialize before use 
 	SDKERR_UNAUTHENTICATION,///< Not Authentication before use
 	SDKERR_NORECORDINGINPROCESS,///< No recording in process
-	SDKERR_TRANSCODER_NOFOUND,///< can't find transcoder module
+	SDKERR_TRANSCODER_NOFOUND,///< Can't find transcoder module
 	SDKERR_VIDEO_NOTREADY,///< Video service not ready
 	SDKERR_NO_PERMISSION,///< No premission to do this
 	SDKERR_UNKNOWN,///< Unknown error 
 	SDKERR_OTHER_SDK_INSTANCE_RUNNING,
 	SDKERR_INTELNAL_ERROR,
+	SDKERR_NO_AUDIODEVICE_ISFOUND, ///< No audio device is found
+	SDKERR_NO_VIDEODEVICE_ISFOUND, ///< No video device is found
 };
 
 enum SDK_LANGUAGE_ID
@@ -98,6 +100,7 @@ typedef struct tagCustomizedLanguageInfo
 
 }CustomizedLanguageInfo;
 
+#define ENABLE_CUSTOMIZED_UI_FLAG (1 << 5)
 typedef struct tagConfigurableOptions
 {
 	CustomizedLanguageInfo customizedLang;
@@ -142,6 +145,9 @@ public:
 	virtual int GetCount() = 0;
 	virtual T   GetItem(int index) = 0;
 };
+#define SDK_NULL_AUDIO_FILE_HANDLE (0xffffffff)
+const RECT _SDK_TEST_VIDEO_INIT_RECT = {0,0,0,0};
+
 END_ZOOM_SDK_NAMESPACE
 
 #endif

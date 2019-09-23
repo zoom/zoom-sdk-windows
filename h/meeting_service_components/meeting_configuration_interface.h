@@ -1,6 +1,7 @@
 /*!
 * \file meeting_configuration_interface.h
 * \brief Configuration of Meeting Service Interface
+* \only for zoom style ui mode
 */
 #ifndef _MEETING_Configuration_INTERFACE_H_
 #define _MEETING_Configuration_INTERFACE_H_
@@ -340,7 +341,7 @@ public:
 	virtual void SetShowVideoOptimizeChkbox(bool bShow) = 0;
 	
 	/// \brief Show the 'Phone Call' tab
-	/// \param bShow specify to hide the tab when it's value is false, default is true.
+	/// \param bShow specify to hide the tab when it's value is false, default is true. 
 	virtual void SetShowCallInTab(bool bShow) = 0;
 
 	/// \brief Show the 'Call Me' tab
@@ -352,8 +353,12 @@ public:
 	virtual void ForceDisableMultiShare(bool bDisable) = 0;
 
 	/// \brief Always show the Meeting ID information on the main video-window's title bar 
-	/// \param bAlwaysShow specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow if false, the behavior will follow Zoom's default logic.Default is false.
+	/// \param bAlwaysShow specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow is false, the behavior will follow Zoom's default logic.Default is false.
 	virtual void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow) = 0;
+
+	/// \brief Redirect click event of custom live stream menu to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onCustomLiveStreamMenuClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickCustomLiveStreamMenuEvent(bool bRedirect) = 0;
 };
 
 END_ZOOM_SDK_NAMESPACE

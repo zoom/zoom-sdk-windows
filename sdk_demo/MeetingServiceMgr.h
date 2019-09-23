@@ -18,7 +18,7 @@
 #include "meeting_service_components/meeting_ui_ctrl_interface.h"
 #include "meeting_service_components/meeting_video_interface.h"
 #include "meeting_service_components/meeting_waiting_room_interface.h"
-
+#include "customized_ui/customized_local_recording.h"
 #include "setting_service_interface.h"
 
 class IMeetingserviceMgrEvent
@@ -39,6 +39,7 @@ public:
 	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid) = 0;
 	virtual void onRecordPriviligeChanged(bool bCanRec) = 0;
 	virtual void onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid) = 0;
+	virtual void onCustomizedLocalRecordingSourceNotification(ZOOM_SDK_NAMESPACE::ICustomizedLocalRecordingLayoutHelper* layout_helper) = 0;
 };
 
 class CMeetingServiceMgr : 
@@ -58,6 +59,8 @@ public:
 	virtual ~CMeetingServiceMgr();
 	bool IsInMeeting(ZOOM_SDK_NAMESPACE::MeetingStatus status);
 
+	ZOOM_SDK_NAMESPACE::IMeetingService* GetSDKObj() { return m_pMeetingService; }
+
 public:
 	bool Init();
 	bool UnInit();
@@ -66,6 +69,7 @@ public:
 	bool Leave();
 	bool End();
 	bool StartMonitorShare(const wchar_t* monitorID);
+	bool StartWhiteBoardShare();
 	bool StartAppShare(HWND hwndSharedApp);
 	bool StopShare();
 	bool MuteVideo();
@@ -94,8 +98,9 @@ public:
 	virtual void onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath);
 	virtual void onRecording2MP4Processing(int iPercentage);
 	virtual void onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status);
+	virtual void onCloudRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status){}
 	virtual void onRecordPriviligeChanged(bool bCanRec);
-	virtual void onCloudRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status);
+	virtual void onCustomizedLocalRecordingSourceNotification(ZOOM_SDK_NAMESPACE::ICustomizedLocalRecordingLayoutHelper* layout_helper);
 
 	//IMeetingVideoCtrlEvent
 	virtual void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status);
@@ -108,6 +113,7 @@ public:
 
 	//IMeetingChatCtrlEvent
 	virtual void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc);
+	virtual void onChatStautsChangedNotification(ZOOM_SDK_NAMESPACE::ChatStatus* status_){}
 
 	//IMeetingRemoteCtrlEvent
 	virtual void onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId);
@@ -123,6 +129,7 @@ public:
 	virtual void onStartShareBtnClicked();
 	virtual void onEndMeetingBtnClicked();
 	virtual void onParticipantListBtnClicked();
+	virtual void onCustomLiveStreamMenuClicked();
 
 private:
 	IMeetingserviceMgrEvent* m_pSink;

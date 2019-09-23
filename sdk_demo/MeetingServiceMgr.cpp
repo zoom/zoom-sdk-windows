@@ -39,7 +39,8 @@ bool CMeetingServiceMgr::IsInMeeting(ZOOM_SDK_NAMESPACE::MeetingStatus status)
 {
 	bool bInMeeting(true);
 	if (status == ZOOM_SDK_NAMESPACE::MEETING_STATUS_IDLE ||
-		status == ZOOM_SDK_NAMESPACE::MEETING_STATUS_ENDED)
+		status == ZOOM_SDK_NAMESPACE::MEETING_STATUS_ENDED ||
+		status == ZOOM_SDK_NAMESPACE::MEETING_STATUS_FAILED)
 	{
 		bInMeeting = false;
 	}
@@ -193,6 +194,24 @@ bool CMeetingServiceMgr::StartMonitorShare(const wchar_t* monitorID)
 		return false;
 
 	if (pCtrl->StartMonitorShare(monitorID) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
+		return false;
+
+	return true;
+}
+
+bool CMeetingServiceMgr::StartWhiteBoardShare()
+{
+	if (m_pMeetingService == NULL)
+		return false;
+
+	if (!IsInMeeting(m_pMeetingService->GetMeetingStatus()))
+		return false;
+
+	ZOOM_SDK_NAMESPACE::IMeetingShareController* pCtrl = m_pMeetingService->GetMeetingShareController();
+	if (pCtrl == NULL)
+		return false;
+
+	if (pCtrl->StartWhiteBoardShare() != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 		return false;
 
 	return true;
@@ -365,9 +384,12 @@ void CMeetingServiceMgr::onRecordPriviligeChanged(bool bCanRec)
 	//todo
 }
 
-void CMeetingServiceMgr::onCloudRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status)
+void CMeetingServiceMgr::onCustomizedLocalRecordingSourceNotification(ZOOM_SDK_NAMESPACE::ICustomizedLocalRecordingLayoutHelper* layout_helper)
 {
-	//todo
+	if (m_pSink)
+	{
+		m_pSink->onCustomizedLocalRecordingSourceNotification(layout_helper);
+	}
 }
 
 void CMeetingServiceMgr::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList)
@@ -414,6 +436,10 @@ void CMeetingServiceMgr::onUserActiveAudioChange(ZOOM_SDK_NAMESPACE::IList<unsig
 void CMeetingServiceMgr::onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId)
 {
 	//todo
+	if (m_pSink)
+	{
+		m_pSink->onRemoteControlStatus(status, userId);
+	}
 }
 
 void CMeetingServiceMgr::onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId)
@@ -422,6 +448,10 @@ void CMeetingServiceMgr::onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus statu
 	TCHAR szLog[MAX_PATH] = { 0 };
 	wsprintf(szLog, _T("onSharingStatus:status=%d, userid=%d\r\n"), status, userId);
 	OutputDebugString(szLog);
+	if (m_pSink)
+	{
+		m_pSink->onSharingStatus(status, userId);
+	}
 }
 
 void CMeetingServiceMgr::onLockShareStatus(bool bLocked)
@@ -495,4 +525,10 @@ void CMeetingServiceMgr::onParticipantListBtnClicked()
 {
 	//todo
 	OutputDebugStringA("CMeetingServiceMgr::onParticipantListBtnClicked");
+}
+
+void CMeetingServiceMgr::onCustomLiveStreamMenuClicked()
+{
+	//todo
+	OutputDebugStringA("CMeetingServiceMgr::onCustomLiveStreamMenuClicked");
 }

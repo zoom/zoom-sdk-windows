@@ -72,11 +72,13 @@ public:
 	/// \brief Join Voip audio
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError JoinVoip() = 0;
 
 	/// \brief Leave Voip audio
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError LeaveVoip() = 0;
 
 	/// \brief Mute audio
@@ -84,28 +86,33 @@ public:
 	/// \param allowUnmuteBySelf Specifies can unmute by self or not when mute all.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError MuteAudio(unsigned int userid, bool allowUnmuteBySelf = true) = 0;
 
 	/// \brief Unmute audio
 	/// \param userId Specifies which the user's audio to unmute.if is zero, unmute all of users
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError UnMuteAudio(unsigned int userid) = 0;
 
 	/// \brief Can unmute by self?
 	/// \return Can unmute by self or not
+	/// \support for zoom style and customized style ui mode
 	virtual bool CanUnMuteBySelf() = 0;
 
 	/// \brief Enable mute on entry feature when User join meeting
 	/// \param bEnable Specifies mute on entry feature enable or disable.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError EnableMuteOnEntry(bool bEnable) = 0;
 
 	/// \brief Enable play chime feature when user join or leave meeting.
 	/// \param bEnable Specifies play chime feature when user join or leave meeting, enable or disable.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError EnablePlayChimeWhenEnterOrExit(bool bEnable) = 0;
 };
 END_ZOOM_SDK_NAMESPACE

@@ -110,6 +110,19 @@ void CDemoUI::InitAllControls()
 	m_btnAuth = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_auth")));	
 	m_btnNormal = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_normal_user")));
 	m_btnApi = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_api_user")));
+	m_btnNextVideoPage = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_next_video_page")));
+	m_btnAnnotationSnapshot = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_save_snapshot")));
+#if (!defined ENABLE_CUSTOMIZED_UI)
+	if (m_btnNextVideoPage)
+	{
+		m_btnNextVideoPage->SetVisible(false);
+	}
+	if (m_btnAnnotationSnapshot)
+	{
+		m_btnAnnotationSnapshot->SetVisible(false);
+	}
+#endif
+
 	m_btnLogin = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_login")));
 	m_btnStart = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_start")));
 	m_btnJoin = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_join")));
@@ -118,6 +131,7 @@ void CDemoUI::InitAllControls()
 	m_btnLeave = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_leave")));
 	m_btnCancel = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_close")));
 	m_btnStartMonitorShare = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_start_monitor_share")));
+	m_btnStartWBShare = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_start_wb_share")));
 	m_btnStartAppShare = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_start_app_share")));
 	m_btnStopShare = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_stop_share")));
 	m_btnMuteVideo = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_mute_video")));
@@ -181,6 +195,7 @@ void CDemoUI::ResetAllControls()
 	m_btnLeave = NULL;
 	m_btnCancel= NULL;
 	m_btnStartMonitorShare = NULL;
+	m_btnStartWBShare = NULL;
 	m_btnStartAppShare = NULL;
 	m_btnStopShare = NULL;
 	m_btnMuteVideo = NULL;
@@ -379,6 +394,10 @@ bool CDemoUI::SDKInit()
 	{
 		ZOOM_SDK_NAMESPACE::InitParam initParam;
 		initParam.strWebDomain = strWebDomain.c_str();
+		initParam.strSupportUrl = L"https://zoom.us";
+#if (defined ENABLE_CUSTOMIZED_UI)
+		initParam.obConfigOpts.optionalFeatures = ENABLE_CUSTOMIZED_UI_FLAG;
+#endif
 		m_bSDKInit = CSDKHelper::Init(initParam);
 	}
 
@@ -399,6 +418,8 @@ bool CDemoUI::SDKInit()
 		}
 		virtual void onSSLCertVerifyNotification(ZOOM_SDK_NAMESPACE::ISSLCertVerificationHandler* handler)
 		{
+			if (handler)
+				handler->Trust();
 			//todo
 		}
 
@@ -414,6 +435,9 @@ bool CDemoUI::SDKInit()
 	}
 #endif
 
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.Init();
+#endif
 	return true;
 }
 
@@ -655,6 +679,14 @@ bool CDemoUI::StartMonitorShare()
 	return m_pMeetingServiceMgr->StartMonitorShare(strMonitorId.c_str());
 }
 
+bool CDemoUI::StartWhiteBoardShare()
+{
+	if (m_pMeetingServiceMgr == NULL)
+		return false;
+
+	return m_pMeetingServiceMgr->StartWhiteBoardShare();
+}
+
 bool CDemoUI::StartAppShare()
 {
 	if (m_pMeetingServiceMgr == NULL)
@@ -872,6 +904,10 @@ void CDemoUI::Notify( TNotifyUI& msg )
 		else if (msg.pSender == m_btnStartMonitorShare)
 		{
 			StartMonitorShare();
+		}	
+		else if (msg.pSender == m_btnStartWBShare)
+		{
+			StartWhiteBoardShare();
 		}		
 		else if (msg.pSender == m_btnStartAppShare)
 		{
@@ -904,6 +940,18 @@ void CDemoUI::Notify( TNotifyUI& msg )
 		else if (msg.pSender == m_btnUnmuteAudio)
 		{
 			UnMuteAudio();
+		}
+		else if (msg.pSender == m_btnNextVideoPage)
+		{
+#if (defined ENABLE_CUSTOMIZED_UI)
+			m_inMeetingUI.SwitchToNextPage();
+#endif
+		}
+		else if (msg.pSender == m_btnAnnotationSnapshot)
+		{
+#if (defined ENABLE_CUSTOMIZED_UI)
+			m_inMeetingUI.AnnotationSnapshot();
+#endif
 		}
 	}
 
@@ -1061,6 +1109,9 @@ LRESULT CDemoUI::OnDestroy(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, 
 		CSDKHelper::UnInit();
 	}
 
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.Uninit();
+#endif
 	bHandled = FALSE;
 	return 0;
 }
@@ -1158,6 +1209,32 @@ void CDemoUI::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, i
 	default:
 		break;
 	}
+
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.SetSDKMeetingService(m_pMeetingServiceMgr->GetSDKObj());
+	m_inMeetingUI.onMeetingStatusChanged(status, iResult);
+#endif
+}
+
+void CDemoUI::onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId)
+{
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.onSharingStatus(status, userId);
+#endif
+}
+
+void CDemoUI::onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId)
+{
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.onRemoteControlStatus(status, userId);
+#endif
+}
+
+void CDemoUI::onCustomizedLocalRecordingSourceNotification(ZOOM_SDK_NAMESPACE::ICustomizedLocalRecordingLayoutHelper* layout_helper)
+{
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.HandleCustomizedLocalRecordingSourceNotification(layout_helper);
+#endif
 }
 
 void CDemoUI::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList /*= NULL*/)
@@ -1180,9 +1257,10 @@ void CDemoUI::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, co
 				//OutputDebugString(szLog);
 			}
 		}
-
-		SwitchUIPageByType(UIPAGE_MEETING);
 	}
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.onUserJoin(lstUserID, strUserList);
+#endif
 }
 
 void CDemoUI::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList /*= NULL*/)
@@ -1201,5 +1279,8 @@ void CDemoUI::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, co
 			OutputDebugString(szLog);
 		}
 	}
+#if (defined ENABLE_CUSTOMIZED_UI)
+	m_inMeetingUI.onUserLeft(lstUserID, strUserList);
+#endif
 }
 

@@ -1,6 +1,7 @@
 /*!
 * \file meeting_service_interface.h
 * \brief Meeting Service Interface
+* \support for zoom style and customized style ui mode
 */
 #ifndef _MEETING_H323_HELPER_INTERFACE_H_
 #define _MEETING_H323_HELPER_INTERFACE_H_

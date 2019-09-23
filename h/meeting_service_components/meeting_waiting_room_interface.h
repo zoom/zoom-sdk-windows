@@ -1,6 +1,7 @@
 /*!
 * \file meeting_waiting_room_interface.h
 * \brief WaitingRoom of Meeting Service Interface
+* \only for zoom style ui mode
 */
 #ifndef _MEETING_WaitingRoom_INTERFACE_H_
 #define _MEETING_WaitingRoom_INTERFACE_H_

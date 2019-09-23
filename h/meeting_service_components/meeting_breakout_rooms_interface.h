@@ -51,16 +51,19 @@ public:
 	/// \param stBID Specifies Breakout Room id.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \only for zoom style ui mode
 	virtual SDKError JoinBreakoutRoom(const wchar_t* stBID) = 0;
 
 	/// \brief Leave Breakout Room
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \only for zoom style ui mode
 	virtual SDKError LeaveBreakoutRoom() = 0;
 
 	/// \brief Get Breakout Room list which can join
 	/// \return If the function succeeds, the return value is Breakout Room list.
 	///If the function fails, the return value is NULL.
+	/// \only for zoom style ui mode
 	virtual IList<IBreakoutRoomsInfo* >* GetBreakoutRoomsInfoList() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

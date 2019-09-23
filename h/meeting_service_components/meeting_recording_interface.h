@@ -1,6 +1,7 @@
 /*!
 * \file meeting_recording_interface.h
 * \brief Recording of Meeting Service Interface
+* \support for zoom style and customized style ui mode
 */
 #ifndef _MEETING_Recording_INTERFACE_H_
 #define _MEETING_Recording_INTERFACE_H_
@@ -24,6 +25,7 @@ enum RecordingStatus
 	Recording_Connecting,		 //connecting, only for cloud recording
 };
 
+class ICustomizedLocalRecordingLayoutHelper;
 /// \brief Meeting recording callback event
 ///
 class IMeetingRecordingCtrlEvent
@@ -50,6 +52,11 @@ public:
 	/// \brief self record privilige change callback
 	/// \param bCanRec 
 	virtual void onRecordPriviligeChanged(bool bCanRec) = 0;
+
+	/// \brief local recording source callback for customized ui mode
+	/// \param layout_helper layout local recording helper.
+	/// the layout_helper will be released after call end, please do layout before this call end.
+	virtual void onCustomizedLocalRecordingSourceNotification(ICustomizedLocalRecordingLayoutHelper* layout_helper) = 0;
 };
 
 /// \brief Meeting recording controller interface
@@ -115,6 +122,12 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError DisAllowLocalRecording(unsigned int userid) = 0;
+
+	/// \brief Request customized local recording source notification
+	/// \return If the function succeeds, the return value is SDKErr_Success, and you will got the onCustomizedLocalRecordingSourcenNotification callback.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// only for customized style ui mode
+	virtual SDKError RequestCustomizedLocalRecordingSource() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

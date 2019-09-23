@@ -17,13 +17,26 @@ BEGIN_ZOOM_SDK_NAMESPACE
 */
 enum UserRole
 {
-	USERROLE_NONE,
-	USERROLE_HOST,
-	USERROLE_COHOST,
-	USERROLE_PANELIST,
-	USERROLE_BREAKOUTROOM_MODERATOR,
-	USERROLE_ATTENDEE,
+	USERROLE_NONE,///< None
+	USERROLE_HOST,///< Host role
+	USERROLE_COHOST,///< Cohost role
+	USERROLE_PANELIST,///< Panelist role, only for webinar meeting
+	USERROLE_BREAKOUTROOM_MODERATOR,///< Host role of BO meeting
+	USERROLE_ATTENDEE,///< Attendee role
 };
+
+/*! \struct tagWebinarAttendeeStatus
+    \brief webinar attendee status
+    A more detailed struct description.
+*/
+typedef struct tagWebinarAttendeeStatus
+{
+	bool allow_talk;///< allow talk or not
+	tagWebinarAttendeeStatus()
+	{
+		allow_talk = false;
+	}
+}WebinarAttendeeStatus;
 
 /// \brief User information Interface
 ///
@@ -84,6 +97,10 @@ public:
 	/// \brief Audio Voice Level
 	/// \return Audio Voice Level
 	virtual int GetAudioVoiceLevel() = 0;
+
+	/// \brief status of webinar attendee
+	/// \return status of webinar attendee
+	virtual WebinarAttendeeStatus* GetWebinarAttendeeStauts() = 0;
 	
 	virtual ~IUserInfo(){};
 };
@@ -135,18 +152,21 @@ public:
 	virtual SDKError SetEvent(IMeetingParticipantsCtrlEvent* pEvent) = 0;
 
 	/// \brief Get meeting participants list
-	/// \return the return value is all participants list of current meeting.if not in meeting, return NULL.
+	/// \return the return value is current meeting all participants list.if not in meeting, return NULL.
+	/// \support for zoom style and customized style ui mode
 	virtual IList<unsigned int >* GetParticipantsList() = 0;
 
 	/// \brief Get user information via user id
 	/// \param userId Specifies which the user's information to get.if zero,to get current user information.
 	/// \return If the function succeeds, the return value is user information interface.
 	///If the function fails, the return value is NULL.
+	/// \support for zoom style and customized style ui mode
 	virtual IUserInfo* GetUserByUserID(unsigned int userid) = 0;
 
 	/// \brief Lower all attendee hands in meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError LowerAllHands() = 0;
 
 	/// \brief Change user name.if you want to change other user name, you should be the host or cohost.
@@ -155,64 +175,75 @@ public:
 	/// \param bSaveUserName Specifies which the user uses this name when join meeting next time.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError ChangeUserName(const unsigned int userid, const wchar_t* userName, bool bSaveUserName) = 0;
 
 	/// \brief Lower attendee hands in meeting.
 	/// \param userId Specifies which the user's hands to low.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError LowerHand(unsigned int userid) = 0;
 
 	/// \brief Raise hands in meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError RaiseHand() = 0;
 
 	/// \brief Make host.
 	/// \param userId Specifies which the user to be the host.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError MakeHost(unsigned int userid) = 0;
 
 	/// \brief check can be the co-host.
 	/// \param userId Specifies which the user can be the co-host.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError CanbeCohost(unsigned int userid) = 0;
 
 	/// \brief Assign co-host.
 	/// \param userId Specifies which the user to be the co-host.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError AssignCoHost(unsigned int userid) = 0;
 
 	/// \brief Revoke co-host.
 	/// \param userId Specifies which the co-host user to be revoked.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError RevokeCoHost(unsigned int userid) = 0;
 
 	/// \brief Expel user.
 	/// \param userId Specifies which the user to expel.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError ExpelUser(unsigned int userid) = 0;
 
 	/// \brief Reclaim host.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \only for zoom style ui mode
 	virtual SDKError ReclaimHost() = 0;
 
 	/// \brief Check the right of reclaim host.
 	/// \param bCanReclaimHost can reclaim host or not.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError CanReclaimHost(bool& bCanReclaimHost) = 0;
 
 	/// \brief Reclaim host by key.
 	/// \param host_key host key.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \support for zoom style and customized style ui mode
 	virtual SDKError ReclaimHostByHostKey(const wchar_t* host_key) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
