@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="sdk_demo"
-	ProjectGUID="{6BA085A6-F4F0-4DF7-A59E-511E1544DF6E}"
+	ProjectGUID="{FC15FC75-D579-40F1-9613-DD5C34F74775}"
 	RootNamespace="sdk_demo"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"

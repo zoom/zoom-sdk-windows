@@ -53,6 +53,7 @@ public:
 	void onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status);
 
 	void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc);
+	void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status);
 
 private:
 	CDemoUI* m_pSink;

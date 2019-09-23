@@ -30,6 +30,46 @@ public:
 	virtual bool IsSelectedDevice() = 0;
 };
 
+/// \brief Microphone device information Interface
+///
+class IMicInfo
+{
+public:
+	/// \brief Get microphone device id
+	/// \return If the function succeeds, the return value is camera device id.
+	///If the function fails, the return value is NULL.
+	virtual const wchar_t* GetDeviceId() = 0;
+
+	/// \brief Get microphone device name
+	/// \return If the function succeeds, the return value is camera device name.
+	///If the function fails, the return value is NULL.
+	virtual const wchar_t* GetDeviceName() = 0;
+
+	/// \brief Selected device flag
+	/// \return If the return value is true, this device is selected.
+	virtual bool IsSelectedDevice() = 0;
+};
+
+/// \brief Audio speaker device information Interface
+///
+class ISpeakerInfo
+{
+public:
+	/// \brief Get speaker device id
+	/// \return If the function succeeds, the return value is camera device id.
+	///If the function fails, the return value is NULL.
+	virtual const wchar_t* GetDeviceId() = 0;
+
+	/// \brief Get speaker device name
+	/// \return If the function succeeds, the return value is camera device name.
+	///If the function fails, the return value is NULL.
+	virtual const wchar_t* GetDeviceName() = 0;
+
+	/// \brief Selected device flag
+	/// \return If the return value is true, this device is selected.
+	virtual bool IsSelectedDevice() = 0;
+};
+
 /*! \struct tagShowChatDlgParam
     \brief Show meeting chat dialog Parameter.
     A more detailed struct description.

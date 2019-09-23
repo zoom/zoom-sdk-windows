@@ -94,6 +94,13 @@ enum SDKViewType
 	SDK_SECOND_VIEW,
 };
 
+enum SDKMeetingUIType
+{
+	SDK_Meeting_UI_None,
+	SDK_Meeting_UI_VideoWall_Mode,
+	SDK_Meeting_UI_ActiveRender_Mode,
+};
+
 /*! \struct tagJoinParam4APIUser
     \brief Join meeting Parameter for API user.
     A more detailed struct description.
@@ -254,6 +261,12 @@ enum SharingStatus
 	Sharing_Resume,
 };
 
+enum VideoStatus
+{
+	Video_ON,
+	Video_OFF,
+};
+
 /*! \enum ConnectionQuality
     \brief Connection quality.
     A more detailed struct description.
@@ -391,6 +404,11 @@ public:
 	/// \param chatMsg chat message object. This param will invalid after this function call end.
 	/// \param content chat message in json format,Reserved.
 	virtual void onChatMsgNotifcation(IChatMsgInfo* chatMsg, const wchar_t* content = NULL) = 0;
+
+	/// \brief User's video status change callback
+	/// \param userId 
+	/// \param status
+	virtual void onUserVideoStatusChange(unsigned int userId, VideoStatus status) = 0;
 };
 
 enum SDKFloatVideoType
@@ -1061,6 +1079,16 @@ public:
 	/// \return If the function succeeds, the return value is ConnectionQuality enum value.
 	/// \if you don't in meeting, will return Conn_Quality_Unknow
 	virtual ConnectionQuality GetMeetingConnQuality() = 0;
+
+	/// \brief Get video connection quality.
+	/// \return If the function succeeds, the return value is ConnectionQuality enum value.
+	/// \if you don't in meeting, will return Conn_Quality_Unknow
+	virtual ConnectionQuality GetVideoConnQuality() = 0;
+
+	/// \brief Get audio connection quality.
+	/// \return If the function succeeds, the return value is ConnectionQuality enum value.
+	/// \if you don't in meeting, will return Conn_Quality_Unknow
+	virtual ConnectionQuality GetAudioConnQuality() = 0;
 
 	/// \brief Get meeting configuration interface.
 	/// \return If the function succeeds, the return value is meeting configuration interface.

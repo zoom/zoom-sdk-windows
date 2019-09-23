@@ -405,6 +405,10 @@ void CMeetingServiceMgr::onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_
 		m_pSink->ShowStatus(UIPAGE_MEETING, strStatus);
 	}	
 }
+void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status)
+{
+
+}
 
 void CMeetingServiceMgr::onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status)
 {

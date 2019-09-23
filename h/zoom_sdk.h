@@ -18,6 +18,7 @@ extern "C"
 	class ISettingService;
 	class ICalenderService;
 	class IPreMeetingService;
+	class INetworkConnectionHelper;
 	/// \brief Initialize Zoom SDK
 	/// \param initParam Initialize Zoom SDK Parameter
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -83,6 +84,18 @@ extern "C"
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	SDK_API SDKError DestroyPreMeetingService(IPreMeetingService* pPreMeetingService);
+
+	/// \brief Create network connection helper Interface
+	/// \param ppNetworkHelper A pointer to a INetworkConnectionHelper* that receives INetworkConnectionHelper Object. 
+	/// \return If the function succeeds, the return value is SDKErr_Success, and ppNetworkHelper is not NULL
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	SDK_API SDKError CreateNetworkConnectionHelper(INetworkConnectionHelper** ppNetworkHelper);
+
+	/// \brief Destroy network connection helper Interface
+	/// \param pNetworkHelper A pointer to a INetworkConnectionHelper to be destroyed. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	SDK_API SDKError DestroyNetworkConnectionHelper(INetworkConnectionHelper* pNetworkHelper);
 
 	/// \brief Clean up Zoom SDK
 	/// \return If the function succeeds, the return value is SDKErr_Success.
