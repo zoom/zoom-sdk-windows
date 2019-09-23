@@ -48,11 +48,12 @@ enum SDKError
 	SDKERR_NO_VIDEODEVICE_ISFOUND,///<No video device found.
 	SDKERR_TOO_FREQUENT_CALL,///<API calls too frequently.
 	SDKERR_FAIL_ASSIGN_USER_PRIVILEGE, ///<User can't be assigned with new privilege.
-	SDKERR_MEETING_DONT_SUUPORT_FEATURE,///<The current meeting doesn't support the feature.
+	SDKERR_MEETING_DONT_SUPPORT_FEATURE,///<The current meeting doesn't support the feature.
 	SDKERR_MEETING_NOT_SHARE_SENDER,///<The current user is not the presenter.
-	SDKERR_MEETING_YOU_HAVE_NO_SHARE,///There is no sharing.
-	SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG, ///Incorrect ViewType parameters.
-	SDKERR_MEETING_ANNOTATION_IS_OFF, ///Annotation is disabled.
+	SDKERR_MEETING_YOU_HAVE_NO_SHARE,///<There is no sharing.
+	SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG, ///<Incorrect ViewType parameters.
+	SDKERR_MEETING_ANNOTATION_IS_OFF, ///<Annotation is disabled.
+	SDKERR_SETTING_OS_DONT_SUPPORT, ///<Current OS doesn't support the setting.
 };
 
 /*! \enum SDK_LANGUAGE_ID
@@ -131,9 +132,11 @@ typedef struct tagConfigurableOptions
 {
 	CustomizedLanguageInfo customizedLang;///The custom resource information.
 	int optionalFeatures;///<Additional functional configuration. The function currently supports only whether to use the custom UI mode. When the value of the optionalFeatures&ENABLE_CUSTOMIZED_UI_FLAG is TRUE, it means to the Use the custom UI mode. Otherwise use the traditional interface mode.
+	const wchar_t* sdkPathPostfix;
 	tagConfigurableOptions()
 	{
 		optionalFeatures = 0;
+		sdkPathPostfix = NULL;
 	}
 
 }ConfigurableOptions;
@@ -152,6 +155,7 @@ typedef struct tagInitParam
 	unsigned int uiWindowIconBigID;///<The ID of the big Icon on the window.
 	SDK_LANGUAGE_ID emLanguageID;///<The ID of the SDK language.
 	bool enableLogByDefault;///<Enable log feature.
+	unsigned int uiLogFileSize; ///<Size of a log file in M(megabyte). The default size is 5M. There are 5 log files in total and the file size varies from 1M to 50M. 
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
 	tagInitParam()
 	{
@@ -163,6 +167,7 @@ typedef struct tagInitParam
 		uiWindowIconBigID = 0;
 		emLanguageID = LANGUAGE_Unknow;
 		enableLogByDefault = false;
+		uiLogFileSize = 5;
 	}
 }InitParam;
 

@@ -33,13 +33,13 @@ enum AnnotationToolType
 	ANNOTOOL_AUTO_RECTANGLE_SEMI_FILL, ///<A fair rectangle changes automatically in pace with the mouse cursor.
 	ANNOTOOL_AUTO_ELLIPSE_SEMI_FILL, ///<A fair ellipse changes automatically in pace with the mouse cursor.
 	ANNOTOOL_AUTO_DOUBLE_ARROW, ///<A line with double-arrow. 
-	ANNOTOOL_AUTO_DIAMOND, ///<A hollow rhombus.
+	ANNOTOOL_AUTO_DIAMOND, ///<An unfilled rhombus.
 	ANNOTOOL_AUTO_STAMP_ARROW, ///<A fixed-size arrow for marking.
 	ANNOTOOL_AUTO_STAMP_CHECK, ///<A sign marking that something is correct.
 	ANNOTOOL_AUTO_STAMP_X, ///<A sign marking that something is wrong.
 	ANNOTOOL_AUTO_STAMP_STAR, ///<A star for marking.
 	ANNOTOOL_AUTO_STAMP_HEART, ///<A heart for marking.
-	ANNOTOOL_AUTO_STAMP_QM, ///<An interrogation.
+	ANNOTOOL_AUTO_STAMP_QM, ///<A sign for interrogation.
 };
 
 /*! \enum AnnotationClearType
@@ -170,7 +170,7 @@ public:
 	virtual SDKError CanDisableViewerAnnotation(SDKViewType viewtype, bool& bCan) = 0;
 
 	/// \brief Determine if it is able to annotate(Both the presenter and viewer can call the function).
-	/// \param [in] viewtype: SDK_FIRST_VIEW/SDK_SECOND_VIEW
+	/// \param [in] viewtype SDK_FIRST_VIEW/SDK_SECOND_VIEW
 	/// \param [out] bCan TRUE means able, FALSE not. It validates only when the return value is SDKErr_Success. 
 	/// \return If the user owns the authority, the return value is SDKErr_Success.
 	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.

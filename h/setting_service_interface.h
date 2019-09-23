@@ -108,6 +108,36 @@ typedef struct tagShowSettingDlgParam
 	}
 }ShowSettingDlgParam;
 
+/*! \struct tagSettingDlgShowTabPageOption
+    \brief Define the strategy to show the tab pages in the setting dialog.
+    Here are more detailed structural descriptions.
+*/
+typedef struct tagSettingDlgShowTabPageOption
+{
+	bool bShowGeneral;///<True indicates to show general page
+	bool bShowVideo; ///<True indicates to show video page
+	bool bShowAudio;///<True indicates to show audio page
+	bool bShowVirtualBackGround;///<True indicates to show virtual background page
+	bool bSHowRecording;///<True indicates to show recording page
+	bool bShowAdvancedFeature;///<True indicates to show advance feature page
+	bool bShowStatistics;///<True indicates to show staticstics page
+	bool bShowFeedback;///<True indicates to show feed back page
+	bool bShowAccessibility;///<True indicates to show accessibility page
+	tagSettingDlgShowTabPageOption()
+	{
+		bShowGeneral = true;
+		bShowVideo = true;
+		bShowAudio = true;
+		bShowVirtualBackGround = true;
+		bSHowRecording = true;
+		bShowStatistics = true;
+		bShowAccessibility = true;
+		bShowAdvancedFeature = false;
+		bShowFeedback = false;
+	}
+
+}SettingDlgShowTabPageOption;
+
 /*! \enum SDK_TESTMIC_STATUS
     \brief Notify the status of the mic when testing.
     Here are more detailed structural descriptions.
@@ -261,9 +291,56 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableSplitScreenMode(bool bEnable) = 0;
 
-	/// \brief Determine if it is enable to use the split screen mode.
-	/// \return TRUE indicates to use the split mode.
+	/// \brief Determine if the split screen mode is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
 	virtual bool IsSplitScreenModeEnabled() = 0;
+	
+	/// \brief Enable/Disable reminder window when user exits the meeting. Available only for normal attendees (non-host).
+	/// \param bEnable TRUE indicates to enable reminder window.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableDisplayReminderWindowWhenExit(bool bEnable) = 0;
+	
+	/// \brief Determine if reminder window is enabled when user exits the meeting.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsDisplayReminderWindowWhenExitEnabled() = 0;
+	
+	/// \brief Enable/Disable to show the elapsed time of the meeting.
+	/// \param bEnable TRUE indicates to show the elapsed time. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableShowMyMeetingElapseTime(bool bEnable) = 0;
+	
+	/// \brief Determine if showing elapsed time of the meeting is enabled.
+	/// \return TRUE indicates to show. FALSE not.
+	virtual bool IsShowMyMeetingElapseTimeEnabled() = 0;
+	
+	/// \brief Determine if the operating system supports the GPU acceleration when user shares.
+	/// \return TRUE indicates support. FALSE not.
+	virtual bool IsCurrentOSSupportAccelerateGPUWhenShare() = 0;
+	
+	/// \brief Enable/Disable the GPU acceleration when user shares.
+	/// \param bEnable TRUE indicates to enable the acceleration. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableAccelerateGPUWhenShare(bool bEnable) = 0;	
+	
+	/// \brief Determine if GPU acceleration is enabled when user shares.
+	/// \param [out]bEnable TRUE indicates the GPU acceleration is enabled. FALSE not. It validates only when the return value is SDKErr_Success. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError IsAccelerateGPUWhenShareEnabled(bool& bEnable) = 0;
+	
+	/// \brief Enable/disable remote control of all applications.
+	/// \param bEnable TRUE indicates to enable the remote control. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableRemoteControlAllApplications(bool bEnable) = 0;	
+	
+	/// \brief Determine if remote control of all applications is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsRemoteControlAllApplicationsEnabled() = 0;
+	
 };
 
 /*! \enum PREVIEW_VIDEO_ROTATION_ACTION
@@ -560,7 +637,7 @@ public:
 	/// \return Enabled or disabled.
 	virtual bool IsMicOriginalInputEnable() = 0;
 	
- 	/// \brief Enable or disable to press and hold the Space-bar to speak.
+ 	/// \brief Enable or disable to press and hold the Space-bar to speak when muted.
 	/// \param bEnable TRUE indicates to press and hold the Space-bar to speak. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
@@ -621,6 +698,25 @@ public:
 	///For more details, see \link IAudioSettingContextEvent \endlink.
 	/// \remarks You must call the function if you want to monitor the audio device plugged in/out.
 	virtual SDKError SetAudioDeviceEvent(IAudioSettingContextEvent* pEvent) = 0;
+
+	/// \brief Set whether to enable the function of echo cancellation or not. 
+	/// \param bEnable True means to enable the function, FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableEchoCancellation(bool bEnable) = 0;
+	
+	/// \brief Check whether the echo cancellation is enabled or not.
+	/// \return If it is TRUE, it means the echo cancellation is enabled 
+	virtual bool IsEchoCancellationEnabled() = 0;
+	
+
+};
+
+class IRecordingSettingContextEvent
+{
+public:
+	/// \brief Notification of the current cloud recording storage information.	/// \param storage_total_size Specify the total storage space.	/// \param storage_used_size Specify the used storage space.	/// \param allow_exceed_storage Specify whether the used space can overflow the total space. 
+	virtual void onCloudRecordingStorageInfo(INT64 storage_total_size, INT64 storage_used_size, bool allow_exceed_storage) = 0;
 };
 
 /// \brief Recording setting interface.
@@ -637,6 +733,93 @@ public:
 	/// \brief Get the path to save the recording file.
 	/// \return The path to save the recording file.
 	virtual const wchar_t* GetRecordingPath() = 0;
+	
+	/// \brief Set the event of recording settings.
+	/// \param pEvent The event of recording settings.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SetRecordingSettingEvent(IRecordingSettingContextEvent* pEvent) = 0;
+	
+	/// \brief Check if the user has the privilege to get the storage information for cloud recording.
+	/// \return TRUE indicates the user has the privilege. FALSE not.
+	virtual bool CanGetCloudRecordingStorageInfo() = 0;
+
+	/// \brief Get the storage information of cloud recording.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// If the return value is SDKErr_Success, IRecordingSettingContextEvent.onCloudRecordingStorageInfo() will be triggered after the infermation has be retrieved.
+	virtual SDKError GetCloudRecordingStorageInfo() = 0;
+
+	/// \brief Get the recording management URL.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual const wchar_t* GetRecordingManagementURL() = 0;
+	
+	/// \brief Set if it is able to get recording management URL.
+	/// \param [out]bEnable TRUE means the recording management URL can be retrieved. FALSE not. It validates only when the return value is SDKErr_Success.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanGetRecordingManagementURL(bool& bEnable) = 0;
+	
+	/// \brief Set whether to enable the function of selecting the path to save the recording file after meeting.
+	/// \param bEnable TRUE means to enable, FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableSelectRecordFileLocationAfterMeeting(bool bEnable) = 0;
+	
+	/// \brief Check if the function of selecting storage path for recording file is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsSelectRecordFileLocationAfterMeetingEnabled() = 0;
+	
+	/// \brief Enable/Disable multi-audio stream recording.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableMultiAudioStreamRecord(bool bEnable) = 0;
+	
+	/// \brief Determine if multi-audio stream recording is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsMultiAudioStreamRecordEnabled() = 0;
+	
+	/// \brief Enable/Disable watermark of timestamp.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableAddTimestampWatermark(bool bEnable) = 0;
+	
+	/// \brief Determine if the watermark of timestamps is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsAddTimestampWatermarkEnabled() = 0;
+	
+	/// \brief Enable/Disable the optimization for the third party video editor.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableOptimizeFor3rdPartyVideoEditor(bool bEnable) = 0;
+	
+	/// \brief Determine if the third party video editor is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsOptimizeFor3rdPartyVideoEditorEnabled() = 0;
+	
+	/// \brief Enable/Disable showing the video thumbnail when sharing.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableShowVideoThumbnailWhenShare(bool bEnable) = 0;
+	
+	/// \brief Determine if video thumbnail is enabled when sharing.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsShowVideoThumbnailWhenShareEnabled() = 0;
+	
+	/// \brief Enable/Disable placing the video layout next to the shared content in recording file.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnablePlaceVideoNextToShareInRecord(bool bEnable) = 0;
+	
+	/// \brief Determine if placing video next to the shared content in recording file is enabled.
+	/// \return TRUE indicates enabled. FALSE not.
+	virtual bool IsPlaceVideoNextToShareInRecordEnabled() = 0;
+	
 };
 
 /*! \enum SettingsNetWorkType
@@ -762,6 +945,23 @@ public:
 	virtual SDKError QueryShareStatisticInfo(ASVSessionStatisticInfo& info_) = 0;
 };
 
+/// \brief Accessibility setting interface.
+///
+class IAccessibilitySettingContext
+{
+public:
+	/// \brief Enable/Disable Always Show Meeting Controls in meeting window.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableAlwaysShowMeetingControls(bool bEnable) = 0;
+
+	/// \brief get the current setting status of Always Show Meeting Controls in meeting window.
+	/// \param bEnable TRUE indicates enabled. FALSE not.
+	/// \return If always show meeting controls is enable, the return value true else false
+	virtual SDKError IsAlwaysShowMeetingControlsEnable(bool& bEnable) = 0;
+};
+
 /// \brief Setting user strategy interface.
 ///
 class ISettingUIStrategy
@@ -774,6 +974,10 @@ public:
 	/// \brief Hide the Account Setting page or not.
 	/// \param bDisable TRUE indicates to hide the account setting page.
 	virtual void DisableAccountSettingTabPage(bool bDisable) = 0;
+
+	/// \brief Custome the tab page show or hide
+	/// \param showOption True indicates to show the corresponding tab page for each item.
+	virtual void ConfSettingDialogShownTabPage(SettingDlgShowTabPageOption showOption) = 0;
 };
 
 /// \brief Meeting setting interface.
@@ -822,6 +1026,12 @@ public:
 	///Otherwise failed, returns NULL.
 	///For more details, see \link IStatisticSettingContext \endlink.
 	virtual IStatisticSettingContext* GetStatisticSettings() = 0;
+
+	/// \brief Get Accessibility settings interface.
+	/// \return If the function succeeds, the return value is an object pointer to IAccessibilitySettingContext.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link IAccessibilitySettingContext \endlink.
+	virtual IAccessibilitySettingContext* GetAccessibilitySettings() = 0;
 
 	/// \brief Get setting user strategy interface.
 	/// \return If the function succeeds, the return value is an object pointer to ISettingUIStrategy.

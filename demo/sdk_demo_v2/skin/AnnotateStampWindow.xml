@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="117,110"  caption="0,0,0,32" disabledfontcolor="0xFF808080" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 11-->
+  <Font id="4" name="Segoe UI" size="15" bold="false"/>
+  <Font id="5" name="Segoe UI" size="15" bold="true"/>
+  <!--Font size xx-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <Font id="7" name="Segoe UI" size="14" bold="true"/>
+  <!--8-->
+  <Font id="8" name="Segoe UI" size="21" bold="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="17" bold="true"/>
+  <!--10-->
+  <Font id="10" name="Segoe UI" size="24" bold="false"/>
+  <!--11-->
+  <Font id="11" name="Segoe UI" size="20" bold="false"/>
+  <!--12-->
+  <Font id="12" name="Segoe UI" size="14" bold="false"/>
+  <Font id="13" name="Segoe UI" size="17" bold="false"/>
+
+  <VerticalLayout name="container_root" bkcolor="#FF000000" bkcolor2="#FF000000">
+
+    <Control height="10"/>
+    <HorizontalLayout height="24">
+      <Control width="10" />
+      <Button name="btn_arrow"  width="24" height="24" textpadding="0,0,0,0" font="1"
+          bordersize="1" bordercolor="#FF7F7F7F"
+          normalimage  ="res='stamp_arrow_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          hotimage     ="res='stamp_arrow_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          pushedimage  ="res='stamp_arrow_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          focuspadding ="4,4,4,4" />
+      <Control width="10" />
+      <Button name="btn_check"  width="24" height="24" textpadding="0,0,0,0" font="1"
+          bordersize="1" bordercolor="#FF7F7F7F"
+          normalimage  ="res='stamp_check_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          hotimage     ="res='stamp_check_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          pushedimage  ="res='stamp_check_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          focuspadding ="4,4,4,4" />
+      <Control width="10" />
+      <Button name="btn_x"      width="24" height="24" textpadding="0,0,0,0" font="1"
+          bordersize="1" bordercolor="#FF7F7F7F"
+          normalimage  ="res='stamp_x_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          hotimage     ="res='stamp_x_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          pushedimage  ="res='stamp_x_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          focuspadding ="4,4,4,4" />
+      <Control />
+    </HorizontalLayout>
+
+    <Control height="10"/>
+    <HorizontalLayout height="24">
+      <Control width="10" />
+      <Button name="btn_star"  width="24" height="24" textpadding="0,0,0,0" font="1"
+          bordersize="1" bordercolor="#FF7F7F7F"
+          normalimage  ="res='stamp_star_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          hotimage     ="res='stamp_star_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          pushedimage  ="res='stamp_star_press.png'   restype='ZPIMGRES' dest='0,0,24,24'"
+          focuspadding ="4,4,4,4" />
+      <Control width="10" />
+      <Button name="btn_heart"  width="24" height="24" textpadding="0,0,0,0" font="1"
+          bordersize="1" bordercolor="#FF7F7F7F"
+          normalimage  ="res='stamp_heart_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          hotimage     ="res='stamp_heart_press.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          pushedimage  ="res='stamp_heart_press.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          focuspadding ="4,4,4,4" />
+      <Control width="10" />
+      <Button name="btn_qm"  width="24" height="24" textpadding="0,0,0,0" font="1"
+          bordersize="1" bordercolor="#FF7F7F7F"
+          normalimage  ="res='stamp_qm_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          hotimage     ="res='stamp_qm_press.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          pushedimage  ="res='stamp_qm_press.png' restype='ZPIMGRES' dest='0,0,24,24'"
+          focuspadding ="4,4,4,4" />
+      <Control />
+    </HorizontalLayout>
+
+    <Control />
+  </VerticalLayout  >
+</Window>

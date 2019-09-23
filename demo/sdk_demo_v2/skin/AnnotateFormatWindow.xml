@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="380,350"  caption="0,0,0,32" disabledfontcolor="0xFF808080" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 11-->
+  <Font id="4" name="Segoe UI" size="15" bold="false"/>
+  <Font id="5" name="Segoe UI" size="15" bold="true"/>
+  <!--Font size xx-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <Font id="7" name="Segoe UI" size="14" bold="true"/>
+  <!--8-->
+  <Font id="8" name="Segoe UI" size="21" bold="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="17" bold="true"/>
+  <!--10-->
+  <Font id="10" name="Segoe UI" size="24" bold="false"/>
+  <!--11-->
+  <Font id="11" name="Segoe UI" size="20" bold="false"/>
+  <!--12-->
+  <Font id="12" name="Segoe UI" size="14" bold="false"/>
+  <Font id="13" name="Segoe UI" size="17" bold="false"/>
+
+  <Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF7CCBFA &quot; pushedbkcolor=&quot;#FF7CCBFA &quot; focusedbkcolor=&quot;#FF7CCBFA &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+  
+  <VerticalLayout name="container_root" bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF">
+	<Control height="10"/>
+
+    <!--color area-->
+	<VerticalLayout name="container_color" height="175" >
+      <HorizontalLayout height="20">
+        <Control width = "10"/>
+        <Label text="Color:" width="50" height="20" />
+      </HorizontalLayout>
+	  <HorizontalLayout >
+		<Control width = "10"/>
+        <Button name="btn_color1"  text="yellow"  textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color2"  text="orange"  textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color3"  text="red"     textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color4"  text="brown"   textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+		<Control />		
+	  </HorizontalLayout>
+      <Control height = "5"/>
+      <HorizontalLayout >
+        <Control width = "10"/>
+        <Button name="btn_color5"  text="earth-yellow"  textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color6"  text="pink"          textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color7"  text="purple"        textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color8"  text="black"         textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control />
+      </HorizontalLayout>
+      <Control height = "5"/>
+      <HorizontalLayout >
+        <Control width = "10"/>
+        <Button name="btn_color9"  text="sky-blue"      textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color10"  text="blue"         textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color11"  text="dark-blue"    textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color12"  text="gray"         textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control />
+      </HorizontalLayout>
+      <Control height = "5"/>
+      <HorizontalLayout >
+        <Control width = "10"/>
+        <Button name="btn_color13"  text="grass-green"  textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color14"  text="green"        textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color15"  text="dark-green"   textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_color16"  text="white"        textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control />
+      </HorizontalLayout>
+	</VerticalLayout> <!-- end color area-->
+
+    <Control height="10"/>
+    
+    <!--line area-->
+    <VerticalLayout name="container_line" height="55">
+      <HorizontalLayout height="20">
+        <Control width = "10"/>
+        <Label text="Line Width:" width="70" height="20" />
+      </HorizontalLayout>
+      <HorizontalLayout >
+        <Control width = "10"/>
+        <Button name="btn_line_thin"     text="thin"     textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_line_thick"    text="thick"    textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_line_thicker"  text="thicker"  textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control width = "5"/>
+        <Button name="btn_line_thickest" text="thickest" textcolor="#FFFFFFFF" font="6" height="35" width="80"/>
+        <Control />
+      </HorizontalLayout>
+    </VerticalLayout>
+    <!-- end line area-->
+
+    <Control height="10"/>
+    
+    <!--font area-->
+    <VerticalLayout name="container_font" height="45" visible="false">
+      <HorizontalLayout height="20">
+        <Control width = "10"/>
+        <Label text="Font:" width="50" height="20" />
+      </HorizontalLayout>
+      <HorizontalLayout height="25">
+          <CheckBox name="chk_bold"   text="Bold"   textcolor="#FF333333" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter"
+                textpadding="28,4,0,0" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='4,6,22,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' 
+					      source='90,0,108,18' dest='4,6,22,24'" noprefix="true" focuspadding="22,10,0,10" height="25" width="60" />
+          <Control width = "10"/>
+          <CheckBox name="chk_italic" text="italic" textcolor="#FF333333" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter"
+                textpadding="28,4,0,0" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='4,6,22,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' 
+					      source='90,0,108,18' dest='4,6,22,24'" noprefix="true" focuspadding="22,10,0,10" height="25" width="60" />
+          <Control width = "10"/>
+          <Combo name="cmb_font_size" width="60" height="25" textpadding="0,0,0,0" bkcolor="#FFEAECEE" bordersize="1" bordercolor="FFC0C0C0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF">
+                <ListLabelElement text="12" height="20" padding="0,0,0,0" selected="true" />
+                <ListLabelElement text="14" height="20" padding="0,0,0,0" />
+                <ListLabelElement text="18" height="20" padding="0,0,0,0" />
+                <ListLabelElement text="24" height="20" padding="0,0,0,0" />
+                <ListLabelElement text="36" height="20" padding="0,0,0,0" />
+                <ListLabelElement text="48" height="20" padding="0,0,0,0" />
+                <ListLabelElement text="72" height="20" padding="0,0,0,0" />
+          </Combo>
+          <Control width = "10"/>
+          <Button name="btn_font_set" text="set font" textcolor="#FFFFFFFF" font="6" height="25" width="60"/>
+          <Control />
+      </HorizontalLayout>
+    </VerticalLayout>
+    <!-- end font area-->
+    
+	<Control />
+  </VerticalLayout  >
+</Window>

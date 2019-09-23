@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<Window size="122,200" caption="0,0,0,0" >
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+
+  <VerticalLayout name="menu" bkcolor="#FF212121">
+    <!-- <List name="menu_list" header="hidden"  bkcolor="0xFFC8C8C8" itemselectedimage="res='BlueButtonhover.png' restype='ZPIMGRES'" itemhotbkcolor="0xFF47E1C0" itemalign="center"  > -->
+
+    <List name="menu_list" header="hidden"  bkcolor="0xff212121" borderround="4,4"  itemhotbkcolor="0xFF7a7a7a" itembkcolor="0xff000000" itemtextcolor="0xfffffff" itemfont="6" itemselectedbkcolor="0xFF616161"  itemalign="center" itemdisabledbkcolor="0xff000000" itemdisabledtextcolor="0xFF606060" >
+      <!-- 			<ListLabelElement name="Invite" text="Invite" width="122" height="25"  borderround="4,4" padding="0,2,0,0"/>
+			<ListLabelElement name="CC" 	text="CC"     width="122" height="25"  borderround="4,4" padding="0,2,0,0"/> -->
+    </List>
+
+
+  </VerticalLayout>
+</Window>

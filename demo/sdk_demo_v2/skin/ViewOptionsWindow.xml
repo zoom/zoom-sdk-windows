@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="525,87" caption="0,0,0,32" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 14-->
+  <Font id="4" name="Segoe UI" size="18" bold="false"/>
+  <!--Font size 8-->
+  <Font id="5" name="Segoe UI" size="12" bold="true"/>
+  <!--Font size 12-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <!--7-->
+  <Font id="7" name="Segoe UI" size="14" bold="true" />
+  <Font id="8" name="Segoe UI" size="12" bold="false" underline="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="11" bold="true" />
+  <Font id="10" name="Segoe UI" size="14" bold="false" />
+  
+  <Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF7CCBFA &quot; pushedbkcolor=&quot;#FF7CCBFA &quot; focusedbkcolor=&quot;#FF7CCBFA &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+
+  <VerticalLayout bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF" height="45">
+	  <Control height="10" />
+
+    <HorizontalLayout name="page_others" height="35">
+      <Control width="10" />
+      <Button name="btn_request_remote_control"  text="Request Remote Control" textcolor="#FFFFFFFF" font="6" height="35" width="160"/>
+      <Control width="10" />
+      <Button name="btn_giveup_remote_control"   text="Give Up Remote Control"    textcolor="#FFFFFFFF" font="6" height="35" width="160"/>
+      <Control width="10" />
+      <Button name="btn_annotate"                text="Annotate"               textcolor="#FFFFFFFF" font="6" height="35" width="160"/>
+      <Control />
+    </HorizontalLayout>
+
+    <Control />
+  </VerticalLayout>
+</Window>

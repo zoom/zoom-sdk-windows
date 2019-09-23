@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="524,376" caption="0,0,0,32" >
+	<Font id="1" name="Segoe UI" size="12" bold="false"/>
+	<VerticalLayout bkcolor="#FFFFFFFF">
+		<HorizontalLayout name="select_tab" bkcolor="#FFFFFFFF" height="160">
+
+		</HorizontalLayout>
+		<HorizontalLayout name="select_invitation_type" height="176" >
+
+		</HorizontalLayout>
+		<Control bordersize="1" bordercolor="#ffe6e6e6" height="1" width="524" />
+		<HorizontalLayout name="copy_btn_panel">
+			<Button name="copy_invitate_link_btn" float="true" pos="20,10,0,0" text="Copy Invite Link" height="20" width="100" font="1" hotbkcolor="#ffe6e6e6" pushedbkcolor="#FFB7B7B7" focusedbkcolor="#ffe6e6e6" bkcolor="#FFFFFFFF" textcolor="#FF0031f5" align="center" borderround="2,2" />
+
+			<Button name="copy_invitate_info_btn" float="true" pos="140,10,0,0" text="Copy Invitation Information" height="20" width="200" font="1" hotbkcolor="#ffe6e6e6" pushedbkcolor="#FFB7B7B7" focusedbkcolor="#ffe6e6e6" bkcolor="#FFFFFFFF" textcolor="#FF0031f5" align="center" borderround="2,2" />
+			<Label name="copy_notify" text="You have copied it to ClipBoard." bkcolor="#ffffff99" align="center" visible="false" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

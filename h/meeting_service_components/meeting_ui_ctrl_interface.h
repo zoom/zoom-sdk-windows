@@ -118,7 +118,7 @@ public:
 	virtual void onZoomInviteDialogFailed() = 0;
 
 	/// \brief Callback event of clicking CC menu.
-	/// \remarks The user won't receive this callback event unless he redirects the process of clicking the CUSTOME LIVE STREAM menu. For more details, see \link IMeetingUIElemConfiguration::RedirectClickCustomLiveStreamMenuEvent() \endlink.
+	/// \remarks The user won't receive this callback event unless he redirects the process of clicking the CUSTOME LIVE STREAM menu. For more details, see \link IMeetingUIElemConfiguration::RedirectClickCCBTNEvent() \endlink.
 	virtual void onCCBTNClicked() = 0;
 };
 
@@ -247,10 +247,7 @@ public:
 	/// \remarks The function does not work if the window shows the first or last page. The return value is SDKErr_Success in this case.
 	virtual SDKError ShowPreOrNextPageVideo(bool bPageUp) = 0;
 
-	/// \brief Display or close a dialog box which enables the user to share the application or the screen. 
-	/// \param bShow TRUE indicates to display the dialog. FALSE hide.
-	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \brief Set the visibility of the green frame when sharing the application.	/// \param bShow TRUE indicates to display the frame. FALSE hide.	/// \return If the function succeeds, the return value is SDKErr_Success.	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowSharingFrameWindows(bool bShow) = 0;
 
 	/// \brief Determines the minimize state of the first view.
@@ -276,6 +273,24 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	///\remarks TRUE does not work if it is in the split screen mode. FALSE does not work if it is not the split screen mode.
 	virtual SDKError SwitchSplitScreenMode(bool bSplit) = 0;
+
+	/// \brief when someone else shares, and meeting window is not full screen. you can call the api to switch video & share display postion. 
+	/// \param bToDisplayShare TRUE means to display share, otherwise video.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SwapToShowShareViewOrVideo(bool bToDisplayShare) = 0;
+
+	/// \brief Determine if the meeting is displaying the sharing screen now.
+	/// \param [out] bIsShare TRUE means is showing sharing screen, FALSE means is showing video.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError IsDisplayingShareViewOrVideo(bool& bIsShare) = 0;
+
+	/// \brief Determine if the user can swap to show sharing screen or video now.
+	/// \param [out] bCan TRUE means Can, otherwise not
+	/// \return SDKErr_Success means success, otherwise not
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanSwapToShowShareViewOrVideo(bool& bCan) = 0;
 };
 
 END_ZOOM_SDK_NAMESPACE

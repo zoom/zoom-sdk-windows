@@ -1,5 +1,86 @@
 # CHANGELOG
 
+## 2019-07-15 @ [v4.4.55130.0712](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55130.0712)
+
+**Note**
+
+Some default behavior in Zoom meeting has changed:
+1. The sharing toolbar will be shown by default. If you want to hide the sharing toolbar, please call `IMeetingUIElemConfiguration.SetSharingToolbarVisibility(false)` explicitly in your app.
+2. Once the local recording content is converting, the converting progress dialog will be shown by default. If you don't want to show this progress dialog, please call `IMeetingUIElemConfiguration.EnableLocalRecordingConvertProgressBarDialog(false)` explicitly in your app.
+
+**Added**
+
+* Introduced new Zoom meeting UI
+* Added new interfaces for setting items
+  * `IGeneralSettingContext.EnableDisplayReminderWindowWhenExit(bool bEnable)`
+  * `IGeneralSettingContext.IsDisplayReminderWindowWhenExitEnabled()`
+  * `IGeneralSettingContext.EnableShowMyMeetingElapseTime(bool bEnable)`
+  * `IGeneralSettingContext.IsShowMyMeetingElapseTimeEnabled()`
+  * `IGeneralSettingContext.IsCurrentOSSupportAccelerateGPUWhenShare()`
+  * `IGeneralSettingContext.EnableAccelerateGPUWhenShare(bool& bEnable)`
+  * `IGeneralSettingContext.IsAccelerateGPUWhenShareEnabled()`
+  * `IGeneralSettingContext.EnableRemoteControlAllApplications(bool bEnable)`
+  * `IGeneralSettingContext.IsRemoteControlAllApplicationsEnabled()`
+  * `IAudioSettingContext.EnableEchoCancellation(bool bEnable)`
+  * `IAudioSettingContext.IsEchoCancellationEnabled()`
+  * `IRecordingSettingContextEvent.onCloudRecordingStorageInfo(INT64 storage_total_size, INT64 storage_used_size, bool allow_exceed_storage)`
+  * `IRecordingSettingContext.SetRecordingSettingEvent(IRecordingSettingContextEvent* pEvent)`
+  * `IRecordingSettingContext.CanGetCloudRecordingStorageInfo()`
+  * `IRecordingSettingContext.GetCloudRecordingStorageInfo()`
+  * `IRecordingSettingContext.GetRecordingManagementURL()`
+  * `IRecordingSettingContext.CanGetRecordingManagementURL(bool& bEnable)`
+  * `IRecordingSettingContext.EnableSelectRecordFileLocationAfterMeeting(bool bEnable)`
+  * `IRecordingSettingContext.IsSelectRecordFileLocationAfterMeetingEnabled()`
+  * `IRecordingSettingContext.EnableMultiAudioStreamRecord(bool bEnable)`
+  * `IRecordingSettingContext.IsMultiAudioStreamRecordEnabled()`
+  * `IRecordingSettingContext.EnableAddTimestampWatermark(bool bEnable)`
+  * `IRecordingSettingContext.IsAddTimestampWatermarkEnabled()`
+  * `IRecordingSettingContext.EnableOptimizeFor3rdPartyVideoEditor(bool bEnable)`
+  * `IRecordingSettingContext.IsOptimizeFor3rdPartyVideoEditorEnabled()`
+  * `IRecordingSettingContext.EnableShowVideoThumbnailWhenShare(bool bEnable)`
+  * `IRecordingSettingContext.IsShowVideoThumbnailWhenShareEnabled()`
+  * `IRecordingSettingContext.EnablePlaceVideoNextToShareInRecord(bool bEnable)`
+  * `IRecordingSettingContext.IsPlaceVideoNextToShareInRecordEnabled()`
+  * `IAccessibilitySettingContext.EnableAlwaysShowMeetingControls(bool bEnable)`
+  * `IAccessibilitySettingContext.IsAlwaysShowMeetingControlsEnable(bool& bEnable)`
+  * `ISettingService.GetAccessibilitySettings()`
+* Added a new interface to hide the “Upgrade to Pro” text from the free meeting reminder message
+  * `IMeetingUIElemConfiguration.HideUpgradeFreeMeetingButton(bool bHide)`
+* Add a new parameter to the SDK initialization method to customize the log size, the range is from 1MB to 50MB per log file, and by default is 5MB. The maximum number of the log file is 5.
+  * `tagInitParam.uiLogFileSize`
+* Added a new interface to redirect bad network warning message
+  * `IMeetingUIElemConfiguration.RedirectMeetingWarningMsg(RedirectWarningMsgOption redirectOption)`
+* Added a new interface to show/hide the tabs in the setting dialog
+  * `ISettingUIStrategy.ConfSettingDialogShownTabPage(SettingDlgShowTabPageOption showOption)`
+* Added a new interface to show/hide video button
+  * `IMeetingUIElemConfiguration.EnableVideoButtonOnMeetingUI(bool bEnable)`
+* Redefined the return values of ZOOM_SDK_NAMESPACE::AuthResult. Added 2 new values:
+  * `AUTHRET_OVERTIME`
+  * `AUTHRET_NETWORKISSUE`
+* Added a new interface to switch between the active video view and the sharing content view
+  * `IMeetingUIController.SwitchVideoASView()`
+* Added new examples in sdk_demo_v2
+
+**Changed & Fixed**
+
+* Modified to allow editing or deleting recurring meetings via SDK
+* Hide the “End Other Meeting” dialog when the `redirectEndOtherMeeting(true)` is called
+* Fixed an issue that when sharing specific window the desktop is shared
+* Fixed an issue that when disabling the chat feature the message alert still pops up
+* Fixed an issue that sometimes the Windows Electron SDK failed to load zzhost.dll
+* Fixed an issue that the user’s info showed up as a string of random characters
+* Fixed an issue that the meeting is ended at an unexpected time while only 1 user is in the meeting
+* Fixed an issue that 3 black borders appear after calling `SetBottomFloatToolbarWndVisibility`
+
+**Deprecated**
+
+* IMeetingShareController.LockShare()
+* IMeetingShareController.UnLockShare()
+* IScheduleForUser.GetEmail()
+
+
+
+
 ## 2019-03-25 @ [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325)
 
 **Note: Please do not assign new digital signature on cpthost.exe file. Assigning new digital signature on this file could lead to fatal errors**

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window  size="1000,53" disabledfontcolor="0xFF808080" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="11" bold="true"/>
+  <Font id="1" name="Segoe UI" size="11" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="12" bold="false"/>
+  <Font id="3" name="Segoe UI" size="12" bold="true"/>
+  <!--Font size 14-->
+  <Font id="4" name="Segoe UI" size="13" bold="false"/>
+
+  <Default name="Button" value=" align=&quot;center,singleline&quot; valign=&quot;center&quot; font=&quot;0&quot; textcolor=&quot;#DCDCDC&quot; hottextcolor=&quot;#DCDCDC&quot; pushedtextcolor=&quot;#919191&quot; disabledtextcolor=&quot;#808080&quot; hotimage=&quot;res='toolbar_btn_bg.png' restype='ZPIMGRES' source='0,0,24,52'&quot; pushedimage=&quot;res='toolbar_btn_bg.png' restype='ZPIMGRES' source='0,0,24,53' &quot; " />
+
+  <HorizontalLayout name="container_buttons_bottom_ui"  bkimage="res='toolbar_bg.png' restype='ZPIMGRES' corner='5,5,5,5'" align="center">
+	<Control />
+	<Button name="btn_participant"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+      foreimage="res='toolbar_btn_participants.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'"
+      hotforeimage="res=toolbar_btn_participants.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'"
+      pushedforeimage="res='toolbar_btn_participants.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_thumbnailvideo"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='toolbar_btn_participants.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'" 
+			hotforeimage="res=toolbar_btn_participants.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'" 
+			pushedforeimage="res='toolbar_btn_participants.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_video"  padding="0,0,0,0" height="53" width="95"
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='toolbar_btn_stopVideo.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'" 
+			hotforeimage="res=toolbar_btn_stopVideo.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'" 
+			pushedforeimage="res='toolbar_btn_stopVideo.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_audio"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='toolbar_btn_mute.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'" 
+			hotforeimage="res=toolbar_btn_mute.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'" 
+			pushedforeimage="res='toolbar_btn_mute.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_share"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='toolbar_btn_shareScreen.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'" 
+			hotforeimage="res=toolbar_btn_shareScreen.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'" 
+			pushedforeimage="res='toolbar_btn_shareScreen.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_chat"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='toolbar_btn_chat.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'" 
+			hotforeimage="res=toolbar_btn_chat.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'" 
+			pushedforeimage="res='toolbar_btn_chat.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_more"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='wallview_pre.png' restype='ZPIMGRES' source='74,0,148,34' dest='30,4,60,34'" 
+			hotforeimage="res=wallview_pre.png' restype='ZPIMGRES' source='0,0,74,34' dest='30,4,60,34'" 
+			pushedforeimage="res='wallview_pre.png' restype='ZPIMGRES' source='148,0,222,34' dest='30,4,60,34'" />
+	<Control width="30"/>
+		<Button name="btn_leavemeeting"  padding="0,0,0,0" height="53" width="95" 
+			focuscolor="#AAFFFFFF" focuspadding="2,2,2,2" textpadding="4,33,4,0" textalign="center"
+			foreimage="res='toolbar_btn_leaveMeeting.png' restype='ZPIMGRES' source='0,0,30,30' dest='30,4,60,34'" 
+			hotforeimage="res=toolbar_btn_leaveMeeting.png' restype='ZPIMGRES' source='30,0,60,30' dest='30,4,60,34'" 
+			pushedforeimage="res='toolbar_btn_leaveMeeting.png' restype='ZPIMGRES' source='60,0,90,30' dest='30,4,60,34'" />
+	<Control />
+</HorizontalLayout>
+</Window>

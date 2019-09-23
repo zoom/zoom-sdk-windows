@@ -156,8 +156,8 @@ enum SDKInviteDlgTabPage
 
 enum SDKH323TabPage
 {
-	SDK_INVITEDLG_H323_DIALIN = 0, ///<'Dial In' sub-tab page of Room System tab page
-	SDK_INVITEDLG_H323_CALLOUT, ///<'Call Out' sub-tab page of Room System tab page
+	SDK_INVITEDLG_H323_DIALIN = 0, ///<'Dial In' sub-tab page under Room System invitation tab page
+	SDK_INVITEDLG_H323_CALLOUT, ///<'Call Out' sub-tab page under Room System invitation tab page
 };
 /// \brief Free meeting event handler.
 ///
@@ -222,6 +222,16 @@ public:
 	virtual void onEndOtherMeetingToJoinMeetingNotification(IEndOtherMeetingToJoinMeetingHandler* handler_) = 0;
 };
 
+typedef struct tagRedirectWarningMsgOption
+{
+	bool bRedirectBadNetwork;
+	tagRedirectWarningMsgOption()
+	{
+		bool bRedirectBadNetwork = false;
+	}
+
+}RedirectWarningMsgOption;
+
 /// \brief Meeting user configuration interface.
 ///
 class IMeetingUIElemConfiguration
@@ -231,13 +241,12 @@ public:
 	/// \param pos Specify the position of the primary view meeting window. The coordinates of the window are those of the screen.
 	virtual void SetMeetingUIPos(WndPosition pos) = 0;
 
-	/// \brief Set the position of meeting window when the sharing begins. 
-	/// \param pos Specify the position of meeting window when the sharing begins.
-	/// \remarks The value shall be set before the sharing begins. If you set the value during the process of share, the function will not be valid until the next share.
+	/// \brief Set the position of the floating video window when sharing. 	/// \param pos Specify the position of the floating video window when sharing.	/// \remarks The value shall be set before the sharing begins. If you set the value during the process of share, the function will not be valid until the next share.
 	virtual void SetFloatVideoPos(WndPosition pos) = 0;
 
-	/// \brief Set the visibility of the sharing toolbar. Default value: FALSE. 
-	/// \param bShow TRUE means to enable the display sharing toolbar. Otherwise not. 
+	/// \brief Set the visibility of the sharing toolbar. Default value: TRUE. 
+	/// \param bShow TRUE means to enable the display sharing toolbar. Otherwise not.
+	/// \remarks This function works only before the meeting or the sharing starts. 
 	virtual void SetSharingToolbarVisibility(bool bShow) = 0;
 
 	/// \brief Set the visibility of the toolbar at the bottom of the meeting window. Default value: TRUE.
@@ -262,8 +271,7 @@ public:
 	///If it is FALSE, the user can deal with this request in the IMeetingRemoteCtrlEvent::onRemoteControlStatus() callback event sent by SDK when receiving the decline request of the remote control and then exists the sharing status at the end of callback event.
 	virtual void EnableDeclineRemoteControlResponseDlg(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the LEAVE MEETING button when the host leaves the meeting. Default value: TRUE.
-	/// \param bEnable TRUE indicates to display the button. Otherwise not.
+	/// \brief Set the visibility of the LEAVE MEETING button on the pop-up dialogue box when the host leaves the meeting. Default value: TRUE.	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	virtual void EnableLeaveMeetingOptionForHost(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the INVITE button in the toolbar during the meeting. Default value: TRUE.
@@ -271,6 +279,10 @@ public:
 	/// \remarks The user will receive the IMeetingUIControllerEvent::onInviteBtnClicked() callback event when he clicks the INVITE button. If the callback event is not handled, the SDK will pop up a ZOOM custom invitation dialog.
 	///The user will receive the IMeetingUIControllerEvent::onZoomInviteDialogFailed() callback event if the dialog box is failed to display.
 	virtual void EnableInviteButtonOnMeetingUI(bool bEnable) = 0;
+
+	/// \brief Set the visibility of the Video button in the toolbar during the meeting. Default value: TRUE.
+	/// \param bEnable TRUE indicates to display the button. Otherwise not.
+	virtual void EnableVideoButtonOnMeetingUI(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the buttons to enter or exit the full screen in the meeting window. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the button. Otherwise not.
@@ -314,8 +326,13 @@ public:
 	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onCCBTNClicked(), and the user shall deal with the subsequent logic himself.
 	virtual void RedirectClickCCBTNEvent(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to show tool-tip in the meeting. Default value: TRUE. 
-	/// \param bEnable TRUE indicates to enable the tool-tip in the meeting. FALSE not.
+	/// \brief Set if it is able to handle the warning message with SDK user's own program in the meeting. Default value: None.
+	/// \param redirectOption The parameter indicates the warning messages to be handled with user's own program.
+	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingServiceEvent::onMeetingStatisticsWarningNotification(), and the user shall deal with the subsequent logic himself.
+	virtual void RedirectMeetingWarningMsg(RedirectWarningMsgOption redirectOption) = 0;
+
+	/// \brief Set if it is able to temporarily show tooltip of the button in the toolbar of the meeting and user can close it by click the "x". Default value: TRUE. 
+	/// \param bEnable TRUE indicates to enable to show the tooltip in the meeting. FALSE not.
 	virtual void EnableToolTipsShow(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the introduction window when sharing on the iOS device. Default value: TRUE.
@@ -323,15 +340,15 @@ public:
 	///	\remarks The SDK will trigger the IMeetingConfigurationEvent::onAirPlayInstructionWndNotification() callback event if the user calls this function to set to false, he shall deal with the subsequent logic himself.
 	 virtual void EnableAirplayInstructionWindow(bool bEnable) = 0;
 
-	/// \brief Set if it is able to claim host. Default value: TRUE.
-	/// \param bEnable TRUE indicates to claim host. FALSE not.
+	/// \brief Set if it is able to retrieve the permission of host (when the original host gives up the host permission). Default value: TRUE.
+	/// \param bEnable TRUE indicates that he can retrieve the permission of host. FALSE not.
 	virtual void EnableClaimHostFeature(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the dialog box of choosing audio when joining the meeting. Default value: FALSE.
 	/// \param bEnable TRUE indicates to hide the dialog box of choosing audio when joining the meeting. FALSE not.
 	virtual void EnableAutoHideJoinAudioDialog(bool bEnable) = 0;
 
-	/// \brief Set if it is able to display always the icon on the task-bar. Default value: FALSE.
+	/// \brief Set if it is able to display the preview window of the Meeting Controls on the task bar during sharing. Default value: FALSE.
 	/// \param bAlwaysShow TRUE indicates to display always the icon on the task-bar. 
 	virtual void AlwaysShowIconOnTaskBar(bool bAlwaysShow) = 0;
 
@@ -376,14 +393,14 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DisableTopMostAttr4SettingDialog(bool bDisable) = 0;
 
-	/// \brief Set whether to close the current sharing content without prompt and directly beginning a new sharing content. Default value: FALSE(prompt).
+	/// \brief Set whether to close the current sharing of another user without prompt and directly beginning a new sharing content by the closer. Default value: FALSE(prompt).
 	/// \param bEnable TRUE indicates no prompt. FALSE not.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableGrabShareWithoutReminder(bool bEnable) = 0;
 	
 	/// \brief Set the visibility of the SWITCH TO SINGLE PARTICIPANT SHARE dialog box when multiple participants are sharing and the user try to change the setting to single share. Default: TURE. 
-	/// \param bEnable TRUE indicates to show dialog box when join the meeting. FALSE not.
+	/// \param bEnable TRUE indicates to show dialog box if the multishare option is changed. FALSE not.
 	/// \remarks If the dialog is disabled to show, you will retrieve IMeetingShareCtrlEvent::onMultiShareSwitchToSingleShareNeedConfirm callback event.
 	virtual void EnableShowShareSwitchMultiToSingleConfirmDlg(bool bEnable) = 0;
 
@@ -404,15 +421,23 @@ public:
 	/// \param [in] bHide TRUE means hiding, otherwise not.
 	virtual void HideUpgradeFreeMeetingButton(bool bHide) = 0;
 
-	/// \brief Set the visibility of specified tab in the invite dialog box when the dialog is shown. Default value: All are shown.
-	/// \param tabPage Specifies a tab, see \link SDKInviteDlgTabPage \endlink enum.
+	/// \brief Set the visibility of some specified tabs in the invite dialog. Default: Show all the content.
+	/// \param tabPage Specify a tab page, see \link SDKInviteDlgTabPage \endlink enum.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowInviteDlgTabPage(SDKInviteDlgTabPage tabPage, bool bShow) = 0;
 
-	/// \brief Set the visibility of specified tab in the Room System tab page of the invite dialog box when the dialog is shown. Default value: All are shown.
-	/// \param tabPage Specifies a tab, see \link SDKH323TabPage \endlink enum.
+	/// \brief Set the visibility of some specified tabs in the Room System invitation dialog. Default: show all the content.Default: show all the content.
+	/// \param tabPage Specify a tab, see \link SDKH323TabPage \endlink enum.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowH323SubTabPage(SDKH323TabPage tabPage, bool bShow) = 0;
+
+	/// \brief Set the visibility of upgrade warning message for free user when the user schedules a meeting. Default: FALSE.
+	/// \param bHide TRUE indicates to hide the warning message.FALSE not.
+	virtual void HideUpgradeWarningMsgForFreeUserWhenSchedule(bool bHide) = 0;
+
+	// \brief Set the visibility of the local recording convert progress bar dialog. Default: TRUE. 
+	/// \param bShow TRUE indicates to show the dialog box. FALSE not.
+	virtual void EnableLocalRecordingConvertProgressBarDialog(bool bShow) = 0;
 };
 
 /// \brief Meeting connect configuration Interface
@@ -425,7 +450,7 @@ public:
 	/// \remarks If it is disabled to display the dialog box of wrong password, the system will directly exit the state of trying to join the meeting.
 	virtual void DisablePopupMeetingWrongPSWDlg(bool bDisable) = 0;
 
-	/// \brief Set the visibility of the dialog box of waiting for the host after joining the meeting. Default: TRUE.
+	/// \brief Set the visibility of the dialog box of waiting for the host after joining the meeting. Only invalidate when the host is not in the meeting. Default: FALSE.
 	/// \param bDisable TRUE indicates to hide the dialog box. FALSE not.
 	virtual void DisableWaitingForHostDialog(bool bDisable) = 0;
 
@@ -457,14 +482,11 @@ public:
 	/// \param bRedirect TRUE indicates to redirect. FALSE not. If it is TRUE, the SDK will trigger the  IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification().
 	/// \remarks This function doesn't work if the IJoinMeetingBehaviorConfiguration::EnableAutoEndOtherMeetingWhenStartMeeting(true) is also called. If redirect successfully, the SDK will trigger the IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification() callback event. For more details, see \link IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification() \endlink.
 	virtual void RedirectEndOtherMeeting(bool bRedirect) = 0;
-	/// \brief Set if it is able to force participants to start video when joining the meeting.
-	/// \param bEnable TRUE indicates to force participants to start video.
-	/// \remarks The default behavior depends on the configuration of the meeting.
+	
+	/// \brief Force to enable the video when join meeting.	/// \param bEnable TRUE indicates to force to start video.	/// \remarks The default behavior depends on the configuration of the meeting.
 	virtual void EnableForceAutoStartMyVideoWhenJoinMeeting(bool bEnable) = 0;
 
-	/// \brief Set if it is able to force participants to turn off video when joining the meeting.
-	/// \param bEnable TRUE indicates to force participants to turn off video.
-	/// \remarks The default behavior depends on the configuration of the meeting.
+	/// \brief Force to turn off video when joining the meeting.	/// \param bEnable TRUE indicates to force to turn off the video.	/// \remarks The default behavior depends on the configuration of the meeting.
 	virtual void EnableForceAutoStopMyVideoWhenJoinMeeting(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the dialog  SELECT JOIN AUDIO when joining meeting. Default: FALSE.
@@ -529,9 +551,13 @@ public:
 	/// \param bEnable TRUE indicates to enable to share on the white board. FALSE not.
 	virtual void EnableShareWhiteBoard(bool bEnable) = 0;
 
-	/// \brief Set whether to forbid multi-share. Default: TRUE.
+	/// \brief Set whether to forbid multi-share. Default: FALSE.
 	/// \param bDisable TRUE indicates to forbid multi-share. FALSE not.
 	virtual void ForceDisableMultiShare(bool bDisable) = 0;
+
+	/// \brief Set the maximum duration of the meeting when there is no attendee in the meeting. Default: 24*60.
+	/// \param nDuration Specify the maximum duration in minutes.
+	virtual void SetMaxDurationForOnlyHostInMeeting(int nDuration) = 0;
 };
 
 END_ZOOM_SDK_NAMESPACE

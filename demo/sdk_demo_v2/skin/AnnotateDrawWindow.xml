@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="150,150"  caption="0,0,0,32" disabledfontcolor="0xFF808080" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 11-->
+  <Font id="4" name="Segoe UI" size="15" bold="false"/>
+  <Font id="5" name="Segoe UI" size="15" bold="true"/>
+  <!--Font size xx-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <Font id="7" name="Segoe UI" size="14" bold="true"/>
+  <!--8-->
+  <Font id="8" name="Segoe UI" size="21" bold="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="17" bold="true"/>
+  <!--10-->
+  <Font id="10" name="Segoe UI" size="24" bold="false"/>
+  <!--11-->
+  <Font id="11" name="Segoe UI" size="20" bold="false"/>
+  <!--12-->
+  <Font id="12" name="Segoe UI" size="14" bold="false"/>
+  <Font id="13" name="Segoe UI" size="17" bold="false"/>
+  
+  <VerticalLayout name="container_root" bkcolor="#FF000000" bkcolor2="#FF000000">
+	    
+      <Control height="10"/>
+      <HorizontalLayout height="24">
+          <Control width="10" />
+          <Button name="btn_crooked_line"  width="24" height="24" textpadding="0,0,0,0" font="1" 
+              bordersize="1" bordercolor="#FF7F7F7F"
+						  normalimage  ="res='tool_line_default.png' restype='ZPIMGRES' dest='0,0,24,24'" 
+						  hotimage     ="res='tool_line_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'" 
+						  pushedimage  ="res='tool_line_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"  
+						  focuspadding ="4,4,4,4" />
+          <Control width="10" />
+          <Button name="btn_autoLine_line"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"    
+              normalimage  ="res='tool_autoLine_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_autoLine_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_autoLine_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control width="10" />
+          <Button name="btn_autoRectangle"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_autoRectangle_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_autoRectangle_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_autoRectangle_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control width="10" />
+          <Button name="btn_autoEllipse_line"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_autoEllipse_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_autoEllipse_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_autoEllipse_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control />
+      </HorizontalLayout>
+    
+      <Control height="10"/>
+      <HorizontalLayout height="24">
+          <Control width="10" />
+          <Button name="btn_highlightLine"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_highlightLine_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_highlightLine_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_highlightLine_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control width="10" />
+          <Button name="btn_autoArrow"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_autoArrow_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_autoArrow_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_autoArrow_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control width="10" />
+          <Button name="btn_rectangleFill"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_rectangleFill_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_rectangleFill_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_rectangleFill_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control width="10" />
+          <Button name="btn_ellipsefill"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_ellipsefill_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_ellipsefill_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_ellipsefill_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+          <Control />
+      </HorizontalLayout>
+
+      <Control height="10"/>
+      <HorizontalLayout height="24">
+        <Control width="10" />
+        <Button name="btn_rhombus"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_rhombus_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_rhombus_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_rhombus_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+        <Control width="10" />
+        <Button name="btn_doubleArrow"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_doubleArrow_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_doubleArrow_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_doubleArrow_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+        <Control width="10" />
+        <Button name="btn_autoRectanglePiece"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_autoRectanglePiece_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_autoRectanglePiece_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_autoRectanglePiece_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+        <Control width="10" />
+        <Button name="btn_autoEllipsePiece"  width="24" height="24" textpadding="0,0,0,0" font="1"
+              bordersize="1" bordercolor="#FF7F7F7F"
+              normalimage  ="res='tool_autoEllipsePiece_default.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              hotimage     ="res='tool_autoEllipsePiece_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              pushedimage  ="res='tool_autoEllipsePiece_pressed.png' restype='ZPIMGRES' dest='0,0,24,24'"
+              focuspadding ="4,4,4,4" />
+        <Control />
+      </HorizontalLayout>
+    
+	    <Control />
+	</VerticalLayout  >
+</Window>

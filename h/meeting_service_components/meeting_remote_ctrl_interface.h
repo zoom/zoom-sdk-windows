@@ -62,7 +62,7 @@ public:
 
 	/// \brief Determine if the specified user is in process of remote control.
 	/// \param userId Specify the user ID to check.
-	/// \return If the function succeeds, the return value is SDKErr_Success.
+	/// \return If the specified user is in process of remote control, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError IsInRemoteControllingStatus(unsigned int userId) = 0;
 

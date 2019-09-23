@@ -52,6 +52,9 @@ public:
 	virtual SDKError BeginZoomOut() = 0;
 	virtual SDKError ContinueZoomOut() = 0;
 	virtual SDKError EndZoomOut() = 0;
+
+	// Used to determine whether the camera can be controlled or not
+	virtual SDKError CanControlCamera(bool& bCan) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 

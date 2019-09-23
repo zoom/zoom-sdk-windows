@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="415,470" caption="0,0,0,32" >
+	 <!--Font size xx-->
+	  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+	  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+	  <!--Font size 10-->
+	  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+	  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+	<Font id="4" name="Segoe UI" size="15" bold="false"/>
+  	<Font id="5" name="Segoe UI" size="15" bold="true"/>
+  	<Font id="6" name="Segoe UI" size="14" bold="false"/>
+  	<Font id="7" name="Segoe UI" size="14" bold="true"/>
+  	<Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF179FF5 &quot; pushedbkcolor=&quot;#FF179FF5 &quot; focusedbkcolor=&quot;#FF179FF5 &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+	<Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
+
+	<VerticalLayout bkcolor="#FFFFFFFF">
+		<HorizontalLayout bkcolor="#FFFFFFFF" height="20" >
+			<Button name="copy_btn" float="true" pos="107,0,0,0" width="200" height="20" text="Use third-party CC services" font="1" hotbkcolor="#FFFFFFFF" pushedbkcolor="#FFFFFFFF" focusedbkcolor="#FFFFFFFF" bkcolor="#FFFFFFFF" textcolor="#FF0031f5" align="center" />
+		</HorizontalLayout>
+		<HorizontalLayout  bkcolor="#FFFFFFFF" inset="4,4,4,4">
+			<RichEdit name ="show_cc_content"  multiline="true" autovscroll="true" wanttab="false" rich="false" vscrollbar="true" font="1" readonly="true"/>
+		</HorizontalLayout>
+		<HorizontalLayout name="save_cc_layout" bkcolor="#FFFFFFFF" height="20" visible="false">
+		<Button name="save_cc_btn" float="true" pos="157,0,0,0" width="100" height="20" text="Save CC history" font="1" hotbkcolor="#ffe6e6e6" pushedbkcolor="#FFB7B7B7" focusedbkcolor="#e6e6e6" bkcolor="#FFFFFFFF" textcolor="#FF0031f5" align="center" borderround="2,2" />
+		</HorizontalLayout>
+		<HorizontalLayout name="assign_layout"  height="41" bkcolor="#FFFFFFFF" inset="2,2,2,2" >
+			<Control float="true" pos="0,0,0,0" width="470" bordersize="1" bordercolor="FFB7B7B7" height="1"/>
+			<Label float="true" pos="5,10,0,0" width="190" height="20" text="Assign Closed Caption Sender :" font="0"/>
+			<Combo name="cc_sender_list" float="true" pos="190,10,0,0" width="120" height="20" textpadding="6,0,0,0" itemtextpadding="6,0,0,0" bkcolor="#FFEAECEE" bordersize="1" bordercolor="FFC0C0C0" itemselectedbkcolor="#FFC1E3FF" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" itemfont="1"/>
+			<Button name="assign_btn" float="true" pos="315,10,0,0" width="90" height="20" text="Assign" font="1" borderround="2,2"/>
+		</HorizontalLayout>
+		<Control bordersize="1" bordercolor="FFB7B7B7" height="1"/>
+		<HorizontalLayout height="170" bkcolor="#FFFFFFFF" inset="4,4,4,4">
+			<RichEdit name ="input_cc_content" height="300" multiline="true" autovscroll="true" wanttab="false" rich="false" vscrollbar="true"
+				font="1" wantreturn="false" prompttext="Input here, press the enter key to send the broadcast." />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

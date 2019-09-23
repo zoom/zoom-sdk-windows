@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="122,200" caption="0,0,0,0" >
+
+  <!--Font size xx-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  
+  <VerticalLayout name="participant_popup_menu" bkcolor="#FF212121">
+    <List name="menu_list" header="hidden"  bkcolor="0xff212121" borderround="4,4"  itemhotbkcolor="0xFF7a7a7a" itembkcolor="0xff000000" itemtextcolor="0xfffffff" itemfont="6" itemselectedbkcolor="0xFF616161"  itemalign="center" >       	
+		<ListLabelElement name="record" text="Enable Record" width="122" height="25"  borderround="4,4" padding="0,2,0,0"/>
+    </List>
+  </VerticalLayout>
+  
+</Window>

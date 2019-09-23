@@ -23,6 +23,8 @@ enum AuthResult
 	AUTHRET_UNKNOWN,///<Unknown error.
 	AUTHRET_SERVICE_BUSY,///<Service is busy.
 	AUTHRET_NONE,///<Initial status.
+	AUTHRET_OVERTIME,///<Time out.
+	AUTHRET_NETWORKISSUE,///<Network issues.
 };
 
 /*! \enum LOGINSTATUS

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="165, 144"  caption="0,0,0,32" disabledfontcolor="0xFF808080" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 11-->
+  <Font id="4" name="Segoe UI" size="15" bold="false"/>
+  <Font id="5" name="Segoe UI" size="15" bold="true"/>
+  <!--Font size xx-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <Font id="7" name="Segoe UI" size="14" bold="true"/>
+  <!--8-->
+  <Font id="8" name="Segoe UI" size="21" bold="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="17" bold="true"/>
+  <!--10-->
+  <Font id="10" name="Segoe UI" size="24" bold="false"/>
+  <!--11-->
+  <Font id="11" name="Segoe UI" size="20" bold="false"/>
+  <!--12-->
+  <Font id="12" name="Segoe UI" size="14" bold="false"/>
+  <Font id="13" name="Segoe UI" size="17" bold="false"/>
+
+  
+  <VerticalLayout name="container_root" bkcolor="#FF000000" bkcolor2="#FF000000">
+
+    <Control height="10"/>
+    
+    <HorizontalLayout height="24">
+        <Control width="10"/>
+        <Button name="btn_clear_all"  width="140" height="24" text="Clear All Drawing" textcolor="#FFFFFFFF" textpadding="0,0,0,0" font="1"
+                bordersize="1" bordercolor="#FF7F7F7F" hotbkcolor="#FF7F7F7F" />
+        <Control />
+    </HorizontalLayout>
+      
+    <Control height="10"/>
+    
+    <HorizontalLayout height="24">
+        <Control width="10"/>
+        <Button name="btn_clear_my"  width="140" height="24"  text="Clear My Drawing"  textcolor="#FFFFFFFF" textpadding="0,0,0,0" font="1"
+                bordersize="1" bordercolor="#FF7F7F7F" hotbkcolor="#FF7F7F7F" />
+        <Control />
+    </HorizontalLayout>
+      
+    <Control height="10"/>
+    
+    <HorizontalLayout height="24">
+        <Control width="10"/>
+        <Button name="btn_clear_viewer"  width="140" height="24" text="Clear Viewer's Drawing" textcolor="#FFFFFFFF" textpadding="0,0,0,0" font="1"
+                bordersize="1" bordercolor="#FF7F7F7F" hotbkcolor="#FF7F7F7F" />
+        <Control />
+    </HorizontalLayout>
+
+    <Control />
+  </VerticalLayout  >
+</Window>

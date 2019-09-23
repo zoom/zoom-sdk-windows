@@ -143,14 +143,14 @@ public:
 	virtual SDKError SetEvent(IMeetingShareCtrlEvent* pEvent) = 0;
 	
 	/// \brief Share the specified application.
-	/// \param hwndSharedApp Specify the window handle of the application to be shared. If the hwndSharedApp can't be shared, the return value is the SDKERR_INVALID_PARAMETER error code. If the hwndSharedApp is NULL, a dialog box pops up to enable the user to choose an application. 
+	/// \param hwndSharedApp Specify the window handle of the application to be shared. If the hwndSharedApp can't be shared, the return value is the SDKERR_INVALID_PARAMETER error code. If the hwndSharedApp is NULL, the primary monitor will be shared. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError StartAppShare(HWND hwndSharedApp) = 0;
 
 	/// \brief Share the specified monitor.
-	/// \param monitorID Specify the monitor ID to be shared. You may get the value via EnumDisplayMonitors System API. If the monitorID is NULL, a dialog box pops up to enable the user to choose an application. For more details, see szDevice in MONITORINFOEX structure.
+	/// \param monitorID Specify the monitor ID to be shared. You may get the value via EnumDisplayMonitors System API. If the monitorID is NULL, the primary monitor will be shared. For more details, see szDevice in MONITORINFOEX structure.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
@@ -172,7 +172,7 @@ public:
 	/// \brief A dialog box pops up that enable the user to choose the application or window to share.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	/// \remarks Valid for both ZOOM style and user custom interface mode. 
+	/// \remarks Valid only for ZOOM style mode. 
 	virtual SDKError ShowSharingAppSelectWnd() = 0;
 	
 	/// \brief Determine if the specified ADVANCE SHARE OPTION is supported. 
@@ -220,12 +220,14 @@ public:
 	///Set the bBlock to FALSE before ending the share and call the function for the specified window to resume the property of the window.
 	virtual SDKError BlockWindowFromScreenshare(bool bBlock, HWND hWnd, bool bChangeWindowStyle = true) = 0;
 
+	/// \deprecated This interface is deprecated because Zoom meeting doesn't support this feature anymore. Please stop using it. 
 	/// \brief Lock the current meeting sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError LockShare() = 0;
 
+	/// \deprecated This interface is deprecated because Zoom meeting doesn't support this feature anymore. Please stop using it.
 	/// \brief Unlock the current meeting sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
@@ -300,15 +302,15 @@ public:
 
 	/// \brief Determine if the sound of the computer in the current sharing is supported. 
 	/// \param [out] bCurEnableOrNot The parameter is valid only when the return value is TRUE. And TRUE indicates to sharing the sound of the computer for the moment.
-	/// \return TRUE indicates to support the sound of the computer in the current sharing. FALSE not.
+	/// \return If it is TRUE, the value of bCurEnableOrNot can be used to check whether the computer sound is supported or not when sharing. FALSE not.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
-	virtual bool	 IsSupportEnableShareComputerSound(bool& bCurEnableOrNot) = 0;
+	virtual bool IsSupportEnableShareComputerSound(bool& bCurEnableOrNot) = 0;
 
 	/// \brief Determine whether to optimize the video fluidity when sharing in full screen mode. 
 	/// \param bCurEnableOrNot This parameter is valid only when the return value is TRUE. And TRUE indicates to optimize video for the moment. 
-	/// \return TRUE indicates to support the optimization of the video fluidity. FALSE not.
+	/// \return If it is TRUE, the value of bCurEnableOrNot can be used to check whether to support optimize video fluidity or not. FALSE not.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
-	virtual bool	 IsSupportEnableOptimizeForFullScreenVideoClip(bool& bCurEnableOrNot) = 0;
+	virtual bool IsSupportEnableOptimizeForFullScreenVideoClip(bool& bCurEnableOrNot) = 0;
 
 	/// \brief Set to enable or disable the audio when sharing.
 	/// \param bEnable TRUE indicates to enable. FALSE not.
@@ -330,6 +332,7 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetMultiShareSettingOptions(MultiShareOption shareOption) = 0;
 
+	virtual SDKError GetMultiShareSettingOptions(MultiShareOption& shareOption) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

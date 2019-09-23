@@ -628,7 +628,7 @@ public:
 	virtual IMeetingParticipantsController* GetMeetingParticipantsController() = 0;
 
 	/// \brief Get the live stream controller interface.
-	/// \return If the function succeeds, the return value is a pointer to IMeetingParticipantsController. Otherwise returns NULL.
+	/// \return If the function succeeds, the return value is a pointer to IMeetingLiveStreamController. Otherwise returns NULL.
 	virtual IMeetingLiveStreamController* GetMeetingLiveStreamController() = 0;
 
 	/// \brief Get the webinar controller interface.

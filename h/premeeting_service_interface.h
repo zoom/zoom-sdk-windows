@@ -110,6 +110,12 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SelectDefaultDialInCountry(const wchar_t* countryId) =0;
 	
+	/// \brief Remove the telephone number in the default call-in number via specified country ID.
+	/// \param countryId The ID of the specified country.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError RemoveDefaultDialInCountry(const wchar_t* countryId) =0;
+
 	/// \brief Set if the toll-free numbers are enabled in the call-in number list.
 	/// \param bEnable TRUE indicates to enable.	
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -254,6 +260,7 @@ class IScheduleForUser
 {
 public:
 	virtual ~IScheduleForUser() {};
+	/// \deprecated This interface is deprecated because of security reason. The return value will always be NULL now. Please stop using it. 
 	/// \brief Get the user email.
 	/// \return The user email.
 	virtual const wchar_t* GetEmail() = 0;
@@ -540,6 +547,7 @@ public:
 	
 	/// \param meetingUniqueID Specify the meeting ID.
 	/// \return If the function succeeds, the return value is the object pointer to IScheduleMeetingItem. Otherwise failed, returns NULL.
+	///Notice that if the specified meeting is a webinar, NULL will be returned. This infterface doesn't support a webinar or a recurring one.
 	virtual IScheduleMeetingItem* CreateEditMeetingItem(UINT64 meetingUniqueID) = 0;
 	
 	/// \brief Destroy the item of editing meeting created via CreateEditMeetingItem().
@@ -589,7 +597,7 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Once the function is called successfully, the user will receive the callback event via IPreMeetingServiceEvent::onDeleteMeeting ().
-	///It is forbidden to delete personal meeting or webinar or the recurring one.
+	///It is forbidden to delete personal meeting or webinar or a recurring one.
 	virtual SDKError DeleteMeeting(UINT64 meetingUniqueID) = 0;
 	
 	/// \brief Get the list of current meetings.

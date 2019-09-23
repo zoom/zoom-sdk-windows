@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="250,240" caption="0,0,0,32" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 14-->
+  <Font id="4" name="Segoe UI" size="18" bold="false"/>
+  <!--Font size 8-->
+  <Font id="5" name="Segoe UI" size="12" bold="true"/>
+  <!--Font size 12-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <!--7-->
+  <Font id="7" name="Segoe UI" size="14" bold="true" />
+  <Font id="8" name="Segoe UI" size="12" bold="false" underline="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="11" bold="true" />
+  <Font id="10" name="Segoe UI" size="14" bold="false" />
+  
+  <Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF7CCBFA &quot; pushedbkcolor=&quot;#FF7CCBFA &quot; focusedbkcolor=&quot;#FF7CCBFA &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+
+  <VerticalLayout bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF">
+	  <Control height="5" />
+    <HorizontalLayout name="page_left">
+      <Control width="95"/>
+      <Button name="btn_up"       text="up"       textcolor="#FFFFFFFF" font="6" height="35" width="50"/>
+		  <Control />
+	  </HorizontalLayout>
+
+    <HorizontalLayout name="page_middle">
+      <Control width="5" />
+		  <Button name="btn_left"     text="left"     textcolor="#FFFFFFFF" font="6" height="35" width="50"/>
+      <Control width="15" />
+      <HorizontalLayout>
+        <VerticalLayout>
+          <Control height="5" />
+          <Button name="btn_zoom_in"  text="in"   textcolor="#FFFFFFFF" font="6" height="25" width="40"/>
+          <Control />
+        </VerticalLayout>
+        <VerticalLayout>
+          <Control height="5" />
+          <Button name="btn_zoom_out" text="out"  textcolor="#FFFFFFFF" font="6" height="25" width="40"/>
+          <Control />
+        </VerticalLayout>
+      </HorizontalLayout>
+		  <Button name="btn_right"    text="right"    textcolor="#FFFFFFFF" font="6" height="35" width="50"/>
+      <Control width="5" />
+	  </HorizontalLayout>
+
+    <HorizontalLayout name="page_right">
+      <Control width="95"/>
+		  <Button name="btn_down"     text="down"     textcolor="#FFFFFFFF" font="6" height="35" width="50"/>
+	  	<Control />
+	  </HorizontalLayout>
+
+    <Control height="10" />
+    <HorizontalLayout name="page_check">
+      <Control width="95"/>
+		  <Button name="btn_check"    text="check"    textcolor="#FFFFFFFF" font="6" height="35" width="50"/>	
+		  <Control />
+	  </HorizontalLayout>
+  </VerticalLayout>
+</Window>

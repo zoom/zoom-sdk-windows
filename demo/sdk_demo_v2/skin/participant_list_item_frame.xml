@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <PUserItem>
+	<VerticalLayout height="41">
+		<Control />
+		<HorizontalLayout height="36"  >
+			<Control width="10" />
+			<HorizontalLayout name="panel_userInfo" visible="true" >
+				<HorizontalLayout>
+					<Label name="lb_userName"  font="4" textcolor="#FF444444" align="left,singleline" valign="center" endellipsis="true" />
+					<Label name="lb_userNameHostInfo" textpadding="4,0,0,0" font="4" textcolor="#FF444444" align="left,singleline" valign="center" endellipsis="false" autowidth="true" />
+				</HorizontalLayout>
+				<Label name="lb_raiseHand"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='icons_raise_hand.png' restype='ZPIMGRES' source='0,0,24,24'" visible="false"/>
+				<Label name="lb_audioStatus"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='icon_unmute24x24.png' restype='ZPIMGRES' source='0,0,24,24'" />
+				<Label name="lb_videoStatus"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='btn_sendvideo24x24.png' restype='ZPIMGRES' " />
+			</HorizontalLayout>
+			<Control width="10" />
+		</HorizontalLayout>
+		<Control />
+		<Control name="ctrl_bottom_line" height="1" />
+	</VerticalLayout>
+  </PUserItem>
+</Window>
