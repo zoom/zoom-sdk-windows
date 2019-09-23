@@ -229,6 +229,17 @@ enum SDKViewType
 	SDK_SECOND_VIEW,
 };
 
+/*! \enum MeetingConnType
+    \brief Meeting Connect Type
+    A more detailed struct description.
+*/
+enum MeetingConnType
+{
+	Meeting_Conn_None,
+	Meeting_Conn_Normal,
+	Meeting_Conn_FailOver,
+};
+
 /// \brief Meeting information Interface
 ///
 class IMeetingInfo
@@ -273,6 +284,12 @@ public:
 	/// \brief meeting is internal or not.
 	/// \return if meeting is internal or not.
 	virtual bool IsInternalMeeting() = 0;
+
+	/// \brief Get meeting connect type.
+	/// \return Meeting connect type
+	virtual MeetingConnType GetMeetingConnType() = 0;
+
+	virtual ~IMeetingInfo(){};
 };
 
 /// \brief Meeting external secure key handler
@@ -300,6 +317,8 @@ public:
 
 	/// \brief continue to join/start meeting
 	virtual void Confirm() = 0;
+
+	virtual ~IMeetingExternalSecureKeyHandler() {};
 };
 
 /*! \enum StatisticsWarningType

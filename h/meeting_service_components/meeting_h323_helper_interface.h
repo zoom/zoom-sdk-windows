@@ -6,7 +6,7 @@
 #ifndef _MEETING_H323_HELPER_INTERFACE_H_
 #define _MEETING_H323_HELPER_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
-
+#include <string>
 /// \brief Zoom SDK Namespace
 /// 
 ///
@@ -65,25 +65,81 @@ enum H323DeviceType
 	H323DeviceType_Unknown,
 	H323DeviceType_H323,
 	H323DeviceType_SIP,
+	H323DeviceType_BOTH,
 };
 
-/*! \struct tagH323Device
-    \brief H323 Device info.
-    A more detailed struct description.
-*/
-typedef struct tagH323Device{
-	tagH323Device()
+/// \brief Meeting H323 device Interface
+///
+class IH323Device
+{
+public:
+	virtual const wchar_t* GetName() = 0;
+	virtual const wchar_t* GetIP() = 0;
+	virtual const wchar_t* GetE164Num() = 0;
+	virtual H323DeviceType GetDeviceType() = 0;
+
+	virtual ~IH323Device(){};
+};
+
+/// \brief Customized Meeting H323 device
+///
+class CustomizedH323Device : public IH323Device
+{
+public:
+	CustomizedH323Device()
 	{
-		name = NULL;
-		ip = NULL;
-		e164num = NULL;
-		type = H323DeviceType_Unknown;
+		_type = H323DeviceType_Unknown;
 	}
-	wchar_t* name;
-	wchar_t* ip;
-	wchar_t* e164num;
-	H323DeviceType	type;
-}H323Device;
+
+	virtual void SetName(const wchar_t* name_)
+	{
+		if (name_)
+			_name = name_;
+	}
+
+	virtual const wchar_t* GetName()
+	{
+		return _name.c_str();
+	}
+
+	virtual void SetIP(const wchar_t* ip_)
+	{
+		if (ip_)
+			_ip = ip_;
+	}
+
+	virtual const wchar_t* GetIP()
+	{
+		return _ip.c_str();
+	}
+
+	virtual void SetE164Num(const wchar_t* e164num_)
+	{
+		if (e164num_)
+			_e164num = e164num_;
+	}
+
+	virtual const wchar_t* GetE164Num()
+	{
+		return _e164num.c_str();
+	}
+
+	virtual void SetDeviceType(H323DeviceType type_)
+	{
+		_type = type_;
+	}
+
+	virtual H323DeviceType GetDeviceType()
+	{
+		return _type;
+	}
+
+private:
+	H323DeviceType _type;
+	std::wstring _name;
+	std::wstring _ip;
+	std::wstring _e164num;
+};
 
 /// \brief Meeting H323 Helper Interface
 ///
@@ -109,11 +165,15 @@ public:
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError SendMeetingParingCode(UINT64 meetingNum, wchar_t* paringCode) = 0;
 
+	/// \brief Get h323 device for current meeting
+	/// \return If the function succeeds, the return value is not NULL.
+	virtual IList<IH323Device* >* GetCalloutH323DviceList() = 0;
+
 	/// \brief Call out a H323 device
 	/// \param deviceInfo Specifies which h323 device you want to call out.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	virtual SDKError CallOutH323(H323Device& deviceInfo) = 0;
+	virtual SDKError CallOutH323(IH323Device* deviceInfo) = 0;
 
 	/// \brief Cancel a h323 device call out
 	/// \return If the function succeeds, the return value is SDKErr_Success.

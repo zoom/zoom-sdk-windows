@@ -23,6 +23,7 @@ enum AuthResult
 	AUTHRET_ACCOUNTNOTSUPPORT,///< Client Account does not support
 	AUTHRET_ACCOUNTNOTENABLESDK,///< Client account does not enable SDK
 	AUTHRET_UNKNOWN,///< Auth Unknown error
+	AUTHRET_SERVICE_BUSY,///< service busy
 	AUTHRET_NONE,///< Initial status
 };
 
@@ -109,6 +110,7 @@ public:
 	/// \brief Get login type
 	/// \return The return value is account login type.
 	virtual LoginType GetLoginType() = 0;
+	virtual ~IAccountInfo(){};
 };
 
 /// \brief Authentication Service Callback Event

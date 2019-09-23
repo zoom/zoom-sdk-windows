@@ -28,6 +28,8 @@ public:
 	/// \brief Selected device flag
 	/// \return If the return value is true, this device is selected.
 	virtual bool IsSelectedDevice() = 0;
+
+	virtual ~ICameraInfo() {};
 };
 
 /// \brief Microphone device information Interface
@@ -48,6 +50,8 @@ public:
 	/// \brief Selected device flag
 	/// \return If the return value is true, this device is selected.
 	virtual bool IsSelectedDevice() = 0;
+
+	virtual ~IMicInfo() {};
 };
 
 /// \brief Audio speaker device information Interface
@@ -68,6 +72,8 @@ public:
 	/// \brief Selected device flag
 	/// \return If the return value is true, this device is selected.
 	virtual bool IsSelectedDevice() = 0;
+
+	virtual ~ISpeakerInfo() {};
 };
 
 enum SettingTabPage
@@ -145,6 +151,16 @@ public:
 	/// \return Enable or disable
 	virtual bool IsAutoFullScreenVideoWhenJoinMeetingEnabled() = 0;
 
+	/// \brief Enable or disable auto enter full screen video mode when view share.
+	/// \param bEnable Specifies enable or disable auto enter full screen video mode when view share.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableAutoFullScreenVideoWhenViewShare(bool bEnable) = 0;
+
+	/// \brief Get Enable or disable flag of auto enter full screen video mode when view share.
+	/// \return Enable or disable
+	virtual bool IsAutoFullScreenVideoWhenViewShareEnabled() = 0;
+
 	/// \brief Enable or disable split screen mode when view share.
 	/// \param bEnable Specifies enable or disable split screen mode when view share.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -201,6 +217,26 @@ public:
 	/// \brief Get Enable or disable flag of hd video.
 	/// \return Enable or disable
 	virtual bool IsHDVideoEnabled() = 0;
+
+	// \brief Enable or disable always show name on video
+	/// \param bEnable Specifies enable or disable always show name on video
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableAlwaysShowNameOnVideo(bool bEnable) = 0;
+
+	/// \brief Get Enable or disable flag of always show name on video.
+	/// \return Enable or disable
+	virtual bool IsAlwaysShowNameOnVideoEnabled() = 0;
+
+	// \brief Enable or disable turn off video when join meeting
+	/// \param bEnable Specifies enable or disable turn off video when join meeting
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableAutoTurnOffVideoWhenJoinMeeting(bool bEnable) = 0;
+
+	/// \brief Get Enable or disable flag of turn off video when join meeting.
+	/// \return Enable or disable
+	virtual bool IsAutoTurnOffVideoWhenJoinMeetingEnabled() = 0;
 };
 
 /// \brief Audio setting Interface
@@ -249,6 +285,26 @@ public:
 	/// \brief Get Enable or disable flag of auto adjust mic volume.
 	/// \return Enable or disable
 	virtual bool IsAutoAdjustMicEnabled() = 0;
+
+	/// \brief Enable or disable stereo audio.
+	/// \param bEnable Specifies enable or disable stereo audio.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableStereoAudio(bool bEnable) = 0;
+
+	/// \brief Get Enable or disable flag of stereo audio.
+	/// \return Enable or disable
+	virtual bool IsStereoAudioEnable() = 0;
+
+	/// \brief Enable or disable original input of mic.
+	/// \param bEnable Specifies enable or disable original input of mic.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableMicOriginalInput(bool bEnable) = 0;
+
+	/// \brief Get Enable or disable flag of original input of mic.
+	/// \return Enable or disable
+	virtual bool IsMicOriginalInputEnable() = 0;
 };
 
 /// \brief Recording setting Interface
@@ -265,6 +321,100 @@ public:
 	/// \brief Get the recording path in setting dialog.
 	/// \return the path of recording.
 	virtual const wchar_t* GetRecordingPath() = 0;
+};
+
+enum SettingsNetWorkType 
+{
+	SETTINGS_NETWORK_WIRED	= 0,
+	SETTINGS_NETWORK_WIFI	= 1,
+	SETTINGS_NETWORK_PPP	= 2,
+	SETTINGS_NETWORK_3G		= 3,
+	SETTINGS_NETWORK_OTHERS	= 4,
+
+	SETTINGS_NETWORK_UNKNOWN = -1,
+};
+
+enum SettingConnectionType
+{
+	SETTINGS_CONNECTION_TYPE_CLOUD,
+	SETTINGS_CONNECTION_TYPE_DIRECT,
+	SETTINGS_CONNECTION_TYPE_UNKNOWN = -1,
+};
+typedef struct tagOverallStatisticInfo
+{
+	SettingsNetWorkType net_work_type_;
+	SettingConnectionType connection_type_;
+	const wchar_t* proxy_addr_;
+	tagOverallStatisticInfo()
+	{
+		net_work_type_ = SETTINGS_NETWORK_UNKNOWN;
+		connection_type_ = SETTINGS_CONNECTION_TYPE_UNKNOWN;
+		proxy_addr_ = NULL;
+	}
+}OverallStatisticInfo;
+
+typedef struct tagAudioSessionStatisticInfo
+{
+	int frequency_send_; //KHz
+	int frequency_recv_; //KHz
+	int latency_send_;//ms
+	int latency_recv_;//ms
+	int jitter_send_;//ms
+	int jitter_recv_;//ms
+	float packetloss_send_;//%
+	float packetloss_recv_;//%
+
+	tagAudioSessionStatisticInfo()
+	{
+		memset(this, 0, sizeof(tagAudioSessionStatisticInfo));
+	}
+}AudioSessionStatisticInfo;
+
+typedef struct tagASVSessionStatisticInfo
+{
+	int latency_send_;//ms
+	int latency_recv_;//ms
+	int jitter_send_;//ms
+	int jitter_recv_;//ms
+	float packetloss_send_max_;//%
+	float packetloss_recv_max_;//%
+	float packetloss_send_avg_;//%
+	float packetloss_recv_avg_;//%
+	int resolution_send_; //HIWORD->height,LOWORD->width
+	int resolution_recv_; //HIWORD->height,LOWORD->width 
+	int fps_send_;//fps
+	int fps_recv_;//fps
+	tagASVSessionStatisticInfo()
+	{
+		memset(this, 0, sizeof(tagASVSessionStatisticInfo));
+	}
+}ASVSessionStatisticInfo;
+
+
+/// \brief Statistic setting Interface
+///
+class IStatisticSettingContext
+{
+public:
+	/// \brief Query overall information
+	/// \info_ Overall information 
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError QueryOverallStatisticInfo(OverallStatisticInfo& info_) = 0;
+
+	/// \brief Query audio information
+	/// \info_ Audio information 
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError QueryAudioStatisticInfo(AudioSessionStatisticInfo& info_) = 0;
+
+	/// \brief Query video information
+	/// \info_ Video information 
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError QueryVideoStatisticInfo(ASVSessionStatisticInfo& info_) = 0;
+
+	/// \brief Query share information
+	/// \info_ Share information 
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError QueryShareStatisticInfo(ASVSessionStatisticInfo& info_) = 0;
 };
 
 /// \brief Meeting setting Interface
@@ -289,19 +439,24 @@ public:
 	virtual IGeneralSettingContext* GetGeneralSettings() = 0;
 
 	/// \brief Get audio settings.
-	/// \return If the function succeeds, the return value is general settings interface.
+	/// \return If the function succeeds, the return value is audio settings interface.
 	///If the function fails, the return value is NULL.
 	virtual IAudioSettingContext* GetAudioSettings() = 0;
 
 	/// \brief Get video settings.
-	/// \return If the function succeeds, the return value is general settings interface.
+	/// \return If the function succeeds, the return value is video settings interface.
 	///If the function fails, the return value is NULL.
 	virtual IVideoSettingContext* GetVideoSettings() = 0;
 
 	/// \brief Get recording settings.
-	/// \return If the function succeeds, the return value is general settings interface.
+	/// \return If the function succeeds, the return value is recording settings interface.
 	///If the function fails, the return value is NULL.
 	virtual IRecordingSettingContext* GetRecordingSettings() = 0;
+
+	/// \brief Get statistic settings.
+	/// \return If the function succeeds, the return value is statistic settings interface.
+	///If the function fails, the return value is NULL.
+	virtual IStatisticSettingContext* GetStatisticSettings() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

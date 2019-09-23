@@ -80,6 +80,8 @@ public:
 	/// \brief Is pure phone user or not
 	/// \return Is pure phone user or not
 	virtual bool IsPurePhoneUser() = 0;
+
+	virtual ~IUserInfo(){};
 };
 
 /// \brief Meeting Participants Controller Callback Event

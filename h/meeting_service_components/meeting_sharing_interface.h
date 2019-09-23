@@ -141,9 +141,11 @@ public:
 	///After call this api, you need to redraw this window to take effect.
 	/// \param bBlock block window from screen share or not.
 	/// \param hWnd Specifies which window to be blocked.
+	/// \param bChangeWindowStyle if false, please call this api after StartMonitorShare api 
+	/// or after you got onSharingStatus  callback with Sharing_Self_Send_Begin.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	virtual SDKError BlockWindowFromScreenshare(bool bBlock, HWND hWnd) = 0;
+	virtual SDKError BlockWindowFromScreenshare(bool bBlock, HWND hWnd, bool bChangeWindowStyle = true) = 0;
 
 	/// \brief Lock current meeting's sharing
 	/// \return If the function succeeds, the return value is SDKErr_Success.

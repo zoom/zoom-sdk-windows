@@ -32,6 +32,7 @@ public:
 
 	// \brief cancel to input the meeting password and screen name.
 	virtual void Cancel() = 0;
+	virtual ~IMeetingPasswordAndScreenNameHandler() {};
 };
 
 /// \brief Meeting Configuration Event callback
@@ -171,6 +172,36 @@ public:
 	/// \brief enable claim host feature.
 	/// \param bEnable specify claim host feature enable or not, default is enable.
 	virtual void EnableClaimHostFeature(bool bEnable) = 0;
+
+	/// \brief Config DSCP.
+	/// \param dscpAudio DSCP value for audio.
+	/// \param dscpVideo DSCP value for video.
+	/// \param bReset reset DSCP value.
+	virtual void ConfigDSCP(int dscpAudio, int dscpVideo, bool bReset) = 0;
+
+	/// \brief Redirect click event of participant list btn to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onParticipantListBtnClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickParticipantListBTNEvent(bool bRedirect) = 0;
+
+	/// \brief disable copy and paste feature when remote control.
+	/// \param bDisable specify this feature disable or not, default is enable.
+	virtual void DisableRemoteCtrlCopyPasteFeature(bool bDisable) = 0;
+
+	/// \brief disable UI elements of split screen mode.
+	/// \param bDisable specify this feature disable or not, default is enable.
+	virtual void DisableSplitScreenModeUIElements(bool bDisable) = 0;
+
+	/// \brief Enable auto hide join audio dialog when it shown
+	/// \param bEnable specify this feature enable or not, default is disable.
+	virtual void EnableAutoHideJoinAudioDialog(bool bEnable) = 0;
+
+	/// \brief Enable hide the full phone number for pure call in user
+	/// \param bHide specify this feature enable or not, default is not hide.
+	virtual void EnableHideFullPhoneNumber4PureCallinUser(bool bHide) = 0;
+
+	/// \brief Enable the length limitation of meeting number
+	/// \param bEnable specify this feature enable or not, default is enable.
+	virtual void EnableLengthLimitationOfMeetingNumber(bool bEnable) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

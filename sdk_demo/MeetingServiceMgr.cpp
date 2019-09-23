@@ -373,7 +373,7 @@ void CMeetingServiceMgr::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* ls
 {
 	if (m_pSink)
 	{
-		m_pSink->onUserJoin(lstUserID, strUserList);
+		m_pSink->onUserLeft(lstUserID, strUserList);
 	}
 }
 
@@ -475,4 +475,10 @@ void CMeetingServiceMgr::onEndMeetingBtnClicked()
 {
 	//todo
 	OutputDebugStringA("CMeetingServiceMgr::onEndMeetingBtnClicked");
+}
+
+void CMeetingServiceMgr::onParticipantListBtnClicked()
+{
+	//todo
+	OutputDebugStringA("CMeetingServiceMgr::onParticipantListBtnClicked");
 }

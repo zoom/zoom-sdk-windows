@@ -45,6 +45,8 @@ public:
 	/// \brief Get chat message timestamp
 	/// \return If the function succeeds, the return value is chat message timestamp.
 	virtual time_t GetTimeStamp() = 0;
+
+	virtual ~IChatMsgInfo() {};
 };
 
 /// \brief Meeting chat callback event

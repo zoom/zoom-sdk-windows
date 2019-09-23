@@ -58,6 +58,9 @@ enum SDK_LANGUAGE_ID
 	LANGUAGE_Spanish,
 	LANGUAGE_German,
 	LANGUAGE_French,
+	LANGUAGE_Italian,
+	LANGUAGE_Portuguese,
+	LANGUAGE_Russian,
 };
 
 typedef struct tagWndPosition 
@@ -98,6 +101,12 @@ typedef struct tagCustomizedLanguageInfo
 typedef struct tagConfigurableOptions
 {
 	CustomizedLanguageInfo customizedLang;
+	int optionalFeatures;
+	tagConfigurableOptions()
+	{
+		optionalFeatures = 0;
+	}
+
 }ConfigurableOptions;
 
 /*! \struct tagInitParam

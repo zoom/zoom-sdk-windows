@@ -99,6 +99,7 @@ public:
 	virtual void onInviteBtnClicked() = 0;
 	virtual void onStartShareBtnClicked() = 0;
 	virtual void onEndMeetingBtnClicked() = 0;
+	virtual void onParticipantListBtnClicked() = 0;
 };
 
 /// \brief Meeting UI Controller Interface

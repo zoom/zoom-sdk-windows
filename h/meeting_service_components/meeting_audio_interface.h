@@ -40,6 +40,7 @@ public:
 	virtual unsigned int GetUserId() = 0;
 	virtual AudioStatus GetStatus() = 0;
 	virtual AudioType   GetAudioType() = 0;
+	virtual ~IUserAudioStatus(){};
 };
 
 /// \brief Meeting audio callback event

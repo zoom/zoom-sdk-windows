@@ -18,6 +18,7 @@ public:
 	virtual const wchar_t* GetCreatorEmail() = 0;
 	virtual const wchar_t* GetCreatorName() = 0;
 	virtual const wchar_t* GetDescription() = 0;
+	virtual ~ICalenderEvent(){};
 };
 enum CalenderResult
 {

@@ -10,6 +10,7 @@
 /// \brief Zoom SDK Namespace
 /// 
 ///
+
 BEGIN_ZOOM_SDK_NAMESPACE
 extern "C"
 {

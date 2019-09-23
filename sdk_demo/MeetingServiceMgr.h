@@ -118,6 +118,7 @@ public:
 	virtual void onInviteBtnClicked();
 	virtual void onStartShareBtnClicked();
 	virtual void onEndMeetingBtnClicked();
+	virtual void onParticipantListBtnClicked();
 
 private:
 	IMeetingserviceMgrEvent* m_pSink;

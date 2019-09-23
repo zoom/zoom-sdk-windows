@@ -1,4 +1,57 @@
 # CHANGELOG
+
+## 2018-05-22
+### Added
+1.c++ sdk
+a> Configuration of Meeting Service Interface
+
+support to config DSCP for audio video session
+
+support to redirect click event of participant list button
+
+support to disable copy and paste feature when remote control
+
+support to disable UI elements of split screen mode
+
+support to auto hide join audio dialog when it shown
+
+support to enable hide the full phone number for pure call in user
+b> H323 helper interface
+
+support to get h323 device for current meeting
+
+change the CallOutH323 interface
+
+c> Sharing of Meeting Service Interface
+
+support to block window form screen share without change windows's style
+
+d>Meeting Service Interface
+
+support to get meeting connect type
+
+e> Setting Service Interface
+
+support to enable or disable auto enter full screen video mode when view share
+
+support to enable or disable always show name on video
+
+support to enable or disable turn off video when join meeting
+
+support to enable or disable original input of mic
+
+support to enable or disable stereo audio
+
+add new interface for statistic setting
+
+f>L10n
+
+add new language support(Italian Portuguese Russian)
+
+2.c# sdk
+
+add new c++ interface wrap
+
 ## 2017-12-25
 ### Added
 
@@ -53,27 +106,6 @@ a>wrap new c++ interface and callback event
 
 b>fix callback event does not worked issue
 
-3.electron sdk
-
-a>add more interface of setting service
-
-zoom_setting.js
-
-zoom_setting_audio.js
-
-zoom_setting_video.js
-
-zoom_setting_general.js
-
-zoom_setting_recording.js
-
-b>meeting service
-
-zoom_meeting_configuration.js
-
-zoom_meeting_info.js
-
-zoom_meeting.js
 
 ## 2017-11-01
 
