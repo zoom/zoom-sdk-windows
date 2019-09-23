@@ -4,7 +4,7 @@
 #include "HttpRequestHelper.h"
 
 #define PRODUCT_HOST_URL _T("https://api.zoom.us/v2/users/")
-#define DEV_HOST_URL _T("https://dev.zoom.us/v2/users/")
+#define DEV_HOST_URL _T("https://api.zoom.us/v2/users/")
 CZoomHttpRequestHelper::CZoomHttpRequestHelper()
 {
 	m_strAccessToken = NULL;
