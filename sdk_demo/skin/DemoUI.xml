@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window size="530,400" caption="0,0,0,32" >
+<Window size="524,376" caption="0,0,0,32" >
 	<!--Font size 9-->
 	<Font id="0" name="Segoe UI" size="12" bold="true"/>
 	<Font id="1" name="Segoe UI" size="12" bold="false"/>
@@ -11,7 +11,7 @@
 	<!--Font size 8-->
 	<Font id="5" name="Segoe UI" size="12" bold="true"/>
 	<!--Font size 12-->
-	<Font id="6" name="Segoe UI" size="16" bold="false"/>
+	<Font id="6" name="Segoe UI" size="14" bold="false"/>
 	<!--7-->
 	<Font id="7" name="Segoe UI" size="14" bold="true" />
 	<Font id="8" name="Segoe UI" size="12" bold="false" underline="true"/>
@@ -19,10 +19,10 @@
 	<Font id="9" name="Segoe UI" size="11" bold="true" />
 	<Font id="10" name="Segoe UI" size="14" bold="false" />	
 
-	<Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; normalimage=&quot;res='BlueButtonnormal.png' restype='ZPIMGRES' &quot; hotimage=&quot;res='BlueButtonhover.png' restype='ZPIMGRES' &quot;  pushedimage=&quot;res='BlueButtonpress.png' restype='ZPIMGRES' &quot; disabledimage=&quot;res='BlueButtondisabled.png' restype='ZPIMGRES'&quot;  " />
+	<Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF179FF5 &quot; pushedbkcolor=&quot;#FF179FF5 &quot; focusedbkcolor=&quot;#FF179FF5 &quot; bkcolor=&quot;#FF179FF5 &quot;" />
 	<Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
 		
-	<VerticalLayout  bkcolor="#FFF0F0F0" bkcolor2="#FFAAAAA0" >
+	<VerticalLayout  bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF" >
 		<!-- title -->
 		<!--
 		<HorizontalLayout height="32" bkcolor="#FFE6E6DC" bkcolor2="#FFAAAAA0" >
@@ -45,24 +45,49 @@
 					<label text="connect......" font="7" width="100" height="30" />
 					<Control />
 				</HorizontalLayout>
+				<HorizontalLayout height="40" >
+				<Control />
+				<Button name="btn_leave_connecting" text="Leave" textcolor="#FFFFFFFF" font="6" height="35" width="300"/>
+				<Control />
+				</HorizontalLayout>
 				<Control />
 			</VerticalLayout>
 		</Container>
 		<!-- auth page -->
 		<Container name="container_auth" height="400" >
-			<Control float="true" pos="201,5,0,0" bkimage="res='zoom_logo.png' restype='ZPIMGRES' " width="128" height="158"/>
-			<label float="true" pos="80,160,0,0" text="Web Domain:" font="5" width="100" height="30" />
-			<RichEdit name="edit_web_domain" text="https://zoom.us" float="true" pos="160,160,0,0" bkcolor="#FFFFFFFF"
-						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />	
-			<label float="true" pos="80,200,0,0" text="appKey:" font="5" width="100" height="30" />
-			<RichEdit name="edit_key" float="true" pos="160,200,0,0" bkcolor="#FFFFFFFF"
-						inset="4,10,0,4" font="9" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />						
-			<label float="true" pos="80,240,0,0" text="appSecret:" font="5" width="100" height="30" />
-			<RichEdit name="edit_secret" float="true" pos="160,240,0,0" bkcolor="#FFFFFFFF"
-						inset="4,8,0,4" font="9" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />						
-			<Label name="lb_auth_errorinfo" float="true" pos="80,280,0,0" font="0" textpadding="10,4,10,0" textcolor="#FFE6413C"  
-						align="center,multiline" valign="top" visible="true" width="250" height="60" />			
-			<Button name="btn_auth" float="true" pos="200,320,0,0" text="Auth" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+			<VerticalLayout visible="true" >
+			<Control name="ctrl_zoom_logo" height="40"/>
+			<HorizontalLayout visible="true" height="114">
+			<Control />
+			<Control bkimage="res='zoom_logo.png' restype='ZPIMGRES' " width="114" height="114" align="center,singleline" valign="center"/>
+			<Control />
+			</HorizontalLayout>
+			<Control height="23"/>
+			<HorizontalLayout visible="true">
+			<Control width="112"/>
+			
+			<VerticalLayout visible="true" >
+			<label name="lb_web_domain" text="Web Domain:" font="6" height="18" align="left,singleline"/>
+			<Control name="ctrl_edit_web_domain" height="20"/>
+			<RichEdit name="edit_web_domain" text="https://zoom.us" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35" 
+				inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
+			<Control name="ctrl_lb_appkey" height="10"/>	
+			<label name="lb_appkey" text="App Key:" font="6"  height="18" align="left,singleline"/>
+			<Control name="ctrl_edit_key"  height="10"/>	
+			<RichEdit name="edit_key" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35" 
+				inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>	
+			<Control name="ctrl_lb_appSecret" height="10"/>					
+			<label name="lb_appSecret" text="App Secret:" font="6"  height="18" align="left,singleline"/>
+			<Control name="ctrl_edit_secret" height="10"/>
+			<RichEdit name="edit_secret" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35" 
+				inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
+			<Control height="20"/>
+			<Button name="btn_auth" text="SetDomain" textcolor="#FFFFFFFF" font="6" height="35" width="300"/>
+			</VerticalLayout>
+			
+			<Control width="112"/>
+			</HorizontalLayout>
+			</VerticalLayout>
 		</Container>
 		
 		<!-- User page -->

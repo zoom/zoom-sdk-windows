@@ -6,6 +6,14 @@ CMeetingServiceMgr::CMeetingServiceMgr()
 	m_pSink = NULL;
 	m_strCamera = _T("");
 	m_bInited = false;
+
+	m_pAudioCtrl = NULL;
+	m_pChatCtrl = NULL;
+	m_pUserCtrl = NULL;
+	m_pRecCtrl = NULL;
+	m_pRemoteCtrl = NULL;
+	m_pShareCtrl = NULL;
+	m_pVideoCtrl = NULL;
 }
 
 CMeetingServiceMgr::CMeetingServiceMgr(IMeetingserviceMgrEvent* pSink)
@@ -13,6 +21,13 @@ CMeetingServiceMgr::CMeetingServiceMgr(IMeetingserviceMgrEvent* pSink)
 	m_pSink = pSink;
 	m_strCamera = _T("");
 	m_bInited = false;
+	m_pAudioCtrl = NULL;
+	m_pChatCtrl = NULL;
+	m_pUserCtrl = NULL;
+	m_pRecCtrl = NULL;
+	m_pRemoteCtrl = NULL;
+	m_pShareCtrl = NULL;
+	m_pVideoCtrl = NULL;
 }
 
 CMeetingServiceMgr::~CMeetingServiceMgr()
@@ -45,6 +60,28 @@ bool CMeetingServiceMgr::Init()
 
 	if (m_pMeetingService->SetEvent(this) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 		return false;
+
+	m_pAudioCtrl = m_pMeetingService->GetMeetingAudioController();
+	if (m_pAudioCtrl)
+		m_pAudioCtrl->SetEvent(this);
+	m_pChatCtrl = m_pMeetingService->GetMeetingChatController();
+	if (m_pChatCtrl)
+		m_pChatCtrl->SetEvent(this);
+	m_pUserCtrl = m_pMeetingService->GetMeetingParticipantsController();
+	if (m_pUserCtrl)
+		m_pUserCtrl->SetEvent(this);
+	m_pRecCtrl = m_pMeetingService->GetMeetingRecordingController();
+	if (m_pRecCtrl)
+		m_pRecCtrl->SetEvent(this);
+	m_pRemoteCtrl = m_pMeetingService->GetMeetingRemoteController();
+	if (m_pRemoteCtrl)
+		m_pRemoteCtrl->SetEvent(this);
+	m_pShareCtrl = m_pMeetingService->GetMeetingShareController();
+	if (m_pShareCtrl)
+		m_pShareCtrl->SetEvent(this);
+	m_pVideoCtrl = m_pMeetingService->GetMeetingVideoController();
+	if (m_pVideoCtrl)
+		m_pVideoCtrl->SetEvent(this);
 
 	if (ZOOM_SDK_NAMESPACE::CreateSettingService(&m_pSettingService) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 		return false;
@@ -80,6 +117,7 @@ bool CMeetingServiceMgr::Start(ZOOM_SDK_NAMESPACE::StartParam& startParam)
 
 	if (!IsInMeeting(m_pMeetingService->GetMeetingStatus()))
 	{	
+		m_pMeetingService->GetMeetingConfiguration()->SetSharingToolbarVisibility(true);
 		if (m_pMeetingService->Start(startParam) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 			return false;
 	}
@@ -283,11 +321,24 @@ void CMeetingServiceMgr::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatu
 
 void CMeetingServiceMgr::onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath)
 {
+	//todo
 }
 
 void CMeetingServiceMgr::onRecording2MP4Processing(int iPercentage)
 {
+	//todo
 }
+
+void CMeetingServiceMgr::onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onRecordPriviligeChanged(bool bCanRec)
+{
+	//todo
+}
+
 
 void CMeetingServiceMgr::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList)
 {
@@ -305,37 +356,68 @@ void CMeetingServiceMgr::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* ls
 	}
 }
 
+void CMeetingServiceMgr::onHostChangeNotification(unsigned int userId)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onUserNameChanged(unsigned int userId, const wchar_t* userName)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onUserActiveAudioChange(unsigned int userId)
+{
+	//todo
+}
+
 void CMeetingServiceMgr::onRemoteControlStatus(ZOOM_SDK_NAMESPACE::RemoteControlStatus status, unsigned int userId)
 {
+	//todo
 }
 
 void CMeetingServiceMgr::onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId)
 {
+	//todo
 	TCHAR szLog[MAX_PATH] = { 0 };
 	wsprintf(szLog, _T("onSharingStatus:status=%d, userid=%d\r\n"), status, userId);
 	OutputDebugString(szLog);
 }
 
-void CMeetingServiceMgr::onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList)
-{	
-}
-void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status)
-{
-
-}
-
-void CMeetingServiceMgr::onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status)
-{
-
-}
-
 void CMeetingServiceMgr::onLockShareStatus(bool bLocked)
 {
+	//todo
+}
 
+void CMeetingServiceMgr::onShareContentNotification(ZOOM_SDK_NAMESPACE::ShareInfo& shareInfo)
+{
+	//todo
+}
+
+
+void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid)
+{
+	//todo
 }
 
 void CMeetingServiceMgr::onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc)
 {
+	//todo
 	if (NULL == chatMsg)
 		return;
 
@@ -347,9 +429,9 @@ void CMeetingServiceMgr::onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* 
 
 ZOOM_SDK_NAMESPACE::IUserInfo* CMeetingServiceMgr::GetUserByUserID(unsigned int userid)
 {
-	if (m_pMeetingService)
+	if (m_pUserCtrl)
 	{
-		return m_pMeetingService->GetUserByUserID(userid);
+		return m_pUserCtrl->GetUserByUserID(userid);
 	}
 
 	return NULL;

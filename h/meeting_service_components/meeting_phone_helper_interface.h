@@ -5,7 +5,7 @@
 */
 #ifndef _MEETING_PHONE_HELPER_INTERFACE_H_
 #define _MEETING_PHONE_HELPER_INTERFACE_H_
-#include "zoom_sdk_def.h"
+#include "..\zoom_sdk_def.h"
 
 /// \brief Zoom SDK Namespace
 /// 
@@ -14,9 +14,28 @@ BEGIN_ZOOM_SDK_NAMESPACE
 class IMeetingPhoneSupportCountryInfo
 {
 public:
+	virtual ~IMeetingPhoneSupportCountryInfo(){}
 	virtual const wchar_t* GetCountryID() = 0;
 	virtual const wchar_t* GetCountryName() = 0;
 	virtual const wchar_t* GetCountryCode() = 0;
+};
+
+enum CALLINNUMTYPE
+{
+	CALLINNUMTYPE_NONE,
+	CALLINNUMTYPE_TOLL,
+	CALLINNUMTYPE_TOLLFREE,
+};
+class IMeetingCallInPhoneNumberInfo
+{
+public:
+	virtual ~IMeetingCallInPhoneNumberInfo(){}
+	virtual const wchar_t* GetID() = 0;
+	virtual const wchar_t* GetCode() = 0;
+	virtual const wchar_t* GetName() = 0;
+	virtual const wchar_t* GetNumber() = 0;
+	virtual const wchar_t* GetDisplayNumber() = 0;
+	virtual CALLINNUMTYPE  GetType() = 0;
 };
 
 enum PhoneStatus
@@ -108,6 +127,14 @@ public:
 	/// \brief get the status of the in progress callme.
 	/// \return the return value is current callme status.To get extended error information, refer to PhoneStatus enum
 	virtual PhoneStatus GetCallMeStatus() = 0;
+
+	/// \brief Determines the callin number of current meeting
+	/// \return the list of the callin number of current meeting.
+	virtual IList<IMeetingCallInPhoneNumberInfo*>* GetCurrentMeetingCallinNumber() = 0;
+
+	/// \brief Get your participant ID of current meeting for call in feature.
+	/// \return The participant ID.
+	virtual unsigned int GetCurrentMeetingCallinParticipantID() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

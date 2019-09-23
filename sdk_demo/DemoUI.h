@@ -4,12 +4,14 @@
 #include "resource.h"
 #include "AuthServiceMgr.h"
 #include "MeetingServiceMgr.h"
+#include "zoom_sdk.h"
+#include "network_connection_handler_interface.h"
 
 using namespace DuiLib;
 
 #define ERROR_AUTH		_T("Auth failed!")
 #define ERROR_LOGIN		_T("Login failed!")
-#define ERROR_START		_T("Start failed!")
+#define ERROR_START		_T("Start or join meeting failed!")
 #define ERROR_JOINT		_T("Join failed!")
 #define ERROR_END		_T("End failed!")
 
@@ -65,7 +67,7 @@ public:
 	void ShowStatus(UIPageType emUIPageType, std::wstring strStatus);
 	void UpdateUserList(int nIndex, std::wstring strUserName, std::wstring strUserId, bool bAdd = true);
 	void CleanUpUserList();
-	void ShowWaiting(bool bWaiting);
+	void ShowWaiting(bool bWaiting, bool bShowLeave = false);
 
 public:
 	LRESULT OnClose(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/);
@@ -102,6 +104,8 @@ private:
 	void InitMessageWnd(std::wstring strLabelText = _T("User ID:"));
 	void UnInitMessageWnd();
 
+	void ProcAuthPage();
+	bool SDKInit();
 	bool SDKAuth();	
 	bool Login();
 	bool Start();	
@@ -150,7 +154,17 @@ private:
 	CLabelUI*				m_lableUserId;
 	CLabelUI*				m_lableUserToken;
 	CLabelUI*				m_lableUserName;
-	CLabelUI*				m_lableMeetingAPIStatus;	
+	CLabelUI*				m_lableMeetingAPIStatus;
+	CLabelUI*				m_lableAppKey;
+	CLabelUI*				m_lableAppSerect;
+	CLabelUI*				m_lableDomain;
+	CControlUI*             m_ctrl_edit_web_domain;
+	CControlUI*             m_ctrl_lb_appkey;
+	CControlUI*             m_ctrl_ctrl_edit_key;
+	CControlUI*             m_ctrl_lb_appSecret;
+	CControlUI*             m_ctrl_edit_secret;
+	CControlUI*				m_ctrl_zoom_logo;
+	
 	CButtonUI*				m_btnAuth;	
 	CButtonUI*				m_btnNormal;
 	CButtonUI*				m_btnApi;
@@ -173,6 +187,7 @@ private:
 	CButtonUI*				m_btnShareApi;
 	CButtonUI*				m_btnVideoApi;
 	CButtonUI*				m_btnAudioApi;
+	CButtonUI*				m_btnLeaveWhenConnecting;
 	CListUI*				m_listUsers;
 
 	CContainerUI*			m_containerWaitingUI;
@@ -185,4 +200,5 @@ private:
 	bool					m_bStar;
 	CMessageWnd*			m_pMessageWnd;
 	bool					m_bSDKInit;
+	ZOOM_SDK_NAMESPACE::INetworkConnectionHelper* m_pNetworkConnectionHelper;
 };

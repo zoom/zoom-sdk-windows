@@ -1,0 +1,210 @@
+/*!
+* \file meeting_sharing_interface.h
+* \brief Sharing of Meeting Service Interface
+* 
+*/
+#ifndef _MEETING_SHARING_INTERFACE_H_
+#define _MEETING_SHARING_INTERFACE_H_
+#include "..\zoom_sdk_def.h"
+
+/// \brief Zoom SDK Namespace
+/// 
+///
+BEGIN_ZOOM_SDK_NAMESPACE
+/*! \enum SharingStatus
+    \brief Sharing status.
+    A more detailed struct description.
+*/
+enum SharingStatus
+{
+	Sharing_Self_Send_Begin,
+	Sharing_Self_Send_End,
+	Sharing_Other_Share_Begin,
+	Sharing_Other_Share_End,
+	Sharing_View_Other_Sharing,
+	Sharing_Pause,
+	Sharing_Resume,
+};
+
+/*! \struct tagViewableShareSource
+    \brief Viewable share source info.
+    A more detailed struct description.
+*/
+typedef struct tagViewableShareSource
+{
+	unsigned int userid;
+	bool isShowingInFirstView;
+	bool isShowingInSecondView;
+	bool isCanBeRemoteControl;
+	tagViewableShareSource()
+	{
+		userid = 0;
+		isShowingInFirstView = false;
+		isShowingInSecondView = false;
+		isCanBeRemoteControl = false;
+	}
+}ViewableShareSource;
+
+/*! \enum Type of current sharing.
+    A more detailed struct description.
+*/
+enum ShareType
+{
+	SHARE_TYPE_UNKNOWN, //unknown
+	SHARE_TYPE_AS,	//application share
+	SHARE_TYPE_DS,	//desktop share
+	SHARE_TYPE_WB,	//whiteboard share
+	SHARE_TYPE_AIRHOST,	//mobile device from PC
+	SHARE_TYPE_CAMERA,	//camera share
+	SHARE_TYPE_DATA,	//data share
+};
+
+/*! \struct tagShareInfo
+    \brief Information of current sharing.
+    A more detailed struct description.
+*/
+typedef struct tagShareInfo
+{
+	ShareType eShareType;  //share type, refer to ShareType
+	union
+	{
+		HWND hwndSharedApp;  //handle of sharing application or whiteboard, it is valid only when eShareType is SHARE_TYPE_AS or SHARE_TYPE_WB
+		const wchar_t* monitorID;  //monitor id of sharing desktop, it is valid only when eShareType is SHARE_TYPE_DS
+	}ut;
+	tagShareInfo()
+	{
+		eShareType = SHARE_TYPE_UNKNOWN;
+		memset(&ut, 0, sizeof(ut));
+	}
+}ShareInfo;
+
+/// \brief Meeting share controller callback event
+///
+class IMeetingShareCtrlEvent
+{
+public:
+	/// \brief Sharing status notify callback
+	/// \param status Sharing status value.
+	/// \param userId Sharing user id.
+	virtual void onSharingStatus(SharingStatus status, unsigned int userId) = 0;
+
+	/// \brief lock share status notify call back 
+	/// \param bLocked specify if sharing is locked.
+	virtual void onLockShareStatus(bool bLocked) = 0;
+
+	/// \brief Sharing content changed callback
+	/// \param shareInfo Sharing information such as, share type, handle of shared app and monitor id, refer to ShareInfo.
+	virtual void onShareContentNotification(ShareInfo& shareInfo) = 0;	
+};
+
+/// \brief Meeting share controller interface
+///
+class IMeetingShareController
+{
+public:
+	/// \brief Set meeting share controller callback event
+	/// \param pEvent A pointer to a IMeetingShareCtrlEvent* that receives sharing event. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SetEvent(IMeetingShareCtrlEvent* pEvent) = 0;
+	/// \brief Start application share
+	/// \param hwndSharedApp Specifies which the window is to be shared.
+	///if hwndSharedApp can't be shared, return SDKERR_INVALID_PARAMETER error code.if hwndSharedApp is NULL, will show select application dialog.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StartAppShare(HWND hwndSharedApp) = 0;
+
+	/// \brief Start monitor share
+	/// \param monitorID Specifies which the monitor is to be shared.Using EnumDisplayMonitors System api to get this value.
+	/// refer to szDevice in MONITORINFOEX struct. if monitorID is NULL, will show select application dialog. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StartMonitorShare(const wchar_t* monitorID) = 0;
+
+	/// \brief Start share with IOS device.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StartAirPlayShare() = 0;
+
+	/// \brief Stop current sharing
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StopShare() = 0;
+
+	/// \brief Block window form screen share. 
+	///This api will change the window's property.we don't suggest to use.
+	///After call this api, you need to redraw this window to take effect.
+	/// \param bBlock block window from screen share or not.
+	/// \param hWnd Specifies which window to be blocked.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError BlockWindowFromScreenshare(bool bBlock, HWND hWnd) = 0;
+
+	/// \brief Lock current meeting's sharing
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError LockShare() = 0;
+
+	/// \brief Lock current meeting's sharing
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError UnlockShare() = 0;
+
+	/// \brief Switch the sharing view window to fit window mode when view sharing.
+	/// \param type Specifies which view you want to set, first monitor or second monitor.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SwitchToFitWindowModeWhenViewShare(SDKViewType type) = 0;
+
+	/// \brief Switch the sharing view window to original size mode when view sharing.
+	/// \param type Specifies which view you want to set, first monitor or second monitor.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SwitchToOriginalSizeModeWhenViewShare(SDKViewType type) = 0;
+
+	/// \brief Pause current sharing
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError PauseCurrentSharing() = 0;
+
+	/// \brief Resume current sharing
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ResumeCurrentSharing() = 0;
+
+	/// \brief get current viewable share source list.
+	/// \return If the function succeeds, the return value is the viewable share source user id list.
+	///If the function fails, the return value is NULL.
+	virtual IList<unsigned int >* GetViewableShareSourceList() = 0;
+
+	/// \brief get viewable share source by userid.
+	/// \param userid Specifies which viewable share source info you want to get.
+	/// \param shareSource store the viewable share source info
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError GetViewabltShareSourceByUserID(unsigned int userid, ViewableShareSource& shareSource) = 0;
+
+	/// \brief view share by userid.
+	/// \param userid Specifies who you want to view.
+	/// \param type Specifies which view you want to view the sharing, first monitor or second monitor.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ViewShare(unsigned int userid, SDKViewType type) = 0;
+
+	/// \brief show share option dialog.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ShowShareOptionDialog() = 0;
+
+	/// \brief can start share or not.
+	/// \return can start share or not.
+	virtual bool CanStartShare() = 0;
+
+	/// \brief query if sharing is locked.
+	/// \param bLocked store if sharing is locked.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError IsShareLocked(bool& bLocked) = 0;
+};
+END_ZOOM_SDK_NAMESPACE
+#endif

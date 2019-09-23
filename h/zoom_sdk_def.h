@@ -64,12 +64,41 @@ typedef struct tagWndPosition
 {
 	int left;
 	int top;
+	HWND hSelfWnd;
+	HWND hParent;
 	tagWndPosition()
 	{
 		left = 0;
 		top = 0;
+		hSelfWnd = NULL;
+		hParent = NULL;
 	}
 }WndPosition;
+
+enum CustomizedLanguageType
+{
+	CustomizedLanguage_None,
+	CustomizedLanguage_FilePath,
+	CustomizedLanguage_Content,
+};
+typedef struct tagCustomizedLanguageInfo
+{
+	const char* langName;
+	const char* langInfo;
+	CustomizedLanguageType langType;
+	tagCustomizedLanguageInfo()
+	{
+		langName = NULL;
+		langInfo = NULL;
+		langType = CustomizedLanguage_None;
+	}
+
+}CustomizedLanguageInfo;
+
+typedef struct tagConfigurableOptions
+{
+	CustomizedLanguageInfo customizedLang;
+}ConfigurableOptions;
 
 /*! \struct tagInitParam
     \brief Init SDK Parameter.
@@ -84,6 +113,7 @@ typedef struct tagInitParam
 	unsigned int uiWindowIconSmallID;///< windows small icon file path
 	unsigned int uiWindowIconBigID;///< windows small icon file path
 	SDK_LANGUAGE_ID emLanguageID;///< sdk language ID
+	ConfigurableOptions obConfigOpts;
 	tagInitParam()
 	{
 		strWebDomain = NULL;

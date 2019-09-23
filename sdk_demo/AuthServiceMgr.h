@@ -4,6 +4,13 @@
 #include <string>
 #include "zoom_sdk.h"
 #include "auth_service_interface.h"
+
+class CSDKHelper
+{
+public:
+	static bool Init(ZOOM_SDK_NAMESPACE::InitParam& initParam);
+	static bool UnInit();
+};
 class IAuthServiceMgrEvent
 {
 public:
@@ -19,9 +26,8 @@ public:
 	CAuthServiceMgr(IAuthServiceMgrEvent* pSkin);
 	virtual ~CAuthServiceMgr();
 
-
 public:
-	bool Init(ZOOM_SDK_NAMESPACE::InitParam& initParam);
+	bool Init();
 	bool UnInit();
 	bool SDKAuth(ZOOM_SDK_NAMESPACE::AuthParam& authParam);
 	bool Login(ZOOM_SDK_NAMESPACE::LoginParam& param);

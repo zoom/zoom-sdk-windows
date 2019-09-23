@@ -5,7 +5,7 @@
 */
 #ifndef _MEETING_H323_HELPER_INTERFACE_H_
 #define _MEETING_H323_HELPER_INTERFACE_H_
-#include "zoom_sdk_def.h"
+#include "..\zoom_sdk_def.h"
 
 /// \brief Zoom SDK Namespace
 /// 

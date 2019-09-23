@@ -1,12 +1,28 @@
 #include "AuthServiceMgr.h"
 #include "zoom_sdk_def.h"
 
+bool CSDKHelper::Init(ZOOM_SDK_NAMESPACE::InitParam& initParam)
+{
+	if (ZOOM_SDK_NAMESPACE::InitSDK(initParam) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
+		return false;
+
+	return true;
+}
+
+bool CSDKHelper::UnInit()
+{
+	if (ZOOM_SDK_NAMESPACE::CleanUPSDK() != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
+		return false;
+
+	return true;
+}
 
 CAuthServiceMgr::CAuthServiceMgr()
 {
 	m_pSink = NULL;
 	m_bInited = false;
 	m_bLogined = false;
+	m_pAuthService = NULL;
 }
 
 CAuthServiceMgr::CAuthServiceMgr(IAuthServiceMgrEvent* pSink)
@@ -14,6 +30,7 @@ CAuthServiceMgr::CAuthServiceMgr(IAuthServiceMgrEvent* pSink)
 	m_pSink = pSink;
 	m_bInited = false;
 	m_bLogined = false;
+	m_pAuthService = NULL;
 }
 
 CAuthServiceMgr::~CAuthServiceMgr()
@@ -22,13 +39,10 @@ CAuthServiceMgr::~CAuthServiceMgr()
 	m_bLogined = false;
 }
 
-bool CAuthServiceMgr::Init(ZOOM_SDK_NAMESPACE::InitParam& initParam)
+bool CAuthServiceMgr::Init()
 {
 	if (m_bInited)
 		return true;
-
-	if (ZOOM_SDK_NAMESPACE::InitSDK(initParam) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
-		return false;
 
 	if (ZOOM_SDK_NAMESPACE::CreateAuthService(&m_pAuthService) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 		return false;
@@ -52,9 +66,6 @@ bool CAuthServiceMgr::UnInit()
 	m_bInited = false;
 
 	if (ZOOM_SDK_NAMESPACE::DestroyAuthService(m_pAuthService) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
-		return false;
-
-	if (ZOOM_SDK_NAMESPACE::CleanUPSDK() != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 		return false;
 
 	return true;

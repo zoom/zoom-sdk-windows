@@ -27,52 +27,42 @@ enum CalenderResult
 	CALENDER_UNKNOW,
 };
 
+enum CalenderAuthType
+{
+	CalenderAuth_None,
+	CalenderAuth_OutlookExchage,
+	CalenderAuth_Goole,
+};
+
 /// \brief Calender Service Callback Event
 ///
 class ICalenderServiceEvent
 {
 public:
-	virtual void onCalenderEventsNotifcation(CalenderResult result, IList<ICalenderEvent* >* plstEvents, const wchar_t* content) = 0;
+	virtual void onCalenderEventsNotifcation(CalenderAuthType type, CalenderResult result, IList<ICalenderEvent* >* plstEvents) = 0;
 };
 
-/*! \struct tagCalenderAuthParam
-    \brief SDK Calender Authentication Parameter.
+/*! \struct tagOutlookExchageAuth
+    \brief SDK Calender Authentication Parameter of outlook exchange.
     A more detailed struct description.
 */
-typedef struct tagCalenderAuthParam
+typedef struct tagOutlookExchageAuth
 {
-	typedef struct tagGoogleCalAuth
-	{
-		const wchar_t* authCode;
-	}GoogleCalAuth;
-	typedef struct tagOutlookExchageAuth
-	{
-		const wchar_t* exchangeResEmail;		///< email address of resource in Exchange system
-		const wchar_t* exchangeEMSURL;	///< URL of Exchange Web Service
-		const wchar_t* exchangePassword;	///< password of the email in Exchange system, not password of the work email in Zoom system
-	}OutlookExchageAuth;
-	ICalenderServiceEvent* pEvent;
-	const wchar_t* userEmail;
-	union
-	{
-		GoogleCalAuth googleAuth;
-		OutlookExchageAuth exchangeAuth;
-	};
-	bool isGoogleCal;
-	tagCalenderAuthParam()
-	{
-		pEvent = NULL;
-		isGoogleCal = false;
-	}
-}CalenderAuthParam;
+	const wchar_t* serverUrl;
+	const wchar_t* userName;
+	const wchar_t* password;
+	const wchar_t* calendaremail;
+}OutlookExchageAuth;
 
 /// \brief Calender Service Interface
 class ICalenderService
 {
 public:
-	virtual SDKError Init(CalenderAuthParam& authParam) = 0;
+	virtual SDKError Init(ICalenderServiceEvent* pEvent) = 0;
 	virtual SDKError Uninit() = 0;
-	virtual SDKError RetrieveCalEvents(int uElapse, bool bStop) = 0;
+	virtual SDKError StartOutlookExchangeCalender(OutlookExchageAuth& param) = 0;
+	virtual SDKError StopOutlookExchangeCalender() = 0;
+	virtual SDKError RetrieveCalEvents(CalenderAuthType type) = 0;
 };
 ///
 END_ZOOM_SDK_NAMESPACE

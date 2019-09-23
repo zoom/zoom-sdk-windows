@@ -59,6 +59,8 @@ public:
 class INetworkConnectionHandler
 {
 public:
+	/// \brief Proxy detect complete notify
+	virtual void onProxyDetectComplete() = 0;
 	/// \brief must prompt the user for their username and password of the proxy,when receive this message
 	virtual void onProxySettingNotification(IProxySettingHandler* handler) = 0;
 	/// \brief must prompt the user for the SSL Certificate Verification,when receive this message

@@ -4,7 +4,7 @@
 #include "PreMeetingServiceMgr.h"
 #include "MeetingServiceMgr.h"
 #include "MessageWnd.h"
-
+#define PROXY_DETECT_LOGIC
 CDemoUI::CDemoUI()
 {
 	ResetAllControls();
@@ -15,6 +15,7 @@ CDemoUI::CDemoUI()
 	m_bStar = true;
 	m_pMessageWnd = NULL;
 	m_bSDKInit = false;
+	m_pNetworkConnectionHelper = NULL;
 }
 
 CDemoUI::~CDemoUI()
@@ -52,6 +53,12 @@ void CDemoUI::InitWindow()
 {
 	//InitServiceMgr();
 	InitAllControls();
+	RECT rc = { 0 };
+	if( !::GetClientRect(m_hWnd, &rc) ) return;
+	rc.right = rc.left + 524;
+	rc.bottom = rc.top + 376;
+	if( !::AdjustWindowRectEx(&rc, GetWindowStyle(m_hWnd), (!(GetWindowStyle(m_hWnd) & WS_CHILD) && (::GetMenu(m_hWnd) != NULL)), GetWindowExStyle(m_hWnd)) ) return;
+	::SetWindowPos(m_hWnd, NULL, 0, 0, rc.right - rc.left, rc.bottom - rc.top, SWP_NOZORDER | SWP_NOMOVE | SWP_NOACTIVATE);
 }
 
 void CDemoUI::InitAllControls()
@@ -87,6 +94,16 @@ void CDemoUI::InitAllControls()
 	m_lableUserToken = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_user_token")));
 	m_lableUserName = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_user_name")));
 	m_lableMeetingAPIStatus = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_meeting_api_status")));
+	m_lableAppKey = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_appkey")));
+	m_lableAppSerect = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_appSecret")));
+	m_lableDomain = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_web_domain")));
+
+	m_ctrl_edit_web_domain = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("ctrl_edit_web_domain")));
+	m_ctrl_lb_appkey = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("ctrl_lb_appkey")));
+	m_ctrl_ctrl_edit_key = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("ctrl_edit_key")));
+	m_ctrl_lb_appSecret = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("ctrl_lb_appSecret")));
+	m_ctrl_edit_secret = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("ctrl_edit_secret")));
+	m_ctrl_zoom_logo = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("ctrl_zoom_logo")));
 
 	m_btnAuth = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_auth")));	
 	m_btnNormal = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_normal_user")));
@@ -110,12 +127,14 @@ void CDemoUI::InitAllControls()
 	m_btnShareApi = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_share_api")));
 	m_btnVideoApi = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_video_api")));
 	m_btnAudioApi = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_audio_api")));
+	m_btnLeaveWhenConnecting = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_leave_connecting")));
 
 	m_listUsers = static_cast<CListUI*>(m_PaintManager.FindControl(_T("list_users")));
 
 	m_gifWaiting = static_cast<CGifAnimUI*>(m_PaintManager.FindControl(_T("gif_waiting"))); 
 
 	ShowWaiting(false);
+	ProcAuthPage();
 }
 
 void CDemoUI::ResetAllControls()
@@ -250,11 +269,66 @@ void CDemoUI::SwitchUIPageByType(UIPageType emPageType /* = UIPAGE_AUTH */)
 	if (m_containerAuthUI && m_containerUserUI && m_containerLoginUI && m_containerPTApi && m_containerStart && m_containerMeetingApi)
 	{
 		m_containerAuthUI->SetVisible(bAuth);
+		if (bAuth)
+			ProcAuthPage();
 		m_containerUserUI->SetVisible(bUser);
 		m_containerLoginUI->SetVisible(bLogin);
 		m_containerPTApi->SetVisible(bPT);
 		m_containerStart->SetVisible(bStart);
 		m_containerMeetingApi->SetVisible(bMeetingApi);
+	}
+}
+
+void CDemoUI::ProcAuthPage()
+{
+	if (NULL == m_editKey 
+		|| NULL == m_editSecret
+		|| NULL == m_lableAppKey
+		|| NULL == m_lableAppSerect
+		|| NULL == m_lableDomain
+		|| NULL == m_ctrl_edit_web_domain
+		|| NULL == m_ctrl_lb_appkey
+		|| NULL == m_ctrl_ctrl_edit_key
+		|| NULL == m_ctrl_lb_appSecret
+		|| NULL == m_ctrl_edit_secret
+		|| NULL == m_ctrl_zoom_logo)
+		return;
+
+	ShowWaiting(false);
+	if (m_bSDKInit)
+	{
+		m_editKey->SetVisible(true);
+		m_editSecret->SetVisible(true);
+		m_lableAppKey->SetVisible(true);
+		m_lableAppSerect->SetVisible(true);
+		m_editWebDomain->SetVisible(false);
+		m_lableDomain->SetVisible(false);
+		
+		m_ctrl_edit_web_domain->SetVisible(false);
+		m_ctrl_lb_appkey->SetVisible(true);
+		m_ctrl_ctrl_edit_key->SetVisible(true);
+		m_ctrl_lb_appSecret->SetVisible(true);
+		m_ctrl_edit_secret->SetVisible(true);
+		m_ctrl_zoom_logo->SetFixedHeight(20);
+		m_btnAuth->SetText(L"Auth");
+	}
+	else
+	{
+		m_ctrl_zoom_logo->SetFixedHeight(40);
+		m_editKey->SetVisible(false);
+		m_editSecret->SetVisible(false);
+		m_lableAppKey->SetVisible(false);
+		m_lableAppSerect->SetVisible(false);
+		m_editWebDomain->SetVisible(true);
+		m_lableDomain->SetVisible(true);
+
+		m_ctrl_edit_web_domain->SetVisible(true);
+		m_ctrl_lb_appkey->SetVisible(false);
+		m_ctrl_ctrl_edit_key->SetVisible(false);
+		m_ctrl_lb_appSecret->SetVisible(false);
+		m_ctrl_edit_secret->SetVisible(false);
+
+		m_btnAuth->SetText(L"SetDomain");
 	}
 }
 
@@ -281,6 +355,52 @@ void CDemoUI::ShowMeetingApiByType(UIApiType emApiType /* = UIAPI_SHARE */)
 		m_containerAudioApi->SetVisible(bAudio);
 	}
 }
+bool CDemoUI::SDKInit()
+{
+	if (!m_editWebDomain || !m_editKey || !m_editSecret || !m_pAuthServiceMgr)
+		return false;
+
+	std::wstring strWebDomain = m_editWebDomain->GetText().GetData();
+
+	if (!m_bSDKInit && strWebDomain.size() > 0)
+	{
+		ZOOM_SDK_NAMESPACE::InitParam initParam;
+		initParam.strWebDomain = strWebDomain.c_str();
+		m_bSDKInit = CSDKHelper::Init(initParam);
+	}
+
+#ifndef PROXY_DETECT_LOGIC
+	ProcAuthPage();
+#else
+	class CNetwrokHelperSink : public ZOOM_SDK_NAMESPACE::INetworkConnectionHandler
+	{
+	public:
+		virtual void onProxyDetectComplete()
+		{
+			if (m_pDemo)
+				m_pDemo->ProcAuthPage();
+		}
+		virtual void onProxySettingNotification(ZOOM_SDK_NAMESPACE::IProxySettingHandler* handler)
+		{
+			//todo
+		}
+		virtual void onSSLCertVerifyNotification(ZOOM_SDK_NAMESPACE::ISSLCertVerificationHandler* handler)
+		{
+			//todo
+		}
+
+		CDemoUI* m_pDemo;
+	};
+	static CNetwrokHelperSink s_networksink;
+	s_networksink.m_pDemo = this;
+	ZOOM_SDK_NAMESPACE::CreateNetworkConnectionHelper(&m_pNetworkConnectionHelper);
+	if (m_pNetworkConnectionHelper)
+	{
+		m_pNetworkConnectionHelper->RegisterNetworkConnectionHandler(&s_networksink);
+		ShowWaiting(true);
+	}
+#endif
+}
 
 bool CDemoUI::SDKAuth()
 {
@@ -290,16 +410,8 @@ bool CDemoUI::SDKAuth()
 	std::wstring strWebDomain = m_editWebDomain->GetText().GetData();
 	std::wstring strKey = m_editKey->GetText().GetData();
 	std::wstring strSecret = m_editSecret->GetText().GetData();
-	if (strWebDomain.length() <= 0 || strKey.length() <= 0 || strSecret.length() <= 0)
+	if (strKey.length() <= 0 || strSecret.length() <= 0)
 		return false;
-
-	if (!m_bSDKInit)
-	{
-		ZOOM_SDK_NAMESPACE::InitParam initParam;
-		initParam.strWebDomain = strWebDomain.c_str();
-		if (m_pAuthServiceMgr)
-			m_bSDKInit = m_pAuthServiceMgr->Init(initParam);
-	}
 
 	if (!m_bSDKInit)
 	{
@@ -311,7 +423,7 @@ bool CDemoUI::SDKAuth()
 	ZOOM_SDK_NAMESPACE::AuthParam authParam;
 	authParam.appKey = strKey.c_str();
 	authParam.appSecret = strSecret.c_str();
-
+	m_pAuthServiceMgr->Init();
 	bool bAuth = m_pAuthServiceMgr->SDKAuth(authParam);
 	if (bAuth)
 	{
@@ -334,9 +446,9 @@ bool CDemoUI::Login()
 	bool bRememberMe = m_chkRememberMe->GetCheck();
 
 	ZOOM_SDK_NAMESPACE::LoginParam param;
-	param.userName = strEmail.c_str();
-	param.password = strPassword.c_str();
-	param.bRememberMe = bRememberMe;
+	param.ut.emailLogin.userName = strEmail.c_str();
+	param.ut.emailLogin.password = strPassword.c_str();
+	param.ut.emailLogin.bRememberMe = bRememberMe;
 
 	bool bRet = m_pAuthServiceMgr->Login(param);
 	if (bRet)
@@ -358,7 +470,7 @@ bool CDemoUI::Start()
 
 	if (bRet)
 	{
-		ShowWaiting(true);
+		ShowWaiting(true, true);
 	}
 
 	return bRet;
@@ -417,7 +529,7 @@ bool CDemoUI::Join()
 
 	if (bRet)
 	{
-		ShowWaiting(true);
+		ShowWaiting(true, true);
 	}
 
 	return bRet;
@@ -668,7 +780,14 @@ void CDemoUI::Notify( TNotifyUI& msg )
 	{
 		if(msg.pSender == m_btnAuth)
 		{
-			SDKAuth();
+			if (!m_bSDKInit)
+			{
+				SDKInit();
+			}
+			else
+			{
+				SDKAuth();
+			}
 		}
 		else if (msg.pSender == m_btnNormal)
 		{
@@ -721,7 +840,7 @@ void CDemoUI::Notify( TNotifyUI& msg )
 		{
 			End();
 		}
-		else if (msg.pSender == m_btnLeave)
+		else if (msg.pSender == m_btnLeave || msg.pSender == m_btnLeaveWhenConnecting)
 		{
 			Leave();
 		}
@@ -829,29 +948,7 @@ LRESULT CDemoUI::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 void CDemoUI::ShowStatus(UIPageType emUIPageType, std::wstring strStatus)
 {
-	CLabelUI* labelStatus = NULL;
-
-	if (emUIPageType == UIPAGE_AUTH)
-		labelStatus = m_lableAuthError;
-	else if (emUIPageType == UIPAGE_USER)
-		;
-	else if (emUIPageType == UIPAGE_LOGIN)
-		labelStatus = m_lableLoginError;
-	else if (emUIPageType == UIPAGE_PT)
-		;
-	else if (emUIPageType == UIPAGE_START)
-		;
-	else if (emUIPageType == UIPAGE_JOIN)
-		;
-	//else if (emUIPageType == UIPAGE_MEETING)
-	//	labelStatus = m_lableMeetingAPIStatus;
-
-	if (labelStatus)
-	{
-		labelStatus->SetTextColor(0xFFFF0000);
-		labelStatus->SetFont(5);
-		labelStatus->SetText(strStatus.c_str());					
-	}
+	::MessageBox(NULL, strStatus.c_str(), L"error", MB_OK);
 }
 
 void CDemoUI::UpdateUserList(int nIndex, std::wstring strUserName, std::wstring strUserId, bool bAdd)
@@ -892,18 +989,24 @@ void CDemoUI::CleanUpUserList()
 	m_listUsers->RemoveAll();
 }
 
-void CDemoUI::ShowWaiting(bool bWaiting)
+void CDemoUI::ShowWaiting(bool bWaiting, bool bShowLeave)
 {
+	if (!bWaiting)
+		bShowLeave = false;
 	if (m_gifWaiting)
 	{
 		bWaiting ? m_gifWaiting->PlayGif() : m_gifWaiting->StopGif();
+	}
+
+	if (m_btnLeaveWhenConnecting)
+	{
+		m_btnLeaveWhenConnecting->SetVisible(bShowLeave);
 	}
 
 	if (m_containerWaitingUI)
 	{
 		m_containerWaitingUI->SetVisible(bWaiting);
 	}
-
 }
 
 LRESULT CDemoUI::OnClose(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& bHandled)
@@ -925,6 +1028,12 @@ LRESULT CDemoUI::OnDestroy(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, 
 	{
 		m_pAuthServiceMgr->LogOut();
 		m_pAuthServiceMgr->UnInit();
+		if (m_pNetworkConnectionHelper)
+		{
+			ZOOM_SDK_NAMESPACE::DestroyNetworkConnectionHelper(m_pNetworkConnectionHelper);
+			m_pNetworkConnectionHelper = NULL;
+		}
+		CSDKHelper::UnInit();
 	}
 
 	bHandled = FALSE;
@@ -978,6 +1087,7 @@ void CDemoUI::onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESP
 		break;
 	case ZOOM_SDK_NAMESPACE::LOGIN_FAILED:
 		{
+			ShowWaiting(false);
 			ShowStatus(UIPAGE_LOGIN, ERROR_LOGIN);
 		}
 		break;
@@ -998,7 +1108,11 @@ void CDemoUI::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, i
 	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_DISCONNECTING:
 		{
 			CleanUpUserList();
-			ShowWaiting(true);
+			bool bShowLeave(true);
+			if (ZOOM_SDK_NAMESPACE::MEETING_STATUS_DISCONNECTING == status)
+				bShowLeave = false;
+
+			ShowWaiting(true, bShowLeave);
 		}
 		break;
 	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_ENDED:
@@ -1006,6 +1120,10 @@ void CDemoUI::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, i
 		{
 			CleanUpUserList();
 			SwitchUIPageByType(UIPAGE_PT);
+			if (ZOOM_SDK_NAMESPACE::MEETING_STATUS_FAILED == status)
+			{
+				ShowStatus(UIPAGE_START, ERROR_START);
+			}
 		}
 		break;
 	case ZOOM_SDK_NAMESPACE::MEETING_STATUS_INMEETING:
@@ -1040,8 +1158,6 @@ void CDemoUI::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, co
 
 		SwitchUIPageByType(UIPAGE_MEETING);
 	}
-	else
-		ShowStatus(UIPAGE_START, ERROR_START);
 }
 
 void CDemoUI::onUserLeft(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList /*= NULL*/)

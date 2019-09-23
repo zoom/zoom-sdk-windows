@@ -151,18 +151,31 @@ public:
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError SetEvent(IPreMeetingServiceEvent* pEvent) = 0;
 
-	/// \brief Set premeeting service event
+	/// \brief Schedule Meeting
 	/// \param pItem The object created by CreateScheduleMeetingItem
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError ScheduleMeeting(IScheduleMeetingItem* pItem) = 0;
 
-	/// \brief Set premeeting service event
+	/// \brief Schedule Meeting
+	/// \param wndParam brief Show schedule dialog Parameter, more detailed refer to struct description.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ScheduleMeeting(WndPosition& wndParam) = 0;
+
+	/// \brief Edit Meeting
 	/// \param meetingUniqueID The meeting unique ID which meeting you want to edit
 	/// \param pItem The object created by CreateScheduleMeetingItem
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError EditMeeting(UINT64 meetingUniqueID, IScheduleMeetingItem* pItem) = 0;
+
+	/// \brief Edit Meeting
+	/// \param wndParam brief Show schedule dialog Parameter, more detailed refer to struct description.
+	/// \param meetingUniqueID The meeting unique ID which meeting you want to edit
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EditMeeting(WndPosition& wndParam, UINT64 meetingUniqueID) = 0;
 
 	/// \brief Set premeeting service event
 	/// \param meetingUniqueID The meeting unique ID which meeting you want to delete

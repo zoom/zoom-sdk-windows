@@ -53,20 +53,47 @@ typedef struct tagAuthParam
 	}
 }AuthParam;
 
+/*! \enum LoginType
+\brief type of user login.
+A more detailed struct description.
+*/
+enum LoginType
+{
+	LoginType_Unknown,
+	LoginType_Email,///<Login with work email
+	LoginType_SSO,///<Login with SSO token
+};
+
+typedef struct tagLoginParam4Email
+{
+	const wchar_t* userName;///< Account name. email or something else
+	const wchar_t* password;///< Account password
+	bool bRememberMe;
+}LoginParam4Email;
+
+typedef struct tagLoginParam4SSO
+{
+	const wchar_t* ssoToken;///< Account SSO token when Login
+}LoginParam4SSO;
+
 /*! \struct tagLoginParam
     \brief Account login Parameter.
     A more detailed struct description.
 */
 typedef struct tagLoginParam
 {
-	const wchar_t* userName;///< Account name. email or something else
-	const wchar_t* password;///< Account password
-	bool bRememberMe;
+	LoginType loginType;
+	union
+	{
+		LoginParam4Email emailLogin;
+		LoginParam4SSO ssoLogin;
+	}ut;
+
 	tagLoginParam()
 	{
-		userName = NULL;
-		password = NULL;
-		bRememberMe = false;
+		loginType = LoginType_Email;
+		memset(&ut, 0, sizeof(ut));
+		
 	}
 }LoginParam;
 
@@ -78,6 +105,10 @@ public:
 	/// \brief Get account display name
 	/// \return The return value is account display name.
 	virtual const wchar_t* GetDisplayName() = 0;
+
+	/// \brief Get login type
+	/// \return The return value is account login type.
+	virtual LoginType GetLoginType() = 0;
 };
 
 /// \brief Authentication Service Callback Event
@@ -118,6 +149,10 @@ public:
 	/// \brief Get authentication status
 	/// \return The return value is  authentication status.To get extended error information, refer to AuthResult enum
 	virtual AuthResult GetAuthResult() = 0;
+
+	/// \brief Get SDK identity
+	/// \return the SDK identity.
+	virtual const wchar_t* GetSDKIdentity() = 0;
 
 	// \brief Account login
 	/// \param param The parameter to be used for account login, refer to LoginParam. 
