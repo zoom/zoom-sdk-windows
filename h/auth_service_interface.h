@@ -134,6 +134,10 @@ public:
 	// \brief Get login account information.
 	/// \return If you has login your account success, the return value is the account information, otherwise is NULL.
 	virtual IAccountInfo* GetAccountInfo() = 0;
+
+	/// \brief Get login status
+	/// \return The return value is login status.To get extended error information, refer to LOGINSTATUS enum
+	virtual LOGINSTATUS GetLoginStatus() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

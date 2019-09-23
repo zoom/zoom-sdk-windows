@@ -28,6 +28,7 @@ enum MeetingStatus
 	MEETING_STATUS_UNKNOW,
 	MEETING_STATUS_LOCKED,
 	MEETING_STATUS_UNLOCKED,
+	MEETING_STATUS_IN_WAITING_ROOM,
 };
 
 /*! \enum MeetingFailCode
@@ -541,6 +542,18 @@ public:
 	/// \brief Audio type
 	/// \return Audio join type
 	virtual AudioType GetAudioJoinType() = 0;
+
+	/// \brief Is me or not
+	/// \return me or not
+	virtual bool IsMySelf() = 0;
+
+	/// \brief Is in waiting room or not
+	/// \return in waiting room or not 
+	virtual bool IsInWaitingRoom() = 0;
+
+	/// \brief Is raise hand or not
+	/// \return Is raise hand or not
+	virtual bool IsRaiseHand() = 0;
 };
 
 /*! \enum AnnotationToolType

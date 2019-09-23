@@ -45,6 +45,7 @@ enum SDKError
 	SDKERR_VIDEO_NOTREADY,///< Video service not ready
 	SDKERR_NO_PERMISSION,///< No premission to do this
 	SDKERR_UNKNOWN,///< Unknown error 
+	SDKERR_OTHER_SDK_INSTANCE_RUNNING,
 };
 
 enum SDK_LANGUAGE_ID
