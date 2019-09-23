@@ -52,8 +52,12 @@ public:
 
 	void onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status);
 
-	void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc);
-	void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status);
+	virtual void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc);
+	virtual void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status);
+	virtual void onHostChangeNotification(unsigned int userId){};
+	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid){};
+	virtual void onRecordPriviligeChanged(bool bCanRec){};
+	virtual void onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid){}
 
 private:
 	CDemoUI* m_pSink;

@@ -98,6 +98,10 @@ public:
 	/// \return If the function succeeds, the return value is not NULL.
 	virtual IList<const wchar_t* >* GetH323Address() = 0;
 
+	/// \brief Get h323 password for current meeting
+	/// \return h323 password
+	virtual const wchar_t* GetH323Password() = 0;
+
 	/// \brief Send Meeting paring code
 	/// \param meetingNum Specifies which meeting to paring. 
 	/// \param paringCode Code for paring

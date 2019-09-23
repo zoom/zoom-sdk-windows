@@ -29,6 +29,10 @@ enum MeetingStatus
 	MEETING_STATUS_LOCKED,
 	MEETING_STATUS_UNLOCKED,
 	MEETING_STATUS_IN_WAITING_ROOM,
+	MEETING_STATUS_WEBINAR_PROMOTE,
+	MEETING_STATUS_WEBINAR_DEPROMOTE,
+	MEETING_STATUS_JOIN_BREAKOUT_ROOM,
+	MEETING_STATUS_LEAVE_BREAKOUT_ROOM,
 };
 
 /*! \enum MeetingFailCode
@@ -358,7 +362,8 @@ class IMeetingServiceEvent
 public:
 	/// \brief Meeting status changed callback
 	/// \param status Meeting status value.
-	/// \param iResult details for special meeting status. 
+	/// \param iResult details reason for special meeting status.
+	/// if status is MEETING_STATUS_FAILED, the value of iResult is one of MeetingFailCode enum. 
 	virtual void onMeetingStatusChanged(MeetingStatus status, int iResult = 0) = 0;
 
 	/// \brief Once the mp4 conversion is complete, call back 
@@ -409,6 +414,23 @@ public:
 	/// \param userId 
 	/// \param status
 	virtual void onUserVideoStatusChange(unsigned int userId, VideoStatus status) = 0;
+
+	/// \brief host change callback
+	/// \param userId 
+	virtual void onHostChangeNotification(unsigned int userId) = 0;
+
+	/// \brief spotlight video change callback
+	/// \param userId 
+	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid) = 0;
+
+	/// \brief self record privilige change callback
+	/// \param bCanRec 
+	virtual void onRecordPriviligeChanged(bool bCanRec) = 0;
+
+	/// \brief Low Or Raise Hand Status change callback
+	/// \param bLow
+	/// \param userid 
+	virtual void onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid) = 0;
 };
 
 enum SDKFloatVideoType
@@ -418,11 +440,26 @@ enum SDKFloatVideoType
 	FLOATVIDEO_Large,
 	FLOATVIDEO_Minimize,
 };
+
+/// \brief Meeting UI Controller Callback Event
+///
+class IMeetingUIControllerEvent
+{
+public:
+	virtual void onInviteBtnClicked() = 0;
+};
+
 /// \brief Meeting UI Controller Interface
 ///
 class IMeetingUIController
 {
 public:
+	/// \brief Set meeting ui controller callback event
+	/// \param pEvent A pointer to a IMeetingUIControllerEvent* that receives meeting ui event. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SetEvent(IMeetingUIControllerEvent* pEvent) = 0;
+
 	/// \brief Show meeting chat dialog
 	/// \param param Specifies how to show chat dialog.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -742,6 +779,11 @@ public:
 	/// \brief Enable leave meeting button in leave meeting window for host
 	/// \param bEnable Specifies leave meeting button show or not in host leave meeting window, default is enable,
 	virtual void EnableLeaveMeetingOptionForHost(bool bEnable) = 0;
+
+	/// \brief Enable invite button in meeting window
+	/// \param bEnable Specifies invite button show or not in meeting window, default is disable,
+	/// if enable this feature, you need to handle onInviteBtnClicked event callback
+	virtual void EnableInviteButtonOnMeetingUI(bool bEnable) = 0;
 };
 
 /// \brief Meeting video controller interface
