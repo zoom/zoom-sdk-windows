@@ -1,86 +1,97 @@
 /*!
 * \file network_connection_handler_interface.h
-* \brief  network connection message notification handler
+* \brief Network Connection Message Notification Handler.
 * 
 */
 
 #ifndef _NETWORK_CONNECTION_HANDLER_H_
 #define _NETWORK_CONNECTION_HANDLER_H_
-/// \brief Zoom SDK Namespace
-/// 
-///
+
 BEGIN_ZOOM_SDK_NAMESPACE
-/// \brief Proxy setting information callback interface
+/// \brief Proxy setting information callback interface.
 ///
 class IProxySettingHandler
 {
 public:
 	virtual ~IProxySettingHandler(){};
-	/// \brief Return value of the Proxy-Host
+	/// \brief Get the address of the proxy host.
+	/// Return The address of the proxy host.
 	virtual const wchar_t* GetProxyHost() = 0;
-	/// \brief Return value of the Proxy-Port
+	/// \brief Get the proxy port.
+	///Return The value of the proxy port.
 	virtual unsigned int GetProxyPort() = 0;
-	/// \brief Return value of the Proxy-Description
+	/// \brief Get the description of the proxy.
+	///Return The description of the proxy.
 	virtual const wchar_t* GetProxyDescription() = 0;
 
-	/// \brief Input the username and password of this proxy for continue connect.
+	/// \brief Input the username and password when using the proxy.
+	/// \param userName The username when using the proxy.
+	/// \param psw The password when using the proxy.
 	virtual void InputUsernamePassword(const wchar_t* userName, const wchar_t* psw) = 0;
 
-	/// \brief cancel to input the username and password of this proxy
+	/// \brief Cancel the process to input the username and password of the proxy.
 	virtual void Cancel() = 0;
 
 };
 
-/// \brief the SSL Certificate Verification callback interface
+/// \brief Verification of the SSL certificate callback interface.
 ///
 class ISSLCertVerificationHandler
 {
 public:
 	virtual ~ISSLCertVerificationHandler(){};
 
-	// \brief Return the value of SSL certificate is issued to
+	/// \brief Get the value of whom the SSL certificate is issued to.
 	virtual const wchar_t* GetCertIssuedTo() = 0;
-	// \brief Return the value of SSL certificate is issued by
+	
+	/// \brief Get the value that who issues the SSL certificate.
 	virtual const wchar_t* GetCertIssuedBy() = 0;
-	// \brief Return the SSL certificate's serial number
+	
+	/// \brief Get the serial number of the SSL certificate.
 	virtual const wchar_t* GetCertSerialNum() = 0;
-	/// \brief Return the ssl certificate's fingerprint
+	
+	/// \brief get the ssl certificate's fingerprint
 	virtual const wchar_t* GetCertFingerprint() = 0;
 
-	// \brief trust this SSL certificate
+	/// \brief The SSL certificate is trusted.
 	virtual void Trust() = 0;
-	// \brief don't trust this SSL certificate
+	/// \brief The SSL certificate is not trusted.
 	virtual void Cancel() = 0;
 
 };
 
-/// \brief the network connection handler callback event
+/// \brief The network connection handler callback event.
 ///
 class INetworkConnectionHandler
 {
 public:
-	/// \brief Proxy detect complete notify
+	/// \brief Notification callback of completing the proxy detection.
 	virtual void onProxyDetectComplete() = 0;
-	/// \brief must prompt the user for their username and password of the proxy,when receive this message
+	/// \brief The callback will be triggered if the proxy requests to input the username and password.
+	/// \remarks Use the handler to configure the related information. For more details, see \link IProxySettingHandler \endlink. 
+	///The handler will be destroyed once the function calls end.
 	virtual void onProxySettingNotification(IProxySettingHandler* handler) = 0;
-	/// \brief must prompt the user for the SSL Certificate Verification,when receive this message
+	
+	/// \brief The callback will be triggered when the SSL is verified.
+	/// \remarks Use the handler to check the related information. For more details, see \link ISSLCertVerificationHandler \endlink.
+	///The handler will be destroyed once the function calls end.
 	virtual void onSSLCertVerifyNotification(ISSLCertVerificationHandler* handler) = 0;
 };
 
-/// \brief the network connection helper interface
+/// \brief The network connection helper interface.
 ///
 class INetworkConnectionHelper
 {
 public:
-	/// \brief Register a handler for a network connection message notification.
-	/// \param pNetworkHandler Handler which will be invoked for when this message type is received.
+	/// \brief Set the callback handler to receive the INetworkConnectionHandler.
+	/// \param pNetworkHandler The SDK will invoke the handler once received this type of message. For more details, see \link INetworkConnectionHandler \endlink.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError RegisterNetworkConnectionHandler(INetworkConnectionHandler* pNetworkHandler) = 0;
 
-	/// \brief Unregister a handler for a network connection message notification.
+	/// \brief Unregister the callback handler which is used to receive the INetworkConnectionHandler.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError UnRegisterNetworkConnectionHandler() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

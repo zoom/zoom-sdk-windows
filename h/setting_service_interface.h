@@ -1,99 +1,101 @@
 /*!
 * \file setting_service_interface.h
-* \brief Setting Service Interface
+* \brief Configure Service Interface.
 * 
 */
 #ifndef _SETTING_SERVICE_INTERFACE_H_
 #define _SETTING_SERVICE_INTERFACE_H_
 #include "zoom_sdk_def.h"
-/// \brief Zoom SDK Namespace
-/// 
-///
+
 BEGIN_ZOOM_SDK_NAMESPACE
-/// \brief Camera device information Interface
+/// \brief Camera device information interface.
 ///
 class ICameraInfo
 {
 public:
-	/// \brief Get camera device id
-	/// \return If the function succeeds, the return value is camera device id.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the camera device ID.
+	/// \return If the function succeeds, the return value is the camera device ID.
+	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceId() = 0;
 
-	/// \brief Get camera device name
-	/// \return If the function succeeds, the return value is camera device name.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the camera device name
+	/// \return If the function succeeds, the return value is the camera device name.
+	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceName() = 0;
 
-	/// \brief Selected device flag
-	/// \return If the return value is true, this device is selected.
+	/// \brief Determine if the current device is selected to use.
+	/// \return TRUE indicates that the current device is selected.
 	virtual bool IsSelectedDevice() = 0;
 
 	virtual ~ICameraInfo() {};
 };
 
-/// \brief Microphone device information Interface
+/// \brief Microphone device information interface.
 ///
 class IMicInfo
 {
 public:
-	/// \brief Get microphone device id
-	/// \return If the function succeeds, the return value is camera device id.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the microphone device ID.
+	/// \return If the function succeeds, the return value is the camera device ID.
+	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceId() = 0;
 
-	/// \brief Get microphone device name
-	/// \return If the function succeeds, the return value is camera device name.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the microphone device name.
+	/// \return If the function succeeds, the return value is the camera device name.
+	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceName() = 0;
 
-	/// \brief Selected device flag
-	/// \return If the return value is true, this device is selected.
+	/// \brief Determine if the current device is slected to use.
+	/// \return TRUE indicates that the current device is selected.
 	virtual bool IsSelectedDevice() = 0;
 
 	virtual ~IMicInfo() {};
 };
 
-/// \brief Audio speaker device information Interface
+/// \brief Audio speaker device information interface.
 ///
 class ISpeakerInfo
 {
 public:
-	/// \brief Get speaker device id
-	/// \return If the function succeeds, the return value is camera device id.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the speaker device ID.
+	/// \return If the function succeeds, the return value is the camera device ID.
+	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceId() = 0;
 
-	/// \brief Get speaker device name
-	/// \return If the function succeeds, the return value is camera device name.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the speaker device name.
+	/// \return If the function succeeds, the return value is speaker device name.
+	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceName() = 0;
 
-	/// \brief Selected device flag
-	/// \return If the return value is true, this device is selected.
+	/// \brief Determine if the current device is slected to use.
+	/// \return TRUE indicates that the current device is selected.
 	virtual bool IsSelectedDevice() = 0;
 
 	virtual ~ISpeakerInfo() {};
 };
 
+/*! \enum SettingTabPage
+    \brief Specify the shown tab page at the top of the displayed setting dialog.
+    Here are more detailed structural descriptions.
+*/ 
 enum SettingTabPage
 {
-	SettingTabPage_General,
-	SettingTabPage_Audio,
-	SettingTabPage_Video
+	SettingTabPage_General,///<General setting page.
+	SettingTabPage_Audio,///<Audio setting page.
+	SettingTabPage_Video,///<Video setting page.
 };
 /*! \struct tagShowChatDlgParam
-    \brief Show meeting chat dialog Parameter.
-    A more detailed struct description.
+    \brief Display the parameter of the meeting chat dialog.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagShowSettingDlgParam
 {
-	HWND hParent;///< Parent window handle
-	int top;///< setting dialog top position
-	int left;///< setting dialog left position
-	HWND hSettingWnd;///< return setting dialog handle
-	bool bShow;///< show or not
-	SettingTabPage eTabPageType;
+	HWND hParent;///<Parent window handle.
+	int top;///<The Y-axis value of the top-left corner of the dialog uses the coordinate system of the moniter.
+	int left;///<The X-axis value of the top-left corner of the dialog uses the coordinate system of the moniter.
+	HWND hSettingWnd;///<Window handle of the dialog setting.
+	bool bShow;///<Enable to display or nor.
+	SettingTabPage eTabPageType; ///<The tab page shown at the top of the displayed setting dialog.
 	tagShowSettingDlgParam()
 	{
 		hParent = NULL;
@@ -105,161 +107,177 @@ typedef struct tagShowSettingDlgParam
 	}
 }ShowSettingDlgParam;
 
-/// \brief Notify the status of the mic during the mic testing.
+/*! \enum SDK_TESTMIC_STATUS
+    \brief Notify the status of the mic when testing.
+    Here are more detailed structural descriptions.
+*/
 typedef	enum
 {
-	enuCanTest = 0, ///< Can call TestMicStartRecording to start testing mic. Useless to call TestMicStopTesting/TestMicPlayRecording.
-	enuMicRecording,///< Can call TestMicStopTesting/TestMicPlayRecording. Useless to call TestMicStartRecording.
-	enuCanPlay,		///< Can call TestMicStopTesting/TestMicPlayRecording. Useless to call TestMicStartRecording.
-					///< enuCanPlay status means SDK has recorded the mic sound for the longest time (6 seconds). In this status, if the bHandled is not set to be 'true', SDK will call TestMicStopTesting itself.
+	enuCanTest = 0,///<Test the mic via TestMicStartRecording. It is useless to call TestMicStopTesting/TestMicPlayRecording in this status.
+	enuMicRecording,///<Test the mic via TestMicStopTesting/TestMicPlayRecording. It is useless to call TestMicStartRecording in this status.
+	enuCanPlay,///<Test the mic via TestMicStopTesting/TestMicPlayRecording. It is useless call TestMicStartRecording in this status.
 } SDK_TESTMIC_STATUS;
 
-/// \brief Audio Device testing Callback events
+/// \brief Audio device testing callback events.
 //
 class ITestAudioDeviceHelperEvent
 {
 public:
-	/// \brief Notify the current mic volume and speaker volume during the mic/speaker testing.
-	/// \param MicVolume [out] Specifies the voulme of the mic.
-	/// \param SpkVolume [out] Specifies the voulme of the speaker.
-	///These values can be used to show a volume process bar during mic/speaker testing.
+	/// \brief Notify the current mic or speaker volume when testing.
+	/// \param MicVolume Specify the voulme of the mic.
+	/// \param SpkVolume Specify the voulme of the speaker.
 	virtual void OnMicSpkVolumnChanged(unsigned int MicVolume, unsigned int SpkVolume) = 0;
 
-	/// \brief Notify that no mic device or speaker device is found.
-	/// \param bMicOrSpk True means no mic device. False means no speaker device.
+	/// \brief Notify that either mic device or speaker device is not found.
+	/// \param bMicOrSpk TRUE indicates no mic device. False no speaker device.
 	virtual void OnNoAudioDeviceIsUseful(bool bMicOrSpk) = 0; 
 
-	/// \brief Notify the status of the mic duing the mic testing.
-	/// \param status Refer to the enum SDK_TESTMIC_STATUS for more details.
-	/// \param bHandled Set it to be 'true' to notify the SDK that the default logic in SDK should be ignored to handle the mic status. 
-	/// \see SDK_TESTMIC_STATUS
+	/// \brief Notify the mic status when testing.
+	/// \param status The mic status. For more details, see \link SDK_TESTMIC_STATUS \endlink enum.
+	/// \param bHandled The SDK default logic won't handle the mic status the value is set to be TRUE.
+	///For more details, see \link SDK_TESTMIC_STATUS \endlink.
+	/// \remarks The enuCanPlay status indicates that the SDK has recorded the microphone sound for the longest time (6 seconds). If the bHandled is not set to TURE hereby, the SDK will call TestMicStopTesting() itself. 
 	virtual void OnTestMicStatusChanged(SDK_TESTMIC_STATUS status,bool& bHandled) = 0; 
 
-	/// \brief Notify the user that a mic/speaker device is selected during the testing. SDK will close the mic/speaker testing. User should restart the test again manually.
+	/// \brief Notify the user that a mic/speaker device is selected when testing. Then the SDK will close the mic/speaker testing. The user shall restart the test manually if he still wants to test.
 	virtual void OnSelectedAudioDeviceIsChanged() = 0;
 };
 
-/// \brief Audio devices testing interface.
+/// \brief Audio device test interface.
 ///
 class ITestAudioDeviceHelper
 {
 public:
-	/// \brief Audio device testing callback event. \remarks It must be called before using any other interface in this class.
-	/// \param pEvent [in] A pointer to an ITestAudioDeviceHelperEvent* that receives audio device testing event. 
+	/// \brief Audio device test callback handler. 
+	/// \param pEvent A pointer to the ITestAudioDeviceHelperEvent that receives audio device test event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \see ITestAudioDeviceHelperEvent
-	/// \remarks It must be called before using any other interface in this class.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Call the function before using any other interface of the same class.
 	virtual SDKError SetEvent(ITestAudioDeviceHelperEvent* pEvent) = 0;
 
 	/// \brief Start to test the mic.
-	/// \param deviceID [in] Specifies a mic device to test. If the param is a wrong mic ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one.
-	///If no param is passed in, SDK tests the default device.
-	///\remarks The function can not work if no event is set.
+	/// \param deviceID Specify to test a mic device. If the param is a wrong mic ID, the SDK will return an error. Otherwise the SDK tests the specified device and sets it as selected.
+	///The SDK will test the default device if no parameter is input.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks The function is disabled if no event handler is set.
 	virtual SDKError TestMicStartRecording(const wchar_t* deviceID = NULL) = 0;
 
-	/// \brief Stop the mic testing. If there is no mic testing, SDK return an error.
-	///\remarks The function can not work if no event is set.
+	/// \brief Stop the mic test. The SDK will return an error if there is no mic test.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks The function is disabled if no event handler is set.
 	virtual SDKError TestMicStopTesting() = 0;
 
 	/// \brief Play the mic reocrded sound. If there is no mic testing, SDK return an error.
-	///\remarks The function can not work if no event is set.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks The function is disabled if no event handler is set.
 	virtual SDKError TestMicPlayRecording() = 0;
 	
 	/// \brief Start to test the speaker.
-	/// \ param deviceID [in] Specified a speaker device to test. If the param is a wrong speaker ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one.
-	///If no param is passed in, SDK tests the default device.
-	///\remarks The function can not work if no event is set.
+	/// \param deviceID Specify to test a speaker device. If the param is a wrong speaker ID, the SDK will return an error. Otherwise the SDK tests the specified device and sets it as selected.
+	///The SDK will test the default device if no parameter is input.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks The function is disabled if no event handler is set.
 	virtual SDKError TestSpeakerStartPlaying(const wchar_t* deviceID = NULL) = 0;
 	
-	/// \brief Stop the speaker testing. If there is no speaker testing, SDK return an error.
-	///\remarks The function can not work if no event is set.
+	/// \brief Stop the speaker test. The SDK will return an error if there is no speaker test.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks The function is disabled if no event handler is set.
 	virtual SDKError TestSpeakerStopPlaying() = 0;
 	
 	/// \brief Set the time interval for audio test. 
-	/// \param timerInterval [in] SDK sends mic and speaker volumes every 200 ms by default. This function allows the user to set another time interval instead of 200.
-	///The unit of time interval is millisecond. If the value is bigger than 1000 or lesser than 50, SDK will change it to be 200.
-	///\remarks Using this interface will stop the mic/speaker testing, if there is any. So, calling it before you do any audio test.
+	/// \param timerInterval Usually the SDK sends the mic and speaker volumes every 200 ms by default via ITestAudioDeviceHelperEvent::OnMicSpkVolumnChanged(). With this function, the user can modify the time interval instead of 200.
+	///The time interval varies only from 50 to 1000 in millisecond.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks This interface will stop the mic/speaker test(if there is). It is suggested to call it before audio test.
 	virtual SDKError SetTimerInterval(unsigned int timerInterval) = 0;
 };
 
-/// \brief General setting Interface
+/// \brief General setting interface.
 ///
 class IGeneralSettingContext
 {
 public:
-	/// \brief Enable or disable dual screen mode
-	/// \param bEnable [in] Specifies enable or disable dual screen mode.
+	/// \brief Enable or disable dual screen mode.
+	/// \param bEnable TRUE indicates to set to enable the dual screen mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableDualScreenMode(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of dual screen mode.
-	/// \return Enable or disable
+	/// \brief Determine if the dual screen mode is supported.
+	/// \return TRUE indicates to enable the dual screen mode.
 	virtual bool IsDualScreenModeEnabled() = 0;
 
-	/// \brief turn off or on aero mode in screen sharing
-	/// \param bTurnoff [in] Specifies turn off or on aero mode in screen sharing.
+	/// \brief Enable or disable the aero mode when sharing the screen.
+	/// \param bTurnoff TRUE indicates to turn off the aero mode when sharing the screen.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	///Just support windows 7.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks The function can only be called in windows 7 environment.
 	virtual SDKError TurnOffAeroModeInSharing(bool bTurnoff) = 0;
 
-	/// \brief Get Turn Off flag of on aero mode in screen sharing.
-	/// \return Turn Off or not
+	/// \brief Determine if the aero mode is turned off when sharing the screen.
+	/// \return TRUE indicates to turn off the mode. 
 	virtual bool IsAeroModeInSharingTurnOff() = 0;
 
-	/// \brief Enable or disable auto fit to window when view sharing content.
-	/// \param bEnable [in] Specifies enable or disable auto fit to window when view sharing content.
+	/// \brief Enable or disable to auto-fit the ZOOM window when viewing the shared content.
+	/// \param bEnable TRUE indicates to resize automatically.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAutoFitToWindowWhenViewSharing(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of auto fit to window when view sharing content.
-	/// \return Enable or disable
+	/// \brief Determine if it is able to auto-fit the ZOOM window when viewing the shared content.
+	/// \return TRUE indicates to resize automatically.
 	virtual bool IsAutoFitToWindowWhenViewSharingEnabled() = 0;
 
-	/// \brief Enable or disable auto enter full screen video mode when join meeting.
-	/// \param bEnable [in] Specifies enable or disable auto enter full screen video mode when join meeting.
+	/// \brief Enable or disable to enter the full screen video mode automatically when join meeting. 
+	/// \param bEnable TRUE indicates to enter the full screen video mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAutoFullScreenVideoWhenJoinMeeting(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of auto enter full screen video mode when join meeting.
-	/// \return Enable or disable
+	/// \brief Determine if it is able to enter the full screen video mode automatically when join meeting.
+	/// \return TRUE indicates to enter the full screen video mode. 
 	virtual bool IsAutoFullScreenVideoWhenJoinMeetingEnabled() = 0;
 
-	/// \brief Enable or disable auto enter full screen video mode when view share.
-	/// \param bEnable [in] Specifies enable or disable auto enter full screen video mode when view share.
+	/// \brief Enable or disable to enter the full screen video mode automatically when viewing the sharing.
+	/// \param bEnable TRUE indicates to enter the full screen video mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAutoFullScreenVideoWhenViewShare(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of auto enter full screen video mode when view share.
-	/// \return Enable or disable
+	/// \brief Determine if it is enable to enter the full screen video mode automatically when viewing the sharing.
+	/// \return TRUE indicates to enter the full screen video mode.
 	virtual bool IsAutoFullScreenVideoWhenViewShareEnabled() = 0;
 
-	/// \brief Enable or disable split screen mode when view share.
-	/// \param bEnable [in] Specifies enable or disable split screen mode when view share.
+	/// \brief Enable or disable to use the split screen mode, which enables the attendees to view the lectures or the gallery.
+	/// \param bEnable TRUE indicates to enter the split screen mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableSplitScreenMode(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of split screen mode.
-	/// \return Enable or disable
+	/// \brief Determine if it is enable to use the split screen mode.
+	/// \return TRUE indicates to use the split mode.
 	virtual bool IsSplitScreenModeEnabled() = 0;
 };
 
-///\brief Notify the action to rotate the video preview based on current view.
+/*! \enum PREVIEW_VIDEO_ROTATION_ACTION
+    \brief Notify to rotate the video preview based on the current view.
+    Here are more detailed structural descriptions.
+*/
 typedef enum
 {
-	PREVIEW_VIDEO_ROTATION_ACTION_0, 			///< No rotation.
-	PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90,		///< Rotate left.
-	PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180,		///< Rotate 180 degrees.
-	PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90	///< Rotate right.
+	PREVIEW_VIDEO_ROTATION_ACTION_0,///< No rotation.
+	PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90,///<Rotate to the left.
+	PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180,///<Rotate 180 degrees.
+	PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90///<Rotate to the right.
 } PREVIEW_VIDEO_ROTATION_ACTION, *PPREVIEW_VIDEO_ROTATION_ACTION;
 
-/// \brief Video Device testing Callback events
+/// \brief Video Device test callback event.
 ///
 class ITestVideoDeviceHelperEvent
 {
@@ -267,321 +285,391 @@ public:
 	/// \brief Notify that no camera device is found.
 	virtual void OnNoVideoDeviceIsUseful() = 0;
 	
-	/// \brief Notify the user that a camera device is selected during the testing. SDK will close the video testing. User should restart the test again manually.
+	/// \brief Notify the user that a camera device is selected during the test, then the SDK will close the video testing. The user shall restart the test manually if he wants to test.
 	virtual void OnSelectedVideoDeviceIsChanged() = 0; 
 	
-	/// \brief SDK need a window to show the video preview. This event notifies that no window handle or a wrong window handle is used. 
+	/// \brief A window is needed to show the video preview. This event notifies that there is no window handle or a wrong window handle is used. 
 	virtual void OnNoWindowToShowPreview() = 0;
 };
 
-/// \brief Video device testing interface.
+/// \brief Video device test interface.
 ///
 class ITestVideoDeviceHelper
 {
 public:
-	/// \brief Video device testing callback event. \remarks This function must be called before using any other interface in this class.
-	/// \param pEvent [in] A pointer to an ITestVideoDeviceHelperEvent that receives video device testing event. 
+	/// \brief Video device test callback event handler. 
+	/// \param pEvent A pointer to the ITestVideoDeviceHelperEvent that receives video device test event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Call the function before using any other interface of the same class.
 	virtual SDKError SetEvent(ITestVideoDeviceHelperEvent* pEvent) = 0;
 	
-	/// \brief Set the window and the rect to display the video preview.
-	/// \param hParentWnd [in] Specifies the window to display the video preview.
-	/// \param rc [in] Specifies a rectangle in the window to display the video preview. The default value is {0,0,0,0}. Using the default rc value means using the whole client area of the window to display the preview.
+	/// \brief Set the window and the rectangle to display the video preview.
+	/// \param hParentWnd Specify the window to display the video preview.
+	/// \param rc Specify a rectangle on the window to display the video preview. The default value is {0,0,0,0}, whick means the whole client area of the window.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetVideoPreviewParentWnd(HWND hParentWnd, RECT rc = _SDK_TEST_VIDEO_INIT_RECT) = 0;
 	
 	/// \brief Start to test the camera. 
-	/// \param deviceID [in] Specifies a camera device to test. If the param is a wrong camera ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one.
-	///If no param is passed in, SDK tests the default device.
-	///\remarks The function can not work if no event is set or no window handle is set.
+	/// \param deviceID Specify a camera device to test. If the param is a wrong camera ID, SDK returns an error. Otherwise SDK tests the specified device and sets it to be the selected one.
+	///The SDK will test the default device if no parameter is input.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks The function can not work if no event is set or no window handle is set.
 	virtual SDKError TestVideoStartPreview(const wchar_t* deviceID = NULL) = 0;
 	
 	/// \brief Stop testing the camera.
-	///\remarks The function can not work if no event is set or no window handle is set.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks The function can not work if there is no event or window handle to be set.
 	virtual SDKError TestVideoStopPreview() = 0;
 	
 	/// \brief Rotate the video preview.
-	/// \param action [in] Specified the action to rotate the video. Refer to enum PREVIEW_VIDEO_ROTATION_ACTION for more details.
-	/// \see PREVIEW_VIDEO_ROTATION_ACTION
-	///\remarks The function can not work if no event is set or no window handle is set.
+	/// \param action Specify the action to rotate the video. 
+	///For more details, see \link PREVIEW_VIDEO_ROTATION_ACTION \endlink.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks The function can not work if there is no event or window handle to be set. 
+	///It works also in the meeting video when you rotate the preview video. Please use it with cautions.
 	virtual SDKError TestVideoRotate(PREVIEW_VIDEO_ROTATION_ACTION action) = 0;	
 };
 
-/// \brief Video setting Interface
+/// \brief Video setting context callback event.
+class IVideoSettingContextEvent
+{
+public:
+	/// \brief Callback event if the SDK detects that the computer camera devices have been changed.
+	/// \param pNewCameraList The new list of all camera devices plugged into the computer. 
+	virtual void onComputerCamDeviceChanged(IList<ICameraInfo*>* pNewCameraList) = 0;
+};
+/// \brief Video setting interface.
 ///
 class IVideoSettingContext
 {
 public:
 	/// \brief Get camera device list.
-	/// \return If the function succeeds, the return value is camera device list pointer.
-	///If the function fails, the return value is NULL.
+	/// \return If the function succeeds, the return value the is camera device list.
+	///Otherwise failed, returns NULL.
 	virtual IList<ICameraInfo* >* GetCameraList() = 0;
 
 	/// \brief Select camera device.
-	/// \param [in] deviceId Specifies which device to select.
+	/// \param deviceId Specify a device to be selected.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SelectCamera(const wchar_t* deviceId) = 0;
 
 	/// \brief Enable or disable video mirror effect.
-	/// \param [in] bEnable Specifies enable or disable video mirror effect.
+	/// \param bEnable TRUE indicates to enable the video mirror effect.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableVideoMirrorEffect(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of video mirror effect.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable the video mirror effect.
+	/// \return Enabled or disabled.
 	virtual bool IsVideoMirrorEffectEnabled() = 0;
 
-	/// \brief Enable or disable video face beauty effect.
-	/// \param [in] bEnable Specifies enable or disable video face beauty effect.
+	/// \brief Enable or disable the video facial beauty effect.
+	/// \param bEnable TRUE indicates to enable the video facial beauty effect.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableFaceBeautyEffect(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of video face beauty effect.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable the video facial beauty effect.
+	/// \return Enabled or disabled.
 	virtual bool IsFaceBeautyEffectEnabled() = 0;
 
-	/// \brief Enable or disable hd video.
-	/// \param [in] bEnable Specifies enable or disable hd video
+	/// \brief Enable or disable HD video.
+	/// \param bEnable TRUE indicates to enable the HD video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableHDVideo(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of hd video.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable the HD video.
+	/// \return Enabled or disabled.
 	virtual bool IsHDVideoEnabled() = 0;
 
-	// \brief Enable or disable always show name on video
-	/// \param [in] bEnable Specifies enable or disable always show name on video
+	/// \brief Enable or disable to show the username on the video.
+	/// \param bEnable TRUE indicates to show the username on the video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAlwaysShowNameOnVideo(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of always show name on video.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable to show the username on video.
+	/// \return Enabled or disabled.
 	virtual bool IsAlwaysShowNameOnVideoEnabled() = 0;
 
-	// \brief Enable or disable turn off video when join meeting
-	/// \param [in] bEnable Specifies enable or disable turn off video when join meeting
+	/// \brief Enable or disable to turn off the video when join meeting
+	/// \param bEnable TRUE indicates to enable to turn off the video when join meeting
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAutoTurnOffVideoWhenJoinMeeting(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of turn off video when join meeting.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable to turn off the video when join meeting.
+	/// \return Enabled or disabled.
 	virtual bool IsAutoTurnOffVideoWhenJoinMeetingEnabled() = 0;
 	
-	// \brief Enable or disable to use 16v9 video mode.
-	/// \param bEnable [in] Specifies enable or disable to use 16v9 video mode.
+	/// \brief Enable or disable the 16V9 video mode.
+	/// \param bEnable TRUE indicates to enable the 16V9 video mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAlwaysUse16v9(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of use 16v9 video mod.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable the 16V9 video mode.
+	/// \return Enabled or disabled.
 	virtual bool IsAlwaysUse16v9() = 0;
 
-	// \brief Enable or disable to spotlight video.
-	/// \param bEnable [in] Specifies enable or disable to spotlight video.
+	/// \brief Enable or disable to spotlight the video.
+	/// \param bEnable TRUE indicates to enable to spotlight the video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableSpotlightSelf(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of Spotlight video.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable to spotlight video.
+	/// \return Enabled or disabled.
 	virtual bool IsSpotlightSelfEnabled() = 0;
 
-	// \brief Enable or disable to use hardware acceleration.
-	/// \param bEnable [in] Specifies enable or disable to use hardware acceleration.
+	/// \brief Enable or disable the hardware acceleration.
+	/// \param bEnable TRUE indicates to enable the hardware acceleration.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableHardwareEncode(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of Enable hardware acceleration.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable the hardware acceleration.
+	/// \return Enabled or disabled.
 	virtual bool IsHardwareEncodeEnabled() = 0;
 
-	// \brief Enable or disable to display up to 49 participants per screen in Gallery View.
-	/// \param bEnable [in] Specifies enable or disable to display up to 49 participants per screen in Gallery View.
+	/// \brief Enable or disable to show the participants in Gallery View up to 49 per screen.
+	/// \param bEnable TRUE indicates to show the participants in Gallery View up to 49 per screen.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Enable49VideoesInGallaryView(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of Display up to 49 participants per screen in Gallery View.
-	/// \return Enable or disable.
+	/// \brief Get the falg to enable/disable to show the participants in Gallery View up to 49 per screen.
+	/// \return Enabled or disabled.
 	virtual bool Is49VideoesInGallaryViewEnabled() = 0;
 
-	// \brief Enable or disable to hide Non-Video Participants.
-	/// \param bEnable [in] Specifies enable or disable to hide Non-Video Participants.
+	/// \brief Enable or disable to hide the non-video participants.
+	/// \param bEnable TRUE indicates to hide the non-video Participants.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableHideNoVideoUsersOnWallView(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of Hide Non-Video Participants.
-	/// \return Enable or disable.
+	/// \brief Get the flag to enable/disable to hide non-video participants.
+	/// \return Enabled or disabled.
 	virtual bool IsHideNoVideoUsersOnWallViewEnabled() = 0;
 
-	// \brief Get the pointer of ITestVideoDeviceHelper which is used to test camera device.
-	/// \return If the function succeeds, the return value is the pointer of ITestVideoDeviceHelper.
-	///If the function fails, the pointer is NULL.
-	/// \see ITestVideoDeviceHelper
+	/// \brief Get the pointer to ITestVideoDeviceHelper which is used to test camera device.
+	/// \return If the function succeeds, the return value is the pointer to ITestVideoDeviceHelper.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link ITestVideoDeviceHelper \endlink.
 	virtual ITestVideoDeviceHelper* GetTestVideoDeviceHelper() = 0;
+
+	/// \brief Video device monitor callback event. 
+	/// \param pEvent A pointer to the IVideoSettingContextEvent. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///For more details, see \link IVideoSettingContextEvent \endlink.
+	/// \remarks You must call the function if you want to monitor the video device plugged in/out.
+	virtual SDKError SetVideoDeviceEvent(IVideoSettingContextEvent* pEvent) = 0;
 };
 
-/// \brief Audio setting Interface
+/// \brief Audio setting context callback event.
+class IAudioSettingContextEvent
+{
+public:
+	/// \brief Callback event if the SDK detects that the computer mic devices have been changed.
+	/// \param pNewMicList The new list of all mic devices plugged into the computer. 
+	virtual void onComputerMicDeviceChanged(IList<IMicInfo*>* pNewMicList) = 0;
+	
+	/// \brief Callback event if the SDK detects that the computer speaker devices have been changed.
+	/// \param pNewSpeakerList The new list of all speaker devices plugged into the computer. 
+	virtual void onComputerSpeakerDeviceChanged(IList<ISpeakerInfo*>* pNewSpeakerList) = 0;
+};
+
+/// \brief Audio setting interface.
 ///
 class IAudioSettingContext
 {
 public:
-	/// \brief Get mic device list
-	/// \return If the function succeeds, the return value is camera device list pointer.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the mic device list.
+	/// \return If the function succeeds, the return value is the camera device list.
+	///Otherwise failed, returns NULL.
 	virtual IList<IMicInfo* >* GetMicList() = 0;
 
-	/// \brief Select mic device
-	/// \param deviceId [in] Specifies which device to select.
-	/// \param deviceName [in] Specifies which device to select. It should be the same device specified by deviceId.
+	/// \brief Select mic device.
+	/// \param deviceId Specify the device to be selected.
+	/// \param deviceName Specify the device name assigned by deviceId.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SelectMic(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
 
-	/// \brief Get speaker device list
-	/// \return If the function succeeds, the return value is camera device list pointer.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the speaker device list.
+	/// \return If the function succeeds, the return value is the camera device list.
+	///Otherwise failed, returns NULL.
 	virtual IList<ISpeakerInfo* >* GetSpeakerList() = 0;
 
-	/// \brief Select speaker device
-	/// \param deviceId [in] Specifies which device to select.
-	/// \param deviceName [in] Specifies which device to select. It should be the same device specified by deviceId.
+	/// \brief Select speaker device.
+	/// \param deviceId Specify the device to be selected.
+	/// \param deviceName Specify the device the device name assigned by deviceId.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SelectSpeaker(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
 
-	/// \brief Enable or disable auto join audio when join meeting
-	/// \param bEnable [in] Specifies enable or disable dual screen mode.
+	/// \brief Enable or disable the audio automatically when join meeting.
+	/// \param bEnable TRUE indicates to enable the audio automatically when join meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAutoJoinAudio(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of auto join audio when join meeting
-	/// \return Enable or disable
+	/// \brief Get the flag to enable/disable the audio automatically when join meeting.
+	/// \return Enabled or disabled.
 	virtual bool IsAutoJoinAudioEnabled() = 0;
 
-	/// \brief Enable or disable auto adjust mic volume.
-	/// \param bEnable [in] Specifies enable or disable auto adjust mic volume.
+	/// \brief Enable or disable the auto-adjust mic volume.
+	/// \param bEnable TRUE indicates to enable to auto-adjust the mic volume.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAutoAdjustMic(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of auto adjust mic volume.
-	/// \return Enable or disable
+	/// \brief Get the flag to enable/disable to auto-adjust the mic volume.
+	/// \return Enabled or disabled.
 	virtual bool IsAutoAdjustMicEnabled() = 0;
 
-	/// \brief Enable or disable stereo audio.
-	/// \param bEnable [in] Specifies enable or disable stereo audio.
+	/// \brief Enable or disable the stereo audio.
+	/// \param bEnable TRUE indicates to enable the stereo audio.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableStereoAudio(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of stereo audio.
-	/// \return Enable or disable
+	/// \brief Get the flag to enable/disable the stereo audio.
+	/// \return Enabled or disabled.
 	virtual bool IsStereoAudioEnable() = 0;
 
-	/// \brief Enable or disable original input of mic.
-	/// \param bEnable [in] Specifies enable or disable original input of mic.
+	/// \brief Enable or disable the original input of mic.
+	/// \param bEnable TRUE indicates to enable the original input of mic.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableMicOriginalInput(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of original input of mic.
-	/// \return Enable or disable
+	/// \brief Get the flag to enable/disable the original input of mic.
+	/// \return Enabled or disabled.
 	virtual bool IsMicOriginalInputEnable() = 0;
 	
- 	/// \brief Enable or disable hold and press space key to speak.
-	/// \param bEnable [in] Specifies enable or disable hold and press space key to speak. 
+ 	/// \brief Enable or disable to press and hold the Spacebar to speak.
+	/// \param bEnable TRUE indicates to press and hold the Spacebar to speak. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableHoldSpaceKeyToSpeak(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of hold and press space key to speak.
-	/// \return Enable or disable
+	/// \brief Get the flag to enable/disable to press and hold the Spacebar to speak.
+	/// \return Enabled or disabled.
 	virtual bool IsHoldSpaceKeyToSpeakEnabled() = 0;
 
-	/// \brief Enable or disable always mute mic when join voip.
-	/// \param bEnable [in] Specifies enable or disable always mute mic when join voip. 
+	/// \brief Enable or disable to mute always the mic when join the meeting by VoiP.
+	/// \param bEnable TRUE indicates to enable to mute always the mic when join the meeting by VoiP.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableAlwaysMuteMicWhenJoinVoip(bool bEnable) = 0;
 
-	/// \brief Get Enable or disable flag of always mute mic when join voip.
-	/// \return Enable or disable
+	/// \brief Get the flag to enable/disable to mute always the mic when join the meeting by VoiP.
+	/// \return Enabled or disabled.
 	virtual bool IsAlwaysMuteMicWhenJoinVoipEnabled() = 0;
 
-	// \brief Get the pointer of ITestAudioDeviceHelper which is used to test audio devices.
-	/// \return If the function succeeds, the return value is the pointer of ITestAudioDeviceHelper.
-	///If the function fails, the pointer is NULL.
-	/// \see ITestAudioDeviceHelper
+	/// \brief Enable or disable to prompt when the user joins the meeting using the third party audio.
+	/// \param bEnable TRUE indicates to enable to prompt.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableSuppressAudioNotify(bool bEnable) = 0;
+
+	/// \brief Get the flag to enable/disable to prompt when the user joins the meeting using the third party audio.
+	/// \return Enabled or disabled.
+	virtual bool IsSuppressAudioNotifyEnabled() = 0;
+
+	/// \brief Get the pointer to ITestAudioDeviceHelper which is used to test audio devices.
+	/// \return If the function succeeds, the return value is the pointer to ITestAudioDeviceHelper.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link ITestAudioDeviceHelper \endlink.
 	virtual ITestAudioDeviceHelper* GetTestAudioDeviceHelper() = 0;
 	
 	/// \brief Set the volume of the selected mic.
-	/// \param value [in]Specifies the volume of the mic. The value interval is 0 to 255
-	///SDK uses the default mic if no mic is selected via calling the function SelectMic.
+	/// \param value Specify the volume of the mic that varies between 0 and 255.
+	///The SDK will enable the default mic if there is no mic selected via SelectMic().
 	virtual SDKError	SetMicVol(FLOAT& value) = 0;
 	
 	/// \brief Get the volume of the selected mic.
-	/// \param value [out]Specifies the current volume of the mic.
+	/// \param value [out] Specify the current volume of the mic.
 	virtual SDKError    GetMicVol(FLOAT& value) = 0;
 	
 	/// \brief Set the volume of the selected speaker.
-	/// \param value [in]Specifies the volume of the speaker. The value interval is 0 to 255
-	///SDK uses the default speaker if no speaker is selected via calling the function SelectSpeaker.
+	/// \param value Specify the volume of the speaker that varies between 0 and 255.
+	///The SDK will enable the default speaker if there is no speaker selected via SelectSpeaker.
 	virtual SDKError	SetSpeakerVol(FLOAT& value) = 0;
 	
 	/// \brief Get the volume of the selected speaker.
-	/// \param value [out]Specifies the current volume of the speaker.
+	/// \param value [out] Specify the current volume of the speaker.
 	virtual SDKError    GetSpeakerVol(FLOAT& value) = 0;
+
+	/// \brief Audio device monitor callback event. 
+	/// \param pEvent A pointer to the IAudioSettingContextEvent that receives audio device plugged in/out event. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///For more details, see \link IAudioSettingContextEvent \endlink.
+	/// \remarks You must call the function if you want to monitor the audio device plugged in/out.
+	virtual SDKError SetAudioDeviceEvent(IAudioSettingContextEvent* pEvent) = 0;
 };
 
-/// \brief Recording setting Interface
+/// \brief Recording setting interface.
 ///
 class IRecordingSettingContext
 {
 public:
-	/// \brief Set the recording path in setting dialog.
-	/// \param szPath [in] Specifies the path of recording.
-	/// \return If the function succeeds, the return value is camera device list pointer.
-	///If the function fails, the return value is NULL.
+	/// \brief Set the path to save the recording file.
+	/// \param szPath Specify the path to save the recording file.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetRecordingPath(const wchar_t* szPath) = 0;
 
-	/// \brief Get the recording path in setting dialog.
-	/// \return the path of recording.
+	/// \brief Get the path to save the recording file.
+	/// \return The path to save the recording file.
 	virtual const wchar_t* GetRecordingPath() = 0;
 };
 
+/*! \enum SettingsNetWorkType
+    \brief Notify network type.
+    Here are more detailed structural descriptions.
+*/
 enum SettingsNetWorkType 
 {
-	SETTINGS_NETWORK_WIRED	= 0,
-	SETTINGS_NETWORK_WIFI	= 1,
-	SETTINGS_NETWORK_PPP	= 2,
-	SETTINGS_NETWORK_3G		= 3,
-	SETTINGS_NETWORK_OTHERS	= 4,
+	SETTINGS_NETWORK_WIRED	= 0,///<Wired lan
+	SETTINGS_NETWORK_WIFI	= 1,///<WIFI
+	SETTINGS_NETWORK_PPP	= 2,///<PPP
+	SETTINGS_NETWORK_3G		= 3,///<3G
+	SETTINGS_NETWORK_OTHERS	= 4,///<Others
 
-	SETTINGS_NETWORK_UNKNOWN = -1,
+	SETTINGS_NETWORK_UNKNOWN = -1,///<Unkown network.
 };
 
+/*! \enum SettingConnectionType
+    \brief Notify connection type.
+    Here are more detailed structural descriptions.
+*/
 enum SettingConnectionType
 {
-	SETTINGS_CONNECTION_TYPE_CLOUD,
-	SETTINGS_CONNECTION_TYPE_DIRECT,
-	SETTINGS_CONNECTION_TYPE_UNKNOWN = -1,
+	SETTINGS_CONNECTION_TYPE_CLOUD,///<Cloud connection.
+	SETTINGS_CONNECTION_TYPE_DIRECT,///<Direct connection.
+	SETTINGS_CONNECTION_TYPE_UNKNOWN = -1,///<unknow connection.
 };
+
+/*! \struct tagOverallStatisticInfo
+    \brief Notify overall statistic information.
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagOverallStatisticInfo
 {
-	SettingsNetWorkType net_work_type_;  	
-	SettingConnectionType connection_type_; 
-	const wchar_t* proxy_addr_;
+	SettingsNetWorkType net_work_type_;///<Network type.
+	SettingConnectionType connection_type_;///<Connection type
+	const wchar_t* proxy_addr_;///<Proxy address.
 	tagOverallStatisticInfo()
 	{
 		net_work_type_ = SETTINGS_NETWORK_UNKNOWN;
@@ -590,16 +678,20 @@ typedef struct tagOverallStatisticInfo
 	}
 }OverallStatisticInfo;
 
+/*! \struct tagAudioSessionStatisticInfo
+    \brief Notify the audio status information.
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagAudioSessionStatisticInfo
 {
-	int frequency_send_; //KHz
-	int frequency_recv_; //KHz
-	int latency_send_;//ms
-	int latency_recv_;//ms
-	int jitter_send_;//ms
-	int jitter_recv_;//ms
-	float packetloss_send_;//%
-	float packetloss_recv_;//%
+	int frequency_send_;///<Sending frequency, unit: KHz.
+	int frequency_recv_;///<Receiving frequency, unit: KHz.
+	int latency_send_;///<Sending latency, unit: ms.
+	int latency_recv_;///<Receiving latency, unit: ms.
+	int jitter_send_;///<Sending jitter, unit: ms.
+	int jitter_recv_;///<Receiving jitter, unit: ms.
+	float packetloss_send_;///<Sending packet loss, unit: %.
+	float packetloss_recv_;///<Receiving packet loss, unit: %.
 
 	tagAudioSessionStatisticInfo()
 	{
@@ -607,20 +699,24 @@ typedef struct tagAudioSessionStatisticInfo
 	}
 }AudioSessionStatisticInfo;
 
+/*! \struct tagASVSessionStatisticInfo
+    \brief Notify video status information.
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagASVSessionStatisticInfo
 {
-	int latency_send_;//ms
-	int latency_recv_;//ms
-	int jitter_send_;//ms
-	int jitter_recv_;//ms
-	float packetloss_send_max_;//%
-	float packetloss_recv_max_;//%
-	float packetloss_send_avg_;//%
-	float packetloss_recv_avg_;//%
-	int resolution_send_; //HIWORD->height,LOWORD->width
-	int resolution_recv_; //HIWORD->height,LOWORD->width 
-	int fps_send_;//fps
-	int fps_recv_;//fps
+	int latency_send_;///<Sending latency, unit: ms.
+	int latency_recv_;///<Receiving latency, unit: ms.
+	int jitter_send_;///<Sending jitter, unit: ms.
+	int jitter_recv_;///<Receiving jitter, unit: ms.
+	float packetloss_send_max_;///<Sending max packet loss, unit: %.
+	float packetloss_recv_max_;///<Receiving max packet loss, unit: %.
+	float packetloss_send_avg_;///<Sending average packet loss, unit: %.
+	float packetloss_recv_avg_;///<Receiving average packet loss, unit: %.
+	int resolution_send_;///<HIWORD->height, LOWORD->width.
+	int resolution_recv_;///<HIWORD->height, LOWORD->width. 
+	int fps_send_;///<Frame per second sending.
+	int fps_recv_;///<Frame per second receiving.
 	tagASVSessionStatisticInfo()
 	{
 		memset(this, 0, sizeof(tagASVSessionStatisticInfo));
@@ -628,99 +724,105 @@ typedef struct tagASVSessionStatisticInfo
 }ASVSessionStatisticInfo;
 
 
-/// \brief Statistic setting Interface
+/// \brief Statistic setting interface.
 ///
 class IStatisticSettingContext
 {
 public:
-	/// \brief Query overall information
-	/// \param info_ [out] Overall information 
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \see OverallStatisticInfo
+	/// \brief Query overall statistic information.
+	/// \param info_ [out] Overall information. For more details, see \link OverallStatisticInfo \endlink structure.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///For more details, see \link OverallStatisticInfo \endlink.
 	virtual SDKError QueryOverallStatisticInfo(OverallStatisticInfo& info_) = 0;
 
-	/// \brief Query audio information
-	/// \param info_ [out] Audio information 
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \see AudioSessionStatisticInfo
+	/// \brief Query audio statistic information.
+	/// \param info_ [out] Audio information. For more details, see \link AudioSessionStatisticInfo \endlink structure.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///For more details, see \link AudioSessionStatisticInfo \endlink.
 	virtual SDKError QueryAudioStatisticInfo(AudioSessionStatisticInfo& info_) = 0;
 
-	/// \brief Query video information
-	/// \param info_ [out] Video information 
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \see ASVSessionStatisticInfo
+	/// \brief Query video statistic information.
+	/// \param info_ [out] Video information. For more details, see \link ASVSessionStatisticInfo \endlink structure.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///For more details, see \link ASVSessionStatisticInfo \endlink.
 	virtual SDKError QueryVideoStatisticInfo(ASVSessionStatisticInfo& info_) = 0;
 
-	/// \brief Query share information
-	/// \param info_ [out] Share information 
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \see ASVSessionStatisticInfo
+	/// \brief Query share statistic information.
+	/// \param info_ [out] Share information. For more details, see \link ASVSessionStatisticInfo \endlink structure.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///For more details, see \link ASVSessionStatisticInfo \endlink.
 	virtual SDKError QueryShareStatisticInfo(ASVSessionStatisticInfo& info_) = 0;
 };
 
-/// \brief Setting UI strategy Interface
+/// \brief Setting user strategy interface.
 ///
 class ISettingUIStrategy
 {
 public:
-	/// \brief Disable ui of advanced features on general setting tab.
-	/// \param bDisable [in] Specifies enable or disable.
+	/// \brief Hide the link to check the advanced settings on the General Setting page or not.
+	/// \param bDisable TRUE indicates to hide the link.
 	virtual void DisableAdvancedFeatures4GeneralSetting(bool bDisable) = 0;
 
-	/// \brief Disable ui of account setting tab.
-	/// \param bDisable [in] Specifies enable or disable.
+	/// \brief Hide the Account Setting page or not.
+	/// \param bDisable TRUE indicates to hide the account setting page.
 	virtual void DisableAccountSettingTabPage(bool bDisable) = 0;
 };
 
-/// \brief Meeting setting Interface
+/// \brief Meeting setting interface.
 ///
 class ISettingService
 {
 public:
 
-	/// \brief Show meeting setting dialog
-	/// \param [in] param Specifies to show the chat dialog.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Display Meeting Setting dialog.
+	/// \param param Specify to display the Meeting Setting dialog. For more details, see \link ShowSettingDlgParam \endlink structure.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowSettingDlg(ShowSettingDlgParam& param) = 0;
 
-	/// \brief Hide meeting setting dialog
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Hide meeting setting dialog.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError HideSettingDlg() = 0;
 
-	/// \brief Get general settings.
-	/// \return If the function succeeds, the return value is general settings interface.
-	///If the function fails, the return value is NULL.
-	/// \see IGeneralSettingContext
+	/// \brief Get general setting interface.
+	/// \return If the function succeeds, the return value is an object pointer to IGeneralSettingContext.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link IGeneralSettingContext \endlink.
 	virtual IGeneralSettingContext* GetGeneralSettings() = 0;
 
-	/// \brief Get audio settings.
-	/// \return If the function succeeds, the return value is audio settings interface.
-	///If the function fails, the return value is NULL.
-	/// \see IAudioSettingContext
+	/// \brief Get audio setting interface.
+	/// \return If the function succeeds, the return value an object pointer to IAudioSettingContext.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link IAudioSettingContext \endlink.
 	virtual IAudioSettingContext* GetAudioSettings() = 0;
 
-	/// \brief Get video settings.
-	/// \return If the function succeeds, the return value is video settings interface.
-	///If the function fails, the return value is NULL.
-	/// \see IVideoSettingContext
+	/// \brief Get video setting interface.
+	/// \return If the function succeeds, the return value is an object pointer to IVideoSettingContext.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link IVideoSettingContext \endlink.
 	virtual IVideoSettingContext* GetVideoSettings() = 0;
 
-	/// \brief Get recording settings.
-	/// \return If the function succeeds, the return value is recording settings interface.
-	///If the function fails, the return value is NULL.
-	/// \see IRecordingSettingContext
+	/// \brief Get recording setting interface.
+	/// \return If the function succeeds, the return value is an object pointer to IRecordingSettingContext.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link IRecordingSettingContext \endlink.
 	virtual IRecordingSettingContext* GetRecordingSettings() = 0;
 
-	/// \brief Get statistic settings.
-	/// \return If the function succeeds, the return value is statistic settings interface.
-	///If the function fails, the return value is NULL.
-	/// \see IStatisticSettingContext
+	/// \brief Get statistic settings interface.
+	/// \return If the function succeeds, the return value is an object pointer to IStatisticSettingContext.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link IStatisticSettingContext \endlink.
 	virtual IStatisticSettingContext* GetStatisticSettings() = 0;
 
-	/// \brief Get setting UI strategy.
-	/// \return If the function succeeds, the return value is setting UI strategy interface.
-	///If the function fails, the return value is NULL.
-	/// \see ISettingUIStrategy
+	/// \brief Get setting user strategy interface.
+	/// \return If the function succeeds, the return value is an object pointer to ISettingUIStrategy.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link ISettingUIStrategy \endlink.
 	virtual ISettingUIStrategy* GetSettingUIStrategy() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

@@ -1,89 +1,98 @@
 /*!
-* \file direct_share_service_helper_interface.h
-* \brief Direct share service helper Interface.
+* \file direct_share_helper_interface.h
+* \brief Direct Sharing Service Interface.
 * 
 */
 #ifndef _DIRECT_SHARE_SERVICE_HELPER_INTERFACE_H_
 #define _DIRECT_SHARE_SERVICE_HELPER_INTERFACE_H_
 #include "zoom_sdk_def.h"
-/// \brief Zoom SDK Namespace
-/// 
-///
+
 BEGIN_ZOOM_SDK_NAMESPACE
-/*
-typedef enum DirectShareStatusType_Enum
-{
-	DirectShare_Unknown = 0,
-	DirectShare_In_SIP_Call,
-	//DirectShare_Called_Too_Frequency, //move it to return value as SDKERR_TOO_FREQUENT_CALL
-	DirectShare_Start_Connecting,
-	DirectShare_UltraSound_Detect_Failed,
-	DirectShare_Need_MeetingID_Or_ParingCode,	
-	DirectShare_AccountID_Not_Same,
-	DirectShare_NetWork_Error,
-	DirectShare_Target_Version_Old,
-	DirectShare_Direct_Share_Start,
-	DirectShare_Direct_Share_Stop,
-}DirectShareStatusType;
+
+/*! \enum DirectShareStatusStatus_Enum
+    \brief Direct sharing status.
+    Here are more detailed structural descriptions.
 */
 typedef enum DirectShareStatusStatus_Enum
 {
-	DirectShare_Unknown = 0,  // no use currently. Just for initialization
-	DirectShare_Connecting,  //trying to start direct share, just waiting
-	DirectShare_In_Direct_Share_Mode, //in diret share mode
-	DirectShare_Ended,  //diret share is ended
-	DirectShare_Need_MeetingID_Or_PairingCode, // need the user to set a meeting id/paring code
-	DirectShare_NetWork_Error, // network error. Try again later
-	DirectShare_Other_Error,   //other error. mainly happened in SIP call mode	
+	DirectShare_Unknown = 0,///<Only for initialization.
+	DirectShare_Connecting,///<Waiting for enabling the direct sharing.
+	DirectShare_In_Direct_Share_Mode,///<In direct sharing mode.
+	DirectShare_Ended,///<End the direct sharing.
+	DirectShare_Need_MeetingID_Or_PairingCode,///<Re-enter the meeting ID/paring code.
+	DirectShare_NetWork_Error,///<Network error. Please try again later.
+	DirectShare_Other_Error,///<Other errors. Mainly occur in SIP call mode.
 }DirectShareStatus;
 
-
+/// \brief Direct sharing by meeting ID or pairing code helper interface.
+///
 class IDirectShareViaMeetingIDOrPairingCodeHandler
 {
 public:
 	virtual ~IDirectShareViaMeetingIDOrPairingCodeHandler(){};
+	
+	/// \brief Try to match with the specified meeting number.
+	/// \param meetingNumber Specifies the meeting number.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError TryWithMeetingNumber(UINT64 meetingNumber) = 0;
+	
+	/// \brief Try to match with the pairing code.
+	/// \param pairingCode Specifies the pairing code.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.	
 	virtual SDKError TryWithPairingCode(const wchar_t* pairingCode) = 0;
+	
+	/// \brief Delete the present direct sharing.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Cancel() = 0;
 };
 
-/// \brief Direct share helper Callback Event
+/// \brief Direct sharing helper callback event.
 ///
 class IDirectShareServiceHelperEvent
 {
 public:
-	/// \brief Direct share status update login notification
-	/// \param [in, out] Specifies the status of direct share.
-	///If the value of direct_share_action is DirectShare_Need_MeetingID_Or_ParingCode, the user must set the value of the _paring_code or _meeting_number to start share.
+	/// \brief The callback event will be triggered if the status of direct sharing changes.
+	/// \param status Specifies the status of direct sharing. For more details, see \link DirectShareStatus \endlink enum.
+	/// \param handler A pointer to the IDirectShareViaMeetingIDOrPairingCodeHandler. It is only valid when the value of status is DirectShare_Need_MeetingID_Or_ParingCode.
+	///The SDK user must set the value of the _paring_code or _meeting_number via the functions of IDirectShareViaMeetingIDOrPairingCodeHandler to start direct sharing. For more details, see \link IDirectShareViaMeetingIDOrPairingCodeHandler \endlink.
 	virtual void OnDirectShareStatusUpdate(DirectShareStatus status, IDirectShareViaMeetingIDOrPairingCodeHandler* handler) = 0;
 
 };
 
-/// \brief Direct share helper Interface
+/// \brief Direct sharing helper Interface.
 ///
 class IDirectShareServiceHelper
 {
 public:
 
-	/// \brief Direct share helper callback event
-	/// \param pEvent A pointer to an IDirectShareServiceHelperEvent* that receives direct share service event. 
+	/// \brief Direct sharing helper callback event handler.
+	/// \param pEvent A pointer to the IDirectShareServiceHelperEvent that receives the direct sharing service event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IDirectShareServiceHelperEvent* pEvent) = 0;
 
+	/// \brief Determine if it is able to start the direct sharing.
+	/// \return If it is enabled to start the direct sharing, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanStartDirectShare()= 0;
-
+	
+	/// \brief Determine if direct sharing is in progress.
+	/// \return TRUE indicates that the direct sharing is in progress.
 	virtual bool	 IsDirectShareInProgress() = 0;
-	/// \brief Start direct share.
+	
+	/// \brief Start direct sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \remarks Only login user can call this API.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks This API can only be called by the logged in user.
 	virtual SDKError StartDirectShare() = 0;
 
-	// \brief Stop direct share.
+	/// \brief Stop direct sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \remarks Only login user can call this API.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks This API can only be called by the logged in user.
 	virtual SDKError StopDirectShare() = 0;
 };
 

@@ -1,6 +1,6 @@
 /*!
 * \file zoom_customized_ui.h
-* \brief zoom customized ui interface
+* \brief ZOOM Custom UI interface.
 * 
 */
 #ifndef _ZOOM_CUSTOMIZED_UI_H_
@@ -11,16 +11,16 @@ BEGIN_ZOOM_SDK_NAMESPACE
 class ICustomizedUIMgr;
 extern "C"
 {
-	/// \brief Create Customized UI Manager Interface
-	/// \param ppCustomizedUIMgr A pointer to a ICustomizedUIMgr* that receives ICustomizedUIMgr Object. 
-	/// \return If the function succeeds, the return value is SDKErr_Success, and ppCustomizedUIMgr is not NULL
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Create a custom UI manager interface.
+	/// \param ppCustomizedUIMgr The parameter stores the pointer to ICustomizedUIMgr* once the function calls successfully. 
+	/// \return If the function succeeds, the return value is SDKErr_Success, while the return value of ppCustomizedUIMgr is not NULL
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	SDK_API SDKError CreateCustomizedUIMgr(ICustomizedUIMgr** ppCustomizedUIMgr);
 
-	/// \brief Destroy Customized UI Manager Interface
-	/// \param pCustomizedUIMgr A pointer to a ICustomizedUIMgr to be destroyed. 
+	/// \brief Destroy the specified custom UI manager interface.
+	/// \param pCustomizedUIMgr A pointer to the ICustomizedUIMgr to be destroyed. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	SDK_API SDKError DestroyCustomizedUIMgr(ICustomizedUIMgr* pCustomizedUIMgr);
 }
 

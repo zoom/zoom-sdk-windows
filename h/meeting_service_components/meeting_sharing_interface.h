@@ -1,41 +1,38 @@
 /*!
 * \file meeting_sharing_interface.h
-* \brief Sharing of Meeting Service Interface
+* \brief Meeting Service Sharing Interface
 * 
 */
 #ifndef _MEETING_SHARING_INTERFACE_H_
 #define _MEETING_SHARING_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
 
-/// \brief Zoom SDK Namespace
-/// 
-///
 BEGIN_ZOOM_SDK_NAMESPACE
 /*! \enum SharingStatus
     \brief Sharing status.
-    A more detailed struct description.
+    Here are more detailed structural descriptions..
 */
 enum SharingStatus
 {
-	Sharing_Self_Send_Begin,
-	Sharing_Self_Send_End,
-	Sharing_Other_Share_Begin,
-	Sharing_Other_Share_End,
-	Sharing_View_Other_Sharing,
-	Sharing_Pause,
-	Sharing_Resume,
+	Sharing_Self_Send_Begin,///<Begin to share by the user himself.
+	Sharing_Self_Send_End,///<Stop sharing by the user.
+	Sharing_Other_Share_Begin,///<Others begin to share.
+	Sharing_Other_Share_End,///<Others stop sharing.
+	Sharing_View_Other_Sharing,///<View the sharing of others.
+	Sharing_Pause,///<Pause sharing.
+	Sharing_Resume,///<Resume sharing.
 };
 
 /*! \struct tagViewableShareSource
-    \brief Viewable share source info.
-    A more detailed struct description.
+    \brief Visible shared source information.
+    Here are more detailed structural descriptions..
 */
 typedef struct tagViewableShareSource
 {
-	unsigned int userid;
-	bool isShowingInFirstView;
-	bool isShowingInSecondView;
-	bool isCanBeRemoteControl;
+	unsigned int userid;///<User ID.
+	bool isShowingInFirstView;///<Display or not on the primary view.
+	bool isShowingInSecondView;///<Display or not on the secondary view. 
+	bool isCanBeRemoteControl;///<Enable or disable the remote control.
 	tagViewableShareSource()
 	{
 		userid = 0;
@@ -45,31 +42,41 @@ typedef struct tagViewableShareSource
 	}
 }ViewableShareSource;
 
-/*! \enum Type of current sharing.
-    A more detailed struct description.
+/*! \enum ShareType 
+    Type of current sharing received by the user.
+    Here are more detailed structural descriptions..
 */
 enum ShareType
 {
-	SHARE_TYPE_UNKNOWN, //unknown
-	SHARE_TYPE_AS,	//application share
-	SHARE_TYPE_DS,	//desktop share
-	SHARE_TYPE_WB,	//whiteboard share
-	SHARE_TYPE_AIRHOST,	//mobile device from PC
-	SHARE_TYPE_CAMERA,	//camera share
-	SHARE_TYPE_DATA,	//data share
+	SHARE_TYPE_UNKNOWN,///<Type unknown.
+	SHARE_TYPE_AS,///<Type of sharing the application.
+	SHARE_TYPE_DS,///<Type of sharing the desktop.
+	SHARE_TYPE_WB,///<Type of sharing the whiteboard.
+	SHARE_TYPE_AIRHOST,///<Type of sharing data from the device connected WIFI. 
+	SHARE_TYPE_CAMERA,///<Type of sharing the camera.
+	SHARE_TYPE_DATA,///<Type of sharing the data.
 };
-
+/*! \enum AdvanceShareOption 
+    Additional type of current sharing sent to others.
+    Here are more detailed structural descriptions.
+*/
+enum AdvanceShareOption
+{
+	AdvanceShareOption_ShareFrame,///<Type of sharing a selected area of desktop.
+	AdvanceShareOption_PureComputerAudio,///<Type of sharing only the computer audio.
+	AdvanceShareOption_ShareCamera,///<Type of sharing the camera.
+};
 /*! \struct tagShareInfo
     \brief Information of current sharing.
-    A more detailed struct description.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagShareInfo
 {
-	ShareType eShareType;  //share type, refer to ShareType
+	ShareType eShareType;///<Type of sharing, see \link ShareType \endlink enum.
 	union
 	{
-		HWND hwndSharedApp;  //handle of sharing application or whiteboard, it is valid only when eShareType is SHARE_TYPE_AS or SHARE_TYPE_WB
-		const wchar_t* monitorID;  //monitor id of sharing desktop, it is valid only when eShareType is SHARE_TYPE_DS
+		HWND hwndSharedApp;///<Handle of sharing application or whiteboard. It is invalid unless the value of the eShareType is SHARE_TYPE_AS or SHARE_TYPE_WB.
+		const wchar_t* monitorID;///<The monitor ID of desketop shared. It is invalid unless the value of the eShareType is SHARE_TYPE_DS.
 	}ut;
 	tagShareInfo()
 	{
@@ -78,190 +85,217 @@ typedef struct tagShareInfo
 	}
 }ShareInfo;
 
-/// \brief Meeting share controller callback event
+/// \brief Callback event of meeting share controller.
 ///
 class IMeetingShareCtrlEvent
 {
 public:
-	/// \brief Sharing status notify callback
-	/// \param status Sharing status value.
-	/// \param userId Sharing user id.
+	/// \brief Callback event of the changed sharing status. 
+	/// \param status The valus of sharing status. For more details, see \link SharingStatus \endlink enum.
+	/// \param userId Sharer ID. 
+	/// \remarks The userId changes according to the status value. When the status value is the Sharing_Self_Send_Begin or Sharing_Self_Send_End, the userId is the user own ID. Otherwise, the value of userId is the sharer ID.
 	virtual void onSharingStatus(SharingStatus status, unsigned int userId) = 0;
 
-	/// \brief lock share status notify call back 
-	/// \param bLocked specify if sharing is locked.
+	/// \brief Callback event of locked share status.
+	/// \param bLocked TRUE indicates that it is locked. FALSE unlocked.
 	virtual void onLockShareStatus(bool bLocked) = 0;
 
-	/// \brief Sharing content changed callback
-	/// \param shareInfo Sharing information such as, share type, handle of shared app and monitor id, refer to ShareInfo.
+	/// \brief Callback event of changed sharing information.
+	/// \param shareInfo Sharing information. For more details, see \link ShareInfo \endlink structure.
 	virtual void onShareContentNotification(ShareInfo& shareInfo) = 0;	
 };
 
-/// \brief Meeting share controller interface
+/// \brief Meeting share controller interface.
 ///
 class IMeetingShareController
 {
 public:
-	/// \brief Set meeting share controller callback event
-	/// \param pEvent A pointer to a IMeetingShareCtrlEvent* that receives sharing event. 
+	/// \brief Set meeting share controller callback event handler.
+	/// \param pEvent A pointer to the IMeetingShareCtrlEvent that receives sharing event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingShareCtrlEvent* pEvent) = 0;
-	/// \brief Start application share
-	/// \param hwndSharedApp Specifies which the window is to be shared.
-	///if hwndSharedApp can't be shared, return SDKERR_INVALID_PARAMETER error code.if hwndSharedApp is NULL, will show select application dialog.
+	
+	/// \brief Share the specified application.
+	/// \param hwndSharedApp Specify the window handle of the programme to be shared. If the hwndSharedApp can't be shared, the return value is the SDKERR_INVALID_PARAMETER error code. If the hwndSharedApp is NULL, a dialog box pops up to enable the user to choose an application. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError StartAppShare(HWND hwndSharedApp) = 0;
 
-	/// \brief Start monitor share
-	/// \param monitorID Specifies which the monitor is to be shared.Using EnumDisplayMonitors System api to get this value.
-	/// refer to szDevice in MONITORINFOEX struct. if monitorID is NULL, will show select application dialog. 
+	/// \brief Share the specified monitor.
+	/// \param monitorID Specify the monitor ID to be shared. You may get the value via EnumDisplayMonitors System API. If the monitorID is NULL, a dialog box pops up to enable the user to choose an application. For more details, see szDevice in MONITORINFOEX structure.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError StartMonitorShare(const wchar_t* monitorID) = 0;
 
-	/// \brief Start share with IOS device.
+	/// \brief Start sharing with mobile device. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError StartAirPlayShare() = 0;
 
-	/// \brief Start share with White board.
+	/// \brief Start sharing with White board.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	///If you use our sdk in customized mode, please draw your own annotate bar when you got onShareContentNotification with SHARE_TYPE_WB
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///You need to draw your own annotation bar for custom mode when you get the onShareContentNotification with SHARE_TYPE_WB.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError StartWhiteBoardShare() = 0;
 
-	/// \brief Show sharing app select window.
+	/// \brief A dialog box pops up that enable the user to choose the application or window to share.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \only for zoom style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode. 
 	virtual SDKError ShowSharingAppSelectWnd() = 0;
-
-	/// \brief Stop current sharing
+	
+	/// \brief Determine if the specified ADVANCE SHARE OPTION is supported. 
+	/// \param option_ The ADVANCE SHARE OPTION to be determined. For more information, see \link AdvanceShareOption \endlink enum.
+	/// \return If it is supported, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
+	virtual SDKError IsSupportAdvanceShareOption(AdvanceShareOption option_) = 0;
+	
+	/// \brief Start sharing frame.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
+	virtual SDKError StartShareFrame() = 0;
+
+	/// \brief Start sharing only the computer audio.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.	
+	virtual SDKError StartSharePureComputerAudio() = 0;
+	
+	/// \brief Start sharing camera.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.	
+	virtual SDKError StartShareCamera() = 0;
+	
+	/// \brief Stop the current sharing.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError StopShare() = 0;
 
-	/// \brief Block window form screen share. 
-	///This api will change the window's property.we don't suggest to use.
-	///After call this api, you need to redraw this window to take effect.
-	/// \param bBlock block window from screen share or not.
-	/// \param hWnd Specifies which window to be blocked.
-	/// \param bChangeWindowStyle if false, please call this api after StartMonitorShare api 
-	/// or after you got onSharingStatus  callback with Sharing_Self_Send_Begin.
+	/// \brief Block the window when sharing in full screen.
+	///Once the function is called, you need to redraw the window to take effect.
+	/// \param bBlock TRUE indicates to block the window when sharing in full screen.
+	/// \param hWnd Specify the window to be blocked.
+	/// \param bChangeWindowStyle If it is FALSE, please call this function either after the StartMonitorShare is called or when you get the callback event of the onSharingStatus with Sharing_Self_Send_Begin. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \only for zoom style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid only for ZOOM style user interface mode.
+	///It is not suggested to use this function for it will change the property of the window and leads to some unknown errors.
+	///It won't work until the IMeetingShareController::StartMonitorShare() is called if the bChangeWindowStyle is set to FALSE. 
+	///If you want to use the specified window during the share, you need to redraw the window.
+	///Set the bBlock to FALSE before ending the share and call the function for the specified window to resume the property of the window.
 	virtual SDKError BlockWindowFromScreenshare(bool bBlock, HWND hWnd, bool bChangeWindowStyle = true) = 0;
 
-	/// \brief Lock current meeting's sharing
+	/// \brief Lock the current meeting sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError LockShare() = 0;
 
-	/// \brief Lock current meeting's sharing
+	/// \brief Unlock the current meeting sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError UnlockShare() = 0;
 
-	/// \brief Switch the sharing view window to fit window mode when view sharing.
-	/// \param type Specifies which view you want to set, first monitor or second monitor.
+	/// \brief Switch to auto-adjust mode from sharing window by the function when watching the share on the specified view.
+	/// \param type Specify the view you want to set, either primary or secondary. For more details, see \link SDKViewType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \only for zoom style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid only for ZOOM style user interface mode.
 	virtual SDKError SwitchToFitWindowModeWhenViewShare(SDKViewType type) = 0;
 
-	/// \brief Switch the sharing view window to original size mode when view sharing.
-	/// \param type Specifies which view you want to set, first monitor or second monitor.
+	/// \brief Switch the window size to originality by the function when watching the share on the specified view.
+	/// \param type Specify the view you want to set, either primary or secondary. For more details, see \link SDKViewType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \only for zoom style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid only for ZOOM style user interface mode.
 	virtual SDKError SwitchToOriginalSizeModeWhenViewShare(SDKViewType type) = 0;
 
-	/// \brief Pause current sharing
+	/// \brief Pause the current sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError PauseCurrentSharing() = 0;
 
-	/// \brief Resume current sharing
+	/// \brief Resume the current sharing.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError ResumeCurrentSharing() = 0;
 
-	/// \brief get current viewable share source list.
-	/// \return If the function succeeds, the return value is the viewable share source user id list.
+	/// \brief Get the list of all the sharers in the current meeting.
+	/// \return If the function succeeds, the return value is list of user ID.
 	///If the function fails, the return value is NULL.
-	/// \support for zoom style and customized style ui mode
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual IList<unsigned int >* GetViewableShareSourceList() = 0;
 
-	/// \brief get viewable share source by userid.
-	/// \param userid Specifies which viewable share source info you want to get.
-	/// \param shareSource store the viewable share source info
+	/// \brief Get the sharing information from the specified sharer.
+	/// \param userid Specify the user ID that you want to get his sharing information.
+	/// \param [out] shareSource Store the viewable sharing information. For more details, see \link ViewableShareSource \endlink structure.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError GetViewabltShareSourceByUserID(unsigned int userid, ViewableShareSource& shareSource) = 0;
 
-	/// \brief view share by userid.
-	/// \param userid Specifies who you want to view.
-	/// \param type Specifies which view you want to view the sharing, first monitor or second monitor.
+	/// \brief View the share from the specified user.
+	/// \param userid Specify the user ID that you want to view his share. 
+	/// \param type Specify the view that you want to display the share, either primary or secondary. For more details, see \link SDKViewType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \only for zoom style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid only for ZOOM style user interface mode.
 	virtual SDKError ViewShare(unsigned int userid, SDKViewType type) = 0;
 
-	/// \brief show share option dialog.
+	/// \brief Display the dialog of sharing configuration.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \only for zoom style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid only for ZOOM style user interface mode.
 	virtual SDKError ShowShareOptionDialog() = 0;
 
-	/// \brief can start share or not.
-	/// \return can start share or not.
-	/// \support for zoom style and customized style ui mode
+	/// \brief Determine if it is able to share. 
+	/// \return Enable or disable to start sharing.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual bool CanStartShare() = 0;
 
-	/// \brief query if sharing is locked.
-	/// \param bLocked store if sharing is locked.
+	/// \brief Determine if the sharing is locked. 
+	/// \param bLocked TRUE indicates that the sharing is locked. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError IsShareLocked(bool& bLocked) = 0;
 
-	/// \brief query sharing support share computer sound or not.
-	/// \param bCurEnableOrNot store the enable or not flag if support share computer sound.
-	/// \return support share computer sound or not.
-	/// \support for zoom style and customized style ui mode
+	/// \brief Determine if the sound of the coumputer in the current sharing is supported. 
+	/// \param [out] bCurEnableOrNot The parameter is valid only when the return value is TRUE. And TRUE indicates to sharing the sound of the computer for the moment.
+	/// \return TRUE indicates to support the sound of the computer in the current sharing. FALSE not.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual bool	 IsSupportEnableShareComputerSound(bool& bCurEnableOrNot) = 0;
 
-	/// \brief query sharing support optimize for full screen video clip or not.
-	/// \param bCurEnableOrNot store the enable or not flag if optimize for full screen video clip.
-	/// \return support optimize for full screen video clip or not.
-	/// \support for zoom style and customized style ui mode
+	/// \brief Determine whether to optimize the video fluidity when sharing in full screen mode. 
+	/// \param bCurEnableOrNot This parameter is valid only when the return value is TRUE. And TRUE indicates to optimize video for the moment. 
+	/// \return TRUE indicates to support the optimization of the video fluidity. FALSE not.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual bool	 IsSupportEnableOptimizeForFullScreenVideoClip(bool& bCurEnableOrNot) = 0;
 
-	/// \brief enable share computer sound.
-	/// \param bEnable enable or not.
+	/// \brief Set to enable or disable the audio when sharing.
+	/// \param bEnable TRUE indicates to enable. FALSE not.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError EnableShareComputerSound(bool bEnable) = 0;
 
-	/// \brief enable optimize for full screen video clip.
-	/// \param bEnable enable or not.
+	/// \brief Set to enable the video optimization when sharing. 
+	/// \param bEnable TRUE indicates to enable. FALSE not.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \support for zoom style and customized style ui mode
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError EnableOptimizeForFullScreenVideoClip(bool bEnable) = 0;
 };
 END_ZOOM_SDK_NAMESPACE

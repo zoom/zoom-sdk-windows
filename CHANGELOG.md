@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2018-10-29
+
+* Support advanced share at API level
+1. Share a selected area of desktop
+2. Share only the computer audio
+3. Share the camera
+
+* Add more meeting configurations
+
+* Bug fixes
+
+
 ## 2018-09-11
 
 * Support to direct share with ultrasonic

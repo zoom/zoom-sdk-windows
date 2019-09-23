@@ -1,46 +1,43 @@
 /*!
 * \file meeting_ui_ctrl_interface.h
 * \brief UI Controller of Meeting Service Interface
-* \only for zoom style ui mode
+* Valid only for ZOOM style user interface mode.
 */
 #ifndef _MEETING_UI_CTRL_INTERFACE_H_
 #define _MEETING_UI_CTRL_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
 
-/// \brief Zoom SDK Namespace
-/// 
-///
 BEGIN_ZOOM_SDK_NAMESPACE
 /*! \enum SDKMeetingUIType
-    \brief The type of meeting ui.
-    A more detailed struct description.
+    \brief The displayed type of the user videos in the meeting.
+    Here are more detailed structural descriptions.
 */
 enum SDKMeetingUIType
 {
-	SDK_Meeting_UI_None,
-	SDK_Meeting_UI_VideoWall_Mode,
-	SDK_Meeting_UI_ActiveRender_Mode,
+	SDK_Meeting_UI_None,///<For initialization.
+	SDK_Meeting_UI_VideoWall_Mode,///<Video wall mode. 
+	SDK_Meeting_UI_ActiveRender_Mode,///<Active user mode. 
 };
 
 /*! \struct tagVideoWallPageInfoParam
-    \brief The information of video wall page.
-    A more detailed struct description.
+    \brief Video wall page information.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagVideoWallPageInfoParam
 {
-	int nCurrentPage;
-	int nTotalPages;
+	int nCurrentPage;///<The page in video wall mode for the moment.
+	int nTotalPages;///<The total number of pages in video wall mode.
 }VideoWallPageInfoParam;
 
 /*! \struct tagShowChatDlgParam
-    \brief Show meeting chat dialog Parameter.
-    A more detailed struct description.
+    \brief The configuration of the parameters to display the dialog. 
+    Here are more detailed structural descriptions.
 */
 typedef struct tagShowChatDlgParam
 {
-	HWND hParent;///< Parent window handle
-	RECT rect;///< chat dialog position
-	HWND hChatWnd;///< return chat windows handle
+	HWND hParent;///<Parent window handle.
+	RECT rect;///<Chat dialog position.
+	HWND hChatWnd;///<Chat dialog handle. 
 	tagShowChatDlgParam()
 	{
 		hParent = NULL;
@@ -53,37 +50,37 @@ typedef struct tagShowChatDlgParam
 }ShowChatDlgParam;
 
 /*! \enum SDKFloatVideoType
-    \brief The type of float video ui.
-    A more detailed struct description.
+    \brief The user interface type of float video.
+    Here are more detailed structural descriptions.
 */
 enum SDKFloatVideoType
 {
-	FLOATVIDEO_List,
-	FLOATVIDEO_Small,
-	FLOATVIDEO_Large,
-	FLOATVIDEO_Minimize,
+	FLOATVIDEO_List,///<Type of list.
+	FLOATVIDEO_Small,///<Small. 
+	FLOATVIDEO_Large,///<Large.
+	FLOATVIDEO_Minimize,///<Minimized.
 };
 
 /*! \enum SDKMinimizeUIMode
-    \brief The type of minimize UI mode.
-    A more detailed struct description.
+    \brief The type of minimize user interface mode.
+    Here are more detailed structural descriptions.
 */
 enum SDKMinimizeUIMode
 {
-	MinimizeUIMode_NONE,
-	MinimizeUIMode_SHARE,
-	MinimizeUIMode_VIDEO,
-	MinimizeUIMode_ACTIVESPEAKER,
+	MinimizeUIMode_NONE,///<For initialization.
+	MinimizeUIMode_SHARE,///<Minimized mode for sharing.
+	MinimizeUIMode_VIDEO,///<Minimized mode for video.
+	MinimizeUIMode_ACTIVESPEAKER,///<Minimized mode for speaking.
 };
 
 /*! \struct tagSplitScreenInfo
-    \brief The information of split screen mode.
-    A more detailed struct description.
+    \brief Split screen mode information.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagSplitScreenInfo
 {
-	bool bSupportSplitScreen;
-	bool bInSplitScreenMode;
+	bool bSupportSplitScreen;///<Support display the video in a row.
+	bool bInSplitScreenMode;///<In the process of diplaying the video in the row.
 	tagSplitScreenInfo()
 	{
 		bSupportSplitScreen = false;
@@ -91,167 +88,184 @@ typedef struct tagSplitScreenInfo
 	}
 }SplitScreenInfo;
 
-/// \brief Meeting UI Controller Callback Event
+/// \brief Callback Event of Meeting UI Controller.
 ///
 class IMeetingUIControllerEvent
 {
 public:
-	/// \brief Callback procedure when Invite button is clicked.
-	/// \param [in out] bHandled Set it to be true if the application shows its own invite dialog. Default values if FALSE.
-	/// \remarks If bHandled is not set to be true. The default Zoom invite dialog will be shown, no matter the application handles it or not.
+	/// \brief Callback event to click the INVITE button.
+	/// \param [out] bHandled True indicates to show the user's own custom dialog interface. Default value: FALSE.
+	/// \remarks If the value of bHandled is not set to TRUE, the default interface will pop up. 
 	virtual void onInviteBtnClicked(bool& bHandled) = 0;
+	
+	/// \brief Callback event for clicking START SHARE button.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the SHARE button. For more details, see \link IMeetingUIElemConfiguration::RedirectClickShareBTNEvent() \endlink.
 	virtual void onStartShareBtnClicked() = 0;
+	
+	/// \brief Callback event of clicking the END MEETING button.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the END MEETING button. For more details, see \link IMeetingUIElemConfiguration::RedirectClickEndMeetingBTNEvent() \endlink.
 	virtual void onEndMeetingBtnClicked() = 0;
+	
+	/// \brief Callback event of clicking PRTICIPANT LIST button.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the PARTICIPANT LIST button. For more details, see \link IMeetingUIElemConfiguration::RedirectClickParticipantListBTNEvent() \endlink.
 	virtual void onParticipantListBtnClicked() = 0;
+	
+	/// \brief Callback event of clicking CUSTOME LIVE STREAM menu.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the CUSTOME LIVE STREAM menu. For more details, see \link IMeetingUIElemConfiguration::RedirectClickCustomLiveStreamMenuEvent() \endlink.
 	virtual void onCustomLiveStreamMenuClicked() = 0;
-	/// \brief Notification when SDK fails to show the default Zoom invite dialog. It only occurs when the Zoom service has something wrong.
+	
+	/// \brief Notification occurs only when the SDK fails to display the default ZOOM INVITE dialog.
 	virtual void onZoomInviteDialogFailed() = 0;
 };
 
-/// \brief Meeting UI Controller Interface
+/// \brief Meeting UI Controller Interface.
 ///
 class IMeetingUIController
 {
 public:
-	/// \brief Set meeting ui controller callback event
-	/// \param pEvent A pointer to a IMeetingUIControllerEvent* that receives meeting ui event. 
+	/// \brief Set meeting UI controller callback event handler. 
+	/// \param pEvent A pointer to the IMeetingUIControllerEvent that receives the meeting user interface event. For more details, see \link IMeetingUIControllerEvent \endlink.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingUIControllerEvent* pEvent) = 0;
 
-	/// \brief Show meeting chat dialog
-	/// \param param Specifies how to show chat dialog.
+	/// \brief Show the chat dialog during the meeting.
+	/// \param param Specifies the way to show the chat dialog. For more details, see \link ShowChatDlgParam \endlink structure. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowChatDlg(ShowChatDlgParam& param) = 0;
 
-	/// \brief Hide meeting chat dialog
+	/// \brief Hide the chat dialog during the meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError HideChatDlg() = 0;
 
-	/// \brief Enter full screen mode
-	/// \param firstView Specifies the first monitor enter full screen mode or not.
-	/// \param secondView Specifies the second monitor enter full screen mode or not, if enable dual monitor mode.
+	/// \brief Enter full screen display mode.
+	/// \param firstView True indicates to enable the full screen mode for the first view.
+	/// \param secondView True indicates to enable the full screen mode for the second view if it is in the dual view mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnterFullScreen(bool firstView, bool secondView) = 0;
 
-	/// \brief Exit full screen mode
-	/// \param firstView Specifies the first monitor exit full screen mode or not.
-	/// \param secondView Specifies the second monitor exit full screen mode or not, if enable dual monitor mode.
+	/// \brief Exit the full screen display mode.
+	/// \param firstView True indicates to exit the full screen mode for the first view.
+	/// \param secondView True indicates to exit the full screen mode for the second view if it is in the dual view mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ExitFullScreen(bool firstView, bool secondView) = 0;
 
-	/// \brief Switch to video wall view
+	/// \brief Switch to video wall mode. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwitchToVideoWall() = 0;
 
-	/// \brief Switch to active speaker view
+	/// \brief Switch to the mode of showing the current speaker.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwtichToAcitveSpeaker() = 0;
 
-	/// \brief Move Float Video window
-	/// \param left Specifies The left position of the Float Video window.
-	/// \param top Specifies The top position of the Float Video window.
+	/// \brief Move the floating video window.
+	/// \param left Sets the left margin edge for the floating video window. Please use the coordinate of the screen.
+	/// \param top Sets the top margin edge for the floating video window. Please use the coordinate of the screen.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError MoveFloatVideoWnd(int left, int top) = 0;
 
-	/// \brief Show sharing float toolbar
-	/// \param bShow Specifies the sharing float toolbar show or not
+	/// \brief Enable or disable to display the floating sharing toolbar.
+	/// \param bShow TRUE indicates to display the floating toolbar.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks This function works only in the share mode. 
 	virtual SDKError ShowSharingToolbar(bool bShow) = 0;
 
-	/// \brief Switch float video bar to active speaker view
+	/// \brief Switch to current speaker mode on the floating window. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwitchFloatVideoToActiveSpkMod() = 0;
 
-	/// \brief Change float active speaker video bar size
-	/// \param type Specifies the float video panel view type.
+	/// \brief Adjust the display mode of floating video. 
+	/// \param type Specify the type of the floating video. For more details, see \link SDKFloatVideoType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ChangeFloatoActiveSpkVideoSize(SDKFloatVideoType type) = 0;
 
-	/// \brief Switch float video bar to gallery view
+	/// \brief Switch to gallery view mode from the floating video mode. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwitchFloatVideoToGalleryMod() = 0;
 
-	/// \brief Show Participants List window
-	/// \param bShow Specifies the participants List Window show or not
-	/// \param hParticipantsListWnd if bShow is true,and api call success, will return the handle of the participants List window
+	/// \brief Display/hide the window which is used to display the list of the participants. 
+	/// \param bShow TRUE indicates to display the list of the participants.
+	/// \param [out] hParticipantsListWnd This function will return the window handle if the bShow value is set to TRUE and API calls successfully. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowParticipantsListWnd(bool bShow, HWND& hParticipantsListWnd) = 0;
 
-	/// \brief Show bottom float toolbar window
-	/// \param bShow Specifies the bottom float toolbar window show or not
+	/// \brief Display/hide the toolbar at the bottom of the meeting window. 
+	/// \param bShow TRUE indicates to display the toolbar.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks This function does not work if the user sets to hide the toolbar via IMeetingUIElemConfiguration::SetBottomFloatToolbarWndVisibility().
 	virtual SDKError ShowBottomFloatToolbarWnd(bool bShow) = 0;
 
-	/// \brief Retrieves the handle of the meeting UI window
-	/// \param hFirstView the variable where the first view handle of the meeting UI window is returned.
-	/// \param hSecondView the variable where the second view handle of the meeting UI window is returned.
+	/// \brief Get the window handle of the meeting user interface.
+	/// \param [out] hFirstView If the function succeeds, the parameter will save the window handle of the meeting user interface displayed by the first view.
+	/// \param [out] hSecondView If the function succeeds, the parameter will save the window handle of the meeting user interface displayed by the second view.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetMeetingUIWnd(HWND& hFirstView, HWND& hSecondView) = 0;
 
-	/// \brief Show join audio dialog
+	/// \brief Display the dialog to choose the audio to join the meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowJoinAudioDlg() = 0;
 
-	/// \brief Hide join audio dialog
+	/// \brief Hide the dialog to choose the audio to join the meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError HideJoinAudioDlg() = 0;
 
-	/// \brief get page info on video wall mode.
-	/// \param videoWallPageInfoParam store current page index and total pages.
+	/// \brief Get the information in video wall mode.
+	/// \param [out] videoWallPageInfoParam If the function succeeds, the parameter will save the current page index and the number of the pages. For more details, see \link VideoWallPageInfoParam \endlink structure.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetWallViewPageInfo(VideoWallPageInfoParam& videoWallPageInfoParam) = 0;
 
-	/// \brief show previous or next page video user on video wall mode.
-	/// \param bPageUp specifies previous or next page.
+	/// \brief Show the video users on previous page or next page in video wall mode.
+	/// \param bPageUp TRUE indicates to show the video users on previous page, FALSE next page.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks The function does not work if the window shows the first or last page. The return value is SDKErr_Success in this case.
 	virtual SDKError ShowPreOrNextPageVideo(bool bPageUp) = 0;
 
-	/// \brief show or hide the sharing frame window of the application which you shared.
-	/// \param bShow specifies show or hide.
+	/// \brief Display or close a dialog box which enables the user to share the application or the screen. 
+	/// \param bShow TRUE indicates to display the dialog. FALSE hide.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowSharingFrameWindows(bool bShow) = 0;
 
-	/// \brief Determines the minimize state of the meeting ui window on frist screen.
-	/// \param mode return the minimize mode if the meeting ui window on frist screen is in the minimize state.
-	/// \return true or false
+	/// \brief Determines the minimize state of the first view.
+	/// \param [out] mode If the function succeeds, the parameter will save the display mode. For more details, see \link SDKMinimizeUIMode \endlink enum.
+	/// \return TRUE indicates the minimize state. FALSE not.
 	virtual bool IsMinimizeModeOfFristScreenMeetingUIWnd(SDKMinimizeUIMode& mode) = 0;
 
-	/// \brief Change the minimize mode if the meeting ui window on frist screen is in the minimize state. 
-	/// \param mode specifies the minimize mode.
+	/// \brief Change the display mode of the minimized meeting window for the first view.
+	/// \param mode Specifies the minimized mode. For more details, see \link SDKMinimizeUIMode \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwitchMinimizeUIMode4FristScreenMeetingUIWnd(SDKMinimizeUIMode mode) = 0;
 
-	/// \brief Get information of current split screen mode
-	/// \param info store the information of current split screen mode .
+	/// \brief Get the information whether the current view supports split screen mode or not. If supports, check it if it is already in the split screen mode.
+	/// \param [out] info If the function succeeds, the parameter will save the configuration of split screen mode. For more details, see \link SplitScreenInfo \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetCurrentSplitScreenModeInfo(SplitScreenInfo& info) = 0;
 
-	/// \brief Switch split screen mode or not when you view share and don't enable dual-monitor mode.
-	/// \param bSplit split screen mode or not.
+	/// \brief Switch to the split screen mode or cancel.
+	/// \param bSplit TRUE indicates to switch to the split screen mode. FALSE cancel.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///\remarks  TRUE does not work if it is in the split screen mode. FALSE does not work if it is not the split screen mode.
 	virtual SDKError SwitchSplitScreenMode(bool bSplit) = 0;
 };
 

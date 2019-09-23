@@ -1,98 +1,97 @@
 /*!
-* \file meeting_sharing_interface.h
-* \brief Sharing of Meeting Service Interface
+* \file meeting_live_stream_interface.h
+* \brief Meeting Service Live Streaming Interface.
 * 
 */
 #ifndef _MEETING_LIVE_STREAM_INTERFACE_H_
 #define _MEETING_LIVE_STREAM_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
 
-/// \brief Zoom SDK Namespace
-/// 
-///
 BEGIN_ZOOM_SDK_NAMESPACE
 
 /*! \enum LiveStreamStatus
-    \brief status of live stream
-    A more detailed struct description.
+    \brief Status of live stream.
+    Here are more detailed structural descriptions.
 */
 enum LiveStreamStatus 
 {
-	LiveStreamStatus_None,///< None
-	LiveStreamStatus_InProgress,///< in progress
-	LiveStreamStatus_Connecting,///< connecting
-	LiveStreamStatus_Start_Failed_Timeout,///< connect live stream timeout
-	LiveStreamStatus_Start_Failed,///< connect live stream failed
-	LiveStreamStatus_Ended,///< ended
+	LiveStreamStatus_None,///<Only for initialization.
+	LiveStreamStatus_InProgress,///<In progress
+	LiveStreamStatus_Connecting,///<Be connecting
+	LiveStreamStatus_Start_Failed_Timeout,///<Connect timeout.
+	LiveStreamStatus_Start_Failed,///<Connect failed to the live streaming. 
+	LiveStreamStatus_Ended,///<End.
 };
 
-/// \brief Meeting live stream controller callback event
+/// \brief Live stream meeting controller callback event.
 ///
 class IMeetingLiveStreamCtrlEvent
 {
 public:
-	/// \brief live stream status changed callback
-	/// \param status live stream status.
+	/// \brief Callback event that live stream status changes.
+	/// \param status Live stream status. For more details, see \link LiveStreamStatus \endlink enum.
 	virtual void onLiveStreamStatusChange(LiveStreamStatus status) = 0;
 };
 
-/// \brief Meeting live stream item of current meeting
+/// \brief Live stream of current meeting.
 ///
 class IMeetingLiveStreamItem
 {
 public:
-	/// \brief Get url of live stream
-	/// \return If the function succeeds, the return value is the url of live stream.
+	/// \brief Get URL of the live stream meeting.
+	/// \return If the function succeeds, the return value is the URL of the live stream meeting.
 	virtual const wchar_t* GetLiveStreamURL() = 0;
 
-	/// \brief Get description of live stream
+	/// \brief Get the descriptions of live stream.
 	/// \return If the function succeeds, the return value is the description of live stream.
 	virtual const wchar_t* GetLiveStreamURLDescription() = 0;
 	virtual ~IMeetingLiveStreamItem() {};
 };
 
-/// \brief Meeting live stream controller interface
+/// \brief Live stream meeting controller interface.
 ///
 class IMeetingLiveStreamController
 {
 public:
-	/// \brief Set meeting live stream callback event
-	/// \param pEvent A pointer to a IMeetingLiveStreamCtrlEvent* that receives live stream event. 
+	/// \brief Set live stream meeting callback event handler
+	/// \param pEvent A pointer to the IMeetingLiveStreamCtrlEvent that receives live stream event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingLiveStreamCtrlEvent* pEvent) = 0;
 
-	/// \brief Check can start live stream or not
-	/// \return If can start live stream, the return value is SDKErr_Success.
-	///If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Determine if it is able to start live streaming.
+	/// \return If it is enabled to start the live streaming, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanStartLiveStream() = 0;
 
-	/// \brief Start live stream
-	/// \param item_ A pointer to a IMeetingLiveStreamItem*, get this via GetSupportLiveStreamURL API. 
+	/// \brief Start live streaming.
+	/// \param item_ A pointer to the IMeetingLiveStreamItem created via IMeetingLiveStreamController::GetSupportLiveStreamURL() API. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StartLiveStream(IMeetingLiveStreamItem* item_) = 0;
 
-	/// \brief Start live stream
-	/// \param streamingURL url of live stream
-	/// \param streamingKey key of live stream
-	/// \param broadcastURL broadcast url of live stream
+	/// \brief Start live streaming.
+	/// \param streamingURL The URL of live streaming.
+	/// \param streamingKey The key of live streaming. 
+	/// \param broadcastURL The broadcast url of live-stream.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	///you get these parameters from third party live stream service
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Get the parameters from the third party of live stream service
 	virtual SDKError StartLiveStreamWithSteamingURL(const wchar_t* streamingURL, const wchar_t* streamingKey, const wchar_t* broadcastURL) = 0;
 
-	/// \brief Stop live stream
+	/// \brief Stop live streaming.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StopLiveStream() = 0;
 
-	/// \brief Get meeting live stream information list of current meeting
-	/// \return the return value is current meeting all live stream information list.if not in meeting, return NULL.
+	/// \brief Get the list of URL and associated information used by live streaming in the current meeting. 
+	/// \return If the function succeeds, the return value is the meeting information to be live streamed.
+	///Otherwise failed, the return value is NULL. For more details, see \link IMeetingLiveStreamItem \endlink.
 	virtual IList<IMeetingLiveStreamItem* >* GetSupportLiveStreamURL() = 0;
 
 	/// \brief Get live stream status of current meeting.
-	/// \return If the function succeeds, the return value is the live stream status of current meeting, refer to LiveStreamStatus.
+	/// \return If the function succeeds, the return value is the live stream status of current meeting.  
+	///Otherwise failed. For more details, see \link LiveStreamStatus \endlink enum.
 	virtual LiveStreamStatus GetCurrentLiveStreamStatus() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

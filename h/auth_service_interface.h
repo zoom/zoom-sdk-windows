@@ -6,47 +6,45 @@
 #ifndef _AUTH_SERVICE_INTERFACE_H_
 #define _AUTH_SERVICE_INTERFACE_H_
 #include "zoom_sdk_def.h"
-/// \brief Zoom SDK Namespace
-/// 
-///
+
 BEGIN_ZOOM_SDK_NAMESPACE
 
 /*! \enum AuthResult
-    \brief SDK Authentication result.
-    A more detailed struct description.
+    \brief SDK Authentication Result.
+    Here are more detailed structural descriptions.
 */
 enum AuthResult
 {
-	AUTHRET_SUCCESS,///< Auth Success 
-	AUTHRET_KEYORSECRETEMPTY,///< Key or Secret is empty
-	AUTHRET_KEYORSECRETWRONG,///< Key or Secret is wrong
-	AUTHRET_ACCOUNTNOTSUPPORT,///< Client Account does not support
-	AUTHRET_ACCOUNTNOTENABLESDK,///< Client account does not enable SDK
-	AUTHRET_UNKNOWN,///< Auth Unknown error
-	AUTHRET_SERVICE_BUSY,///< service busy
-	AUTHRET_NONE,///< Initial status
+	AUTHRET_SUCCESS,///<Authentication Successful.
+	AUTHRET_KEYORSECRETEMPTY,///<The key or secret to authenticate is empty.
+	AUTHRET_KEYORSECRETWRONG,///<The key or secret to authenticate is wrong.
+	AUTHRET_ACCOUNTNOTSUPPORT,///<The user account does not support.
+	AUTHRET_ACCOUNTNOTENABLESDK,///<The user account is not enabled for SDK.
+	AUTHRET_UNKNOWN,///<Unknown error.
+	AUTHRET_SERVICE_BUSY,///<Service is busy.
+	AUTHRET_NONE,///<Initial status.
 };
 
 /*! \enum LOGINSTATUS
     \brief Login status.
-    A more detailed struct description.
+    Here are more detailed structural descriptions.
 */
 enum LOGINSTATUS
 {
-	LOGIN_IDLE,///< Not login
-	LOGIN_PROCESSING,///< Login in processing
-	LOGIN_SUCCESS,///< Login success
-	LOGIN_FAILED,///< Login failed
+	LOGIN_IDLE,///<Unlogged in.
+	LOGIN_PROCESSING,///<Logging in.
+	LOGIN_SUCCESS,///<Login successful.
+	LOGIN_FAILED,///<Login failed.
 };
 
 /*! \struct tagAuthParam
-    \brief SDK Authentication Parameter.
-    A more detailed struct description.
+    \brief SDK Authentication parameter.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagAuthParam
 {
-	const wchar_t* appKey;///< APP Key string
-	const wchar_t* appSecret;///< APP Secret string
+	const wchar_t* appKey;///<APP Key string.
+	const wchar_t* appSecret;///<APP Secret string.
 	tagAuthParam()
 	{
 		appKey = NULL;
@@ -55,40 +53,48 @@ typedef struct tagAuthParam
 }AuthParam;
 
 /*! \enum LoginType
-\brief type of user login.
-A more detailed struct description.
+	\brief User login type.
+	Here are more detailed structural descriptions.
 */
 enum LoginType
 {
-	LoginType_Unknown,
-	LoginType_Email,///<Login with work email
-	LoginType_SSO,///<Login with SSO token
+	LoginType_Unknown,///<Unknown type.
+	LoginType_Email,///<Login with work mailbox.
+	LoginType_SSO,///<Login with SSO token.
 };
 
+/*! \struct tagLoginParam4Email
+    \brief SDK parameter for login via email.
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagLoginParam4Email
 {
-	const wchar_t* userName;///< Account name. email or something else
-	const wchar_t* password;///< Account password
-	bool bRememberMe;
+	const wchar_t* userName;///<Username. It is usually working mailbox or other mailbox.
+	const wchar_t* password;///<Account password.
+	bool bRememberMe;///<True indicates to save the information for next login.
 }LoginParam4Email;
 
+/*! \struct tagLoginParam4SSO
+    \brief SDK parameter for login via SSO.
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagLoginParam4SSO
 {
-	const wchar_t* ssoToken;///< Account SSO token when Login
-	bool bRememberMe;
+	const wchar_t* ssoToken;///<Account SSO token when logining.
+	bool bRememberMe; ///<True indicates to save the information for next login.
 }LoginParam4SSO;
 
 /*! \struct tagLoginParam
-    \brief Account login Parameter.
-    A more detailed struct description.
+    \brief Account login parameter.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagLoginParam
 {
-	LoginType loginType;
+	LoginType loginType; ///<Type of login.
 	union
 	{
-		LoginParam4Email emailLogin;
-		LoginParam4SSO ssoLogin;
+		LoginParam4Email emailLogin;///<Login with mailbox.
+		LoginParam4SSO ssoLogin;///<Login with SSO token.
 	}ut;
 
 	tagLoginParam()
@@ -99,95 +105,95 @@ typedef struct tagLoginParam
 	}
 }LoginParam;
 
-/// \brief Account information Interface
+/// \brief Account information interface.
 ///
 class IAccountInfo
 {
 public:
-	/// \brief Get account display name
-	/// \return The return value is account display name.
+	/// \brief Get the screen name of user.
+	/// \return The return value is the displayed username. If there is no screen name of user, the reutrn value is a string of length ZERO(0).
 	virtual const wchar_t* GetDisplayName() = 0;
 
-	/// \brief Get login type
-	/// \return The return value is account login type.
+	/// \brief Get login type.
+	/// \return The return value is the account login type. For more details, see \link LoginType \endlink enum.
 	virtual LoginType GetLoginType() = 0;
 	virtual ~IAccountInfo(){};
 };
 
-/// \brief Authentication Service Callback Event
+/// \brief Authentication service callback event.
 ///
 class IAuthServiceEvent
 {
 public:
-	/// \brief Authentication Result callback
-	/// \param ret Authentication Result value. 
+	/// \brief Authentication result callback.
+	/// \param ret Authentication result value.  For more details, see \link AuthResult \endlink enum.
 	virtual void onAuthenticationReturn(AuthResult ret) = 0;
 
-	/// \brief Login Result callback
-	/// \param ret Login status. refer LOGINSTATUS.
-	/// \param pAccountInfo if the ret is LOGINRET_SUCCESS, it is not NULL value, otherwise is NULL
+	/// \brief Callback of login result.
+	/// \param ret Login status. see \link LOGINSTATUS \endlink enum.
+	/// \param pAccountInfo Valid when the ret is LOGINRET_SUCCESS. Otherwise NULL.
 	virtual void onLoginRet(LOGINSTATUS ret, IAccountInfo* pAccountInfo) = 0;
 	
-	/// \brief Logout Result callback
+	/// \brief Logout result callback.
 	virtual void onLogout() = 0;
 
-	/// \brief Zoom identity expired, please re-login or generate new zoom access token via REST api
+	/// \brief Zoom identity has expired, please re-login or generate a new zoom access token via REST api.
 	virtual void onZoomIdentityExpired() = 0;
 };
 
 class IDirectShareServiceHelper;
 class IOutlookPluginIntegrationHelper;
-/// \brief Authentication Service Interface
+/// \brief Authentication Service Interface.
 ///
 class IAuthService
 {
 public:
-	/// \brief Set authentication service callback event
-	/// \param pEvent A pointer to a IAuthServiceEvent* that receives authentication event. 
+	/// \brief Set the authentication service callback event handler.
+	/// \param pEvent A pointer to receive authentication event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IAuthServiceEvent* pEvent) = 0;
 
-	/// \brief Authentication sdk
-	/// \param authParam The parameter to be used for authentication sdk, refer to AuthParam. 
+	/// \brief SDK Authentication.
+	/// \param authParam The parameter to be used for authentication sdk, see \link AuthParam \endlink structure. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SDKAuth(AuthParam& authParam) = 0;
 
-	/// \brief Get authentication status
-	/// \return The return value is  authentication status.To get extended error information, refer to AuthResult enum
+	/// \brief Get authentication status.
+	/// \return The return value is authentication status. To get extended error information, see \link AuthResult \endlink enum.
 	virtual AuthResult GetAuthResult() = 0;
 
-	/// \brief Get SDK identity
-	/// \return the SDK identity.
+	/// \brief Get SDK identity.
+	/// \return The SDK identity.
 	virtual const wchar_t* GetSDKIdentity() = 0;
 
-	// \brief Account login
-	/// \param param The parameter to be used for account login, refer to LoginParam. 
+	/// \brief Account login.
+	/// \param param For the parameter to be used for account login, see \link LoginParam \endlink structure. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	///you need to call this APIs after onAuthenticationReturn return success status.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///You need to call this APIs after IAuthServiceEvent::onAuthenticationReturn() return SDKErr_Success.
 	virtual SDKError Login(LoginParam& param) = 0;
 	
-	// \brief Account logout
+	/// \brief Account logout.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError LogOut() = 0;
 
-	// \brief Get login account information.
-	/// \return If you has login your account success, the return value is the account information, otherwise is NULL.
+	/// \brief Get login account information.
+	/// \return If you has logged in your account successfully, the return value is a pointer to IAccountInfo, otherwise is NULL.
 	virtual IAccountInfo* GetAccountInfo() = 0;
 
-	/// \brief Get login status
-	/// \return The return value is login status.To get extended error information, refer to LOGINSTATUS enum
+	/// \brief Get login status.
+	/// \return The return value is login status. To get extended error information, see \link LOGINSTATUS \endlink enum.
 	virtual LOGINSTATUS GetLoginStatus() = 0;
 
-	// \brief Get outlook plugin integration helper. 
-	/// \return If you has login your account success, the return value is the pointer of the outlook plugin integreation helper, otherwise is NULL.
+	/// \brief Get Outlook plugin integration helper interface. 
+	/// \return If you logged in your account successfully, the return value is the object pointer to IOutlookPluginIntegrationHelper. Otherwise is NULL.
 	virtual IOutlookPluginIntegrationHelper* GetOutlookPluginHeler() = 0;
 
-	// \brief Get direct show service helper. 
-	/// \return If you has login your account success, the return value is the pointer of the direct share service helper, otherwise is NULL.
+	/// \brief Get direct share service helper interface. 
+	/// \return If you logged in your account successfully, the return value is the object pointer IDirectShareServiceHelper. Otherwise is NULL.
 	virtual IDirectShareServiceHelper* GetDirectShareServiceHeler() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

@@ -1,6 +1,6 @@
 /*!
 * \file customized_annotation.h
-* \brief zoom customized annotation interface
+* \brief ZOOM Custom Annotation Interface.
 * 
 */
 #ifndef _ZOOM_CUSTOMIZED_ANNOTATION_H_
@@ -12,102 +12,103 @@ BEGIN_ZOOM_SDK_NAMESPACE
 class ICustomizedShareRender;
 
 /*! \enum CustomizedShareAnnotationStatus
-    \brief status of annotation
-    A more detailed struct description.
+    \brief Status of custom annotation toolbar. 
+    Here are more detailed structural descriptions..
 */ 
 enum CustomizedShareAnnotationStatus
 {
-	CS_ANNO_READYTOUSE,//ready to use annotation
-	CS_ANNO_CLOSE, //annotation shut down
+	CS_ANNO_READYTOUSE,///<The toolbar has been created.
+	CS_ANNO_CLOSE,///<The toolbar will be destroyed.  
 };
 
-/// \brief Annotation object callback event
-///
+/// \brief Annotation object callback event.
+///                                      
 class ICustomizedAnnotationObjEvent
 {
 public:
-	/// \brief Notifies the app about annotation tool change
+	/// \brief Callback event that the annotation tool changes.
+	/// \param type_ The type of annotation tool. For more details, see \link AnnotationToolType \endlink enum.
 	virtual void onAnnotationObjToolChange(AnnotationToolType type_);
 };
 
-/// \brief Annotation object interface
+/// \brief Annotation object interface.
 ///
 class ICustomizedAnnotationObj
 {
 public:
-	/// \brief Set Annotation object callback event
-	/// \param pEvent A pointer to a ICustomizedAnnotationObjEvent* that receives annotation object event. 
+	/// \brief Set annotation object callback event handler.
+	/// \param event_ A pointer to the ICustomizedAnnotationObjEvent that receives annotation object event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(ICustomizedAnnotationObjEvent* event_) = 0;
 
-	/// \brief Check can clear annotation
-	/// \param type the type of clear annotation
-	/// \return If can, the return value is SDKErr_Success.
-	///If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Determine if it is enabled to clear the annotation by the specified way. 
+	/// \param type Specify the annotation clear type. For more details, see \link AnnotationClearType \endlink enum.
+	/// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanClear(AnnotationClearType type) = 0;
 
-	/// \brief Clear annotation
-	/// \param type the type of clear annotation
+	/// \brief Clear the annotation with the specified type.
+	/// \param type Specify the type to clear annotation. For more details, see \link AnnotationClearType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Clear(AnnotationClearType type) = 0;
 
-	/// \brief Set annotation tool
-	/// \param type the type of annotation tool
+	/// \brief Set the tool to annotate.
+	/// \param type Specify the type of the annotation tool. For more details, see \link AnnotationToolType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetTool(AnnotationToolType type) = 0;
 
-	/// \brief Set annotation color
-	/// \param color the color of annotation tool
+	/// \brief Set the color to annotate.
+	/// \param color Specify the color to annotate, in RGB format.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetColor(unsigned long color) = 0;
-
-	/// \brief Set annotation line width
-	/// \param lineWidth the line width of annotation tool
+	
+	/// \brief Set the value of line width of annotation tool.
+	/// \param lineWidth The line width of annotation tool.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetLineWidth(long lineWidth) = 0;
 
-	/// \brief Get annotation color
-	/// \param color the current color of annotation tool
+	/// \brief Get the color of current annotation tool.
+	/// \param [out] color The color to annontate in RGB format.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetCurColor(unsigned long& color) = 0;
 
-	/// \brief Get annotation line width
-	/// \param lineWidth the current line width of annotation tool
+	/// \brief Get the value of line width of the current annotation tool.
+	/// \param [out] lineWidth The width of the current annotation tool. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.										 
 	virtual SDKError GetCurLineWidth(long& lineWidth) = 0;
 
-	/// \brief Get annotation tool type
-	/// \param type the current type of annotation tool
+	/// \brief Get the type of the current annotation tool.
+	/// \param type Specify the type of the annotation tool. For more details, see \link AnnotationToolType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetCurTool(AnnotationToolType& type) = 0;
 
-	/// \brief Undo Annotation
+	/// \brief Undo the last annotation.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Undo() = 0;
 
-	/// \brief Redo Annotation
+	/// \brief Redo the annotation undo. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Redo() = 0;
 
-	/// \brief Check can save snapshot
-	/// \return If can, the return value is SDKErr_Success.
-	///If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Determine if it is enabled to save the snapshot.
+	/// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanSaveSnapshot() = 0;
 
-	/// \brief save snapshot
-	/// \param path save path
+	/// \brief Save the snapshot in the specified path.
+	/// \param path Specify the path to store the snapshot. If the specified path is wrong, the SDKERR_INVALID_PARAMETER will be returned. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SaveSnapshot(const wchar_t* path) = 0;
 	virtual ~ICustomizedAnnotationObj(){};
 };
@@ -117,39 +118,39 @@ public:
 class ICustomizedAnnotationControllerEvent
 {
 public:
-	/// \brief Notifies the app about annotation object destroyed
-	/// \param obj_ Specifies which annotation object destroyed
+	/// \brief The callback event to destroy the specified annotation object.
+	/// \param obj_ Specify the annotation object to be destroyed. Once destroyed, it can no longer be used.
 	virtual void onCustomizedAnnotationObjDestroyed(ICustomizedAnnotationObj* obj_) = 0;
 
-	/// \brief Notifies the app about annotation status changed
-	/// \param share_render_ Specifies annotation status of which share render changed
-	/// \param status_ status
+	/// \brief The callback event when the annotation status changes.
+	/// \param share_render_ The annotate status of share_render changes. For more details, see \link ICustomizedShareRender \endlink.
+	/// \param status_ The changed status. For more details, see \link CustomizedShareAnnotationStatus \endlink.
 	virtual void onSharingShareAnnotationStatusChanged(ICustomizedShareRender* share_render_, CustomizedShareAnnotationStatus status_) = 0;
 };
 
-/// \brief Annotation controller interface
+/// \brief Annotation controller interface.
 ///
 class ICustomizedAnnotationController
 {
 public:
-	/// \brief Set Annotation controller callback event
-	/// \param pEvent A pointer to a ICustomizedAnnotationControllerEvent* that receives annotation controller event. 
+	/// \brief Set annotation controller callback event handler.
+	/// \param event_ A pointer to the ICustomizedAnnotationControllerEvent that receives annotation controller event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(ICustomizedAnnotationControllerEvent* event_) = 0;
 
-	/// \brief Create annotation object
-	/// \param view_share_render Specifies the owner of the annotation object, if create annotation for start sharing, pass NULL. 
-	/// \param pp_obj A pointer to a ICustomizedAnnotationObj* that receives ICustomizedAnnotationObj Object. 
+	/// \brief An instance created on the specified render which is an object of ICustomizedShareRender created on the sharing window.
+	/// \param view_share_render Specify the render to receive the shared content. The sharer should set the value to NULL.
+	/// \param pp_obj A pointer to the ICustomizedAnnotationObj*.
 	/// \return If the function succeeds, the return value is SDKErr_Success, and ppMeetingService is not NULL
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// \when you got onSharingShareAnnotationStatusChanged with CS_ANNO_READYTOUSE.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks It is suggested to call this function if the value of status_ is CS_ANNO_READYTOUSE when you receive the ICustomizedAnnotationControllerEvent::onSharingShareAnnotationStatusChanged .
 	virtual SDKError CreateAnnoObj(ICustomizedShareRender* view_share_render, ICustomizedAnnotationObj** pp_obj) = 0;
 
-	/// \brief Destroy annotation object
-	/// \param anno_obj A pointer to a ICustomizedAnnotationObj to be destroyed. 
+	/// \brief Destroy the specified annotation object.
+	/// \param anno_obj Specify the annotation tool to be destroyed.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DestroyAnnoObj(ICustomizedAnnotationObj* anno_obj) = 0;
 	virtual ~ICustomizedAnnotationController(){};
 };

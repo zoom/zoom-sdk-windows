@@ -1,6 +1,6 @@
 /*!
 * \file customized_video_container.h
-* \brief zoom customized video container interface
+* \brief ZOOM Custom Video Container Interface. 
 * 
 */
 #ifndef _ZOOM_CUSTOMIZED_VIDEO_CONTAINER_H_
@@ -11,138 +11,144 @@ BEGIN_ZOOM_SDK_NAMESPACE
 
 /*! \enum VideoRenderElementType
     \brief Type of the video render element.
-    A more detailed struct description.
+    Here are more detailed structural descriptions.
 */ 
 enum VideoRenderElementType
 {
-	VideoRenderElement_None, /// none
-	VideoRenderElement_PRVIEW, /// for IPreviewVideoRenderElement
-	VideoRenderElement_ACTIVE, /// for IActiveVideoRenderElement
-	VideoRenderElement_NORMAL, /// for INormalVideoRenderElement
+	VideoRenderElement_None,///<For initiation.
+	VideoRenderElement_PRVIEW,///<Preview type, see \link IPreviewVideoRenderElement \endlink.
+	VideoRenderElement_ACTIVE,///<Active type, see \link IActiveVideoRenderElement \endlink.
+	VideoRenderElement_NORMAL,///<Normal type, see \link INormalVideoRenderElement \endlink.
 };
 
 /*! \enum VideoRenderDataType
     \brief Data type of the video render element.
-    A more detailed struct description.
+    Here are more detailed structural descriptions.
 */ 
 enum VideoRenderDataType
 {
-	VideoRenderData_None,/// none
-	VideoRenderData_Video,/// video data
-	VideoRenderData_Avatar,/// avatar (no video data)
-	VideoRenderData_ScreenName,/// screen name (no video data and no avatar)
+	VideoRenderData_None,///<For initiation.
+	VideoRenderData_Video,///<Data type including the video data.
+	VideoRenderData_Avatar,///<Data type without video data.
+	VideoRenderData_ScreenName,///<Screen name data type only.
 };
 
-/// \brief base class of the video element interface
+/// \brief The base class for the video element interface.
 ///
 class IVideoRenderElement
 {
 public:
-	/// \brief Get the type of the video render.
-	/// \return If the function succeeds, the return value is the render type.refer VideoRenderElementType
-	///If the function fails, the return value is VideoRenderElement_None.
+	/// \brief Get the type of the video render element.
+	/// \return If the function succeeds, the return value is the type of the render element. For more details, see \link VideoRenderElementType \endlink enum.
+	///Otherwise failed, the return value is VideoRenderElement_None.
 	virtual VideoRenderElementType GetType() = 0;
 
-	/// \brief Retrieves the coordinates of a video render element's client area.
-	/// \return a RECT structure that receives the client coordinates.
-	/// client coordinates are relative to the upper-left corner of a video container's client area
+	/// \brief Get the area where the current render element is.
+	/// \return A RECT structure. The value in the structure corresponding to the coordinate system is the client area of the video container.
+	///The client coordinates corresponds to the client area of the upper-left corner of the parent window.
 	virtual RECT     GetPos() = 0;
 
-	/// \brief Changes the position of a video render element's client area.
-	/// \param pos specify the position of a video render element's client area.
+	/// \brief Specify a new display area of the current render element.
+	/// \param pos Specify a new area through RECT structure. The value in the structure corresponding to the coordinate system is that of the client area of the video main window. 
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
 	virtual SDKError SetPos(RECT pos) = 0;
 
-	/// \brief Show video element
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Show the render element.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
 	virtual SDKError Show() = 0;
 
-	/// \brief Hide video element
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Hide the render element.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
 	virtual SDKError Hide() = 0;
 
-	/// \brief Get the user id of the video element.
-	/// \return The user id specify which user was viewing.
+	/// \brief Get the user ID corresponding to the current render element.
+	/// \return The ID of the user.
 	virtual unsigned int GetCurrentRenderUserId() = 0;
 
-	/// \brief Get the render data type of the video element.
-	/// \return The data type of the video element
+	/// \brief Get the data type of the current render element. 
+	/// \return The data type of the current render elements. For more details, see \link VideoRenderDataType \endlink enum.
 	virtual VideoRenderDataType GetCurrentRenderDataType() = 0;
 
-	/// \brief Enable show screen name on video or not.
-	/// \param enable_show enable or not.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Set the visibility of the screen name on the current render element. 
+	/// \param enable_show TRUE indicates to show the screen name.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableShowScreenNameOnVideo(bool enable_show) = 0;
 	virtual ~IVideoRenderElement(){}
 };
 
-/// \brief preview video element interface(pre-meeting)
+/// \brief The interface to preview the video render element of the participant who joins the meeting before the host.
 /// 
 class IPreviewVideoRenderElement : public IVideoRenderElement
 {
 public:
-	/// \brief Start to preview
+	/// \brief Start previewing.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
 	virtual SDKError Start() = 0;
 
-	/// \brief Stop to preview
+	/// \brief Stop previewing.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
 	virtual SDKError Stop() = 0;
 	virtual ~IPreviewVideoRenderElement(){}
 };
 
-/// \brief active video element interface(in-meeting)
+/// \brief The active video render element interface in the meeting.
 /// 
 class IActiveVideoRenderElement : public IVideoRenderElement
 {
 public:
-	/// \brief Start to view the active user's video/avatar/screen name data
+	/// \brief Display the data of the current active user. 
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum 
 	virtual SDKError Start() = 0;
 
-	/// \brief Stop to view the active user's video/avatar/screen name data
+	/// \brief Undisplay the data of the current active user. 
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum 
 	virtual SDKError Stop() = 0;
 	virtual ~IActiveVideoRenderElement(){}
 };
 
-/// \brief normal video element interface(in-meeting)
+/// \brief Normal video render element interface in the meeting. 
 /// 
 class INormalVideoRenderElement : public IVideoRenderElement
 {
 public:
-	/// \brief Subscribe the user's video/avatar/screen name data
-	/// \param userid specify which user you want to view
+	/// \brief Show the data of the specified user through normal render mode.
+	/// \param userid Specify the user ID.
 	virtual SDKError Subscribe(unsigned int userid) = 0;
 
-	/// \brief Unsubscribe the user's video/avatar/screen name data
-	/// \param userid specify which user you want to unsubscribe
-	/// if you want to switch to other user, just call Subscribe with the other user id
-	/// if you want to recycle the video element, please call this API before the Hide API
+	/// \brief Unsubscribe the data of the specified user.
+	/// \param userid Specify the ID of user that you want to unsubscribe his data.
+	/// \remarks Call Subscribe with the other ID if you want to view his data.
+	///Call the function to stop receiving the data before calling the parent class Hide() function if you no longer want to see the data of the specified user.
 	virtual SDKError Unsubscribe(unsigned int userid) = 0;
 	virtual ~INormalVideoRenderElement(){}
 };
 
-/// \brief Video container callback event
+/// \brief Callback event of custom video container. 
 ///
 class ICustomizedVideoContainerEvent
 {
 public:
-	/// \brief Notifies the app about user id change of the video render element
-	/// \param pElement specify which render element's user id changed  
-	/// \param userid the new user id of the video render element  
+	/// \brief The callback will be triggered if the video render element corresponding to the user changes.
+	/// \param pElement The video render element corresponding to the user who is changed.
+	/// \param userid Specify the ID of new user.
 	virtual void onRenderUserChanged(IVideoRenderElement* pElement, unsigned int userid) = 0;
 
-	/// \brief Notifies the app about render data type change of the video render element
-	/// \param pElement specify which render element's data type changed  
-	/// \param dataType the new render data type of the video render element 
+	/// \brief The callback will be triggered if the video render element corresponding to data type changes.
+	/// \param pElement The video render elements corresponding to data type that is changed. 
+	/// \param dataType Specify a new render data type. For more details, see \link VideoRenderDataType \endlink enum. 
 	virtual void onRenderDataTypeChanged(IVideoRenderElement* pElement, VideoRenderDataType dataType) = 0;
 
-	/// \brief Notifies the app about size change of the video container
-	/// when receive this message, need to layout all video elements of the video container
-	/// \param rc the new video container position that contains the client coordinates of the rectangle, relative to the upper-left corner of a parent window's client area. 
+	/// \brief The callback will be triggered if the size of video container changes. 
+	///The user should redeploy the video render elements displayed once received the callback event.
+	/// \param wnd_client_rect Specify a new display area. The coordinate value of the structure is that of the parent window of the video container.
 	virtual void onLayoutNotification(RECT wnd_client_rect) = 0;
 
-	/// \brief Notifies the app about the video render element destroyed message
-	/// \param pElement specify which render element will be destroyed  
+	/// \brief The callback will be triggered before the video render element is destroyed.
+	/// \param pElement Specify the video render element to be destroyed.
+	/// \remarks The specified video render element will be destroyed once the function calls end. The user should complete the operations to the related video render element.
 	virtual void onVideoRenderElementDestroyed(IVideoRenderElement* pElement) = 0;
 
-	/// \brief Passes message information to the app, message list as follow, 
+	/// \brief The SDK will pass the window messages to users via the callback. Here are the messages.
 	///WM_MOUSEMOVE
 	///WM_MOUSEENTER
 	///WM_MOUSELEAVE
@@ -154,52 +160,54 @@ public:
 	virtual void onWindowMsgNotification(UINT uMsg, WPARAM wParam, LPARAM lParam) = 0;
 };
 
-/// \brief Video container interface
+/// \brief Video container interface.
 ///
 class ICustomizedVideoContainer
 {
 public:
-	/// \brief Set video container callback event
-	/// \param pEvent A pointer to a ICustomizedVideoContainerEvent* that receives video container event. 
+	/// \brief Set video container callback event handler.
+	/// \param pEvent A pointer to the ICustomizedVideoContainerEvent that receives video container callback event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(ICustomizedVideoContainerEvent* pEvent) = 0;
 	
-	/// \brief Create video render element Interface
-	/// \param ppElement A pointer to a IVideoRenderElement* that receives IVideoRenderElement Object. 
-	/// \param type_ type of the IVideoRenderElement
-	/// \return If the function succeeds, the return value is SDKErr_Success, and ppEmbeddedBrowser is not NULL
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Create a video render element.
+	/// \param [out] ppElement Once the function succeds, the parameter will store the pointer to the video render element.
+	/// \param type_ Specify the type of the video render element to be created.
+	/// \return If the function succeeds, the return value is SDKErr_Success, the return value of ppElement is not NULL.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CreateVideoElement(IVideoRenderElement** ppElement, VideoRenderElementType type_) = 0;
 
-	/// \brief Destroy video render element Interface
-	/// \param ppElement A pointer to a IVideoRenderElement to be destroyed. 
+	/// \brief Destroy a video render element.
+	/// \param ppElement Specify the video render element to be destroyed.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DestroyVideoElement(IVideoRenderElement* ppElement) = 0;
 
-	/// \brief Destroy all video render elements
+	/// \brief Destroy all the video render element.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DestroyAllVideoElement() = 0;
 
-	/// \brief Show video container
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Show the video container.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Show() = 0;
 
-	/// \brief Hide video container
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Hide the video container.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Hide() = 0;
 
-	/// \brief Resize the video container
-	/// \param rc that contains the client coordinates of the rectangle, relative to the upper-left corner of a parent window's client area. 
+	/// \brief Resize the video container in the specified area.
+	/// \param rc Specify a new display area. The coordinate value of the structure is that of the parent window of video container.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Resize(RECT rc) = 0;
 
-	/// \brief get the video element list of the video container.
-	/// \return If the function succeeds, the return value is the video element list.
-	///If the function fails, the return value is NULL.
+	/// \brief Get the list of video render elements in the current container.
+	/// \return If the function succeeds, the return value is the list that stores the video render element.
+	///Otherwise failed, the return list is blank.
 	virtual IList<IVideoRenderElement* >* GetVideoElementList() = 0;
 
 	virtual ~ICustomizedVideoContainer(){}

@@ -1,87 +1,90 @@
 /*!
-* \file meeting_service_interface.h
-* \brief Meeting Service Interface
-* \support for zoom style and customized style ui mode
+* \file meeting_h323_helper_interface.h
+* \brief Meeting Service H.323 helper Interface
+* Valid for both ZOOM style and user custom interface mode.
 */
 #ifndef _MEETING_H323_HELPER_INTERFACE_H_
 #define _MEETING_H323_HELPER_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
 #include <string>
-/// \brief Zoom SDK Namespace
-/// 
-///
+
 BEGIN_ZOOM_SDK_NAMESPACE
-/// \brief Meeting H323 helper Callback Event
+/// \brief Meeting H.323 helper Callback Event.
 ///
 
 /*! \enum H323CalloutStatus
-    \brief H323 Callout status.
-    A more detailed struct description.
+    \brief H.323 Callout status.
+    Here are more detailed structural descriptions.
 */
 enum H323CalloutStatus
 {
-	H323Callout_Unknown,
-	H323Callout_Success,
-	H323Callout_Ring,
-	H323Callout_Timeout,
-	H323Callout_Failed,
+	H323Callout_Unknown, ///<Used only for initialization.
+	H323Callout_Success, ///<Call successfully.
+	H323Callout_Ring,   ///<Bell during the call.
+	H323Callout_Timeout, ///<Call timeout.
+	H323Callout_Failed, ///<Call fails.
 };
 
-/*! \enum H323ParingStatus
-    \brief H323 Paring status.
-    A more detailed struct description.
+/*! \enum H323ParingResult
+    \brief H.323 Pairing status.
+    Here are more detailed structural descriptions.
 */
 enum H323ParingResult
 {
-	H323Paring_Unknown,
-	H323Paring_Success,
-	H323Paring_Meeting_Not_Exist,
-	H323Paring_Paringcode_Not_Exist,
-	H323Paring_No_Privilege,
-	H323Paring_Other_Error,
+	H323Paring_Unknown,///<Used only for initialization. 
+	H323Paring_Success,///<Pairing successful.
+	H323Paring_Meeting_Not_Exist,///<Pairing meeting does not exist.
+	H323Paring_Paringcode_Not_Exist,///<Pairing code does not exist.
+	H323Paring_No_Privilege, ///<No pairing privilege.
+	H323Paring_Other_Error, ///<Other problems.
 };
 
-/// \brief Meeting H323 Helper callback event
+/// \brief Meeting H.323 Helper callback event.
 ///
 class IMeetingH323HelperEvent
 {
 public:
-	/// \brief H323 device call out status callback
-	/// \param status H323 device call out status value.
+	/// \brief Callback event when the calling status of H.323 device changes.
+	/// \param status H.323 device calling out status value. For more details, see \link H323CalloutStatus \endlink enum.
 	virtual void onCalloutStatusNotify(H323CalloutStatus status) = 0;
 
-	/// \brief Paring H323 to meeting status callback
-	/// \param result Paring result.
-	virtual void onParingH323Result(H323ParingResult result) = 0;
+	/// \brief The callback event is triggered when the result of using the H.323 device to pair the assigned meeting is out.
+	/// \param result Paring result. For more details, see \link H323ParingResult \endlink enum.
+	/// \param meetingNumber The meeting number to be paired.
+	virtual void onParingH323Result(H323ParingResult result, UINT64 meetingNumber) = 0;
 };
 
 
 /*! \enum H323DeviceType
-    \brief H323 device type.
-    A more detailed struct description.
+    \brief H.323 device type.
+    Here are more detailed structural descriptions.
 */
 enum H323DeviceType
 {
-	H323DeviceType_Unknown,
-	H323DeviceType_H323,
-	H323DeviceType_SIP,
-	H323DeviceType_BOTH,
+	H323DeviceType_Unknown,///<Unknown device, only for initialization.
+	H323DeviceType_H323,///<H.323 device.
+	H323DeviceType_SIP,///<SIP device.
+	H323DeviceType_BOTH,///<H.323 device and SIP device.
 };
 
-/// \brief Meeting H323 device Interface
+/// \brief Meeting H.323 device Interface
 ///
 class IH323Device
 {
 public:
+	///<Virtual function definition.
 	virtual const wchar_t* GetName() = 0;
+	///<Virtual function definition.
 	virtual const wchar_t* GetIP() = 0;
+	///<Virtual function definition.
 	virtual const wchar_t* GetE164Num() = 0;
+	///<Virtual function definition.
 	virtual H323DeviceType GetDeviceType() = 0;
 
 	virtual ~IH323Device(){};
 };
 
-/// \brief Customized Meeting H323 device
+/// \brief Customized Meeting H.323 device
 ///
 class CustomizedH323Device : public IH323Device
 {
@@ -135,49 +138,59 @@ public:
 	}
 
 private:
-	H323DeviceType _type;
-	std::wstring _name;
-	std::wstring _ip;
-	std::wstring _e164num;
+	H323DeviceType _type;///<Type of device.
+	std::wstring _name;///<Device name.
+	std::wstring _ip;///<Device IP.
+	std::wstring _e164num;///<E.164 number
 };
 
-/// \brief Meeting H323 Helper Interface
+/// \brief Meeting H323 Helper Interface.
 ///
 class IMeetingH323Helper
 {
 public:
-	/// \brief Set meeting h323 helper callback event
-	/// \param pEvent A pointer to a IMeetingH323HelperEvent* that receives h323 helper event. 
+	/// \brief Set meeting H.323 helper callback event handler.
+	/// \param pEvent A pointer to the IMeetingH323HelperEvent that receives H.323 helper event. 
 	virtual void SetEvent(IMeetingH323HelperEvent* pEvent) = 0;
 
-	/// \brief Get h323 address for current meeting
-	/// \return If the function succeeds, the return value is not NULL.
+	/// \brief Get the list of H.323 call-in number supported by the current meeting.
+	/// \return If the function succeeds, the return value is the pointer to the list of the call-in number. Otherwise failed, the return value is NULL.
 	virtual IList<const wchar_t* >* GetH323Address() = 0;
 
-	/// \brief Get h323 password for current meeting
-	/// \return h323 password
+	/// \brief Get the H.323 password for the current meeting.
+	/// \return If the function succeeds, the return value is the H.323 meeting connect password. Otherwise failed, the return value is the length of zero(0）. 
 	virtual const wchar_t* GetH323Password() = 0;
+
+	/// \brief Determine if it is enabled to pairing meeting.
+	/// \param meetingNum TRUE Specifies the meeting number.
+	/// \return If pairing meeting is enabled, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanPairingMeeting(UINT64 meetingNum) = 0;
 
 	/// \brief Send Meeting paring code
 	/// \param meetingNum Specifies which meeting to paring. 
 	/// \param paringCode Code for paring
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the IMeetingH323HelperEvent::onParingH323Result() will be triggered once received the response of the H.323 device. 
 	virtual SDKError SendMeetingParingCode(UINT64 meetingNum, wchar_t* paringCode) = 0;
 
-	/// \brief Get h323 device for current meeting
-	/// \return If the function succeeds, the return value is not NULL.
+	/// \brief Get the list of the call-out devices supported by the current meeting.
+	/// \return If the function succeeds, the return value is the pointer to the list of devices. 
+	///Otherwise failed, the return value is an empty list. For more details, see \link IH323Device \endlink.
+	/// \remarks The list will be cleared each time the function is called.
 	virtual IList<IH323Device* >* GetCalloutH323DviceList() = 0;
 
-	/// \brief Call out a H323 device
-	/// \param deviceInfo Specifies which h323 device you want to call out.
-	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Call out with the assigned H.323 device.
+	/// \param deviceInfo Specify the H.323 device to use. For more details, see \link IH323Device \endlink.
+	/// \return If the function succeeds, the return value is SDKErr_Success. 
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the IMeetingH323HelperEvent::onCalloutStatusNotify() will be triggered once the callout status of H.323 device changes.
 	virtual SDKError CallOutH323(IH323Device* deviceInfo) = 0;
 
-	/// \brief Cancel a h323 device call out
+	/// \brief Cancel current outgoing call.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CancelCallOutH323() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

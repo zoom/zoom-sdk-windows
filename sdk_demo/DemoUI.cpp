@@ -9,7 +9,7 @@ CDemoUI::CDemoUI()
 {
 	ResetAllControls();
 	m_pAuthServiceMgr = new CAuthServiceMgr(this);
-	//m_preMeetingServiceMgr = new CPreMeetingServiceMgr(this);
+	m_preMeetingServiceMgr = new CPreMeetingServiceMgr(this);
 	m_pMeetingServiceMgr = new CMeetingServiceMgr(this);
 	m_bNormalUser = true;
 	m_bStar = true;
@@ -26,11 +26,11 @@ CDemoUI::~CDemoUI()
 		m_pAuthServiceMgr = NULL;
 	}
 
-	//if (m_preMeetingServiceMgr)
-	//{
-	//	delete m_preMeetingServiceMgr;
-	//	m_preMeetingServiceMgr = NULL;
-	//}
+	if (m_preMeetingServiceMgr)
+	{
+		delete m_preMeetingServiceMgr;
+		m_preMeetingServiceMgr = NULL;
+	}
 
 	if (m_pMeetingServiceMgr)
 	{
@@ -1154,6 +1154,10 @@ void CDemoUI::onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESP
 	case ZOOM_SDK_NAMESPACE::LOGIN_SUCCESS:
 		{
 			SwitchUIPageByType(UIPAGE_PT);
+			if (m_preMeetingServiceMgr)
+			{
+				m_preMeetingServiceMgr->Init();
+			}
 		}
 		break;
 	case ZOOM_SDK_NAMESPACE::LOGIN_PROCESSING:

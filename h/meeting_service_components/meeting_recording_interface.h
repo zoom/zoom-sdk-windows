@@ -1,132 +1,130 @@
 /*!
 * \file meeting_recording_interface.h
 * \brief Recording of Meeting Service Interface
-* \support for zoom style and customized style ui mode
+* Valid for both ZOOM style and user custom interface mode.
 */
 #ifndef _MEETING_Recording_INTERFACE_H_
 #define _MEETING_Recording_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
 #include <time.h>
 
-/// \brief Zoom SDK Namespace
-/// 
-///
 BEGIN_ZOOM_SDK_NAMESPACE
 /*! \enum RecordingStatus
     \brief Recording status.
-    A more detailed struct description.
+    Here are more detailed structural descriptions.
 */
 enum RecordingStatus
 {
-	Recording_Start,			 //start, both for local & cloud recording
-	Recording_Stop,				 //stop, both for local & cloud recording
-	Recording_DiskFull,			 //error, both for local & cloud recording
-	Recording_Pause,			 //pause, both for local & cloud recording
-	Recording_Connecting,		 //connecting, only for cloud recording
+	Recording_Start,///Start, for both local and cloud recording.
+	Recording_Stop,///Stop, for both local and cloud recording.
+	Recording_DiskFull,///Error, for both local and cloud recording.
+	Recording_Pause,///Pause, for both local and cloud recording.
+	Recording_Connecting,///Connecte, only for cloud recording.
 };
 
 class ICustomizedLocalRecordingLayoutHelper;
-/// \brief Meeting recording callback event
+/// \brief Meeting recording callback event.
 ///
 class IMeetingRecordingCtrlEvent
 {
 public:
-	/// \brief Once the mp4 conversion is complete, call back 
-	/// \param bsuccess Success or not.
-	/// \param iResult Details for error code if failed.
-	/// \param szPath if success, will return the recording file path, Otherwise is NULL. 
+	/// \brief Callback event of ending the conversion to MP4 format.
+	/// \param bsuccess TRUE indicates to convert successfully. FALSE not.
+	/// \param iResult This value is used to save the error code only when the convert fails.
+	/// \param szPath If the conversion is successful, this value is used to save the path of the recording file. 
 	virtual void onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath) = 0;
 
-	/// \brief Notify the mp4 conversion processing
-	/// \param iPercentage conversion process's percentage.
+	/// \brief Callback event of the process of the conversion to MP4 format.
+	/// \param iPercentage Percentage of conversion process. Range from ZERO(0) to ONE HUNDREAD(100).
 	virtual void onRecording2MP4Processing(int iPercentage) = 0;
 
-	/// \brief Self Recording status notify callback
-	/// \param status Recording status value.
+	/// \brief Callback event that the status of local recording changes.
+	/// \param status Value of recording status. For more details, see \link RecordingStatus \endlink enum.
 	virtual void onRecordingStatus(RecordingStatus status) = 0;
 
-	/// \brief Cloud Recording status notify callback
-	/// \param status Recording status value.
+	/// \brief Callback event that the status of cloud recording changes.
+	/// \param status Value of recording status. For more details, see \link RecordingStatus \endlink enum.
 	virtual void onCloudRecordingStatus(RecordingStatus status) = 0;
 
-	/// \brief self record privilige change callback
-	/// \param bCanRec 
+	/// \brief Callback event that the recording authority changes.
+	/// \param bCanRec TRUE indicates to enable to record.
 	virtual void onRecordPriviligeChanged(bool bCanRec) = 0;
 
-	/// \brief local recording source callback for customized ui mode
-	/// \param layout_helper layout local recording helper.
-	/// the layout_helper will be released after call end, please do layout before this call end.
+	/// \brief Callback event that the local recording source changes in the custom user interface mode.
+	/// \param layout_helper An object pointer to ICustomizedLocalRecordingLayoutHelper. For more details, see \link ICustomizedLocalRecordingLayoutHelper \endlink.
+	///The layout_helper won't be released till the call ends. The user needs to complete the related layout before the call ends. 
 	virtual void onCustomizedLocalRecordingSourceNotification(ICustomizedLocalRecordingLayoutHelper* layout_helper) = 0;
 };
 
-/// \brief Meeting recording controller interface
+/// \brief Meeting recording controller interface.
 ///
 class IMeetingRecordingController
 {
 public:
-	/// \brief Set meeting chat callback event
-	/// \param pEvent A pointer to a IMeetingRecordingCtrlEvent* that receives recording event. 
+	/// \brief Set meeting recording callback event handler.
+	/// \param pEvent A pointer to the IMeetingRecordingCtrlEvent that receives the recording event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingRecordingCtrlEvent* pEvent) = 0;
 
-	/// \brief Start recording
-	/// \param startTimestamp Start recording timestamp. 
-	/// \param recPath Specifies where the recording is to be saved, if the path is not exist, return SDKERR_INVALID_PARAMETER error code.
+	/// \brief Start recording.
+	/// \param [out] startTimestamp The timestamp when start recording.
+	/// \param recPath Specifies the path of saving the recording. The SDK will try to creat this path if the specified path does not exist. If the creation failed, an error code SDKERR_INVALID_PARAMETER returns. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StartRecording(time_t& startTimestamp, wchar_t* recPath) = 0;
 
-	/// \brief Stop recording
-	/// \param stopTimestamp Stop recording timestamp.
+	/// \brief Stop recording.
+	/// \param [out] stopTimestamp The timestamp when stop recording.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StopRecording(time_t& stopTimestamp) = 0;
 
-	/// \brief Check Can Start recording or not
-	/// \param cloud_recording cloud recording or not. 
-	/// \param userid Specifies which user you want to check.
-	/// \return If can start recording, the return value is SDKErr_Success.
-	///If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Determine if the specified user is enabled to start recording.
+	/// \param cloud_recording TRUE indicates to determine whether to enable the cloud recording. FALSE local recording. 
+	/// \param userid Specifies the user ID.
+	/// \return If the value of cloud_recording is set to TRUE and the cloud recording is enabled, the return value is SDKErr_Success.
+	///If the value of cloud_recording is set to FALSE and the local recording is enabled, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanStartRecording(bool cloud_recording, unsigned int userid) = 0;
 
-	/// \brief Check Can allow or disallow other attendee to start local recording in the meeting
-	/// \return If you can, the return value is SDKErr_Success.
-	///If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Determine if the current user own the authority to change the recording permission of the others.
+	/// \return If the user own the authority, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanAllowDisAllowLocalRecording() = 0;
 
-	/// \brief Start cloud recording
+	/// \brief Start cloud recording.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StartCloudRecording() = 0;
 
-	/// \brief Stop cloud recording
+	/// \brief Stop cloud recording.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StopCloudRecording() = 0;
 
-	/// \brief Check support local recoding feature or not
-	/// \param userid Specifies which user you want to check.
-	/// \return If support recording, the return value is SDKErr_Success.
-	///If don't support, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Determine if the user owns the authority to enable the local recording. 
+	/// \param userid Specifies the user ID.
+	/// \return If the specified user is enabled to start local recording, the return value is SDKErr_Success. 
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError IsSupportLocalRecording(unsigned int userid) = 0;
 
-	/// \brief Allow to start local recoding
-	/// \param userid Specifies which user you want to allow.
+	/// \brief Give the specified user authority for local recording.
+	/// \param userid Specifies the user ID.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError AllowLocalRecording(unsigned int userid) = 0;
 
-	/// \brief DisAllow to start local recoding
-	/// \param userid Specifies which user you want to allow.
+	/// \brief Abrogate the authority of the specified user for local recoding.
+	/// \param userid Specifies the user ID.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DisAllowLocalRecording(unsigned int userid) = 0;
 
-	/// \brief Request customized local recording source notification
-	/// \return If the function succeeds, the return value is SDKErr_Success, and you will got the onCustomizedLocalRecordingSourcenNotification callback.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
-	/// only for customized style ui mode
+	/// \brief Send a request to enable the SDK to call IMeetingRecordingCtrlEvent::onCustomizedLocalRecordingSourceNotification().
+	/// \return If the function succeeds, the return value is SDKErr_Success, and you will receive the onCustomizedLocalRecordingSourcenNotification callback event.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Valid only for custom style user interface mode only when recording.
 	virtual SDKError RequestCustomizedLocalRecordingSource() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

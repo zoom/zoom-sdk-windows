@@ -1,61 +1,59 @@
 /*!
 * \file meeting_webinar_interface.h
-* \brief Chat of Meeting Service Interface
+* \brief Meeting Service Webinar Interface.
 * 
 */
 
 #ifndef _MEETING_WEBINAR_INTERFACE_H_
 #define _MEETING_WEBINAR_INTERFACE_H_
-/// \brief Zoom SDK Namespace
-/// 
-///
+
 BEGIN_ZOOM_SDK_NAMESPACE
-/// \brief Meeting webinar callback event
+/// \brief Webinar callback event.
 ///
 class IMeetingWebinarCtrlEvent
 {
 public:
-	/// \brief change attendee to panlist result callback
-	/// \param result if success, result is zero, otherwise is the error code.
+	/// \brief Callback to promote attendees to panelist.
+	/// \param result If the promotion is successful, the result is zero(0). Otherwise it is an error code.
 	virtual void onPromptAttendee2PanelistResult(int result) = 0;
 
-	/// \brief change panlist to attendee result callback
-	/// \param result if success, result is zero, otherwise is the error code.
+	/// \brief Callback to demote attendees to panelist.
+	/// \param result If the demotion is successful, the result is zero(0), otherwise an error code.
 	virtual void onDepromptPanelist2AttendeeResult(int result) = 0;
 
-	/// \brief allow panelist to start video result callback
+	/// \brief Callback to enable the panelist to start the video.
 	virtual void onAllowPanelistStartVideoNotification() = 0;
 
-	/// \brief disallow panelist to start video result callback
+	/// \brief Callback to disable the panelist to start the video.
 	virtual void onDisallowPanelistStartVideoNotification() = 0;
 
-	/// \brief self allow to talk notification callback
+	/// \brief Callback event that attendees are required to enable the mic in the view-only mode of webinar.
 	virtual void onSelfAllowTalkNotification() = 0;
 
-	/// \brief self disallow to talk notification callback
+	/// \brief Callback event that attendees are required to turn off the mic in the view-only mode of webinar.
 	virtual void onSelfDisallowTalkNotification() = 0;
 
-	/// \brief allow attendee to chat result callback
+	/// \brief Callback to enable the attendees to chat. Available only for the host and the cohost.
 	virtual void onAllowAttendeeChatNotification() = 0;
 
-	/// \brief disallow attendee to chat result callback
+	/// \brief Callback to disable the attendees to chat. Available only for the host and the cohost.
 	virtual void onDisallowAttendeeChatNotification() = 0;
-
-	/// \brief attendee audio status notification callback
-	/// \param userid which attendee's audio status changed
-	/// \param can_talk can talk or not
-	/// \param is_muted mute or not, if can_talk is true, available
+  
+	/// \brief Attendee will receive this callback if his audio status changes.
+	/// \param userid The ID of the user whose audio status changes.
+	/// \param can_talk True indicates that it is able to use the audio. False not.  
+	/// \param is_muted TRUE indicates muted, FALSE not. This parameter works only when the value of can_talk is TRUE.
 	virtual void onAttendeeAudioStatusNotification(unsigned int userid, bool can_talk, bool is_muted) = 0;
 };
 
 /*! \struct tagWebinarMeetingStatus
-    \brief chat message item for webinar meeting
-    A more detailed struct description.
+    \brief Webinar Meeting Status.
+    Here are more detailed structural descriptions.
 */
 typedef struct tagWebinarMeetingStatus
 {
-	bool allow_panellist_start_video;///< panellist can start video or not
-	bool allow_attendee_chat;///< attendee can chat or not
+	bool allow_panellist_start_video;///<TRUE indicates that the panelist is able to turn on the video. FALSE not.
+	bool allow_attendee_chat;///<TRUE indicates that the attendee is able to chat. FALSE not.
 	tagWebinarMeetingStatus()
 	{
 		Reset();
@@ -73,63 +71,71 @@ typedef struct tagWebinarMeetingStatus
 class IMeetingWebinarController
 {
 public:
-	/// \brief Set meeting webinar controller callback event
-	/// \param pEvent A pointer to a IMeetingWebinarCtrlEvent* that receives webinar meeting event. 
+	/// \brief Set webinar controller callback event handler.
+	/// \param pEvent A pointer to the IMeetingWebinarCtrlEvent that receives the webinar callback event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingWebinarCtrlEvent* pEvent) = 0;
 
-	/// \brief Change attendee to panellist,only meeting host can call this api
-	/// \param userid Specifies which user you want to prompt.
+	/// \brief Promote the attendee to panellist. Available only for the meeting host.
+	/// \param userid Specifies the user ID to promote.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onPromptAttendee2PanelistResult() callback event.
 	virtual SDKError PromptAttendee2Panelist(unsigned int userid) = 0;
 
-	/// \brief Change panellist to attendee,only meeting host can call this api
-	/// \param userid Specifies which user you want to downgrade.
+	/// \brief Demote the panellist to attendee. Available only for the host.
+	/// \param userid Specifies the user ID to demote.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDepromptPanelist2AttendeeResult() callback event.
 	virtual SDKError DepromptPanelist2Attendee(unsigned int userid) = 0;
 
-	/// \brief Check is support allow attendee talk or not of this meeting
-	/// \return If is support allow attendee talk, the return value is SDKErr_Success.
-	///If don't support, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	/// \brief Query if the webinar supports the user to use the audio device.
+	/// \return If it supports, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError IsSupportAttendeeTalk() = 0;
 
-	/// \brief allow attendee to talk,only meeting host can call this api
-	/// \param userid Specifies which user you want to allow.
+	/// \brief The attendee is permitted to use the audio device.
+	/// \param userid Specifies the permitted user ID.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onAllowAttendeeChatNotification() callback event. Available only for the host.
 	virtual SDKError AllowAttendeeTalk(unsigned int userid) = 0;
 
-	/// \brief disallow attendee to talk,only meeting host can call this api
-	/// \param userid Specifies which user you want to disallow.
+	/// \brief Forbid the attendee to use the audio device.
+	/// \param userid Specifies the forbidden user ID.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDisallowAttendeeChatNotification() callback event. Available only for the host.
 	virtual SDKError DisallowAttendeeTalk(unsigned int userid) = 0;
 
-	/// \brief allow panellist to start video,only meeting host can call this api
+	/// \brief The panelist is permitted to start the video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onAllowPanelistStartVideoNotification() callback event. Available only for the host.
 	virtual SDKError AllowPanelistStartVideo() = 0;
 
-	/// \brief disallow panellist to start video,only meeting host can call this api
+	/// \brief Forbid the panellist to start video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDisallowPanelistStartVideoNotification() callback event. Available only for the host.
 	virtual SDKError DisallowPanelistStartVideo() = 0;
 
-	/// \brief allow attendee to chat,only meeting host can call this api
+	/// \brief The attendees are permitted to chat.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onAllowAttendeeChatNotification() callback event. Available only for the host.
 	virtual SDKError AllowAttendeeChat() = 0;
 
-	/// \brief disallow attendee to chat,only meeting host can call this api
+	/// \brief Forbid the attendees to chat.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDisallowAttendeeChatNotification() callback event. Available only for the host.
 	virtual SDKError DisallowAttendeeChat() = 0;
 
-	/// \brief Get webinar meeting status.
-	/// \return webinar meeting status
+	/// \brief Get the webinar status.
+	/// \return The status of webinar. For more details, see \link WebinarMeetingStatus \endlink.
 	virtual WebinarMeetingStatus* GetWebinarMeetingStatus() = 0;
 };
 
