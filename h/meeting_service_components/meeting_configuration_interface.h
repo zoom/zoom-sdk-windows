@@ -148,17 +148,14 @@ public:
 	virtual void onFreeMeetingEndingReminderNotification(IFreeMeetingEndingReminderHandler* handler_) = 0;
 };
 
-/// \brief Meeting Configuration Interface
+/// \brief meeting ui configuration Interface
 ///
-class IMeetingConfiguration
+class IMeetingUIElemConfiguration
 {
 public:
-	/// \brief set a handler for meeting configuration notification.
-	/// \param pEvent which will be invoked for when this message type is received.
-	virtual void SetEvent(IMeetingConfigurationEvent* pEvent) = 0;
-
-	/// \brief Reset meeting configuration
-	virtual void Reset() = 0;
+	/// \brief Set meeting UI position
+	/// \param pos Specifies where meeting UI show.
+	virtual void SetMeetingUIPos(WndPosition pos) = 0;
 
 	/// \brief Set float video panel position
 	/// \param pos Specifies where float video panel show.
@@ -172,19 +169,6 @@ public:
 	/// \param bShow Specifies bottom float toolbar show or not during sharing.
 	virtual void SetBottomFloatToolbarWndVisibility(bool bShow) = 0;
 
-	/// \brief Set the monitor id for direct share.
-	/// \param monitorID Specifies which the monitor is to be shared.Using EnumDisplayMonitors System api to get this value.
-	/// refer to szDevice in MONITORINFOEX struct. 
-	virtual void SetDirectShareMonitorID(const wchar_t* monitorID) = 0;
-
-	/// \brief Set meeting UI position
-	/// \param pos Specifies where meeting UI show.
-	virtual void SetMeetingUIPos(WndPosition pos) = 0;
-
-	/// \brief Disable waiting for host dialog
-	/// \param bDisable Specifies waiting for host dialog show or not.
-	virtual void DisableWaitingForHostDialog(bool bDisable) = 0;
-
 	/// \brief Hide the meeting information from meeting UI
 	/// \param bHide Specifies the meeting information of meeting UI hide or not.
 	virtual void HideMeetingInfoFromMeetingUITitle(bool bHide) = 0;
@@ -192,22 +176,6 @@ public:
 	/// \brief Set the meeting ID to be showed in meeting ui title
 	/// \param meetingNumber Specifies the meeting ID to be showed in meeting ui title.
 	virtual void SetMeetingIDForMeetingUITitle(UINT64 meetingNumber) = 0;
-
-	/// \brief Disable wrong password error dialog when join meeting.
-	/// \param bDisable Specifies wrong password error dialog disable or not, if disable, you will get the MEETING_FAIL_PASSWORD_ERR meeting failed error.
-	virtual void DisablePopupMeetingWrongPSWDlg(bool bDisable) = 0;
-
-	/// \brief Enable auto end other meeting when you start a new meeting.
-	/// \param bEnable Specifies auto end other meeting enable or not.
-	virtual void EnableAutoEndOtherMeetingWhenStartMeeting(bool bEnable) = 0;
-
-	/// \brief Enable auto adjust the volume of the speaker when you join audio.
-	/// \param bEnable Specifies auto adjust the volume of the speaker enable or not, default is enable.
-	virtual void EnableAutoAdjustSpeakerVolumeWhenJoinAudio(bool bEnable) = 0;
-
-	/// \brief Enable auto adjust the volume of the mic when you join audio.
-	/// \param bEnable Specifies auto adjust the volume of the mic enable or not, default is enable.
-	virtual void EnableAutoAdjustMicVolumeWhenJoinAudio(bool bEnable) = 0;
 
 	/// \brief Enable approve remote control dialog when you get other's remote control request.
 	/// \param bEnable Specifies approve remote control dialog will show when you get other's remote control request, default is enable,
@@ -228,6 +196,101 @@ public:
 	/// if enable this feature, you need to handle onInviteBtnClicked event callback
 	virtual void EnableInviteButtonOnMeetingUI(bool bEnable) = 0;
 
+	// \brief Enable enter and exit full screen button on meeting ui. 
+	/// \param bEnable Specifies enter and exit full screen button show or not in meeting window, default is enable.
+	virtual void EnableEnterAndExitFullScreenButtonOnMeetingUI(bool bEnable) = 0;
+
+	// \brief Enable left button double click for enter and exit full screen feature. 
+	/// \param bEnable Specifies Enable or disable switch full screen mode via left button double click, default is enable.
+	virtual void EnableLButtonDBClick4SwitchFullScreenMode(bool bEnable) = 0;
+
+	/// \brief Set float video windows visibility flag
+	/// \param bShow Specifies float video windows show or not during sharing.
+	virtual void SetFloatVideoWndVisibility(bool bShow) = 0;
+
+	/// \brief Redirect click event of start share btn to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onStartShareBtnClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickShareBTNEvent(bool bRedirect) = 0;
+
+	/// \brief Redirect click event of end meeting btn to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onEndMeetingBtnClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickEndMeetingBTNEvent(bool bRedirect) = 0;
+
+	/// \brief Redirect free meeting will end message to IMeetingConfigurationEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onFreeMeetingEndingReminderNotification in IMeetingConfigurationEvent
+	virtual void RedirectFreeMeetingEndingReminderDlg(bool bRedirect) = 0;
+
+	/// \brief Redirect click event of custom live stream menu to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onCustomLiveStreamMenuClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickCustomLiveStreamMenuEvent(bool bRedirect) = 0;
+
+	/// \brief Redirect click event of participant list btn to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onParticipantListBtnClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickParticipantListBTNEvent(bool bRedirect) = 0;
+
+	// \brief Enable tooltips popup window on meeting ui. 
+	/// \param bEnable Specifies tooltips window show or not in meeting window, default is enable.
+	virtual void EnableToolTipsShow(bool bEnable) = 0;
+
+	/// \brief config hide or show the instruction window of IOS device sharing.
+	/// \param bEnable specify hide or show the instruction window of IOS device sharing, default is enable.
+	/// if disable this option, you need to handle onAirPlayInstructionWndNotification event callback to show or hide your own windows.
+	virtual void EnableAirplayInstructionWindow(bool bEnable) = 0;
+
+	/// \brief enable claim host feature.
+	/// \param bEnable specify claim host feature enable or not, default is enable.
+	virtual void EnableClaimHostFeature(bool bEnable) = 0;
+
+	/// \brief Enable auto hide join audio dialog when it shown
+	/// \param bEnable specify this feature enable or not, default is disable.
+	virtual void EnableAutoHideJoinAudioDialog(bool bEnable) = 0;
+
+	/// \brief Always show app icon on taskbar list
+	/// \param bAlwaysShow specify always show or not, default is not.
+	virtual void AlwaysShowIconOnTaskBar(bool bAlwaysShow) = 0;
+
+	/// \brief disable UI elements of split screen mode.
+	/// \param bDisable specify this feature disable or not, default is enable.
+	virtual void DisableSplitScreenModeUIElements(bool bDisable) = 0;
+
+	/// \brief Show the 'Share computer sound' checkbox
+	/// \param bShow specify to show the checkbox or not, default is true.
+	virtual void SetShowAudioUseComputerSoundChkbox(bool bShow) = 0;
+
+	/// \brief Show the 'Optimize for full screen video clip' checkbox
+	/// \param bShow specify to show the checkbox or not, default is true.
+	virtual void SetShowVideoOptimizeChkbox(bool bShow) = 0;
+
+	/// \brief Show the 'Phone Call' tab
+	/// \param bShow specify to hide the tab when it's value is false, default is true. 
+	virtual void SetShowCallInTab(bool bShow) = 0;
+
+	/// \brief Show the 'Call Me' tab
+	/// \param bShow specify to hide the tab when it's value is false, default is true.
+	virtual void SetShowCallMeTab(bool bShow) = 0;
+
+	/// \brief Always show the Meeting ID information on the main video-window's title bar 
+	/// \param bAlwaysShow specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow is false, the behavior will follow Zoom's default logic.Default is false.
+	virtual void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow) = 0;
+};
+
+/// \brief Join meeting behavior configuration Interface
+///
+class IJoinMeetingBehaviorConfiguration
+{
+public:
+	/// \brief Disable wrong password error dialog when join meeting.
+	/// \param bDisable Specifies wrong password error dialog disable or not, if disable, you will get the MEETING_FAIL_PASSWORD_ERR meeting failed error.
+	virtual void DisablePopupMeetingWrongPSWDlg(bool bDisable) = 0;
+
+	/// \brief Disable waiting for host dialog
+	/// \param bDisable Specifies waiting for host dialog show or not.
+	virtual void DisableWaitingForHostDialog(bool bDisable) = 0;
+
+	/// \brief Enable auto end other meeting when you start a new meeting.
+	/// \param bEnable Specifies auto end other meeting enable or not.
+	virtual void EnableAutoEndOtherMeetingWhenStartMeeting(bool bEnable) = 0;
+
 	/// \brief config hide or show input meeting password dialog
 	/// \param bEnable specify hide or show input meeting password dialog, default is enable.
 	/// if disable this option, you need to handle onInputMeetingPasswordAndScreenNameNotification event callback.
@@ -243,48 +306,43 @@ public:
 	/// \default is disable.
 	virtual void RedirectWebinarNeedRegister(bool bRedirect) = 0;
 
-	/// \brief Redirect end other to IMeetingConfigurationEvent
-	/// \param bRedirect Redirect or not. if true, you will recv onEndOtherMeetingToJoinMeetingNotification in IMeetingConfigurationEvent
-	/// \default is disable.
-	virtual void RedirectEndOtherMeeting(bool bRedirect) = 0;
-
-	// \brief Enable enter and exit full screen button on meeting ui. 
-	/// \param bEnable Specifies enter and exit full screen button show or not in meeting window, default is enable.
-	virtual void EnableEnterAndExitFullScreenButtonOnMeetingUI(bool bEnable) = 0;
-
-	// \brief Enable left button double click for enter and exit full screen feature. 
-	/// \param bEnable Specifies Enable or disable switch full screen mode via left button double click, default is enable.
-	virtual void EnableLButtonDBClick4SwitchFullScreenMode(bool bEnable) = 0;
-
-	/// \brief Set float video windows visibility flag
-	/// \param bShow Specifies float video windows show or not during sharing.
-	virtual void SetFloatVideoWndVisibility(bool bShow) = 0;
-
 	/// \brief Pre-populate registration information of webinar
 	/// \param email Specifies default email.
 	/// \param username Specifies default username.
 	virtual void PrePopulateWebinarRegistrationInfo(const wchar_t* email, const wchar_t* username) = 0;
 
-	/// \brief Redirect click event of start share btn to IMeetingUIControllerEvent
-	/// \param bRedirect Redirect or not. if true, you will recv onStartShareBtnClicked in IMeetingUIControllerEvent
-	virtual void RedirectClickShareBTNEvent(bool bRedirect) = 0;
+	/// \brief Redirect end other to IMeetingConfigurationEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onEndOtherMeetingToJoinMeetingNotification in IMeetingConfigurationEvent
+	/// \default is disable.
+	virtual void RedirectEndOtherMeeting(bool bRedirect) = 0;
+};
 
-	/// \brief Redirect click event of end meeting btn to IMeetingUIControllerEvent
-	/// \param bRedirect Redirect or not. if true, you will recv onEndMeetingBtnClicked in IMeetingUIControllerEvent
-	virtual void RedirectClickEndMeetingBTNEvent(bool bRedirect) = 0;
+/// \brief Meeting Configuration Interface
+///
+class IMeetingConfiguration : 
+public IMeetingUIElemConfiguration, 
+public IJoinMeetingBehaviorConfiguration
+{
+public:
+	/// \brief set a handler for meeting configuration notification.
+	/// \param pEvent which will be invoked for when this message type is received.
+	virtual void SetEvent(IMeetingConfigurationEvent* pEvent) = 0;
 
-	// \brief Enable tooltips popup window on meeting ui. 
-	/// \param bEnable Specifies tooltips window show or not in meeting window, default is enable.
-	virtual void EnableToolTipsShow(bool bEnable) = 0;
+	/// \brief Reset meeting configuration
+	virtual void Reset() = 0;
 
-	/// \brief config hide or show the instruction window of IOS device sharing.
-	/// \param bEnable specify hide or show the instruction window of IOS device sharing, default is enable.
-	/// if disable this option, you need to handle onAirPlayInstructionWndNotification event callback to show or hide your own windows.
-	virtual void EnableAirplayInstructionWindow(bool bEnable) = 0;
+	/// \brief Set the monitor id for direct share.
+	/// \param monitorID Specifies which the monitor is to be shared.Using EnumDisplayMonitors System api to get this value.
+	/// refer to szDevice in MONITORINFOEX struct. 
+	virtual void SetDirectShareMonitorID(const wchar_t* monitorID) = 0;
 
-	/// \brief enable claim host feature.
-	/// \param bEnable specify claim host feature enable or not, default is enable.
-	virtual void EnableClaimHostFeature(bool bEnable) = 0;
+	/// \brief Enable auto adjust the volume of the speaker when you join audio.
+	/// \param bEnable Specifies auto adjust the volume of the speaker enable or not, default is enable.
+	virtual void EnableAutoAdjustSpeakerVolumeWhenJoinAudio(bool bEnable) = 0;
+
+	/// \brief Enable auto adjust the volume of the mic when you join audio.
+	/// \param bEnable Specifies auto adjust the volume of the mic enable or not, default is enable.
+	virtual void EnableAutoAdjustMicVolumeWhenJoinAudio(bool bEnable) = 0;
 
 	/// \brief Config DSCP.
 	/// \param dscpAudio DSCP value for audio.
@@ -292,21 +350,9 @@ public:
 	/// \param bReset reset DSCP value.
 	virtual void ConfigDSCP(int dscpAudio, int dscpVideo, bool bReset) = 0;
 
-	/// \brief Redirect click event of participant list btn to IMeetingUIControllerEvent
-	/// \param bRedirect Redirect or not. if true, you will recv onParticipantListBtnClicked in IMeetingUIControllerEvent
-	virtual void RedirectClickParticipantListBTNEvent(bool bRedirect) = 0;
-
 	/// \brief disable copy and paste feature when remote control.
 	/// \param bDisable specify this feature disable or not, default is enable.
 	virtual void DisableRemoteCtrlCopyPasteFeature(bool bDisable) = 0;
-
-	/// \brief disable UI elements of split screen mode.
-	/// \param bDisable specify this feature disable or not, default is enable.
-	virtual void DisableSplitScreenModeUIElements(bool bDisable) = 0;
-
-	/// \brief Enable auto hide join audio dialog when it shown
-	/// \param bEnable specify this feature enable or not, default is disable.
-	virtual void EnableAutoHideJoinAudioDialog(bool bEnable) = 0;
 
 	/// \brief Enable hide the full phone number for pure call in user
 	/// \param bHide specify this feature enable or not, default is not hide.
@@ -324,41 +370,9 @@ public:
 	/// \param bEnable specify this feature enable or not, default is enable.
 	virtual void EnableShareWhiteBoard(bool bEnable) = 0;
 
-	/// \brief Always show app icon on taskbar list
-	/// \param bAlwaysShow specify always show or not, default is not.
-	virtual void AlwaysShowIconOnTaskBar(bool bAlwaysShow) = 0;
-
-	/// \brief Redirect free meeting will end message to IMeetingConfigurationEvent
-	/// \param bRedirect Redirect or not. if true, you will recv onFreeMeetingEndingReminderNotification in IMeetingConfigurationEvent
-	virtual void RedirectFreeMeetingEndingReminderDlg(bool bRedirect) = 0;
-
-	/// \brief Show the 'Share computer sound' checkbox
-	/// \param bShow specify to show the checkbox or not, default is true.
-	virtual void SetShowAudioUseComputerSoundChkbox(bool bShow) = 0;
-
-	/// \brief Show the 'Optimize for full screen video clip' checkbox
-	/// \param bShow specify to show the checkbox or not, default is true.
-	virtual void SetShowVideoOptimizeChkbox(bool bShow) = 0;
-	
-	/// \brief Show the 'Phone Call' tab
-	/// \param bShow specify to hide the tab when it's value is false, default is true. 
-	virtual void SetShowCallInTab(bool bShow) = 0;
-
-	/// \brief Show the 'Call Me' tab
-	/// \param bShow specify to hide the tab when it's value is false, default is true.
-	virtual void SetShowCallMeTab(bool bShow) = 0;
-
 	/// \brief Force disable multiple share
 	/// \param bDisable specify this feature disable or not, default is enable.
 	virtual void ForceDisableMultiShare(bool bDisable) = 0;
-
-	/// \brief Always show the Meeting ID information on the main video-window's title bar 
-	/// \param bAlwaysShow specify to show the meeting id information on the windows's title bar always or not. If bAlwaysShow is false, the behavior will follow Zoom's default logic.Default is false.
-	virtual void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow) = 0;
-
-	/// \brief Redirect click event of custom live stream menu to IMeetingUIControllerEvent
-	/// \param bRedirect Redirect or not. if true, you will recv onCustomLiveStreamMenuClicked in IMeetingUIControllerEvent
-	virtual void RedirectClickCustomLiveStreamMenuEvent(bool bRedirect) = 0;
 };
 
 END_ZOOM_SDK_NAMESPACE

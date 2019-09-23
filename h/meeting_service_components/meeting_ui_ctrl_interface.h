@@ -96,11 +96,16 @@ typedef struct tagSplitScreenInfo
 class IMeetingUIControllerEvent
 {
 public:
-	virtual void onInviteBtnClicked() = 0;
+	/// \brief Callback procedure when Invite button is clicked.
+	/// \param [in out] bHandled Set it to be true if the application shows its own invite dialog. Default values if FALSE.
+	/// \remarks If bHandled is not set to be true. The default Zoom invite dialog will be shown, no matter the application handles it or not.
+	virtual void onInviteBtnClicked(bool& bHandled) = 0;
 	virtual void onStartShareBtnClicked() = 0;
 	virtual void onEndMeetingBtnClicked() = 0;
 	virtual void onParticipantListBtnClicked() = 0;
 	virtual void onCustomLiveStreamMenuClicked() = 0;
+	/// \brief Notification when SDK fails to show the default Zoom invite dialog. It only occurs when the Zoom service has something wrong.
+	virtual void onZoomInviteDialogFailed() = 0;
 };
 
 /// \brief Meeting UI Controller Interface

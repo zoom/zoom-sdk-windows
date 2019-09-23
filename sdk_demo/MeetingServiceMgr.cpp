@@ -503,10 +503,16 @@ ZOOM_SDK_NAMESPACE::IUserInfo* CMeetingServiceMgr::GetUserByUserID(unsigned int 
 }
 
 
-void CMeetingServiceMgr::onInviteBtnClicked()
+void CMeetingServiceMgr::onInviteBtnClicked(bool& bHandled)
 {
 	//todo
 	OutputDebugStringA("CMeetingServiceMgr::onInviteBtnClicked");
+}
+
+void CMeetingServiceMgr::onZoomInviteDialogFailed()
+{
+	//todo
+	OutputDebugStringA("CMeetingServiceMgr::onZoomInviteDialogFailed");
 }
 
 void CMeetingServiceMgr::onStartShareBtnClicked()

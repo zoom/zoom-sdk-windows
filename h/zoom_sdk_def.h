@@ -49,6 +49,7 @@ enum SDKError
 	SDKERR_INTELNAL_ERROR,
 	SDKERR_NO_AUDIODEVICE_ISFOUND, ///< No audio device is found
 	SDKERR_NO_VIDEODEVICE_ISFOUND, ///< No video device is found
+	SDKERR_TOO_FREQUENT_CALL, ///<Call an API too frequent
 };
 
 enum SDK_LANGUAGE_ID

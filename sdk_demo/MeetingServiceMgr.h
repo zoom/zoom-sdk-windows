@@ -125,7 +125,8 @@ public:
 
 
 	//IMeetingUIControllerEvent
-	virtual void onInviteBtnClicked();
+	virtual void onInviteBtnClicked(bool& bHandled);
+	virtual void onZoomInviteDialogFailed();
 	virtual void onStartShareBtnClicked();
 	virtual void onEndMeetingBtnClicked();
 	virtual void onParticipantListBtnClicked();

@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2018-09-11
+
+* Support to direct share with ultrasonic
+
+* Support to integrate with Outlook plugin
+
+* Support Zoom meeting invite dialog by default
+
+* Bug fixes
+
 ## 2018-08-20
 
 * Custom Meeting UI (support basic meeting function, except for Webinar and Breakout Session)

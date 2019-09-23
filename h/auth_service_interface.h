@@ -135,6 +135,8 @@ public:
 	virtual void onZoomIdentityExpired() = 0;
 };
 
+class IDirectShareServiceHelper;
+class IOutlookPluginIntegrationHelper;
 /// \brief Authentication Service Interface
 ///
 class IAuthService
@@ -179,6 +181,14 @@ public:
 	/// \brief Get login status
 	/// \return The return value is login status.To get extended error information, refer to LOGINSTATUS enum
 	virtual LOGINSTATUS GetLoginStatus() = 0;
+
+	// \brief Get outlook plugin integration helper. 
+	/// \return If you has login your account success, the return value is the pointer of the outlook plugin integreation helper, otherwise is NULL.
+	virtual IOutlookPluginIntegrationHelper* GetOutlookPluginHeler() = 0;
+
+	// \brief Get direct show service helper. 
+	/// \return If you has login your account success, the return value is the pointer of the direct share service helper, otherwise is NULL.
+	virtual IDirectShareServiceHelper* GetDirectShareServiceHeler() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif
