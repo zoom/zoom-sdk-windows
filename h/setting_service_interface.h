@@ -70,6 +70,12 @@ public:
 	virtual bool IsSelectedDevice() = 0;
 };
 
+enum SettingTabPage
+{
+	SettingTabPage_General,
+	SettingTabPage_Audio,
+	SettingTabPage_Video
+};
 /*! \struct tagShowChatDlgParam
     \brief Show meeting chat dialog Parameter.
     A more detailed struct description.
@@ -81,6 +87,7 @@ typedef struct tagShowSettingDlgParam
 	int left;///< setting dialog left position
 	HWND hSettingWnd;///< return setting dialog handle
 	bool bShow;///< show or not
+	SettingTabPage eTabPageType;
 	tagShowSettingDlgParam()
 	{
 		hParent = NULL;
@@ -88,6 +95,7 @@ typedef struct tagShowSettingDlgParam
 		left = 0;
 		hSettingWnd = NULL;
 		bShow = true;
+		eTabPageType = SettingTabPage_General;
 	}
 }ShowSettingDlgParam;
 
@@ -183,6 +191,16 @@ public:
 	/// \brief Get Enable or disable flag of video face beauty effect.
 	/// \return Enable or disable
 	virtual bool IsFaceBeautyEffectEnabled() = 0;
+
+	/// \brief Enable or disable hd video
+	/// \param bEnable Specifies enable or disable hd video
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableHDVideo(bool bEnable) = 0;
+
+	/// \brief Get Enable or disable flag of hd video.
+	/// \return Enable or disable
+	virtual bool IsHDVideoEnabled() = 0;
 };
 
 /// \brief Audio setting Interface

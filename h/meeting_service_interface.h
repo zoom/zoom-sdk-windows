@@ -390,24 +390,31 @@ public:
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError UnlockMeeting() = 0;
 
+	/// \brief Get meeting locked status
+	/// \return locked status of current meeting.
+	virtual bool IsMeetingLocked() = 0;
+
 	// \brief Get meeting information.
 	/// \return If the function succeeds, the return value is the meeting information, otherwise is NULL.
 	virtual IMeetingInfo* GetMeetingInfo() = 0;
 
-	/// \brief Get meeting connection quality.
+	/// \brief Get sharing connection quality.
+	/// \param bSending if true, will return sending status, otherwise, will return receiving status.
 	/// \return If the function succeeds, the return value is ConnectionQuality enum value.
 	/// \if you don't in meeting, will return Conn_Quality_Unknow
-	virtual ConnectionQuality GetMeetingConnQuality() = 0;
+	virtual ConnectionQuality GetSharingConnQuality(bool bSending = true) = 0;
 
 	/// \brief Get video connection quality.
+	/// \param bSending if true, will return sending status, otherwise, will return receiving status.
 	/// \return If the function succeeds, the return value is ConnectionQuality enum value.
 	/// \if you don't in meeting, will return Conn_Quality_Unknow
-	virtual ConnectionQuality GetVideoConnQuality() = 0;
+	virtual ConnectionQuality GetVideoConnQuality(bool bSending = true) = 0;
 
 	/// \brief Get audio connection quality.
+	/// \param bSending if true, will return sending status, otherwise, will return receiving status.
 	/// \return If the function succeeds, the return value is ConnectionQuality enum value.
 	/// \if you don't in meeting, will return Conn_Quality_Unknow
-	virtual ConnectionQuality GetAudioConnQuality() = 0;
+	virtual ConnectionQuality GetAudioConnQuality(bool bSending = true) = 0;
 
 	/// \brief Get meeting configuration interface.
 	/// \return If the function succeeds, the return value is meeting configuration interface.

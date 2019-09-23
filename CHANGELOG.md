@@ -1,4 +1,80 @@
 # CHANGELOG
+## 2017-12-25
+### Added
+
+1.c++ sdk
+    a> setting service
+
+add SettingTabPage option in ShowSettingDlgParam
+
+add EnableHDVideo and IsHDVideoEnabled interface in IVideoSettingContext
+
+b> meeting service
+
+add IsMeetingLocked interface in IMeetingService
+
+rename GetMeetingConnQuality to GetSharingConnQuality in IMeetingService
+
+support to get sending and receiving connection quality of audio/video/share session
+
+b> meeting audio controller
+
+fix onUserActiveAudioChange does not worked bugs in IMeetingAudioCtrlEvent
+
+c>meeting configuration
+
+add RedirectClickEndMeetingBTNEvent interface in IMeetingConfiguration
+
+add EnableClaimHostFeature interface in IMeetingConfiguration
+
+d> meeting share controller
+
+add ShowSharingAppSelectWnd interface in IMeetingShareController
+
+add share computer sound interface
+
+IsSupportEnableShareComputerSound
+
+EnableShareComputerSound
+
+add optimize for full screen video clip interface:
+
+IsSupportEnableOptimizeForFullScreenVideoClip
+
+EnableOptimizeForFullScreenVideoClip
+
+e>meeting ui controller
+
+add onEndMeetingBtnClicked callback event in IMeetingUIControllerEvent
+
+2.c# sdk
+
+a>wrap new c++ interface and callback event
+
+b>fix callback event does not worked issue
+
+3.electron sdk
+
+a>add more interface of setting service
+
+zoom_setting.js
+
+zoom_setting_audio.js
+
+zoom_setting_video.js
+
+zoom_setting_general.js
+
+zoom_setting_recording.js
+
+b>meeting service
+
+zoom_meeting_configuration.js
+
+zoom_meeting_info.js
+
+zoom_meeting.js
+
 ## 2017-11-01
 
 ### Added

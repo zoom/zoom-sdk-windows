@@ -126,6 +126,11 @@ public:
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError StartAirPlayShare() = 0;
 
+	/// \brief Show sharing app select window.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ShowSharingAppSelectWnd() = 0;
+
 	/// \brief Stop current sharing
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
@@ -205,6 +210,28 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError IsShareLocked(bool& bLocked) = 0;
+
+	/// \brief query sharing support share computer sound or not.
+	/// \param bCurEnableOrNot store the enable or not flag if support share computer sound.
+	/// \return support share computer sound or not.
+	virtual bool	 IsSupportEnableShareComputerSound(bool& bCurEnableOrNot) = 0;
+
+	/// \brief query sharing support optimize for full screen video clip or not.
+	/// \param bCurEnableOrNot store the enable or not flag if optimize for full screen video clip.
+	/// \return support optimize for full screen video clip or not.
+	virtual bool	 IsSupportEnableOptimizeForFullScreenVideoClip(bool& bCurEnableOrNot) = 0;
+
+	/// \brief enable share computer sound.
+	/// \param bEnable enable or not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableShareComputerSound(bool bEnable) = 0;
+
+	/// \brief enable optimize for full screen video clip.
+	/// \param bEnable enable or not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnableOptimizeForFullScreenVideoClip(bool bEnable) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

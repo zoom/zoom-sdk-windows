@@ -49,7 +49,8 @@ public ZOOM_SDK_NAMESPACE::IMeetingParticipantsCtrlEvent,
 public ZOOM_SDK_NAMESPACE::IMeetingRecordingCtrlEvent,
 public ZOOM_SDK_NAMESPACE::IMeetingRemoteCtrlEvent,
 public ZOOM_SDK_NAMESPACE::IMeetingShareCtrlEvent,
-public ZOOM_SDK_NAMESPACE::IMeetingVideoCtrlEvent
+public ZOOM_SDK_NAMESPACE::IMeetingVideoCtrlEvent,
+public ZOOM_SDK_NAMESPACE::IMeetingUIControllerEvent
 {
 public:
 	CMeetingServiceMgr();
@@ -99,7 +100,7 @@ public:
 
 	//IMeetingAudioCtrlEvent
 	virtual void onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList = NULL);
-	virtual void onUserActiveAudioChange(unsigned int userId);
+	virtual void onUserActiveAudioChange(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstActiveAudioUser);
 
 	//IMeetingChatCtrlEvent
 	virtual void onChatMsgNotifcation(ZOOM_SDK_NAMESPACE::IChatMsgInfo* chatMsg, const wchar_t* ccc);
@@ -111,6 +112,12 @@ public:
 	virtual void onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId);
 	virtual void onLockShareStatus(bool bLocked);
 	virtual void onShareContentNotification(ZOOM_SDK_NAMESPACE::ShareInfo& shareInfo);
+
+
+	//IMeetingUIControllerEvent
+	virtual void onInviteBtnClicked();
+	virtual void onStartShareBtnClicked();
+	virtual void onEndMeetingBtnClicked();
 
 private:
 	IMeetingserviceMgrEvent* m_pSink;

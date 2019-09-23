@@ -53,8 +53,8 @@ public:
 	virtual void onUserAudioStatusChange(IList<IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList = NULL) = 0;
 
 	/// \brief active audio change callback
-	/// \param userId Specifies which active audio user changed.
-	virtual void onUserActiveAudioChange(unsigned int userId) = 0;
+	/// \param lstActiveVideo the list of active audio user.
+	virtual void onUserActiveAudioChange(IList<unsigned int >* plstActiveAudio) = 0;
 };
 
 /// \brief Meeting audio controller interface

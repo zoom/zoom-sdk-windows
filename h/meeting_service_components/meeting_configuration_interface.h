@@ -155,6 +155,10 @@ public:
 	/// \param bRedirect Redirect or not. if true, you will recv onStartShareBtnClicked in IMeetingUIControllerEvent
 	virtual void RedirectClickShareBTNEvent(bool bRedirect) = 0;
 
+	/// \brief Redirect click event of end meeting btn to IMeetingUIControllerEvent
+	/// \param bRedirect Redirect or not. if true, you will recv onEndMeetingBtnClicked in IMeetingUIControllerEvent
+	virtual void RedirectClickEndMeetingBTNEvent(bool bRedirect) = 0;
+
 	// \brief Enable tooltips popup window on meeting ui. 
 	/// \param bEnable Specifies tooltips window show or not in meeting window, default is enable.
 	virtual void EnableToolTipsShow(bool bEnable) = 0;
@@ -163,6 +167,10 @@ public:
 	/// \param bEnable specify hide or show the instruction window of IOS device sharing, default is enable.
 	/// if disable this option, you need to handle onAirPlayInstructionWndNotification event callback to show or hide your own windows.
 	virtual void EnableAirplayInstructionWindow(bool bEnable) = 0;
+
+	/// \brief enable claim host feature.
+	/// \param bEnable specify claim host feature enable or not, default is enable.
+	virtual void EnableClaimHostFeature(bool bEnable) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

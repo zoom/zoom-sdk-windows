@@ -83,6 +83,11 @@ bool CMeetingServiceMgr::Init()
 	if (m_pVideoCtrl)
 		m_pVideoCtrl->SetEvent(this);
 
+	if (m_pMeetingService->GetUIController())
+	{
+		m_pMeetingService->GetUIController()->SetEvent(this);
+	}
+
 	if (ZOOM_SDK_NAMESPACE::CreateSettingService(&m_pSettingService) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 		return false;
 
@@ -117,6 +122,14 @@ bool CMeetingServiceMgr::Start(ZOOM_SDK_NAMESPACE::StartParam& startParam)
 
 	if (!IsInMeeting(m_pMeetingService->GetMeetingStatus()))
 	{	
+		//to config something
+		{
+			if (m_pMeetingService->GetMeetingConfiguration())
+			{
+				//todo
+			}
+		}
+		//
 		m_pMeetingService->GetMeetingConfiguration()->SetSharingToolbarVisibility(true);
 		if (m_pMeetingService->Start(startParam) != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
 			return false;
@@ -321,7 +334,10 @@ void CMeetingServiceMgr::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatu
 
 void CMeetingServiceMgr::onMeetingSecureKeyNotification(const char* key, int len, ZOOM_SDK_NAMESPACE::IMeetingExternalSecureKeyHandler* pHandler)
 {
-
+	if (pHandler)
+	{
+		pHandler->Confirm();
+	}
 }
 
 void CMeetingServiceMgr::onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath)
@@ -381,7 +397,7 @@ void CMeetingServiceMgr::onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_
 	//todo
 }
 
-void CMeetingServiceMgr::onUserActiveAudioChange(unsigned int userId)
+void CMeetingServiceMgr::onUserActiveAudioChange(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstActiveAudioUser)
 {
 	//todo
 }
@@ -440,4 +456,23 @@ ZOOM_SDK_NAMESPACE::IUserInfo* CMeetingServiceMgr::GetUserByUserID(unsigned int 
 	}
 
 	return NULL;
+}
+
+
+void CMeetingServiceMgr::onInviteBtnClicked()
+{
+	//todo
+	OutputDebugStringA("CMeetingServiceMgr::onInviteBtnClicked");
+}
+
+void CMeetingServiceMgr::onStartShareBtnClicked()
+{
+	//todo
+	OutputDebugStringA("CMeetingServiceMgr::onStartShareBtnClicked");
+}
+
+void CMeetingServiceMgr::onEndMeetingBtnClicked()
+{
+	//todo
+	OutputDebugStringA("CMeetingServiceMgr::onEndMeetingBtnClicked");
 }

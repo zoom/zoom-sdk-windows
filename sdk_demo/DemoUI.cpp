@@ -400,6 +400,8 @@ bool CDemoUI::SDKInit()
 		ShowWaiting(true);
 	}
 #endif
+
+	return true;
 }
 
 bool CDemoUI::SDKAuth()
