@@ -20,7 +20,7 @@ enum AudioStatus
 	Audio_Muted_ByHost,///<Muted by the host.
 	Audio_UnMuted_ByHost,///<Unmuted by the host.
 	Audio_MutedAll_ByHost,///<The host mutes all.
-	Audio_UnMutedAll_ByHost,///<The hos unmutes all.
+	Audio_UnMutedAll_ByHost,///<The host unmutes all.
 };
 /*! \enum AudioType
     \brief Define the audio type of the user.

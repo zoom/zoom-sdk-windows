@@ -19,7 +19,7 @@ enum LiveStreamStatus
 	LiveStreamStatus_InProgress,///<In progress
 	LiveStreamStatus_Connecting,///<Be connecting
 	LiveStreamStatus_Start_Failed_Timeout,///<Connect timeout.
-	LiveStreamStatus_Start_Failed,///<Connect failed to the live streaming. 
+	LiveStreamStatus_Start_Failed,///<Start live streaming failed. 
 	LiveStreamStatus_Ended,///<End.
 };
 
@@ -73,7 +73,7 @@ public:
 	/// \brief Start live streaming.
 	/// \param streamingURL The URL of live streaming.
 	/// \param streamingKey The key of live streaming. 
-	/// \param broadcastURL The broadcast url of live-stream.
+	/// \param broadcastURL The broadcast URL of live-stream.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Get the parameters from the third party of live stream service

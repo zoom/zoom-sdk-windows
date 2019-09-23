@@ -27,7 +27,7 @@ enum NavigateError
 	NavigateError_ConnectionTimeout,///<INET_E_CONNECTION_TIMEOUT (0x800C000BL or -2146697205)
 	NavigateError_CannotLoadData,///<INET_E_CANNOT_LOAD_DATA (0x800C000FL or -2146697201)
 	NavigateError_BrowserContainerError,///<Browser container error.
-	NavigateError_Others,///<Some other errors.
+	NavigateError_Others,///<Some other issues.
 };
 
 /// \brief Embedded Browser Callback Event.
@@ -78,7 +78,7 @@ public:
 
 	/// \brief Get the title of the present displayed content.
 	/// \return The title of the present displayed content.
-	///If the resource is a HTML webpage, the name is the title of the document. 
+	///If the resource is a HTML web-page, the name is the title of the document. 
 	///If the resource is a folder or file on the network or local computer, the name is the full path of folder or file in Universal Naming Convention (UNC) format. 
 	virtual const char* GetTitle() = 0;
 

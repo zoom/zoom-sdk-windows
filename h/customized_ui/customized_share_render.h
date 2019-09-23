@@ -26,7 +26,7 @@ public:
 	/// \brief Callback event the moment received the shared content.
 	virtual void onSharingContentStartRecving() = 0;
 
-	/// \brief Callback event of changed sender or sharing closed when receiving the shared content.
+	/// \brief Callback event of changed sender or the sharing closes when receiving the shared content.
 	/// \param userid The new sender or the sender of new sharing content.
 	virtual void onSharingSourceUserIDNotification(unsigned int userid) = 0;
 
@@ -97,7 +97,7 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	///Call the function when the parent window gets WM_MOVE windows message.
-	/// \remarks Call the function to complete the redraw work once received the ICustomizedShareRenderEvent::onWindowMsgNotification() callback event and dealed with WM_MOVE. Otherwise there maybe problem with the view.
+	/// \remarks Call the function to complete the redraw work once received the ICustomizedShareRenderEvent::onWindowMsgNotification() callback event and dealt with WM_MOVE. Otherwise there maybe problem with the view.
 	virtual SDKError HandleWindowsMoveMsg() = 0;
 	virtual ~ICustomizedShareRender(){}
 };

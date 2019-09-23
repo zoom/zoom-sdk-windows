@@ -1,6 +1,6 @@
-/*!
+﻿/*!
 * \file meeting_h323_helper_interface.h
-* \brief Meeting Service H.323 helper Interface
+* \brief H.323 helper Interface of meeting service
 * Valid for both ZOOM style and user custom interface mode.
 */
 #ifndef _MEETING_H323_HELPER_INTERFACE_H_
@@ -9,7 +9,7 @@
 #include <string>
 
 BEGIN_ZOOM_SDK_NAMESPACE
-/// \brief Meeting H.323 helper Callback Event.
+/// \brief Callback Event of Meeting H.323 helper.
 ///
 
 /*! \enum H323CalloutStatus
@@ -19,7 +19,7 @@ BEGIN_ZOOM_SDK_NAMESPACE
 enum H323CalloutStatus
 {
 	H323Callout_Unknown, ///<Used only for initialization.
-	H323Callout_Success, ///<Call successfully.
+	H323Callout_Success, ///<Call out successfully.
 	H323Callout_Ring,   ///<Bell during the call.
 	H323Callout_Timeout, ///<Call timeout.
 	H323Callout_Failed, ///<Call fails.
@@ -33,10 +33,10 @@ enum H323ParingResult
 {
 	H323Paring_Unknown,///<Used only for initialization. 
 	H323Paring_Success,///<Pairing successful.
-	H323Paring_Meeting_Not_Exist,///<Pairing meeting does not exist.
+	H323Paring_Meeting_Not_Exist,///<The meeting being paired does not exist.
 	H323Paring_Paringcode_Not_Exist,///<Pairing code does not exist.
 	H323Paring_No_Privilege, ///<No pairing privilege.
-	H323Paring_Other_Error, ///<Other problems.
+	H323Paring_Other_Error, ///<Other issues.
 };
 
 /// \brief Meeting H.323 Helper callback event.
@@ -80,7 +80,7 @@ public:
 	virtual const wchar_t* GetE164Num() = 0;
 	///<Virtual function definition.
 	virtual H323DeviceType GetDeviceType() = 0;
-
+	virtual bool IsCustomizedH323Device() = 0;
 	virtual ~IH323Device(){};
 };
 
@@ -137,6 +137,11 @@ public:
 		return _type;
 	}
 
+	virtual bool IsCustomizedH323Device()
+	{
+		return true;
+	}
+
 private:
 	H323DeviceType _type;///<Type of device.
 	std::wstring _name;///<Device name.
@@ -167,7 +172,7 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanPairingMeeting(UINT64 meetingNum) = 0;
 
-	/// \brief Send Meeting paring code
+	/// \brief Send Meeting paring code.
 	/// \param meetingNum Specifies which meeting to paring. 
 	/// \param paringCode Code for paring
 	/// \return If the function succeeds, the return value is SDKErr_Success.

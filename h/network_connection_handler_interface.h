@@ -15,7 +15,7 @@ class IProxySettingHandler
 public:
 	virtual ~IProxySettingHandler(){};
 	/// \brief Get the address of the proxy host.
-	/// Return The address of the proxy host.
+	/// Return the address of the proxy host.
 	virtual const wchar_t* GetProxyHost() = 0;
 	/// \brief Get the proxy port.
 	///Return The value of the proxy port.
@@ -50,7 +50,7 @@ public:
 	/// \brief Get the serial number of the SSL certificate.
 	virtual const wchar_t* GetCertSerialNum() = 0;
 	
-	/// \brief get the ssl certificate's fingerprint
+	/// \brief get the SSL certificate's fingerprint
 	virtual const wchar_t* GetCertFingerprint() = 0;
 
 	/// \brief The SSL certificate is trusted.

@@ -106,6 +106,8 @@ public:
 	virtual void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status);
 	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid);
 	virtual void onHostRequestStartVideo(ZOOM_SDK_NAMESPACE::IRequestStartVideoHandler* handler_);
+	virtual void onActiveSpeakerVideoUserChanged(unsigned int userid){};
+	virtual void onActiveVideoUserChanged(unsigned int userid){};
 
 	//IMeetingAudioCtrlEvent
 	virtual void onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList = NULL);
@@ -122,6 +124,7 @@ public:
 	virtual void onSharingStatus(ZOOM_SDK_NAMESPACE::SharingStatus status, unsigned int userId);
 	virtual void onLockShareStatus(bool bLocked);
 	virtual void onShareContentNotification(ZOOM_SDK_NAMESPACE::ShareInfo& shareInfo);
+	virtual void onMultiShareSwitchToSingleShareNeedConfirm(ZOOM_SDK_NAMESPACE::IShareSwitchMultiToSingleConfirmHandler* handler_);
 
 
 	//IMeetingUIControllerEvent
@@ -131,6 +134,7 @@ public:
 	virtual void onEndMeetingBtnClicked();
 	virtual void onParticipantListBtnClicked();
 	virtual void onCustomLiveStreamMenuClicked();
+	virtual void onCCBTNClicked(){}
 
 private:
 	IMeetingserviceMgrEvent* m_pSink;

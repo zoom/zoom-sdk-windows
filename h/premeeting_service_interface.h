@@ -10,7 +10,7 @@
 BEGIN_ZOOM_SDK_NAMESPACE
 
 /*! \enum PremeetingAPIResult
-    \brief Premeeting API request result.
+    \brief The result of premeeting API request.
     Here are more detailed structural descriptions.
 */
 enum PremeetingAPIResult
@@ -19,7 +19,7 @@ enum PremeetingAPIResult
 	PREMETAPIRET_SUCCESS,///<Calls API successfully.
 };
 
-/// \brief The interface to query the meeting basic information.
+/// \brief The interface to query the basic information of meeting.
 class IQueryMeetingItemDateInfoHelper
 {
 public:
@@ -40,7 +40,7 @@ public:
 class ISelectMeetingItemDateHelper
 {
 public:
-	/// \brief Set the start time of the specified meeting. It is recommended to use the operating system time zone.
+	/// \brief Set the start time of the specified meeting. It is recommended to use the time zone of the operating system.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError    SelectStartTime(time_t time) = 0;
@@ -176,7 +176,7 @@ public:
 	/// \return TRUE indicates that the video of host is enabled.
 	virtual bool IsHostVideoOnOrOff() = 0;
 	
-	/// \brief Determine if the video of the paticipant is enabled when joins the meeting.
+	/// \brief Determine if the video of the participant is enabled when joining meeting.
 	/// \return TRUE indicates that the video of the participant is enabled.
 	virtual bool IsAttendeeVideoOnOrOff() = 0;
 };
@@ -568,7 +568,7 @@ public:
 	virtual SDKError ScheduleMeeting(WndPosition& wndParam) = 0;
 
 	/// \brief Edit Meeting.
-	/// \param pItem The object created via CreateScheduleMeetingItem.
+	/// \param pItem The object created via CreateEditMeetingItem.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Once the function is called successfully, the user will receive the callback event via IPreMeetingServiceEvent::onScheduleOrEditMeeting ().

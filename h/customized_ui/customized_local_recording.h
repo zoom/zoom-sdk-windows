@@ -53,11 +53,11 @@ public:
 	
 	/// \brief Add the video source of specified user to the list of videos recorded.
 	/// \param user_id Specify the user ID.
-	/// \return If the function succeeds, the return value is SDKErr_SUCCESS. If the specified user is out of the list of avalaible video source, it returns SDKERR_INVALID_PARAMETER.
+	/// \return If the function succeeds, the return value is SDKErr_SUCCESS. If the specified user is out of the list of available video source, it returns SDKERR_INVALID_PARAMETER.
 	virtual SDKError AddVideoSourceToRecList(unsigned int user_id) = 0;
 	
 	/// \brief Choose the current active video source.
-	/// \return If the function succeeds, the return value is SDKErr_SUCCESS. Otherwise returns the SDKERR_INVALID_PARAMETER。
+	/// \return If the function succeeds, the return value is SDKErr_SUCCESS. Otherwise returns the SDKERR_INVALID_PARAMETER.
 	virtual SDKError SelectActiveVideoSource() = 0;
 	
 	/// \brief Choose the video source in the list of shared content via specified user ID.

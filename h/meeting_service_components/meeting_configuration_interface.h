@@ -26,7 +26,7 @@ public:
 		REQUIRED_INFO_TYPE_ScreenName,///<The user needs to enter the screen name. Via the InputMeetingPasswordAndScreenName() to specify the screen name information.
 	};
 
-	/// \brief Get the information to complete.
+	/// \brief Get the type of required information to be completed.
 	/// \return If the function succeeds, the return is enumerated in RequiredInfoType enum.
 	virtual RequiredInfoType GetRequiredInfoType() = 0;
  
@@ -125,22 +125,22 @@ public:
 		FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once,///<Upgrade to the priority meeting at once. 
 		FreeMeetingEndingReminder_Can_UpgradeAccount,///<Upgrade the account.
 		FreeMeetingEndingReminder_Reminder,///<Remind to pay.
-		FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Failed,///<Upgrade fialed.
+		FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Failed,///<Upgrade failed.
 		FreeMeetingEndingReminder_UpgradeMeeting_ToPro_Success,///<Upgrade successfully.
 	};
 
 	/// \brief Get the reminder type of ending free meeting.
 	virtual FreeMeetingEndingReminderType GetType() = 0;
 
-	/// \brief Upgrade the meeting if the inform is the FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once.
+	/// \brief Upgrade the meeting if the notification is the FreeMeetingEndingReminder_Can_UpgradeMeeting_ToPro_Once.
 	/// \remarks The SDK will destroy this object instance after calling this function.
 	virtual SDKError UpgradeMeeting() = 0;
 
-	/// \brief Upgrade the account if the inform is the FreeMeetingEndingReminder_Can_UpgradeAccount.
+	/// \brief Upgrade the account if the notification is the FreeMeetingEndingReminder_Can_UpgradeAccount.
 	/// \remarks The SDK will destroy this object instance after calling this function.
 	virtual SDKError UpgradeAccount() = 0;
 
-	/// \brief Ignore the ongoing inform.
+	/// \brief Ignore the current notification.
 	/// \remarks The SDK will destroy this object instance after calling this function.
 	virtual SDKError Cancel() = 0;
 	virtual ~IFreeMeetingEndingReminderHandler() {};
@@ -149,14 +149,19 @@ public:
 /*! \enum SDKCustomizedStringType
 	\brief Custom string type.
 	Here are more detailed structural descriptions.
+	\remark Read the description of the each type carefully. You must follow the format to custom your own string. Wrong usage may cause unpredictable crash.
 */
 enum SDKCustomizedStringType
 {
-	SDK_Customized_LiveStream_MenuString_LiveOn_String = 0,///<This type is used to define a string to replace the menu item ON %S on live streaming. The new string must end up with "%s" so that the menu item can show correctly.
-	SDK_Customized_LiveStream_MenuString_LiveView_String,///<This type is used to define a string to replace the menu item VIEW STREAM ON %S on live streaming. The new string must end up with "%s" so that the menu item can show correctly.
-	SDK_Customized_LiveStream_MenuString_LiveStop_String,///<This type is used to define a string to replace the menu item STOP LIVE STREAM on live streaming.
-	SDK_Customized_LiveStream_MenuString_CopyURL_String,///<This type is used to define a string to replace the menu item COPY STREAMING LINK on live streaming.
-
+	SDK_Customized_LiveStream_MenuString_LiveOn_String = 0,///<The new string must end up with "%s" so that the menu item can show correctly. This type is used to define a string to replace the menu item ON %S on live streaming. 
+	SDK_Customized_LiveStream_MenuString_LiveView_String,///<The new string must end up with "%s" so that the menu item can show correctly. This type is used to define a string to replace the menu item VIEW STREAM ON %S on live streaming.
+	SDK_Customized_LiveStream_MenuString_LiveStop_String,///<The new string must be a pure string so that it can show correctly. This type is used to define a string to replace the menu item STOP LIVE STREAM on live streaming.
+	SDK_Customized_LiveStream_MenuString_CopyURL_String,///<The new string must be a pure string so that it can show correctly. This type is used to define a string to replace the menu item COPY STREAMING LINK on live streaming.
+	SDK_Customized_Title_App,	///<The new string must be a pure string so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI.
+	SDK_Customized_Title_ZoomVideo,  ///<The new string must has the same format as "Zoom Participant ID: %s   Meeting ID: %s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI.
+	SDK_Customized_Title_FreeZoomVideo, ///<The new string must has the same format as "Zoom Participant ID: %s  %d-Minutes Meeting ID:%s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI when the user is free user and in view-only status. 
+	SDK_Customized_Title_ViewOnly_ZoomVideo, ///<The new string must end up with "%s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI.
+	SDK_Customized_Title_ViewOnly_FreeZoomVideo, ///<The new string must has the same format as "Zoom %d-Minutes Meeting ID: %s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI when the user is free user and in view-only status. 
 };
 /// \brief Meeting configuration event callback.
 ///
@@ -167,9 +172,9 @@ public:
 	/// \param pHandler A pointer to the instance, the user may use this object to operate. For more details, see \link IMeetingPasswordAndScreenNameHandler \endlink.
 	virtual void onInputMeetingPasswordAndScreenNameNotification(IMeetingPasswordAndScreenNameHandler* pHandler) = 0;
 
-	/// \brief This callback event may be triggered when the user enables the AirPlay introducion.
+	/// \brief This callback event may be triggered when the user enables the AirPlay introduction.
 	/// \param bShow Show or hide the AirPlay instruction window. 
-	/// \param airhostName The airhost name displayed on IOS device.
+	/// \param airhostName The air-host name displayed on IOS device.
 	virtual void onAirPlayInstructionWndNotification(bool bShow, const wchar_t* airhostName) = 0;
 
 	/// \brief During the webinar, this callback event will be triggered if the user needs to register.
@@ -183,6 +188,10 @@ public:
 	/// \brief The SDK will trigger this callback event at the end of the free meeting to inform the user if he wants to upgrade the meeting.
 	/// \param handler_ An object pointer used by user to complete all the related operations. For more details, see \link IFreeMeetingEndingReminderHandler \endlink.
 	virtual void onFreeMeetingEndingReminderNotification(IFreeMeetingEndingReminderHandler* handler_) = 0;
+
+	/// \brief The SDK will trigger this callback event during the free meeting to inform the user how many free time is left.
+	/// \param leftTime The time left in seconds of the meeting.
+	virtual void onFreeMeetingRemainTime(unsigned int leftTime) = 0;
 };
 
 /// \brief Meeting user configuration interface.
@@ -200,7 +209,7 @@ public:
 	virtual void SetFloatVideoPos(WndPosition pos) = 0;
 
 	/// \brief Set the visibility of the sharing toolbar. Default: FALSE. 
-	/// \param bShow TRUE indicates enable to diaplay the sharing toolbar. FALSE not. 
+	/// \param bShow TRUE indicates enable to display the sharing toolbar. FALSE not. 
 	virtual void SetSharingToolbarVisibility(bool bShow) = 0;
 
 	/// \brief Set the visibility of the toolbar at the bottom of the meeting window. Default: TRUE.
@@ -230,7 +239,7 @@ public:
 	virtual void EnableLeaveMeetingOptionForHost(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the INVITE button in the toolbar during the meeting. Default value: TRUE.
-	/// \param bEnable True indicats to display the button. FALSE not.
+	/// \param bEnable True indicates to display the button. FALSE not.
 	/// \remarks The user will receive the IMeetingUIControllerEvent::onInviteBtnClicked() callback event when he clicks the INVITE button. If the callback event is not handled, the SDK will pop up a ZOOM custom invitation dialog.
 	///The user will receive the IMeetingUIControllerEvent::onZoomInviteDialogFailed() callback event if the dialog box is failed to display.
 	virtual void EnableInviteButtonOnMeetingUI(bool bEnable) = 0;
@@ -264,16 +273,21 @@ public:
 
 	/// \brief Set if it is able to handle the event with SDK user's own program by clicking CUSTOM LIVE STREAM button in the meeting. Default: FALSE.
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
-	/// \remarks If the user calls this funciton to convert, the SDK will trigger the IMeetingUIControllerEvent::onCustomLiveStreamMenuClicked() instead of jumping to the live video page when clicking on the custom live stream, then deal with the subsequent logic.
+	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onCustomLiveStreamMenuClicked() instead of jumping to the live video page when clicking on the custom live stream, then deal with the subsequent logic.
 	virtual void RedirectClickCustomLiveStreamMenuEvent(bool bRedirect) = 0;
 
 	/// \brief Set if it is able to handle the event with SDK user's own program by clicking PARTICIPANT LIST button in the meeting. Default: FALSE.
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
-	/// \remarks The list won't unfold by clicking partcipant list button if the user calls this function to set to convert. The SDK will trigger the IMeetingUIControllerEvent::onCustomLiveStreamMenuClicked(), and the user shall deal with the subsequent logic himself.	
+	/// \remarks The list won't unfold by clicking participant list button if the user calls this function to set to convert. The SDK will trigger the IMeetingUIControllerEvent::onParticipantListBtnClicked(), and the user shall deal with the subsequent logic himself.	
 	virtual void RedirectClickParticipantListBTNEvent(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to show tooltip in the meeting. Default: TRUE. 
-	/// \param bEnable TRUE indicates to enable the tooltip in the meeting.
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking Closed Caption button in the meeting. Default: FALSE.
+	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
+	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onCCBTNClicked(), and the user shall deal with the subsequent logic himself.
+	virtual void RedirectClickCCBTNEvent(bool bRedirect) = 0;
+
+	/// \brief Set if it is able to show tool-tip in the meeting. Default: TRUE. 
+	/// \param bEnable TRUE indicates to enable the tool-tip in the meeting.
 	virtual void EnableToolTipsShow(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the introduction window when sharing on the IOS device. Default: TRUE.
@@ -289,8 +303,8 @@ public:
 	/// \param bEnable TRUE indicates to hide the audio choose dialog box when join the meeting. FALSE not.
 	virtual void EnableAutoHideJoinAudioDialog(bool bEnable) = 0;
 
-	/// \brief Set if it is able to display always the icon on the taskbar. Default: FALSE.
-	/// \param bAlwaysShow TRUE indicates to display always the icon on the taskbar. 
+	/// \brief Set if it is able to display always the icon on the task-bar. Default: FALSE.
+	/// \param bAlwaysShow TRUE indicates to display always the icon on the task-bar. 
 	virtual void AlwaysShowIconOnTaskBar(bool bAlwaysShow) = 0;
 
 	/// \brief Set if it is able to enable split screen during the meeting. Default: FALSE.
@@ -298,19 +312,19 @@ public:
 	/// \remarks This function is valid only on the primary screen. Set the value to FALSE does not mean to enable the split screen due to other restrictions.
 	virtual void DisableSplitScreenModeUIElements(bool bDisable) = 0;
 
-	/// \brief Set the visibility of the 'Share computer sound' checkbox in the sharing window. Default: TRUE.
+	/// \brief Set the visibility of the SHARE COMPUTER SOUND check-box in the sharing window. Default: TRUE.
 	/// \param bShow TRUE indicates to display. FALSE not.
 	virtual void SetShowAudioUseComputerSoundChkbox(bool bShow) = 0;
 
-	/// \brief Set the visibility of the 'Optimize for full screen video clip' checkbox in the sharing window. Default: TRUE.
+	/// \brief Set the visibility of the OPTIMIZE FOR FULL SCREEN VIDEO CLIP check-box in the sharing window. Default: TRUE.
 	/// \param bShow TRUE indicates to display. FALSE not.
 	virtual void SetShowVideoOptimizeChkbox(bool bShow) = 0;
 
-	/// \brief Set the visibility of 'Phone Call' tab in the audio dialog box when join the meeting. Default value: TRUE.
+	/// \brief Set the visibility of PHONE CALL tab in the audio dialog box when join the meeting. Default value: TRUE.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowCallInTab(bool bShow) = 0;
 
-	/// \brief Set the visibility of 'Call me' tab in the audio dialog box when join the meeting. Default value: TRUE.
+	/// \brief Set the visibility of CALL ME tab in the audio dialog box when join the meeting. Default value: TRUE.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowCallMeTab(bool bShow) = 0;
 
@@ -320,12 +334,26 @@ public:
 	virtual void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow) = 0;
 	
 	/// \brief Use the custom string to replace the specified menu item.
-	/// \param customizedType Speicify the menu item type. For more information, see \link SDKCustomizedStringType \endlink enum.
+	/// \param customizedType Specify the menu item type. For more information, see \link SDKCustomizedStringType \endlink enum.
 	/// \param customizedString Specify the custom string. You can set it to NULL to remove the custom string for the specified item.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks If customizedString is not NULL with length zero(0), the return value is SDKERR_INVALID_PARAMETER.
 	virtual SDKError SetUICustomizedString(SDKCustomizedStringType customizedType, const wchar_t* customizedString) = 0;
+
+	virtual SDKError DisableTopMostAttr4SettingDialog(bool bDisable) = 0;
+
+	virtual SDKError EnableGrabShareWithoutReminder(bool bEnable) = 0;
+	
+	/// \brief Set the visibility of the SWITCH TO SINGLE PARTICIPANT SHARE dialog box when multiple participants are sharing and the user try to change the setting to single share. Default: TURE. 
+	/// \param bEnable TRUE indicates to show dialog box when join the meeting. FALSE not.
+	/// \remarks If the dialog is disabled to show, you will retrieve IMeetingShareCtrlEvent::onMultiShareSwitchToSingleShareNeedConfirm callback event.
+	virtual void EnableShowShareSwitchMultiToSingleConfirmDlg(bool bEnable) = 0;
+
+	/// \brief Set the visibility of the REMAINING MEETING TIME button in the meeting. Default: FALSE. 
+	/// \param bEnable TRUE indicates to hide the button when the free meeting need be reminded. FALSE not.
+	/// \remarks If the button is disabled to show, you will retrieve IMeetingConfigurationEvent::onFreeMeetingRemainTime callback event.
+	virtual void DisableFreeMeetingRemainTimeNotify(bool bDisable) = 0;
 };
 
 /// \brief Meeting connect configuration Interface
@@ -366,17 +394,17 @@ public:
 	/// \param username Configure default username.
 	virtual void PrePopulateWebinarRegistrationInfo(const wchar_t* email, const wchar_t* username) = 0;
 
-	/// \brief Set if it is able to redirect the processe to end another meeting by user's own program. Default: FALSE. 
+	/// \brief Set if it is able to redirect the process to end another meeting by user's own program. Default: FALSE. 
 	/// \param bRedirect TRUE indicates to redirect. FALSE not. If it is TRUE, the SDK will trigger the  IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification().
 	/// \remarks This function doesn't work if the IJoinMeetingBehaviorConfiguration::EnableAutoEndOtherMeetingWhenStartMeeting(true) is also called. If redirect successfully, the SDK will trigger the IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification() callback event. For more details, see \link IMeetingConfigurationEvent::onEndOtherMeetingToJoinMeetingNotification() \endlink.
 	virtual void RedirectEndOtherMeeting(bool bRedirect) = 0;
-	/// \brief Set if it is able to force partcipants to start video when joining the meeting.
-	/// \param bEnable TRUE indicates to force partcipants to start video.
+	/// \brief Set if it is able to force participants to start video when joining the meeting.
+	/// \param bEnable TRUE indicates to force participants to start video.
 	/// \remarks The default behavior depends on the configuration of the meeting.
 	virtual void EnableForceAutoStartMyVideoWhenJoinMeeting(bool bEnable) = 0;
 
-	/// \brief Set if it is able to force partcipants to turn off video when joining the meeting.
-	/// \param bEnable TRUE indicates to force partcipants to turn off video.
+	/// \brief Set if it is able to force participants to turn off video when joining the meeting.
+	/// \param bEnable TRUE indicates to force participants to turn off video.
 	/// \remarks The default behavior depends on the configuration of the meeting.
 	virtual void EnableForceAutoStopMyVideoWhenJoinMeeting(bool bEnable) = 0;
 
@@ -405,15 +433,15 @@ public:
 
 	/// \brief Set if it is able to auto-adjust the volume of the speaker when joining the meeting. Default: TRUE.
 	/// \param bEnable TRUE indicates to auto-adjust the volume of the speaker. FALSE not.
-	/// \remarks If it is TRUE, the SDK will adjust the speaker volum automatically. It will umute if the speaker was muted.
+	/// \remarks If it is TRUE, the SDK will adjust the speaker volume automatically. It will unmute if the speaker was muted.
 	virtual void EnableAutoAdjustSpeakerVolumeWhenJoinAudio(bool bEnable) = 0;
 
 	/// \brief Set if it is able to auto-adjust the volume of the mic when joining the meeting. Default: TRUE.
 	/// \param bEnable TRUE indicates to auto-adjust the volume of the mic. FALSE not.
-	/// \remarks If it is TRUE, the SDK will adjust the mic volume automatically. It will umute if the mic was muted.
+	/// \remarks If it is TRUE, the SDK will adjust the mic volume automatically. It will unmute if the mic was muted.
 	virtual void EnableAutoAdjustMicVolumeWhenJoinAudio(bool bEnable) = 0;
 
-	/// \brief Configure DSCP(Diferantial services code point) values.  
+	/// \brief Configure DSCP(Differential services code point) values.  
 	/// \param dscpAudio Configure DSCP value for audio.
 	/// \param dscpVideo Configure DSCP value for video.
 	/// \param bReset Reset DSCP values.
@@ -439,11 +467,11 @@ public:
 	virtual void EnableShareIOSDevice(bool bEnable) = 0;
 
 	/// \brief Set if it is able to share white board. Default: TRUE.
-	/// \param bEnable TRUE indicatess to enable to share on the white board. FALSE not.
+	/// \param bEnable TRUE indicates to enable to share on the white board. FALSE not.
 	virtual void EnableShareWhiteBoard(bool bEnable) = 0;
 
-	/// \brief Set whether to forbid multishare. Default: TRUE.
-	/// \param bDisable TRUE indicates to forbid multishare. FALSE not.
+	/// \brief Set whether to forbid multi-share. Default: TRUE.
+	/// \param bDisable TRUE indicates to forbid multi-share. FALSE not.
 	virtual void ForceDisableMultiShare(bool bDisable) = 0;
 };
 

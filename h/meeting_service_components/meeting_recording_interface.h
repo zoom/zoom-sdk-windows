@@ -15,11 +15,11 @@ BEGIN_ZOOM_SDK_NAMESPACE
 */
 enum RecordingStatus
 {
-	Recording_Start,///Start, for both local and cloud recording.
-	Recording_Stop,///Stop, for both local and cloud recording.
-	Recording_DiskFull,///Error, for both local and cloud recording.
-	Recording_Pause,///Pause, for both local and cloud recording.
-	Recording_Connecting,///Connecte, only for cloud recording.
+	Recording_Start,///Start recording on local computer or on cloud.
+	Recording_Stop,///Stop recording on local computer or on cloud.
+	Recording_DiskFull,///There is no space to store for both local and cloud recording.
+	Recording_Pause,///Pause recording on local or on cloud.
+	Recording_Connecting,///Connecting, only for cloud recording.
 };
 
 class ICustomizedLocalRecordingLayoutHelper;
@@ -68,14 +68,14 @@ public:
 	virtual SDKError SetEvent(IMeetingRecordingCtrlEvent* pEvent) = 0;
 
 	/// \brief Start recording.
-	/// \param [out] startTimestamp The timestamp when start recording.
+	/// \param [out] startTimestamp The timestamps when start recording.
 	/// \param recPath Specifies the path of saving the recording. The SDK will try to creat this path if the specified path does not exist. If the creation failed, an error code SDKERR_INVALID_PARAMETER returns. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StartRecording(time_t& startTimestamp, wchar_t* recPath) = 0;
 
 	/// \brief Stop recording.
-	/// \param [out] stopTimestamp The timestamp when stop recording.
+	/// \param [out] stopTimestamp The timestamps when stop recording.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StopRecording(time_t& stopTimestamp) = 0;

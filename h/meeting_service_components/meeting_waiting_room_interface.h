@@ -14,11 +14,11 @@ class IMeetingWaitingRoomEvent
 {
 public:
 	/// \brief Callback event of notification that user joins the waiting room.
-	/// \param userID The user ID who joins the waiting room. 
+	/// \param userID The ID of user who joins the waiting room. 
 	virtual void onWatingRoomUserJoin(unsigned int userID) = 0;
 
 	/// \brief Callback event of notification that user leaves the waiting room.
-	/// \param userID The user ID who leaves the waiting room.
+	/// \param userID The ID of user who leaves the waiting room.
 	virtual void onWatingRoomUserLeft(unsigned int userID) = 0;
 
 };
@@ -27,7 +27,7 @@ public:
 class IMeetingWaitingRoomController
 {
 public:
-	/// \brief Set meeting waiting room callback event handler
+	/// \brief Set meeting waiting room callback event handler.
 	/// \param pEvent A pointer to the IMeetingWaitingRoomEvent that receives the waiting room event. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.

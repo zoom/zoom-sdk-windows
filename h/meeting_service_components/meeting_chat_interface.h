@@ -26,7 +26,7 @@ public:
 	/// \brief Get the receiver ID of the current message.
 	/// \return If the function succeeds, the return value is the receiver ID of the current message.
 	///ZERO(0) indicates that the message is sent to all.
-	///ONE(1) indicates that the messages are sent to all the panelistes.
+	///ONE(1) indicates that the messages are sent to all the panelists.
 	///Otherwise failed, the return value is negative ONE(-1).
 	virtual unsigned int GetReceiverUserId() = 0;
 
@@ -40,11 +40,11 @@ public:
 	///Otherwise failed, the return value is NULL.
 	virtual const wchar_t* GetContent() = 0;
 
-	/// \brief Get the timestamp of the current message.
-	/// \return If the function succeeds, the return value is the timestamp of the current message. 
+	/// \brief Get the timestamps of the current message.
+	/// \return If the function succeeds, the return value is the timestamps of the current message. 
 	virtual time_t GetTimeStamp() = 0;
 
-	/// \brief Determine if the current messsage is sent to all. 
+	/// \brief Determine if the current message is sent to all. 
 	/// \return TRUE indicates that the current message is sent to all. Otherwise not. 
 	virtual bool IsChatToAll() = 0;
 
@@ -78,12 +78,12 @@ typedef struct tagWebinarAttendeeChatStatus
 }WebinarAttendeeChatStatus;
 
 /*! \struct tagWebinarOtherUserRoleChatStatus
-    \brief The authority to chat for the host, cohost and panellist to chat in webinar.
+    \brief The authority to chat for the host, co-host and panelist to chat in webinar.
     Here are more detailed structural descriptions..
 */
 typedef struct tagWebinarOtherUserRoleChatStatus
 {
-	bool can_chat_to_all_panellist;///<TRUE indicates that the user owns the authority to send message to all the panellist.
+	bool can_chat_to_all_panellist;///<TRUE indicates that the user owns the authority to send message to all the panelists.
 	bool can_chat_to_all_panellist_and_attendee;///<TRUE indicates that the user owns the authority to send message to all.
 	bool can_chat_to_individual;///<TRUE indicates that the user owns the authority to send message to individual attendee.
 }WebinarOtherUserRoleChatStatus;
@@ -99,8 +99,8 @@ typedef struct tagChatStatus
 		NormalMeetingChatStaus normal_meeting_status;
 		WebinarAttendeeChatStatus webinar_attendee_status;
 		WebinarOtherUserRoleChatStatus webinar_other_status;
-	}ut;///<The ut value depends on the value of the other member in the structure. When the value of is_webinar_meeting is false, the ut value is the NormalMeetingChatStausnormal_meeting_status. When the values of the is_webinar_meeting and the is_webinar_attendee are true, the ut value is WebinarAttendeeChatStatus webinar_attendee_status. The value of is_webinar_meeting is true while the is_webinar_attendee false, the ut value is WebinarOtherUserRoleChatStatus webinar_other_status.
-	bool is_chat_off;///<TRUE indicates that it is disabled to chat in the assigned meeting. 
+	}ut;///<The ut value depends on the value of the other members in the structure. When the value of is_webinar_meeting is false, the ut value is the NormalMeetingChatStausnormal_meeting_status. When the values of the is_webinar_meeting and the is_webinar_attendee is true, the ut value is WebinarAttendeeChatStatus webinar_attendee_status. The value of is_webinar_meeting is true while the is_webinar_attendee is false, the ut value is WebinarOtherUserRoleChatStatus webinar_other_status.
+	bool is_chat_off;///<TRUE indicates that it is disabled to chat in the specified meeting. 
 	bool is_webinar_attendee;///<TRUE indicates that the owner of the current message is the attendee of the webinar. 
 	bool is_webinar_meeting;///<TRUE indicates that the current meeting is webinar.
 

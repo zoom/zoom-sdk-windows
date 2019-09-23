@@ -21,7 +21,7 @@ public:
 
 	/// \brief The callback event will be triggered when the outlook plugin requests to assign a meeting topic.
 	/// \param pScheduleForEmail The email owner will be the host of the scheduled meeting.	
-	/// \param ppDefaultMeetingTopic The meeting topic in default. It is able to be changed.
+	/// \param ppDefaultMeetingTopic The meeting topic by default. It is able to be changed.
 	virtual void onOutlookPluginDefaultMeetingTopicRequestNotification(const wchar_t* pScheduleForEmail, wchar_t** ppDefaultMeetingTopic) = 0;
 };
 

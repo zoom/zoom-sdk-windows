@@ -14,11 +14,11 @@ BEGIN_ZOOM_SDK_NAMESPACE
 */
 enum MeetingStatus
 {
-	MEETING_STATUS_IDLE,///<Idle status means no meeting is running.
-	MEETING_STATUS_CONNECTING,///<Connecte to the meeting server status.
+	MEETING_STATUS_IDLE,///<No meeting is running.
+	MEETING_STATUS_CONNECTING,///<Connect to the meeting server status.
 	MEETING_STATUS_WAITINGFORHOST,///<Waiting for the host to start the meeting.
 	MEETING_STATUS_INMEETING,///<Meeting is ready, in meeting status.
-	MEETING_STATUS_DISCONNECTING,///<Disconnecte the meeting server, leave meeting status.
+	MEETING_STATUS_DISCONNECTING,///<Disconnect the meeting server, leave meeting status.
 	MEETING_STATUS_RECONNECTING,///<Reconnecting meeting server status.
 	MEETING_STATUS_FAILED,///<Failed to connect the meeting server.
 	MEETING_STATUS_ENDED,///<Meeting ends.
@@ -49,7 +49,7 @@ enum MeetingFailCode
 	MEETING_FAIL_MEETING_NOT_START			= 7,///<Meeting has not begun.
 	MEETING_FAIL_MEETING_NOT_EXIST			= 8,///<Meeting does not exist.
 	MEETING_FAIL_MEETING_USER_FULL			= 9,///<The capacity of meeting is full.
-	MEETING_FAIL_CLIENT_INCOMPATIBLE		= 10,///<The client programme is incompatible.
+	MEETING_FAIL_CLIENT_INCOMPATIBLE		= 10,///<The client is incompatible.
 	MEETING_FAIL_NO_MMR						= 11,///<The Multi-media router is not founded. 
 	MEETING_FAIL_CONFLOCKED					= 12,///<The meeting is locked.
 	MEETING_FAIL_MEETING_RESTRICTED			= 13,///<The meeting is failed because of the restriction by the same account.
@@ -60,14 +60,14 @@ enum MeetingFailCode
 	SESSION_AUDIO_AUTOSTARTERR				= 18,///<Audio autostart error.
 	MEETING_FAIL_REGISTERWEBINAR_FULL		= 19,///<The number of webinar registered has reached the upper limit.
 	MEETING_FAIL_REGISTERWEBINAR_HOSTREGISTER		= 20,///<Register webinar with the role of webinar host.
-	MEETING_FAIL_REGISTERWEBINAR_PANELISTREGISTER	= 21,///<Register webinar with the role of panelister member.
+	MEETING_FAIL_REGISTERWEBINAR_PANELISTREGISTER	= 21,///<Register webinar with the role of panelist member.
 	MEETING_FAIL_REGISTERWEBINAR_DENIED_EMAIL		= 22,///<Register webinar with the denied email.
 	MEETING_FAIL_ENFORCE_LOGIN		= 23,///<Webinar request to login.
 	CONF_FAIL_ZC_CERTIFICATE_CHANGED		= 24,  ///<Invalid for Windows SDK.
 	CONF_FAIL_VANITY_NOT_EXIST				= 27, ///<Vanity conference ID does not exist.
 	CONF_FAIL_JOIN_WEBINAR_WITHSAMEEMAIL		= 28, ///<Join webinar with the same email.
 	CONF_FAIL_DISALLOW_HOST_MEETING		= 29, ///<Meeting settings is not allowed to start a meeting.
-	MEETING_FAIL_WRITE_CONFIG_FILE			= 50,	///<Unabled to write the configure file.
+	MEETING_FAIL_WRITE_CONFIG_FILE			= 50,	///<Disabled to write the configure file.
 	MEETING_FAIL_FORBID_TO_JOIN_INTERNAL_MEETING = 60, ///<Forbidden to join the internal meeting.
 	CONF_FAIL_REMOVED_BY_HOST = 61, ///<Removed by the host. 
 };  
@@ -102,7 +102,7 @@ enum SDKUserType
 {
 	SDK_UT_APIUSER     = 99,///<API user type, quits later.
 	SDK_UT_NORMALUSER = 100,///<Type of ordinary user who needs to login.
-	SDK_UT_WITHOUT_LOGIN,///<Start meeting without loggin.
+	SDK_UT_WITHOUT_LOGIN,///<Start meeting without login.
 };
 
 /*! \struct tagJoinParam4APIUser
@@ -120,8 +120,8 @@ typedef struct tagJoinParam4APIUser
 	const wchar_t* participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
 	const wchar_t* webinarToken;///<Webinar token.
 	bool		   isDirectShareDesktop;///<Share the desktop directly or not. True indicates to Share.
-	bool		   isVideoOff;///<Turn off the video of not. True indicates to turn off.
-	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off.
+	bool		   isVideoOff;///<Turn off the video of not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
+	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
 }JoinParam4APIUser;
 
 /*! \struct tagJoinParam4WithoutLogin
@@ -145,8 +145,8 @@ typedef struct tagJoinParam4NormalUser
 	HWND		   hDirectShareAppWnd;///<The window handle of the direct sharing application.
 	const wchar_t* participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
 	const wchar_t* webinarToken;///<Webinar token.
-	bool		   isVideoOff;///<Turn off the video or not. True indicates to turn off.
-	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off.
+	bool		   isVideoOff;///<Turn off the video or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
+	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
 	bool		   isDirectShareDesktop;///<Share the desktop directly or not. True indicates to Share.
 }JoinParam4NormalUser;
 
@@ -184,6 +184,8 @@ typedef struct tagStartParam4APIUser
 	HWND		   hDirectShareAppWnd;///<The window handle of the direct sharing application.
 	const wchar_t* participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
 	bool		   isDirectShareDesktop;///<Share the desktop directly or not. True indicates to Share.
+	bool		   isVideoOff;///<Turn off the video or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
+	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
 }StartParam4APIUser;
 
 
@@ -195,8 +197,8 @@ enum ZoomUserType
 {
 	ZoomUserType_APIUSER,///<API user.
 	ZoomUserType_EMAIL_LOGIN,///<User logged in with email.
-	ZoomUserType_FACEBOOK,///<User logged in with facebook.
-	ZoomUserType_GoogleOAuth,///<User logged in with google.
+	ZoomUserType_FACEBOOK,///<User logged in with Facebook.
+	ZoomUserType_GoogleOAuth,///<User logged in with Google.
 	ZoomUserType_SSO,///<User logged in with SSO.
 	ZoomUserType_Unknown,///<User of unknown type.
 };
@@ -217,6 +219,8 @@ typedef struct tagStartParam4WithoutLogin
 	HWND		   hDirectShareAppWnd;///<The window handle of the direct sharing application.
 	const wchar_t* participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
 	bool		   isDirectShareDesktop;///<Share the desktop directly or not. True indicates to share.
+	bool		   isVideoOff;///<Turn off the video or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
+	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
 }StartParam4WithoutLogin;
 
 /*! \struct tagStartParam4NormalUser
@@ -229,8 +233,8 @@ typedef struct tagStartParam4NormalUser
 	const wchar_t*  vanityID;///<Meeting vanity ID. Generate a ZOOM access token via REST API.
 	HWND			hDirectShareAppWnd;///<The window handle of the direct sharing application.
 	const wchar_t*  participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
-	bool		    isVideoOff;///<Turn off video or not. Valid only for the instance meeting. True indicates to turn off.
-	bool		    isAudioOff;///<Turn off audio or not. Valid only for the instance meeting. True indicates to turn off.
+	bool		    isVideoOff;///<Turn off video or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
+	bool		    isAudioOff;///<Turn off audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
 	bool		    isDirectShareDesktop;///<Share the desktop directly or not. True indicates to Share.
 }StartParam4NormalUser;
 
@@ -261,7 +265,7 @@ typedef struct tagStartParam
 */
 enum ConnectionQuality 
 {
-	Conn_Quality_Unknow,///<Unknown connection status。
+	Conn_Quality_Unknow,///<Unknown connection status
 	Conn_Quality_Very_Bad,///<The connection quality is very poor.
 	Conn_Quality_Bad,///<The connection quality is poor. 
 	Conn_Quality_Not_Good,///<The connection quality is not good.
@@ -297,23 +301,23 @@ class IMeetingInfo
 {
 public:
 	/// \brief Get the current meeting number.
-	/// \return If the funciton succeeds, the return value is the current meeting number. Otherwise returns ZERO(0).
+	/// \return If the function succeeds, the return value is the current meeting number. Otherwise returns ZERO(0).
 	virtual UINT64 GetMeetingNumber() = 0;
 
 	/// \brief Get the current meeting ID.
-	/// \return If the funciton succeeds, the return value is the current meeting ID. Otherwise returns an empty string of length ZERO(0).
+	/// \return If the function succeeds, the return value is the current meeting ID. Otherwise returns an empty string of length ZERO(0).
 	virtual const wchar_t* GetMeetingID() = 0;
 	
 	/// \brief Get the meeting topic.
-	/// \return If the funciton succeeds, the return value is the current meeting topic. Otherwise returns an empty string of length ZERO(0)
+	/// \return If the function succeeds, the return value is the current meeting topic. Otherwise returns an empty string of length ZERO(0)
 	virtual const wchar_t* GetMeetingTopic() = 0;
 
 	/// \brief Get the meeting password.
-	/// \return If the funciton succeeds, the return value is the current meeting password. Otherwise returns an empty string of length ZERO(0)
+	/// \return If the function succeeds, the return value is the current meeting password. Otherwise returns an empty string of length ZERO(0)
 	virtual const wchar_t* GetMeetingPassword() = 0;
 
 	/// \brief Get the meeting type.
-	/// \return If the funciton succeeds, the return value is the current meeting type. To get extended error information, see \link MeetingType \endlink enum.
+	/// \return If the function succeeds, the return value is the current meeting type. To get extended error information, see \link MeetingType \endlink enum.
 	virtual MeetingType GetMeetingType() = 0;
 
 	/// \brief Get the email invitation template for the current meeting.
@@ -481,6 +485,7 @@ class IMeetingVideoController;
 class IMeetingWaitingRoomController;
 class IMeetingLiveStreamController;
 class IMeetingWebinarController;
+class IClosedCaptionController;
 /// \brief Meeting Service Interface
 ///
 class IMeetingService
@@ -491,6 +496,8 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingServiceEvent* pEvent) = 0;
+
+	virtual SDKError HandleZoomWebUriProtocolAction(const wchar_t* protocol_action) = 0;
 
 	/// \brief Join the meeting.
 	/// \param joinParam The parameter is used to join meeting. For more details, see \link JoinParam \endlink structure. 
@@ -533,22 +540,22 @@ public:
 	/// \return If the function succeeds, the return value is the meeting information. Otherwise returns NULL. For more details, see \link IMeetingInfo \endlink.
 	virtual IMeetingInfo* GetMeetingInfo() = 0;
 
-	/// \brief Get the internet connection quality when sharing.
+	/// \brief Get the quality of Internet connection when sharing.
 	/// \param bSending TRUE indicates to get the connection quality of sending the sharing statistics. FALSE indicates to get the connection quality of receiving the sharing statistics.
 	/// \return If the function succeeds, the return is one of those enumerated in ConnectionQuality enum.
-	/// \remarks If you are not in the meeting, the Conn_Quality_Unknow will be returend.
+	/// \remarks If you are not in the meeting, the Conn_Quality_Unknow will be returned.
 	virtual ConnectionQuality GetSharingConnQuality(bool bSending = true) = 0;
 
-	/// \brief Get the internet connection quality of video.
+	/// \brief Get the Internet connection quality of video.
 	/// \param bSending TRUE indicates to get the connection quality of sending the video. FALSE indicates to get the connection quality of receiving the video.
 	/// \return If the function succeeds, the return is one of those enumerated in ConnectionQuality enum.
-	/// \remarks If you are not in the meeting, the Conn_Quality_Unknow will be returend.
+	/// \remarks If you are not in the meeting, the Conn_Quality_Unknow will be returned.
 	virtual ConnectionQuality GetVideoConnQuality(bool bSending = true) = 0;
 
-	/// \brief Get the internet connection quality of audio.
+	/// \brief Get the Internet connection quality of audio.
 	/// \param bSending TRUE indicates to get the connection quality of sending the audio. FALSE indicates to get the connection quality of receiving the audio.
 	/// \return If the function succeeds, the return value is one of those enumerated in ConnectionQuality enum.
-	/// \remarks If you are not in the meeting, the Conn_Quality_Unknow will be returend.
+	/// \remarks If you are not in the meeting, the Conn_Quality_Unknow will be returned.
 	virtual ConnectionQuality GetAudioConnQuality(bool bSending = true) = 0;
 
 	/// \brief Get the meeting configuration interface.
@@ -614,6 +621,10 @@ public:
 	/// \brief Get the webinar controller interface.
 	/// \return If the function succeeds, the return value is a pointer to IMeetingWebinarController. Otherwise returns NULL.
 	virtual IMeetingWebinarController* GetMeetingWebinarController() = 0;
+
+	/// \brief Get the Closed Caption controller interface.
+	/// \return If the function succeeds, the return value is a pointer to IMeetingWebinarController. Otherwise returns NULL.
+	virtual IClosedCaptionController* GetMeetingClosedCaptionController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

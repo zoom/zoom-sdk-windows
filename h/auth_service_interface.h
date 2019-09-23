@@ -32,7 +32,7 @@ enum AuthResult
 enum LOGINSTATUS
 {
 	LOGIN_IDLE,///<Unlogged in.
-	LOGIN_PROCESSING,///<Logging in.
+	LOGIN_PROCESSING,///<In process of login.
 	LOGIN_SUCCESS,///<Login successful.
 	LOGIN_FAILED,///<Login failed.
 };
@@ -80,7 +80,7 @@ typedef struct tagLoginParam4Email
 */
 typedef struct tagLoginParam4SSO
 {
-	const wchar_t* ssoToken;///<Account SSO token when logining.
+	const wchar_t* ssoToken;///<Account SSO token when logging.
 	bool bRememberMe; ///<True indicates to save the information for next login.
 }LoginParam4SSO;
 
@@ -111,7 +111,7 @@ class IAccountInfo
 {
 public:
 	/// \brief Get the screen name of user.
-	/// \return The return value is the displayed username. If there is no screen name of user, the reutrn value is a string of length ZERO(0).
+	/// \return The return value is the displayed username. If there is no screen name of user, the return value is a string of length ZERO(0).
 	virtual const wchar_t* GetDisplayName() = 0;
 
 	/// \brief Get login type.
@@ -137,7 +137,7 @@ public:
 	/// \brief Logout result callback.
 	virtual void onLogout() = 0;
 
-	/// \brief Zoom identity has expired, please re-login or generate a new zoom access token via REST api.
+	/// \brief Zoom identity has expired, please re-login or generate a new zoom access token via REST Api.
 	virtual void onZoomIdentityExpired() = 0;
 };
 
@@ -155,7 +155,7 @@ public:
 	virtual SDKError SetEvent(IAuthServiceEvent* pEvent) = 0;
 
 	/// \brief SDK Authentication.
-	/// \param authParam The parameter to be used for authentication sdk, see \link AuthParam \endlink structure. 
+	/// \param authParam The parameter to be used for authentication SDK, see \link AuthParam \endlink structure. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SDKAuth(AuthParam& authParam) = 0;

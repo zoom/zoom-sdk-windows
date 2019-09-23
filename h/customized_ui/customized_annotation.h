@@ -42,7 +42,7 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(ICustomizedAnnotationObjEvent* event_) = 0;
 
-	/// \brief Determine if it is enabled to clear the annotation by the specified way. 
+	/// \brief Determine if it is enabled to clear annotations by the specified way. 
 	/// \param type Specify the annotation clear type. For more details, see \link AnnotationClearType \endlink enum.
 	/// \return If the user owns the authority, the return value is SDKErr_Success.
 	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
@@ -73,7 +73,7 @@ public:
 	virtual SDKError SetLineWidth(long lineWidth) = 0;
 
 	/// \brief Get the color of current annotation tool.
-	/// \param [out] color The color to annontate in RGB format.
+	/// \param [out] color The color to annotate in RGB format.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetCurColor(unsigned long& color) = 0;
@@ -100,13 +100,13 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Redo() = 0;
 
-	/// \brief Determine if it is enabled to save the snapshot.
+	/// \brief Determine if it is enabled to save the screenshot.
 	/// \return If the user owns the authority, the return value is SDKErr_Success.
 	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanSaveSnapshot() = 0;
 
-	/// \brief Save the snapshot in the specified path.
-	/// \param path Specify the path to store the snapshot. If the specified path is wrong, the SDKERR_INVALID_PARAMETER will be returned. 
+	/// \brief Save the screenshot in the specified path.
+	/// \param path Specify the path to store the screenshot. If the specified path is wrong, the SDKERR_INVALID_PARAMETER will be returned. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SaveSnapshot(const wchar_t* path) = 0;
@@ -118,11 +118,11 @@ public:
 class ICustomizedAnnotationControllerEvent
 {
 public:
-	/// \brief The callback event to destroy the specified annotation object.
+	/// \brief Callback of destroying the specified annotation object.
 	/// \param obj_ Specify the annotation object to be destroyed. Once destroyed, it can no longer be used.
 	virtual void onCustomizedAnnotationObjDestroyed(ICustomizedAnnotationObj* obj_) = 0;
 
-	/// \brief The callback event when the annotation status changes.
+	/// \brief Callback event when the annotation status changes.
 	/// \param share_render_ The annotate status of share_render changes. For more details, see \link ICustomizedShareRender \endlink.
 	/// \param status_ The changed status. For more details, see \link CustomizedShareAnnotationStatus \endlink.
 	virtual void onSharingShareAnnotationStatusChanged(ICustomizedShareRender* share_render_, CustomizedShareAnnotationStatus status_) = 0;

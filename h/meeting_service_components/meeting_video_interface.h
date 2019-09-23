@@ -6,7 +6,7 @@
 #ifndef _MEETING_VIDEO_INTERFACE_H_
 #define _MEETING_VIDEO_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
-
+#include "..\zoom_sdk_util_define.h"
 BEGIN_ZOOM_SDK_NAMESPACE
 
 /*! \enum VideoStatus
@@ -54,6 +54,9 @@ public:
 	/// \brief Callback event of the requirement to turn on the video from the host.
 	/// \param handler_ A pointer to the IRequestStartVideoHandler. For more details, see \link IRequestStartVideoHandler \endlink.
 	virtual void onHostRequestStartVideo(IRequestStartVideoHandler* handler_) = 0;
+
+	virtual void onActiveSpeakerVideoUserChanged(unsigned int userid) = 0;
+	virtual void onActiveVideoUserChanged(unsigned int userid) = 0;
 };
 
 /// \brief Meeting video controller interface
@@ -129,6 +132,8 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both Zoom style and customize user interface mode.
 	virtual SDKError StopAttendeeVideo(unsigned int userid) = 0;
+
+	virtual ICameraController* GetMyCameraController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

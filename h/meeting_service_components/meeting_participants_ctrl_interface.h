@@ -16,7 +16,7 @@ enum UserRole
 {
 	USERROLE_NONE,///<For initialization.
 	USERROLE_HOST,///<Role of the host.
-	USERROLE_COHOST,///<Role of cohost.
+	USERROLE_COHOST,///<Role of co-host.
 	USERROLE_PANELIST,///<Role of the panelist, valid only in webinar.
 	USERROLE_BREAKOUTROOM_MODERATOR,///<Host role in breakout room.
 	USERROLE_ATTENDEE,///<Role of attendee.
@@ -50,7 +50,7 @@ public:
 	///Otherwise failed, the return value is NULL.
 	virtual const wchar_t* GetEmail() = 0;
 
-	/// \brief Determine if the member specified by the current information is the host or not.
+	/// \brief Determine whether the member corresponding with the current information is the host or not.
 	/// \return TRUE indicates the host.
 	virtual bool IsHost() = 0;
 
@@ -71,8 +71,8 @@ public:
 	/// \return The type of audio when the user joins the meeting. For more details, see \link AudioType \endlink enum.
 	virtual AudioType GetAudioJoinType() = 0;
 
-	/// \brief Determine whether the current information matches to the user himself or not.
-	/// \return TRUE indicates that the current information matches to the user himself.
+	/// \brief Determine whether the current information corresponds to the user himself or not.
+	/// \return TRUE indicates that the current information corresponds to the user himself.
 	virtual bool IsMySelf() = 0;
 
 	/// \brief Determine whether the user specified by the current information is in the waiting room or not.
@@ -87,13 +87,17 @@ public:
 	/// \return The role of the user. For more details, see \link UserRole \endlink enum.
 	virtual UserRole GetUserRole() = 0;
 
-	/// \brief Determine whether the user specified by the current information joins the meeting by telephone or not.
+	/// \brief Determine whether the user corresponding to the current information joins the meeting by telephone or not.
 	/// \return TRUE indicates that the user joins the meeting by telephone.
 	virtual bool IsPurePhoneUser() = 0;
 
-	/// \brief Get the Mic level of the user specified by the current information.
+	/// \brief Get the Mic level of the user corresponding to the current information.
 	/// \return The mic level of the user.
 	virtual int GetAudioVoiceLevel() = 0;
+
+	/// \brief Determine whether the user corresponding to the current information is the sender of Closed Caption or not.
+	/// \return TRUE indicates that the user is the sender of Closed Caption.
+	virtual bool IsClosedCaptionSender() = 0;
 
 	/// \brief Get the webinar status of the user specified by the current information.
 	/// \return The status of the specified user. For more details, see \link WebinarAttendeeStatus \endlink structure.
@@ -156,7 +160,7 @@ public:
 
 	/// \brief Get the information of specified user.
 	/// \param userid Specify the user ID for which you want to get the information. 
-	///Zero(0) indicates to get the informatioin of the current user.
+	///Zero(0) indicates to get the information of the current user.
 	/// \return If the function succeeds, the return value is a pointer to the IUserInfo. For more details, see \link IUserInfo \endlink.
 	///Otherwise failed, the return value is NULL.
 	/// \remarks Valid for both ZOOM style and user custom interface mode..
@@ -219,7 +223,7 @@ public:
 	virtual SDKError RevokeCoHost(unsigned int userid) = 0;
 
 	/// \brief Expel the specified user.
-	/// \param userid Specify the user ID to be expeled.
+	/// \param userid Specify the ID of user to be expelled.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both ZOOM style and user custom interface mode..

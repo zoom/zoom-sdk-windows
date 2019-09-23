@@ -464,6 +464,10 @@ void CMeetingServiceMgr::onShareContentNotification(ZOOM_SDK_NAMESPACE::ShareInf
 	//todo
 }
 
+void CMeetingServiceMgr::onMultiShareSwitchToSingleShareNeedConfirm(ZOOM_SDK_NAMESPACE::IShareSwitchMultiToSingleConfirmHandler* handler_)
+{
+	//todo handler_->Confirm() or handler_->Cancel()
+}
 
 void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status)
 {

@@ -34,7 +34,7 @@ enum CALLINNUMTYPE
 	CALLINNUMTYPE_TOLLFREE,///<Free.
 };
 
-/// \brief Call-in meeting Interface
+/// \brief Call-in meeting Interface.
 ///
 class IMeetingCallInPhoneNumberInfo
 {
@@ -90,14 +90,14 @@ enum PhoneFailedReason
 	PhoneFailedReason_User_Hangup,///<The user hangs up.
 	PhoneFailedReason_Other_Fail,///<Other reasons.
 	PhoneFailedReason_No_Answer,///<The telephone does not reply.
-	PhoneFailedReason_Block_No_Host,///<Disable the function of international callout before the host joins the meeting.
+	PhoneFailedReason_Block_No_Host,///<Disable the function of international call-out before the host joins the meeting.
 	PhoneFailedReason_Block_High_Rate,///<The call-out is blocked by the system due to the high cost.
 	PhoneFailedReason_Block_Too_Frequent,///<All the invitees invited by the call should press the button one(1) to join the meeting. In case that many invitees do not press the button that leads to time out, the call invitation for this meeting shall be banned.
 };
 class IMeetingPhoneHelperEvent
 {
 public:
-	/// \brief Invite others by telephone callout and send the response to the application according to the status of others.
+	/// \brief Invite others by telephone call-out and send the response to the application according to the status of others.
 	/// \param status The status of telephone. For more details, see \link PhoneStatus \endlink enum.
 	/// \param reason The reason for the failure if the status value is PhoneStatus_Failed. For more details, see \link PhoneFailedReason \endlink enum.
 	virtual void onInviteCallOutUserStatus(PhoneStatus status, PhoneFailedReason reason) = 0;
@@ -140,7 +140,7 @@ public:
 	virtual SDKError CancelCallOut() = 0;
 
 	/// \brief Get the process of the invitation by call out.
-	/// \return If the function succeeds, the return value is the current callout process. To get extended error information, see \link PhoneStatus \endlink enum
+	/// \return If the function succeeds, the return value is the current call-out process. To get extended error information, see \link PhoneStatus \endlink enum
 	virtual PhoneStatus GetInviteCalloutUserStatus() = 0;
 
 	/// \brief Use the CALL ME to invite the attendee who uses the specified number to join the meeting.

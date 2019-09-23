@@ -33,10 +33,10 @@ public:
 	/// \brief Callback event that attendees are required to turn off the mic in the view-only mode of webinar.
 	virtual void onSelfDisallowTalkNotification() = 0;
 
-	/// \brief Callback to enable the attendees to chat. Available only for the host and the cohost.
+	/// \brief Callback to enable the attendees to chat. Available only for the host and the co-host.
 	virtual void onAllowAttendeeChatNotification() = 0;
 
-	/// \brief Callback to disable the attendees to chat. Available only for the host and the cohost.
+	/// \brief Callback to disable the attendees to chat. Available only for the host and the co-host.
 	virtual void onDisallowAttendeeChatNotification() = 0;
   
 	/// \brief Attendee will receive this callback if his audio status changes.
@@ -77,14 +77,14 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingWebinarCtrlEvent* pEvent) = 0;
 
-	/// \brief Promote the attendee to panellist. Available only for the meeting host.
+	/// \brief Promote the attendee to panelist. Available only for the meeting host.
 	/// \param userid Specifies the user ID to promote.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onPromptAttendee2PanelistResult() callback event.
 	virtual SDKError PromptAttendee2Panelist(unsigned int userid) = 0;
 
-	/// \brief Demote the panellist to attendee. Available only for the host.
+	/// \brief Demote the panelist to attendee. Available only for the host.
 	/// \param userid Specifies the user ID to demote.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
@@ -116,7 +116,7 @@ public:
 	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onAllowPanelistStartVideoNotification() callback event. Available only for the host.
 	virtual SDKError AllowPanelistStartVideo() = 0;
 
-	/// \brief Forbid the panellist to start video.
+	/// \brief Forbid the panelist to start video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDisallowPanelistStartVideoNotification() callback event. Available only for the host.

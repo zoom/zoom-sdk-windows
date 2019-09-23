@@ -15,7 +15,7 @@ BEGIN_ZOOM_SDK_NAMESPACE
 */
 enum UIHOOKHWNDTYPE
 {
-	UIHOOKWNDTYPE_USERDEFIEND,///<The type of hooking messages and windows defiended by users.
+	UIHOOKWNDTYPE_USERDEFIEND,///<The type of hooking messages and windows defined by users.
 	UIHOOKWNDTYPE_MAINWND,///<The type of hooking main window.
 	UIHOOKWNDTYPE_BOTTOMTOOLBAR,///<The type of hooking toolbar at the bottom.
 };
@@ -26,7 +26,7 @@ class IUIHookerEvent
 public:
 	/// \brief UI relative action hooked callback. The callback works only in the working thread and does not feedback to the main thread.
 	/// \param type Hook type. For more details, see \link UIHOOKHWNDTYPE \endlink enum.
-	/// \param msg Hooked message. For more detials, see windows MSG structure.
+	/// \param msg Hooked message. For more details, see windows MSG structure.
 	virtual void onUIActionNotify(UIHOOKHWNDTYPE type, MSG msg) = 0;
 };
 /// \brief Embedded browser interface.

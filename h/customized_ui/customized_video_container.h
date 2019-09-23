@@ -30,7 +30,7 @@ enum VideoRenderDataType
 	VideoRenderData_None,///<For initiation.
 	VideoRenderData_Video,///<Data type including the video data.
 	VideoRenderData_Avatar,///<Data type without video data.
-	VideoRenderData_ScreenName,///<Screen name data type only.
+	VideoRenderData_ScreenName,///<Data type of screen name only.
 };
 
 /// \brief The base class for the video element interface.
@@ -50,15 +50,15 @@ public:
 
 	/// \brief Specify a new display area of the current render element.
 	/// \param pos Specify a new area through RECT structure. The value in the structure corresponding to the coordinate system is that of the client area of the video main window. 
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum.
 	virtual SDKError SetPos(RECT pos) = 0;
 
 	/// \brief Show the render element.
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum.
 	virtual SDKError Show() = 0;
 
 	/// \brief Hide the render element.
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum.
 	virtual SDKError Hide() = 0;
 
 	/// \brief Get the user ID corresponding to the current render element.
@@ -82,11 +82,11 @@ class IPreviewVideoRenderElement : public IVideoRenderElement
 {
 public:
 	/// \brief Start previewing.
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum.
 	virtual SDKError Start() = 0;
 
 	/// \brief Stop previewing.
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum.
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum.
 	virtual SDKError Stop() = 0;
 	virtual ~IPreviewVideoRenderElement(){}
 };
@@ -97,11 +97,11 @@ class IActiveVideoRenderElement : public IVideoRenderElement
 {
 public:
 	/// \brief Display the data of the current active user. 
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum 
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum 
 	virtual SDKError Start() = 0;
 
-	/// \brief Undisplay the data of the current active user. 
-	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed，see \link SDKError \endlink enum 
+	/// \brief Hide the data of the current active user. 
+	/// \return If the function succeeds, the return value is SDKERR_SUCCESS. Otherwise failed,see \link SDKError \endlink enum 
 	virtual SDKError Stop() = 0;
 	virtual ~IActiveVideoRenderElement(){}
 };

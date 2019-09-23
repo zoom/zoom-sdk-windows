@@ -89,7 +89,7 @@ public:
 
 	/// \brief Set the colors of annotation tools.
 	/// \param viewtype The specified color is used on which view. For more details, see \link SDKViewType \endlink enum. 
-	/// \param color Specify the color of the annontation tools in RGB format.  
+	/// \param color Specify the color of the annotation tools in RGB format.  
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	///  \remarks Valid only for ZOOM style user interface mode.

@@ -35,18 +35,20 @@ enum SDKError
 	SDKERR_MODULE_LOAD_FAILED,///<Loading module failed.
 	SDKERR_MEMORY_FAILED,///<No memory allocated. 
 	SDKERR_SERVICE_FAILED,///<Internal service error.
-	SDKERR_UNINITIALIZE,///<Uot initialized before the use.
+	SDKERR_UNINITIALIZE,///<Not initialized before the use.
 	SDKERR_UNAUTHENTICATION,///<Not authorized before the use.
 	SDKERR_NORECORDINGINPROCESS,///<No recording in process.
 	SDKERR_TRANSCODER_NOFOUND,///<Transcoder module is not found.
 	SDKERR_VIDEO_NOTREADY,///<The video service is not ready.
-	SDKERR_NO_PERMISSION,///<No premission.
+	SDKERR_NO_PERMISSION,///<No permission.
 	SDKERR_UNKNOWN,///<Unknown error.
 	SDKERR_OTHER_SDK_INSTANCE_RUNNING,///<The other instance of the SDK is in process.
 	SDKERR_INTELNAL_ERROR,///<SDK internal error.
 	SDKERR_NO_AUDIODEVICE_ISFOUND,///<No audio device found.
 	SDKERR_NO_VIDEODEVICE_ISFOUND,///<No video device found.
 	SDKERR_TOO_FREQUENT_CALL,///<API calls too frequently.
+	SDKERR_FAIL_ASSIGN_USER_PRIVILEGE, ///<User can't be assigned with new privilege.
+	SDKERR_MEETING_DONT_SUUPORT_FEATURE,///<The current meeting doesn't support the feature.
 };
 
 /*! \enum SDK_LANGUAGE_ID
@@ -94,7 +96,7 @@ enum CustomizedLanguageType
 {
 	CustomizedLanguage_None,///<No use of the custom resource.
 	CustomizedLanguage_FilePath,///<Use the specified file path to assign the custom resource.
-	CustomizedLanguage_Content,///<Use the specified content to assign the custom ressorce.
+	CustomizedLanguage_Content,///<Use the specified content to assign the custom resource.
 };
 
 /*! \struct CustomizedLanguageType
@@ -104,7 +106,7 @@ enum CustomizedLanguageType
 typedef struct tagCustomizedLanguageInfo
 {
 	const char* langName;///<Resource name.
-	const char* langInfo;///<The value should be the full path of the resource file when the langType value is CustomizedLanguage_FilePath, inclouding the file name. When the langType value is CustomizedLanguage_Content, the value saves the content of the resource.
+	const char* langInfo;///<The value should be the full path of the resource file when the langType value is CustomizedLanguage_FilePath, including the file name. When the langType value is CustomizedLanguage_Content, the value saves the content of the resource.
 	CustomizedLanguageType langType;///<Use the custom resource type.
 	tagCustomizedLanguageInfo()
 	{
@@ -145,6 +147,7 @@ typedef struct tagInitParam
 	unsigned int uiWindowIconSmallID;///<The ID of the small icon on the window.
 	unsigned int uiWindowIconBigID;///<The ID of the big Icon on the window.
 	SDK_LANGUAGE_ID emLanguageID;///<The ID of the SDK language.
+	bool enableLogByDefault;///<Enable log
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
 	tagInitParam()
 	{
@@ -155,6 +158,7 @@ typedef struct tagInitParam
 		uiWindowIconSmallID = 0;
 		uiWindowIconBigID = 0;
 		emLanguageID = LANGUAGE_Unknow;
+		enableLogByDefault = false;
 	}
 }InitParam;
 

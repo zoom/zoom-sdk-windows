@@ -51,7 +51,7 @@ enum ShareType
 	SHARE_TYPE_UNKNOWN,///<Type unknown.
 	SHARE_TYPE_AS,///<Type of sharing the application.
 	SHARE_TYPE_DS,///<Type of sharing the desktop.
-	SHARE_TYPE_WB,///<Type of sharing the whiteboard.
+	SHARE_TYPE_WB,///<Type of sharing the white-board.
 	SHARE_TYPE_AIRHOST,///<Type of sharing data from the device connected WIFI. 
 	SHARE_TYPE_CAMERA,///<Type of sharing the camera.
 	SHARE_TYPE_DATA,///<Type of sharing the data.
@@ -70,13 +70,21 @@ enum AdvanceShareOption
     \brief Information of current sharing.
     Here are more detailed structural descriptions.
 */
+enum MultiShareOption
+{
+	Enable_Multi_Share = 0, ///<Multi-participants can share simultaneously.
+	Enable_Only_HOST_Start_Share, ///<Only host can share at a time.
+	Enable_Only_HOST_Grab_Share, ///<One participant can share at a time, during sharing only host can start a new sharing and the previous sharing will be replaced.
+	Enable_All_Grab_Share, ///<One participant can share at a time, during sharing everyone can start a new sharing and the previous sharing will be replaced.
+};
+
 typedef struct tagShareInfo
 {
 	ShareType eShareType;///<Type of sharing, see \link ShareType \endlink enum.
 	union
 	{
-		HWND hwndSharedApp;///<Handle of sharing application or whiteboard. It is invalid unless the value of the eShareType is SHARE_TYPE_AS or SHARE_TYPE_WB.
-		const wchar_t* monitorID;///<The monitor ID of desketop shared. It is invalid unless the value of the eShareType is SHARE_TYPE_DS.
+		HWND hwndSharedApp;///<Handle of sharing application or white-board. It is invalid unless the value of the eShareType is SHARE_TYPE_AS or SHARE_TYPE_WB.
+		const wchar_t* monitorID;///<The ID of screen to be shared. It is invalid unless the value of the eShareType is SHARE_TYPE_DS.
 	}ut;
 	tagShareInfo()
 	{
@@ -85,13 +93,27 @@ typedef struct tagShareInfo
 	}
 }ShareInfo;
 
+/// \brief Reminder handler of switching from multi-share to single share.
+///
+class IShareSwitchMultiToSingleConfirmHandler
+{
+public:
+	/// \brief Cancel to switch multi-share to single share. All sharing will be remained.
+	virtual SDKError Cancel() = 0;
+
+	/// \brief Switch multi-share to single share. All sharing will be remained.
+	virtual SDKError Confirm() = 0;
+
+	virtual ~IShareSwitchMultiToSingleConfirmHandler() {};
+};
+
 /// \brief Callback event of meeting share controller.
 ///
 class IMeetingShareCtrlEvent
 {
 public:
 	/// \brief Callback event of the changed sharing status. 
-	/// \param status The valus of sharing status. For more details, see \link SharingStatus \endlink enum.
+	/// \param status The values of sharing status. For more details, see \link SharingStatus \endlink enum.
 	/// \param userId Sharer ID. 
 	/// \remarks The userId changes according to the status value. When the status value is the Sharing_Self_Send_Begin or Sharing_Self_Send_End, the userId is the user own ID. Otherwise, the value of userId is the sharer ID.
 	virtual void onSharingStatus(SharingStatus status, unsigned int userId) = 0;
@@ -102,7 +124,11 @@ public:
 
 	/// \brief Callback event of changed sharing information.
 	/// \param shareInfo Sharing information. For more details, see \link ShareInfo \endlink structure.
-	virtual void onShareContentNotification(ShareInfo& shareInfo) = 0;	
+	virtual void onShareContentNotification(ShareInfo& shareInfo) = 0;
+
+	/// \brief Callback event of switching multi-participants share to one participant share.
+	/// \param handler_ An object pointer used by user to complete all the related operations. For more details, see \link IShareSwitchMultiToSingleConfirmHandler \endlink.
+	virtual void onMultiShareSwitchToSingleShareNeedConfirm(IShareSwitchMultiToSingleConfirmHandler* handler_) = 0;		
 };
 
 /// \brief Meeting share controller interface.
@@ -117,7 +143,7 @@ public:
 	virtual SDKError SetEvent(IMeetingShareCtrlEvent* pEvent) = 0;
 	
 	/// \brief Share the specified application.
-	/// \param hwndSharedApp Specify the window handle of the programme to be shared. If the hwndSharedApp can't be shared, the return value is the SDKERR_INVALID_PARAMETER error code. If the hwndSharedApp is NULL, a dialog box pops up to enable the user to choose an application. 
+	/// \param hwndSharedApp Specify the window handle of the application to be shared. If the hwndSharedApp can't be shared, the return value is the SDKERR_INVALID_PARAMETER error code. If the hwndSharedApp is NULL, a dialog box pops up to enable the user to choose an application. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
@@ -297,6 +323,12 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError EnableOptimizeForFullScreenVideoClip(bool bEnable) = 0;
+
+	/// \brief Set the options for multi-participants share.
+	/// \param [in] shareOption New options for sharing, see \link MultiShareOption \endlink enum.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SetMultiShareSettingOptions(MultiShareOption shareOption) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

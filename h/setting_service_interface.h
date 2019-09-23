@@ -6,6 +6,7 @@
 #ifndef _SETTING_SERVICE_INTERFACE_H_
 #define _SETTING_SERVICE_INTERFACE_H_
 #include "zoom_sdk_def.h"
+#include "zoom_sdk_util_define.h"
 
 BEGIN_ZOOM_SDK_NAMESPACE
 /// \brief Camera device information interface.
@@ -45,7 +46,7 @@ public:
 	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceName() = 0;
 
-	/// \brief Determine if the current device is slected to use.
+	/// \brief Determine if the current device is selected to use.
 	/// \return TRUE indicates that the current device is selected.
 	virtual bool IsSelectedDevice() = 0;
 
@@ -67,7 +68,7 @@ public:
 	///Otherwise failed, returns NULL.
 	virtual const wchar_t* GetDeviceName() = 0;
 
-	/// \brief Determine if the current device is slected to use.
+	/// \brief Determine if the current device is selected to use.
 	/// \return TRUE indicates that the current device is selected.
 	virtual bool IsSelectedDevice() = 0;
 
@@ -91,8 +92,8 @@ enum SettingTabPage
 typedef struct tagShowSettingDlgParam
 {
 	HWND hParent;///<Parent window handle.
-	int top;///<The Y-axis value of the top-left corner of the dialog uses the coordinate system of the moniter.
-	int left;///<The X-axis value of the top-left corner of the dialog uses the coordinate system of the moniter.
+	int top;///<The Y-axis value of the top-left corner of the dialog uses the coordinate system of the monitor.
+	int left;///<The X-axis value of the top-left corner of the dialog uses the coordinate system of the monitor.
 	HWND hSettingWnd;///<Window handle of the dialog setting.
 	bool bShow;///<Enable to display or nor.
 	SettingTabPage eTabPageType; ///<The tab page shown at the top of the displayed setting dialog.
@@ -124,8 +125,8 @@ class ITestAudioDeviceHelperEvent
 {
 public:
 	/// \brief Notify the current mic or speaker volume when testing.
-	/// \param MicVolume Specify the voulme of the mic.
-	/// \param SpkVolume Specify the voulme of the speaker.
+	/// \param MicVolume Specify the volume of the mic.
+	/// \param SpkVolume Specify the volume of the speaker.
 	virtual void OnMicSpkVolumnChanged(unsigned int MicVolume, unsigned int SpkVolume) = 0;
 
 	/// \brief Notify that either mic device or speaker device is not found.
@@ -169,7 +170,7 @@ public:
 	///\remarks The function is disabled if no event handler is set.
 	virtual SDKError TestMicStopTesting() = 0;
 
-	/// \brief Play the mic reocrded sound. If there is no mic testing, SDK return an error.
+	/// \brief Play the mic recorded sound. If there is no mic testing, SDK return an error.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	///\remarks The function is disabled if no event handler is set.
@@ -306,9 +307,10 @@ public:
 	
 	/// \brief Set the window and the rectangle to display the video preview.
 	/// \param hParentWnd Specify the window to display the video preview.
-	/// \param rc Specify a rectangle on the window to display the video preview. The default value is {0,0,0,0}, whick means the whole client area of the window.
+	/// \param rc Specify a rectangle on the window to display the video preview. The default value is {0,0,0,0}, which means the whole client area of the window.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks This function SHOULD only be called ONCE. Any redundant calling will return SDKERR_WRONG_USEAGE.
 	virtual SDKError SetVideoPreviewParentWnd(HWND hParentWnd, RECT rc = _SDK_TEST_VIDEO_INIT_RECT) = 0;
 	
 	/// \brief Start to test the camera. 
@@ -333,6 +335,8 @@ public:
 	/// \remarks The function can not work if there is no event or window handle to be set. 
 	///It works also in the meeting video when you rotate the preview video. Please use it with cautions.
 	virtual SDKError TestVideoRotate(PREVIEW_VIDEO_ROTATION_ACTION action) = 0;	
+
+	virtual ICameraController* GetTestCameraController() = 0;
 };
 
 /// \brief Video setting context callback event.
@@ -445,7 +449,7 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Enable49VideoesInGallaryView(bool bEnable) = 0;
 
-	/// \brief Get the falg to enable/disable to show the participants in Gallery View up to 49 per screen.
+	/// \brief Get the flag to enable/disable to show the participants in Gallery View up to 49 per screen.
 	/// \return Enabled or disabled.
 	virtual bool Is49VideoesInGallaryViewEnabled() = 0;
 
@@ -556,13 +560,13 @@ public:
 	/// \return Enabled or disabled.
 	virtual bool IsMicOriginalInputEnable() = 0;
 	
- 	/// \brief Enable or disable to press and hold the Spacebar to speak.
-	/// \param bEnable TRUE indicates to press and hold the Spacebar to speak. 
+ 	/// \brief Enable or disable to press and hold the Space-bar to speak.
+	/// \param bEnable TRUE indicates to press and hold the Space-bar to speak. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableHoldSpaceKeyToSpeak(bool bEnable) = 0;
 
-	/// \brief Get the flag to enable/disable to press and hold the Spacebar to speak.
+	/// \brief Get the flag to enable/disable to press and hold the Space-bar to speak.
 	/// \return Enabled or disabled.
 	virtual bool IsHoldSpaceKeyToSpeakEnabled() = 0;
 
@@ -641,13 +645,13 @@ public:
 */
 enum SettingsNetWorkType 
 {
-	SETTINGS_NETWORK_WIRED	= 0,///<Wired lan
+	SETTINGS_NETWORK_WIRED	= 0,///<Wired LAN
 	SETTINGS_NETWORK_WIFI	= 1,///<WIFI
 	SETTINGS_NETWORK_PPP	= 2,///<PPP
 	SETTINGS_NETWORK_3G		= 3,///<3G
 	SETTINGS_NETWORK_OTHERS	= 4,///<Others
 
-	SETTINGS_NETWORK_UNKNOWN = -1,///<Unkown network.
+	SETTINGS_NETWORK_UNKNOWN = -1,///<Unknown network.
 };
 
 /*! \enum SettingConnectionType
@@ -658,7 +662,7 @@ enum SettingConnectionType
 {
 	SETTINGS_CONNECTION_TYPE_CLOUD,///<Cloud connection.
 	SETTINGS_CONNECTION_TYPE_DIRECT,///<Direct connection.
-	SETTINGS_CONNECTION_TYPE_UNKNOWN = -1,///<unknow connection.
+	SETTINGS_CONNECTION_TYPE_UNKNOWN = -1,///<Unknown connection.
 };
 
 /*! \struct tagOverallStatisticInfo

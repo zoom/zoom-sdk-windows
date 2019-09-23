@@ -80,7 +80,7 @@ enum SDKMinimizeUIMode
 typedef struct tagSplitScreenInfo
 {
 	bool bSupportSplitScreen;///<Support display the video in a row.
-	bool bInSplitScreenMode;///<In the process of diplaying the video in the row.
+	bool bInSplitScreenMode;///<In the process of displaying the video in the row.
 	tagSplitScreenInfo()
 	{
 		bSupportSplitScreen = false;
@@ -116,6 +116,10 @@ public:
 	
 	/// \brief Notification occurs only when the SDK fails to display the default ZOOM INVITE dialog.
 	virtual void onZoomInviteDialogFailed() = 0;
+
+	/// \brief Callback event of clicking CC menu.
+	/// \remarks The user won't receive this callback event unless he redirects the process of clicking the CUSTOME LIVE STREAM menu. For more details, see \link IMeetingUIElemConfiguration::RedirectClickCustomLiveStreamMenuEvent() \endlink.
+	virtual void onCCBTNClicked() = 0;
 };
 
 /// \brief Meeting UI Controller Interface.
@@ -154,6 +158,11 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ExitFullScreen(bool firstView, bool secondView) = 0;
 
+	/// \brief Active the principal window of meeting and place it on top.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError BackToMeeting() = 0;
+
 	/// \brief Switch to video wall mode. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
@@ -183,13 +192,13 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwitchFloatVideoToActiveSpkMod() = 0;
 
-	/// \brief Adjust the display mode of floating video. 
+	/// \brief Adjust the display mode of floating window. 
 	/// \param type Specify the type of the floating video. For more details, see \link SDKFloatVideoType \endlink enum.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ChangeFloatoActiveSpkVideoSize(SDKFloatVideoType type) = 0;
 
-	/// \brief Switch to gallery view mode from the floating video mode. 
+	/// \brief Switch to gallery view mode on the floating window. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SwitchFloatVideoToGalleryMod() = 0;
@@ -265,7 +274,7 @@ public:
 	/// \param bSplit TRUE indicates to switch to the split screen mode. FALSE cancel.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	///\remarks  TRUE does not work if it is in the split screen mode. FALSE does not work if it is not the split screen mode.
+	///\remarks TRUE does not work if it is in the split screen mode. FALSE does not work if it is not the split screen mode.
 	virtual SDKError SwitchSplitScreenMode(bool bSplit) = 0;
 };
 
