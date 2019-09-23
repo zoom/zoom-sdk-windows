@@ -4,8 +4,17 @@
 </div>
 
 ## Latest SDK Notifications
-1. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
-2. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
+1. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+   * **CptControl.exe**
+   * **CptHost.exe**
+   * **CptInstall.exe**
+   * **CptService.exe**
+   * **CptShare.dll**
+   * **zzhost.dll**
+   * **zzplugin.dll**
+   * **aomhost64.exe**
+2. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
+3. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
 
 ## Full Documentation && Community Support
 You can find the full Zoom Windows SDK documentation and the community support forum here:
@@ -81,6 +90,20 @@ Please refer to our [CHANGELOG](https://github.com/zoom/zoom-sdk-windows/blob/ma
 
 ## Frequently Asked Questions (FAQ)
 
+* :one: `Getting ERROR Code: 105035 while using Windows SDK`:
+  * **In most of the cases, this is caused by resigning or adding new signature to the following files while integrating and deploying our SDK**:
+     * **CptControl.exe**
+     * **CptHost.exe**
+     * **CptInstall.exe**
+     * **CptService.exe**
+     * **CptShare.dll**
+     * **zzhost.dll**
+     * **zzplugin.dll**
+     * **aomhost64.exe**
+   
+   **Please skip signing / do not add any new signatures to the above files. If the error code appears even if the above files are not being re-signed, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) and seek help.**
+   
+   
 * Please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) for further assistance.
 
 ## Support

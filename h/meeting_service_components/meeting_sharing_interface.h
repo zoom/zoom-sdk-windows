@@ -333,6 +333,17 @@ public:
 	virtual SDKError SetMultiShareSettingOptions(MultiShareOption shareOption) = 0;
 
 	virtual SDKError GetMultiShareSettingOptions(MultiShareOption& shareOption) = 0;
+
+	/// \brief Determine whether can switch to next camera, when share camera. 
+	/// \param [Out] bCan, if bCan is true it means you can switch, else can not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanSwitchToShareNextCamera(bool& bCan) = 0;
+
+	/// \brief switch to next camera, when you are sharing the camera.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SwitchToShareNextCamera() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

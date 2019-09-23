@@ -1,5 +1,58 @@
 # CHANGELOG
 
+## Note
+
+Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+   * **CptControl.exe**
+   * **CptHost.exe**
+   * **CptInstall.exe**
+   * **CptService.exe**
+   * **CptShare.dll**
+   * **zzhost.dll**
+   * **zzplugin.dll**
+   * **aomhost64.exe**
+
+## 2019-09-04 @ [v4.4.55968.0904](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55968.0904)
+
+## Note
+
+### :red_circle: SDK file structure has changed
+
+**In order to further optimize the size of our SDK package, starting from this version, Zoom Windows SDK removes the installation package of `Microsoft VC90 runtime`. Please visit Microsoft's website to download and install the `Microsoft VC90 runtime` on your machine. Please also kindly consider adding the `Microsoft VC90 runtime` installation packages in your installation package when you publish your applications developed using Zoom Windows SDK.**
+
+## Added
+*  Add a new interface to hide switch-camera-button on `ShareCameraWindow`
+* `IMeetingConfiguration.HideSwitchCameraButton(bool bHide)`
+*  Add a new interface to switch share to next camera when sharing the camera
+* `IMeetingShareController.SwitchToShareNextCamera();`
+*  Add a new interface to determine whether the user can switch to next camera when sharing the camera
+* `IMeetingShareController.CanSwitchToShareNextCamera(bool& bCan);`
+*  Add new interfaces in `IMeetingUIController` to allow swapping the position of the video view and the sharing view:
+* `virtual SDKError SwapToShowShareViewOrVideo(bool bToDisplayShare) = 0;`
+* `virtual SDKError IsDisplayingShareViewOrVideo(bool& bIsShare) = 0;`
+* `virtual SDKError CanSwapToShowShareViewOrVideo(bool& bCan) = 0;`
+*  Add a new interface to redirect the warning messages (e.g:"Resource Insufficient") and to trigger the callback `IMeetingServiceEvent.onMeetingStatisticsWarningNotification()`
+* `IMeetingUIElemConfiguration.RedirectMeetingWarningMsg(RedirectWarningMsgOption redirectOption)`
+*  Add a new interface `IMeetingAudioCtrlEvent.onHostRequestStartAudio()` and a new class `IRequestStartAudioHandler` to notify attendee when the host is requesting to enable microphone.
+*  Add new callbacks for default devices(mic/speaker/camera) when they are selected or have changes:
+* `IVideoSettingContextEvent.onDefaultCamDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName)`
+* `IAudioSettingContextEvent.onDefaultMicDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName)`
+* `IAudioSettingContextEvent.onDefaultSpeakerDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName)`
+*  Add a parameter to the interface `IsAnnoataionDisable()` with a default value.
+* `IAnnotationController.IsAnnoataionDisable(SDKViewType viewtype = SDK_FIRST_VIEW)`
+
+## Changed & Fixed
+*  Fixed an issue that the schedule meeting dialog is not shown
+*  Fixed an issue that the video is turned off by default when starting a meeting with ZAK
+*  Fixed an issue that replacing the Zoom icon in the main meeting window is not success
+*  Fixed an issue that sharing with pairing code does not show the UI controls
+*  Fixed an issue that the meeting ends right after starting a meeting
+*  Optimized the `IMeetingAudioCtrlEvent.onUserActiveAudioChange()` callback so it will be triggered less frequent
+*  Optimized the SDK initialization process by reducing the call to `newfitpanel:initallcontrol()`
+*  Optimized the performance of `MuteAudio()` interface
+*  Changed to hide the "Pause/Stop" buttons when the auto-recording feature is turned on
+
+
 ## 2019-07-15 @ [v4.4.55130.0712](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55130.0712)
 
 **Note**
@@ -82,8 +135,6 @@ Some default behavior in Zoom meeting has changed:
 
 
 ## 2019-03-25 @ [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325)
-
-**Note: Please do not assign new digital signature on cpthost.exe file. Assigning new digital signature on this file could lead to fatal errors**
 
 **Added**
 

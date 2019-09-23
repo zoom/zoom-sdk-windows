@@ -423,6 +423,11 @@ public:
 	/// \brief Callback event if the SDK detects that the computer camera devices have been changed.
 	/// \param pNewCameraList The new list of all camera devices plugged into the computer. 
 	virtual void onComputerCamDeviceChanged(IList<ICameraInfo*>* pNewCameraList) = 0;
+
+	/// \brief Notify the user that a camera device is selected.
+	/// \param deviceId Specify a device to be selected.
+	/// \param deviceName Specify the device name assigned by deviceId.
+	virtual void onDefaultCamDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
 };
 /// \brief Video setting interface.
 ///
@@ -566,6 +571,16 @@ public:
 	/// \brief Callback event if the SDK detects that the computer speaker devices have been changed.
 	/// \param pNewSpeakerList The new list of all speaker devices plugged into the computer. 
 	virtual void onComputerSpeakerDeviceChanged(IList<ISpeakerInfo*>* pNewSpeakerList) = 0;
+
+	/// \brief Notify the user that a microphone device is selected.
+	/// \param deviceId Specify a device to be selected.
+	/// \param deviceName Specify the device name assigned by deviceId.
+	virtual void onDefaultMicDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
+
+	/// \brief Notify the user that a speaker device is selected.
+	/// \param deviceId Specify a device to be selected.
+	/// \param deviceName Specify the device name assigned by deviceId.
+	virtual void onDefaultSpeakerDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
 };
 
 /// \brief Audio setting interface.

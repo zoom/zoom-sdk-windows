@@ -194,6 +194,7 @@ void AnnotateBarWindow::Notify( TNotifyUI& msg )
 {
 	if (msg.sType ==_T("click")){
 		if (m_customerAnnoObj == NULL){
+			if (!m_customerAnnoCtrl) return;
 			m_customerAnnoCtrl->CreateAnnoObj(m_pShareRender, &m_customerAnnoObj);
 			if (!m_customerAnnoObj)
 				return;

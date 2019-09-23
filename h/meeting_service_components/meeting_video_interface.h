@@ -55,7 +55,12 @@ public:
 	/// \param handler_ A pointer to the IRequestStartVideoHandler. For more details, see \link IRequestStartVideoHandler \endlink.
 	virtual void onHostRequestStartVideo(IRequestStartVideoHandler* handler_) = 0;
 
+	/// \brief Callback event of the active speaker video user changes. 
+	/// \param userid The ID of user who becomes the new active speaker.
 	virtual void onActiveSpeakerVideoUserChanged(unsigned int userid) = 0;
+
+	/// \brief Callback event of the active video user changes. 
+	/// \param userid The ID of user who becomes the new active speaker.
 	virtual void onActiveVideoUserChanged(unsigned int userid) = 0;
 };
 

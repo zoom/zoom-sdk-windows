@@ -291,19 +291,23 @@ void CSDKLoggedInUIMgr::ShowErrorMessage(const wchar_t* error_message)
 
 void CSDKLoggedInUIMgr::DisableMeetingButton()
 {
-	if(m_bInMeeting || m_bConnectToMeeting)
-	{
-		m_btnJoinMeeting->SetEnabled(false);
-		m_btnStartAudioOnlyMeeting->SetEnabled(false);
-		m_btnStartVideoMeeting->SetEnabled(false);
-		m_btnStartDirectShare->SetEnabled(false);
-	}
-	else
+	if(NULL == m_btnJoinMeeting || NULL == m_btnStartAudioOnlyMeeting  || NULL == m_btnStartVideoMeeting
+		||NULL == m_btnStartDirectShare ||NULL == m_btnSchedule || NULL ==  m_btnStartDirectShare)
+		return;
+
+	m_btnJoinMeeting->SetEnabled(false);
+	m_btnStartAudioOnlyMeeting->SetEnabled(false);
+	m_btnStartVideoMeeting->SetEnabled(false);
+	m_btnStartDirectShare->SetEnabled(false);
+	m_btnSchedule->SetEnabled(false);
+	
+	if (m_bReallyLoggedIn && !(m_bInMeeting || m_bConnectToMeeting))
 	{
 		m_btnJoinMeeting->SetEnabled(true);
 		m_btnStartAudioOnlyMeeting->SetEnabled(true);
 		m_btnStartVideoMeeting->SetEnabled(true);
 		m_btnStartDirectShare->SetEnabled(true);
+		m_btnSchedule->SetEnabled(true);
 	}
 	m_btnStartDirectShare->SetEnabled(false); //hide it for this version
 	m_btnStartDirectShare->SetVisible(false); //hide it for this version

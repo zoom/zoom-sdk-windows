@@ -141,6 +141,8 @@ public:
 	virtual void OnSelectedAudioDeviceIsChanged();
 	virtual void OnComputerMicDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IMicInfo*>* pNewMicList);
 	virtual void OnComputerSpeakerDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ISpeakerInfo*>* pNewSpeakerList);
+	virtual void onDefaultMicDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) {}
+	virtual void onDefaultSpeakerDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) {}
 
 protected:
 	ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ISpeakerInfo*>* m_lstTestSpeaker;
@@ -216,6 +218,7 @@ public:
 	virtual void OnSelectedVideoDeviceIsChanged(); 
 	virtual void OnNoWindowToShowPreview();
 	virtual void OnComputerCamDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ICameraInfo*>* pNewCameraList);
+	virtual void onDefaultCamDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) {}
 private:
 	CSDKVideoSettingsWorkFlow m_videoSettingsWorkFlow;
 	CVerticalLayoutUI* m_settingsVideoPage;

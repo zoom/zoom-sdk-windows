@@ -11,6 +11,8 @@ public:
 	virtual void OnSelectedAudioDeviceIsChanged() = 0;
 	virtual void OnComputerMicDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IMicInfo*>* pNewMicList) = 0;
 	virtual void OnComputerSpeakerDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ISpeakerInfo*>* pNewSpeakerList) = 0;
+	virtual void onDefaultMicDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
+	virtual void onDefaultSpeakerDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
 };
 class CSDKAudioSettingsWorkFlow:public ZOOM_SDK_NAMESPACE::ITestAudioDeviceHelperEvent,public ZOOM_SDK_NAMESPACE::IAudioSettingContextEvent
 {
@@ -60,6 +62,8 @@ public:
 	virtual void OnSelectedAudioDeviceIsChanged();
 	virtual void onComputerMicDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IMicInfo*>* pNewMicList);
 	virtual void onComputerSpeakerDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ISpeakerInfo*>* pNewSpeakerList);
+	virtual void onDefaultMicDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) {}
+	virtual void onDefaultSpeakerDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) {}
 
 private:
 	CSDKAudioSettingsUIEvent* m_pAudioSettingsUIEvent;

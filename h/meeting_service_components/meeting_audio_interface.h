@@ -34,6 +34,22 @@ enum AudioType
 	AUDIOTYPE_UNKNOW,///<Unknown mode.
 };
 
+/// \brief Process after the user receives the requirement from the host to turn on the audio.
+class IRequestStartAudioHandler
+{
+public:
+	virtual ~IRequestStartAudioHandler(){};
+	/// \brief Get the user ID who asks to turn on the audio.
+	/// \return If the function succeeds, the return value is the user ID. FALSE 0.
+	virtual unsigned int GetReqFromUserId() = 0;
+	/// \brief Instance to ignore the requirement, return nothing and finally self-destroy.
+	virtual SDKError Ignore() = 0;
+	/// \brief Instance to accept the requirement, turn on the audio and finally self-destroy.
+	virtual SDKError Accept() = 0;
+	/// \brief Ignore the request to enable the video in the meeting and finally the instance self-destroys.
+	virtual SDKError Cancel() = 0;
+};
+
 class IUserAudioStatus
 {
 public:
@@ -64,6 +80,10 @@ public:
 	/// \brief The callback event that users whose audio is active changed.
 	/// \param plstActiveAudio List to store the ID of user whose audio is active.
 	virtual void onUserActiveAudioChange(IList<unsigned int >* plstActiveAudio) = 0;
+
+	/// \brief Callback event of the requirement to turn on the audio from the host.
+	/// \param handler_ A pointer to the IRequestStartAudioHandler. For more details, see \link IRequestStartAudioHandler \endlink.
+	virtual void onHostRequestStartAudio(IRequestStartAudioHandler* handler_) = 0;
 };
 
 /// \brief Meeting audio controller interface.

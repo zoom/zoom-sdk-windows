@@ -451,6 +451,7 @@ enum StatisticsWarningType
 {
 	Statistics_Warning_None,///<No warning.
 	Statistics_Warning_Network_Quality_Bad,///<The network connection quality is bad.
+	Statistics_Warning_Busy_System,
 };
 
 /// \brief Meeting service callback event.

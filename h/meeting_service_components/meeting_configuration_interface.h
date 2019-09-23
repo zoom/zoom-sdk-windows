@@ -225,9 +225,11 @@ public:
 typedef struct tagRedirectWarningMsgOption
 {
 	bool bRedirectBadNetwork;
+	bool bRedirectWarnHighCPU;
 	tagRedirectWarningMsgOption()
 	{
-		bool bRedirectBadNetwork = false;
+		bRedirectBadNetwork = false;
+		bRedirectWarnHighCPU = false;
 	}
 
 }RedirectWarningMsgOption;
@@ -438,6 +440,10 @@ public:
 	// \brief Set the visibility of the local recording convert progress bar dialog. Default: TRUE. 
 	/// \param bShow TRUE indicates to show the dialog box. FALSE not.
 	virtual void EnableLocalRecordingConvertProgressBarDialog(bool bShow) = 0;
+
+	// \brief Set the visibility of Switch Camera button on 2nd camera share window,Default: TRUE. 
+	/// \param bHide TRUE indicates to hide the Switch Camera button. FALSE not.
+	virtual void HideSwitchCameraButton(bool bHide) = 0;
 };
 
 /// \brief Meeting connect configuration Interface

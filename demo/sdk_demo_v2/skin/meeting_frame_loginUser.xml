@@ -109,7 +109,8 @@
 						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" showhandcursor="true" align="center,multiline" valign="vcenter"
 						normalimage="res='BTN_QS_SCHEDULE_NORMAL.png' restype='ZPIMGRES' dest='0,0,100,100' " 
 						hotimage="res='BTN_QS_SCHEDULE_HOVER.png' restype='ZPIMGRES' dest='0,0,100,100' " 
-						pushedimage="res='BTN_QS_SCHEDULE_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						pushedimage="res='BTN_QS_SCHEDULE_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100' "
+						disabledimage="res='BTN_QS_SCHEDULE_DISABLED.png' restype='ZPIMGRES' dest='0,0,100,100' " 
 						focuspadding="10,10,10,50"  focusround="30,30"
 						/>
 					<Label name="lb_scheduleMeeting"  text="Schedule" padding="0,0,0,0" height="28" width="80" align="center,singleline"  mouse="false" font="2" 

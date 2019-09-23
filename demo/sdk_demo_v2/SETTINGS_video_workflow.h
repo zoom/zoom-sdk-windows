@@ -9,6 +9,7 @@ public:
 	virtual void OnSelectedVideoDeviceIsChanged() = 0; 
 	virtual void OnNoWindowToShowPreview() = 0;
 	virtual void OnComputerCamDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ICameraInfo*>* pNewCameraList) = 0;
+	virtual void onDefaultCamDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
 };
 class CSDKVideoSettingsWorkFlow:public ZOOM_SDK_NAMESPACE::ITestVideoDeviceHelperEvent,ZOOM_SDK_NAMESPACE::IVideoSettingContextEvent
 {
@@ -50,6 +51,7 @@ public:
 	virtual void OnSelectedVideoDeviceIsChanged(); 
 	virtual void OnNoWindowToShowPreview();
 	virtual void onComputerCamDeviceChanged(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::ICameraInfo*>* pNewCameraList);
+	virtual void onDefaultCamDeviceChanged(const wchar_t* deviceId, const wchar_t* deviceName) {}
 private:
 	CSDKVideoSettingsUIEvent* m_pVideoSettingsUIEvent;
 	ZOOM_SDK_NAMESPACE::ISettingService* m_pSettingsService;

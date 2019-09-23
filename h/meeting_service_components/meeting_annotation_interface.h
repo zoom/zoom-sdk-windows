@@ -73,10 +73,11 @@ public:
 	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingAnnotationSupportEvent* pEvent) = 0;
 
-	/// \brief Determine if the annotation tools are disabled or not during the current meeting.
+	/// \brief Determine if the annotation tools are disabled or not for the specified view during the current meeting.
+	/// \param viewtype Specify which view to be determined. For more details, see \link SDKViewType \endlink enum.
 	/// \return FALSE indicates enabled while TRUE indicates disabled.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
-	virtual bool IsAnnoataionDisable() = 0;
+	virtual bool IsAnnoataionDisable(SDKViewType viewtype = SDK_FIRST_VIEW) = 0;
 
 	/// \brief Display annotation toolbar.
 	/// \param viewtype Specify which view to display the toolbar. For more details, see \link SDKViewType \endlink enum.
