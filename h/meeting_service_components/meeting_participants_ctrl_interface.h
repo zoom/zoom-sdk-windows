@@ -81,6 +81,10 @@ public:
 	/// \return Is pure phone user or not
 	virtual bool IsPurePhoneUser() = 0;
 
+	/// \brief Audio Voice Level
+	/// \return Audio Voice Level
+	virtual int GetAudioVoiceLevel() = 0;
+	
 	virtual ~IUserInfo(){};
 };
 
@@ -112,6 +116,11 @@ public:
 	/// \param userId
 	/// \param userName 
 	virtual void onUserNameChanged(unsigned int userId, const wchar_t* userName) = 0;
+
+	/// \brief co-host change callback
+	/// \param userId
+	/// \param isCoHost co-host or not
+	virtual void onCoHostChangeNotification(unsigned int userId, bool isCoHost) = 0;
 };
 
 /// \brief Meeting waiting room controller interface
@@ -126,7 +135,7 @@ public:
 	virtual SDKError SetEvent(IMeetingParticipantsCtrlEvent* pEvent) = 0;
 
 	/// \brief Get meeting participants list
-	/// \return the return value is current meeting all participants list.if not in meeting, return NULL.
+	/// \return the return value is all participants list of current meeting.if not in meeting, return NULL.
 	virtual IList<unsigned int >* GetParticipantsList() = 0;
 
 	/// \brief Get user information via user id
@@ -147,6 +156,64 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError ChangeUserName(const unsigned int userid, const wchar_t* userName, bool bSaveUserName) = 0;
+
+	/// \brief Lower attendee hands in meeting.
+	/// \param userId Specifies which the user's hands to low.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError LowerHand(unsigned int userid) = 0;
+
+	/// \brief Raise hands in meeting.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError RaiseHand() = 0;
+
+	/// \brief Make host.
+	/// \param userId Specifies which the user to be the host.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError MakeHost(unsigned int userid) = 0;
+
+	/// \brief check can be the co-host.
+	/// \param userId Specifies which the user can be the co-host.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanbeCohost(unsigned int userid) = 0;
+
+	/// \brief Assign co-host.
+	/// \param userId Specifies which the user to be the co-host.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError AssignCoHost(unsigned int userid) = 0;
+
+	/// \brief Revoke co-host.
+	/// \param userId Specifies which the co-host user to be revoked.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError RevokeCoHost(unsigned int userid) = 0;
+
+	/// \brief Expel user.
+	/// \param userId Specifies which the user to expel.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ExpelUser(unsigned int userid) = 0;
+
+	/// \brief Reclaim host.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ReclaimHost() = 0;
+
+	/// \brief Check the right of reclaim host.
+	/// \param bCanReclaimHost can reclaim host or not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanReclaimHost(bool& bCanReclaimHost) = 0;
+
+	/// \brief Reclaim host by key.
+	/// \param host_key host key.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError ReclaimHostByHostKey(const wchar_t* host_key) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

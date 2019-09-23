@@ -75,6 +75,7 @@ typedef struct tagLoginParam4Email
 typedef struct tagLoginParam4SSO
 {
 	const wchar_t* ssoToken;///< Account SSO token when Login
+	bool bRememberMe;
 }LoginParam4SSO;
 
 /*! \struct tagLoginParam
@@ -129,6 +130,9 @@ public:
 	
 	/// \brief Logout Result callback
 	virtual void onLogout() = 0;
+
+	/// \brief Zoom identity expired, please re-login or generate new zoom access token via REST api
+	virtual void onZoomIdentityExpired() = 0;
 };
 
 /// \brief Authentication Service Interface

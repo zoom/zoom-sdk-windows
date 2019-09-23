@@ -1,7 +1,6 @@
 /*!
 * \file meeting_recording_interface.h
 * \brief Recording of Meeting Service Interface
-* 
 */
 #ifndef _MEETING_Recording_INTERFACE_H_
 #define _MEETING_Recording_INTERFACE_H_
@@ -18,9 +17,11 @@ BEGIN_ZOOM_SDK_NAMESPACE
 */
 enum RecordingStatus
 {
-	Recording_Start,
-	Recording_Stop,
-	Recording_DiskFull,
+	Recording_Start,			 //start, both for local & cloud recording
+	Recording_Stop,				 //stop, both for local & cloud recording
+	Recording_DiskFull,			 //error, both for local & cloud recording
+	Recording_Pause,			 //pause, both for local & cloud recording
+	Recording_Connecting,		 //connecting, only for cloud recording
 };
 
 /// \brief Meeting recording callback event
@@ -42,6 +43,10 @@ public:
 	/// \param status Recording status value.
 	virtual void onRecordingStatus(RecordingStatus status) = 0;
 
+	/// \brief Cloud Recording status notify callback
+	/// \param status Recording status value.
+	virtual void onCloudRecordingStatus(RecordingStatus status) = 0;
+
 	/// \brief self record privilige change callback
 	/// \param bCanRec 
 	virtual void onRecordPriviligeChanged(bool bCanRec) = 0;
@@ -57,6 +62,7 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError SetEvent(IMeetingRecordingCtrlEvent* pEvent) = 0;
+
 	/// \brief Start recording
 	/// \param startTimestamp Start recording timestamp. 
 	/// \param recPath Specifies where the recording is to be saved, if the path is not exist, return SDKERR_INVALID_PARAMETER error code.
@@ -69,6 +75,46 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError StopRecording(time_t& stopTimestamp) = 0;
+
+	/// \brief Check Can Start recording or not
+	/// \param cloud_recording cloud recording or not. 
+	/// \param userid Specifies which user you want to check.
+	/// \return If can start recording, the return value is SDKErr_Success.
+	///If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanStartRecording(bool cloud_recording, unsigned int userid) = 0;
+
+	/// \brief Check Can allow or disallow other attendee to start local recording in the meeting
+	/// \return If you can, the return value is SDKErr_Success.
+	///If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanAllowDisAllowLocalRecording() = 0;
+
+	/// \brief Start cloud recording
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StartCloudRecording() = 0;
+
+	/// \brief Stop cloud recording
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StopCloudRecording() = 0;
+
+	/// \brief Check support local recoding feature or not
+	/// \param userid Specifies which user you want to check.
+	/// \return If support recording, the return value is SDKErr_Success.
+	///If don't support, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError IsSupportLocalRecording(unsigned int userid) = 0;
+
+	/// \brief Allow to start local recoding
+	/// \param userid Specifies which user you want to allow.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError AllowLocalRecording(unsigned int userid) = 0;
+
+	/// \brief DisAllow to start local recoding
+	/// \param userid Specifies which user you want to allow.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError DisAllowLocalRecording(unsigned int userid) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

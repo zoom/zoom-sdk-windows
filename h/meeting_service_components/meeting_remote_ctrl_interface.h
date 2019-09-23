@@ -1,7 +1,6 @@
 /*!
 * \file meeting_remote_ctrl_interface.h
 * \brief Remote Controller of Meeting Service Interface
-* 
 */
 #ifndef _MEETING_REMOTE_CTRL_INTERFACE_H_
 #define _MEETING_REMOTE_CTRL_INTERFACE_H_
@@ -52,6 +51,37 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError SetEvent(IMeetingRemoteCtrlEvent* pEvent) = 0;
+
+	/// \brief Check can remote control or not
+	/// \param userid Specifies which user you want to check.
+	/// \return If can, the return value is SDKErr_Success.
+	///If can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanRequestControl(unsigned int userId) = 0;
+
+	/// \brief Check have remote control right or not
+	/// \param userid Specifies which user you want to check.
+	/// \return If have, the return value is SDKErr_Success.
+	///If don't have, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError IsHaveRemoteControlRight(unsigned int userId) = 0;
+
+	/// \brief check in remote control somebody status or not
+	/// \param userid Specifies which user you want to check.
+	/// \return If yes, the return value is SDKErr_Success.
+	///If no, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError IsInRemoteControllingStatus(unsigned int userId) = 0;
+
+	/// \brief Enter remote control somebody status if you have right
+	/// \param userid Specifies which user you want to remote control.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError EnterRemoteControllingStatus(unsigned int userId) = 0;
+
+	/// \brief Leave remote control somebody status if you have right
+	/// \param userid Specifies which user you want to leave.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError LeaveRemoteControllingStatus(unsigned int userId) = 0;
+
 	/// \brief Request meeting Remote control
 	/// \param userId Specifies which the user you want to remote control.
 	/// \return If the function succeeds, the return value is SDKErr_Success.

@@ -340,6 +340,11 @@ void CMeetingServiceMgr::onMeetingSecureKeyNotification(const char* key, int len
 	}
 }
 
+void CMeetingServiceMgr::onMeetingParameterNotification(const ZOOM_SDK_NAMESPACE::MeetingParameter* meeting_param)
+{
+	//todo
+}
+
 void CMeetingServiceMgr::onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath)
 {
 	//todo
@@ -360,6 +365,10 @@ void CMeetingServiceMgr::onRecordPriviligeChanged(bool bCanRec)
 	//todo
 }
 
+void CMeetingServiceMgr::onCloudRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status)
+{
+	//todo
+}
 
 void CMeetingServiceMgr::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList)
 {
@@ -432,6 +441,11 @@ void CMeetingServiceMgr::onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_N
 }
 
 void CMeetingServiceMgr::onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid)
+{
+	//todo
+}
+
+void CMeetingServiceMgr::onHostRequestStartVideo(ZOOM_SDK_NAMESPACE::IRequestStartVideoHandler* handler_)
 {
 	//todo
 }

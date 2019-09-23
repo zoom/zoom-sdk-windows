@@ -84,6 +84,7 @@ void CDemoUI::InitAllControls()
 	m_editMeetingNumber = static_cast<CRichEditUI*>(m_PaintManager.FindControl(_T("edit_meeting_number")));
 	m_editUserId = static_cast<CRichEditUI*>(m_PaintManager.FindControl(_T("edit_user_id")));
 	m_editUserToken = static_cast<CRichEditUI*>(m_PaintManager.FindControl(_T("edit_user_token")));
+	m_editAccessToken = static_cast<CRichEditUI* >(m_PaintManager.FindControl(_T("edit_zak")));
 	m_editUserName = static_cast<CRichEditUI*>(m_PaintManager.FindControl(_T("edit_user_name")));
 
 	m_chkRememberMe = static_cast<CCheckBoxUI*>(m_PaintManager.FindControl(_T("chk_remember_me")));
@@ -92,6 +93,7 @@ void CDemoUI::InitAllControls()
 	m_lableLoginError = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_login_errorinfo")));
 	m_lableUserId = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_user_id")));
 	m_lableUserToken = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_user_token")));
+	m_lableAccessToken = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_zak")));
 	m_lableUserName = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_user_name")));
 	m_lableMeetingAPIStatus = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_meeting_api_status")));
 	m_lableAppKey = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("lb_appkey")));
@@ -155,6 +157,7 @@ void CDemoUI::ResetAllControls()
 	m_editMeetingNumber = NULL;
 	m_editUserId = NULL;
 	m_editUserToken = NULL;
+	m_editAccessToken = NULL;
 	m_editUserName = NULL;
 
 	m_chkRememberMe = NULL;
@@ -163,6 +166,7 @@ void CDemoUI::ResetAllControls()
 	m_lableLoginError = NULL;
 	m_lableUserId = NULL;
 	m_lableUserToken = NULL;
+	m_lableAccessToken = NULL;
 	m_lableUserName = NULL;
 	m_lableMeetingAPIStatus = NULL;
 
@@ -227,8 +231,14 @@ void CDemoUI::SwitchUIPageByType(UIPageType emPageType /* = UIPAGE_AUTH */)
 		if (m_lableUserToken)
 			m_lableUserToken->SetVisible(bShow);
 
+		if (m_lableAccessToken)
+			m_lableAccessToken->SetVisible(bShow);
+
 		if (m_editUserToken)
 			m_editUserToken->SetVisible(bShow);
+
+		if (m_editAccessToken)
+			m_editAccessToken->SetVisible(bShow);
 
 		if (m_lableUserName)
 			m_lableUserName->SetVisible(bShow);
@@ -254,6 +264,9 @@ void CDemoUI::SwitchUIPageByType(UIPageType emPageType /* = UIPAGE_AUTH */)
 
 		if (m_editUserToken)
 			m_editUserToken->SetVisible(true);
+
+		if (m_editAccessToken)
+			m_editAccessToken->SetVisible(true);
 
 		if (m_lableUserName)
 			m_lableUserName->SetVisible(true);
@@ -480,7 +493,7 @@ bool CDemoUI::Start()
 
 bool CDemoUI::NormalUserStart()
 {
-	if (!m_editMeetingNumber || !m_editUserId || !m_editUserToken || !m_pMeetingServiceMgr)
+	if (!m_editMeetingNumber || !m_pMeetingServiceMgr)
 		return false;
 
 	std::wstring strMeetingNumber =  m_editMeetingNumber->GetText().GetData();
@@ -497,25 +510,35 @@ bool CDemoUI::NormalUserStart()
 
 bool CDemoUI::APIUserStart()
 {
-	if (!m_editMeetingNumber || !m_editUserId || !m_editUserToken || !m_editUserName || !m_pMeetingServiceMgr)
+	if (!m_editMeetingNumber || !m_editUserId
+		|| !m_editUserToken || !m_editUserName 
+		|| !m_editAccessToken|| !m_pMeetingServiceMgr)
 		return false;
 
-	std::wstring strMeetingNumber, strUserId, strUserToken, strUserName;
+	std::wstring strMeetingNumber, strUserId, strUserToken, strUserName, strAccessToken;
 	strMeetingNumber =  m_editMeetingNumber->GetText().GetData();
 	strUserId = m_editUserId->GetText().GetData();
 	strUserToken = m_editUserToken->GetText().GetData();
 	strUserName = m_editUserName->GetText().GetData();
-	if (strMeetingNumber.length() <= 0 || strUserId.length() <= 0 || strUserToken.length() <= 0 || strUserName.length() <= 0)
+	strAccessToken = m_editAccessToken->GetText().GetData();
+
+	if (strMeetingNumber.length() <= 0 
+		|| strUserId.length() <= 0 
+		|| strUserToken.length() <= 0
+		|| strUserName.length() <= 0
+		|| strAccessToken.length() <=0)
 		return false;
 
 	ZOOM_SDK_NAMESPACE::StartParam startParam;
-	startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_APIUSER;
-	ZOOM_SDK_NAMESPACE::StartParam4APIUser& apiuserParam = startParam.param.apiuserStart;
+	startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_WITHOUT_LOGIN;
+	ZOOM_SDK_NAMESPACE::StartParam4WithoutLogin& withoutLoginStartParam = startParam.param.withoutloginStart;
 
-	apiuserParam.userID = strUserId.c_str();
-	apiuserParam.userToken = strUserToken.c_str();
-	apiuserParam.meetingNumber = _wtoi64(strMeetingNumber.c_str());
-	apiuserParam.userName = strUserName.c_str();
+	withoutLoginStartParam.userID = strUserId.c_str();
+	withoutLoginStartParam.userToken = strUserToken.c_str();
+	withoutLoginStartParam.userZAK = strAccessToken.c_str();
+	withoutLoginStartParam.meetingNumber = _wtoi64(strMeetingNumber.c_str());
+	withoutLoginStartParam.userName = strUserName.c_str();
+	withoutLoginStartParam.zoomuserType = ZOOM_SDK_NAMESPACE::ZoomUserType_APIUSER;
 
 	return m_pMeetingServiceMgr->Start(startParam);
 }
@@ -1152,9 +1175,9 @@ void CDemoUI::onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, co
 				wsprintf(szUserID, _T("%d"), pUserInfo->GetUserID());
 				UpdateUserList(i, pUserInfo->GetUserName(), szUserID, true);
 
-				TCHAR szLog[MAX_PATH] = { 0 };
-				wsprintf(szUserID, _T("onUserJoin:User (%s) join meeting, userid(%d), Is host(%d), Video is on(%d)\r\n"), pUserInfo->GetUserName(), pUserInfo->GetUserID(), pUserInfo->IsHost(), pUserInfo->IsVideoOn());
-				OutputDebugString(szLog);
+				//TCHAR szLog[MAX_PATH] = { 0 };
+				//wsprintf(szUserID, _T("onUserJoin:User (%s) join meeting, userid(%d), Is host(%d), Video is on(%d)\r\n"), pUserInfo->GetUserName(), pUserInfo->GetUserID(), pUserInfo->IsHost(), pUserInfo->IsVideoOn());
+				//OutputDebugString(szLog);
 			}
 		}
 

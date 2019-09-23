@@ -129,8 +129,11 @@
 						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
 			<label name="lb_user_name" float="true" pos="40,220,0,0" text="User Name:" font="9" width="100" height="30" />
 			<RichEdit name="edit_user_name" float="true" pos="150,220,0,0" bkcolor="#FFFFFFFF"
-						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />						
-			<Label name="lb_start_errorinfo" float="true" pos="100,260,0,0" font="0" textpadding="10,4,10,0" textcolor="#FFE6413C"  
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <label name="lb_zak" float="true" pos="40,260,0,0" text="Access token:" font="9" width="100" height="30" />
+      <RichEdit name="edit_zak" float="true" pos="150,260,0,0" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <Label name="lb_start_errorinfo" float="true" pos="100,260,0,0" font="0" textpadding="10,4,10,0" textcolor="#FFE6413C"  
 						align="center,multiline" valign="top" visible="true" width="250" height="60" visible="false"/>			
 			<Button name="btn_start_ok" float="true" pos="200,300,0,0" text="OK" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
 		</Container>

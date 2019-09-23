@@ -46,6 +46,7 @@ enum SDKError
 	SDKERR_NO_PERMISSION,///< No premission to do this
 	SDKERR_UNKNOWN,///< Unknown error 
 	SDKERR_OTHER_SDK_INSTANCE_RUNNING,
+	SDKERR_INTELNAL_ERROR,
 };
 
 enum SDK_LANGUAGE_ID
@@ -58,7 +59,6 @@ enum SDK_LANGUAGE_ID
 	LANGUAGE_Spanish,
 	LANGUAGE_German,
 	LANGUAGE_French,
-	LANGUAGE_Italian,
 	LANGUAGE_Portuguese,
 	LANGUAGE_Russian,
 };

@@ -44,6 +44,8 @@ enum AnnotationClearType
 	ANNOCLEAR_SELF,
 	ANNOCLEAR_OTHER,
 };
+
+class ICustomizedAnnotationController;
 /// \brief Meeting Annotation Controller Interface
 ///
 class IAnnotationController
@@ -80,7 +82,6 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError Clear(SDKViewType viewtype, AnnotationClearType type) = 0;
-
 
 	/// \brief Set Annotation Color
 	/// \param viewtype Specifies which view you want to set, first monitor or second monitor.

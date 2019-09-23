@@ -1,7 +1,6 @@
 /*!
 * \file meeting_ui_ctrl_interface.h
 * \brief UI Controller of Meeting Service Interface
-* 
 */
 #ifndef _MEETING_UI_CTRL_INTERFACE_H_
 #define _MEETING_UI_CTRL_INTERFACE_H_

@@ -16,6 +16,18 @@ enum VideoStatus
 	Video_ON,
 	Video_OFF,
 };
+
+class IRequestStartVideoHandler
+{
+public:
+	virtual ~IRequestStartVideoHandler(){};
+
+	virtual unsigned int GetReqFromUserId() = 0;
+	virtual SDKError Ignore() = 0;
+	virtual SDKError Accept() = 0;
+	virtual SDKError Cancel() = 0;
+};
+
 /// \brief Meeting video controller event callback
 ///
 class IMeetingVideoCtrlEvent
@@ -29,6 +41,8 @@ public:
 	/// \brief spotlight video change callback
 	/// \param userId 
 	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid) = 0;
+
+	virtual void onHostRequestStartVideo(IRequestStartVideoHandler* handler_) = 0;
 };
 
 /// \brief Meeting video controller interface
@@ -70,6 +84,30 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
 	virtual SDKError HideOrShowNoVideoUserOnVideoWall(bool bHide) = 0;
+
+	/// \brief Check Can Ask Attendee To Start Video
+	/// \param userid Specifies which user you want to check.
+	/// \return If you can, the return value is SDKErr_Success.
+	///If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanAskAttendeeToStartVideo(unsigned int userid) = 0;
+
+	/// \brief Ask Attendee To Start Video
+	/// \param userid Specifies which user you want to ask.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError AskAttendeeToStartVideo(unsigned int userid) = 0;
+
+	/// \brief Check Can Stop Attendee Video
+	/// \param userid Specifies which user you want to check.
+	/// \return If you can, the return value is SDKErr_Success.
+	///If you can't, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError CanStopAttendeeVideo(unsigned int userid) = 0;
+
+	/// \brief Stop Attendee Video
+	/// \param userid Specifies which user you want to stop.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError StopAttendeeVideo(unsigned int userid) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

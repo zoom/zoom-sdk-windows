@@ -305,6 +305,11 @@ public:
 	/// \brief Get Enable or disable flag of original input of mic.
 	/// \return Enable or disable
 	virtual bool IsMicOriginalInputEnable() = 0;
+
+	virtual SDKError	SetMicVol(FLOAT& value) = 0;//param[in] value: 0-255
+	virtual SDKError    GetMicVol(FLOAT& value) = 0;
+	virtual SDKError	SetSpeakerVol(FLOAT& value) = 0;//param[in] value: 0-255
+	virtual SDKError    GetSpeakerVol(FLOAT& value) = 0;
 };
 
 /// \brief Recording setting Interface
@@ -417,6 +422,18 @@ public:
 	virtual SDKError QueryShareStatisticInfo(ASVSessionStatisticInfo& info_) = 0;
 };
 
+/// \brief Setting UI strategy Interface
+///
+class ISettingUIStrategy
+{
+public:
+	/// \brief Disable ui of advanced features on general setting tab.
+	virtual void DisableAdvancedFeatures4GeneralSetting(bool bDisable) = 0;
+
+	/// \brief Disable ui of account setting tab.
+	virtual void DisableAccountSettingTabPage(bool bDisable) = 0;
+};
+
 /// \brief Meeting setting Interface
 ///
 class ISettingService
@@ -457,6 +474,11 @@ public:
 	/// \return If the function succeeds, the return value is statistic settings interface.
 	///If the function fails, the return value is NULL.
 	virtual IStatisticSettingContext* GetStatisticSettings() = 0;
+
+	/// \brief Get setting UI strategy.
+	/// \return If the function succeeds, the return value is setting UI strategy interface.
+	///If the function fails, the return value is NULL.
+	virtual ISettingUIStrategy* GetSettingUIStrategy() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

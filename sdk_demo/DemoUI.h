@@ -147,12 +147,14 @@ private:
 	CRichEditUI*			m_editMeetingNumber;
 	CRichEditUI*			m_editUserId;
 	CRichEditUI*			m_editUserToken;
+	CRichEditUI*			m_editAccessToken;
 	CRichEditUI*			m_editUserName;
 	CCheckBoxUI*			m_chkRememberMe;
 	CLabelUI*				m_lableAuthError;
 	CLabelUI*				m_lableLoginError;
 	CLabelUI*				m_lableUserId;
 	CLabelUI*				m_lableUserToken;
+	CLabelUI*				m_lableAccessToken;
 	CLabelUI*				m_lableUserName;
 	CLabelUI*				m_lableMeetingAPIStatus;
 	CLabelUI*				m_lableAppKey;

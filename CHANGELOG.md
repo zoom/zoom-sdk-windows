@@ -1,5 +1,118 @@
 # CHANGELOG
 
+## 2017-07-26
+
+The start meeting logic for API users has changed. Please read below before upgrading to this version.
+
+### Added
+Auth Service
+```
+add new callback event for zoom access token expired
+ZOOM_SDK_NAMESPACE.IAuthServiceEvent.onZoomIdentityExpired
+once received this event, you need to re-login again
+```
+
+Meeting Service
+
+meeting_service_interface.h
+```
+1.support start or join meeting with meeting's vanity ID
+2.add new start meeting method for without login user to replace old api user start meeting method
+StartParam.StartParam4WithoutLogin
+3.add new interface to get meeting password
+ZOOM_SDK_NAMESPACE.IMeetingInfo.GetMeetingPassword
+4.add new callback event for meeting parameter notification
+ZOOM_SDK_NAMESPACE.IMeetingServiceEvent.onMeetingParameterNotification 
+```
+
+meeting_configuration_interface.h
+```
+1. add callback event for webinar register notification
+ZOOM_SDK_NAMESPACE.IMeetingConfigurationEvent.onWebinarNeedRegisterNotification 
+2.add callback event for end other meeting notification
+ZOOM_SDK_NAMESPACE.IMeetingConfigurationEvent.onEndOtherMeetingToJoinMeetingNotification 
+3.add callback event for end other meeting notification
+ZOOM_SDK_NAMESPACE.IMeetingConfigurationEvent.onFreeMeetingEndingReminderNotification 
+4. add new interfaces of meeting configuration
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.EnableInputMeetingScreenNameDlg 
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.RedirectWebinarNeedRegister 
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.RedirectEndOtherMeeting
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.EnableShareIOSDevice 
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.EnableShareWhiteBoard
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.AlwaysShowIconOnTaskBar
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.RedirectFreeMeetingEndingReminderDlg
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.SetShowAudioUseComputerSoundChkbox
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.SetShowVideoOptimizeChkbox
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.SetShowCallInTab
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.SetShowCallMeTab
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.ForceDisableMultiShare
+ZOOM_SDK_NAMESPACE.IMeetingConfiguration.SetAlwaysShowMeetingIDOnTitle 
+```
+
+meeting_live_stream_interface.h
+```
+support live stream in sdk layer
+```
+
+meeting_participants_ctrl_interface.h
+```
+1. add new interfaces of meeting participants control
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.LowerHand
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.RaiseHand
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.MakeHost
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.CanbeCohost
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.AssignCoHost
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.RevokeCoHost
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.ExpelUser
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.CanReclaimHost 
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.ReclaimHost 
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsController.ReclaimHostByHostKey 
+2.add callback event for cohost change notification
+ZOOM_SDK_NAMESPACE.IMeetingParticipantsCtrlEvent.onCoHostChangeNotification 
+```
+
+meeting_recording_interface.h
+```
+1. add new interfaces of meeting recording control
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.CanStartRecording 
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.CanAllowDisAllowLocalRecording
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.StartCloudRecording 
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.StopCloudRecording
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.IsSupportLocalRecording
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.AllowLocalRecording
+ZOOM_SDK_NAMESPACE.IMeetingRecordingController.DisAllowLocalRecording 
+2.add callback event for cloud recording status notification
+ZOOM_SDK_NAMESPACE.IMeetingRecordingCtrlEvent.onCloudRecordingStatus 
+```
+
+meeting_remote_ctrl_interface.h
+```
+add new interfaces of meeting recording control
+ZOOM_SDK_NAMESPACE.IMeetingRemoteController.CanRequestControl 
+ZOOM_SDK_NAMESPACE.IMeetingRemoteController.IsHaveRemoteControlRight
+ZOOM_SDK_NAMESPACE.IMeetingRemoteController.IsInRemoteControllingStatus
+ZOOM_SDK_NAMESPACE.IMeetingRemoteController.EnterRemoteControllingStatus
+ZOOM_SDK_NAMESPACE.IMeetingRemoteController.LeaveRemoteControllingStatus 
+```
+
+meeting_sharing_interface.h
+```
+add new interfaces of meeting share control
+ZOOM_SDK_NAMESPACE.IMeetingShareController.StartWhiteBoardShare 
+```
+
+meeting_video_interface.h
+```
+1.add new interfaces of meeting video control
+ZOOM_SDK_NAMESPACE.IMeetingVideoController.CanAskAttendeeToStartVideo
+ZOOM_SDK_NAMESPACE.IMeetingVideoController.AskAttendeeToStartVideo 
+ZOOM_SDK_NAMESPACE.IMeetingVideoController.CanStopAttendeeVideo
+ZOOM_SDK_NAMESPACE.IMeetingVideoController.StopAttendeeVideo 
+2.add callback event for host request to start video notification
+ZOOM_SDK_NAMESPACE.IMeetingVideoCtrlEvent.onHostRequestStartVideo 
+```
+
+
 ## 2018-05-22
 ### Added
 1.c++ sdk

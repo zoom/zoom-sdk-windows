@@ -1,7 +1,6 @@
 /*!
 * \file meeting_phone_helper_interface.h
 * \brief Meeting Service Interface
-* 
 */
 #ifndef _MEETING_PHONE_HELPER_INTERFACE_H_
 #define _MEETING_PHONE_HELPER_INTERFACE_H_

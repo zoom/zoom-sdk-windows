@@ -80,6 +80,7 @@ public:
 	virtual void onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult = 0);
 	virtual void onMeetingStatisticsWarningNotification(ZOOM_SDK_NAMESPACE::StatisticsWarningType type){}
 	virtual void onMeetingSecureKeyNotification(const char* key, int len, ZOOM_SDK_NAMESPACE::IMeetingExternalSecureKeyHandler* pHandler);
+	virtual void onMeetingParameterNotification(const ZOOM_SDK_NAMESPACE::MeetingParameter* meeting_param);
 
 	//IMeetingParticipantsCtrlEvent
 	virtual void onUserJoin(ZOOM_SDK_NAMESPACE::IList<unsigned int >* lstUserID, const wchar_t* strUserList = NULL);
@@ -87,16 +88,19 @@ public:
 	virtual void onHostChangeNotification(unsigned int userId);
 	virtual void onLowOrRaiseHandStatusChanged(bool bLow, unsigned int userid);
 	virtual void onUserNameChanged(unsigned int userId, const wchar_t* userName);
+	virtual void onCoHostChangeNotification(unsigned int userId, bool isCoHost){};
 
 	//IMeetingRecordingCtrlEvent
 	virtual void onRecording2MP4Done(bool bsuccess, int iResult, const wchar_t* szPath);
 	virtual void onRecording2MP4Processing(int iPercentage);
 	virtual void onRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status);
 	virtual void onRecordPriviligeChanged(bool bCanRec);
+	virtual void onCloudRecordingStatus(ZOOM_SDK_NAMESPACE::RecordingStatus status);
 
 	//IMeetingVideoCtrlEvent
 	virtual void onUserVideoStatusChange(unsigned int userId, ZOOM_SDK_NAMESPACE::VideoStatus status);
 	virtual void onSpotlightVideoChangeNotification(bool bSpotlight, unsigned int userid);
+	virtual void onHostRequestStartVideo(ZOOM_SDK_NAMESPACE::IRequestStartVideoHandler* handler_);
 
 	//IMeetingAudioCtrlEvent
 	virtual void onUserAudioStatusChange(ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IUserAudioStatus* >* lstAudioStatusChange, const wchar_t* strAudioStatusList = NULL);

@@ -1,7 +1,6 @@
 /*!
 * \file meeting_chat_interface.h
 * \brief Chat of Meeting Service Interface
-* 
 */
 #ifndef _MEETING_CHAT_INTERFACE_H_
 #define _MEETING_CHAT_INTERFACE_H_

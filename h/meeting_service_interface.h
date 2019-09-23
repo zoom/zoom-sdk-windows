@@ -97,8 +97,9 @@ enum LeaveMeetingCmd
 */
 enum SDKUserType
 {
-	SDK_UT_APIUSER     = 99,///< API User type
+	SDK_UT_APIUSER     = 99,///< API User type, retire later
 	SDK_UT_NORMALUSER = 100,///< Normal user type
+	SDK_UT_WITHOUT_LOGIN, ////< start meeting with out login
 };
 
 /*! \struct tagJoinParam4APIUser
@@ -108,6 +109,7 @@ enum SDKUserType
 typedef struct tagJoinParam4APIUser
 {
 	UINT64		   meetingNumber;///< Meeting's number
+	const wchar_t* vanityID;///< Meeting's vanityID
 	const wchar_t* userName;///< User Name in meeting
 	const wchar_t* psw;///< Meeting's password
 	HWND		   hDirectShareAppWnd;///< share application directly
@@ -119,6 +121,14 @@ typedef struct tagJoinParam4APIUser
 	bool		   isAudioOff;
 }JoinParam4APIUser;
 
+/*! \struct tagJoinParam4WithoutLogin
+    \brief Join meeting Parameter for non-login user.
+    A more detailed struct description.
+*/
+typedef struct tagJoinParam4WithoutLogin : public tagJoinParam4APIUser
+{
+}JoinParam4WithoutLogin;
+
 /*! \struct tagJoinParam4APIUser
     \brief Join meeting Parameter for API user.
     A more detailed struct description.
@@ -126,6 +136,7 @@ typedef struct tagJoinParam4APIUser
 typedef struct tagJoinParam4NormalUser
 {
 	UINT64		   meetingNumber;///< Meeting's number
+	const wchar_t* vanityID;///< Meeting's vanityID
 	const wchar_t* userName;///< User Name in meeting
 	const wchar_t* psw;///< Meeting's password
 	HWND		   hDirectShareAppWnd;///< share application directly
@@ -147,6 +158,7 @@ typedef struct tagJoinParam
 	{
 		JoinParam4APIUser apiuserJoin;
 		JoinParam4NormalUser normaluserJoin;
+		JoinParam4WithoutLogin withoutloginuserJoin;
 	} param;    
 	tagJoinParam()
 	{
@@ -165,10 +177,44 @@ typedef struct tagStartParam4APIUser
 	const wchar_t* userToken;///< User token
 	const wchar_t* userName;///< User name
 	UINT64		   meetingNumber;///< Meeting's number
+	const wchar_t* vanityID;///< Meeting's vanityID
 	HWND		   hDirectShareAppWnd;///< share application directly
 	const wchar_t* participantId;///< for meeting participant report list, need web backend enable.
 	bool		   isDirectShareDesktop;///< share desktop directly
 }StartParam4APIUser;
+
+
+/*! \enum zoom user type
+    \brief SDK User Type.
+    A more detailed struct description.
+*/
+enum ZoomUserType
+{
+	ZoomUserType_APIUSER,
+	ZoomUserType_EMAIL_LOGIN,
+	ZoomUserType_FACEBOOK,
+	ZoomUserType_GoogleOAuth,
+	ZoomUserType_SSO,
+	ZoomUserType_Unknown,
+};
+
+/*! \struct tagStartParam4APIUser
+    \brief Start meeting Parameter.
+    A more detailed struct description.
+*/
+typedef struct tagStartParam4WithoutLogin
+{
+	const wchar_t* userID;///< User Id
+	const wchar_t* userToken;///< User token
+	const wchar_t* userZAK;///< zoom access token
+	const wchar_t* userName;///< User name
+	ZoomUserType   zoomuserType;
+	UINT64		   meetingNumber;///< Meeting's number
+	const wchar_t* vanityID;///< Meeting's vanityID
+	HWND		   hDirectShareAppWnd;///< share application directly
+	const wchar_t* participantId;///< for meeting participant report list, need web backend enable.
+	bool		   isDirectShareDesktop;///< share desktop directly
+}StartParam4WithoutLogin;
 
 /*! \struct tagStartParam4NormalUser
     \brief Start meeting Parameter.
@@ -177,6 +223,7 @@ typedef struct tagStartParam4APIUser
 typedef struct tagStartParam4NormalUser
 {
 	UINT64			meetingNumber;///< Meeting's number
+	const wchar_t*  vanityID;///< Meeting's vanityID, generate the zoom access token via REST api
 	HWND			hDirectShareAppWnd;///< share application directly
 	const wchar_t*  participantId;///< for meeting participant report list, need web backend enable.
 	bool		    isVideoOff;///< only instance meeting take effect
@@ -196,6 +243,7 @@ typedef struct tagStartParam
 	{
 		StartParam4APIUser apiuserStart;
 		StartParam4NormalUser normaluserStart;
+		StartParam4WithoutLogin withoutloginStart;
 	} param;    
 	tagStartParam()
 	{
@@ -253,9 +301,14 @@ public:
 	/// \return the return value is current meeting id.
 	virtual const wchar_t* GetMeetingID() = 0;
 
+
 	/// \brief Get meeting topic
 	/// \return the return value is current meeting topic.
 	virtual const wchar_t* GetMeetingTopic() = 0;
+
+	/// \brief Get meeting password
+	/// \return the return value is current meeting password.
+	virtual const wchar_t* GetMeetingPassword() = 0;
 
 	/// \brief Get meeting type
 	/// \return the return value is current meeting type.To get extended error information, refer to MeetingType enum
@@ -291,6 +344,41 @@ public:
 
 	virtual ~IMeetingInfo(){};
 };
+
+/*! \struct tagMeetingParameter
+    \brief Meeting parameter
+    A more detailed struct description.
+*/
+typedef struct tagMeetingParameter
+{
+	MeetingType meeting_type;//meeting's type
+	bool is_view_only;///< is view only
+	UINT64 meeting_number;///< meeting's number
+	const wchar_t* meeting_topic;///< meeting's topic
+	const wchar_t* meeting_host;///< meeting's host
+	tagMeetingParameter()
+	{
+		meeting_type = MEETING_TYPE_NONE;
+		is_view_only = true;
+		meeting_number = 0;
+		meeting_topic = NULL;
+		meeting_host = NULL;
+	}
+
+	~tagMeetingParameter()
+	{
+		if (meeting_host)
+		{
+			delete[] meeting_host;
+			meeting_host = NULL;
+		}
+		if (meeting_topic)
+		{
+			delete[] meeting_topic;
+			meeting_topic = NULL;
+		}
+	}
+}MeetingParameter;
 
 /// \brief Meeting external secure key handler
 ///
@@ -351,6 +439,11 @@ public:
 	/// \param len the length of secure key.
 	/// \param pHandler the handler to set external secure key or leave meeting.
 	virtual void onMeetingSecureKeyNotification(const char* key, int len, IMeetingExternalSecureKeyHandler* pHandler) = 0;
+
+	/// \brief Meeting parameter notification callback
+	/// \param meeting_param Meeting parameter.
+	/// this callback will be invoked before in-meeting.the meeting_param will be released after call end.
+	virtual void onMeetingParameterNotification(const MeetingParameter* meeting_param) = 0;
 };
 
 class IAnnotationController;
@@ -367,6 +460,7 @@ class IMeetingShareController;
 class IMeetingUIController;
 class IMeetingVideoController;
 class IMeetingWaitingRoomController;
+class IMeetingLiveStreamController;
 /// \brief Meeting Service Interface
 ///
 class IMeetingService
@@ -504,6 +598,11 @@ public:
 	/// \return If the function succeeds, the return value is participants controller interface.
 	///If the function fails, the return value is NULL.
 	virtual IMeetingParticipantsController* GetMeetingParticipantsController() = 0;
+
+	/// \brief Get Live stream controller
+	/// \return If the function succeeds, the return value is live stream controller interface.
+	///If the function fails, the return value is NULL.
+	virtual IMeetingLiveStreamController* GetMeetingLiveStreamController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

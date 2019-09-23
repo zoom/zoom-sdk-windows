@@ -37,6 +37,7 @@ public:
 	virtual void onAuthenticationReturn(ZOOM_SDK_NAMESPACE::AuthResult ret);
 	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo);
 	virtual void onLogout();
+	virtual void onZoomIdentityExpired(){}
 
 private:
 	IAuthServiceMgrEvent* m_pSink;
