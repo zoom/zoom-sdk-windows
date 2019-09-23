@@ -190,6 +190,28 @@ public:
 class IAudioSettingContext
 {
 public:
+	/// \brief Get mic device list
+	/// \return If the function succeeds, the return value is camera device list pointer.
+	///If the function fails, the return value is NULL.
+	virtual IList<IMicInfo* >* GetMicList() = 0;
+
+	/// \brief Select mic device
+	/// \param deviceId Specifies which device to select.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SelectMic(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
+
+	/// \brief Get speaker device list
+	/// \return If the function succeeds, the return value is camera device list pointer.
+	///If the function fails, the return value is NULL.
+	virtual IList<ISpeakerInfo* >* GetSpeakerList() = 0;
+
+	/// \brief Select speaker device
+	/// \param deviceId Specifies which device to select.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///If the function fails, the return value is not SDKErr_Success. To get extended error information, refer to SDKError enum.
+	virtual SDKError SelectSpeaker(const wchar_t* deviceId, const wchar_t* deviceName) = 0;
+
 	/// \brief Enable or disable auto join audio when join meeting
 	/// \param bEnable Specifies enable or disable dual screen mode.
 	/// \return If the function succeeds, the return value is SDKErr_Success.

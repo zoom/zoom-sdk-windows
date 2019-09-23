@@ -32,6 +32,7 @@ enum MeetingStatus
 	MEETING_STATUS_WEBINAR_DEPROMOTE,
 	MEETING_STATUS_JOIN_BREAKOUT_ROOM,
 	MEETING_STATUS_LEAVE_BREAKOUT_ROOM,
+	MEETING_STATUS_WAITING_EXTERNAL_SESSION_KEY,
 };
 
 /*! \enum MeetingFailCode
@@ -237,6 +238,10 @@ public:
 	/// \return the return value is current meeting number.
 	virtual UINT64 GetMeetingNumber() = 0;
 
+	/// \brief Get meeting id
+	/// \return the return value is current meeting id.
+	virtual const wchar_t* GetMeetingID() = 0;
+
 	/// \brief Get meeting topic
 	/// \return the return value is current meeting topic.
 	virtual const wchar_t* GetMeetingTopic() = 0;
@@ -266,8 +271,45 @@ public:
 	virtual const wchar_t* GetMeetingHostTag() = 0;
 
 	/// \brief meeting is internal or not.
-	/// \return if meeting is interal or not.
+	/// \return if meeting is internal or not.
 	virtual bool IsInternalMeeting() = 0;
+};
+
+/// \brief Meeting external secure key handler
+///
+class IMeetingExternalSecureKeyHandler
+{
+public:
+	/// \brief Set new secure key and iv of Chat session
+	virtual void SetChatSessionKey(const char* key, int key_len, const char* iv, int iv_len) = 0;
+	
+	/// \brief Set new secure key and iv of FileTransfer session
+	virtual void SetFileTransferSessionKey(const char* key, int key_len, const char* iv, int iv_len) = 0;
+
+	/// \brief Set new secure key and iv of Audio session
+	virtual void SetAudioSessionKey(const char* key, int key_len, const char* iv, int iv_len) = 0;
+
+	/// \brief Set new secure key and iv of Video session
+	virtual void SetVideoSessionKey(const char* key, int key_len, const char* iv, int iv_len) = 0;
+
+	/// \brief Set new secure key and iv of Share session
+	virtual void SetShareSessionKey(const char* key, int key_len, const char* iv, int iv_len) = 0;
+
+	/// \brief leave meeting
+	virtual void Cancel() = 0;
+
+	/// \brief continue to join/start meeting
+	virtual void Confirm() = 0;
+};
+
+/*! \enum StatisticsWarningType
+    \brief Meeting statistics warning type.
+    A more detailed struct description.
+*/
+enum StatisticsWarningType
+{
+	Statistics_Warning_None,
+	Statistics_Warning_Network_Quality_Bad,
 };
 
 /// \brief Meeting Service Callback Event
@@ -280,6 +322,16 @@ public:
 	/// \param iResult details reason for special meeting status.
 	/// if status is MEETING_STATUS_FAILED, the value of iResult is one of MeetingFailCode enum. 
 	virtual void onMeetingStatusChanged(MeetingStatus status, int iResult = 0) = 0;
+
+	/// \brief Meeting statistics warning notification callback
+	/// \param type The type of meeting statistics warning.
+	virtual void onMeetingStatisticsWarningNotification(StatisticsWarningType type) = 0;
+	
+	/// \brief Meeting secure key notification, need to web backend and special account type support.
+	/// \param key the secure key of current meeting.
+	/// \param len the length of secure key.
+	/// \param pHandler the handler to set external secure key or leave meeting.
+	virtual void onMeetingSecureKeyNotification(const char* key, int len, IMeetingExternalSecureKeyHandler* pHandler) = 0;
 };
 
 class IAnnotationController;
