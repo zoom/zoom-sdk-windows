@@ -1,0 +1,57 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+IDI_ICON_LOGO           ICON                    "SaaSbeeLogo.ico"
+/////////////////////////////////////////////////////////////////////////////
+//
+// ZPIMGRES
+//
+
+IDXML_MAINFRAME_UI      	XML               	"./skin/main_frame.xml"
+IDXML_LOGINFRAME_UI 		XML					"./skin/login_frame.xml"
+IDXML_METTINGFRAME_UI		XML					"./skin/meeting_frame.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// ZPIMGRES
+//
+TABBTN_DOWNARROW.PNG    	ZPIMGRES                "./res/tabbtn_downArrow.png"
+TABBTNBK_NEW_ARROW.PNG  	ZPIMGRES                "./res/tabbtnbk_new_arrow.png"
+BLUEBUTTONDISABLED.PNG  	ZPIMGRES                "./res/BlueButtondisabled.png"
+BLUEBUTTONHOVER.PNG     	ZPIMGRES                "./res/BlueButtonhover.png"
+BLUEBUTTONNORMAL.PNG		ZPIMGRES                "./res/BlueButtonnormal.png"
+BLUEBUTTONPRESS.PNG			ZPIMGRES                "./res/BlueButtonpress.png"
+CLOSE_BTN.PNG				ZPIMGRES                "./res/close_btn.png"
+VSCROLL_BAR.PNG		    	ZPIMGRES                "./res/vscroll_bar.png"
+ZOOM_LOGO.PNG				ZPIMGRES				"./res/zoom_logo.png"
+WAITING.GIF					ZPIMGRES				"./res/waiting.gif"
+CHECKBOX_BK.PNG				ZPIMGRES				"./res/checkbox_bk.png"
+
+BTN_QS_VIDEO_NORMAL.png		ZPIMGRES				"./res/btn_startmeeting_normal.png"
+BTN_QS_VIDEO_HOVER.png		ZPIMGRES				"./res/btn_startmeeting_hover.png"
+BTN_QS_VIDEO_PRESS.png		ZPIMGRES				"./res/btn_startmeeting_press.png"
+BTN_QS_VIDEO_DISABLE.png	ZPIMGRES				"./res/btn_startmeeting_diable.png"
+BTN_QS_NOVIDEO_NORMAL.png		ZPIMGRES				"./res/btn_novideo_normal.png"
+BTN_QS_NOVIDEO_HOVER.png		ZPIMGRES				"./res/btn_novideo_hover.png"
+BTN_QS_NOVIDEO_PRESS.png		ZPIMGRES				"./res/btn_novideo_press.png"
+BTN_QS_NOVIDEO_DISABLE.png		ZPIMGRES				"./res/btn_novideo_diable.png"
+BTN_QS_JOIN_NORMAL.png			ZPIMGRES				"./res/btn_joinmeeting_normal.png"
+BTN_QS_JOIN_HOVER.png			ZPIMGRES				"./res/btn_joinmeeting_hover.png"
+BTN_QS_JOIN_PRESS.png			ZPIMGRES				"./res/btn_joinmeeting_press.png"
+BTN_QS_JOIN_DISABLE.png			ZPIMGRES				"./res/btn_joinmeeting_diable.png"
+BTN_QS_BACK_NORMAL.png			ZPIMGRES				"./res/btn_backmeeting_normal.png"
+BTN_QS_BACK_HOVER.png			ZPIMGRES				"./res/btn_backmeeting_hover.png"
+BTN_QS_BACK_PRESS.png			ZPIMGRES				"./res/btn_backmeeting_press.png"
+BTN_QS_SCHEDULE_NORMAL.png		ZPIMGRES				"./res/btn_schedule_normal.png"
+BTN_QS_SCHEDULE_HOVER.png		ZPIMGRES				"./res/btn_schedule_hover.png"
+BTN_QS_SCHEDULE_PRESS.png		ZPIMGRES				"./res/btn_schedule_press.png"
+BTN_QS_SETTING_NORMAL.png		ZPIMGRES				"./res/btn_setting_normal.png"
+BTN_QS_SETTING_HOVER.png		ZPIMGRES				"./res/btn_setting_normal.png" //didn't find a right png  for this state
+BTN_QS_SETTING_PRESS.png		ZPIMGRES				"./res/btn_setting_press.png"
+BTN_QS_SHARE_NORMAL.png			ZPIMGRES				"./res/btn_directshare_normal.png"
+BTN_QS_SHARE_HOVER.png			ZPIMGRES				"./res/btn_directshare_hover.png"
+BTN_QS_SHARE_PRESS.png			ZPIMGRES				"./res/btn_directshare_press.png"
+BTN_QS_SHARE_DISABLE.png		ZPIMGRES				"./res/btn_directshare_diable.png"
+BTN_QS_SHARE_STOP_NORMAL.png		ZPIMGRES				"./res/btn_stop_directshare_normal.png"
+BTN_QS_SHARE_STOP_HOVER.png			ZPIMGRES				"./res/btn_stop_directshare_hover.png"
+BTN_QS_SHARE_STOP_PRESS.png			ZPIMGRES				"./res/btn_stop_directshare_press.png"

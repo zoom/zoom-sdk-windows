@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="376,524">
+  <Font name="Segoe UI" size="12" bold="true"/>
+  <Font name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 8-->
+  <Font name="Segoe UI" size="11" bold="false"/>
+  <Font name="Segoe UI" size="11" bold="true"/>
+  <!--Font size 10-->
+  <Font id="6" name="Segoe UI" size="13" bold="false"/>
+  <Font name="Segoe UI" size="13" bold="true"/>
+  <Font name="Segoe UI" size="10" bold="true"/>
+
+  <Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF179FF5 &quot; pushedbkcolor=&quot;#FF179FF5 &quot; focusedbkcolor=&quot;#FF179FF5 &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+  <Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
+  <HorizontalLayout bkcolor="#FFEFEFEF" visible="true" >
+	  <VerticalLayout kcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF">
+		<List name="share_applist" pos="0,0,524,306" width="524" height="306" vscrollbar="true" hscrollbar="false" itemalign="left" itembkcolor="#FFFFFFFF" itemhotbkcolor="#FFF8F8F8"
+				inset="2,2,2,2" focuspadding="1,1,1,1" itemendellipsis="true">
+		  <ListHeader name="list_title" bkcolor="#FFE0E0E0" sepwidth="2">
+			<ListHeaderItem name="column_app_name" text="App Name" width="380" height="23" minwidth="280"  sepwidth="1" align="left" />
+			<ListHeaderItem name="column_app_handle" text="App handle" width="100" height="23" minwidth="80"  sepwidth="1" align="left" />
+		  </ListHeader>
+		</List>
+		<control height="10" />
+		<HorizontalLayout name="share_button_layer" width="524" height="30" visible="true" >
+		  <control />
+		  <Button name="btn_share_desktop" text="Share Desktop" width="140" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="6" bordersize="1" borderround="2,2" />
+		  <control />
+		  <Button name="btn_share_whiteboard" text="Share Whiteboard" width="140" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="6" bordersize="1" borderround="2,2" />
+		  <control />
+		  <Button name="btn_share_selectedapp" text="Share Selected App" width="140" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="6" bordersize="1" borderround="2,2" />
+		  <control />
+		</HorizontalLayout>
+		<control height="10" />
+	  </VerticalLayout>
+  </HorizontalLayout>
+</Window>

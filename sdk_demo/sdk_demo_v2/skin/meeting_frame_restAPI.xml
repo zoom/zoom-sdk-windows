@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="524,376"  caption="0,0,0,32" disabledfontcolor="0xFF808080" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 11-->
+  <Font id="4" name="Segoe UI" size="15" bold="false"/>
+  <Font id="5" name="Segoe UI" size="15" bold="true"/>
+  <!--Font size xx-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <Font id="7" name="Segoe UI" size="14" bold="true"/>
+  <!--8-->
+  <Font id="8" name="Segoe UI" size="21" bold="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="17" bold="true"/>
+  <!--10-->
+  <Font id="10" name="Segoe UI" size="24" bold="false"/>
+  <!--11-->
+  <Font id="11" name="Segoe UI" size="20" bold="false"/>
+  <!--12-->
+  <Font id="12" name="Segoe UI" size="14" bold="false"/>
+  <Font id="13" name="Segoe UI" size="17" bold="false"/>
+  
+ 	<VerticalLayout name="container_for_restAPI_user" bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF">
+	  <Control height="50"/>
+		<VerticalLayout height="140" >
+			<HorizontalLayout >
+				<Control width = "110"/>
+				<VerticalLayout name="container_restAPI_startVideoMeeting" height="140" width="140" align="center" bkcolor="FFEFEFEF">
+					<Button name="btn_restAPI_startVidevoMeeting"  width="80" height="80" textpadding="0,109,0,0" font="1"
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" showhandcursor="true" align="center,multiline" valign="vcenter" 
+						normalimage="res='BTN_QS_VIDEO_NORMAL.png' restype='ZPIMGRES' dest='0,0,100,100'" 
+						hotimage="res='BTN_QS_VIDEO_HOVER.png' restype='ZPIMGRES' dest='0,0,100,100'" 
+						pushedimage="res='BTN_QS_VIDEO_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100'" 
+						disabledimage="res='BTN_QS_VIDEO_DISABLE.png' restype='ZPIMGRES' dest='0,0,100,100'" 
+						focuspadding="10,10,10,50"  focusround="30,30"/>
+					<Label name="lb_restAPI_startVideoMeeting" text="Video meeting" padding="0,0,0,0" height="28" width="86" align="center,multiline"  mouse="false" font="2" 
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" />
+				</VerticalLayout>
+				<Control width = "80"/>
+				<VerticalLayout name="container_restAPI_startAudioOnlyMeeting" height="140" width="140" align="center">	
+					<Button name="btn_restAPI_startAudioOnlyMeeting" width="80" height="80" textpadding="0,109,0,0" font="1"
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" showhandcursor="true" align="center,multiline" valign="vcenter"
+						normalimage="res='BTN_QS_NOVIDEO_NORMAL.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						hotimage="res='BTN_QS_NOVIDEO_HOVER.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						pushedimage="res='BTN_QS_NOVIDEO_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						disabledimage="res='BTN_QS_NOVIDEO_DISABLE.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						focuspadding="10,10,10,50"  focusround="30,30"
+						/>
+					<Label name="lb_restAPI_startAudioOnly" text="Audio meeting" padding="0,0,0,0" height="28" width="86" align="center,multiline"  mouse="false" font="2" 
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" />
+				</VerticalLayout>
+				<VerticalLayout name="container_restAPI_returnToMeeting" height="140" width="140" align="center" visible="false">
+					<Button name="btn_restAPI_returnToMeeting" width="80" height="80" textpadding="0,109,0,0" font="1"
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" showhandcursor="true" align="center,multiline" valign="vcenter"
+						normalimage="res='BTN_QS_BACK_NORMAL.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						hotimage="res='BTN_QS_BACK_HOVER.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						pushedimage="res='BTN_QS_BACK_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100' " 						
+						focuspadding="10,10,10,50"  focusround="30,30"
+						/>
+					<Label name="lb_restAPI_returnToMeeting" text="Back to meeting"  padding="0,0,0,0" height="28" width="80" align="center,multiline" mouse="false" font="2" 
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" />
+				</VerticalLayout>
+				<Control />
+				
+			</HorizontalLayout>
+		</VerticalLayout  >
+		<VerticalLayout height="140" >
+			<HorizontalLayout >
+				<Control  width = "110"/>
+				<VerticalLayout name="container_restAPI_joinMeetingOnly" height="135" width="135" align="center">
+					<Button name="btn_restAPI_joinMeeting"  width="80" height="80" textpadding="0,109,0,0" font="1"
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" showhandcursor="true" align="center,multiline" valign="vcenter"
+						normalimage="res='BTN_QS_JOIN_NORMAL.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						hotimage="res='BTN_QS_JOIN_HOVER.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						pushedimage="res='BTN_QS_JOIN_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						disabledimage="res='BTN_QS_JOIN_DISABLE.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						focuspadding="10,10,10,50"  focusround="30,30"
+						/>
+					<Label name="lb_restAPI_joinMeetingOnly" text="Join meeting"  padding="0,0,0,0" height="28" width="80" align="center,singleline"  mouse="false" font="2" 
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" />
+				</VerticalLayout>
+				<Control width = "80"/>
+				<VerticalLayout name="container_restAPI_settingMeeting" height="140" width="140" align="center">
+					<Button name="btn_restAPI_settingMeeting"  width="80" height="80" textpadding="0,109,0,0" font="1"
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" showhandcursor="true" align="center,multiline" valign="vcenter"
+						normalimage="res='BTN_QS_SETTING_NORMAL.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						hotimage="res='BTN_QS_SETTING_HOVER.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						pushedimage="res='BTN_QS_SETTING_PRESS.png' restype='ZPIMGRES' dest='0,0,100,100' " 
+						focuspadding="10,10,10,50"  focusround="30,30"
+						/>
+					<Label name="lb_restAPI_settingMeeting" text="Configure" padding="0,0,0,0" height="28" width="80" align="center,singleline"  mouse="false" font="2" 
+						textcolor="#FF57576B" disabledtextcolor="#FFBBBBCF" />
+				</VerticalLayout>	
+				<Control />
+			</HorizontalLayout>
+		</VerticalLayout  >
+		<VerticalLayout  >
+			<HorizontalLayout>
+			<Control width="260"/>
+			<Button name="btn_logout" text="log out" borderround="16,16,16,16" textcolor="#FFFFFFFF" align="center" font="6" height="50" width="165" hotbkcolor="#FF179FF5" pushedbkcolor="#FF179FF5" focusedbkcolor="#FF179FF5" bkcolor="#FF179FF5"/>
+			<Control />
+			</HorizontalLayout>
+		</VerticalLayout  >
+	  <Control />	
+	</VerticalLayout  >
+</Window>

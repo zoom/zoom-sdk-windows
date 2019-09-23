@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="480,420" >
+	<Font name="Segoe UI" size="12" bold="true"/>
+	<Font name="Segoe UI" size="12" bold="false"/>
+	<!--Font size 8-->
+	<Font name="Segoe UI" size="11" bold="false"/>
+	<Font name="Segoe UI" size="11" bold="true"/>
+	<!--Font size 10-->
+	<Font name="Segoe UI" size="13" bold="false"/>
+	<Font name="Segoe UI" size="13" bold="true"/>
+	<Font name="Segoe UI" size="10" bold="true"/>
+	
+  
+	<Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
+	
+	<VerticalLayout >
+  <VerticalLayout name="waiting_list_area" bkcolor="#FFFFFFFF">
+
+    <HorizontalLayout height="40" valign="center">
+      <Label name="lb_wait_count" height="40" textpadding="20,0,15,0" font="5" textcolor="#FF39394d"  align="left,singleline" valign="center" endellipsis="true" />
+      <Button name="btn_admitAll" height="24" padding="4,6,15,4" valign="center" align="left,singleline" textcolor="#FFFFFFFF" font="5" focusround="3,3" focuspadding="2,2,2,2" autowidth="true" pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " textpadding="15,0,15,0"/>
+    </HorizontalLayout>
+    
+    <List name="wait_user_list" itemshowhtml="true" header="hidden" vscrollbar="true" hscrollbar="false"  	itemalign="center" itembkcolor="#FFFFFFFF" itemhotbkcolor="#FFF8F8F8"
+            outline="true" inset="2,2,2,2" focuspadding="1,1,1,1">
+    </List>
+    <Label name="lb_in_meeting_count" height="40" textpadding="20,0,15,0" font="5" textcolor="#FF39394d"  align="left,singleline" valign="center" endellipsis="true" />
+  </VerticalLayout>
+    
+	<VerticalLayout name="win_tabpanel" height="41" bkcolor="#ffffffff">
+		<HorizontalTabBar>
+			<TabBarSimpleItem align="center,singleline" valign="center" textpadding="0,0,0,0" name="tbtn_panelists" text="Panelists" padding="22,8,2,8"        
+					textcolor="#FF444444" selectedtextcolor="#FFFFFFFF" font="4"
+					normalimage=""
+					selectedimage="res='PLIST_TAB_BG.png' restype='ZPIMGRES' corner='4,4,4,4' "				
+					group="maintab" selected="true" focuspadding="2,2,2,2" focusround="3,3"
+					/>
+			<HorizontalTabBar name="panelist_raise_hand_icon_area" float="true" keyboard="false" mouse="false" valign="center">
+			  <Control name="panelist_raise_hand_icon" padding="8,0,0,0"  width="16" height="16" bkimage="res='RAISE_HAND_16.png' restype='ZPIMGRES' halign='center' valign='vcenter' " mouse="false"/>
+			  <Label name="panelist_raise_hand_count" autowidth="true" font="2" textpadding="0,5,0,0" textcolor="#FF444444" align="left,singleline" mouse="false"/>
+			  <Control mouse="false" />
+			</HorizontalTabBar>
+			<TabBarSimpleItem align="center,singleline" valign="center" textpadding="0,0,0,0" name="tbtn_attendees" text="Attendees" padding="2,8,22,8"
+					textcolor="#FF444444" selectedtextcolor="#FFFFFFFF" font="4"
+					normalimage=""
+					selectedimage="res='PLIST_TAB_BG.png' restype='ZPIMGRES' corner='4,4,4,4' "
+					group="maintab"  focuspadding="2,2,2,2" focusround="3,3"
+					/>		
+			<HorizontalTabBar name="attendee_raise_hand_icon_area" float="true" keyboard="false" mouse="false" valign="center">
+			  <Control name="attendee_raise_hand_icon" padding="8,0,0,0"  width="16" height="16" bkimage="res='RAISE_HAND_16.png' restype='ZPIMGRES' halign='center' valign='vcenter' " mouse="false"/>
+			  <Label name="attendee_raise_hand_count" autowidth="true" font="2" textpadding="0,5,0,0" textcolor="#FF444444" align="left,singleline" mouse="false"/>
+			  <Control mouse="false" />
+			</HorizontalTabBar>  		
+		</HorizontalTabBar> 
+		<Control height="1" />
+	</VerticalLayout>
+	
+	<VerticalLayout  name="win_panelists" bkcolor="#FFFFFFFF" >
+	
+		<VerticalLayout name="panel_searcharea" height="41" bkcolor="#FFFFFFFF" >
+			<HorizontalLayout height="40" valign="center">
+				<RichEdit name="edit_searchbox" padding="8,0,0,0" inset="28,6,24,0"  height="28" font="1" bkcolor="#FFEDF2F8" 	textcolor="#FFaaaaaa" maxchar="128"	
+					multiline="false" autohscroll="true"  wanttab="false" rich="false"
+					normalimage="res='searchBoxPlist.png' restype='ZPIMGRES' corner='20,0,20,0' " />
+				<Control pos="16,12,32,28" float="true" bkimage="res='magnifier2.png' restype='ZPIMGRES' " />
+				<Container padding="-20,0,0,0" width="28" >
+				<Button name="btn_cancelsearch" pos="0,13,14,27" float="true" 
+					normalimage="res='closeserchbtn.png' restype='ZPIMGRES' source='0,0,14,14' " 
+					hotimage="res='closeserchbtn.png' restype='ZPIMGRES' source='0,0,14,14' "
+					hotimage="res='closeserchbtn.png' restype='ZPIMGRES' source='28,0,42,14' " 
+					pushedimage="res='closeserchbtn.png' restype='ZPIMGRES' source='14,0,28,14' " 
+					focuspadding="2,2,2,2" focusround="20,20"/>
+				</Container>
+			</HorizontalLayout>
+			<Control height="1" />
+		</VerticalLayout>		
+		
+		<VerticalLayout name="win_selfInfo" height="41" bkcolor="#FFFFFFFF" inset="2,2,2,2" focuspadding="1,1,1,1" outline="true"  tabstop="true">
+			<Control height="1" />
+			<Control />
+			<HorizontalLayout height="36" >
+				<Control name="attention_status" width="10" />
+				<Container width="36" padding="0,0,0,0" >
+					<AvatarUI name="lb_self_avatar" font="5" bkimage="res='people_icon_v.png' restype='ZPIMGRES' " 
+						frameimage="res='PLIST_AVTAR_MASK_NORMAL.png' restype='ZPIMGRES' "	/>
+				</Container>
+				<Control width="8" />
+				<HorizontalLayout>
+					<Label  name="lb_self_name" font="4" textcolor="#FF3a3c3e"  align="left,singleline" valign="center" endellipsis="true" />					
+					<Label  name="lb_self_name_hostInfo" padding="0,0,0,0" font="4" textcolor="#FF3a3c3e" align="left,singleline" valign="center" endellipsis="false" autowidth="true"/>									
+				</HorizontalLayout>
+				<Control width="2" />
+				<Button name="btn_raisehand" padding="4,6,0,0" textpadding="12,0,12,0" height="24"
+					normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " 
+					hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " 
+					pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " 
+					align="left,singleline" valign="center" font="1" textcolor="#FFFFFFFF" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3"/>
+				<Button name="btn_myaudio" padding="4,6,0,0" textpadding="12,0,12,0" height="24"
+					normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " 
+					hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " 
+					pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " 
+					align="left,singleline" valign="center" font="1" textcolor="#FFFFFFFF" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3"/>
+				<Button name="btn_changeMyName" padding="4,6,0,0" textpadding="12,0,12,0" height="24"
+					normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " 
+					hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " 
+					pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " 
+					align="left,singleline" valign="center" font="1" textcolor="#FFFFFFFF" autowidth="true" 
+					focuspadding="2,2,2,2" focusround="3,3"/>
+				<Label name="lb_myCCTray" padding="2,0,0,0" width="18" bkimage="res='plist_cc_tray.png' restype='ZPIMGRES' halign='center' valign='center'  " />
+        <Label name="lb_myComputerAudio" padding="2,0,0,0" width="18" bkimage="res='plist_computer_audio.png' restype='ZPIMGRES' halign='center' valign='center'  " />
+        <Control name="win_raisehandflag" padding="4,0,0,0" width="20" bkimage="res='plist_raise_hand.png' restype='ZPIMGRES' 				halign='center' valign='center'  " />
+				<Label name="lb_myrecordStatus"  font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='RecoringIcon1_24x24.png' restype='ZPIMGRES' " />
+				<HorizontalLayout name="lb_myaudioStatus_place_holder" width="24">
+					<Label name="lb_myaudioStatus"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='icon_unmute24x24.png' restype='ZPIMGRES' " />
+				</HorizontalLayout>
+				<Label name="lb_myvideoStatus"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='btn_sendvideo.png' restype='ZPIMGRES' " />
+				<Control width="10" />
+			</HorizontalLayout>
+			<Control />
+			<Control name="ctrl_self_bottom_line" height="1" />
+		</VerticalLayout>
+		
+		<VerticalLayout   >
+			<List name="puserlist" itemshowhtml="true" header="hidden" vscrollbar="true" hscrollbar="false"  	itemalign="center" itembkcolor="#FFFFFFFF" itemhotbkcolor="#FFF8F8F8"
+            outline="true" inset="2,2,2,2" focuspadding="1,1,1,1">		
+			</List>	
+		</VerticalLayout>
+		
+		<Control height="1" />
+		<VerticalLayout name="win_feedbackBar" bkcolor="#FFFFFFFF"  height="74" visible="false" inset="10,9,10,0" >		
+			<HorizontalLayout>
+				<VerticalLayout name="vl_feedback_raisehand"  align="center" >
+					<Control />
+					<Text name="lb_feedback_raisehand_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_raisehand"
+						width="30" height="30"
+						normalimage="res='NVF_RAISEHAND.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_RAISEHAND.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_RAISEHAND.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_raisehand" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="raise hand" autowidth="true" />
+					<Control height="7" />
+				</VerticalLayout>
+				<VerticalLayout name="vl_feedback_yes"  align="center" >
+					<Control />
+					<Text name="lb_feedback_yes_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_yes"
+						width="30" height="30"
+						normalimage="res='NVF_YES.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_YES.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_YES.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_yes" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="yes" autowidth="true" />
+					<Control height="7" />
+				</VerticalLayout>
+				<VerticalLayout name="vl_feedback_no"  align="center" >
+					<Control />
+					<Text name="lb_feedback_no_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_no"
+						width="30" height="30"
+						normalimage="res='NVF_NO.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_NO.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_NO.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_no" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="no" autowidth="true" />
+					<Control height="7" />
+				</VerticalLayout>
+				<VerticalLayout name="vl_feedback_slower"  align="center" >
+					<Control />
+					<Text name="lb_feedback_slower_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_slower"
+						width="30" height="30"
+						normalimage="res='NVF_GOSLOW.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_GOSLOW.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_GOSLOW.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_slower" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="go slower" autowidth="true" />
+					<Control height="7" />
+				</VerticalLayout>
+				<VerticalLayout name="vl_feedback_faster"  align="center" >
+					<Control />
+					<Text name="lb_feedback_faster_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_faster"
+						width="30" height="30"
+						normalimage="res='NVF_GOFAST.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_GOFAST.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_GOFAST.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_faster" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="go faster" autowidth="true" />
+					<Control height="7" />
+				</VerticalLayout>
+				<VerticalLayout name="vl_feedback_emojis"  align="center" >
+					<Control />
+					<Text name="lb_feedback_emojis_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_emojis"
+						width="30" height="30"
+						normalimage="res='NVF_EMOJI.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_EMOJI.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_EMOJI.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_emojis" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="emojis" autowidth="true" />
+					<Control height="7" />
+				</VerticalLayout>
+				<VerticalLayout name="vl_feedback_clear"  align="center" >
+					<Control />
+					<Text name="lb_feedback_clear_num" font="2" height="13" textcolor="#FF747487" text="" autowidth="true"  />
+					<Button name="btn_feedback_clear"
+						width="30" height="30"
+						normalimage="res='NVF_CLEARALL.png' restype='ZPIMGRES' source='0,0,30,30' " 
+						hotimage="res='NVF_CLEARALL.png' restype='ZPIMGRES' source='30,0,60,30' " 
+						pushedimage="res='NVF_CLEARALL.png' restype='ZPIMGRES' source='60,0,90,30' "
+						focuspadding="2,2,2,2" focusround="3,3" />
+					<Text name="lb_feedback_clear" font="2" height="15" padding="0,0,0,0" textcolor="#FF747487" text="clear all" autowidth="true" visible="false" />
+					<Control height="7" />
+				</VerticalLayout>
+			</HorizontalLayout>
+			<Control height="1" padding="0,5,0,0" bkcolor="#FFF3F3F8" />
+		</VerticalLayout>
+		<HorizontalLayout name="win_hostActionBar" bkcolor="#FFFFFFFF"  height="52" visible="false" >
+				<Button name="btn_muteSelfOnToolbar"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3" />
+					
+				<Button name="btn_muteAll"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3" />
+				<Button name="btn_raisehandonTop"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3" visible="false" />
+			
+				<Button name="btn_unmuteAll"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true"  
+					focuspadding="2,2,2,2" focusround="3,3" />
+				<Button name="btn_changeMyNameonTop"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3" />				
+				<Button name="btn_claimhost"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true"
+					focuspadding="2,2,2,2" focusround="3,3" />			
+				<Button name="btn_dock"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="8,0,8,0" 
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					align="center,singleline" valign="center" autowidth="true" 
+					focuspadding="2,2,2,2" focusround="3,3" />					
+				<Button name="btn_more"
+					textcolor="#FF57576B" font="1"  height="28" textpadding="12,0,22,0"
+					normalimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='0,0,50,28' " 
+					hotimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='50,0,100,28' " 
+					pushedimage="res='BTN_GRAY.png' restype='ZPIMGRES' corner='2,2,2,2' source='100,0,150,28' " 
+					foreimage="res='PLIST_DOWN_ARROW.png' restype='ZPIMGRES' inset='0,0,8,0' halign='right' valign='center'   "
+					align="center,singleline" valign="center" minwidth="55" autowidth="true" 
+					focuspadding="2,2,2,2" focusround="3,3" />	
+				
+		</HorizontalLayout>
+		
+		<HorizontalLayout name="win_MuteTipBar" bkcolor="#FFF0F0F0"  height="40" visible="true" >
+			<Control width="6" />
+			<Label name="lb_muteAllHint"   textcolor="#FF333333" font="4" padding="0,2,0,6" bkimage="res='hintbk.png' restype='ZPIMGRES' corner='1,1,1,1'" align="center,singleline" valign="center" />
+			<Control width="6" />
+		</HorizontalLayout>		
+				
+	</VerticalLayout>
+    
+  <VerticalLayout name="webinar_panel">
+
+  </VerticalLayout>
+    
+	</VerticalLayout>
+</Window>

@@ -298,7 +298,7 @@ public:
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
 	virtual SDKError IsShareLocked(bool& bLocked) = 0;
 
-	/// \brief Determine if the sound of the coumputer in the current sharing is supported. 
+	/// \brief Determine if the sound of the computer in the current sharing is supported. 
 	/// \param [out] bCurEnableOrNot The parameter is valid only when the return value is TRUE. And TRUE indicates to sharing the sound of the computer for the moment.
 	/// \return TRUE indicates to support the sound of the computer in the current sharing. FALSE not.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
@@ -329,6 +329,7 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetMultiShareSettingOptions(MultiShareOption shareOption) = 0;
+
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

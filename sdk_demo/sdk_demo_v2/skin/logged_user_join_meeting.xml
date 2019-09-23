@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="524,376" caption="0,0,0,32">
+	<!--Font size 9-->
+	<Font id="0" name="Segoe UI" size="12" bold="true"/>
+	<Font id="1" name="Segoe UI" size="12" bold="false"/>
+	<!--Font size 10-->
+	<Font id="2" name="Segoe UI" size="13" bold="false"/>
+	<Font id="3" name="Segoe UI" size="13" bold="true"/>
+	<!--Font size 11-->
+	<Font id="4" name="Segoe UI" size="15" bold="false"/>
+	<Font id="5" name="Segoe UI" size="15" bold="true"/>
+	<!--Font size xx-->
+	<Font id="6" name="Segoe UI" size="14" bold="false"/>
+	<Font id="7" name="Segoe UI" size="14" bold="true"/>
+	<Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF179FF5 &quot; pushedbkcolor=&quot;#FF179FF5 &quot; focusedbkcolor=&quot;#FF179FF5 &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+
+	<VerticalLayout name="panel_join_meeting" width="524" height="376" bkcolor="#FFFFFFFF" visible="true" >
+		
+		<Label name="meeting_number" text="Meeting number :" float="true" pos="50,100,0,0" width="150" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="6" />
+		<RichEdit name="edit_meeting_number" promptext="input meeting number" float="true" pos="200,100,0,0" width="212" height="30" bordersize="1" bordercolor="FFB7B7B7" font="6" inset="4,2,0,0" />
+		<Label name="meeting_password" text="Meeting password :" float="true" pos="50,150,0,0" width="150" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="6" />
+		<RichEdit name="edit_meeting_password" promptext="input meeting password" password="true" float="true" pos="200,150,0,0" width="212" height="30" bordersize="1" bordercolor="FFB7B7B7" font="6" inset="4,5,0,0" />
+		<Label name="user_name" text="User name :" float="true" pos="50,200,0,0" width="150" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="6" />
+		<RichEdit name="edit_screen_name" promptext="input user name" float="true" pos="200,200,0,0" width="212" height="30" bordersize="1" bordercolor="FFB7B7B7" font="6" inset="4,2,0,0" />
+
+		<Button name="btn_join_meeeting" text="Join" float="true" pos="212,250,0,0" width="100" height="30" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" font="6" bordersize="1" borderround="2,2" />
+
+	</VerticalLayout>
+</Window>

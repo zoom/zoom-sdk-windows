@@ -16,11 +16,11 @@ BEGIN_ZOOM_SDK_NAMESPACE
 enum LiveStreamStatus 
 {
 	LiveStreamStatus_None,///<Only for initialization.
-	LiveStreamStatus_InProgress,///<In progress
-	LiveStreamStatus_Connecting,///<Be connecting
+	LiveStreamStatus_InProgress,///<In progress.
+	LiveStreamStatus_Connecting,///<Be connecting.
 	LiveStreamStatus_Start_Failed_Timeout,///<Connect timeout.
-	LiveStreamStatus_Start_Failed,///<Start live streaming failed. 
-	LiveStreamStatus_Ended,///<End.
+	LiveStreamStatus_Start_Failed,///<Failed to start live streaming. 
+	LiveStreamStatus_Ended,///<Live stream ends.
 };
 
 /// \brief Live stream meeting controller callback event.

@@ -15,7 +15,7 @@ BEGIN_ZOOM_SDK_NAMESPACE
 */
 enum AuthResult
 {
-	AUTHRET_SUCCESS,///<Authentication Successful.
+	AUTHRET_SUCCESS,///<Authentication is successful.
 	AUTHRET_KEYORSECRETEMPTY,///<The key or secret to authenticate is empty.
 	AUTHRET_KEYORSECRETWRONG,///<The key or secret to authenticate is wrong.
 	AUTHRET_ACCOUNTNOTSUPPORT,///<The user account does not support.

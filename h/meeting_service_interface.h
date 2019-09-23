@@ -72,6 +72,18 @@ enum MeetingFailCode
 	CONF_FAIL_REMOVED_BY_HOST = 61, ///<Removed by the host. 
 };  
 
+enum MeetingEndReason
+{
+	EndMeetingReason_None = 0,
+	EndMeetingReason_KickByHost = 1,
+	EndMeetingReason_EndByHost = 2,
+	EndMeetingReason_JBHTimeOut = 3,
+	EndMeetingReason_NoAttendee = 4,
+	EndMeetingReason_HostStartAnotherMeeting = 5,
+	EndMeetingReason_FreeMeetingTimeOut = 6,
+	EndMeetingReason_NetworkBroken,
+};
+
 /*! \enum MeetingType
     \brief Meeting type.
     Here are more detailed structural descriptions.
@@ -450,6 +462,7 @@ public:
 	/// \param status The value of meeting. For more details, see \link MeetingStatus \endlink.
 	/// \param iResult Detailed reasons for special meeting status.
 	///If the status is MEETING_STATUS_FAILED, the value of iResult is one of those listed in MeetingFailCode enum. 
+	///If the status is MEETING_STATUS_ENDED, the value of iResult is one of those listed in MeetingEndReason.
 	virtual void onMeetingStatusChanged(MeetingStatus status, int iResult = 0) = 0;
 
 	/// \brief Meeting statistics warning notification callback.

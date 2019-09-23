@@ -94,7 +94,7 @@ public:
 	/// \return If the function succeeds, the return value is the telephony number of the selected country.
 	virtual IList<const wchar_t* >* GetSelectedDialinCountryCode() = 0;
 	
-	/// \brief Determine if the visible dialable country code contains toll-free numbers.
+	/// \brief Determine if the numbers of visible dialable country contains toll-free numbers.
 	/// \return TRUE indicates to contain.
 	virtual bool IsIncludeTollFree() = 0;
 };
@@ -577,11 +577,11 @@ public:
 	
 	/// \brief Edit Meeting.
 	/// \param wndParam Edit the meeting through the dialog window by setting its parameter. For more details, see \link WndPosition \endlink structure.
-	/// \param meetingUniqueID Assign a meeting ID to schedule or edite related meeting.
+	/// \param meetingUniqueID Assign a meeting ID to schedule or edit related meeting.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Once the function is called successfully, the user will receive the callback event via IPreMeetingServiceEvent::onScheduleOrEditMeeting ().
-	///The recurring meeting and webinar can only be editted via this function.
+	///The recurring meeting and webinar can only be edited via this function.
 	virtual SDKError EditMeeting(WndPosition& wndParam, UINT64 meetingUniqueID) = 0;
 
 	/// \brief Delete the specified scheduled meeting.

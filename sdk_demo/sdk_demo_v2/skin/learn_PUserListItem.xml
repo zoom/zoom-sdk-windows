@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<PUserItem>
+		<VerticalLayout height="41">
+				<Control />
+				<HorizontalLayout height="36"  >
+          <Control name="attention_status" width="10" />
+					<Container width="36" height="36" padding="0,0,0,0" >
+						<AvatarUI name="lb_user_avatar" font="5" bkimage="res='people_icon_v.png' restype='ZPIMGRES' " 
+							frameimage="res='PLIST_AVTAR_MASK_NORMAL.png' restype='ZPIMGRES' " />
+					</Container>
+					<Control width="8" />
+					<HorizontalLayout name="panel_userInfo" visible="true" >
+						<HorizontalLayout>
+							<Label name="lb_userName"  font="4" textcolor="#FF444444" align="left,singleline" valign="center" endellipsis="true" />
+							<Label name="lb_userNameHostInfo" textpadding="4,0,0,0" font="4" textcolor="#FF444444" align="left,singleline" valign="center" endellipsis="false" autowidth="true" />
+						</HorizontalLayout>
+						<Button name="btn_linkedin" padding="4,7,0,0" height="22" width="22"
+							normalimage="res='LINKEDIN_BTN_NORMAL.PNG' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,22,22' " 
+							hotimage="res='LINKEDIN_BTN_HOVER.PNG' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,22,22' " 
+							pushedimage="res='LINKEDIN_BTN_PUSH.PNG' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,22,22' " 
+							align="left,singleline" valign="center" font="1" focuspadding="2,2,2,2" focusround="3,3"/>
+						<Button name="btn_userraisehand" padding="4,6,0,0" textpadding="12,0,12,0" height="24"
+							normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " 
+							hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " 
+							pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " 
+							align="left,singleline" valign="center" font="1" textcolor="#FFFFFFFF" autowidth="true" 
+							focuspadding="2,2,2,2" focusround="3,3"/>
+						<Button name="btn_audio"  padding="4,6,0,0" textpadding="12,0,12,0" height="24"
+							normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " 
+							hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " 
+							pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " 
+							align="left,singleline" valign="center" font="1" textcolor="#FFFFFFFF" autowidth="true"
+							focuspadding="2,2,2,2" focusround="3,3"/>
+						<Button name="btn_usermore" padding="4,6,0,0" textpadding="12,0,22,0" height="24"
+							normalimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='0,0,40,22' " 
+							hotimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='40,0,80,22' " 
+							pushedimage="res='PLIST_ITEM_BTN_BG.png' restype='ZPIMGRES' corner='3,3,3,3' source='80,0,120,22' " 
+							foreimage="res='point_right_arrow_white.png' restype='ZPIMGRES' inset='0,1,12,0' halign='right' valign='center'   "
+							align="left,singleline" valign="center" font="1" textcolor="#FFFFFFFF" autowidth="true"
+							focuspadding="2,2,2,2" focusround="3,3"/>
+						
+						<Label name="lb_CCTray" padding="2,0,0,0" width="18" bkimage="res='plist_cc_tray.png' restype='ZPIMGRES' halign='center' valign='center'  " />
+            <Label name="lb_raisehandflag" padding="2,0,0,0" width="20" bkimage="res='plist_raise_hand.png' restype='ZPIMGRES' halign='center' valign='center'  " />
+            <Label name="lb_computeraudio" padding="2,0,0,0" width="18" bkimage="res='plist_computer_audio.png' restype='ZPIMGRES' halign='center' valign='center'  " />
+						<Label name="lb_recordStatus"  font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='RecoringIcon1_24x24.png' restype='ZPIMGRES' " />
+						<HorizontalLayout name="lb_audioStatus_placeholder" width="24">
+							<Label name="lb_audioStatus"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='icon_unmute24x24.png' restype='ZPIMGRES' source='0,0,24,24'" />
+						</HorizontalLayout>
+						<Label name="lb_videoStatus"   font="3" padding="2,6,0,0" width="24" height="24" bkimage="res='btn_sendvideo.png' restype='ZPIMGRES' " />
+						
+					</HorizontalLayout>
+					
+					<Control width="10" />
+				</HorizontalLayout>
+				<Control />
+				<Control name="ctrl_bottom_line" height="1" />
+		</VerticalLayout>
+	</PUserItem>
+</Window>

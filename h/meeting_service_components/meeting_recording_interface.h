@@ -69,7 +69,7 @@ public:
 
 	/// \brief Start recording.
 	/// \param [out] startTimestamp The timestamps when start recording.
-	/// \param recPath Specifies the path of saving the recording. The SDK will try to creat this path if the specified path does not exist. If the creation failed, an error code SDKERR_INVALID_PARAMETER returns. 
+	/// \param recPath Specifies the path of saving the recording. The SDK will try to create this path if the specified one does not exist. If the creation failed, an error code SDKERR_INVALID_PARAMETER returns. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError StartRecording(time_t& startTimestamp, wchar_t* recPath) = 0;

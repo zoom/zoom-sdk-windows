@@ -166,7 +166,7 @@ public:
 	/// \return If the function succeeds, the return value is the H.323 meeting connect password. Otherwise failed, the return value is the length of zero(0）. 
 	virtual const wchar_t* GetH323Password() = 0;
 
-	/// \brief Determine if it is enabled to pairing meeting.
+	/// \brief Determine if it is enabled to pair the meeting.
 	/// \param meetingNum TRUE Specifies the meeting number.
 	/// \return If pairing meeting is enabled, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.

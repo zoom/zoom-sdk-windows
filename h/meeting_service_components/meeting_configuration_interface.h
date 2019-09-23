@@ -6,6 +6,7 @@
 #ifndef _MEETING_Configuration_INTERFACE_H_
 #define _MEETING_Configuration_INTERFACE_H_
 #include "..\zoom_sdk_def.h"
+#include "..\customized_resource_helper_interface.h"
 
 BEGIN_ZOOM_SDK_NAMESPACE
 /// \brief Meeting screen name and password handler.
@@ -110,8 +111,8 @@ public:
 };
 
 
+/// \deprecated This interface will be deprecated, please stop using it. 
 /// \brief Reminder handler of ending free meeting.
-///
 class IFreeMeetingEndingReminderHandler
 {
 public:
@@ -146,26 +147,61 @@ public:
 	virtual ~IFreeMeetingEndingReminderHandler() {};
 };
 
-/*! \enum SDKCustomizedStringType
-	\brief Custom string type.
-	Here are more detailed structural descriptions.
-	\remark Read the description of the each type carefully. You must follow the format to custom your own string. Wrong usage may cause unpredictable crash.
-*/
-enum SDKCustomizedStringType
+enum SDKInviteDlgTabPage
 {
-	SDK_Customized_LiveStream_MenuString_LiveOn_String = 0,///<The new string must end up with "%s" so that the menu item can show correctly. This type is used to define a string to replace the menu item ON %S on live streaming. 
-	SDK_Customized_LiveStream_MenuString_LiveView_String,///<The new string must end up with "%s" so that the menu item can show correctly. This type is used to define a string to replace the menu item VIEW STREAM ON %S on live streaming.
-	SDK_Customized_LiveStream_MenuString_LiveStop_String,///<The new string must be a pure string so that it can show correctly. This type is used to define a string to replace the menu item STOP LIVE STREAM on live streaming.
-	SDK_Customized_LiveStream_MenuString_CopyURL_String,///<The new string must be a pure string so that it can show correctly. This type is used to define a string to replace the menu item COPY STREAMING LINK on live streaming.
-	SDK_Customized_Title_App,	///<The new string must be a pure string so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI.
-	SDK_Customized_Title_ZoomVideo,  ///<The new string must has the same format as "Zoom Participant ID: %s   Meeting ID: %s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI.
-	SDK_Customized_Title_FreeZoomVideo, ///<The new string must has the same format as "Zoom Participant ID: %s  %d-Minutes Meeting ID:%s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI when the user is free user and in view-only status. 
-	SDK_Customized_Title_ViewOnly_ZoomVideo, ///<The new string must end up with "%s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI.
-	SDK_Customized_Title_ViewOnly_FreeZoomVideo, ///<The new string must has the same format as "Zoom %d-Minutes Meeting ID: %s" so that it can show correctly. This type is used to define a string to replace the title of the meeting video UI when the user is free user and in view-only status. 
+	SDK_INVITEDLG_TAB_EMAILCONTACT = 0, ///<'Invite by Email' tab page
+	SDK_INVITEDLG_TAB_PHONECONTACT, ///<'Invite by Phone' tab pag
+	SDK_INVITEDLG_TAB_ROOMSYSTEM, ///<'Invite a Room System' tab page
+};
+
+enum SDKH323TabPage
+{
+	SDK_INVITEDLG_H323_DIALIN = 0, ///<'Dial In' sub-tab page of Room System tab page
+	SDK_INVITEDLG_H323_CALLOUT, ///<'Call Out' sub-tab page of Room System tab page
+};
+/// \brief Free meeting event handler.
+///
+class IMeetingConfigurationFreeMeetingEvent
+{
+
+public:
+	/*! \enum FreeMeetingNeedUpgradeType
+		\brief Upgrade types of free meeting.
+		Here are more detailed structural descriptions. 
+	*/		
+	enum FreeMeetingNeedUpgradeType
+	{
+		FreeMeetingNeedUpgradeType_NONE,///<Initialization.
+		FreeMeetingNeedUpgradeType_BY_ADMIN,///<It is necessary for administrator to upgrade the free meeting.
+		FreeMeetingNeedUpgradeType_BY_GIFTURL,///<Upgrade the free meeting by the gift link.
+	};
+	/// \brief The SDK will trigger this callback event during the free meeting to inform the user how much time is left for a free meeting.
+	/// \param leftTime The left time of meeting calculated in seconds.
+	virtual void onFreeMeetingRemainTime(unsigned int leftTime) = 0;
+	/// \brief The callback of free meeting stops the countdown. 
+	virtual void onFreeMeetingRemainTimeStopCountDown() = 0;
+
+	/// \deprecated The backend design is changed and the function will be deleted.
+	virtual void onFreeMeetingEndingReminderNotification(IFreeMeetingEndingReminderHandler* handler_) = 0;
+
+	/// \brief The callback of upgrading the free meeting.
+	/// \param type_ Type of upgrading the free meeting, see \link FreeMeetingNeedUpgradeType \endlink enum.
+	/// \param gift_url Upgrade the free meeting by the gift link. When and only when the value of type_ is FreeMeetingNeedUpgradeType_BY_GIFTURL, this parameter is meaningful.
+	virtual void onFreeMeetingNeedToUpgrade(FreeMeetingNeedUpgradeType type_, const wchar_t* gift_url) =0;
+	
+	/// \brief Callback function of starting to upgrade the free meeting by the gift link.
+	virtual void onFreeMeetingUpgradeToGiftFreeTrialStart() = 0;
+	
+	/// \brief Callback function of ending upgrade the free meeting by the gift link.
+	virtual void onFreeMeetingUpgradeToGiftFreeTrialStop() = 0;
+	
+	/// \brief Callback function of free meting upgrades successfully.
+	virtual void onFreeMeetingUpgradeToProMeeting() = 0;
 };
 /// \brief Meeting configuration event callback.
 ///
-class IMeetingConfigurationEvent
+
+class IMeetingConfigurationEvent : public IMeetingConfigurationFreeMeetingEvent
 {
 public:
 	/// \brief The SDK will trigger the callback event if the password or screen name is required.
@@ -184,14 +220,6 @@ public:
 	/// \brief The user will receive this callback event if the user wants to join the new meeting while the ongoing meeting is not ended.
 	/// \param handler_ An object pointer used by user to complete all the related operations. For more details, see \link IEndOtherMeetingToJoinMeetingHandler \endlink.
 	virtual void onEndOtherMeetingToJoinMeetingNotification(IEndOtherMeetingToJoinMeetingHandler* handler_) = 0;
-
-	/// \brief The SDK will trigger this callback event at the end of the free meeting to inform the user if he wants to upgrade the meeting.
-	/// \param handler_ An object pointer used by user to complete all the related operations. For more details, see \link IFreeMeetingEndingReminderHandler \endlink.
-	virtual void onFreeMeetingEndingReminderNotification(IFreeMeetingEndingReminderHandler* handler_) = 0;
-
-	/// \brief The SDK will trigger this callback event during the free meeting to inform the user how many free time is left.
-	/// \param leftTime The time left in seconds of the meeting.
-	virtual void onFreeMeetingRemainTime(unsigned int leftTime) = 0;
 };
 
 /// \brief Meeting user configuration interface.
@@ -208,131 +236,132 @@ public:
 	/// \remarks The value shall be set before the sharing begins. If you set the value during the process of share, the function will not be valid until the next share.
 	virtual void SetFloatVideoPos(WndPosition pos) = 0;
 
-	/// \brief Set the visibility of the sharing toolbar. Default: FALSE. 
-	/// \param bShow TRUE indicates enable to display the sharing toolbar. FALSE not. 
+	/// \brief Set the visibility of the sharing toolbar. Default value: FALSE. 
+	/// \param bShow TRUE means to enable the display sharing toolbar. Otherwise not. 
 	virtual void SetSharingToolbarVisibility(bool bShow) = 0;
 
-	/// \brief Set the visibility of the toolbar at the bottom of the meeting window. Default: TRUE.
-	/// \param bShow TRUE indicates enable to display always the toolbar at the bottom. FALSE not. 
+	/// \brief Set the visibility of the toolbar at the bottom of the meeting window. Default value: TRUE.
+	/// \param bShow TRUE means to enable the feature to display always the toolbar at the bottom. Otherwise not. 
 	virtual void SetBottomFloatToolbarWndVisibility(bool bShow) = 0;
 
-	/// \brief Set the visibility of the meeting ID in the title bar. Default: FALSE.
-	/// \param bHide False indicates to display the content. True no.
+	/// \brief Set the visibility of the meeting ID in the title-bar. Default value: FALSE.
+	/// \param bHide FALSE means to display the content. Otherwise not.
 	virtual void HideMeetingInfoFromMeetingUITitle(bool bHide) = 0;
 
-	/// \brief Set the meeting ID in the title bar of the meeting window. 
-	/// \param meetingNumber Specify the meeting ID in the title bar of the meeting window.
+	/// \brief Set the meeting ID in the title-bar of the meeting window. 
+	/// \param meetingNumber Specify the meeting ID in the title-bar of the meeting window.
 	virtual void SetMeetingIDForMeetingUITitle(UINT64 meetingNumber) = 0;
 
-	/// \brief Set the visibility of the dialog box when receiving the request of remote control during the meeting. Default: TRUE.
+	/// \brief Set the visibility of the dialog box when receiving the request of remote control during the meeting. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the dialog box. FALSE not.
 	///If it is FALSE, the user can deal with this request in the IMeetingRemoteCtrlEvent::onRemoteControlStatus() callback event sent by SDK when receiving the request of the remote control and then enters the sharing status at the end of callback event.
 	virtual void EnableApproveRemoteControlDlg(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the dialog box when the request of the remote control is refused. Default: TRUE.
+	/// \brief Set the visibility of the dialog box when the request of the remote control is refused. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the dialog box. FALSE not.
 	///If it is FALSE, the user can deal with this request in the IMeetingRemoteCtrlEvent::onRemoteControlStatus() callback event sent by SDK when receiving the decline request of the remote control and then exists the sharing status at the end of callback event.
 	virtual void EnableDeclineRemoteControlResponseDlg(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the LEAVE MEETING button when the host leaves the meeting. Default: TRUE.
-	/// \param bEnable TRUE indicates to display the button. FALSE not.
+	/// \brief Set the visibility of the LEAVE MEETING button when the host leaves the meeting. Default value: TRUE.
+	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	virtual void EnableLeaveMeetingOptionForHost(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the INVITE button in the toolbar during the meeting. Default value: TRUE.
-	/// \param bEnable True indicates to display the button. FALSE not.
+	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	/// \remarks The user will receive the IMeetingUIControllerEvent::onInviteBtnClicked() callback event when he clicks the INVITE button. If the callback event is not handled, the SDK will pop up a ZOOM custom invitation dialog.
 	///The user will receive the IMeetingUIControllerEvent::onZoomInviteDialogFailed() callback event if the dialog box is failed to display.
 	virtual void EnableInviteButtonOnMeetingUI(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the buttons to enter or exit the full screen in the meeting window. Default: TRUE.
-	/// \param bEnable TRUE indicates to display the button. FALSE not.
+	/// \brief Set the visibility of the buttons to enter or exit the full screen in the meeting window. Default value: TRUE.
+	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	virtual void EnableEnterAndExitFullScreenButtonOnMeetingUI(bool bEnable) = 0;
 
-	/// \brief Set if it is able to switch between the full screen mode and normal mode by double-click. Default: TRUE.
+	/// \brief Set if it is able to switch between the full screen mode and normal mode by double-click. Default value: TRUE.
 	/// \param bEnable TRUE indicates to switch. FALSE not.
 	virtual void EnableLButtonDBClick4SwitchFullScreenMode(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the floating video window when sharing in the meeting. Default: TRUE.
+	/// \brief Set the visibility of the floating video window when sharing in the meeting. Default value: TRUE.
 	/// \param bShow TRUE indicates to display the floating video window. FALSE not.
 	virtual void SetFloatVideoWndVisibility(bool bShow) = 0;
 
-	/// \brief Set if it is able to handle the event with user's own program by clicking START SHARE button in the meeting. Default: FALSE.
+	/// \brief Set if it is able to handle the event with user's own program by clicking START SHARE button in the meeting. Default value: FALSE.
 	/// \param bRedirect TRUE indicates to deal with the event with user's own program. FALSE not.
 	/// \remarks The SDK won't enable the share if the user calls this function and sets to convert. The user will deal with the subsequent logic after receiving the IMeetingUIControllerEvent::onStartShareBtnClicked() callback event. 
 	virtual void RedirectClickShareBTNEvent(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to handle the event with user's own program by clicking END MEETING button in the meeting. Default: FALSE.
+	/// \brief Set if it is able to handle the event with user's own program by clicking END MEETING button in the meeting. Default value: FALSE.
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
 	/// \remarks The SDK won't end the meeting if the user calls this function and set to convert. The user will deal with the subsequent logic after receiving the IMeetingUIControllerEvent::onEndMeetingBtnClicked() callback event.
 	virtual void RedirectClickEndMeetingBTNEvent(bool bRedirect) = 0;
 
-	/// \brief An upgrade dialog box will pop up when the free meeting is over. Use this function to set if it is able to handle the reminder message with user's own program. Default: FALSE. 
-	/// \param bRedirect TRUE indicates to handle the reminder message with  user's own program. FALSE not.
+	/// \brief An upgrade dialog box will pop up when the free meeting is over. Use this function to set if it is able to handle the reminder message with user's own program. Default value: FALSE. 
+	/// \param bRedirect TRUE indicates to handle the reminder message with user's own program. FALSE not.
 	/// \remarks The SDK will trigger the IMeetingConfigurationEvent::onFreeMeetingEndingReminderNotification() callback event when the meeting is over if the user calls this function to set the conversion.
 	virtual void RedirectFreeMeetingEndingReminderDlg(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to handle the event with SDK user's own program by clicking CUSTOM LIVE STREAM button in the meeting. Default: FALSE.
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking CUSTOM LIVE STREAM button in the meeting. Default value: FALSE.
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
 	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onCustomLiveStreamMenuClicked() instead of jumping to the live video page when clicking on the custom live stream, then deal with the subsequent logic.
 	virtual void RedirectClickCustomLiveStreamMenuEvent(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to handle the event with SDK user's own program by clicking PARTICIPANT LIST button in the meeting. Default: FALSE.
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking PARTICIPANT LIST button in the meeting. Default value: FALSE.
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
 	/// \remarks The list won't unfold by clicking participant list button if the user calls this function to set to convert. The SDK will trigger the IMeetingUIControllerEvent::onParticipantListBtnClicked(), and the user shall deal with the subsequent logic himself.	
 	virtual void RedirectClickParticipantListBTNEvent(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to handle the event with SDK user's own program by clicking Closed Caption button in the meeting. Default: FALSE.
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking Closed Caption button in the meeting. Default value: FALSE.
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
 	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onCCBTNClicked(), and the user shall deal with the subsequent logic himself.
 	virtual void RedirectClickCCBTNEvent(bool bRedirect) = 0;
 
-	/// \brief Set if it is able to show tool-tip in the meeting. Default: TRUE. 
-	/// \param bEnable TRUE indicates to enable the tool-tip in the meeting.
+	/// \brief Set if it is able to show tool-tip in the meeting. Default value: TRUE. 
+	/// \param bEnable TRUE indicates to enable the tool-tip in the meeting. FALSE not.
 	virtual void EnableToolTipsShow(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the introduction window when sharing on the IOS device. Default: TRUE.
-	/// \param bEnable TRUE indicates to display the introduction window when sharing on the IOS device. FALSE not.
+	/// \brief Set the visibility of the introduction window when sharing on the iOS device. Default value: TRUE.
+	/// \param bEnable TRUE indicates to display the introduction window when sharing on the iOS device. FALSE not.
 	///	\remarks The SDK will trigger the IMeetingConfigurationEvent::onAirPlayInstructionWndNotification() callback event if the user calls this function to set to false, he shall deal with the subsequent logic himself.
 	 virtual void EnableAirplayInstructionWindow(bool bEnable) = 0;
 
-	/// \brief Set if it is able to claim host. Default: TRUE.
+	/// \brief Set if it is able to claim host. Default value: TRUE.
 	/// \param bEnable TRUE indicates to claim host. FALSE not.
 	virtual void EnableClaimHostFeature(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the audio choose dialog box when joining the meeting. Default: FALSE.
-	/// \param bEnable TRUE indicates to hide the audio choose dialog box when join the meeting. FALSE not.
+	/// \brief Set the visibility of the dialog box of choosing audio when joining the meeting. Default value: FALSE.
+	/// \param bEnable TRUE indicates to hide the dialog box of choosing audio when joining the meeting. FALSE not.
 	virtual void EnableAutoHideJoinAudioDialog(bool bEnable) = 0;
 
-	/// \brief Set if it is able to display always the icon on the task-bar. Default: FALSE.
+	/// \brief Set if it is able to display always the icon on the task-bar. Default value: FALSE.
 	/// \param bAlwaysShow TRUE indicates to display always the icon on the task-bar. 
 	virtual void AlwaysShowIconOnTaskBar(bool bAlwaysShow) = 0;
 
-	/// \brief Set if it is able to enable split screen during the meeting. Default: FALSE.
+	/// \brief Set if it is able to enable split screen during the meeting. Default value: FALSE.
 	/// \param bDisable TRUE indicates to disable the split screen. FALSE not.
 	/// \remarks This function is valid only on the primary screen. Set the value to FALSE does not mean to enable the split screen due to other restrictions.
 	virtual void DisableSplitScreenModeUIElements(bool bDisable) = 0;
 
-	/// \brief Set the visibility of the SHARE COMPUTER SOUND check-box in the sharing window. Default: TRUE.
+	/// \brief Set the visibility of the SHARE COMPUTER SOUND check-box in the sharing window. Default value: TRUE.
 	/// \param bShow TRUE indicates to display. FALSE not.
 	virtual void SetShowAudioUseComputerSoundChkbox(bool bShow) = 0;
 
-	/// \brief Set the visibility of the OPTIMIZE FOR FULL SCREEN VIDEO CLIP check-box in the sharing window. Default: TRUE.
+	/// \brief Set the visibility of the OPTIMIZE FOR FULL SCREEN VIDEO CLIP check-box in the sharing window. Default value: TRUE.
 	/// \param bShow TRUE indicates to display. FALSE not.
 	virtual void SetShowVideoOptimizeChkbox(bool bShow) = 0;
 
-	/// \brief Set the visibility of PHONE CALL tab in the audio dialog box when join the meeting. Default value: TRUE.
+	/// \brief Set the visibility of PHONE CALL tab in the audio dialog box when joining the meeting. Default value: TRUE.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowCallInTab(bool bShow) = 0;
 
-	/// \brief Set the visibility of CALL ME tab in the audio dialog box when join the meeting. Default value: TRUE.
+	/// \brief Set the visibility of CALL ME tab in the audio dialog box when joining the meeting. Default value: TRUE.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowCallMeTab(bool bShow) = 0;
 
 	/// \brief Set if it is able to display always the meeting ID on the title bar of the window during the meeting. Default: False.
 	/// \param bAlwaysShow TRUE indicates to display always the meeting ID. FALSE not.
-	/// \remarks If it is false, the program will operate ZOOM's default logic.
+	/// \remarks If it is FALSE, the program will execute ZOOM's default logic.
 	virtual void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow) = 0;
 	
+	///	\deprecated This function will be deprecated, please use ICustomizedResourceHelper.AddCustomizedStringResouce() instead.
 	/// \brief Use the custom string to replace the specified menu item.
 	/// \param customizedType Specify the menu item type. For more information, see \link SDKCustomizedStringType \endlink enum.
 	/// \param customizedString Specify the custom string. You can set it to NULL to remove the custom string for the specified item.
@@ -341,8 +370,16 @@ public:
 	/// \remarks If customizedString is not NULL with length zero(0), the return value is SDKERR_INVALID_PARAMETER.
 	virtual SDKError SetUICustomizedString(SDKCustomizedStringType customizedType, const wchar_t* customizedString) = 0;
 
+	/// \brief Whether to remove the topmost attribute of setting dialog. Default is not removed.
+	/// \param bDisable TRUE indicates to remove. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DisableTopMostAttr4SettingDialog(bool bDisable) = 0;
 
+	/// \brief Set whether to close the current sharing content without prompt and directly beginning a new sharing content. Default value: FALSE(prompt).
+	/// \param bEnable TRUE indicates no prompt. FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError EnableGrabShareWithoutReminder(bool bEnable) = 0;
 	
 	/// \brief Set the visibility of the SWITCH TO SINGLE PARTICIPANT SHARE dialog box when multiple participants are sharing and the user try to change the setting to single share. Default: TURE. 
@@ -351,9 +388,31 @@ public:
 	virtual void EnableShowShareSwitchMultiToSingleConfirmDlg(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the REMAINING MEETING TIME button in the meeting. Default: FALSE. 
-	/// \param bEnable TRUE indicates to hide the button when the free meeting need be reminded. FALSE not.
+	/// \param bDisable TRUE indicates to hide the button when the free meeting need be reminded. FALSE not.
 	/// \remarks If the button is disabled to show, you will retrieve IMeetingConfigurationEvent::onFreeMeetingRemainTime callback event.
 	virtual void DisableFreeMeetingRemainTimeNotify(bool bDisable) = 0;
+
+	/// \brief Set whether to display the button CHAT and menu item. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideChatItemOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Set whether to display the button RECORD and menu item. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideRecordItemOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Set whether to display the button UPGRADE when prompt the tooltip of free meeting counts down. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideUpgradeFreeMeetingButton(bool bHide) = 0;
+
+	/// \brief Set the visibility of specified tab in the invite dialog box when the dialog is shown. Default value: All are shown.
+	/// \param tabPage Specifies a tab, see \link SDKInviteDlgTabPage \endlink enum.
+	/// \param bShow TRUE indicates to display the tab. FALSE not.
+	virtual void SetShowInviteDlgTabPage(SDKInviteDlgTabPage tabPage, bool bShow) = 0;
+
+	/// \brief Set the visibility of specified tab in the Room System tab page of the invite dialog box when the dialog is shown. Default value: All are shown.
+	/// \param tabPage Specifies a tab, see \link SDKH323TabPage \endlink enum.
+	/// \param bShow TRUE indicates to display the tab. FALSE not.
+	virtual void SetShowH323SubTabPage(SDKH323TabPage tabPage, bool bShow) = 0;
 };
 
 /// \brief Meeting connect configuration Interface

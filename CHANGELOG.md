@@ -1,6 +1,36 @@
 # CHANGELOG
 
-## 2019-01-23 @ [v4.3.30730.0118](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.30730.0118)
+## 2019-03-25 @ [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325)
+
+**Note: Please do not assign new digital signature on cpthost.exe file. Assigning new digital signature on this file could lead to fatal errors**
+
+**Added**
+
+* A new refactorized demo project that provides clear instructions on how to implement major features
+* Introduce new Zoom meeting UI
+* Add new interfaces to control share viewer’s annotate privilege
+* Add 1080p video support
+* Add new interfaces to customize the sub-tab pages in H323 invite page and customize all tab pages in the invite dialog
+* Add new interfaces to show/hide ‘chat’,’record’ buttons
+* Add new EndMeeting reasons for IMeetingServiceEvent.onMeetingStatusChanged
+* Add support audio/video option on start meeting with API User
+* Add customize labels/logos/texts in the in-meeting UI
+
+**Changed & Fixed**
+
+* Fix an issue that the user is unable to show chat window when assigning the window to its parent window
+* Fix an issue that the user is unable to get window handle when calling showParticipantListWnd
+* FIx an issue that the Windows SDK crashes with "Out of Memory" error
+* Remove remaining 10 minutes tooltips and support callback
+* Fix an issue that the participant’s video is blur and shaken
+
+**Deprecated**
+
+* IFreeMeetingEndingReminderHandler
+* IMeetingConfigurationFreeMeetingEvent.onFreeMeetingEndingReminderNotification
+* SetUICustomizedString
+
+## 2019-01-23 @ [v4.3.0.30730.0118](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.0.30730.0118)
 
 **Added**
 *	Support for closed caption

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="380,500" caption="0,0,0,32">
+	<!--Font size 9-->
+	<Font id="0" name="Segoe UI" size="12" bold="true"/>
+	<Font id="1" name="Segoe UI" size="12" bold="false"/>
+	<!--Font size 10-->
+	<Font id="2" name="Segoe UI" size="13" bold="false"/>
+	<Font id="3" name="Segoe UI" size="13" bold="true"/>
+	<!--Font size 11-->
+	<Font id="4" name="Segoe UI" size="15" bold="false"/>
+	<Font id="5" name="Segoe UI" size="15" bold="true"/>
+	<!--Font size xx-->
+	<Font id="6" name="Segoe UI" size="14" bold="false"/>
+	<Font id="7" name="Segoe UI" size="14" bold="true"/>
+	<!--8-->
+	<Font id="8" name="Segoe UI" size="21" bold="true"/>
+	<!--9-->
+	<Font id="9" name="Segoe UI" size="17" bold="true"/>
+	<!--10-->
+	<Font id="10" name="Segoe UI" size="24" bold="false"/>
+	<!--11-->
+	<Font id="11" name="Segoe UI" size="20" bold="false"/>
+	<!--12-->
+	<Font id="12" name="Segoe UI" size="14" bold="false"/>
+	<Font id="13" name="Segoe UI" size="17" bold="false"/>
+	
+	<Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF179FF5 &quot; pushedbkcolor=&quot;#FF179FF5 &quot; focusedbkcolor=&quot;#FF179FF5 &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+	<Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
+
+	<HorizontalLayout name="meeting_chat" width="380" height="500" bkcolor="#FFFFFFFF" visible="true" >
+<!-- 		<VerticalLayout name="meeting_user_panel" width="280" height="500" bkcolor="#FFFFFFFF" visible="true" >
+			<List name="meeting_user_list" text="user ID" float="true" pos="10,20,0,0" width="260" height="400" bkcolor="#FFEAECEE" bordersize="1" vscrollbar="true" scrollselect="true" >
+                      <ListHeader  height="24" menu="true" >
+                              <ListHeaderItem text="user name" width="150" sepwidth="1" font="6" align="left"/>
+                              <ListHeaderItem text="user ID" width="110" sepwidth="1" font="6" align="left"/>
+                      </ListHeader> 
+            </List>
+            <Label text="Receiver:" float="true" pos="10,455,0,0" width="60" height="20" />
+            <RichEdit name="receiver" float="true" pos="70,450,0,0" width="100" height="30" textcolor="#FF000000"  align="left" font="6" disabledtextcolor="#FFA7A6AA" inset="4,5,0,4" multiline="true" autovscroll="true" wanttab="false" rich="false" bordersize="1" bordercolor="FFB7B7B7" font="6" />
+		</VerticalLayout> -->
+
+		<VerticalLayout neme="meeting_chat_panel" width="380" height="500" bkcolor="#FFFFFFFF" visible="true" >
+			<HorizontalLayout neme="chat_content_panel" width="380" height="350" bkcolor="#FFFFFFFF" visible="true" >
+				<RichEdit name="chat_show_content_edit" float="true" pos="20,20,0,0" width="340" height="330" textcolor="#FF000000"  align="left" font="6" disabledtextcolor="#FFA7A6AA" inset="4,5,0,4" multiline="true" autovscroll="true" wanttab="false" rich="false" bordersize="1" bordercolor="FFB7B7B7" vscrollbar="true" readonly="true"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="functional_area_panel" width="380" height="40" bkcolor="#FFFFFFFF">
+				<Label name="send_to_label" float="true" pos="40,10,0,0" text="Send to:" width="50" height="20" />
+				<Combo name="chat_to_who" float="true" pos="90,10,0,0"  width="80" height="20" textpadding="6,0,0,0" bkcolor="#FFEAECEE" bordersize="1" bordercolor="FFC0C0C0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF">
+					<ListLabelElement text="0" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="1" height="23" padding="6,0,0,0" selected="true"/>
+                </Combo>
+                
+
+<!--                 <Combo name="more_functions" float="true" pos="200,10,0,0" text="more" width="180" height="20" textpadding="6,0,0,0" bkcolor="#FFEAECEE" bordersize="1" bordercolor="FFC0C0C0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF">
+					<ListLabelElement text="allow attendee chat with each other" width="180" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="only chat with host" width="180" height="23" padding="6,0,0,0" />
+                </Combo> -->
+			</HorizontalLayout>
+			<HorizontalLayout neme="chat_input_panel" width="380" height="100" bkcolor="#FFFFFFFF" visible="true" >
+				<RichEdit name="chat_input_content_edit" float="true" pos="20,0,0,0" width="340" height="100" textcolor="#FF000000" align="left" font="6" disabledtextcolor="#FFA7A6AA" inset="4,5,0,4" multiline="true" autovscroll="true"  wanttab="false" rich="false" bordersize="1" bordercolor="FFB7B7B7" vscrollbar="true" wantreturn="false" />
+			</HorizontalLayout>
+
+		</VerticalLayout>
+
+	</HorizontalLayout>

@@ -9,7 +9,7 @@
 
 BEGIN_ZOOM_SDK_NAMESPACE
 /*! \enum AnnotationToolType
-    \brief Type of annotation Tools.
+    \brief Types of annotation tool.
     Here are more detailed structural descriptions.
 */
 enum AnnotationToolType
@@ -24,11 +24,22 @@ enum AnnotationToolType
 	ANNOTOOL_AUTO_ARROW,///<An arrow changes automatically in pace with the mouse cursor.
 	ANNOTOOL_AUTO_RECTANGLE_FILL,///<A filled rectangle.
 	ANNOTOOL_AUTO_ELLIPSE_FILL,///<A filled ellipse.
-
 	ANNOTOOL_SPOTLIGHT,///<Laser pointer.
-	ANNOTOOL_ARROW,///<An arrow.
-
+	ANNOTOOL_ARROW,///<An arrow showing the name of whom click on the sharing content.
 	ANNOTOOL_ERASER,///<An eraser.
+
+	ANNOTOOL_TEXTBOX, ///<Insert a textbox in order to input letters.
+	ANNOTOOL_PICKER, ///<Select the annotations.
+	ANNOTOOL_AUTO_RECTANGLE_SEMI_FILL, ///<A fair rectangle changes automatically in pace with the mouse cursor.
+	ANNOTOOL_AUTO_ELLIPSE_SEMI_FILL, ///<A fair ellipse changes automatically in pace with the mouse cursor.
+	ANNOTOOL_AUTO_DOUBLE_ARROW, ///<A line with double-arrow. 
+	ANNOTOOL_AUTO_DIAMOND, ///<A hollow rhombus.
+	ANNOTOOL_AUTO_STAMP_ARROW, ///<A fixed-size arrow for marking.
+	ANNOTOOL_AUTO_STAMP_CHECK, ///<A sign marking that something is correct.
+	ANNOTOOL_AUTO_STAMP_X, ///<A sign marking that something is wrong.
+	ANNOTOOL_AUTO_STAMP_STAR, ///<A star for marking.
+	ANNOTOOL_AUTO_STAMP_HEART, ///<A heart for marking.
+	ANNOTOOL_AUTO_STAMP_QM, ///<An interrogation.
 };
 
 /*! \enum AnnotationClearType
@@ -42,12 +53,26 @@ enum AnnotationClearType
 	ANNOCLEAR_OTHER,///<Clear only the others' annotations.
 };
 
+/// \brief Callback interface that viewer's annotation status changes.
+class IMeetingAnnotationSupportEvent
+{
+public:
+	/// \brief The SDK will trigger this callback if the presenter enable/disable PARTICIPANTS ANNOTATION.										
+	virtual void onSupportAnnotationStatus(unsigned int userid, bool bSupportAnnotation) = 0;
+};
+
 class ICustomizedAnnotationController;
-/// \brief Meeting annotation tools interface.
+/// \brief Meeting annotation tool interface.
 ///
 class IAnnotationController
 {
 public:
+	/// \brief Set the callback that annotation status changes. 
+	/// \param pEvent An object pointer to the the IMeetingAnnotationSupportEvent that receives the annotation status changing callback event. 
+	/// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SetEvent(IMeetingAnnotationSupportEvent* pEvent) = 0;
+
 	/// \brief Determine if the annotation tools are disabled or not during the current meeting.
 	/// \return FALSE indicates enabled while TRUE indicates disabled.
 	/// \remarks Valid for both ZOOM style and user custom interface mode.
@@ -122,6 +147,35 @@ public:
 	///If the function fails, the return value is NULL.
 	///  \remarks Valid only for user custom interface mode.
 	virtual ICustomizedAnnotationController* GetCustomizedAnnotationController() = 0;
+
+	/// \brief Disallow/allow participants to annotate when viewing the sharing content.
+	/// \param [in] viewtype: SDK_FIRST_VIEW/SDK_SECOND_VIEW
+	/// \param [in] disable TRUE means disabled, FALSE not.
+    /// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError DisableViewerAnnotation(SDKViewType viewtype, bool bDisable) = 0;
+
+	/// \brief Determine if viewer's privilege of annotation is disabled.
+	/// \param [in] viewtype: SDK_FIRST_VIEW/SDK_SECOND_VIEW
+	/// \param [out] bDisabled TRUE means disabled, FALSE not. It validates only when the return value is SDKErr_Success. 
+	/// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError IsViewerAnnotationDisabled(SDKViewType viewtype, bool& bDisabled) = 0;
+
+	/// \brief Determine if it is able to disallow viewer to annotate. 
+	/// \param [in] viewtype: SDK_FIRST_VIEW/SDK_SECOND_VIEW
+	/// \param [out] bCan TRUE means able, FALSE not. It validates only when the return value is SDKErr_Success. 
+	/// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanDisableViewerAnnotation(SDKViewType viewtype, bool& bCan) = 0;
+
+	/// \brief Determine if it is able to annotate(Both the presenter and viewer can call the function).
+	/// \param [in] viewtype: SDK_FIRST_VIEW/SDK_SECOND_VIEW
+	/// \param [out] bCan TRUE means able, FALSE not. It validates only when the return value is SDKErr_Success. 
+	/// \return If the user owns the authority, the return value is SDKErr_Success.
+	///Otherwise not. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanDoAnnotation(SDKViewType viewtype,bool& bCan) = 0;
+
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

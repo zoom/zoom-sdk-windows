@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="210,450">
+	<Font name="Segoe UI" size="12" bold="true"/>
+	<Font name="Segoe UI" size="12" bold="false"/>
+	<!--Font size 8-->
+	<Font name="Segoe UI" size="11" bold="false"/>
+	<Font name="Segoe UI" size="11" bold="true"/>
+	<!--Font size 10-->
+	<Font name="Segoe UI" size="13" bold="false"/>
+	<Font name="Segoe UI" size="13" bold="true"/>
+	<Font name="Segoe UI" size="10" bold="true"/>
+ 
+	<Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
+  <HorizontalLayout bkcolor="#FFEFEFEF" visible="true" >	
+	<VerticalLayout name="participant_list" bkcolor="#FFFEFEFE">
+		<List name="puserlist" itemshowhtml="true" header="hidden" vscrollbar="true" hscrollbar="false"  	itemalign="center" itembkcolor="#FFFFFFFF" itemhotbkcolor="#FFF8F8F8"
+			inset="2,2,2,2" focuspadding="1,1,1,1">		
+		</List>	
+	</VerticalLayout>
+  </HorizontalLayout>
+</Window>

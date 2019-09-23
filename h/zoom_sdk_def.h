@@ -1,6 +1,6 @@
 /*!
 * \file zoom_sdk_def.h
-* \brief  ZOOM windows SDK Common Definition File.
+* \brief ZOOM windows SDK Common Definition File.
 * 
 */
 #ifndef _ZOOM_SDK_DEF_H_
@@ -23,7 +23,7 @@
 
 BEGIN_ZOOM_SDK_NAMESPACE
 /*! \enum SDKError
-    \brief SDK error type.
+    \brief SDK error types.
     Here are more detailed structural descriptions.
 */ 
 enum SDKError
@@ -33,10 +33,10 @@ enum SDKError
 	SDKERR_WRONG_USEAGE,///<Incorrect usage of the feature. 
 	SDKERR_INVALID_PARAMETER,///<Wrong parameter.
 	SDKERR_MODULE_LOAD_FAILED,///<Loading module failed.
-	SDKERR_MEMORY_FAILED,///<No memory allocated. 
+	SDKERR_MEMORY_FAILED,///<No memory is allocated. 
 	SDKERR_SERVICE_FAILED,///<Internal service error.
-	SDKERR_UNINITIALIZE,///<Not initialized before the use.
-	SDKERR_UNAUTHENTICATION,///<Not authorized before the use.
+	SDKERR_UNINITIALIZE,///<Not initialized before the usage.
+	SDKERR_UNAUTHENTICATION,///<Not authorized before the usage.
 	SDKERR_NORECORDINGINPROCESS,///<No recording in process.
 	SDKERR_TRANSCODER_NOFOUND,///<Transcoder module is not found.
 	SDKERR_VIDEO_NOTREADY,///<The video service is not ready.
@@ -49,6 +49,10 @@ enum SDKError
 	SDKERR_TOO_FREQUENT_CALL,///<API calls too frequently.
 	SDKERR_FAIL_ASSIGN_USER_PRIVILEGE, ///<User can't be assigned with new privilege.
 	SDKERR_MEETING_DONT_SUUPORT_FEATURE,///<The current meeting doesn't support the feature.
+	SDKERR_MEETING_NOT_SHARE_SENDER,///<The current user is not the presenter.
+	SDKERR_MEETING_YOU_HAVE_NO_SHARE,///There is no sharing.
+	SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG, ///Incorrect ViewType parameters.
+	SDKERR_MEETING_ANNOTATION_IS_OFF, ///Annotation is disabled.
 };
 
 /*! \enum SDK_LANGUAGE_ID
@@ -147,7 +151,7 @@ typedef struct tagInitParam
 	unsigned int uiWindowIconSmallID;///<The ID of the small icon on the window.
 	unsigned int uiWindowIconBigID;///<The ID of the big Icon on the window.
 	SDK_LANGUAGE_ID emLanguageID;///<The ID of the SDK language.
-	bool enableLogByDefault;///<Enable log
+	bool enableLogByDefault;///<Enable log feature.
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
 	tagInitParam()
 	{
@@ -163,7 +167,7 @@ typedef struct tagInitParam
 }InitParam;
 
 /*! \enum LastErrorType
-    \brief The last error type of the SDK.
+    \brief The last error types of the SDK.
     Here are more detailed structural descriptions.
 */
 enum LastErrorType
@@ -180,15 +184,15 @@ enum LastErrorType
 class IZoomLastError
 {
 public:
-	///<brief Get the last error type.
-	///\return If the function succeeds, the error type will be returned. For more details, see \link LastErrorType \endlink enum.
+	/// \brief Get the last error type.
+	/// \return If the function succeeds, the error type will be returned. For more details, see \link LastErrorType \endlink enum.
 	virtual LastErrorType GetErrorType() const = 0 ;
-	///<brief Get the last error code.
-	///\return If the function succeeds, the error code will be returned.
+	/// \brief Get the last error code.
+	/// \return If the function succeeds, the error code will be returned.
 	virtual UINT64 GetErrorCode() const = 0;
 
-	///<brief Get the description for the last error.
-	///\return If the function succeeds, the error description will be returned. If there is no error, it will return an empty string of length zero(0).
+	/// \brief Get the description for the last error.
+	/// \return If the function succeeds, the error description will be returned. If there is no error, it will return an empty string of length zero(0).
 	virtual const wchar_t* GetErrorDescription() const = 0;
 	virtual ~IZoomLastError(){};
 };

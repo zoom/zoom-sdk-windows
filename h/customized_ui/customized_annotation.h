@@ -95,7 +95,7 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Undo() = 0;
 
-	/// \brief Redo the annotation undo. 
+	/// \brief Redo the annotation that was undone. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError Redo() = 0;
@@ -111,6 +111,8 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SaveSnapshot(const wchar_t* path) = 0;
 	virtual ~ICustomizedAnnotationObj(){};
+
+
 };
 
 /// \brief Annotation controller callback event
@@ -144,7 +146,7 @@ public:
 	/// \param pp_obj A pointer to the ICustomizedAnnotationObj*.
 	/// \return If the function succeeds, the return value is SDKErr_Success, and ppMeetingService is not NULL
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	/// \remarks It is suggested to call this function if the value of status_ is CS_ANNO_READYTOUSE when you receive the ICustomizedAnnotationControllerEvent::onSharingShareAnnotationStatusChanged .
+	/// \remarks It is suggested to call this function if the value of status_ is CS_ANNO_READYTOUSE when you receive the ICustomizedAnnotationControllerEvent::onSharingShareAnnotationStatusChanged.
 	virtual SDKError CreateAnnoObj(ICustomizedShareRender* view_share_render, ICustomizedAnnotationObj** pp_obj) = 0;
 
 	/// \brief Destroy the specified annotation object.
@@ -153,6 +155,7 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DestroyAnnoObj(ICustomizedAnnotationObj* anno_obj) = 0;
 	virtual ~ICustomizedAnnotationController(){};
-};
+
+}; 
 END_ZOOM_SDK_NAMESPACE
 #endif

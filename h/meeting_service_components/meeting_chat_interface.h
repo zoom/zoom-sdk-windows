@@ -21,6 +21,7 @@ public:
 	/// \brief Get the sender screen name of the current message.
 	/// \return If the function succeeds, the return value is sender screen name of the current message.
 	///Otherwise failed, the return value is NULL.
+	/// \remarks If the message is sent to all or to all panelists, the return value will be NULL.
 	virtual const wchar_t* GetSenderDisplayName() = 0;
 
 	/// \brief Get the receiver ID of the current message.
@@ -144,7 +145,7 @@ enum WebinarChatMsgType
 
 /*! \struct tagSendChatItem4Webinar
     \brief The structure of chat message for webinar.
-    Here are more detailed structural descriptions..
+    Here are more detailed structural descriptions.
 */
 typedef struct tagSendChatItem4Webinar 
 {
