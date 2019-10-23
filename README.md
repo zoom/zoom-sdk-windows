@@ -1,16 +1,16 @@
 
 # Table of Contents
 
-1.  [What Does It Do?](#org007a69f)
-2.  [How To Run This?](#org9f98437)
-    1.  [Recording](#orgeaf2b45)
-    2.  [Dependency](#org4306a43)
-    3.  [Hack](#orga43e8f2)
-    4.  [Command Line Parameters](#org00b327c)
-3.  [Status of This App](#org638bc12)
-4.  [Code Structure](#org4bf8768)
-5.  [How To View Recordings](#orge32edd7)
-6.  [Extra Info](#orga4c8109)
+1.  [What Does It Do?](#org3866760)
+2.  [How To Run This?](#org2fddbf1)
+    1.  [Recording](#org842fe42)
+    2.  [Dependency](#org8b6c08a)
+    3.  [Hack](#org6486e1f)
+    4.  [Command Line Parameters](#org833cbff)
+3.  [Status of This App](#orgac0c03e)
+4.  [Code Structure](#org5c66688)
+5.  [How To View Recordings](#org9be1945)
+6.  [Extra Info](#org0a7b230)
 
 Zoom has many different client SDKs, among all available one, the only thing
 that we could possibly use on a cloud setup is the Windows SDK. This project is
@@ -18,7 +18,7 @@ a modified version of the original SDK under demo/sdk<sub>demo</sub>, and rename
 *recorder*.
 
 
-<a id="org007a69f"></a>
+<a id="org3866760"></a>
 
 # What Does It Do?
 
@@ -31,7 +31,7 @@ This is a windows application which does the following:
 -   once meeting ends, the process should just die
 
 
-<a id="org9f98437"></a>
+<a id="org2fddbf1"></a>
 
 # How To Run This?
 
@@ -41,7 +41,7 @@ zoom-recorder.sln and run from there. Once successfully built, a binary will be
 dropped to bin/ folder.
 
 
-<a id="orgeaf2b45"></a>
+<a id="org842fe42"></a>
 
 ## Recording
 
@@ -51,7 +51,7 @@ corp account (That&rsquo;s a bug that they are trying to address). So for now, p
 use the credential specified in the sln file.
 
 
-<a id="org4306a43"></a>
+<a id="org8b6c08a"></a>
 
 ## Dependency
 
@@ -63,7 +63,7 @@ bin/ and causes random crashes.
 -   There is no requirement of having a mic or camera at all.
 
 
-<a id="orga43e8f2"></a>
+<a id="org6486e1f"></a>
 
 ## Hack
 
@@ -75,10 +75,11 @@ us to run this is to have a single VM to run one SDK. VM preparation is usually
 on demand, but can take couple minutes based on my experience with azure. So I
 implemented a hack which is to kill this Event handle during the process
 initialization phase. This so far works well and allows us to run multiple SDK
-instances on a given machine.
+instances on a given machine. (Although we do have to wait one instance
+finishing initialization before we start another one)
 
 
-<a id="org00b327c"></a>
+<a id="org833cbff"></a>
 
 ## Command Line Parameters
 
@@ -88,7 +89,7 @@ believe at the time when we need to go production, we will have to send
 username/password of a given user which has the special RAW api privilege turned on.
 
 
-<a id="org638bc12"></a>
+<a id="orgac0c03e"></a>
 
 # Status of This App
 
@@ -98,7 +99,7 @@ username/password of a given user which has the special RAW api privilege turned
     to make it production quality. However, since this is NOT a long running
 
 
-<a id="org4bf8768"></a>
+<a id="org5c66688"></a>
 
 # Code Structure
 
@@ -107,7 +108,7 @@ username/password of a given user which has the special RAW api privilege turned
 -   I suggest to follow the [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for code under this project
 
 
-<a id="orge32edd7"></a>
+<a id="org9be1945"></a>
 
 # How To View Recordings
 
@@ -118,8 +119,10 @@ username/password of a given user which has the special RAW api privilege turned
 I have verified both work.
 
 
-<a id="orga4c8109"></a>
+<a id="org0a7b230"></a>
 
 # Extra Info
 
-Please see [ZOOM original README](https://github.com/zoom/zoom-sdk-windows/blob/master/README.md)
+-   Please see [ZOOM original README](https://github.com/zoom/zoom-sdk-windows/blob/master/README.md)
+-   We&rsquo;ll use jira to track any work items, there are still many. Will update the
+    README once set up.

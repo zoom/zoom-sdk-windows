@@ -41,7 +41,8 @@ us to run this is to have a single VM to run one SDK. VM preparation is usually
 on demand, but can take couple minutes based on my experience with azure. So I
 implemented a hack which is to kill this Event handle during the process
 initialization phase. This so far works well and allows us to run multiple SDK
-instances on a given machine.
+instances on a given machine. (Although we do have to wait one instance
+finishing initialization before we start another one)
 
 ** Command Line Parameters
 This tool supports a rich set of command line options. Many of them are added
@@ -67,4 +68,6 @@ username/password of a given user which has the special RAW api privilege turned
 I have verified both work.
 
 * Extra Info
-Please see [[https://github.com/zoom/zoom-sdk-windows/blob/master/README.md][ZOOM original README]]
+- Please see [[https://github.com/zoom/zoom-sdk-windows/blob/master/README.md][ZOOM original README]]
+- We'll use jira to track any work items, there are still many. Will update the
+  README once set up.
