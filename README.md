@@ -1,16 +1,16 @@
 
 # Table of Contents
 
-1.  [What Does It Do?](#org3866760)
-2.  [How To Run This?](#org2fddbf1)
-    1.  [Recording](#org842fe42)
-    2.  [Dependency](#org8b6c08a)
-    3.  [Hack](#org6486e1f)
-    4.  [Command Line Parameters](#org833cbff)
-3.  [Status of This App](#orgac0c03e)
-4.  [Code Structure](#org5c66688)
-5.  [How To View Recordings](#org9be1945)
-6.  [Extra Info](#org0a7b230)
+1.  [What Does It Do?](#org329c746)
+2.  [How To Run This?](#org89a2eac)
+    1.  [Recording](#org7411f0f)
+    2.  [Dependency](#orgfc870bc)
+    3.  [Hack](#orgb9f0725)
+    4.  [Command Line Parameters](#orgd59b117)
+3.  [Status of This App](#orgaa3b592)
+4.  [Code Structure](#org3a0fb3d)
+5.  [How To View Recordings](#org9f95267)
+6.  [Extra Info](#orgf6edd3f)
 
 Zoom has many different client SDKs, among all available one, the only thing
 that we could possibly use on a cloud setup is the Windows SDK. This project is
@@ -18,7 +18,7 @@ a modified version of the original SDK under demo/sdk<sub>demo</sub>, and rename
 *recorder*.
 
 
-<a id="org3866760"></a>
+<a id="org329c746"></a>
 
 # What Does It Do?
 
@@ -31,17 +31,17 @@ This is a windows application which does the following:
 -   once meeting ends, the process should just die
 
 
-<a id="org2fddbf1"></a>
+<a id="org89a2eac"></a>
 
 # How To Run This?
 
 This is built with Visual Studio 2019. Please note that only **Release** version
-built. (Same as the original demo/sdk<sub>demo</sub>). To run this, just open
+built. (Same as the original demo/sdk\_<sub>demo</sub>). To run this, just open
 zoom-recorder.sln and run from there. Once successfully built, a binary will be
 dropped to bin/ folder.
 
 
-<a id="org842fe42"></a>
+<a id="org7411f0f"></a>
 
 ## Recording
 
@@ -51,19 +51,17 @@ corp account (That&rsquo;s a bug that they are trying to address). So for now, p
 use the credential specified in the sln file.
 
 
-<a id="org8b6c08a"></a>
+<a id="orgfc870bc"></a>
 
 ## Dependency
 
--   This depends on files under bin/. Please note that you can&rsquo;t run both recorder/
-
-and demo/sdk<sub>demo</sub> at the same time, as they both will try to modify files under
-bin/ and causes random crashes.
-
+-   This depends on files under bin/. Please note that you can&rsquo;t run both
+    recorder/ and demo/sdk\_<sub>demo</sub> at the same time, as they both will try to modify
+    files under bin/ and causes random crashes.
 -   There is no requirement of having a mic or camera at all.
 
 
-<a id="org6486e1f"></a>
+<a id="orgb9f0725"></a>
 
 ## Hack
 
@@ -79,17 +77,17 @@ instances on a given machine. (Although we do have to wait one instance
 finishing initialization before we start another one)
 
 
-<a id="org833cbff"></a>
+<a id="orgd59b117"></a>
 
 ## Command Line Parameters
 
 This tool supports a rich set of command line options. Many of them are added
 during the phase when I don&rsquo;t fully understand zoom&rsquo;s authentication model. I
-believe at the time when we need to go production, we will have to send
+believe at the time when we need to go production, we will have to use
 username/password of a given user which has the special RAW api privilege turned on.
 
 
-<a id="orgac0c03e"></a>
+<a id="orgaa3b592"></a>
 
 # Status of This App
 
@@ -99,7 +97,7 @@ username/password of a given user which has the special RAW api privilege turned
     to make it production quality. However, since this is NOT a long running
 
 
-<a id="org5c66688"></a>
+<a id="org3a0fb3d"></a>
 
 # Code Structure
 
@@ -108,7 +106,7 @@ username/password of a given user which has the special RAW api privilege turned
 -   I suggest to follow the [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for code under this project
 
 
-<a id="org9be1945"></a>
+<a id="org9f95267"></a>
 
 # How To View Recordings
 
@@ -119,7 +117,7 @@ username/password of a given user which has the special RAW api privilege turned
 I have verified both work.
 
 
-<a id="org0a7b230"></a>
+<a id="orgf6edd3f"></a>
 
 # Extra Info
 

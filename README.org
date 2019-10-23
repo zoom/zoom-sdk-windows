@@ -16,7 +16,7 @@ This is a windows application which does the following:
 
 * How To Run This?
 This is built with Visual Studio 2019. Please note that only *Release* version
-built. (Same as the original demo/sdk_demo). To run this, just open
+built. (Same as the original demo/sdk__demo). To run this, just open
 zoom-recorder.sln and run from there. Once successfully built, a binary will be
 dropped to bin/ folder.
 
@@ -27,9 +27,9 @@ corp account (That's a bug that they are trying to address). So for now, please
 use the credential specified in the sln file.
 
 ** Dependency
-- This depends on files under bin/. Please note that you can't run both recorder/
-and demo/sdk_demo at the same time, as they both will try to modify files under
-bin/ and causes random crashes.
+- This depends on files under bin/. Please note that you can't run both
+  recorder/ and demo/sdk__demo at the same time, as they both will try to modify
+  files under bin/ and causes random crashes.
 - There is no requirement of having a mic or camera at all.
 
 ** Hack
@@ -47,7 +47,7 @@ finishing initialization before we start another one)
 ** Command Line Parameters
 This tool supports a rich set of command line options. Many of them are added
 during the phase when I don't fully understand zoom's authentication model. I
-believe at the time when we need to go production, we will have to send
+believe at the time when we need to go production, we will have to use
 username/password of a given user which has the special RAW api privilege turned on.
 
 * Status of This App
