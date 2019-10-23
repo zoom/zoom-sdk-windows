@@ -1,125 +1,115 @@
-# Zoom Windows Software Development Kit (SDK)
-<div align="center">
-<img src="https://s3.amazonaws.com/user-content.stoplight.io/8987/1541013063688" width="400px" max-height="400px" style="margin:auto;"/>
-</div>
 
-## Latest SDK Notifications
-1. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
-   * **CptControl.exe**
-   * **CptHost.exe**
-   * **CptInstall.exe**
-   * **CptService.exe**
-   * **CptShare.dll**
-   * **zzhost.dll**
-   * **zzplugin.dll**
-   * **aomhost64.exe**
-2. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
-3. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
+# Table of Contents
 
-## Full Documentation && Community Support
-You can find the full Zoom Windows SDK documentation and the community support forum here:
-<div align="center">
-   <a target="_blank" href="https://marketplace.zoom.us/docs/sdk/native-sdks/windows" style="text-decoration:none">
-   <img src="https://s3-us-west-1.amazonaws.com/sdk.zoom.us/Doc-button.png" width="350px" max-height="350px" style="margin:1vh 1vw;"/>
-   </a>
-   <a target="_blank" href="https://devforum.zoom.us/c/desktop-sdk" style="text-decoration:none">
-   <img src="https://s3-us-west-1.amazonaws.com/sdk.zoom.us/Forum-button.png" width="350px" max-height="350px" style="margin:1vh 1vw;"/>
-   </a>
-</div>
+1.  [What Does It Do?](#org940a0c4)
+2.  [How To Run This?](#org0e2fa78)
+    1.  [Recording](#org493dbf7)
+    2.  [Dependency](#orge9ca28c)
+    3.  [Hack](#org706ba35)
+    4.  [Command Line Parameters](#orgd244179)
+3.  [Status of This Recording](#orgc8de488)
+4.  [How To View Recordings](#orgbceedaf)
+5.  [Extra Info](#orga8789bc)
 
-## What is Zoom Windows SDK?
-Zoom SDK makes it easy to integrate Zoom with your Windows applications, and boosts up your applications with the power of Zoom.
-
-* **Easy to use**: Our SDK is built to be easy to use. Just import the libraries, call a few functions, and we will take care all video conferencing related stuffs for you.
-* **Localizable**: Our SDK naturally supports 7 major languages, and you can add more to grow your applications internationally.
-* **Custom Meeting UI**: If you want to add your own decorations to your Zoom meeting rooms, try our Custom UI feature to make your meeting room special.
-
-## Disclaimer
-
-**Please be aware that all hard-coded variables and constants shown in the documentation and in the demo, such as Zoom Token, Zoom Access, Token, etc., are ONLY FOR DEMO AND TESTING PURPOSES. We STRONGLY DISCOURAGE the way of HARDCODING any Zoom Credentials (username, password, API Keys & secrets, SDK keys & secrets, etc.) or any Personal Identifiable Information (PII) inside your application. WE DON’T MAKE ANY COMMITMENTS ABOUT ANY LOSS CAUSED BY HARD-CODING CREDENTIALS OR SENSITIVE INFORMATION INSIDE YOUR APP WHEN DEVELOPING WITH OUR SDK**.
-
-## Getting Started
-
-The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-* For detailed instructions, please refer to our documentation website: [https://marketplace.zoom.us/docs/sdk/native-sdks/windows](https://marketplace.zoom.us/docs/sdk/native-sdks/windows);
-* If you need support or assistance, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/);
-
-### Prerequisites
-
-Before you try out our SDK, you would need the following to get started:
-
-* **A Zoom Account**: If you do not have one, you can sign up at [https://zoom.us/signup](https://zoom.us/signup).
-  * Once you have your Zoom Account, sign up for a 60-days free trial at [https://marketplace.zoom.us/](https://marketplace.zoom.us/)
-* **A device with Windows OS**:
-  * OS: Windows XP or later. Currently Windows 10 UWP is not supported.
+Zoom has many different client SDKs, among all available one, the only thing
+that we could possibly use on a cloud setup is the Windows SDK. This project is
+a modified version of the original SDK under demo/sdk<sub>demo</sub>, and renamed as
+*recorder*.
 
 
-### Installing
+<a id="org940a0c4"></a>
 
-Clone or download a copy of our SDK files from GitHub. After you unzipped the file, you should have the following folders:
+# What Does It Do?
 
-```
-.
-├── CHANGELOG.md
-├── LICENSE.md
-├── README.md
-├── bin
-├── h
-├── lib
-├── [sdk_demo] <-- demo app is inside
-└── version.txt
-```
-Launch your **Visual Studio**, locate the `sdk_demo.vcproj` file, and open it.
+This is a windows application which does the following:
 
-The `DemoUI.cpp` file includes a high-level application which you can reference to understand how to call the stack functions and register call backs.
-
-The Zoom SDK runs as a `DLL` in the context of the calling application process.
+-   join a conference with a given ID
+-   start to tap into audio and video streams once the meeting starts
+-   TODO: open a Win32 pipes (shared memory) to communicate with recording process
+    which does the video composition as well as H264 encoding.
+-   once meeting ends, the process should just die
 
 
-## Documentation
+<a id="org0e2fa78"></a>
 
-Please visit [[https://marketplace.zoom.us/docs/sdk/native-sdks/windows](https://marketplace.zoom.us/docs/sdk/native-sdks/windows)] for details of each features and functions.
+# How To Run This?
 
-## Versioning
+This is built with Visual Studio 2019. Please note that only **Release** version
+built. (Same as the original demo/sdk<sub>demo</sub>). To run this, just open
+zoom-recorder.sln and run from there. Once successfully built, a binary will be
+dropped to bin/ folder.
 
-For the versions available, see the [tags on this repository](https://github.com/zoom/zoom-sdk-windows/tags).
 
-## Change log
+<a id="org493dbf7"></a>
 
-Please refer to our [CHANGELOG](https://github.com/zoom/zoom-sdk-windows/blob/master/CHANGELOG.md) for all changes.
+## Recording
 
-## Frequently Asked Questions (FAQ)
+The recording capability is done with a unpublished RAW data access API that we
+got from Zoom development team. Currently, it&rsquo;s not possible to run this with a
+corp account (That&rsquo;s a bug that they are trying to address). So for now, please
+use the credential specified in the sln file.
 
-* :one: `Getting ERROR Code: 105035 while using Windows SDK`:
-  * **In most of the cases, this is caused by resigning or adding new signature to the following files while integrating and deploying our SDK**:
-     * **CptControl.exe**
-     * **CptHost.exe**
-     * **CptInstall.exe**
-     * **CptService.exe**
-     * **CptShare.dll**
-     * **zzhost.dll**
-     * **zzplugin.dll**
-     * **aomhost64.exe**
-   
-   **Please skip signing / do not add any new signatures to the above files. If the error code appears even if the above files are not being re-signed, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) and seek help.**
-   
-   
-* Please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) for further assistance.
 
-## Support
+<a id="orge9ca28c"></a>
 
-For any issues regarding our SDK, please visit our new Community Support Forum at https://devforum.zoom.us/.
+## Dependency
 
-## License
+-   This depends on files under bin/. Please note that you can&rsquo;t run both recorder/
 
-Use of this software is subject to important terms and conditions as set forth in the License file
+and demo/sdk<sub>demo</sub> at the same time, as they both will try to modify files under
+bin/ and causes random crashes.
 
-Please refer to [LICENSE.md](LICENSE.md) file for details
+-   There is no requirement of having a mic or camera at all.
 
-## Acknowledgments
 
-* :star: If you like our SDK, please give us a "Star". Your support is what keeps us moving forward and delivering happiness to you! Thanks a million! :smiley:
-* If you need any support or assistance, we are here to help you: [Zoom Developer Community Forum](https://devforum.zoom.us/);
+<a id="org706ba35"></a>
 
----
-Copyright ©2019 Zoom Video Communications, Inc. All rights reserved.
+## Hack
+
+In the original SDK, there is a limitation that a single machine can only run
+one instance of SDK. What they did was to create a global named event and
+detected if it exists already. Based on my understanding, container has no its
+own kernel object namespace (I could be wrong on this one). So the only way for
+us to run this is to have a single VM to run one SDK. VM preparation is usually
+on demand, and takes couple minutes based on my experience with azure. So I
+implemented a hack which is to kill this Event handle during the process
+initialization phase. This so far works well and allows us to run multiple SDK
+instances on a given machine.
+
+
+<a id="orgd244179"></a>
+
+## Command Line Parameters
+
+This tool supports a rich set of command line options. Many of them are added
+during the phase when I don&rsquo;t fully understand zoom&rsquo;s authentication model. I
+believe at the time when we need to go production, we will have to send
+username/password of a given user which has the special RAW api privilege turned on.
+
+
+<a id="orgc8de488"></a>
+
+# Status of This Recording
+
+-   Currently, this will write file to c:\temp\audio.bin, video.bin, and
+    video.meta.
+-   The code quality is for prototyping. So there are still a bit work to be done
+    to make it production quality. However, since this is NOT a long running
+
+
+<a id="orgbceedaf"></a>
+
+# How To View Recordings
+
+-   For audio, it&rsquo;s recorded as 32k, single channel, PCM data. I have used
+    Audacity to listen to the file
+-   For video, I use [PYUV](http://dsplab.diei.unipg.it/software/pyuv_raw_video_sequence_player) to view the recording. The format is YUV, 420, 640X480
+
+I have verified both work.
+
+
+<a id="orga8789bc"></a>
+
+# Extra Info
+
+Please see [ZOOM original README](https://github.com/zoom/zoom-sdk-windows/blob/master/README.md)
