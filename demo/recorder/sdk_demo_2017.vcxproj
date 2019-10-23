@@ -14,19 +14,20 @@
     <ProjectGuid>{6BA085A6-F4F0-4DF7-A59E-511E1544DF6E}</ProjectGuid>
     <RootNamespace>sdk_demo</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>zoom-recorder</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfAtl>false</UseOfAtl>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -62,6 +63,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>c:\users\guoweishieh\code\zoom-sdk-windows\demo\duilib\include;c:\users\guoweishieh\code\zoom-sdk-windows\h;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -97,23 +99,20 @@
     <ClCompile Include="DemoUI.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MeetingServiceMgr.cpp" />
-    <ClCompile Include="MessageWnd.cpp" />
     <ClCompile Include="PreMeetingServiceMgr.cpp" />
+    <ClCompile Include="queryHandle.cpp" />
+    <ClCompile Include="RawAudioDataHandler.cpp" />
+    <ClCompile Include="RawVideoDataHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AuthServiceMgr.h" />
     <ClInclude Include="DemoUI.h" />
     <ClInclude Include="MeetingServiceMgr.h" />
-    <ClInclude Include="MessageWnd.h" />
+    <ClInclude Include="ntundoc.h" />
+    <ClInclude Include="Parameters.h" />
     <ClInclude Include="PreMeetingServiceMgr.h" />
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="skin\DemoUI.xml" />
-    <Xml Include="skin\MessageWnd.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="res\sdk_demo.rc" />
+    <ClInclude Include="RawAudioDataHandler.h" />
+    <ClInclude Include="RawVideoDataHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

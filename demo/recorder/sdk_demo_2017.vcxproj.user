@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommandArguments>-sdk_key rNWZeixiyl2MWSNX0CWzaMBHnm2lwFNEjbL6 -sdk_secret R1wzONAdLT2ygXMq90ILCvEVTfPoTWRpvRef -s  -l  -m 4251238888 -e guoweis@gmail.com -p lB91fNgfGxteu5</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>
