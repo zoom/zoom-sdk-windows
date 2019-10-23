@@ -51,13 +51,13 @@ username/password of a given user which has the special RAW api privilege turned
 
 * Status of This App
 - Currently, this will write file to c:\temp\audio.bin, video.bin, and
-  video.meta.
+  video.meta. (Please pre-create this folder)
 - The code quality is for prototyping. So there are still a bit work to be done
   to make it production quality. However, since this is NOT a long running
 
 * Code Structure
-- Main.cpp has a window message loop which is required as the underneath Zoom SDK
-is a UX app. Most of our code changes happen in /MeetingServiceMgr.cpp/
+- Main.cpp has a window message loop which is required as the underneath Zoom
+  SDK is a UX app. Most of our code changes happen in /MeetingServiceMgr.cpp/
 - I suggest to follow the [[https://clang.llvm.org/docs/ClangFormat.html][ClangFormat]] for code under this project
 
 * How To View Recordings

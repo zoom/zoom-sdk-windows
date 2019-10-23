@@ -1,16 +1,16 @@
 
 # Table of Contents
 
-1.  [What Does It Do?](#org6c73526)
-2.  [How To Run This?](#org9ad6c6a)
-    1.  [Recording](#org8966a7e)
-    2.  [Dependency](#orgfc338f8)
-    3.  [Hack](#org2df94da)
-    4.  [Command Line Parameters](#org20792de)
-3.  [Status of This App](#org15dab13)
-4.  [Code Structure](#org1dd4800)
-5.  [How To View Recordings](#org4a739bd)
-6.  [Extra Info](#org3fb39ed)
+1.  [What Does It Do?](#org007a69f)
+2.  [How To Run This?](#org9f98437)
+    1.  [Recording](#orgeaf2b45)
+    2.  [Dependency](#org4306a43)
+    3.  [Hack](#orga43e8f2)
+    4.  [Command Line Parameters](#org00b327c)
+3.  [Status of This App](#org638bc12)
+4.  [Code Structure](#org4bf8768)
+5.  [How To View Recordings](#orge32edd7)
+6.  [Extra Info](#orga4c8109)
 
 Zoom has many different client SDKs, among all available one, the only thing
 that we could possibly use on a cloud setup is the Windows SDK. This project is
@@ -18,7 +18,7 @@ a modified version of the original SDK under demo/sdk<sub>demo</sub>, and rename
 *recorder*.
 
 
-<a id="org6c73526"></a>
+<a id="org007a69f"></a>
 
 # What Does It Do?
 
@@ -31,7 +31,7 @@ This is a windows application which does the following:
 -   once meeting ends, the process should just die
 
 
-<a id="org9ad6c6a"></a>
+<a id="org9f98437"></a>
 
 # How To Run This?
 
@@ -41,7 +41,7 @@ zoom-recorder.sln and run from there. Once successfully built, a binary will be
 dropped to bin/ folder.
 
 
-<a id="org8966a7e"></a>
+<a id="orgeaf2b45"></a>
 
 ## Recording
 
@@ -51,7 +51,7 @@ corp account (That&rsquo;s a bug that they are trying to address). So for now, p
 use the credential specified in the sln file.
 
 
-<a id="orgfc338f8"></a>
+<a id="org4306a43"></a>
 
 ## Dependency
 
@@ -63,7 +63,7 @@ bin/ and causes random crashes.
 -   There is no requirement of having a mic or camera at all.
 
 
-<a id="org2df94da"></a>
+<a id="orga43e8f2"></a>
 
 ## Hack
 
@@ -78,7 +78,7 @@ initialization phase. This so far works well and allows us to run multiple SDK
 instances on a given machine.
 
 
-<a id="org20792de"></a>
+<a id="org00b327c"></a>
 
 ## Command Line Parameters
 
@@ -88,28 +88,26 @@ believe at the time when we need to go production, we will have to send
 username/password of a given user which has the special RAW api privilege turned on.
 
 
-<a id="org15dab13"></a>
+<a id="org638bc12"></a>
 
 # Status of This App
 
 -   Currently, this will write file to c:\temp\audio.bin, video.bin, and
-    video.meta.
+    video.meta. (Please pre-create this folder)
 -   The code quality is for prototyping. So there are still a bit work to be done
     to make it production quality. However, since this is NOT a long running
 
 
-<a id="org1dd4800"></a>
+<a id="org4bf8768"></a>
 
 # Code Structure
 
--   Main.cpp has a window message loop which is required as the underneath Zoom SDK
-
-is a UX app. Most of our code changes happen in *MeetingServiceMgr.cpp*
-
+-   Main.cpp has a window message loop which is required as the underneath Zoom
+    SDK is a UX app. Most of our code changes happen in *MeetingServiceMgr.cpp*
 -   I suggest to follow the [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for code under this project
 
 
-<a id="org4a739bd"></a>
+<a id="orge32edd7"></a>
 
 # How To View Recordings
 
@@ -120,7 +118,7 @@ is a UX app. Most of our code changes happen in *MeetingServiceMgr.cpp*
 I have verified both work.
 
 
-<a id="org3fb39ed"></a>
+<a id="orga4c8109"></a>
 
 # Extra Info
 
