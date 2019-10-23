@@ -56,8 +56,9 @@ username/password of a given user which has the special RAW api privilege turned
   to make it production quality. However, since this is NOT a long running
 
 * Code Structure
-Main.cpp has a window message loop which is required as the underneath Zoom SDK
+- Main.cpp has a window message loop which is required as the underneath Zoom SDK
 is a UX app. Most of our code changes happen in /MeetingServiceMgr.cpp/
+- I suggest to follow the [[https://clang.llvm.org/docs/ClangFormat.html][ClangFormat]] for code under this project
 
 * How To View Recordings
 - For audio, it's recorded as 32k, single channel, PCM data. I have used
