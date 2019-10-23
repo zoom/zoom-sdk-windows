@@ -1,15 +1,16 @@
 
 # Table of Contents
 
-1.  [What Does It Do?](#org940a0c4)
-2.  [How To Run This?](#org0e2fa78)
-    1.  [Recording](#org493dbf7)
-    2.  [Dependency](#orge9ca28c)
-    3.  [Hack](#org706ba35)
-    4.  [Command Line Parameters](#orgd244179)
-3.  [Status of This Recording](#orgc8de488)
-4.  [How To View Recordings](#orgbceedaf)
-5.  [Extra Info](#orga8789bc)
+1.  [What Does It Do?](#org26e09fb)
+2.  [How To Run This?](#orga3ed773)
+    1.  [Recording](#org790284f)
+    2.  [Dependency](#org1154e95)
+    3.  [Hack](#org139f86d)
+    4.  [Command Line Parameters](#org2d74af2)
+3.  [Status of This App](#org6ebe7c9)
+4.  [Code Structure](#orgc1ded8a)
+5.  [How To View Recordings](#org1c7aa45)
+6.  [Extra Info](#orgfb677e7)
 
 Zoom has many different client SDKs, among all available one, the only thing
 that we could possibly use on a cloud setup is the Windows SDK. This project is
@@ -17,7 +18,7 @@ a modified version of the original SDK under demo/sdk<sub>demo</sub>, and rename
 *recorder*.
 
 
-<a id="org940a0c4"></a>
+<a id="org26e09fb"></a>
 
 # What Does It Do?
 
@@ -30,7 +31,7 @@ This is a windows application which does the following:
 -   once meeting ends, the process should just die
 
 
-<a id="org0e2fa78"></a>
+<a id="orga3ed773"></a>
 
 # How To Run This?
 
@@ -40,7 +41,7 @@ zoom-recorder.sln and run from there. Once successfully built, a binary will be
 dropped to bin/ folder.
 
 
-<a id="org493dbf7"></a>
+<a id="org790284f"></a>
 
 ## Recording
 
@@ -50,7 +51,7 @@ corp account (That&rsquo;s a bug that they are trying to address). So for now, p
 use the credential specified in the sln file.
 
 
-<a id="orge9ca28c"></a>
+<a id="org1154e95"></a>
 
 ## Dependency
 
@@ -62,7 +63,7 @@ bin/ and causes random crashes.
 -   There is no requirement of having a mic or camera at all.
 
 
-<a id="org706ba35"></a>
+<a id="org139f86d"></a>
 
 ## Hack
 
@@ -71,13 +72,13 @@ one instance of SDK. What they did was to create a global named event and
 detected if it exists already. Based on my understanding, container has no its
 own kernel object namespace (I could be wrong on this one). So the only way for
 us to run this is to have a single VM to run one SDK. VM preparation is usually
-on demand, and takes couple minutes based on my experience with azure. So I
+on demand, but can take couple minutes based on my experience with azure. So I
 implemented a hack which is to kill this Event handle during the process
 initialization phase. This so far works well and allows us to run multiple SDK
 instances on a given machine.
 
 
-<a id="orgd244179"></a>
+<a id="org2d74af2"></a>
 
 ## Command Line Parameters
 
@@ -87,9 +88,9 @@ believe at the time when we need to go production, we will have to send
 username/password of a given user which has the special RAW api privilege turned on.
 
 
-<a id="orgc8de488"></a>
+<a id="org6ebe7c9"></a>
 
-# Status of This Recording
+# Status of This App
 
 -   Currently, this will write file to c:\temp\audio.bin, video.bin, and
     video.meta.
@@ -97,7 +98,15 @@ username/password of a given user which has the special RAW api privilege turned
     to make it production quality. However, since this is NOT a long running
 
 
-<a id="orgbceedaf"></a>
+<a id="orgc1ded8a"></a>
+
+# Code Structure
+
+Main.cpp has a window message loop which is required as the underneath Zoom SDK
+is a UX app. Most of our code changes happen in *MeetingServiceMgr.cpp*
+
+
+<a id="org1c7aa45"></a>
 
 # How To View Recordings
 
@@ -108,7 +117,7 @@ username/password of a given user which has the special RAW api privilege turned
 I have verified both work.
 
 
-<a id="orga8789bc"></a>
+<a id="orgfb677e7"></a>
 
 # Extra Info
 

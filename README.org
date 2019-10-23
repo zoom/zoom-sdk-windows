@@ -38,7 +38,7 @@ one instance of SDK. What they did was to create a global named event and
 detected if it exists already. Based on my understanding, container has no its
 own kernel object namespace (I could be wrong on this one). So the only way for
 us to run this is to have a single VM to run one SDK. VM preparation is usually
-on demand, and takes couple minutes based on my experience with azure. So I
+on demand, but can take couple minutes based on my experience with azure. So I
 implemented a hack which is to kill this Event handle during the process
 initialization phase. This so far works well and allows us to run multiple SDK
 instances on a given machine.
@@ -49,11 +49,15 @@ during the phase when I don't fully understand zoom's authentication model. I
 believe at the time when we need to go production, we will have to send
 username/password of a given user which has the special RAW api privilege turned on.
 
-* Status of This Recording
+* Status of This App
 - Currently, this will write file to c:\temp\audio.bin, video.bin, and
   video.meta.
 - The code quality is for prototyping. So there are still a bit work to be done
   to make it production quality. However, since this is NOT a long running
+
+* Code Structure
+Main.cpp has a window message loop which is required as the underneath Zoom SDK
+is a UX app. Most of our code changes happen in /MeetingServiceMgr.cpp/
 
 * How To View Recordings
 - For audio, it's recorded as 32k, single channel, PCM data. I have used
