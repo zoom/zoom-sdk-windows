@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="524,376" caption="0,0,0,32" >
+  <!--Font size 9-->
+  <Font id="0" name="Segoe UI" size="12" bold="true"/>
+  <Font id="1" name="Segoe UI" size="12" bold="false"/>
+  <!--Font size 10-->
+  <Font id="2" name="Segoe UI" size="13" bold="false"/>
+  <Font id="3" name="Segoe UI" size="13" bold="true"/>
+  <!--Font size 14-->
+  <Font id="4" name="Segoe UI" size="18" bold="false"/>
+  <!--Font size 8-->
+  <Font id="5" name="Segoe UI" size="12" bold="true"/>
+  <!--Font size 12-->
+  <Font id="6" name="Segoe UI" size="14" bold="false"/>
+  <!--7-->
+  <Font id="7" name="Segoe UI" size="14" bold="true" />
+  <Font id="8" name="Segoe UI" size="12" bold="false" underline="true"/>
+  <!--9-->
+  <Font id="9" name="Segoe UI" size="11" bold="true" />
+  <Font id="10" name="Segoe UI" size="14" bold="false" />
+
+  <Default name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; hotbkcolor=&quot;#FF179FF5 &quot; pushedbkcolor=&quot;#FF179FF5 &quot; focusedbkcolor=&quot;#FF179FF5 &quot; bkcolor=&quot;#FF179FF5 &quot;" />
+  <Default name="VScrollBar" value="width=&quot;10&quot; button1normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,0,10,10' &quot; button1hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,0,30,10'&quot; button1pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,0,20,10'&quot; button1disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,0,40,10'&quot; button2normalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,26,10,36'&quot; button2hotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,26,30,36'&quot; button2pushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,26,20,36'&quot; button2disabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,26,40,36'&quot; thumbnormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,12,10,25'&quot; thumbhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,12,30,25'&quot; thumbpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,12,20,25'&quot; thumbdisabledimage   =&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,12,40,25'&quot; bknormalimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='0,11,10,12'&quot; bkhotimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='20,11,30,12'&quot; bkpushedimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='10,11,20,12'&quot; bkdisabledimage=&quot;res='vscroll_bar.png' restype='ZPIMGRES' source='30,11,40,12'&quot; " />
+
+  <VerticalLayout  bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF" >
+    <!-- title -->
+    <!--
+		<HorizontalLayout height="32" bkcolor="#FFE6E6DC" bkcolor2="#FFAAAAA0" >
+			<Control width="5" />
+			<Label text="SDK Demo" width="50" font="5" />
+			<Control />
+			<Button name="btn_close" float="true" pos="512,11,520,19" width="8" height="8" normalimage=" res='close_btn.png' restype='ZPIMGRES' " hotimage=" res='close_btn.png' restype='ZPIMGRES' " pushedimage=" res='close_btn.png' restype='ZPIMGRES' "/>
+		</HorizontalLayout>
+		-->
+    <Container name="waiting_panel" height="400" >
+      <VerticalLayout >
+        <Control height="130"/>
+        <HorizontalLayout height="40" >
+          <Control />
+          <GifAnim name="gif_waiting" pos="60,60,92,92" autosize="false" bkimage="waiting.gif" gifrestype="ZPIMGRES" autoplay="false" />
+          <Control />
+        </HorizontalLayout>
+        <HorizontalLayout height="40" >
+          <Control />
+          <label text="connect......" font="7" width="100" height="30" />
+          <Control />
+        </HorizontalLayout>
+        <HorizontalLayout height="40" >
+          <Control />
+          <Button name="btn_leave_connecting" text="Leave" textcolor="#FFFFFFFF" font="6" height="35" width="300"/>
+          <Control />
+        </HorizontalLayout>
+        <Control />
+      </VerticalLayout>
+    </Container>
+    <!-- auth page -->
+    <Container name="container_auth" height="400" >
+      <VerticalLayout visible="true" >
+        <Control name="ctrl_zoom_logo" height="40"/>
+        <HorizontalLayout visible="true" height="114">
+          <Control />
+          <Control bkimage="res='zoom_logo.png' restype='ZPIMGRES' " width="114" height="114" align="center,singleline" valign="center"/>
+          <Control />
+        </HorizontalLayout>
+        <Control height="23"/>
+        <HorizontalLayout visible="true">
+          <Control width="112"/>
+
+          <VerticalLayout visible="true" >
+            <label name="lb_web_domain" text="Web Domain:" font="6" height="18" align="left,singleline"/>
+            <Control name="ctrl_edit_web_domain" height="20"/>
+            <RichEdit name="edit_web_domain" text="https://zoom.us" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35"
+              inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
+            <Control name="ctrl_lb_SDKkey" height="10"/>
+            <label name="lb_SDKkey" text="SDK Key:" font="6"  height="18" align="left,singleline"/>
+            <Control name="ctrl_edit_key"  height="10"/>
+            <RichEdit name="edit_key" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35"
+              inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+            <Control name="ctrl_lb_SDKSecret" height="10"/>
+            <label name="lb_SDKSecret" text="SDK Secret:" font="6"  height="18" align="left,singleline"/>
+            <Control name="ctrl_edit_secret" height="10"/>
+            <RichEdit name="edit_secret" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35" password="true" 
+              inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+            <Control height="20"/>
+            <Button name="btn_auth" text="SetDomain" textcolor="#FFFFFFFF" font="6" height="35" width="300"/>
+          </VerticalLayout>
+
+          <Control width="112"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </Container>
+
+    <!-- User page -->
+    <Container name="container_user" height="400" >
+      <Button name="btn_normal_user" float="true" pos="200,100,0,0" text="Login User" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+      <Button name="btn_api_user" float="true" pos="200,160,0,0" text="API User" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+    </Container>
+
+    <!-- Login pages -->
+    <Container name="container_login" height="400" >
+      <label float="true" pos="50,100,0,0" text="Email:" font="5" width="80" height="30" />
+      <RichEdit name="edit_email" float="true" pos="150,100,0,0" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <label float="true" pos="50,140,0,0" text="Password:" font="5" width="80" height="30" />
+      <RichEdit name="edit_password" float="true" pos="150,140,0,0" bkcolor="#FFFFFFFF" 
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" password="true"/>
+      <CheckBox name="chk_remember_me" visible="false" text="Remember Me" float="true" pos="150,180,250,205" font="5" textcolor="#FF333333" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,0,4,0" font="3" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,4,18,22'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,4,18,22'" endellipsis="true" autotooltips="true" focuspadding="22,4,0,6"/>
+      <Label name="lb_login_errorinfo" float="true" pos="100,220,0,0" font="0" textpadding="10,4,10,0" textcolor="#FFE6413C"
+						align="center,multiline" valign="top" visible="true" width="250" height="60" />
+      <Button name="btn_login" float="true" pos="200,300,0,0" text="OK" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+    </Container>
+
+    <!-- PT API page -->
+    <Container name="container_pt_api" height="400" >
+      <Button name="btn_start" float="true" pos="200,100,0,0" text="Start" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+      <Button name="btn_join" float="true" pos="200,160,0,0" text="Join" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+    </Container>
+
+    <!-- Start pages -->
+    <Container name="container_start" height="400" >
+      <label float="true" pos="40,100,0,0" text="Meeting Number:" font="9" width="100" height="30" />
+      <RichEdit name="edit_meeting_number" float="true" pos="150,100,0,0" bkcolor="#FFFFFFFF" validchars="0123456789"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <label name="lb_user_id" float="true" pos="40,140,0,0" text="User ID:" font="9" width="100" height="30" />
+      <RichEdit name="edit_user_id" float="true" pos="150,140,0,0" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <label name="lb_user_token" float="true" pos="40,180,0,0" text="User Token:" font="9" width="100" height="30" />
+      <RichEdit name="edit_user_token" float="true" pos="150,180,0,0" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <label name="lb_user_name" float="true" pos="40,220,0,0" text="User Name:" font="9" width="100" height="30" />
+      <RichEdit name="edit_user_name" float="true" pos="150,220,0,0" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <label name="lb_zak" float="true" pos="40,260,0,0" text="Access token:" font="9" width="100" height="30" />
+      <RichEdit name="edit_zak" float="true" pos="150,260,0,0" bkcolor="#FFFFFFFF"
+						inset="4,10,0,4" font="5" width="250" height="30" multiline="false" autohscroll="true"  wanttab="false" rich="false" />
+      <Label name="lb_start_errorinfo" float="true" pos="100,260,0,0" font="0" textpadding="10,4,10,0" textcolor="#FFE6413C"
+						align="center,multiline" valign="top" visible="true" width="250" height="60" visible="false" />
+      <Button name="btn_start_ok" float="true" pos="200,300,0,0" text="OK" textcolor="#FFFFFFFF" font="5" height="30" width="100" />
+    </Container>
+
+    <!-- Meeting API page -->
+    <Container name="container_meeting_api" height="400" >
+      <HorizontalLayout>
+        <VerticalLayout width="150">
+          <Button name="btn_share_api" float="true" pos="10,10,0,0" text="Show Share APIs" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <Button name="btn_video_api" float="true" pos="10,45,0,0" text="Show Video APIs" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <Button name="btn_audio_api" float="true" pos="10,80,0,0" text="Show Audio APIs" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <Button name="btn_end" float="true" pos="10,115,0,0" text="End" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <Button name="btn_leave" float="true" pos="10,150,0,0" text="Leave" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <Button name="btn_next_video_page" float="true" pos="10,185,0,0" text="Next Video Page" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <Button name="btn_save_snapshot" float="true" pos="10,185,0,0" text="Annotation Sanpshot" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+          <!--
+					<Button name="btn_start_monitor_share" float="true" pos="10,10,0,0" text="Start Monitor Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_start_app_share" float="true" pos="10,45,0,0" text="Start App Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_stop_share" float="true" pos="10,80,0,0" text="Stop Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+				
+					<Button name="btn_mute_video" float="true" pos="10,115,0,0" text="Mute Video" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_unmute_video" float="true" pos="10,150,0,0" text="Unmute Video" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_pin_video" float="true" pos="10,185,0,0" text="Pin Video" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_unpin_video" float="true" pos="10,220,0,0" text="Unpin Video" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_mute_audio" float="true" pos="10,255,0,0" text="Mute audio" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+					<Button name="btn_unmute_audio" float="true" pos="10,290,0,0" text="Unmute audio" textcolor="#FFFFFFFF" font="5" height="30" width="120" />				
+					<Button name="btn_end" float="true" pos="10,325,0,0" text="End" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+				-->
+        </VerticalLayout>
+        <VerticalLayout>
+          <HorizontalLayout>
+            <!-- Share APIs -->
+            <VerticalLayout name="container_share_api" width="150" visible="false">
+              <Button name="btn_start_monitor_share" float="true" pos="10,10,0,0" text="Start Monitor Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_start_app_share" float="true" pos="10,45,0,0" text="Start App Share..." textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_start_wb_share" float="true" pos="10,45,0,0" text="Start White Board Share" textcolor="#FFFFFFFF" font="5" height="30" width="140" />
+              <Button name="btn_stop_share" float="true" pos="10,80,0,0" text="Stop Share" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <!--
+							<Label name="lb_meeting_api_status" float="true" pos="0,10,0,0" font="0" textcolor="#FFE6413C" valign="top" width="140" height="60" align="left,multiline"/>
+						-->
+            </VerticalLayout>
+            <!-- Video APIs -->
+            <VerticalLayout name="container_video_api" width="150" visible="false">
+              <Button name="btn_mute_video" float="true" pos="10,10,0,0" text="Mute Video" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_unmute_video" float="true" pos="10,45,0,0" text="Unmute Video" textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_pin_video" float="true" pos="10,80,0,0" text="Pin Video..." textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_unpin_video" float="true" pos="10,115,0,0" text="Unpin Video..." textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+            </VerticalLayout>
+            <!-- Audio APIs -->
+            <VerticalLayout name="container_audio_api" width="150" visible="false">
+              <Button name="btn_mute_audio" float="true" pos="10,10,0,0" text="Mute audio..." textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+              <Button name="btn_unmute_audio" float="true" pos="10,45,0,0" text="Unmute audio..." textcolor="#FFFFFFFF" font="5" height="30" width="120" />
+            </VerticalLayout>
+          </HorizontalLayout>
+          <Label name="lb_meeting_api_status" float="true" pos="10,290,0,0" font="0" textcolor="#FFFF0000" valign="top" width="140" height="60" align="left,multiline"/>
+        </VerticalLayout>
+        <VerticalLayout>
+          <List name="list_users" float="true" pos="10,5,0,340"  width="200" vscrollbar="true" hscrollbar="true" bkcolor="#FFF0F0F0" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" >
+            <ListHeader name="domain" bkcolor="#FFF0F0F0">
+              <ListHeaderItem text="User Name:" width="100" height="23" minwidth="16"  sepwidth="1" align="left" />
+              <ListHeaderItem text="User ID:" width="100" height="23" minwidth="16"  sepwidth="1" align="left" />
+            </ListHeader>
+          </List>
+        </VerticalLayout>
+      </HorizontalLayout>
+    </Container>
+  </VerticalLayout >
+</Window>
