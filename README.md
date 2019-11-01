@@ -1,24 +1,25 @@
 
 # Table of Contents
 
-1.  [What Does It Do?](#org329c746)
-2.  [How To Run This?](#org89a2eac)
-    1.  [Recording](#org7411f0f)
-    2.  [Dependency](#orgfc870bc)
-    3.  [Hack](#orgb9f0725)
-    4.  [Command Line Parameters](#orgd59b117)
-3.  [Status of This App](#orgaa3b592)
-4.  [Code Structure](#org3a0fb3d)
-5.  [How To View Recordings](#org9f95267)
-6.  [Extra Info](#orgf6edd3f)
+1.  [What Does It Do?](#orgfc1f76d)
+2.  [How To Run This?](#orgf877bad)
+    1.  [Recording](#org415edb6)
+    2.  [Dependency](#org5a62a3c)
+    3.  [Hack](#org1f31c89)
+    4.  [Command Line Parameters](#org43dba57)
+3.  [Status of This App](#org716018c)
+4.  [Code Structure](#orgfc392c0)
+5.  [Data Flow](#org22bb29e)
+6.  [How To View Recordings](#org0b7beb1)
+7.  [Extra Info](#org714cb0e)
 
 Zoom has many different client SDKs, among all available one, the only thing
 that we could possibly use on a cloud setup is the Windows SDK. This project is
-a modified version of the original SDK under demo/sdk<sub>demo</sub>, and renamed as
+a modified version of the original SDK under demo/sdk\_demo, and renamed as
 *recorder*.
 
 
-<a id="org329c746"></a>
+<a id="orgfc1f76d"></a>
 
 # What Does It Do?
 
@@ -31,17 +32,17 @@ This is a windows application which does the following:
 -   once meeting ends, the process should just die
 
 
-<a id="org89a2eac"></a>
+<a id="orgf877bad"></a>
 
 # How To Run This?
 
 This is built with Visual Studio 2019. Please note that only **Release** version
-built. (Same as the original demo/sdk\_<sub>demo</sub>). To run this, just open
+built. (Same as the original demo/sdk\_\_demo). To run this, just open
 zoom-recorder.sln and run from there. Once successfully built, a binary will be
 dropped to bin/ folder.
 
 
-<a id="org7411f0f"></a>
+<a id="org415edb6"></a>
 
 ## Recording
 
@@ -51,17 +52,17 @@ corp account (That&rsquo;s a bug that they are trying to address). So for now, p
 use the credential specified in the sln file.
 
 
-<a id="orgfc870bc"></a>
+<a id="org5a62a3c"></a>
 
 ## Dependency
 
 -   This depends on files under bin/. Please note that you can&rsquo;t run both
-    recorder/ and demo/sdk\_<sub>demo</sub> at the same time, as they both will try to modify
+    recorder/ and demo/sdk\_\_demo at the same time, as they both will try to modify
     files under bin/ and causes random crashes.
 -   There is no requirement of having a mic or camera at all.
 
 
-<a id="orgb9f0725"></a>
+<a id="org1f31c89"></a>
 
 ## Hack
 
@@ -77,7 +78,7 @@ instances on a given machine. (Although we do have to wait one instance
 finishing initialization before we start another one)
 
 
-<a id="orgd59b117"></a>
+<a id="org43dba57"></a>
 
 ## Command Line Parameters
 
@@ -87,7 +88,7 @@ believe at the time when we need to go production, we will have to use
 username/password of a given user which has the special RAW api privilege turned on.
 
 
-<a id="orgaa3b592"></a>
+<a id="org716018c"></a>
 
 # Status of This App
 
@@ -97,7 +98,7 @@ username/password of a given user which has the special RAW api privilege turned
     to make it production quality. However, since this is NOT a long running
 
 
-<a id="org3a0fb3d"></a>
+<a id="orgfc392c0"></a>
 
 # Code Structure
 
@@ -106,7 +107,31 @@ username/password of a given user which has the special RAW api privilege turned
 -   I suggest to follow the [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for code under this project
 
 
-<a id="org9f95267"></a>
+<a id="org22bb29e"></a>
+
+# Data Flow
+
+![img](flow2.png)
+
+Since the whole Zoom native app runs on the single thread, we&rsquo;ll have to use
+that thread to handle both windows message as well as the IO. The flow will be
+
+-   When the zoom recorder starts, it&rsquo;ll CreateFile on an existing named pipe
+-   The main thread will wait through MsgWaitForMultipleObject(MWMO) to be able to
+    process windows message as well as the Overlapped IO event. Note that MWMO can
+    only handle up to 64 handles
+-   when a audio/video frame is given, if previous IO has been done, it&rsquo;ll do
+    overlapped WriteFile() on that named pipe with an event. Otherwise, it&rsquo;ll be
+    queued.
+-   MWMO will be waked up when the IO is done, if there is queued data, it&rsquo;ll
+    start to process the queue.
+
+For future compatibility, we&rsquo;ll use a protobuf definition to define the data
+exchange between the Zoom native recorder and the meeting processor. The
+protobuf will be serialized and deserialized by these 2 processes.
+
+
+<a id="org0b7beb1"></a>
 
 # How To View Recordings
 
@@ -117,7 +142,7 @@ username/password of a given user which has the special RAW api privilege turned
 I have verified both work.
 
 
-<a id="orgf6edd3f"></a>
+<a id="org714cb0e"></a>
 
 # Extra Info
 

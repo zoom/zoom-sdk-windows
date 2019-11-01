@@ -61,6 +61,62 @@ username/password of a given user which has the special RAW api privilege turned
   SDK is a UX app. Most of our code changes happen in /MeetingServiceMgr.cpp/
 - I suggest to follow the [[https://clang.llvm.org/docs/ClangFormat.html][ClangFormat]] for code under this project
 
+* Data Flow
+
+#+BEGIN_SRC dot :file flow2.png  :exports results
+  digraph G {
+    rankdir=LR;
+    subgraph cluster_machine {
+      label="Windows Machine"
+      subgraph cluster_c0 {
+        label="Recorder Process (c++)"
+        MWMO [label="MsgWaitForMultipleObjects"]
+        PMSG [label="Peek/Dispatch Message"]
+        PCF [label="PipeClient::InsertData"]
+        PCP [label="PipeClient::ProcessQueue"]
+        PCS [label="PipeClient::Send"]
+
+        MWMO->PMSG->MWMO;
+        PMSG->PCF->PMSG;
+        MWMO->PCP->MWMO;
+
+        PCP->PCS;
+        PCF->PCS;
+      }
+      subgraph cluster_c1 {
+        label="MeetingProcessor (go)"
+        PS [label="PipeServer"]
+      }
+    }
+
+    subgraph cluster_c2 {
+      label="MediaFrontDoor"
+      GS [label="gRPC server"]
+    }
+
+    PCS->PS [label="serialized protobuf\nover pipe"]
+    PS->GS [label="gRPC"]
+  }
+
+#+END_SRC
+
+Since the whole Zoom native app runs on the single thread, we'll have to use
+that thread to handle both windows message as well as the IO. The flow will be
+
+- When the zoom recorder starts, it'll CreateFile on an existing named pipe
+- The main thread will wait through MsgWaitForMultipleObject(MWMO) to be able to
+  process windows message as well as the Overlapped IO event. Note that MWMO can
+  only handle up to 64 handles
+- when a audio/video frame is given, if previous IO has been done, it'll do
+  overlapped WriteFile() on that named pipe with an event. Otherwise, it'll be
+  queued.
+- MWMO will be waked up when the IO is done, if there is queued data, it'll
+  start to process the queue.
+
+For future compatibility, we'll use a protobuf definition to define the data
+exchange between the Zoom native recorder and the meeting processor. The
+protobuf will be serialized and deserialized by these 2 processes.
+
 * How To View Recordings
 - For audio, it's recorded as 32k, single channel, PCM data. I have used
   Audacity to listen to the file
