@@ -235,7 +235,7 @@ public:
 	ZOOM_SDK_NAMESPACE::IMeetingChatController* GetMeetingChatController();
 	ZOOM_SDK_NAMESPACE::IMeetingParticipantsController* GetMeetingParticipantsController();	
 	ZOOM_SDK_NAMESPACE::IClosedCaptionController* GetCloseCaptionController();
-	ZOOM_SDK_NAMESPACE::ICustomizedAnnotationController* SDKInterfaceWrap::GetCustomizedAnnotationController();
+	ZOOM_SDK_NAMESPACE::ICustomizedAnnotationController* SDKInterfaceWrap::GetCustomizedAnnotationController(ZOOM_SDK_NAMESPACE::ICustomizedShareRender* pShareRender = NULL);
 	ZOOM_SDK_NAMESPACE::IMeetingRemoteController* GetMeetingRemoteController();
 	ZOOM_SDK_NAMESPACE::IMeetingVideoController* GetMeetingVideoController();
 	//auth service

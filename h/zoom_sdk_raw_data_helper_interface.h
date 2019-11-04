@@ -121,6 +121,7 @@ public:
 	virtual SDKRawDataError Subscribe(unsigned int node_id, RawDataResolution size_, unsigned long long recver_handle) = 0;
 	virtual SDKRawDataError UnSubscribe(unsigned int node_id, unsigned long long recver_handle) = 0;
 	virtual SDKRawDataError Stop() = 0;
+	virtual SDKRawDataError EnableIntermediateRawDataCB(bool enable) = 0;
 };
 
 enum LocalVideoDeviceRotation
@@ -165,6 +166,18 @@ public:
 	virtual SDKRawDataError GetLocalDeviceStatus(void* device, LocalVideoDeviceStatus& status) = 0;
 	virtual SDKRawDataError RotateLocalDevice(void* device, LocalVideoDeviceRotation& rotation_flag) = 0;
 	virtual SDKRawDataError Stop() = 0;
+	virtual void* GetRunningDevice(bool preview) = 0;
+	virtual SDKRawDataError EnableIntermediateRawDataCB(bool enable) = 0;
+};
+
+class IYUVRawDataI420Converter
+{
+public:
+	virtual YUVRawDataI420* ConvertToYUV() = 0;
+	virtual YUVRawDataI420* ConvertToYUVViaExternalBuffer(char* buffer_, int size_) = 0;
+	virtual void FillToPixelBuffer(char* ybuffer_, char* uvbuffer_, int width, int height) = 0;
+
+	virtual ~IYUVRawDataI420Converter(){}
 };
 
 END_ZOOM_RAWDATA_NAMESPACE

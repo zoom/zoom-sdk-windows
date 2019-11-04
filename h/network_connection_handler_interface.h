@@ -8,6 +8,18 @@
 #define _NETWORK_CONNECTION_HANDLER_H_
 
 BEGIN_ZOOM_SDK_NAMESPACE
+
+typedef struct tagProxySettings
+{
+	const wchar_t* proxy;
+	bool auto_detect;
+	tagProxySettings()
+	{
+		proxy = NULL;
+		auto_detect = false;
+	}
+}ProxySettings;
+
 /// \brief Proxy setting information callback interface.
 ///
 class IProxySettingHandler
@@ -93,6 +105,12 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError UnRegisterNetworkConnectionHandler() = 0;
+
+	/// \brief Set the proxy that the user want to use according to your net environment.
+	/// \praam proxy_setting The proxy ip address and port that user want to use, should be organized like ip:port, such as '255.255.255.255:8080'. Using ';' to separate multi proxies.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError ConfigureProxy(ProxySettings& proxy_setting) = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

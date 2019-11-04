@@ -25,6 +25,7 @@ public:
 		REQUIRED_INFO_TYPE_Password4WrongPassword,///<If the password is invalid, the user needs to re-enter it. Via the InputMeetingPasswordAndScreenName() to specify the password information. 
 		REQUIRED_INFO_TYPE_PasswordAndScreenName,///<The user needs to enter the screen name and the password,via the InputMeetingPasswordAndScreenName() to specify the necessary information.
 		REQUIRED_INFO_TYPE_ScreenName,///<The user needs to enter the screen name. Via the InputMeetingPasswordAndScreenName() to specify the screen name information.
+		REQUIRED_INFO_TYPE_MeetingIDAndScreenName,///<The user needs to enter the screen name and the meeting id,via the InputMeetingMeetingIDAndScreenName() to specify the necessary information.
 	};
 
 	/// \brief Get the type of required information to be completed.
@@ -34,6 +35,10 @@ public:
 	/// \brief Complete the password and screen name information.
 	/// \remarks The SDK will destroy the object instance after calling this function. Supplement with the correct information.
 	virtual bool InputMeetingPasswordAndScreenName(const wchar_t* meetingPassword, const wchar_t* screenName) = 0;
+
+	/// \brief Complete the meeting id and screen name information.
+	/// \remarks The SDK will destroy the object instance after calling this function. Supplement with the correct information.
+	virtual bool InputMeetingIDAndScreenName(const wchar_t* meetingID, const wchar_t* screenName) = 0;
 
 	/// \brief Complete the screen name.
 	/// \remarks The SDK will destroy this object instance after calling this function. Complete the information by the correct function.
@@ -344,6 +349,7 @@ public:
 
 	/// \brief Set if it is able to retrieve the permission of host (when the original host gives up the host permission). Default value: TRUE.
 	/// \param bEnable TRUE indicates that he can retrieve the permission of host. FALSE not.
+	 /// \remarks The original host can always claim host and is not affected by this API.
 	virtual void EnableClaimHostFeature(bool bEnable) = 0;
 
 	/// \brief Set the visibility of the dialog box of choosing audio when joining the meeting. Default value: FALSE.
@@ -444,6 +450,31 @@ public:
 	// \brief Set the visibility of Switch Camera button on 2nd camera share window,Default: TRUE. 
 	/// \param bHide TRUE indicates to hide the Switch Camera button. FALSE not.
 	virtual void HideSwitchCameraButton(bool bHide) = 0;
+
+	// \brief Set the visibility of CopyURL button on invite window, Default: TRUE. 
+	/// \param bHide TRUE indicates to hide, FALSE not.
+	virtual void HideCopyUrlOnInviteWindow(bool bHide) = 0;
+
+	// \brief Set the visibility of CopyInvitation button on invite window, Default: TRUE. 
+	/// \param bHide TRUE indicates to hide, FALSE not.
+	virtual void HideCopyInvitationOnInviteWindow(bool bHide) = 0;
+
+	// \brief Set the visibility of Keypad button on meeting window, Default: TRUE. 
+	/// \param bHide TRUE indicates to hide, FALSE not.
+	virtual void HideKeypadButtonOnMeetingWindow(bool bHide) = 0;
+
+	/// \brief Set whether to display the button REMOTE CONTROL and menu item. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	/// \remarks If the calling of API with parameter TRUE is successful, SDK will call EnableApproveRemoteControlDlg(false) by default.
+	virtual void HideRemoteControlOnMeetingUI(bool bHide) = 0;
+	
+	/// \brief Set the visibility of Q&A on meeting UI. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideQAOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Set the visibility of poll on meeting UI. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HidePollOnMeetingUI(bool bHide) = 0;
 };
 
 /// \brief Meeting connect configuration Interface

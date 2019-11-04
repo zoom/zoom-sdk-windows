@@ -110,6 +110,17 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SaveSnapshot(const wchar_t* path) = 0;
+
+	/// \brief Determine if can do annotate.
+	/// \param [out] bCan, true means can do annotate, false can not. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError CanDoAnnotation(bool& bCan) = 0;
+
+	/// \brief Determine whether annotations are currently available.
+	/// \return true available, false invalid.
+	virtual bool IsAnnoataionDisable() = 0;
+
 	virtual ~ICustomizedAnnotationObj(){};
 
 

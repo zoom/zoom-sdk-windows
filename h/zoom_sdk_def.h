@@ -141,6 +141,13 @@ typedef struct tagConfigurableOptions
 
 }ConfigurableOptions;
 
+enum SDK_APP_Locale
+{
+	SDK_APP_Locale_Default,
+	SDK_APP_Locale_CN,
+};
+
+
 /*! \struct tagInitParam
     \brief Initialize the SDK Parameter.
     Here are more detailed structural descriptions.
@@ -157,6 +164,7 @@ typedef struct tagInitParam
 	bool enableLogByDefault;///<Enable log feature.
 	unsigned int uiLogFileSize; ///<Size of a log file in M(megabyte). The default size is 5M. There are 5 log files in total and the file size varies from 1M to 50M. 
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
+	SDK_APP_Locale locale;
 	tagInitParam()
 	{
 		strWebDomain = NULL;
@@ -168,6 +176,7 @@ typedef struct tagInitParam
 		emLanguageID = LANGUAGE_Unknow;
 		enableLogByDefault = false;
 		uiLogFileSize = 5;
+		locale = SDK_APP_Locale_Default;
 	}
 }InitParam;
 

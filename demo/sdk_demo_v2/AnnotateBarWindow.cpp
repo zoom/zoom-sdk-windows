@@ -100,8 +100,6 @@ void AnnotateBarWindow::InitWindow()
 		m_btnSpotlight->SetEnabled(false);
 		m_btnSave->SetEnabled(false);
 	}
-
-	m_customerAnnoCtrl = SDKInterfaceWrap::GetInst().GetCustomizedAnnotationController();
 }
 
 void AnnotateBarWindow::onClickStamp(ZOOM_SDK_NAMESPACE::ICustomizedAnnotationObj* pAnnoObj)
@@ -193,11 +191,30 @@ void AnnotateBarWindow::onClickDraw(ZOOM_SDK_NAMESPACE::ICustomizedAnnotationObj
 void AnnotateBarWindow::Notify( TNotifyUI& msg )
 {
 	if (msg.sType ==_T("click")){
+		m_customerAnnoCtrl = SDKInterfaceWrap::GetInst().GetCustomizedAnnotationController(m_pShareRender);
+		if (!m_customerAnnoCtrl) return;
 		if (m_customerAnnoObj == NULL){
-			if (!m_customerAnnoCtrl) return;
 			m_customerAnnoCtrl->CreateAnnoObj(m_pShareRender, &m_customerAnnoObj);
-			if (!m_customerAnnoObj)
-				return;
+			if (!m_customerAnnoObj) return;
+		}
+
+		//is annotation disable?
+		bool bCan, bIs;
+		ZOOM_SDK_NAMESPACE::SDKError err;
+		bIs = m_customerAnnoObj->IsAnnoataionDisable();
+		if (bIs) ::MessageBox(NULL, _T("IsAnnoataionDisable() true"),     _T("sdk demo"), MB_OK);
+		
+		//can do annotate?
+		err = m_customerAnnoObj->CanDoAnnotation(bCan);
+		if (err != ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS)
+		{
+			::MessageBox(NULL, _T("CanDoAnnotation() error"), _T("sdk demo"), MB_OK);
+			return;	
+		}
+		if (!bCan)
+		{ 
+			::MessageBox(NULL, _T("CanDoAnnotation() can not"), _T("sdk demo"), MB_OK);
+			return;
 		}
 
 		if (msg.pSender == m_btnMouse)

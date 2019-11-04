@@ -263,14 +263,14 @@ void SDKInterfaceWrap::UnListenCloseCaptionEvent( ZOOM_SDK_NAMESPACE::IClosedCap
 	_close_caption_event_pool.RemoveListener(event_);
 }
 
-ZOOM_SDK_NAMESPACE::ICustomizedAnnotationController* SDKInterfaceWrap::GetCustomizedAnnotationController()
+ZOOM_SDK_NAMESPACE::ICustomizedAnnotationController* SDKInterfaceWrap::GetCustomizedAnnotationController(ZOOM_SDK_NAMESPACE::ICustomizedShareRender* pShareRender)
 {   
-	if (NULL == _customer_annotation_ctrl && _inited && _meeting_service)
+	if (_inited && _meeting_service)
 	{
 		ZOOM_SDK_NAMESPACE::IAnnotationController* annotationCtrl = _meeting_service->GetAnnotationController();
 		if (!annotationCtrl)
 			return NULL;
-		_customer_annotation_ctrl = annotationCtrl->GetCustomizedAnnotationController();
+		_customer_annotation_ctrl = annotationCtrl->GetCustomizedAnnotationController(pShareRender);
 	}
 	return _customer_annotation_ctrl;
 }

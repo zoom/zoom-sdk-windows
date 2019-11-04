@@ -26,10 +26,12 @@
 #define END_ZOOM_STATISTIC_NAMESPACE };
 #define USING_ZOOM_STATISTIC_NAMESPACE using namespace ZOOM_STATISTIC_NAMESPACE;
 
+
 #if defined ( _WIN32 ) || defined ( __WIN32__ ) || defined ( WIN32 )
 #include <tchar.h>
+#define zTCHAR TCHAR
 #else
-#define TCHAR  char
+#define zTCHAR  char
 #endif
 
 template<class T>

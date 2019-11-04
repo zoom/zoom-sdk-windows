@@ -6,6 +6,7 @@
 #ifndef _MEETING_SERVICE_INTERFACE_H_
 #define _MEETING_SERVICE_INTERFACE_H_
 #include "zoom_sdk_def.h"
+class IZoomRealNameAuthMeetingHelper;
 
 BEGIN_ZOOM_SDK_NAMESPACE
 /*! \enum MeetingStatus
@@ -639,6 +640,11 @@ public:
 	/// \brief Get the Closed Caption controller interface.
 	/// \return If the function succeeds, the return value is a pointer to IMeetingWebinarController. Otherwise returns NULL.
 	virtual IClosedCaptionController* GetMeetingClosedCaptionController() = 0;
+
+	/// \brief Get the real name auth controller interface.
+	/// \return If the function succeeds, the return value is a pointer to IZoomRealNameAuthMeetingHelper. Otherwise returns NULL.
+	virtual IZoomRealNameAuthMeetingHelper* GetMeetingRealNameAuthController() = 0;
+
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

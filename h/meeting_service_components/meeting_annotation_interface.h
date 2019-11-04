@@ -8,6 +8,7 @@
 #include "..\zoom_sdk_def.h"
 
 BEGIN_ZOOM_SDK_NAMESPACE
+class ICustomizedShareRender;
 /*! \enum AnnotationToolType
     \brief Types of annotation tool.
     Here are more detailed structural descriptions.
@@ -147,7 +148,7 @@ public:
 	/// \return If the function succeeds, the return value is the controller of annotation tools used in user custom interface mode.
 	///If the function fails, the return value is NULL.
 	///  \remarks Valid only for user custom interface mode.
-	virtual ICustomizedAnnotationController* GetCustomizedAnnotationController() = 0;
+	virtual ICustomizedAnnotationController* GetCustomizedAnnotationController(ICustomizedShareRender* pShareRender = NULL) = 0;
 
 	/// \brief Disallow/allow participants to annotate when viewing the sharing content.
 	/// \param [in] viewtype: SDK_FIRST_VIEW/SDK_SECOND_VIEW

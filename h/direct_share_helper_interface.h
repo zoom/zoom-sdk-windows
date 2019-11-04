@@ -22,6 +22,7 @@ typedef enum DirectShareStatusStatus_Enum
 	DirectShare_Need_MeetingID_Or_PairingCode,///<Re-enter the meeting ID/paring code.
 	DirectShare_NetWork_Error,///<Network error. Please try again later.
 	DirectShare_Other_Error,///<Other errors. Mainly occur in SIP call mode.
+	DirectShare_WrongMeetingID_Or_SharingKey,///<Wrong meeting id or sharing key.
 }DirectShareStatus;
 
 /// \brief Direct sharing by meeting ID or pairing code helper interface.
