@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.55968.0904</span>
+   &#160;<span id="projectnumber">4.4.56616.1028</span>
    </div>
   </td>
  </tr>
@@ -135,9 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6e167403d82159fa4651a56913122aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#ad6e167403d82159fa4651a56913122aa">Redo</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype)=0</td></tr>
 <tr class="memdesc:ad6e167403d82159fa4651a56913122aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redo the last-undo annotation.  <a href="#ad6e167403d82159fa4651a56913122aa">More...</a><br /></td></tr>
 <tr class="separator:ad6e167403d82159fa4651a56913122aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39a6b8050edf67cf58818100c76ce660"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_customized_annotation_controller.html">ICustomizedAnnotationController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a39a6b8050edf67cf58818100c76ce660">GetCustomizedAnnotationController</a> ()=0</td></tr>
-<tr class="memdesc:a39a6b8050edf67cf58818100c76ce660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the controller of annotation tools used in user custom interface mode.  <a href="#a39a6b8050edf67cf58818100c76ce660">More...</a><br /></td></tr>
-<tr class="separator:a39a6b8050edf67cf58818100c76ce660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aee760df8aa5d3543f6505c9f56d63e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_customized_annotation_controller.html">ICustomizedAnnotationController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#a9aee760df8aa5d3543f6505c9f56d63e">GetCustomizedAnnotationController</a> (<a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> *pShareRender=NULL)=0</td></tr>
+<tr class="memdesc:a9aee760df8aa5d3543f6505c9f56d63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the controller of annotation tools used in user custom interface mode.  <a href="#a9aee760df8aa5d3543f6505c9f56d63e">More...</a><br /></td></tr>
+<tr class="separator:a9aee760df8aa5d3543f6505c9f56d63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab71797c93dbd9de68217dccd15157211"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_annotation_controller.html#ab71797c93dbd9de68217dccd15157211">DisableViewerAnnotation</a> (<a class="el" href="meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34">SDKViewType</a> viewtype, bool bDisable)=0</td></tr>
 <tr class="memdesc:ab71797c93dbd9de68217dccd15157211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow/allow participants to annotate when viewing the sharing content.  <a href="#ab71797c93dbd9de68217dccd15157211">More...</a><br /></td></tr>
 <tr class="separator:ab71797c93dbd9de68217dccd15157211"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,8 +339,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a39a6b8050edf67cf58818100c76ce660"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39a6b8050edf67cf58818100c76ce660">&#9670;&nbsp;</a></span>GetCustomizedAnnotationController()</h2>
+<a id="a9aee760df8aa5d3543f6505c9f56d63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aee760df8aa5d3543f6505c9f56d63e">&#9670;&nbsp;</a></span>GetCustomizedAnnotationController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +351,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual <a class="el" href="class_i_customized_annotation_controller.html">ICustomizedAnnotationController</a>* IAnnotationController::GetCustomizedAnnotationController </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_i_customized_share_render.html">ICustomizedShareRender</a> *&#160;</td>
+          <td class="paramname"><em>pShareRender</em> = <code>NULL</code></td><td>)</td>
           <td></td>
         </tr>
       </table>

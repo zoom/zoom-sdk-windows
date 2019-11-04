@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.55968.0904</span>
+   &#160;<span id="projectnumber">4.4.56616.1028</span>
    </div>
   </td>
  </tr>
@@ -111,10 +111,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9dd857503da7a91248db6b4dfd52f7b0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_helper.html#a9dd857503da7a91248db6b4dfd52f7b0">UnRegisterNetworkConnectionHandler</a> ()=0</td></tr>
 <tr class="memdesc:a9dd857503da7a91248db6b4dfd52f7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister the callback handler which is used to receive the <a class="el" href="class_i_network_connection_handler.html" title="The network connection handler callback event. ">INetworkConnectionHandler</a>.  <a href="#a9dd857503da7a91248db6b4dfd52f7b0">More...</a><br /></td></tr>
 <tr class="separator:a9dd857503da7a91248db6b4dfd52f7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2609b5e56ddece4835990038cbfca3bc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_network_connection_helper.html#a2609b5e56ddece4835990038cbfca3bc">ConfigureProxy</a> (ProxySettings &amp;proxy_setting)=0</td></tr>
+<tr class="memdesc:a2609b5e56ddece4835990038cbfca3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the proxy that the user want to use according to your net environment.  proxy_setting The proxy ip address and port that user want to use, should be organized like ip:port, such as '255.255.255.255:8080'. Using ';' to separate multi proxies.  <a href="#a2609b5e56ddece4835990038cbfca3bc">More...</a><br /></td></tr>
+<tr class="separator:a2609b5e56ddece4835990038cbfca3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The network connection helper interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2609b5e56ddece4835990038cbfca3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2609b5e56ddece4835990038cbfca3bc">&#9670;&nbsp;</a></span>ConfigureProxy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> INetworkConnectionHelper::ConfigureProxy </td>
+          <td>(</td>
+          <td class="paramtype">ProxySettings &amp;&#160;</td>
+          <td class="paramname"><em>proxy_setting</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the proxy that the user want to use according to your net environment.  proxy_setting The proxy ip address and port that user want to use, should be organized like ip:port, such as '255.255.255.255:8080'. Using ';' to separate multi proxies. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
 <a id="a53e1980370288349238f942cb18cf844"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53e1980370288349238f942cb18cf844">&#9670;&nbsp;</a></span>RegisterNetworkConnectionHandler()</h2>
 

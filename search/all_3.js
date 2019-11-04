@@ -29,6 +29,7 @@ var searchData=
   ['directshare_5fnetwork_5ferror',['DirectShare_NetWork_Error',['../direct__share__helper__interface_8h.html#ab92dff19e0b97ff2884bfa7734e94526a077c32fa266f4d26254adfd1a2cdc88a',1,'direct_share_helper_interface.h']]],
   ['directshare_5fother_5ferror',['DirectShare_Other_Error',['../direct__share__helper__interface_8h.html#ab92dff19e0b97ff2884bfa7734e94526abe2df02a47f5ef4af35d02191b7b86d1',1,'direct_share_helper_interface.h']]],
   ['directshare_5funknown',['DirectShare_Unknown',['../direct__share__helper__interface_8h.html#ab92dff19e0b97ff2884bfa7734e94526a5462ee73ae250d41aa96bc885d1b6212',1,'direct_share_helper_interface.h']]],
+  ['directshare_5fwrongmeetingid_5for_5fsharingkey',['DirectShare_WrongMeetingID_Or_SharingKey',['../direct__share__helper__interface_8h.html#ab92dff19e0b97ff2884bfa7734e94526ae6db08f6af23d6b1cbe111082b0b7cec',1,'direct_share_helper_interface.h']]],
   ['directsharestatusstatus_5fenum',['DirectShareStatusStatus_Enum',['../direct__share__helper__interface_8h.html#ab92dff19e0b97ff2884bfa7734e94526',1,'direct_share_helper_interface.h']]],
   ['disableaccountsettingtabpage',['DisableAccountSettingTabPage',['../class_i_setting_u_i_strategy.html#a9597829bcf63574b317cadcaf6674592',1,'ISettingUIStrategy']]],
   ['disableadvancedfeatures4generalsetting',['DisableAdvancedFeatures4GeneralSetting',['../class_i_setting_u_i_strategy.html#a8e3225c8ca8c912a80d87dc0d7c48a52',1,'ISettingUIStrategy']]],

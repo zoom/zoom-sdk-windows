@@ -94,6 +94,7 @@ var searchData=
   ['init',['Init',['../class_i_calender_service.html#aa76fd07f937e6ffda41b834d909fd0b4',1,'ICalenderService']]],
   ['initsdk',['InitSDK',['../zoom__sdk_8h.html#ad2ef730cb6a637dc46747d0f2dc83893',1,'zoom_sdk.h']]],
   ['inormalvideorenderelement',['INormalVideoRenderElement',['../class_i_normal_video_render_element.html',1,'']]],
+  ['inputmeetingidandscreenname',['InputMeetingIDAndScreenName',['../class_i_meeting_password_and_screen_name_handler.html#ae02302d06563735018fb08866f12f249',1,'IMeetingPasswordAndScreenNameHandler']]],
   ['inputmeetingpasswordandscreenname',['InputMeetingPasswordAndScreenName',['../class_i_meeting_password_and_screen_name_handler.html#ab29a0db05dd700d209b76a05bbd7568c',1,'IMeetingPasswordAndScreenNameHandler']]],
   ['inputmeetingscreenname',['InputMeetingScreenName',['../class_i_meeting_password_and_screen_name_handler.html#a01a89f12b9b3c81557f7afe4459b3391',1,'IMeetingPasswordAndScreenNameHandler']]],
   ['inputusernamepassword',['InputUsernamePassword',['../class_i_proxy_setting_handler.html#a85ba7813bca0361849a36457cd7df71e',1,'IProxySettingHandler']]],
@@ -128,7 +129,7 @@ var searchData=
   ['isalwaysshowmeetingcontrolsenable',['IsAlwaysShowMeetingControlsEnable',['../class_i_accessibility_setting_context.html#aab960069560f50989e094fb077dc4543',1,'IAccessibilitySettingContext']]],
   ['isalwaysshownameonvideoenabled',['IsAlwaysShowNameOnVideoEnabled',['../class_i_video_setting_context.html#aaef7a6dbea356cb5e4eea0078be75e63',1,'IVideoSettingContext']]],
   ['isalwaysuse16v9',['IsAlwaysUse16v9',['../class_i_video_setting_context.html#a540ad3997a8cfe4ecf50707e4e5092c8',1,'IVideoSettingContext']]],
-  ['isannoataiondisable',['IsAnnoataionDisable',['../class_i_annotation_controller.html#a239c4381e484c69b5896797dfdab1b69',1,'IAnnotationController']]],
+  ['isannoataiondisable',['IsAnnoataionDisable',['../class_i_customized_annotation_obj.html#a60fed77baad3d9b433d6000a58c0467d',1,'ICustomizedAnnotationObj::IsAnnoataionDisable()'],['../class_i_annotation_controller.html#a239c4381e484c69b5896797dfdab1b69',1,'IAnnotationController::IsAnnoataionDisable()']]],
   ['isattendeevideoonoroff',['IsAttendeeVideoOnOrOff',['../class_i_query_meeting_item_video_option_helper.html#a4c13adf32c38abeee383a2a89deefc17',1,'IQueryMeetingItemVideoOptionHelper']]],
   ['isaudiomuted',['IsAudioMuted',['../class_i_user_info.html#a31130af1330952ec5435d9464b8020fe',1,'IUserInfo']]],
   ['isaudiooff',['isAudioOff',['../structtag_join_param4_a_p_i_user.html#a9b6b82d1f577e0c06be803adfd5e02f9',1,'tagJoinParam4APIUser::isAudioOff()'],['../structtag_join_param4_normal_user.html#a5e1717ce6770aa86840f086fc509041c',1,'tagJoinParam4NormalUser::isAudioOff()'],['../structtag_start_param4_a_p_i_user.html#a459661616f21f904b2f3ec1be2b802aa',1,'tagStartParam4APIUser::isAudioOff()'],['../structtag_start_param4_without_login.html#ae26c2d125b751465c310bd8cadd16728',1,'tagStartParam4WithoutLogin::isAudioOff()'],['../structtag_start_param4_normal_user.html#a750f835ef2522e318232622f9c1b7cb5',1,'tagStartParam4NormalUser::isAudioOff()']]],
@@ -245,5 +246,11 @@ var searchData=
   ['iwebinarneedregisterhandler',['IWebinarNeedRegisterHandler',['../class_i_webinar_need_register_handler.html',1,'']]],
   ['iwebinarneedregisterhandlerbyemail',['IWebinarNeedRegisterHandlerByEmail',['../class_i_webinar_need_register_handler_by_email.html',1,'']]],
   ['iwebinarneedregisterhandlerbyurl',['IWebinarNeedRegisterHandlerByUrl',['../class_i_webinar_need_register_handler_by_url.html',1,'']]],
-  ['izoomlasterror',['IZoomLastError',['../class_i_zoom_last_error.html',1,'']]]
+  ['iyuvrawdatai420converter',['IYUVRawDataI420Converter',['../class_i_y_u_v_raw_data_i420_converter.html',1,'']]],
+  ['izoomlasterror',['IZoomLastError',['../class_i_zoom_last_error.html',1,'']]],
+  ['izoomrealnameauthcountryinfo',['IZoomRealNameAuthCountryInfo',['../class_i_zoom_real_name_auth_country_info.html',1,'']]],
+  ['izoomrealnameauthmeetingevent',['IZoomRealNameAuthMeetingEvent',['../class_i_zoom_real_name_auth_meeting_event.html',1,'']]],
+  ['izoomrealnameauthmeetinghelper',['IZoomRealNameAuthMeetingHelper',['../class_i_zoom_real_name_auth_meeting_helper.html',1,'']]],
+  ['izoomretrievesmsverificationcodehandler',['IZoomRetrieveSMSVerificationCodeHandler',['../class_i_zoom_retrieve_s_m_s_verification_code_handler.html',1,'']]],
+  ['izoomverifysmsverificationcodehandler',['IZoomVerifySMSVerificationCodeHandler',['../class_i_zoom_verify_s_m_s_verification_code_handler.html',1,'']]]
 ];
