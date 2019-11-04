@@ -2,7 +2,12 @@
 
 ## Note
 
-Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+1. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, we renamed the filename of the following shared resources:
+* `CptHost.exe` -> `zcscpthost.exe`
+* `airhost.exe` -> `zcsairhost.exe`
+* `CptService.exe` -> `zCSCptService.exe`
+
+2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptHost.exe**
    * **CptInstall.exe**
@@ -12,13 +17,35 @@ Kindly advise that **please do not re-sign / assign new digital signature to** t
    * **zzplugin.dll**
    * **aomhost64.exe**
 
-## 2019-09-04 @ [v4.4.55968.0904](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55968.0904)
-
-## Note
-
-### :red_circle: SDK file structure has changed
+3. SDK file structure has changed
 
 **In order to further optimize the size of our SDK package, starting from this version, Zoom Windows SDK removes the installation package of `Microsoft VC90 runtime`. Please visit Microsoft's website to download and install the `Microsoft VC90 runtime` on your machine. Please also kindly consider adding the `Microsoft VC90 runtime` installation packages in your installation package when you publish your applications developed using Zoom Windows SDK.**
+   
+## 2019-11-04 @ [v4.4.56616.1028](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.56616.1028)
+
+## Added
+* Add a new interface to determine whether the user can do annotation in Custom UI
+    * `ICustomizedAnnotationObj.CanDoAnnotation(bool& bCan)`
+* Add a new interface to determine whether the annotation is disable in Custom UI   
+    * `ICustomizedAnnotationObj.IsAnnoataionDisable()`
+* Add a new interface to hide the key-pad-button on the meeting window
+    * `IMeetingConfiguration.HideKeypadButtonOnMeetingWindow(bool bHide)`
+* Add a new interface to hide the copy-url-button on invite window
+    * `IMeetingConfiguration.HideCopyUrlOnInviteWindow(bool bHide)`
+* Add a new interface to hide the copy-invitation-button on the invite window
+    * `IMeetingConfiguration.HideCopyInvitationOnInviteWindow(bool bHide)`
+* Add a new interface to show/hide Q&A on the meeting window
+    * `IMeetingUIElemConfiguration.HideQAOnMeetingUI(bool bHide)`
+* Add a new interface to show/hide poll on the meeting window
+    * `IMeetingUIElemConfiguration.HidePollOnMeetingUI(bool bHide)`
+* Add a new interface to config external proxy
+    * `INetworkConnectionHelper.ConfigureProxy(ProxySettings& proxy_setting)`
+* Add a new interface to hide the remote control button on the meeting window
+    * `IMeetingConfiguration.HideRemoteControlOnMeetingUI(bool bHide)`
+* Add a default parameter to `GetCustomizedAnnotationController(ICustomizedShareRender* pShareRender = NULL)`
+  * `IAnnotationController.GetCustomizedAnnotationController(ICustomizedShareRender* pShareRender = NULL)`
+
+## 2019-09-04 @ [v4.4.55968.0904](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55968.0904)
 
 ## Added
 *  Add a new interface to hide switch-camera-button on `ShareCameraWindow`

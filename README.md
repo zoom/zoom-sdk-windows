@@ -4,7 +4,11 @@
 </div>
 
 ## Latest SDK Notifications
-1. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+1.Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, we renamed the filename of the following shared resources:
+* `CptHost.exe` -> `zcscpthost.exe`
+* `airhost.exe` -> `zcsairhost.exe`
+* `CptService.exe` -> `zCSCptService.exe`
+2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptHost.exe**
    * **CptInstall.exe**
@@ -13,8 +17,8 @@
    * **zzhost.dll**
    * **zzplugin.dll**
    * **aomhost64.exe**
-2. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
-3. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
+3. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
+4. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
 
 ## Full Documentation && Community Support
 You can find the full Zoom Windows SDK documentation and the community support forum here:
