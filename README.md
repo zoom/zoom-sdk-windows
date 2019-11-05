@@ -97,14 +97,15 @@ Please refer to our [CHANGELOG](https://github.com/zoom/zoom-sdk-windows/blob/ma
 
 * :one: `Getting ERROR Code: 105035 while using Windows SDK`:
   * **In most of the cases, this is caused by resigning or adding new signature to the following files while integrating and deploying our SDK**:
-     * **CptControl.exe**
-     * **CptHost.exe**
-     * **CptInstall.exe**
-     * **CptService.exe**
-     * **CptShare.dll**
-     * **zzhost.dll**
-     * **zzplugin.dll**
-     * **aomhost64.exe**
+   * **CptControl.exe**
+   * **CptHost.exe / zcscpthost.exe**
+   * **CptInstall.exe**
+   * **CptService.exe / zCSCptService.exe**
+   * **CptShare.dll**
+   * **zzhost.dll**
+   * **zzplugin.dll**
+   * **aomhost64.exe**
+   * **airhost.exe / zcsairhost.exe**
    
    **Please skip signing / do not add any new signatures to the above files. If the error code appears even if the above files are not being re-signed, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) and seek help.**
    
