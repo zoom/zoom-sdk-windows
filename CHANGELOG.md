@@ -9,13 +9,14 @@
 
 2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
-   * **CptHost.exe**
+   * **CptHost.exe / zcscpthost.exe**
    * **CptInstall.exe**
-   * **CptService.exe**
+   * **CptService.exe / zCSCptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
    * **zzplugin.dll**
    * **aomhost64.exe**
+   * **airhost.exe / zcsairhost.exe**
 
 3. SDK file structure has changed
 
