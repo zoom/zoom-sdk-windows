@@ -10,13 +10,14 @@
 * `CptService.exe` -> `zCSCptService.exe`
 2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
-   * **CptHost.exe**
+   * **CptHost.exe / zcscpthost.exe**
    * **CptInstall.exe**
-   * **CptService.exe**
+   * **CptService.exe / zCSCptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
    * **zzplugin.dll**
    * **aomhost64.exe**
+   * **airhost.exe / zcsairhost.exe**
 3. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
 4. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
 
