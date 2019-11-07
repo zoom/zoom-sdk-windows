@@ -1,6 +1,7 @@
 
 # Table of Contents
 
+0.  [Build instructions](#orgfc1f76a)
 1.  [What Does It Do?](#orgfc1f76d)
 2.  [How To Run This?](#orgf877bad)
     1.  [Recording](#org415edb6)
@@ -18,6 +19,18 @@ that we could possibly use on a cloud setup is the Windows SDK. This project is
 a modified version of the original SDK under demo/sdk\_demo, and renamed as
 *recorder*.
 
+<a id="orgfc1f76a"></a>
+
+# Build instructions
+1. Install [VS Code](https://code.visualstudio.com/)
+2. Install [VS Toolchain 2017/2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16). Be sure to install desktop workflow (for both 2017 and 2019 build tools)
+3. Open visual studio command prompt for x86 target
+4. Open VSCode in project directory from aforementioned command propmt
+5. Install [C/C++ Extension from Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+6. Install [CMake Tools Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+7. (Optional)Install CMake language extension to your preference
+8. Use extension pane from step 6 to build for a given config (x86 target, debug/release config)
+9. Run install target (find ready to use zoom_bot.exe under build/output/zoom_bot.exe folder)
 
 <a id="orgfc1f76d"></a>
 
