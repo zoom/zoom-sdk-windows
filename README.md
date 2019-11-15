@@ -24,13 +24,17 @@ a modified version of the original SDK under demo/sdk\_demo, and renamed as
 # Build instructions
 1. Install [VS Code](https://code.visualstudio.com/)
 2. Install [VS Toolchain 2017/2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16). Be sure to install desktop workflow (for both 2017 and 2019 build tools)
-3. Open visual studio command prompt for x86 target
-4. Open VSCode in project directory from aforementioned command propmt
-5. Install [C/C++ Extension from Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-6. Install [CMake Tools Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
-7. (Optional)Install CMake language extension to your preference
-8. Use extension pane from step 6 to build for a given config (x86 target, debug/release config)
-9. Run install target (find ready to use zoom_bot.exe under build/output/zoom_bot.exe folder)
+3. git clone https://github.com/microsoft/vcpkg && cd vcpkg && git checkout tags/2019.10
+4. Set VCPKG_ROOT env variable to aforementioned cloned directory (set VCPKG_ROOT=%cd%)
+5. Open visual studio command prompt for x86 target
+6. run %VCPKG_ROOT%\bootstrap-vcpkg.bat
+7. run .\vcpkg install protobuf
+8. Open VSCode in project directory from aforementioned command propmt
+9. Install [C/C++ Extension from Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+10. Install [CMake Tools Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+11. (Optional)Install CMake language extension to your preference
+12. Use extension pane from step 6 to build for a given config (x86 target, debug/release config)
+13. Run install target (find ready to use zoom_bot.exe under build/output/zoom_bot.exe folder)
 
 <a id="orgfc1f76d"></a>
 

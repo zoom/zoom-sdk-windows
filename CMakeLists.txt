@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(zoom_bot VERSION 0.1.0)
 
+
+
+project(zoom_bot VERSION 0.1.0)
 find_library(DUI_SDK_LIB DuiLib_2017 
             PATH 3rdparty/duilib/lib)
 
@@ -16,7 +18,9 @@ endif()
 set(ZOOM_SDK_INCLUDE ${CMAKE_SOURCE_DIR}/3rdparty/zoom_sdk/include)
 set(DUI_SDK_INCLUDE ${CMAKE_SOURCE_DIR}/3rdparty/duilib/include)
 
+find_package(protobuf CONFIG REQUIRED)
+
 add_subdirectory(src)
 
 install(TARGETS zoom_bot DESTINATION ${CMAKE_SOURCE_DIR}/build/output)
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/bin/ DESTINATION ${CMAKE_SOURCE_DIR}/build/output)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/ DESTINATION ${CMAKE_SOURCE_DIR}/build/output)

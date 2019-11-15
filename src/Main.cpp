@@ -19,15 +19,15 @@ bool bLogging = false;
 
 void doCloseGlobalEventHandleHack();
 
-TCHAR *getCmdOption(TCHAR **begin, TCHAR **end, const std::wstring &option) {
-  TCHAR **itr = std::find(begin, end, option);
+wchar_t *getCmdOption(wchar_t **begin, wchar_t **end, const std::wstring &option) {
+  wchar_t **itr = std::find(begin, end, option);
   if (itr != end && ++itr != end) {
     return *itr;
   }
   return 0;
 }
 
-bool cmdOptionExists(TCHAR **begin, TCHAR **end, const std::wstring &option) {
+bool cmdOptionExists(wchar_t **begin, wchar_t **end, const std::wstring &option) {
   return std::find(begin, end, option) != end;
 }
 
@@ -53,17 +53,17 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR cmd, int nCmdShow) {
 
 	// The following are sorted alphabetically.
 
-  TCHAR *accessToken = getCmdOption(argv, argv + argc, L"-a");
+  wchar_t *accessToken = getCmdOption(argv, argv + argc, L"-a");
   if (accessToken) {
     wszAccessToken = accessToken;
   }
 
-  TCHAR *email = getCmdOption(argv, argv + argc, L"-e");
+  wchar_t *email = getCmdOption(argv, argv + argc, L"-e");
   if (email) {
     wszEmail = email;
   }
 
-  TCHAR *userId = getCmdOption(argv, argv + argc, L"-i");
+  wchar_t *userId = getCmdOption(argv, argv + argc, L"-i");
   if (userId) {
     wszUserID = userId;
   }
@@ -74,24 +74,24 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR cmd, int nCmdShow) {
   }
 
 	// meeting id must be present.
-  TCHAR* meetingid = getCmdOption(argv, argv + argc, L"-m");
+  wchar_t* meetingid = getCmdOption(argv, argv + argc, L"-m");
   if (!meetingid) {
     printf("must specify meeting id");
     return -1;
   }
   wszMeetingID = meetingid;
 
-  TCHAR* ssoToken = getCmdOption(argv, argv + argc, L"-o");
+  wchar_t* ssoToken = getCmdOption(argv, argv + argc, L"-o");
   if (ssoToken) {
     wszSSOToken = ssoToken;
   }
 
-  TCHAR* password = getCmdOption(argv, argv + argc, L"-p");
+  wchar_t* password = getCmdOption(argv, argv + argc, L"-p");
   if (password) {
     wszPassword = password;
   }
 
-  TCHAR* recordingPath = getCmdOption(argv, argv + argc, L"-record_path");
+  wchar_t* recordingPath = getCmdOption(argv, argv + argc, L"-record_path");
   if (recordingPath) {
     wszRecordPath = recordingPath;
   }
@@ -101,7 +101,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR cmd, int nCmdShow) {
     skipKillingHandle = true;
   }
 
-  TCHAR* sdkKey = getCmdOption(argv, argv + argc, L"-sdk_key");
+  wchar_t* sdkKey = getCmdOption(argv, argv + argc, L"-sdk_key");
   if (!sdkKey) {
     printf("must specify sdk key");
     return -1;
@@ -109,7 +109,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR cmd, int nCmdShow) {
   wszSdkKey = sdkKey;
 
 
-  TCHAR* sdkSecret = getCmdOption(argv, argv + argc, L"-sdk_secret");
+  wchar_t* sdkSecret = getCmdOption(argv, argv + argc, L"-sdk_secret");
   if (!sdkSecret) {
     printf("must specify sdk secret");
     return -1;
@@ -117,13 +117,13 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR cmd, int nCmdShow) {
   wszSdkSecret = sdkSecret;
 
 
-  TCHAR* userToken = getCmdOption(argv, argv + argc, L"-t");
+  wchar_t* userToken = getCmdOption(argv, argv + argc, L"-t");
   if (userToken) {
     wszUserToken = userToken;
   }
 
   // display name of the jonied user.
-  TCHAR* username = getCmdOption(argv, argv + argc, L"-u");
+  wchar_t* username = getCmdOption(argv, argv + argc, L"-u");
   if (username) {
     wszUsername = username;
   }
