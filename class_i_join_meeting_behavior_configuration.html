@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.56616.1028</span>
+   &#160;<span id="projectnumber">4.4.57220.1211</span>
    </div>
   </td>
  </tr>
@@ -140,6 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75a7c39cf7cb9f9fb6e0b4962922ac9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a75a7c39cf7cb9f9fb6e0b4962922ac9f">DisableAutoShowSelectJoinAudioDlgWhenJoinMeeting</a> (bool bDisable)=0</td></tr>
 <tr class="memdesc:a75a7c39cf7cb9f9fb6e0b4962922ac9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog SELECT JOIN AUDIO when joining meeting. Default: FALSE.  <a href="#a75a7c39cf7cb9f9fb6e0b4962922ac9f">More...</a><br /></td></tr>
 <tr class="separator:a75a7c39cf7cb9f9fb6e0b4962922ac9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7899bb535d3f36142c33a33eb44762"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_join_meeting_behavior_configuration.html#a5a7899bb535d3f36142c33a33eb44762">DisableShowJoinMeetingWnd</a> (bool bDisable)=0</td></tr>
+<tr class="memdesc:a5a7899bb535d3f36142c33a33eb44762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box of joining a meeting. Default: FALSE.  <a href="#a5a7899bb535d3f36142c33a33eb44762">More...</a><br /></td></tr>
+<tr class="separator:a5a7899bb535d3f36142c33a33eb44762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting connect configuration Interface. </p>
@@ -210,6 +213,40 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>If it is disabled to display the dialog box of wrong password, the system will directly exit the state of trying to join the meeting. </dd></dl>
+
+</div>
+</div>
+<a id="a5a7899bb535d3f36142c33a33eb44762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7899bb535d3f36142c33a33eb44762">&#9670;&nbsp;</a></span>DisableShowJoinMeetingWnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IJoinMeetingBehaviorConfiguration::DisableShowJoinMeetingWnd </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bDisable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of the dialog box of joining a meeting. Default: FALSE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bDisable</td><td>TRUE indicates to hide the dialog box. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

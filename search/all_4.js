@@ -17,6 +17,7 @@ var searchData=
   ['enablealwaysshownameonvideo',['EnableAlwaysShowNameOnVideo',['../class_i_video_setting_context.html#a8e168457e76e15f2b82693db5fd48162',1,'IVideoSettingContext']]],
   ['enablealwaysuse16v9',['EnableAlwaysUse16v9',['../class_i_video_setting_context.html#ad76ea455226acbeedfea62b0b25135f7',1,'IVideoSettingContext']]],
   ['enableapproveremotecontroldlg',['EnableApproveRemoteControlDlg',['../class_i_meeting_u_i_elem_configuration.html#aacd50dca011e02bdab8fa296ccbbb233',1,'IMeetingUIElemConfiguration']]],
+  ['enableaudiobuttononmeetingui',['EnableAudioButtonOnMeetingUI',['../class_i_meeting_u_i_elem_configuration.html#a3265ce7cbcc37037aa8f2ecc9204b6d7',1,'IMeetingUIElemConfiguration']]],
   ['enableautoadjustmic',['EnableAutoAdjustMic',['../class_i_audio_setting_context.html#ab2fb1175d69d459b39f7053d0120600d',1,'IAudioSettingContext']]],
   ['enableautoadjustmicvolumewhenjoinaudio',['EnableAutoAdjustMicVolumeWhenJoinAudio',['../class_i_meeting_configuration.html#a6579b7d0ee21f82ed3a61e8993c7e43f',1,'IMeetingConfiguration']]],
   ['enableautoadjustspeakervolumewhenjoinaudio',['EnableAutoAdjustSpeakerVolumeWhenJoinAudio',['../class_i_meeting_configuration.html#acc56098e513efb5ea3a5bcc37e776661',1,'IMeetingConfiguration']]],

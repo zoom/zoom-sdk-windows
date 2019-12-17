@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['tagauthcontext',['tagAuthContext',['../structtag_auth_context.html#aaad083188aecaaa3c96e2668470bf2b1',1,'tagAuthContext']]],
   ['testmicplayrecording',['TestMicPlayRecording',['../class_i_test_audio_device_helper.html#adf039a39bcba2216b579f245e4f32d23',1,'ITestAudioDeviceHelper']]],
   ['testmicstartrecording',['TestMicStartRecording',['../class_i_test_audio_device_helper.html#a562f84d6c31a0397be263ab963527d78',1,'ITestAudioDeviceHelper']]],
   ['testmicstoptesting',['TestMicStopTesting',['../class_i_test_audio_device_helper.html#a018f553b15ef4f3859582217d8ca923d',1,'ITestAudioDeviceHelper']]],

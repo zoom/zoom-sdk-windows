@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.56616.1028</span>
+   &#160;<span id="projectnumber">4.4.57220.1211</span>
    </div>
   </td>
  </tr>
@@ -140,6 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48f3cfff75cc35af3feb635569886407"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a48f3cfff75cc35af3feb635569886407">EnableVideoButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a48f3cfff75cc35af3feb635569886407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the Video button in the toolbar during the meeting. Default value: TRUE.  <a href="#a48f3cfff75cc35af3feb635569886407">More...</a><br /></td></tr>
 <tr class="separator:a48f3cfff75cc35af3feb635569886407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3265ce7cbcc37037aa8f2ecc9204b6d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a3265ce7cbcc37037aa8f2ecc9204b6d7">EnableAudioButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a3265ce7cbcc37037aa8f2ecc9204b6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the Audio button in the toolbar during the meeting. Default value: TRUE.  <a href="#a3265ce7cbcc37037aa8f2ecc9204b6d7">More...</a><br /></td></tr>
+<tr class="separator:a3265ce7cbcc37037aa8f2ecc9204b6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc34278083ee007ad51d37511325d986"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#abc34278083ee007ad51d37511325d986">EnableEnterAndExitFullScreenButtonOnMeetingUI</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:abc34278083ee007ad51d37511325d986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the buttons to enter or exit the full screen in the meeting window. Default value: TRUE.  <a href="#abc34278083ee007ad51d37511325d986">More...</a><br /></td></tr>
 <tr class="separator:abc34278083ee007ad51d37511325d986"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,6 +258,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0be389b3ff5cc3e28170ba5da6e37336"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a0be389b3ff5cc3e28170ba5da6e37336">HidePollOnMeetingUI</a> (bool bHide)=0</td></tr>
 <tr class="memdesc:a0be389b3ff5cc3e28170ba5da6e37336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of poll on meeting UI. Default is displaying.  <a href="#a0be389b3ff5cc3e28170ba5da6e37336">More...</a><br /></td></tr>
 <tr class="separator:a0be389b3ff5cc3e28170ba5da6e37336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76bd0be1b7cb7ffb482eb17085cbadcc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a76bd0be1b7cb7ffb482eb17085cbadcc">DisableAdvanceAudioDeivceCtrl</a> (bool bDisable)=0</td></tr>
+<tr class="memdesc:a76bd0be1b7cb7ffb482eb17085cbadcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the ability to control the audio device in the meeting. Default is having the ability.  <a href="#a76bd0be1b7cb7ffb482eb17085cbadcc">More...</a><br /></td></tr>
+<tr class="separator:a76bd0be1b7cb7ffb482eb17085cbadcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b8e6b2da86576d4632db6b8c81ca11"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a45b8e6b2da86576d4632db6b8c81ca11">RedirectClickAudioBTNEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a45b8e6b2da86576d4632db6b8c81ca11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to handle the event with SDK user's own program by clicking Audio button in the meeting. Default value: FALSE.  <a href="#a45b8e6b2da86576d4632db6b8c81ca11">More...</a><br /></td></tr>
+<tr class="separator:a45b8e6b2da86576d4632db6b8c81ca11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794f9f363cfee0f2ab71c3801295c706"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a794f9f363cfee0f2ab71c3801295c706">RedirectClickAudioMenuBTNEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a794f9f363cfee0f2ab71c3801295c706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to handle the event with SDK user's own program by clicking Audio Menu button in the meeting. Default value: FALSE.  <a href="#a794f9f363cfee0f2ab71c3801295c706">More...</a><br /></td></tr>
+<tr class="separator:a794f9f363cfee0f2ab71c3801295c706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting user configuration interface. </p>
@@ -287,6 +299,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bAlwaysShow</td><td>TRUE indicates to display always the icon on the task-bar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76bd0be1b7cb7ffb482eb17085cbadcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76bd0be1b7cb7ffb482eb17085cbadcc">&#9670;&nbsp;</a></span>DisableAdvanceAudioDeivceCtrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::DisableAdvanceAudioDeivceCtrl </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bDisable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the ability to control the audio device in the meeting. Default is having the ability. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bDisable</td><td>TRUE means having no ability, otherwise not.  API is not recommended to call because once the bDsialbe is true, Zoom meeting may lose the control of the audio devices. </td></tr>
   </table>
   </dd>
 </dl>
@@ -461,6 +507,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to display the dialog box. FALSE not. If it is FALSE, the user can deal with this request in the <a class="el" href="class_i_meeting_remote_ctrl_event.html#a5e271c74caae37ba3bc350208406b4f0" title="Callback event of notification of the remote control status. ">IMeetingRemoteCtrlEvent::onRemoteControlStatus()</a> callback event sent by SDK when receiving the request of the remote control and then enters the sharing status at the end of callback event. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3265ce7cbcc37037aa8f2ecc9204b6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3265ce7cbcc37037aa8f2ecc9204b6d7">&#9670;&nbsp;</a></span>EnableAudioButtonOnMeetingUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::EnableAudioButtonOnMeetingUI </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of the Audio button in the toolbar during the meeting. Default value: TRUE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to display the button. Otherwise not. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1275,6 +1355,76 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a45b8e6b2da86576d4632db6b8c81ca11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45b8e6b2da86576d4632db6b8c81ca11">&#9670;&nbsp;</a></span>RedirectClickAudioBTNEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::RedirectClickAudioBTNEvent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRedirect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set if it is able to handle the event with SDK user's own program by clicking Audio button in the meeting. Default value: FALSE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bRedirect</td><td>TRUE indicates to handle with user's own program. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the user calls this function to convert, the SDK will trigger the <a class="el" href="class_i_meeting_u_i_controller_event.html#a272dc0d5f9aefcfdb29001c8effadda5" title="Callback event for clicking Audio button in the meeting. ">IMeetingUIControllerEvent::onAudioBtnClicked(AudioBtnClickedCallbackInfo info)</a>, and the user shall deal with the subsequent logic himself. </dd></dl>
+
+</div>
+</div>
+<a id="a794f9f363cfee0f2ab71c3801295c706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a794f9f363cfee0f2ab71c3801295c706">&#9670;&nbsp;</a></span>RedirectClickAudioMenuBTNEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::RedirectClickAudioMenuBTNEvent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRedirect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set if it is able to handle the event with SDK user's own program by clicking Audio Menu button in the meeting. Default value: FALSE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bRedirect</td><td>TRUE indicates to handle with user's own program. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the user calls this function to convert, the SDK will trigger the <a class="el" href="class_i_meeting_u_i_controller_event.html#a520573725fdf694c4d75bac6fe770fe1" title="Callback event for clicking Audio Menu button in the meeting. ">IMeetingUIControllerEvent::onAudioMenuBtnClicked()</a>, and the user shall deal with the subsequent logic himself. </dd></dl>
 
 </div>
 </div>

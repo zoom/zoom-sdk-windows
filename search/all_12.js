@@ -1,7 +1,9 @@
 var searchData=
 [
   ['tagasvsessionstatisticinfo',['tagASVSessionStatisticInfo',['../structtag_a_s_v_session_statistic_info.html',1,'']]],
+  ['tagaudiobtnclickedcallbackinfo',['tagAudioBtnClickedCallbackInfo',['../structtag_audio_btn_clicked_callback_info.html',1,'']]],
   ['tagaudiosessionstatisticinfo',['tagAudioSessionStatisticInfo',['../structtag_audio_session_statistic_info.html',1,'']]],
+  ['tagauthcontext',['tagAuthContext',['../structtag_auth_context.html',1,'tagAuthContext'],['../structtag_auth_context.html#aaad083188aecaaa3c96e2668470bf2b1',1,'tagAuthContext::tagAuthContext()']]],
   ['tagauthparam',['tagAuthParam',['../structtag_auth_param.html',1,'']]],
   ['tagchatstatus',['tagChatStatus',['../structtag_chat_status.html',1,'']]],
   ['tagconfigurableoptions',['tagConfigurableOptions',['../structtag_configurable_options.html',1,'']]],

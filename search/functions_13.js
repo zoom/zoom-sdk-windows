@@ -9,5 +9,6 @@ var searchData=
   ['unregisternetworkconnectionhandler',['UnRegisterNetworkConnectionHandler',['../class_i_network_connection_helper.html#a9dd857503da7a91248db6b4dfd52f7b0',1,'INetworkConnectionHelper']]],
   ['unsubscribe',['Unsubscribe',['../class_i_normal_video_render_element.html#af4ee0fce2583b294c61272eaad6ab61a',1,'INormalVideoRenderElement']]],
   ['upgradeaccount',['UpgradeAccount',['../class_i_free_meeting_ending_reminder_handler.html#a7a223023cc2366889e7cbd0e8b121c41',1,'IFreeMeetingEndingReminderHandler']]],
-  ['upgrademeeting',['UpgradeMeeting',['../class_i_free_meeting_ending_reminder_handler.html#a268c78eb84efddf5bd90fd443f69369c',1,'IFreeMeetingEndingReminderHandler']]]
+  ['upgrademeeting',['UpgradeMeeting',['../class_i_free_meeting_ending_reminder_handler.html#a268c78eb84efddf5bd90fd443f69369c',1,'IFreeMeetingEndingReminderHandler']]],
+  ['usebgimage',['UseBGImage',['../class_i_virtual_b_g_setting_context.html#afaae5dfe0d70902efa84f4ea424a2e1e',1,'IVirtualBGSettingContext']]]
 ];

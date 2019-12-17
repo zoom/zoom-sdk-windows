@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.56616.1028</span>
+   &#160;<span id="projectnumber">4.4.57220.1211</span>
    </div>
   </td>
  </tr>
@@ -127,10 +127,73 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a4ddd77c3433d2c2bcaf2013e484d7ab3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a4ddd77c3433d2c2bcaf2013e484d7ab3">onCCBTNClicked</a> ()=0</td></tr>
 <tr class="memdesc:a4ddd77c3433d2c2bcaf2013e484d7ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of clicking CC menu.  <a href="#a4ddd77c3433d2c2bcaf2013e484d7ab3">More...</a><br /></td></tr>
 <tr class="separator:a4ddd77c3433d2c2bcaf2013e484d7ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272dc0d5f9aefcfdb29001c8effadda5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a272dc0d5f9aefcfdb29001c8effadda5">onAudioBtnClicked</a> (<a class="el" href="structtag_audio_btn_clicked_callback_info.html">AudioBtnClickedCallbackInfo</a> info)=0</td></tr>
+<tr class="memdesc:a272dc0d5f9aefcfdb29001c8effadda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event for clicking Audio button in the meeting.  <a href="#a272dc0d5f9aefcfdb29001c8effadda5">More...</a><br /></td></tr>
+<tr class="separator:a272dc0d5f9aefcfdb29001c8effadda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520573725fdf694c4d75bac6fe770fe1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a520573725fdf694c4d75bac6fe770fe1">onAudioMenuBtnClicked</a> ()=0</td></tr>
+<tr class="memdesc:a520573725fdf694c4d75bac6fe770fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event for clicking Audio Menu button in the meeting.  <a href="#a520573725fdf694c4d75bac6fe770fe1">More...</a><br /></td></tr>
+<tr class="separator:a520573725fdf694c4d75bac6fe770fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Callback Event of Meeting UI Controller. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a272dc0d5f9aefcfdb29001c8effadda5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272dc0d5f9aefcfdb29001c8effadda5">&#9670;&nbsp;</a></span>onAudioBtnClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIControllerEvent::onAudioBtnClicked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtag_audio_btn_clicked_callback_info.html">AudioBtnClickedCallbackInfo</a>&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event for clicking Audio button in the meeting. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The user won't receive this callback event unless he sets to redirect the process of clicking the Audio button in the meeting. For more details, see <a class="el" href="class_i_meeting_u_i_elem_configuration.html#a45b8e6b2da86576d4632db6b8c81ca11">IMeetingUIElemConfiguration::RedirectClickAudioBTNEvent()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a520573725fdf694c4d75bac6fe770fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520573725fdf694c4d75bac6fe770fe1">&#9670;&nbsp;</a></span>onAudioMenuBtnClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIControllerEvent::onAudioMenuBtnClicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event for clicking Audio Menu button in the meeting. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The user won't receive this callback event unless he sets to redirect the process of clicking the Audio Menu button in the meeting. For more details, see <a class="el" href="class_i_meeting_u_i_elem_configuration.html#a794f9f363cfee0f2ab71c3801295c706">IMeetingUIElemConfiguration::RedirectClickAudioMenuBTNEvent()</a>. </dd></dl>
+
+</div>
+</div>
 <a id="a4ddd77c3433d2c2bcaf2013e484d7ab3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ddd77c3433d2c2bcaf2013e484d7ab3">&#9670;&nbsp;</a></span>onCCBTNClicked()</h2>
 

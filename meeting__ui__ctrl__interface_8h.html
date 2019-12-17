@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.56616.1028</span>
+   &#160;<span id="projectnumber">4.4.57220.1211</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_split_screen_info.html">tagSplitScreenInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split screen mode information. Here are more detailed structural descriptions.  <a href="structtag_split_screen_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_audio_btn_clicked_callback_info.html">tagAudioBtnClickedCallbackInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html">IMeetingUIControllerEvent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback Event of Meeting UI Controller.  <a href="class_i_meeting_u_i_controller_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +138,9 @@ typedef struct <a class="el" href="structtag_show_chat_dlg_param.html">tagShowCh
 <tr class="memitem:a2aea98a6d4e369af81628c9f3c7f778d"><td class="memItemLeft" align="right" valign="top"><a id="a2aea98a6d4e369af81628c9f3c7f778d"></a>
 typedef struct <a class="el" href="structtag_split_screen_info.html">tagSplitScreenInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SplitScreenInfo</b></td></tr>
 <tr class="separator:a2aea98a6d4e369af81628c9f3c7f778d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9a3fd570f9caa5dded7e6ef7d09127"><td class="memItemLeft" align="right" valign="top"><a id="a5f9a3fd570f9caa5dded7e6ef7d09127"></a>
+typedef struct <a class="el" href="structtag_audio_btn_clicked_callback_info.html">tagAudioBtnClickedCallbackInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBtnClickedCallbackInfo</b></td></tr>
+<tr class="separator:a5f9a3fd570f9caa5dded7e6ef7d09127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -159,6 +164,18 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a14f173ee99f4939f106af29f2fbaa950"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of minimize user interface mode. Here are more detailed structural descriptions.  <a href="meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950">More...</a><br /></td></tr>
 <tr class="separator:a14f173ee99f4939f106af29f2fbaa950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6988820a67f853ab67605fa5f4651ce4"><td class="memItemLeft" align="right" valign="top"><a id="a6988820a67f853ab67605fa5f4651ce4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AudioCallbackActionInfo</b> { <br />
+&#160;&#160;<b>ACTION_NONE</b> = 0, 
+<b>ACTION_CHOOSE_AUDIO_DEVICE_NOAUDIODEVICECONNECTTED</b>, 
+<b>ACTION_CHOOSE_AUDIO_DEVICE_COMPUTERAUDIODEVICEERROR</b>, 
+<b>ACTION_CHOOSE_AUDIO_DEVICE_PHONECALLDEVICEERROR</b>, 
+<br />
+&#160;&#160;<b>ACTION_NEED_JOIN_VOIP</b>, 
+<b>ACTION_MUTE_UNMUTE_AUDIO</b>, 
+<b>ACTION_SHOW_AUDIO_SETTING_WINDOW</b>
+<br />
+ }</td></tr>
+<tr class="separator:a6988820a67f853ab67605fa5f4651ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>UI Controller of Meeting Service Interface Valid only for ZOOM style user interface mode. </p>

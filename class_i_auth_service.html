@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.56616.1028</span>
+   &#160;<span id="projectnumber">4.4.57220.1211</span>
    </div>
   </td>
  </tr>
@@ -111,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa1872f545e785b30e18a33f84421c75e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#aa1872f545e785b30e18a33f84421c75e">SDKAuth</a> (<a class="el" href="structtag_auth_param.html">AuthParam</a> &amp;authParam)=0</td></tr>
 <tr class="memdesc:aa1872f545e785b30e18a33f84421c75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK Authentication.  <a href="#aa1872f545e785b30e18a33f84421c75e">More...</a><br /></td></tr>
 <tr class="separator:aa1872f545e785b30e18a33f84421c75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f75bbae54ee07669cfd12ddd659783"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a84f75bbae54ee07669cfd12ddd659783">SDKAuth</a> (<a class="el" href="structtag_auth_context.html">AuthContext</a> &amp;authContext)=0</td></tr>
+<tr class="memdesc:a84f75bbae54ee07669cfd12ddd659783"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK Authentication with jwt token.  <a href="#a84f75bbae54ee07669cfd12ddd659783">More...</a><br /></td></tr>
+<tr class="separator:a84f75bbae54ee07669cfd12ddd659783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a07bf5515098bed28fc5833e307ae75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="auth__service__interface_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_auth_service.html#a3a07bf5515098bed28fc5833e307ae75">GetAuthResult</a> ()=0</td></tr>
 <tr class="memdesc:a3a07bf5515098bed28fc5833e307ae75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get authentication status.  <a href="#a3a07bf5515098bed28fc5833e307ae75">More...</a><br /></td></tr>
 <tr class="separator:a3a07bf5515098bed28fc5833e307ae75"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -371,7 +374,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa1872f545e785b30e18a33f84421c75e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1872f545e785b30e18a33f84421c75e">&#9670;&nbsp;</a></span>SDKAuth()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1872f545e785b30e18a33f84421c75e">&#9670;&nbsp;</a></span>SDKAuth() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,6 +401,41 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">authParam</td><td>The parameter to be used for authentication SDK, see <a class="el" href="">AuthParam</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="a84f75bbae54ee07669cfd12ddd659783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f75bbae54ee07669cfd12ddd659783">&#9670;&nbsp;</a></span>SDKAuth() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAuthService::SDKAuth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtag_auth_context.html">AuthContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>authContext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SDK Authentication with jwt token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">authContext</td><td>The parameter to be used for authentication SDK, see <a class="el" href="">AuthContext</a> structure. </td></tr>
   </table>
   </dd>
 </dl>
