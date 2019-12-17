@@ -128,6 +128,22 @@ ZOOM_SDK_NAMESPACE::SDKError CAuthSDKWorkFlow::Auth(ZOOM_SDK_NAMESPACE::AuthPara
 	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;
 }
 
+ZOOM_SDK_NAMESPACE::SDKError CAuthSDKWorkFlow::Auth(ZOOM_SDK_NAMESPACE::AuthContext& param)
+{
+	if (NULL == m_pAuthService)
+	{
+		m_pAuthService = SDKInterfaceWrap::GetInst().GetAuthService();
+		SDKInterfaceWrap::GetInst().ListenAuthServiceEvent(this);
+	}
+	if (m_pAuthService)
+	{
+		ZOOM_SDK_NAMESPACE::SDKError err = m_pAuthService->SDKAuth(param);
+		return err;
+	}
+
+	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;
+}
+
 void CAuthSDKWorkFlow::SetUIEvent(CAuthSDKWorkFlowUIEvent* event_)
 {
 	m_pAuthUIEvent = event_;

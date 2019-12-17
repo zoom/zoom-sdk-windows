@@ -136,6 +136,8 @@ public:
 	virtual void onParticipantListBtnClicked();
 	virtual void onCustomLiveStreamMenuClicked();
 	virtual void onCCBTNClicked(){}
+	virtual void onAudioBtnClicked(ZOOM_SDK_NAMESPACE::AudioBtnClickedCallbackInfo info) {}
+	virtual void onAudioMenuBtnClicked() {}
 
 private:
 	IMeetingserviceMgrEvent* m_pSink;

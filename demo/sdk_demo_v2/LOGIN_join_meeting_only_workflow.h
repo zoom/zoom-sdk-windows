@@ -27,6 +27,7 @@ public:
 	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS ret, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo);
 	virtual void onLogout();
 	virtual void onZoomIdentityExpired();
+	virtual void onZoomAuthIdentityExpired() {}
 
 	virtual void onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult = 0);
 	virtual void onMeetingStatisticsWarningNotification(ZOOM_SDK_NAMESPACE::StatisticsWarningType type);

@@ -48,6 +48,7 @@ enum SettingsUI_page
 	Setting_General_Page = 0,
 	Setting_Audio_Page,
 	Setting_Video_Page,
+	Setting_VirtualBG_page,
 	Setting_Recording_Page,
 	Setting_UI_Custom_Page,
 	Setting_Feature_Custom_Page,

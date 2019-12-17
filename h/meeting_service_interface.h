@@ -501,6 +501,7 @@ class IMeetingWaitingRoomController;
 class IMeetingLiveStreamController;
 class IMeetingWebinarController;
 class IClosedCaptionController;
+class IMeetingQAController;
 /// \brief Meeting Service Interface
 ///
 class IMeetingService
@@ -645,6 +646,9 @@ public:
 	/// \return If the function succeeds, the return value is a pointer to IZoomRealNameAuthMeetingHelper. Otherwise returns NULL.
 	virtual IZoomRealNameAuthMeetingHelper* GetMeetingRealNameAuthController() = 0;
 
+	/// \brief Get the Q&A controller.
+	/// \return If the function succeeds, the return value is a pointer to IMeetingQAController. Otherwise returns NULL.
+	virtual IMeetingQAController* GetMeetingQAController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

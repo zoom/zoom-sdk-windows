@@ -119,6 +119,9 @@ public:
 	virtual void onCustomLiveStreamMenuClicked() {}
 	virtual void onZoomInviteDialogFailed() {}
 	virtual void onCCBTNClicked() {}
+	virtual void onAudioBtnClicked(ZOOM_SDK_NAMESPACE::AudioBtnClickedCallbackInfo info) {}
+	virtual void onAudioMenuBtnClicked() {}
+
 	//ITestAudioDeviceHelperEvent
 	virtual void OnMicSpkVolumnChanged(unsigned int MicVolume, unsigned int SpkVolume)  {}
 	virtual void OnNoAudioDeviceIsUseful(bool bMicOrSpk)  {}

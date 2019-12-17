@@ -38,6 +38,7 @@ public:
 	virtual ~CAuthSDKWorkFlow();
 
 	ZOOM_SDK_NAMESPACE::SDKError Auth(ZOOM_SDK_NAMESPACE::AuthParam& param);
+	ZOOM_SDK_NAMESPACE::SDKError Auth(ZOOM_SDK_NAMESPACE::AuthContext& param);
 	void Cleanup(){}
 	void SetUIEvent(CAuthSDKWorkFlowUIEvent* event_);
 	
@@ -45,6 +46,7 @@ public:
 	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS ret, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo){};
 	virtual void onLogout(){};
 	virtual void onZoomIdentityExpired(){};
+	virtual void onZoomAuthIdentityExpired() {}
 
 protected:
 	CAuthSDKWorkFlowUIEvent* m_pAuthUIEvent;

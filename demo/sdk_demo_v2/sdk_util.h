@@ -8,6 +8,7 @@
 #include "direct_share_helper_interface.h"
 #include "network_connection_handler_interface.h"
 #include "auth_service_interface.h"
+#include "zoom_sdk_sms_helper_interface.h"
 
 #include "meeting_service_interface.h"
 #include "meeting_service_components/meeting_annotation_interface.h"
@@ -165,6 +166,9 @@ public:
 	virtual void onParticipantListBtnClicked() = 0;
 	virtual void onCustomLiveStreamMenuClicked() = 0;
 	virtual void onZoomInviteDialogFailed() = 0;
+	virtual void onCCBTNClicked() = 0;
+	virtual void onAudioBtnClicked(ZOOM_SDK_NAMESPACE::AudioBtnClickedCallbackInfo info) = 0;
+	virtual void onAudioMenuBtnClicked() = 0;
 
 	//ITestAudioDeviceHelperEvent
 	virtual void OnMicSpkVolumnChanged(unsigned int MicVolume, unsigned int SpkVolume) = 0;
@@ -255,7 +259,10 @@ public:
 	{
 		Call_SINK_Pool(ZOOM_SDK_NAMESPACE::IAuthServiceEvent, _auth_service_event_pool, onZoomIdentityExpired())
 	}
-
+	virtual void onZoomAuthIdentityExpired()
+	{
+		Call_SINK_Pool(ZOOM_SDK_NAMESPACE::IAuthServiceEvent, _auth_service_event_pool, onZoomAuthIdentityExpired())
+	}
 	//meetings service
 	virtual void onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult = 0)
 	{
@@ -445,7 +452,21 @@ public:
 	{
 		Call_SINK_Pool(ISDKInMeetingServiceMgrEvent, _sdk_inmeeting_service_mgr_event_pool, onZoomInviteDialogFailed())
 	}
-	
+	virtual void onCCBTNClicked()
+	{
+		Call_SINK_Pool(ISDKInMeetingServiceMgrEvent, _sdk_inmeeting_service_mgr_event_pool, onCCBTNClicked())
+	}
+
+	virtual void onAudioBtnClicked(ZOOM_SDK_NAMESPACE::AudioBtnClickedCallbackInfo info)
+	{
+		Call_SINK_Pool(ISDKInMeetingServiceMgrEvent, _sdk_inmeeting_service_mgr_event_pool, onAudioBtnClicked(info))
+	}
+
+	virtual void onAudioMenuBtnClicked()
+	{
+		Call_SINK_Pool(ISDKInMeetingServiceMgrEvent, _sdk_inmeeting_service_mgr_event_pool, onAudioMenuBtnClicked())
+	}
+
 	//ITestAudioDeviceHelperEvent
 	virtual void OnMicSpkVolumnChanged(unsigned int MicVolume, unsigned int SpkVolume)
 	{

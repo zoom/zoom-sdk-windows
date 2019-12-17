@@ -175,7 +175,7 @@ class IYUVRawDataI420Converter
 public:
 	virtual YUVRawDataI420* ConvertToYUV() = 0;
 	virtual YUVRawDataI420* ConvertToYUVViaExternalBuffer(char* buffer_, int size_) = 0;
-	virtual void FillToPixelBuffer(char* ybuffer_, char* uvbuffer_, int width, int height) = 0;
+	virtual void FillToPixelBuffer(char* ybuffer_, int ybuffer_pre_row_bytes, char* uvbuffer_, int uvbuffer_pre_row_bytes,int width, int height) = 0;
 
 	virtual ~IYUVRawDataI420Converter(){}
 };

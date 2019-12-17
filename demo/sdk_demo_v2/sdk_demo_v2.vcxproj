@@ -229,6 +229,7 @@
     <ClCompile Include="settings_ui.cpp" />
     <ClCompile Include="SETTINGS_ui_custom_workflow.cpp" />
     <ClCompile Include="SETTINGS_video_workflow.cpp" />
+    <ClCompile Include="SETTINGS_virtualBG_workflow.cpp" />
     <ClCompile Include="setting_api_test.cpp" />
     <ClCompile Include="ShareToolbarWindow.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -302,6 +303,7 @@
     <ClInclude Include="settings_ui.h" />
     <ClInclude Include="SETTINGS_ui_custom_workflow.h" />
     <ClInclude Include="SETTINGS_video_workflow.h" />
+    <ClInclude Include="SETTINGS_virtualBG_workflow.h" />
     <ClInclude Include="setting_api_test.h" />
     <ClInclude Include="ShareToolbarWindow.h" />
     <ClInclude Include="stdafx.h" />

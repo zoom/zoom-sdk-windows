@@ -542,6 +542,18 @@
 							>
 						</File>
 					</Filter>
+					<Filter
+						Name="7_settings_virtual_background"
+						>
+						<File
+							RelativePath=".\SETTINGS_virtualBG_workflow.cpp"
+							>
+						</File>
+						<File
+							RelativePath=".\SETTINGS_virtualBG_workflow.h"
+							>
+						</File>
+					</Filter>
 				</Filter>
 				<Filter
 					Name="2_schedule_meeting_for_login_user"

@@ -36,6 +36,8 @@
  	  		 textcolor="#FFB7B7B7" selectedtextcolor="#FF000000" font="2" width="110" height="30" group="tab_main_setting" focuspadding="5,3,5,9"/>
  	    <Option valign="center,singleline" align="left" name="tabbtn_video_settings" text="Video" padding="0,12,0,0"
  	    	 textcolor="#FFB7B7B7" selectedtextcolor="#FF000000" font="2" width="110" height="30" group="tab_main_setting"  focuspadding="5,3,5,9"/>
+ 	    <Option valign="center,singleline" align="left" name="tabbtn_virtualBG_settings" text="Virtual Background" padding="0,12,0,0"
+ 	    	 textcolor="#FFB7B7B7" selectedtextcolor="#FF000000" font="2" width="110" height="30" group="tab_main_setting"  focuspadding="5,3,5,9"/>			 
  	    <Option valign="center,singleline" align="left" name="tabbtn_recording_settings" text="Recording" padding="0,12,0,0"
  	    	 textcolor="#FFB7B7B7" selectedtextcolor="#FF000000" font="2" width="110" height="30" group="tab_main_setting" focuspadding="5,3,5,9"/> 
  	    <Option valign="center,singleline" align="left" name="tabbtn_ui_custom" text="UI Custom" padding="0,12,0,0"
@@ -245,6 +247,34 @@
 				</HorizontalLayout>
 		  </VerticalLayout>
 		  
+		  <VerticalLayout name="panel_Virtual_background_Settings" visible="false">
+				<Container name="container_vb_video_preview" height="270" >
+				</Container>
+				<Control height="25"/>
+				<HorizontalLayout name="panel_virtual_buttons" visiable="true" height="35" align="center">
+					<Control width="35"/>
+					<Button name="btn_AddImage" text="Add Image" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="100"/>
+					<Control width="80"/>
+					<Button name="btn_RemoveImage" text="Remove Image" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="100"/>
+					<Control width="80"/>
+					<Button name="btn_PickColor" text="Pick Color" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="100"/>
+					<Control width="35"/>
+				</HorizontalLayout>
+				<Control height="25"/>
+				<HorizontalLayout name="panel_virtual_Images_list" visiable="true" height="220">
+					<List name="lst_VBGImages" text="Virtual Background Image Name" float="true" pos="30,0,0,0" width="460" height="220" bkcolor="#FFEAECEE" bordersize="1" vscrollbar="true" scrollselect="true" >
+						  <ListHeader  height="22" menu="true" >
+								  <ListHeaderItem text="Image Name" width="140" sepwidth="1" font="5"/>
+								  <ListHeaderItem text="File Path" width="320" sepwidth="1" font="5"/>
+						  </ListHeader>
+					</List>					
+				</HorizontalLayout>
+				<Control />
+				<CheckBox name="chk_have_green_background" text="I have real green backgound." height="40" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" 
+						  tooltip="Using the real green background can improve the proformance of virtual background"  multiline="true"
+							align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
+				<Control height="35"/>
+		  </VerticalLayout>
 		  
 		  <VerticalLayout name="panel_Recording_Settings" visible="false">
 		  	<Control height="10" bkcolor="#FFEFEFEF"/>

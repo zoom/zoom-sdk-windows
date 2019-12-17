@@ -79,6 +79,7 @@ public:
 	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS ret, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo);
 	virtual void onLogout();
 	virtual void onZoomIdentityExpired();
+	virtual void onZoomAuthIdentityExpired() {}
 protected:
 	CSDKLoginUIMgr* m_parentFrame;
 };

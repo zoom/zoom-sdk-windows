@@ -32,12 +32,14 @@ public:
 	bool SDKAuth(ZOOM_SDK_NAMESPACE::AuthParam& authParam);
 	bool Login(ZOOM_SDK_NAMESPACE::LoginParam& param);
 	bool LogOut();
+	ZOOM_SDK_NAMESPACE::IAuthService* GetAuthService() {return m_pAuthService;} //to test direct share
 
 public:
 	virtual void onAuthenticationReturn(ZOOM_SDK_NAMESPACE::AuthResult ret);
 	virtual void onLoginRet(ZOOM_SDK_NAMESPACE::LOGINSTATUS status, ZOOM_SDK_NAMESPACE::IAccountInfo* pAccountInfo);
 	virtual void onLogout();
 	virtual void onZoomIdentityExpired(){}
+	virtual void onZoomAuthIdentityExpired() {}
 
 private:
 	IAuthServiceMgrEvent* m_pSink;

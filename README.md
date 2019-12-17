@@ -10,14 +10,13 @@
 * `CptService.exe` -> `zCSCptService.exe`
 2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
-   * **CptHost.exe / zcscpthost.exe**
+   * **CptHost.exe**
    * **CptInstall.exe**
-   * **CptService.exe / zCSCptService.exe**
+   * **CptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
    * **zzplugin.dll**
    * **aomhost64.exe**
-   * **airhost.exe / zcsairhost.exe**
 3. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
 4. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
 
@@ -85,6 +84,11 @@ The Zoom SDK runs as a `DLL` in the context of the calling application process.
 
 Please visit [[https://marketplace.zoom.us/docs/sdk/native-sdks/windows](https://marketplace.zoom.us/docs/sdk/native-sdks/windows)] for details of each features and functions.
 
+## SDK Reference
+
+You may find the SDK interface reference at [https://marketplace.zoom.us/docs/sdk/native-sdks/windows/sdk-reference](https://marketplace.zoom.us/docs/sdk/native-sdks/windows/sdk-reference).
+If you would like to get a local copy of the SDK reference, you may [download it here](https://github.com/zoom/zoom-sdk-windows/archive/gh-pages.zip).
+
 ## Versioning
 
 For the versions available, see the [tags on this repository](https://github.com/zoom/zoom-sdk-windows/tags).
@@ -97,15 +101,14 @@ Please refer to our [CHANGELOG](https://github.com/zoom/zoom-sdk-windows/blob/ma
 
 * :one: `Getting ERROR Code: 105035 while using Windows SDK`:
   * **In most of the cases, this is caused by resigning or adding new signature to the following files while integrating and deploying our SDK**:
-   * **CptControl.exe**
-   * **CptHost.exe / zcscpthost.exe**
-   * **CptInstall.exe**
-   * **CptService.exe / zCSCptService.exe**
-   * **CptShare.dll**
-   * **zzhost.dll**
-   * **zzplugin.dll**
-   * **aomhost64.exe**
-   * **airhost.exe / zcsairhost.exe**
+     * **CptControl.exe**
+     * **CptHost.exe**
+     * **CptInstall.exe**
+     * **CptService.exe**
+     * **CptShare.dll**
+     * **zzhost.dll**
+     * **zzplugin.dll**
+     * **aomhost64.exe**
    
    **Please skip signing / do not add any new signatures to the above files. If the error code appears even if the above files are not being re-signed, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) and seek help.**
    

@@ -291,6 +291,10 @@ public:
 	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	virtual void EnableVideoButtonOnMeetingUI(bool bEnable) = 0;
 
+	/// \brief Set the visibility of the Audio button in the toolbar during the meeting. Default value: TRUE.
+	/// \param bEnable TRUE indicates to display the button. Otherwise not.
+	virtual void EnableAudioButtonOnMeetingUI(bool bEnable) = 0;
+
 	/// \brief Set the visibility of the buttons to enter or exit the full screen in the meeting window. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	virtual void EnableEnterAndExitFullScreenButtonOnMeetingUI(bool bEnable) = 0;
@@ -475,6 +479,21 @@ public:
 	/// \brief Set the visibility of poll on meeting UI. Default is displaying.
 	/// \param [in] bHide TRUE means hiding, otherwise not.
 	virtual void HidePollOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Set the ability to control the audio device in the meeting. Default is having the ability.
+	/// \param [in] bDisable TRUE means having no ability, otherwise not.
+	/// \This API is not recommended to call because once the bDsialbe is true, Zoom meeting may lose the control of the audio devices.
+	virtual void DisableAdvanceAudioDeivceCtrl(bool bDisable) = 0;
+
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking Audio button in the meeting. Default value: FALSE.
+	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
+	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onAudioBtnClicked(AudioBtnClickedCallbackInfo info), and the user shall deal with the subsequent logic himself.
+	virtual void RedirectClickAudioBTNEvent(bool bRedirect) = 0;
+
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking Audio Menu button in the meeting. Default value: FALSE.
+	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
+	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onAudioMenuBtnClicked(), and the user shall deal with the subsequent logic himself.
+	virtual void RedirectClickAudioMenuBTNEvent(bool bRedirect) = 0;
 };
 
 /// \brief Meeting connect configuration Interface
@@ -529,6 +548,10 @@ public:
 	/// \brief Set the visibility of the dialog  SELECT JOIN AUDIO when joining meeting. Default: FALSE.
 	/// \param bDisable TRUE indicates to hide the dialog box.
 	virtual void DisableAutoShowSelectJoinAudioDlgWhenJoinMeeting(bool bDisable) = 0;
+
+	/// \brief Set the visibility of the dialog box of joining a meeting. Default: FALSE.
+	/// \param bDisable TRUE indicates to hide the dialog box. FALSE not.
+	virtual void DisableShowJoinMeetingWnd(bool bDisable) = 0;
 };
 
 /// \brief Meeting configuration interface.

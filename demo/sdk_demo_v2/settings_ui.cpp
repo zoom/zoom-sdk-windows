@@ -162,8 +162,7 @@ void CSDKGeneralSettingsUIGroup::Notify(TNotifyUI & msg)
 		else if(msg.pSender == m_chkSplitScreenMode)
 		{
 			DoSplitScreenModeChkClick();
-		}
-		
+		}		
 		else if(msg.pSender == m_chkUseDisplayReminderWindowWhenExit)
 		{
 			DoDisplayReminderWindowWhenExitChkClick();
@@ -396,18 +395,11 @@ void CSDKAudioSettingsUIGroup::GetAudioSettingsFlags()
 	{
 		m_chkSuppressAudioNotify->SetCheck(bChecked);
 	}
-	
-	if (m_audioSettingsWorkFlow.IsMicOriginalInputEnable() && m_chkEchoCancellation)
-	{
-		m_chkEchoCancellation->SetVisible(true);
-	}
-	else
-	{
-		m_chkEchoCancellation->SetVisible(false);
-	}
+	bool bVisiableOfEcho = m_audioSettingsWorkFlow.IsMicOriginalInputEnable();
 	bChecked = m_audioSettingsWorkFlow.IsEchoCancellationEnabled();
 	if(m_chkEchoCancellation)
 	{
+		m_chkEchoCancellation->SetVisible(bVisiableOfEcho);
 		m_chkEchoCancellation->SetCheck(bChecked);
 	}
 	
@@ -1319,6 +1311,354 @@ void CSDKVideoSettingsUIGroup::OnComputerCamDeviceChanged(ZOOM_SDK_NAMESPACE::IL
 	StopTestVideo();
 	UpdateCameraList();
 }
+
+//////////////////////////////////////////////////////////////////////////
+///class CSDKVBGImageList
+CSDKVBGImageList::CSDKVBGImageList()
+{
+
+}
+
+CSDKVBGImageList::~CSDKVBGImageList()
+{
+	ClearAll();
+}
+
+int CSDKVBGImageList::GetCount()
+{
+	return m_pImageList.size();
+}
+
+ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* CSDKVBGImageList::GetItem( unsigned int index )
+{
+	if(index >= 0 && index < m_pImageList.size())
+		return m_pImageList[index];
+	else
+		return NULL;
+}
+
+void CSDKVBGImageList::AddItem( ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem )
+{
+	if(m_pImageList.capacity() < m_pImageList.max_size())
+	{
+		if (NULL == elem)
+			return;
+		m_pImageList.push_back(elem);
+	}
+}
+
+void CSDKVBGImageList::RemoveItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem)
+{
+	if(NULL == elem)
+		return;
+
+	std::vector<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo*>::iterator iter_ = m_pImageList.begin();
+	for (;m_pImageList.end() != iter_; iter_++)
+	{
+		if ((*iter_) == elem)
+		{
+			m_pImageList.erase(iter_);
+			return;
+		}
+	}
+}
+
+void CSDKVBGImageList::ClearAll()
+{
+	if(!m_pImageList.empty())
+		m_pImageList.clear();
+}
+
+
+ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* CSDKVBGImageList::GetImageInfoByName( std::wstring imageName )
+{
+	int nCount = GetCount();
+	for(int i = 0; i<nCount; ++i)
+	{
+		const wchar_t* image_name = m_pImageList[i]->GetImageName();
+		if( StrCmpCW(imageName.c_str(), image_name) == 0)
+			return m_pImageList[i];
+	}
+	return NULL;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///class CSDKVRecordingSettingsUIGroup
+CSDKVirtualBGSettingsUIGroup::CSDKVirtualBGSettingsUIGroup()
+{
+	m_settingsVBGPage = NULL;
+	m_parentFrame = NULL;
+	m_btnAddImage = NULL;
+	m_btnRemoveImage = NULL;
+	m_btnPickColor = NULL;
+	m_dwPickedColor = 0;
+	m_chkVbgHasGreenBackground = NULL;
+	m_hPreviewWnd = NULL;
+	m_pImageListUI = NULL;
+	m_pVBGImageList = NULL;
+}
+
+CSDKVirtualBGSettingsUIGroup::~CSDKVirtualBGSettingsUIGroup()
+{
+	m_settingsVBGPage = NULL;
+	m_parentFrame = NULL;
+	m_btnAddImage = NULL;
+	m_btnRemoveImage = NULL;
+	m_btnPickColor = NULL;
+	m_dwPickedColor = 0;
+	m_chkVbgHasGreenBackground = NULL;
+	m_hPreviewWnd = NULL;
+	
+}
+
+void CSDKVirtualBGSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKSettingsUIMgr* main_frame_)
+{
+	m_parentFrame = main_frame_;
+	m_settingsVBGPage = static_cast<CVerticalLayoutUI*>(ui_mgr.FindControl(_T("panel_Virtual_background_Settings")));
+	m_btnAddImage = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_AddImage")));
+	m_btnRemoveImage = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_RemoveImage")));
+	m_btnPickColor = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_PickColor")));
+	m_pImageListUI = static_cast<CListUI* >(ui_mgr.FindControl(_T("lst_VBGImages")));
+	m_chkVbgHasGreenBackground = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_have_green_background")));
+	GetVirtualBGSettingsFlags();
+	m_hPreviewWnd = ui_mgr.GetPaintWindow();
+	if(m_pImageListUI)
+	{
+		m_pImageListUI->SetContextMenuUsed(false);
+	}
+}
+
+void CSDKVirtualBGSettingsUIGroup::UninitWindow()
+{
+	if(m_pVBGImageList)
+	{
+		m_pVBGImageList->ClearAll();
+		delete m_pVBGImageList;
+		m_pVBGImageList = NULL;
+	}
+
+}
+
+void CSDKVirtualBGSettingsUIGroup::UpdateListUI()
+{
+	if(!m_pImageListUI)
+		return;
+	if(NULL == m_pVBGImageList)
+		m_pVBGImageList = new CSDKVBGImageList();
+	else
+		m_pVBGImageList->ClearAll();
+
+	GetImageList();
+
+	m_pImageListUI->RemoveAll();
+	if (m_pVBGImageList)
+	{
+		int nCount = m_pVBGImageList->GetCount();
+		for (int i=0; i<nCount; i++)
+		{
+			CDialogBuilder builder;
+			STRINGorID xml(IDXML_MEETING_PARTICIPANT_LIST_UI);
+			ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImageInfo = m_pVBGImageList->GetItem(i);
+			if(pImageInfo == NULL) 
+				continue;
+			CListTextElementUI* pListElement = new CListTextElementUI;
+			if(NULL == pListElement)
+				continue;
+
+			m_pImageListUI->Add(pListElement);
+			std::wstring strName = pImageInfo->GetImageName();
+			std::wstring strPath = pImageInfo->GetImageFilePath();
+			if(strName == _T(""))
+			{
+				strName = _T("None");
+				strPath = _T("No file is used");
+			}
+			pListElement->SetText(0, strName.c_str());// later can can add file path to the list. Wilmer: to do
+			pListElement->SetText(1, strPath.c_str());
+		}
+	}
+}
+
+void CSDKVirtualBGSettingsUIGroup::GetImageList()
+{
+	ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* >* lst_Image = m_vbgSettingsWorkFlow.GetBGImageList();
+	m_pVBGImageList->ClearAll();
+	int nCount = lst_Image->GetCount();
+	for(int i=0; i<nCount; i++)
+	{
+		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pItem = lst_Image->GetItem(i);
+		if(NULL != pItem)
+			m_pVBGImageList->AddItem(pItem);
+	}
+}
+
+void CSDKVirtualBGSettingsUIGroup::GetVirtualBGSettingsFlags()
+{
+	m_bCanUncheckGreenBG = m_vbgSettingsWorkFlow.IsSupportSmartVirtualBG();
+	bool bChecked = false;	
+	bChecked = m_vbgSettingsWorkFlow.IsUsingGreenScreenOn();
+	if(m_chkVbgHasGreenBackground)
+	{
+		m_chkVbgHasGreenBackground->SetCheck(bChecked);
+	}
+}
+
+void CSDKVirtualBGSettingsUIGroup::Show()
+{
+	if(m_settingsVBGPage)
+	{
+		m_settingsVBGPage->SetVisible(true);
+		if(m_parentFrame)
+		{
+			m_parentFrame->SetCurrentPage(m_settingsVBGPage);
+		}
+	}
+	UpdateListUI();
+	StartTestVideo();
+}
+
+void CSDKVirtualBGSettingsUIGroup::SetVideoPreviewParentWnd()
+{
+	RECT rc={155,0,635,270};
+	m_vbgSettingsWorkFlow.SetVideoPreviewParentWnd(m_hPreviewWnd,rc);
+}
+void CSDKVirtualBGSettingsUIGroup::Hide()
+{
+	if(m_settingsVBGPage)
+	{
+		m_settingsVBGPage->SetVisible(false);
+	}
+	StopTestVideo();
+}
+void CSDKVirtualBGSettingsUIGroup::Notify(TNotifyUI& msg)
+{
+	if(msg.sType == _T("click"))
+	{
+		if(msg.pSender == m_btnAddImage)
+		{
+			DoAddImageBtnClick();
+		}
+		else if(msg.pSender == m_btnRemoveImage)
+		{
+			DoRemoveImageBtnClick();
+		}
+		else if(msg.pSender == m_btnPickColor)
+		{
+			DoPickColorBtnClick();
+		}
+		else if(msg.pSender == m_chkVbgHasGreenBackground)
+		{
+			DoHasVirtualBGChkClick();
+		}
+	}
+	else if (msg.sType == _T("itemselect"))
+	{
+		if (msg.pSender == m_pImageListUI)
+		{
+			UseSelectedImageAsVBG();
+		}
+	}
+}
+
+void CSDKVirtualBGSettingsUIGroup::StartTestVideo()
+{
+	SetVideoPreviewParentWnd();
+	m_vbgSettingsWorkFlow.TestVideoStartPreview(NULL);
+}
+void CSDKVirtualBGSettingsUIGroup::StopTestVideo()
+{
+	m_vbgSettingsWorkFlow.TestVideoStopPreview();
+}
+
+void CSDKVirtualBGSettingsUIGroup::DoAddImageBtnClick()
+{
+	//open select file dialog and select an image file, then pass the file path...
+	OPENFILENAME ofn;
+	TCHAR szFile[MAX_PATH] = {0};
+
+	// Initialize OPENFILENAME
+	SecureZeroMemory(&ofn, sizeof(ofn));
+	ofn.lStructSize = sizeof(ofn);
+	ofn.hwndOwner = m_parentFrame->GetHWND();
+	ofn.lpstrFile = szFile;
+	ofn.lpstrFile[0] = '\0';
+
+	ofn.nMaxFile = sizeof(szFile);
+	ofn.lpstrFilter = _T("Picture files\0*.bmp;*.png;*.jpg;*.jpe;*.jpeg\0PNG(*.png)\0*.png\0JPEG(*.jpg; *.jpe; *.jpeg)\0*.jpg;*.jpe;*.jpeg\0BMP(*.bmp)\0*.bmp\0\0");
+	ofn.nFilterIndex = 1;
+	ofn.lpstrFileTitle = NULL;
+	ofn.nMaxFileTitle = 0;
+	ofn.lpstrInitialDir = NULL;
+	ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+	std::wstring strTitle = _T("Choose a background image");
+	ofn.lpstrTitle = strTitle.c_str();
+
+	if (GetOpenFileName(&ofn))
+	{
+		if(wcsnlen_s(szFile, _countof(szFile)) > 0)
+		{
+			if(ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS == m_vbgSettingsWorkFlow.AddBGImage(szFile))
+				UpdateListUI();
+		}
+	}
+}
+void CSDKVirtualBGSettingsUIGroup::DoRemoveImageBtnClick()
+{
+	if(m_pVBGImageList && m_pImageListUI)
+	{
+		int index = m_pImageListUI->GetCurSel();
+		if(0 == index)
+			return;
+		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImageInfo = m_pVBGImageList->GetItem(index);
+		if(pImageInfo)
+		{
+			m_vbgSettingsWorkFlow.RemoveBGImage(pImageInfo);
+		}
+	}
+}
+void CSDKVirtualBGSettingsUIGroup::DoPickColorBtnClick()
+{
+	m_vbgSettingsWorkFlow.BeginSelectReplaceVBColor();
+}
+void CSDKVirtualBGSettingsUIGroup::DoHasVirtualBGChkClick()
+{
+	if(NULL == m_chkVbgHasGreenBackground)
+		return;
+	bool old_status = m_chkVbgHasGreenBackground->GetCheck();
+	if(m_bCanUncheckGreenBG)
+	{
+		//m_chkVbgHasGreenBackground->SetCheck(!old_status);
+		m_vbgSettingsWorkFlow.SetUsingGreenScreen(!old_status);
+	}
+	else
+	{
+		m_chkVbgHasGreenBackground->SetCheck(old_status);
+	}
+}
+void CSDKVirtualBGSettingsUIGroup::onVBImageDidDownloaded()
+{
+	//to do
+}
+void CSDKVirtualBGSettingsUIGroup::onGreenVBDidUpdateWithReplaceColor(DWORD selectedColor)
+{
+	//to do
+	m_dwPickedColor = selectedColor;
+}
+void CSDKVirtualBGSettingsUIGroup::onSelectedVBImageChanged()
+{
+	//to do
+}
+void CSDKVirtualBGSettingsUIGroup::UseSelectedImageAsVBG()
+{
+	if(m_pImageListUI && m_pVBGImageList)
+	{
+		int index = m_pImageListUI->GetCurSel();
+		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImageInfo = m_pVBGImageList->GetItem(index);
+		if(pImageInfo)
+		{
+			m_vbgSettingsWorkFlow.UseBGImage(pImageInfo);
+		}
+	}
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///class CSDKVRecordingSettingsUIGroup
 CSDKRecordingSettingsUIGroup::CSDKRecordingSettingsUIGroup()
@@ -1377,7 +1717,6 @@ void CSDKRecordingSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKSetti
 	m_parentFrame = main_frame_;
 	
 	GetRecrodingSettingsFlags();
-	
 	ShowSaveLocation();
 }
 void CSDKRecordingSettingsUIGroup::UninitWindow()
@@ -1570,14 +1909,12 @@ void CSDKRecordingSettingsUIGroup::GetRecrodingSettingsFlags()
 	{
 		m_chkShowVideoThumbnailWhenShare->SetCheck(bChecked);
 	}
-	if (m_recordingSettingsWorkFlow.IsShowVideoThumbnailWhenShareEnabled() && m_chkPlaceVideoNextToShareInRecord)
+	bChecked = m_recordingSettingsWorkFlow.IsShowVideoThumbnailWhenShareEnabled();
+	if (m_chkPlaceVideoNextToShareInRecord)
 	{
-		m_chkPlaceVideoNextToShareInRecord->SetVisible(true);
+		m_chkPlaceVideoNextToShareInRecord->SetVisible(bChecked);
 	}
-	else
-	{
-		m_chkPlaceVideoNextToShareInRecord->SetVisible(false);
-	}
+
 	bChecked = m_recordingSettingsWorkFlow.IsPlaceVideoNextToShareInRecordEnabled();
 	if(m_chkPlaceVideoNextToShareInRecord)
 	{
@@ -3134,6 +3471,7 @@ CSDKSettingsUIMgr::CSDKSettingsUIMgr()
 	m_btnGeneralSettings = NULL;
 	m_btnAudioSettings = NULL;
 	m_btnVideoSettings = NULL;
+	m_btnVirtualBGSettings = NULL;
 	m_btnRecordingSettings = NULL; 
 	m_btnUICustomSettings = NULL;
 	m_btnFeatureCustomSettings = NULL;
@@ -3151,6 +3489,7 @@ CSDKSettingsUIMgr::~CSDKSettingsUIMgr()
 	m_btnGeneralSettings = NULL;
 	m_btnAudioSettings = NULL;
 	m_btnVideoSettings = NULL;
+	m_btnVirtualBGSettings = NULL;
 	m_btnRecordingSettings = NULL; 
 	m_btnUICustomSettings = NULL;
 	m_btnFeatureCustomSettings = NULL;
@@ -3173,6 +3512,7 @@ void CSDKSettingsUIMgr::InitWindow()
 	m_GeneralSettingsUIGroup.InitWindow(m_PaintManager,this);
 	m_AudioSettingsUIGroup.InitWindow(m_PaintManager,this);
 	m_VideoSettingsUIGroup.InitWindow(m_PaintManager,this);
+	m_virtualBGSettingUIGroup.InitWindow(m_PaintManager,this);
 	m_RecordingSettingsUIGroup.InitWindow(m_PaintManager,this);
 	m_UICustomSettingsUIGroup.InitWindow(m_PaintManager,this);
 	m_FeatureCustomSettingsUIGroup.InitWindow(m_PaintManager,this);
@@ -3193,6 +3533,8 @@ void CSDKSettingsUIMgr::InitWindow()
 	m_btnAudioSettings = static_cast<COptionUI*>(m_PaintManager.FindControl(_T("tabbtn_audio_settings")));
 	m_audio_settings_page = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("panel_Audio_Settings")));
 	m_btnVideoSettings = static_cast<COptionUI*>(m_PaintManager.FindControl(_T("tabbtn_video_settings")));
+	m_virtualBG_settings_page = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("panel_Virtual_background_Settings")));
+	m_btnVirtualBGSettings = static_cast<COptionUI*>(m_PaintManager.FindControl(_T("tabbtn_virtualBG_settings")));
 	m_video_settings_page = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("panel_Video_Settings")));
 	m_btnRecordingSettings = static_cast<COptionUI*>(m_PaintManager.FindControl(_T("tabbtn_recording_settings")));
 	m_recording_settings_page = static_cast<CVerticalLayoutUI*>(m_PaintManager.FindControl(_T("panel_Recording_Settings")));
@@ -3219,6 +3561,10 @@ void CSDKSettingsUIMgr::Notify( TNotifyUI& msg )
 		{
 			SwitchToPage(Setting_Video_Page);
 		}
+		else if(msg.pSender == m_btnVirtualBGSettings && m_currentPage != m_virtualBG_settings_page)
+		{
+			SwitchToPage(Setting_VirtualBG_page);
+		}
 		else if(msg.pSender == m_btnRecordingSettings && m_currentPage != m_recording_settings_page)
 		{
 			SwitchToPage(Setting_Recording_Page);
@@ -3243,6 +3589,10 @@ void CSDKSettingsUIMgr::Notify( TNotifyUI& msg )
 		{
 			m_VideoSettingsUIGroup.Notify(msg);
 		}
+		else if(m_currentPage == m_virtualBG_settings_page)
+		{
+			m_virtualBGSettingUIGroup.Notify(msg);
+		}
 		else if(m_currentPage == m_recording_settings_page)
 		{
 			m_RecordingSettingsUIGroup.Notify(msg);
@@ -3264,6 +3614,7 @@ void CSDKSettingsUIMgr::Notify( TNotifyUI& msg )
 		m_RecordingSettingsUIGroup.Notify(msg);
 		m_UICustomSettingsUIGroup.Notify(msg);
 		m_FeatureCustomSettingsUIGroup.Notify(msg);
+		m_virtualBGSettingUIGroup.Notify(msg);
 	}
 }
 LRESULT  CSDKSettingsUIMgr::HandleMessage(UINT uMsg,WPARAM wParam,LPARAM IParam)
@@ -3305,18 +3656,20 @@ LRESULT  CSDKSettingsUIMgr::HandleMessage(UINT uMsg,WPARAM wParam,LPARAM IParam)
 }
 void CSDKSettingsUIMgr::SwitchToPage(SettingsUI_page nPage)
 {
-	if (m_GeneralSettingsUIGroup.IsVisable())
+	if(m_GeneralSettingsUIGroup.IsVisable())
 		m_GeneralSettingsUIGroup.Hide();
-	if (m_AudioSettingsUIGroup.IsVisable())
+	if(m_AudioSettingsUIGroup.IsVisable())
 		m_AudioSettingsUIGroup.Hide();
-	if (m_VideoSettingsUIGroup.IsVisable())
+	if(m_VideoSettingsUIGroup.IsVisable())
 		m_VideoSettingsUIGroup.Hide();
-	if (m_RecordingSettingsUIGroup.IsVisable())
+	if(m_RecordingSettingsUIGroup.IsVisable())
 		m_RecordingSettingsUIGroup.Hide();
-	if (m_UICustomSettingsUIGroup.IsVisable())
+	if(m_UICustomSettingsUIGroup.IsVisable())
 		m_UICustomSettingsUIGroup.Hide();
-	if (m_FeatureCustomSettingsUIGroup.IsVisable())
+	if(m_FeatureCustomSettingsUIGroup.IsVisable())
 		m_FeatureCustomSettingsUIGroup.Hide();
+	if(m_virtualBGSettingUIGroup.IsVisable())
+		m_virtualBGSettingUIGroup.Hide();
 	switch(nPage)
 	{
 	case Setting_General_Page:
@@ -3327,6 +3680,9 @@ void CSDKSettingsUIMgr::SwitchToPage(SettingsUI_page nPage)
 		break;
 	case Setting_Video_Page:
 		m_VideoSettingsUIGroup.Show();
+		break;
+	case Setting_VirtualBG_page:
+		m_virtualBGSettingUIGroup.Show();
 		break;
 	case Setting_Recording_Page:
 		m_RecordingSettingsUIGroup.Show();
@@ -3358,5 +3714,6 @@ LRESULT  CSDKSettingsUIMgr::OnDestroy(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /
 	m_RecordingSettingsUIGroup.UninitWindow();
 	m_UICustomSettingsUIGroup.UninitWindow();
 	m_FeatureCustomSettingsUIGroup.UninitWindow();
+	m_virtualBGSettingUIGroup.UninitWindow();
 	return 0;
 }

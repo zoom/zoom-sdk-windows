@@ -9,6 +9,7 @@
 #include "SETTINGS_recording_workflow.h"
 #include "SETTINGS_ui_custom_workflow.h"
 #include "SETTINGS_feature_custom_workflow.h"
+#include "SETTINGS_virtualBG_workflow.h"
 #ifdef _ONE_CLICK_TEST_
 #include "setting_api_test.h"
 #endif
@@ -241,6 +242,75 @@ private:
 	CButtonUI* m_btnTestVideoRotate;
 	HWND hwnd;
 };
+
+class CSDKVBGImageList
+{
+public:
+	CSDKVBGImageList();
+	virtual ~CSDKVBGImageList();
+public:
+	int GetCount();
+	ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* GetItem(unsigned int index);
+	void AddItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem);
+	ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* GetImageInfoByName(std::wstring imageName);
+	void RemoveItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem);
+	void ClearAll();
+protected:
+	std::vector<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo*> m_pImageList;
+};
+
+class CSDKVirtualBGSettingsUIGroup : public CSDKVirtualBGUIEvent
+{
+public:
+	CSDKVirtualBGSettingsUIGroup();
+	virtual ~CSDKVirtualBGSettingsUIGroup();
+	void InitWindow(CPaintManagerUI& ui_mgr, CSDKSettingsUIMgr* main_frame_);
+	void UninitWindow();
+	void GetVirtualBGSettingsFlags();
+
+	virtual void onVBImageDidDownloaded();
+	virtual void onGreenVBDidUpdateWithReplaceColor(DWORD selectedColor);
+	virtual void onSelectedVBImageChanged();
+
+	void Show();
+	void Hide();
+	bool IsVisable()
+	{
+		if (m_settingsVBGPage)
+		{
+			return m_settingsVBGPage->IsVisible();
+		}
+		return false;
+	}
+	void Notify( TNotifyUI&  msg);
+
+	void DoAddImageBtnClick();
+	void DoRemoveImageBtnClick();
+	void DoPickColorBtnClick();
+	void DoHasVirtualBGChkClick();
+	void SetVideoPreviewParentWnd();
+	void StartTestVideo();
+	void StopTestVideo();
+
+	void UpdateListUI();
+	void GetImageList();
+protected:
+	void UseSelectedImageAsVBG();
+private:
+	CVerticalLayoutUI* m_settingsVBGPage;
+	CSDKVirtualBGSettingsWorkFlow m_vbgSettingsWorkFlow;
+	CSDKSettingsUIMgr* m_parentFrame;
+	CButtonUI* m_btnAddImage;
+	CButtonUI* m_btnRemoveImage;
+	CButtonUI* m_btnPickColor;
+	DWORD	m_dwPickedColor;
+	bool	m_bCanUncheckGreenBG;
+	CCheckBoxUI* m_chkVbgHasGreenBackground;
+	HWND	m_hPreviewWnd;
+	CSDKVBGImageList* m_pVBGImageList;
+	CListUI* m_pImageListUI;
+};
+
 class CSDKRecordingSettingsUIGroup
 {
 public:
@@ -554,6 +624,7 @@ protected:
 	CSDKGeneralSettingsUIGroup m_GeneralSettingsUIGroup;
 	CSDKAudioSettingsUIGroup m_AudioSettingsUIGroup;
 	CSDKVideoSettingsUIGroup m_VideoSettingsUIGroup;
+	CSDKVirtualBGSettingsUIGroup m_virtualBGSettingUIGroup;
 	CSDKRecordingSettingsUIGroup m_RecordingSettingsUIGroup;
 	CSDKUICustomSettingsUIGroup m_UICustomSettingsUIGroup;
 	CSDKFeatureCustomSettingsUIGroup m_FeatureCustomSettingsUIGroup;
@@ -562,6 +633,7 @@ protected:
 	COptionUI* m_btnGeneralSettings;
 	COptionUI* m_btnAudioSettings;
 	COptionUI* m_btnVideoSettings;
+	COptionUI* m_btnVirtualBGSettings;
 	COptionUI* m_btnRecordingSettings;
 	COptionUI* m_btnUICustomSettings;
 	COptionUI* m_btnFeatureCustomSettings;
@@ -572,5 +644,6 @@ protected:
 	CVerticalLayoutUI* m_recording_settings_page;
 	CVerticalLayoutUI* m_ui_custom_settings_page;
 	CVerticalLayoutUI* m_feature_custom_settings_page;
+	CVerticalLayoutUI* m_virtualBG_settings_page;
 
 };

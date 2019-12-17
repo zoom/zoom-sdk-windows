@@ -24,6 +24,8 @@ extern "C"
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	SDK_API SDKError InitSDK(InitParam& initParam);
 
+
+	SDK_API SDKError SwitchDomain(const wchar_t* new_domain, bool bForce);
 	/// \brief Create meeting service interface.
 	/// \param ppMeetingService An object pointer to the IMeetingService*. 
 	/// \return If the function succeeds, the return value is SDKErr_Success while the value of ppMeetingService is not NULL.

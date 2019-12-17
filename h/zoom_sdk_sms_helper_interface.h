@@ -52,6 +52,7 @@ class IZoomRealNameAuthMeetingHelper
 public:
 	virtual bool SetEvent(IZoomRealNameAuthMeetingEvent* event_) = 0;
 	virtual bool EnableZoomAuthRealNameMeetingUIShown(bool enable) = 0;
+	virtual bool SetDefaultCellPhoneInfo(const zTCHAR* country_code, const zTCHAR* phone_number) = 0;
 	virtual IZoomRetrieveSMSVerificationCodeHandler* GetResendSMSVerificationCodeHandler() = 0;
 	virtual IZoomVerifySMSVerificationCodeHandler* GetReVerifySMSVerificationCodeHandler() = 0;
 	virtual IVector<IZoomRealNameAuthCountryInfo* >* GetSupportPhoneNumberCountryList() = 0;

@@ -87,6 +87,27 @@ typedef struct tagSplitScreenInfo
 		bInSplitScreenMode = false;
 	}
 }SplitScreenInfo;
+enum AudioCallbackActionInfo
+{
+	ACTION_NONE = 0,
+	ACTION_CHOOSE_AUDIO_DEVICE_NOAUDIODEVICECONNECTTED,
+	ACTION_CHOOSE_AUDIO_DEVICE_COMPUTERAUDIODEVICEERROR,
+	ACTION_CHOOSE_AUDIO_DEVICE_PHONECALLDEVICEERROR,
+	ACTION_NEED_JOIN_VOIP,
+	ACTION_MUTE_UNMUTE_AUDIO,
+	ACTION_SHOW_AUDIO_SETTING_WINDOW,
+};
+typedef struct tagAudioBtnClickedCallbackInfo
+{
+	unsigned int userid_MuteUnmute;
+	AudioCallbackActionInfo audio_clicked_action;
+	tagAudioBtnClickedCallbackInfo()
+	{
+		userid_MuteUnmute = 0;
+		audio_clicked_action = ACTION_NONE;
+	}
+
+}AudioBtnClickedCallbackInfo;
 
 /// \brief Callback Event of Meeting UI Controller.
 ///
@@ -120,6 +141,15 @@ public:
 	/// \brief Callback event of clicking CC menu.
 	/// \remarks The user won't receive this callback event unless he redirects the process of clicking the CUSTOME LIVE STREAM menu. For more details, see \link IMeetingUIElemConfiguration::RedirectClickCCBTNEvent() \endlink.
 	virtual void onCCBTNClicked() = 0;
+
+	/// \brief Callback event for clicking Audio button in the meeting.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the Audio button in the meeting. For more details, see \link IMeetingUIElemConfiguration::RedirectClickAudioBTNEvent() \endlink.
+	virtual void onAudioBtnClicked(AudioBtnClickedCallbackInfo info) = 0;
+	
+	/// \brief Callback event for clicking Audio Menu button in the meeting.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the Audio Menu button in the meeting. For more details, see \link IMeetingUIElemConfiguration::RedirectClickAudioMenuBTNEvent() \endlink.
+	virtual void onAudioMenuBtnClicked() = 0;
+	
 };
 
 /// \brief Meeting UI Controller Interface.

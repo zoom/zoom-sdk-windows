@@ -9,19 +9,40 @@
 
 2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
-   * **CptHost.exe / zcscpthost.exe**
+   * **CptHost.exe**
    * **CptInstall.exe**
-   * **CptService.exe / zCSCptService.exe**
+   * **CptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
    * **zzplugin.dll**
    * **aomhost64.exe**
-   * **airhost.exe / zcsairhost.exe**
 
 3. SDK file structure has changed
 
 **In order to further optimize the size of our SDK package, starting from this version, Zoom Windows SDK removes the installation package of `Microsoft VC90 runtime`. Please visit Microsoft's website to download and install the `Microsoft VC90 runtime` on your machine. Please also kindly consider adding the `Microsoft VC90 runtime` installation packages in your installation package when you publish your applications developed using Zoom Windows SDK.**
-   
+
+## 2019-12-16 @ [v4.4.57220.1211](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.57220.1211)
+
+## Added:
+* Add new interfaces for SDK initialization with JWT token.
+  * `IAuthService.SDKAuth(AuthContext& authContext)`
+* Add new interfaces for the Q&A feature in webinar.
+  * `IMeetingService.GetMeetingQAController()`
+  * `class IMeetingQAController`
+* Add new interfaces to access virtual background.
+  * `ISettingService.GetVirtualBGSettings()`
+  * `class IVirtualBGSettingContext`
+* Add a new interface to hide the audio button
+  * `IMeetingUIElemConfiguration.EnableAudioButtonOnMeetingUI(bool bEnable)`
+* Add new callbacks for the event when the audio button/menu is clicked.
+  * `IMeetingUIControllerEvent.onAudioMenuBtnClicked()`
+  * `IMeetingUIControllerEvent.onAudioBtnClicked(AudioBtnClickedCallbackInfo info)`
+* Add a new interface to disable the show join meeting window
+  * `IMeetingConfiguration.DisableShowJoinMeetingWnd(bool bDisable)`
+
+## Changed & Fixed:
+* Fixed an issue that the meeting restarts for a few times after pressing the end meeting button.
+
 ## 2019-11-04 @ [v4.4.56616.1028](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.56616.1028)
 
 ## Added
