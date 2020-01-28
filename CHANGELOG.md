@@ -2,7 +2,7 @@
 
 ## Note
 
-1. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, we renamed the filename of the following shared resources:
+1. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
 * `CptHost.exe` -> `zcscpthost.exe`
 * `airhost.exe` -> `zcsairhost.exe`
 * `CptService.exe` -> `zCSCptService.exe`
