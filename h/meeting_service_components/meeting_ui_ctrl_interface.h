@@ -87,20 +87,30 @@ typedef struct tagSplitScreenInfo
 		bInSplitScreenMode = false;
 	}
 }SplitScreenInfo;
+
+/*! \enum AudioCallbackActionInfo
+    \brief The action user suggested to take after getting the callback event "IMeetingUIControllerEvent::onAudioBtnClicked()"
+    Here are more detailed structural descriptions.
+*/
 enum AudioCallbackActionInfo
 {
-	ACTION_NONE = 0,
-	ACTION_CHOOSE_AUDIO_DEVICE_NOAUDIODEVICECONNECTTED,
-	ACTION_CHOOSE_AUDIO_DEVICE_COMPUTERAUDIODEVICEERROR,
-	ACTION_CHOOSE_AUDIO_DEVICE_PHONECALLDEVICEERROR,
-	ACTION_NEED_JOIN_VOIP,
-	ACTION_MUTE_UNMUTE_AUDIO,
-	ACTION_SHOW_AUDIO_SETTING_WINDOW,
+	ACTION_NONE = 0,///<For initialization.
+	ACTION_CHOOSE_AUDIO_DEVICE_NOAUDIODEVICECONNECTTED,///<Choose audio device because no audio device is connected yet.
+	ACTION_CHOOSE_AUDIO_DEVICE_COMPUTERAUDIODEVICEERROR,///<Choose audio device because there is an error in the connected computer audio device.
+	ACTION_CHOOSE_AUDIO_DEVICE_PHONECALLDEVICEERROR,///<Choose audio device because there is an error in the connected phone call device.
+	ACTION_NEED_JOIN_VOIP,///<Need to join voip.
+	ACTION_MUTE_UNMUTE_AUDIO,///<Mute or unmute some user's audio according to the "AudioBtnClickedCallbackInfo::userid_MuteUnmute"
+	ACTION_SHOW_AUDIO_SETTING_WINDOW,///<Show audio setting window.
 };
+
+/*! \struct tagAudioBtnClickedCallbackInfo
+    \brief The suggested action information for user to handle after getting the callback event "IMeetingUIControllerEvent::onAudioBtnClicked()"
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagAudioBtnClickedCallbackInfo
 {
-	unsigned int userid_MuteUnmute;
-	AudioCallbackActionInfo audio_clicked_action;
+	unsigned int userid_MuteUnmute;///<The id of the user that should be muted or unmuted. When no mute or unmute operation is required, the value is 0
+	AudioCallbackActionInfo audio_clicked_action;///<The suggested action for user to take.
 	tagAudioBtnClickedCallbackInfo()
 	{
 		userid_MuteUnmute = 0;

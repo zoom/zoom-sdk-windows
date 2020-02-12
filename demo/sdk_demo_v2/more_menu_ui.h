@@ -63,4 +63,5 @@ protected:
 	CListLabelElementUI* m_pListElementLocalRecord;
 	CListLabelElementUI* m_pListElementCloudRecord;
 	CListLabelElementUI* m_pListElementStopRecord;
+	CListLabelElementUI* m_pListElementStopCMR;
 };

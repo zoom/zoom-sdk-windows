@@ -9,10 +9,14 @@
 
 BEGIN_ZOOM_SDK_NAMESPACE
 
+/*! \struct tagProxySettings
+    \brief The proxy that the user want to use according to the net environment.
+    Here are more detailed structural descriptions.
+*/
 typedef struct tagProxySettings
 {
-	const wchar_t* proxy;
-	bool auto_detect;
+	const wchar_t* proxy;///<The proxy ip address and port that user want to use, should be organized like ip:port, such as '255.255.255.255:8080'. Use ';' to separate multi proxies.
+	bool auto_detect;///<TRUE indicates automatic detection.
 	tagProxySettings()
 	{
 		proxy = NULL;

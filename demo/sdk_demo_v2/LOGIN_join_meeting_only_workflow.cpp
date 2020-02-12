@@ -47,6 +47,15 @@ ZOOM_SDK_NAMESPACE::SDKError CSDKWithoutLoginStartJoinMeetingFlow::JoinMeeting(Z
 			{
 				m_pMeetingService->GetMeetingConfiguration()->SetSharingToolbarVisibility(true);
 			}
+			ZOOM_SDK_NAMESPACE::ISettingService* pSettingService = SDKInterfaceWrap::GetInst().GetSettingService();
+			if(pSettingService)
+			{
+				ZOOM_SDK_NAMESPACE::IAudioSettingContext* pAudioContext = pSettingService->GetAudioSettings();
+				if(pAudioContext)
+				{
+					pAudioContext->EnableAutoJoinAudio(true);
+				}
+			}
 			ZOOM_SDK_NAMESPACE::SDKError err = ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS;
 			err = m_pMeetingService->Join(paramJoinMeeting);
 			return err;

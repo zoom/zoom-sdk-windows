@@ -498,6 +498,7 @@ class IScheduleMeetingItemStatusCallback
 	, public ISelectMeetingItemMeetingOptionHelperEvent
 {
 public:
+	/// \brief Callback event of destroying schedule meeting item.
 	virtual void onScheduleMeetingItemDestroyed() = 0;
 };
 
@@ -547,7 +548,7 @@ public:
 	
 	/// \param meetingUniqueID Specify the meeting ID.
 	/// \return If the function succeeds, the return value is the object pointer to IScheduleMeetingItem. Otherwise failed, returns NULL.
-	///Notice that if the specified meeting is a webinar, NULL will be returned. This infterface doesn't support a webinar or a recurring one.
+	///Notice that if the specified meeting is a webinar, NULL will be returned. This interface doesn't support a webinar or a recurring one.
 	virtual IScheduleMeetingItem* CreateEditMeetingItem(UINT64 meetingUniqueID) = 0;
 	
 	/// \brief Destroy the item of editing meeting created via CreateEditMeetingItem().

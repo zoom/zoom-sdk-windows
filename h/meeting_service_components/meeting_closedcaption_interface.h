@@ -19,7 +19,7 @@ public:
 	virtual void onClosedCaptionMsgReceived(const wchar_t* ccMsg, time_t time) = 0;
 };
 
-
+/// \brief Closed caption controller interface.
 class IClosedCaptionController
 {
 public:

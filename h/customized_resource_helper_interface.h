@@ -37,6 +37,8 @@ enum SDKCustomizedURLType
 	SDKCustomizedURL_VITRULBG_LEARN_MORE,///<Set the custom Learn More URL in the virtual background tab page.
 	SDKCustomizedURL_SUPPORTURL, ///<Set the Support URL in the meeting.
 };
+
+/// \brief Customized resource helper interface.
 class ICustomizedResourceHelper
 {
 public:

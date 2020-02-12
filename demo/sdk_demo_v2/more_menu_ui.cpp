@@ -11,6 +11,7 @@ CMoreMenuUIMgr::CMoreMenuUIMgr()
 	m_pListElementLocalRecord = NULL;
 	m_pListElementCloudRecord = NULL;
 	m_pListElementStopRecord = NULL;
+	m_pListElementStopCMR = NULL;
 }
 
 CMoreMenuUIMgr::CMoreMenuUIMgr( int left, int bottom , CCustomizeInMeetingUIMgr* main_frame)
@@ -25,6 +26,7 @@ CMoreMenuUIMgr::CMoreMenuUIMgr( int left, int bottom , CCustomizeInMeetingUIMgr*
 	m_pListElementLocalRecord = NULL;
 	m_pListElementCloudRecord = NULL;
 	m_pListElementStopRecord = NULL;
+	m_pListElementStopCMR = NULL;
 }
 CMoreMenuUIMgr::~CMoreMenuUIMgr()
 {
@@ -43,6 +45,7 @@ void CMoreMenuUIMgr::InitWindow()
 	AddElement(L"Local Record");
 	AddElement(L"Cloud Record");
 	AddElement(L"Stop Record");
+	AddElement(L"Stop Cloud Record");
 	AddElement(L"Invite");
 	AddElement(L"CC");
 	AddElement(L"Camera Control");
@@ -52,10 +55,9 @@ void CMoreMenuUIMgr::InitWindow()
 	m_pListElementLocalRecord = dynamic_cast<CListLabelElementUI*>(m_PaintManager.FindControl(L"Local Record"));
 	m_pListElementCloudRecord = dynamic_cast<CListLabelElementUI*>(m_PaintManager.FindControl(L"Cloud Record"));
     m_pListElementStopRecord  = dynamic_cast<CListLabelElementUI*>(m_PaintManager.FindControl(L"Stop Record"));
-	if (m_pListElementStopRecord){
-		//m_pListElementStopRecord->SetVisible(false);
-		m_pListElementStopRecord->SetEnabled(false);
-	}
+	if (m_pListElementStopRecord) m_pListElementStopRecord->SetEnabled(false);
+	m_pListElementStopCMR  = dynamic_cast<CListLabelElementUI*>(m_PaintManager.FindControl(L"Stop Cloud Record"));
+	if (m_pListElementStopCMR) m_pListElementStopCMR->SetEnabled(false);
 
 	// for test add and remove element.
 	/*
@@ -156,7 +158,7 @@ void CMoreMenuUIMgr::Notify( TNotifyUI& msg )
 			CustomizedUIRecordMgr::GetInstance()->StartCloudRecording();
 			m_pListElementLocalRecord->SetEnabled(false);
 			m_pListElementCloudRecord->SetEnabled(false);
-			m_pListElementStopRecord->SetEnabled(true);
+			m_pListElementStopCMR->SetEnabled(true);
 		}
 		else if (msg.pSender == m_PaintManager.FindControl(L"Stop Record"))
 		{
@@ -166,6 +168,13 @@ void CMoreMenuUIMgr::Notify( TNotifyUI& msg )
 			m_pListElementLocalRecord->SetEnabled(true);
 			m_pListElementCloudRecord->SetEnabled(true);
 			m_pListElementStopRecord->SetEnabled(false);
+		}
+		else if (msg.pSender == m_PaintManager.FindControl(L"Stop Cloud Record"))
+		{
+			CustomizedUIRecordMgr::GetInstance()->StopCloudRecording();
+			m_pListElementStopCMR->SetEnabled(false);
+			m_pListElementLocalRecord->SetEnabled(true);
+			m_pListElementCloudRecord->SetEnabled(true);
 		}
 
 		if (msg.pSender != m_PaintManager.FindControl(L"More Features"))

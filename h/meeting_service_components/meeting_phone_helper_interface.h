@@ -8,6 +8,7 @@
 #include "..\zoom_sdk_def.h"
 
 BEGIN_ZOOM_SDK_NAMESPACE
+/// \brief Phone meeting support country information interface.
 class IMeetingPhoneSupportCountryInfo
 {
 public:
@@ -94,6 +95,8 @@ enum PhoneFailedReason
 	PhoneFailedReason_Block_High_Rate,///<The call-out is blocked by the system due to the high cost.
 	PhoneFailedReason_Block_Too_Frequent,///<All the invitees invited by the call should press the button one(1) to join the meeting. In case that many invitees do not press the button that leads to time out, the call invitation for this meeting shall be banned.
 };
+
+/// \brief Meeting phone helper callback event.
 class IMeetingPhoneHelperEvent
 {
 public:

@@ -72,6 +72,7 @@ enum SDK_LANGUAGE_ID
 	LANGUAGE_French,///<In French.
 	LANGUAGE_Portuguese,///<In Portuguese.
 	LANGUAGE_Russian,///<In Russian.
+	LANGUAGE_Korean,///<In Korean.
 };
 
 /*! \struct tagWndPosition
@@ -131,7 +132,7 @@ typedef struct tagCustomizedLanguageInfo
 typedef struct tagConfigurableOptions
 {
 	CustomizedLanguageInfo customizedLang;///The custom resource information.
-	int optionalFeatures;///<Additional functional configuration. The function currently supports only whether to use the custom UI mode. When the value of the optionalFeatures&ENABLE_CUSTOMIZED_UI_FLAG is TRUE, it means to the Use the custom UI mode. Otherwise use the traditional interface mode.
+	int optionalFeatures;///<Additional functional configuration. The function currently supports whether to use the custom UI mode only. When the value of the optionalFeatures&ENABLE_CUSTOMIZED_UI_FLAG is TRUE, it means the custom UI mode will be used. Otherwise the Zoom UI mode will be used.
 	const wchar_t* sdkPathPostfix;
 	tagConfigurableOptions()
 	{
@@ -141,6 +142,10 @@ typedef struct tagConfigurableOptions
 
 }ConfigurableOptions;
 
+/*! \enum SDK_APP_Locale
+    \brief SDK_APP locale type.
+    Here are more detailed structural descriptions.
+*/
 enum SDK_APP_Locale
 {
 	SDK_APP_Locale_Default,
@@ -165,6 +170,7 @@ typedef struct tagInitParam
 	unsigned int uiLogFileSize; ///<Size of a log file in M(megabyte). The default size is 5M. There are 5 log files in total and the file size varies from 1M to 50M. 
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
 	SDK_APP_Locale locale;
+	bool permonitor_awareness_mode;
 	tagInitParam()
 	{
 		strWebDomain = NULL;
@@ -177,6 +183,7 @@ typedef struct tagInitParam
 		enableLogByDefault = false;
 		uiLogFileSize = 5;
 		locale = SDK_APP_Locale_Default;
+		permonitor_awareness_mode = true;
 	}
 }InitParam;
 

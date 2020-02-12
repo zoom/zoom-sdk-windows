@@ -138,6 +138,8 @@ public:
 	/// \remarks Valid for both Zoom style and customize user interface mode.
 	virtual SDKError StopAttendeeVideo(unsigned int userid) = 0;
 
+	/// \brief Get camera controller interface.
+	/// \return If the function succeeds, the return value is a pointer to ICameraController. Otherwise returns NULL.
 	virtual ICameraController* GetMyCameraController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE

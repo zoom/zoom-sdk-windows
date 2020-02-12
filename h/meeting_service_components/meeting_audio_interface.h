@@ -50,6 +50,7 @@ public:
 	virtual SDKError Cancel() = 0;
 };
 
+/// \brief User audio status interface.
 class IUserAudioStatus
 {
 public:

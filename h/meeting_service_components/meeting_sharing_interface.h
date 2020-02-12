@@ -332,6 +332,10 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetMultiShareSettingOptions(MultiShareOption shareOption) = 0;
 
+	/// \brief Get the options for multi-participants share.
+	/// \param [out] shareOption Options for sharing, see \link MultiShareOption \endlink enum.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError GetMultiShareSettingOptions(MultiShareOption& shareOption) = 0;
 
 	/// \brief Determine whether can switch to next camera, when share camera. 

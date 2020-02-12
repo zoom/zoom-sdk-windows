@@ -73,16 +73,20 @@ enum MeetingFailCode
 	CONF_FAIL_REMOVED_BY_HOST = 61, ///<Removed by the host. 
 };  
 
+/*! \enum MeetingEndReason
+    \brief Meeting end reason.
+    Here are more detailed structural descriptions.
+*/
 enum MeetingEndReason
 {
-	EndMeetingReason_None = 0,
-	EndMeetingReason_KickByHost = 1,
-	EndMeetingReason_EndByHost = 2,
-	EndMeetingReason_JBHTimeOut = 3,
-	EndMeetingReason_NoAttendee = 4,
-	EndMeetingReason_HostStartAnotherMeeting = 5,
-	EndMeetingReason_FreeMeetingTimeOut = 6,
-	EndMeetingReason_NetworkBroken,
+	EndMeetingReason_None = 0,///<For initialization.
+	EndMeetingReason_KickByHost = 1,///<Kicked by host.
+	EndMeetingReason_EndByHost = 2,///<Ended by host.
+	EndMeetingReason_JBHTimeOut = 3,///<JBH times out.
+	EndMeetingReason_NoAttendee = 4,///<No attendee.
+	EndMeetingReason_HostStartAnotherMeeting = 5,///<Host starts another meeting.
+	EndMeetingReason_FreeMeetingTimeOut = 6,///<Free meeting times out.
+	EndMeetingReason_NetworkBroken,///<Network is broken.
 };
 
 /*! \enum MeetingType
@@ -452,9 +456,20 @@ enum StatisticsWarningType
 {
 	Statistics_Warning_None,///<No warning.
 	Statistics_Warning_Network_Quality_Bad,///<The network connection quality is bad.
-	Statistics_Warning_Busy_System,
+	Statistics_Warning_Busy_System,///<The system is busy.
 };
 
+/*! \enum OSSessionType
+    \brief OS session type.
+    Here are more detailed structural descriptions.
+*/
+enum OSSessionType
+{
+	OS_SessionType_NotHandle = 0,
+	OS_SessionType_Lock, ///<equals to WTS_SESSION_LOCK
+	OS_SessionType_Logoff,///<equals to WTS_SESSION_LOGOFF
+	OS_SessionType_Remote_DISCONNECT,///<equals to WTS_REMOTE_DISCONNECT
+};
 /// \brief Meeting service callback event.
 ///
 class IMeetingServiceEvent
@@ -513,6 +528,10 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetEvent(IMeetingServiceEvent* pEvent) = 0;
 
+	/// \brief Join meeting with web uri
+	/// \param protocol_action Specifies the web uri
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError HandleZoomWebUriProtocolAction(const wchar_t* protocol_action) = 0;
 
 	/// \brief Join the meeting.

@@ -9,13 +9,17 @@
 
 2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
-   * **CptHost.exe**
    * **CptInstall.exe**
-   * **CptService.exe**
+   * **CptHost.exe** / **zcscpthost.exe**
+   * **airhost.exe** / **zcsairhost.exe**
+   * **CptService.exe** / **zCSCptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
    * **zzplugin.dll**
    * **aomhost64.exe**
+   * **zCrashReport.dll**
+   * **libeay32.dll**
+   * **ssleay32.dll**
 
 3. SDK file structure has changed
 
@@ -58,6 +62,36 @@ HMACSHA256(
 )
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
+
+
+
+## 2020-02-20 @ [v4.6.15074.0203](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.6.15074.0203)
+
+## Added:
+* Add new features in Zoom default UI
+  * Allow Call-In Attendees to unmute in the webinar
+  * Closed captioning in breakout sessions
+  * View all participants' video in gallery view while screen sharing
+  * Fully minimize toolbar when screen sharing
+  * Notification when no sound is detected from the microphone
+  * Annotation enhancements
+  * Do not disturb automatically enabled when screen sharing
+  * Reduced volume for entering/exiting chime
+  * Rename meeting hosted with personal meeting ID
+  * Rename webinar attendees
+  * Send a message to participants in a waiting room
+  * Merge participant's video and Audio
+  * Option to select keyboard layout during remote control
+  * Advanced noise suppression
+  * Virtual background selection within video preview
+  * Meeting reactions
+  * View other participant's audio status
+* Add support for the Korean language.
+* Add support for the share page and the keyboard shortcut page under the setting tab.
+
+## Changed & Fixed:
+* Fixed an issue where the webinar chat was freezing for some users when the webinar had a large number of attendees.
+* Fixed an issue where copy/paste was not working consistently for some users on Windows 10.
 
 ## 2019-12-16 @ [v4.4.57220.1211](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.57220.1211)
 

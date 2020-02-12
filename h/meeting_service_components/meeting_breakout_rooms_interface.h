@@ -8,6 +8,8 @@
 #include "..\zoom_sdk_def.h"
 
 BEGIN_ZOOM_SDK_NAMESPACE
+
+/// \brief Meeting breakout rooms information interface.
 class IBreakoutRoomsInfo
 {
 public:

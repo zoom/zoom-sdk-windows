@@ -117,21 +117,25 @@ typedef struct tagSettingDlgShowTabPageOption
 	bool bShowGeneral;///<True indicates to show general page
 	bool bShowVideo; ///<True indicates to show video page
 	bool bShowAudio;///<True indicates to show audio page
+	bool bShowShareScreen; ///<True indicates to show share screen page
 	bool bShowVirtualBackGround;///<True indicates to show virtual background page
 	bool bSHowRecording;///<True indicates to show recording page
 	bool bShowAdvancedFeature;///<True indicates to show advance feature page
 	bool bShowStatistics;///<True indicates to show staticstics page
 	bool bShowFeedback;///<True indicates to show feed back page
+	bool bShowKeyboardShortcuts;///<True indicates to show keyboard shortcuts page
 	bool bShowAccessibility;///<True indicates to show accessibility page
 	tagSettingDlgShowTabPageOption()
 	{
 		bShowGeneral = true;
 		bShowVideo = true;
 		bShowAudio = true;
+		bShowShareScreen = true;
 		bShowVirtualBackGround = true;
 		bSHowRecording = true;
 		bShowStatistics = true;
 		bShowAccessibility = true;
+		bShowKeyboardShortcuts = true;
 		bShowAdvancedFeature = false;
 		bShowFeedback = false;
 	}
@@ -727,6 +731,7 @@ public:
 
 };
 
+/// \brief Recording setting context callback event.
 class IRecordingSettingContextEvent
 {
 public:
@@ -1032,6 +1037,7 @@ public:
 	virtual void onSelectedVBImageChanged() = 0;
 };
 
+/// \brief Virtual background setting interface.
 class IVirtualBGSettingContext
 {
 public:
