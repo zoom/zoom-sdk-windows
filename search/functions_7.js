@@ -1,9 +1,12 @@
 var searchData=
 [
   ['handlewindowsmovemsg',['HandleWindowsMoveMsg',['../class_i_customized_share_render.html#a94650115b89dde9b6e2d98205bad398e',1,'ICustomizedShareRender']]],
+  ['handlezoomweburiprotocolaction',['HandleZoomWebUriProtocolAction',['../class_i_meeting_service.html#a33a5d4ff28fee477ed80e602fb3f319f',1,'IMeetingService']]],
   ['hangup',['Hangup',['../class_i_meeting_phone_helper.html#ad0c7b40573bcc100964afc48ddfeebb4',1,'IMeetingPhoneHelper']]],
   ['hasactivevideosource',['HasActiveVideoSource',['../class_i_customized_local_recording_layout_helper.html#a65d5c7f574abaec53d93c133c6a91185',1,'ICustomizedLocalRecordingLayoutHelper']]],
   ['haslicense',['HasLicense',['../class_i_customized_u_i_mgr.html#a6dc703b2b5e9c537339a16760db6c582',1,'ICustomizedUIMgr']]],
+  ['hasliveanswers',['HasLiveAnswers',['../class_i_q_a_item_info.html#a7e63a93b9f097c059c3de2c04488ed6a',1,'IQAItemInfo']]],
+  ['hastextanswers',['HasTextAnswers',['../class_i_q_a_item_info.html#a6660b455d5e00da9e489b1cce49a71ee',1,'IQAItemInfo']]],
   ['hide',['Hide',['../class_i_customized_share_render.html#a0d378246f72fa9be0c5953adecc32180',1,'ICustomizedShareRender::Hide()'],['../class_i_video_render_element.html#a35ead52620d11e51bb0fda3f8022b344',1,'IVideoRenderElement::Hide()'],['../class_i_customized_video_container.html#adb08d3a1d9651308d7f0c9ddd9945bd4',1,'ICustomizedVideoContainer::Hide()']]],
   ['hidechatdlg',['HideChatDlg',['../class_i_meeting_u_i_controller.html#ac695fcc27de2b8a5f7498eeb36cfa17a',1,'IMeetingUIController']]],
   ['hidechatitemonmeetingui',['HideChatItemOnMeetingUI',['../class_i_meeting_u_i_elem_configuration.html#a176c2d286f9b86af2fe4967c77a8a12c',1,'IMeetingUIElemConfiguration']]],

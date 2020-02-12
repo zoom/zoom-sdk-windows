@@ -1,5 +1,12 @@
 var searchData=
 [
+  ['action_5fchoose_5faudio_5fdevice_5fcomputeraudiodeviceerror',['ACTION_CHOOSE_AUDIO_DEVICE_COMPUTERAUDIODEVICEERROR',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4a00ca92927c24361fadce7d065c5220cd',1,'meeting_ui_ctrl_interface.h']]],
+  ['action_5fchoose_5faudio_5fdevice_5fnoaudiodeviceconnectted',['ACTION_CHOOSE_AUDIO_DEVICE_NOAUDIODEVICECONNECTTED',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4adfba12618b79ed64458275dd85c27714',1,'meeting_ui_ctrl_interface.h']]],
+  ['action_5fchoose_5faudio_5fdevice_5fphonecalldeviceerror',['ACTION_CHOOSE_AUDIO_DEVICE_PHONECALLDEVICEERROR',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4a49ed2898fd7be038501a8034fc3ad758',1,'meeting_ui_ctrl_interface.h']]],
+  ['action_5fmute_5funmute_5faudio',['ACTION_MUTE_UNMUTE_AUDIO',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4ae12b2dbd3b10399714f20d868b951c88',1,'meeting_ui_ctrl_interface.h']]],
+  ['action_5fneed_5fjoin_5fvoip',['ACTION_NEED_JOIN_VOIP',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4a625ccf1f872dd05d7bf6c140d0cd6145',1,'meeting_ui_ctrl_interface.h']]],
+  ['action_5fnone',['ACTION_NONE',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4abb516226f3df30c332c998da773f56db',1,'meeting_ui_ctrl_interface.h']]],
+  ['action_5fshow_5faudio_5fsetting_5fwindow',['ACTION_SHOW_AUDIO_SETTING_WINDOW',['../meeting__ui__ctrl__interface_8h.html#a6988820a67f853ab67605fa5f4651ce4a630367970d63c0e632259534f3582474',1,'meeting_ui_ctrl_interface.h']]],
   ['advanceshareoption_5fpurecomputeraudio',['AdvanceShareOption_PureComputerAudio',['../meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01ad2bb5f2490ff5fb1f9f782220da4ff1e',1,'meeting_sharing_interface.h']]],
   ['advanceshareoption_5fsharecamera',['AdvanceShareOption_ShareCamera',['../meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01a0c6cf21231131126f5012e6dfb15d543',1,'meeting_sharing_interface.h']]],
   ['advanceshareoption_5fshareframe',['AdvanceShareOption_ShareFrame',['../meeting__sharing__interface_8h.html#a3697d0b78b9744800337b3ff9840bb01a7f2b66d3b28ceb786629e14c7bc2ae97',1,'meeting_sharing_interface.h']]],

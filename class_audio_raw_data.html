@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,31 +97,235 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">AudioRawData Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The audio raw data handler interface.  
+ <a href="class_audio_raw_data.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5a8ead575b90e1874cf58626c91958e0"><td class="memItemLeft" align="right" valign="top"><a id="a5a8ead575b90e1874cf58626c91958e0"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanAddRef</b> ()=0</td></tr>
+<tr class="memitem:a5a8ead575b90e1874cf58626c91958e0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#a5a8ead575b90e1874cf58626c91958e0">CanAddRef</a> ()=0</td></tr>
+<tr class="memdesc:a5a8ead575b90e1874cf58626c91958e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the reference count can be increased.  <a href="#a5a8ead575b90e1874cf58626c91958e0">More...</a><br /></td></tr>
 <tr class="separator:a5a8ead575b90e1874cf58626c91958e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79ca03079e4244901bb1ee4ce185ea33"><td class="memItemLeft" align="right" valign="top"><a id="a79ca03079e4244901bb1ee4ce185ea33"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddRef</b> ()=0</td></tr>
+<tr class="memitem:a79ca03079e4244901bb1ee4ce185ea33"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#a79ca03079e4244901bb1ee4ce185ea33">AddRef</a> ()=0</td></tr>
+<tr class="memdesc:a79ca03079e4244901bb1ee4ce185ea33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one to the reference count.  <a href="#a79ca03079e4244901bb1ee4ce185ea33">More...</a><br /></td></tr>
 <tr class="separator:a79ca03079e4244901bb1ee4ce185ea33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3114188e9c411daedea91740a20d76d"><td class="memItemLeft" align="right" valign="top"><a id="ab3114188e9c411daedea91740a20d76d"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()=0</td></tr>
+<tr class="memitem:ab3114188e9c411daedea91740a20d76d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#ab3114188e9c411daedea91740a20d76d">Release</a> ()=0</td></tr>
+<tr class="memdesc:ab3114188e9c411daedea91740a20d76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract one from the reference count.  <a href="#ab3114188e9c411daedea91740a20d76d">More...</a><br /></td></tr>
 <tr class="separator:ab3114188e9c411daedea91740a20d76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a3149d3d0c8fea3ce8836daa7203506"><td class="memItemLeft" align="right" valign="top"><a id="a1a3149d3d0c8fea3ce8836daa7203506"></a>
-virtual char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetBuffer</b> ()=0</td></tr>
+<tr class="memitem:a1a3149d3d0c8fea3ce8836daa7203506"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#a1a3149d3d0c8fea3ce8836daa7203506">GetBuffer</a> ()=0</td></tr>
+<tr class="memdesc:a1a3149d3d0c8fea3ce8836daa7203506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the audio raw data.  <a href="#a1a3149d3d0c8fea3ce8836daa7203506">More...</a><br /></td></tr>
 <tr class="separator:a1a3149d3d0c8fea3ce8836daa7203506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ba9b03cd984a0af4ca989402f68d484"><td class="memItemLeft" align="right" valign="top"><a id="a2ba9b03cd984a0af4ca989402f68d484"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetBufferLen</b> ()=0</td></tr>
+<tr class="memitem:a2ba9b03cd984a0af4ca989402f68d484"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#a2ba9b03cd984a0af4ca989402f68d484">GetBufferLen</a> ()=0</td></tr>
+<tr class="memdesc:a2ba9b03cd984a0af4ca989402f68d484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer length of the audio raw data.  <a href="#a2ba9b03cd984a0af4ca989402f68d484">More...</a><br /></td></tr>
 <tr class="separator:a2ba9b03cd984a0af4ca989402f68d484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c14f936909ed4e2ff94f7f9297f9ff"><td class="memItemLeft" align="right" valign="top"><a id="ae1c14f936909ed4e2ff94f7f9297f9ff"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetSampleRate</b> ()=0</td></tr>
+<tr class="memitem:ae1c14f936909ed4e2ff94f7f9297f9ff"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#ae1c14f936909ed4e2ff94f7f9297f9ff">GetSampleRate</a> ()=0</td></tr>
+<tr class="memdesc:ae1c14f936909ed4e2ff94f7f9297f9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sample rate of the audio raw data.  <a href="#ae1c14f936909ed4e2ff94f7f9297f9ff">More...</a><br /></td></tr>
 <tr class="separator:ae1c14f936909ed4e2ff94f7f9297f9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4258cd128e35b2e5f9144bcf753ebb"><td class="memItemLeft" align="right" valign="top"><a id="a7c4258cd128e35b2e5f9144bcf753ebb"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetChannelNum</b> ()=0</td></tr>
+<tr class="memitem:a7c4258cd128e35b2e5f9144bcf753ebb"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_raw_data.html#a7c4258cd128e35b2e5f9144bcf753ebb">GetChannelNum</a> ()=0</td></tr>
+<tr class="memdesc:a7c4258cd128e35b2e5f9144bcf753ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the channel number of the audio raw data.  <a href="#a7c4258cd128e35b2e5f9144bcf753ebb">More...</a><br /></td></tr>
 <tr class="separator:a7c4258cd128e35b2e5f9144bcf753ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The audio raw data handler interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a79ca03079e4244901bb1ee4ce185ea33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ca03079e4244901bb1ee4ce185ea33">&#9670;&nbsp;</a></span>AddRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool AudioRawData::AddRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add one to the reference count. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+
+</div>
+</div>
+<a id="a5a8ead575b90e1874cf58626c91958e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a8ead575b90e1874cf58626c91958e0">&#9670;&nbsp;</a></span>CanAddRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool AudioRawData::CanAddRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if the reference count can be increased. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates to the reference count can be increased. </dd></dl>
+
+</div>
+</div>
+<a id="a1a3149d3d0c8fea3ce8836daa7203506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3149d3d0c8fea3ce8836daa7203506">&#9670;&nbsp;</a></span>GetBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* AudioRawData::GetBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the audio raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the audio raw data. </dd></dl>
+
+</div>
+</div>
+<a id="a2ba9b03cd984a0af4ca989402f68d484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba9b03cd984a0af4ca989402f68d484">&#9670;&nbsp;</a></span>GetBufferLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int AudioRawData::GetBufferLen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the buffer length of the audio raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>The length of the audio raw data. </dd></dl>
+
+</div>
+</div>
+<a id="a7c4258cd128e35b2e5f9144bcf753ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4258cd128e35b2e5f9144bcf753ebb">&#9670;&nbsp;</a></span>GetChannelNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int AudioRawData::GetChannelNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the channel number of the audio raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>The channel number of the audio raw data. </dd></dl>
+
+</div>
+</div>
+<a id="ae1c14f936909ed4e2ff94f7f9297f9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c14f936909ed4e2ff94f7f9297f9ff">&#9670;&nbsp;</a></span>GetSampleRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int AudioRawData::GetSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the sample rate of the audio raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>The sample rate of the audio raw data. </dd></dl>
+
+</div>
+</div>
+<a id="ab3114188e9c411daedea91740a20d76d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3114188e9c411daedea91740a20d76d">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int AudioRawData::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtract one from the reference count. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current reference count. If the currrent reference count is 0, the SDK will delete this object instance. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>

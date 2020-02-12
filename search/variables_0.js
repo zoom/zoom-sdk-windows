@@ -6,5 +6,7 @@ var searchData=
   ['apiuserjoin',['apiuserJoin',['../structtag_join_param.html#a6031d5af8a68c4a025b8c733ebc1ccf8',1,'tagJoinParam']]],
   ['apiuserstart',['apiuserStart',['../structtag_start_param.html#ae9f0619ce15ea4d4f24fd4c7cf0e0f38',1,'tagStartParam']]],
   ['appkey',['appKey',['../structtag_auth_param.html#a3c06e3061ceab88f814202e7df693949',1,'tagAuthParam']]],
-  ['appsecret',['appSecret',['../structtag_auth_param.html#aaf11838dd8faa517c8b58773650ab76c',1,'tagAuthParam']]]
+  ['appsecret',['appSecret',['../structtag_auth_param.html#aaf11838dd8faa517c8b58773650ab76c',1,'tagAuthParam']]],
+  ['audio_5fclicked_5faction',['audio_clicked_action',['../structtag_audio_btn_clicked_callback_info.html#aedd2de444a530ecc9183343033f81fcf',1,'tagAudioBtnClickedCallbackInfo']]],
+  ['auto_5fdetect',['auto_detect',['../structtag_proxy_settings.html#a3f61aa171e8967053ccb2e127a166931',1,'tagProxySettings']]]
 ];

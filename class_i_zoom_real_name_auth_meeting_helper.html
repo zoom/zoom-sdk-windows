@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,28 +97,236 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IZoomRealNameAuthMeetingHelper Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Real name auth meeting helper Interface.  
+ <a href="class_i_zoom_real_name_auth_meeting_helper.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__sms__helper__interface_8h_source.html">zoom_sdk_sms_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac566deecc10622e4acae50acbffe43a8"><td class="memItemLeft" align="right" valign="top"><a id="ac566deecc10622e4acae50acbffe43a8"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetEvent</b> (<a class="el" href="class_i_zoom_real_name_auth_meeting_event.html">IZoomRealNameAuthMeetingEvent</a> *event_)=0</td></tr>
+<tr class="memitem:ac566deecc10622e4acae50acbffe43a8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html#ac566deecc10622e4acae50acbffe43a8">SetEvent</a> (<a class="el" href="class_i_zoom_real_name_auth_meeting_event.html">IZoomRealNameAuthMeetingEvent</a> *event_)=0</td></tr>
+<tr class="memdesc:ac566deecc10622e4acae50acbffe43a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the real name auth meeting helper callback event handler.  <a href="#ac566deecc10622e4acae50acbffe43a8">More...</a><br /></td></tr>
 <tr class="separator:ac566deecc10622e4acae50acbffe43a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60a4f7d1f35b151ac221ab6e39c4dcc4"><td class="memItemLeft" align="right" valign="top"><a id="a60a4f7d1f35b151ac221ab6e39c4dcc4"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>EnableZoomAuthRealNameMeetingUIShown</b> (bool enable)=0</td></tr>
+<tr class="memitem:a60a4f7d1f35b151ac221ab6e39c4dcc4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html#a60a4f7d1f35b151ac221ab6e39c4dcc4">EnableZoomAuthRealNameMeetingUIShown</a> (bool enable)=0</td></tr>
+<tr class="memdesc:a60a4f7d1f35b151ac221ab6e39c4dcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of the dialog box of auth real name when needed. Default value: TRUE.  <a href="#a60a4f7d1f35b151ac221ab6e39c4dcc4">More...</a><br /></td></tr>
 <tr class="separator:a60a4f7d1f35b151ac221ab6e39c4dcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dabb1f88f082a9785b1e27c87231545"><td class="memItemLeft" align="right" valign="top"><a id="a2dabb1f88f082a9785b1e27c87231545"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetDefaultCellPhoneInfo</b> (const zTCHAR *country_code, const zTCHAR *phone_number)=0</td></tr>
+<tr class="memitem:a2dabb1f88f082a9785b1e27c87231545"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html#a2dabb1f88f082a9785b1e27c87231545">SetDefaultCellPhoneInfo</a> (const zTCHAR *country_code, const zTCHAR *phone_number)=0</td></tr>
+<tr class="memdesc:a2dabb1f88f082a9785b1e27c87231545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default cellphone information to let the user bypass the real name auth to start/join meeting directly.  <a href="#a2dabb1f88f082a9785b1e27c87231545">More...</a><br /></td></tr>
 <tr class="separator:a2dabb1f88f082a9785b1e27c87231545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b9d5e084bd9c85d7f754cf1324ffa36"><td class="memItemLeft" align="right" valign="top"><a id="a8b9d5e084bd9c85d7f754cf1324ffa36"></a>
-virtual <a class="el" href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html">IZoomRetrieveSMSVerificationCodeHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetResendSMSVerificationCodeHandler</b> ()=0</td></tr>
+<tr class="memitem:a8b9d5e084bd9c85d7f754cf1324ffa36"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html">IZoomRetrieveSMSVerificationCodeHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html#a8b9d5e084bd9c85d7f754cf1324ffa36">GetResendSMSVerificationCodeHandler</a> ()=0</td></tr>
+<tr class="memdesc:a8b9d5e084bd9c85d7f754cf1324ffa36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get retrieve SMS verification code handler interface.  <a href="#a8b9d5e084bd9c85d7f754cf1324ffa36">More...</a><br /></td></tr>
 <tr class="separator:a8b9d5e084bd9c85d7f754cf1324ffa36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9d4483a1bde151d2fbca5e3444fe8df"><td class="memItemLeft" align="right" valign="top"><a id="ac9d4483a1bde151d2fbca5e3444fe8df"></a>
-virtual <a class="el" href="class_i_zoom_verify_s_m_s_verification_code_handler.html">IZoomVerifySMSVerificationCodeHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetReVerifySMSVerificationCodeHandler</b> ()=0</td></tr>
+<tr class="memitem:ac9d4483a1bde151d2fbca5e3444fe8df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_zoom_verify_s_m_s_verification_code_handler.html">IZoomVerifySMSVerificationCodeHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html#ac9d4483a1bde151d2fbca5e3444fe8df">GetReVerifySMSVerificationCodeHandler</a> ()=0</td></tr>
+<tr class="memdesc:ac9d4483a1bde151d2fbca5e3444fe8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get verify SMS verification code handler interface.  <a href="#ac9d4483a1bde151d2fbca5e3444fe8df">More...</a><br /></td></tr>
 <tr class="separator:ac9d4483a1bde151d2fbca5e3444fe8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69cae372fc8484e8659ef83ffa58661"><td class="memItemLeft" align="right" valign="top"><a id="ad69cae372fc8484e8659ef83ffa58661"></a>
-virtual <a class="el" href="class_i_vector.html">IVector</a>&lt; <a class="el" href="class_i_zoom_real_name_auth_country_info.html">IZoomRealNameAuthCountryInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSupportPhoneNumberCountryList</b> ()=0</td></tr>
+<tr class="memitem:ad69cae372fc8484e8659ef83ffa58661"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_vector.html">IVector</a>&lt; <a class="el" href="class_i_zoom_real_name_auth_country_info.html">IZoomRealNameAuthCountryInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html#ad69cae372fc8484e8659ef83ffa58661">GetSupportPhoneNumberCountryList</a> ()=0</td></tr>
+<tr class="memdesc:ad69cae372fc8484e8659ef83ffa58661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of the country information where the meeting supports real name auth.  <a href="#ad69cae372fc8484e8659ef83ffa58661">More...</a><br /></td></tr>
 <tr class="separator:ad69cae372fc8484e8659ef83ffa58661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Real name auth meeting helper Interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a60a4f7d1f35b151ac221ab6e39c4dcc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a4f7d1f35b151ac221ab6e39c4dcc4">&#9670;&nbsp;</a></span>EnableZoomAuthRealNameMeetingUIShown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IZoomRealNameAuthMeetingHelper::EnableZoomAuthRealNameMeetingUIShown </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of the dialog box of auth real name when needed. Default value: TRUE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>TRUE indicates to display the dialog box. Otherwise not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+
+</div>
+</div>
+<a id="a8b9d5e084bd9c85d7f754cf1324ffa36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9d5e084bd9c85d7f754cf1324ffa36">&#9670;&nbsp;</a></span>GetResendSMSVerificationCodeHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html">IZoomRetrieveSMSVerificationCodeHandler</a>* IZoomRealNameAuthMeetingHelper::GetResendSMSVerificationCodeHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get retrieve SMS verification code handler interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html" title="Retrieve SMS verification code handler interface. ">IZoomRetrieveSMSVerificationCodeHandler</a>. Otherwise returns NULL. </dd></dl>
+
+</div>
+</div>
+<a id="ac9d4483a1bde151d2fbca5e3444fe8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d4483a1bde151d2fbca5e3444fe8df">&#9670;&nbsp;</a></span>GetReVerifySMSVerificationCodeHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_zoom_verify_s_m_s_verification_code_handler.html">IZoomVerifySMSVerificationCodeHandler</a>* IZoomRealNameAuthMeetingHelper::GetReVerifySMSVerificationCodeHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get verify SMS verification code handler interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_zoom_verify_s_m_s_verification_code_handler.html" title="Verify SMS verification code handler interface. ">IZoomVerifySMSVerificationCodeHandler</a>. Otherwise returns NULL. </dd></dl>
+
+</div>
+</div>
+<a id="ad69cae372fc8484e8659ef83ffa58661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69cae372fc8484e8659ef83ffa58661">&#9670;&nbsp;</a></span>GetSupportPhoneNumberCountryList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_vector.html">IVector</a>&lt;<a class="el" href="class_i_zoom_real_name_auth_country_info.html">IZoomRealNameAuthCountryInfo</a>* &gt;* IZoomRealNameAuthMeetingHelper::GetSupportPhoneNumberCountryList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the list of the country information where the meeting supports real name auth. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of the country information where the meeting supports real name auth. </dd></dl>
+
+</div>
+</div>
+<a id="a2dabb1f88f082a9785b1e27c87231545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dabb1f88f082a9785b1e27c87231545">&#9670;&nbsp;</a></span>SetDefaultCellPhoneInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IZoomRealNameAuthMeetingHelper::SetDefaultCellPhoneInfo </td>
+          <td>(</td>
+          <td class="paramtype">const zTCHAR *&#160;</td>
+          <td class="paramname"><em>country_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const zTCHAR *&#160;</td>
+          <td class="paramname"><em>phone_number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set default cellphone information to let the user bypass the real name auth to start/join meeting directly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">country_code</td><td>Specifies the country code. </td></tr>
+    <tr><td class="paramname">phone_number</td><td>Specifies the phone number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+
+</div>
+</div>
+<a id="ac566deecc10622e4acae50acbffe43a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac566deecc10622e4acae50acbffe43a8">&#9670;&nbsp;</a></span>SetEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IZoomRealNameAuthMeetingHelper::SetEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_zoom_real_name_auth_meeting_event.html">IZoomRealNameAuthMeetingEvent</a> *&#160;</td>
+          <td class="paramname"><em>event_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the real name auth meeting helper callback event handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event_</td><td>A pointer to the <a class="el" href="class_i_zoom_real_name_auth_meeting_event.html" title="Real name auth meeting callback event. ">IZoomRealNameAuthMeetingEvent</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__sms__helper__interface_8h_source.html">zoom_sdk_sms_helper_interface.h</a></li>
 </ul>

@@ -36,6 +36,7 @@ var searchData=
   ['disallowattendeetalk',['DisallowAttendeeTalk',['../class_i_meeting_webinar_controller.html#aa8c6ba835a04c77200023473dd25ed80',1,'IMeetingWebinarController']]],
   ['disallowlocalrecording',['DisAllowLocalRecording',['../class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237',1,'IMeetingRecordingController']]],
   ['disallowpaneliststartvideo',['DisallowPanelistStartVideo',['../class_i_meeting_webinar_controller.html#aa0bd607f8a7e246cd950e6408eebcb4d',1,'IMeetingWebinarController']]],
+  ['dismissquestion',['DismissQuestion',['../class_i_meeting_q_a_controller.html#aae5f89c62bed6633ab6b20ca072f2fa4',1,'IMeetingQAController']]],
   ['dorefresh',['DoRefresh',['../class_i_embedded_browser.html#a5879646535350ee694f42023295c0caf',1,'IEmbeddedBrowser']]],
   ['dostop',['DoStop',['../class_i_embedded_browser.html#a07d43fb0c3db4f873a6d8b82f9e9dccb',1,'IEmbeddedBrowser']]]
 ];

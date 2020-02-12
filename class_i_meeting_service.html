@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -108,8 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e66427636ed90719978e3ecf6cae513"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a3e66427636ed90719978e3ecf6cae513">SetEvent</a> (<a class="el" href="class_i_meeting_service_event.html">IMeetingServiceEvent</a> *pEvent)=0</td></tr>
 <tr class="memdesc:a3e66427636ed90719978e3ecf6cae513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set meeting service callback event handler.  <a href="#a3e66427636ed90719978e3ecf6cae513">More...</a><br /></td></tr>
 <tr class="separator:a3e66427636ed90719978e3ecf6cae513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a5d4ff28fee477ed80e602fb3f319f"><td class="memItemLeft" align="right" valign="top"><a id="a33a5d4ff28fee477ed80e602fb3f319f"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HandleZoomWebUriProtocolAction</b> (const wchar_t *protocol_action)=0</td></tr>
+<tr class="memitem:a33a5d4ff28fee477ed80e602fb3f319f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a33a5d4ff28fee477ed80e602fb3f319f">HandleZoomWebUriProtocolAction</a> (const wchar_t *protocol_action)=0</td></tr>
+<tr class="memdesc:a33a5d4ff28fee477ed80e602fb3f319f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join meeting with web uri.  <a href="#a33a5d4ff28fee477ed80e602fb3f319f">More...</a><br /></td></tr>
 <tr class="separator:a33a5d4ff28fee477ed80e602fb3f319f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d5819fe262b8ea0f5ee6fdca828a3b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a30d5819fe262b8ea0f5ee6fdca828a3b">Join</a> (<a class="el" href="structtag_join_param.html">JoinParam</a> &amp;joinParam)=0</td></tr>
 <tr class="memdesc:a30d5819fe262b8ea0f5ee6fdca828a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join the meeting.  <a href="#a30d5819fe262b8ea0f5ee6fdca828a3b">More...</a><br /></td></tr>
@@ -573,7 +573,7 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </div><div class="memdoc">
 
 <p>Get the Q&amp;A controller. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_q_a_controller.html">IMeetingQAController</a>. Otherwise returns NULL. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_q_a_controller.html" title="Meeting q&amp;a controller interface class. ">IMeetingQAController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -601,7 +601,7 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </div><div class="memdoc">
 
 <p>Get the real name auth controller interface. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html">IZoomRealNameAuthMeetingHelper</a>. Otherwise returns NULL. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_zoom_real_name_auth_meeting_helper.html" title="Real name auth meeting helper Interface. ">IZoomRealNameAuthMeetingHelper</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
@@ -898,6 +898,41 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return is one of those enumerated in ConnectionQuality enum. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>If you are not in the meeting, the Conn_Quality_Unknow will be returned. </dd></dl>
+
+</div>
+</div>
+<a id="a33a5d4ff28fee477ed80e602fb3f319f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a5d4ff28fee477ed80e602fb3f319f">&#9670;&nbsp;</a></span>HandleZoomWebUriProtocolAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingService::HandleZoomWebUriProtocolAction </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>protocol_action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Join meeting with web uri. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">protocol_action</td><td>Specifies the web uri </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

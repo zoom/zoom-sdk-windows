@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,19 +97,111 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IZoomRealNameAuthCountryInfo Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface of country information that supports real name auth.  
+ <a href="class_i_zoom_real_name_auth_country_info.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__sms__helper__interface_8h_source.html">zoom_sdk_sms_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9501fea0eaef5a42450b4a2db5705eb"><td class="memItemLeft" align="right" valign="top"><a id="ae9501fea0eaef5a42450b4a2db5705eb"></a>
-virtual const zTCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCountryID</b> ()=0</td></tr>
+<tr class="memitem:ae9501fea0eaef5a42450b4a2db5705eb"><td class="memItemLeft" align="right" valign="top">virtual const zTCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_country_info.html#ae9501fea0eaef5a42450b4a2db5705eb">GetCountryID</a> ()=0</td></tr>
+<tr class="memdesc:ae9501fea0eaef5a42450b4a2db5705eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the country ID of the current information.  <a href="#ae9501fea0eaef5a42450b4a2db5705eb">More...</a><br /></td></tr>
 <tr class="separator:ae9501fea0eaef5a42450b4a2db5705eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7192eb40c3ef0cbcb4ec7578b761f88b"><td class="memItemLeft" align="right" valign="top"><a id="a7192eb40c3ef0cbcb4ec7578b761f88b"></a>
-virtual const zTCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCountryName</b> ()=0</td></tr>
+<tr class="memitem:a7192eb40c3ef0cbcb4ec7578b761f88b"><td class="memItemLeft" align="right" valign="top">virtual const zTCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_country_info.html#a7192eb40c3ef0cbcb4ec7578b761f88b">GetCountryName</a> ()=0</td></tr>
+<tr class="memdesc:a7192eb40c3ef0cbcb4ec7578b761f88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the country name of the current information.  <a href="#a7192eb40c3ef0cbcb4ec7578b761f88b">More...</a><br /></td></tr>
 <tr class="separator:a7192eb40c3ef0cbcb4ec7578b761f88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e749bb55752ceb71cb30a75121fff36"><td class="memItemLeft" align="right" valign="top"><a id="a2e749bb55752ceb71cb30a75121fff36"></a>
-virtual const zTCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCountryCode</b> ()=0</td></tr>
+<tr class="memitem:a2e749bb55752ceb71cb30a75121fff36"><td class="memItemLeft" align="right" valign="top">virtual const zTCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_real_name_auth_country_info.html#a2e749bb55752ceb71cb30a75121fff36">GetCountryCode</a> ()=0</td></tr>
+<tr class="memdesc:a2e749bb55752ceb71cb30a75121fff36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the country code of the current information.  <a href="#a2e749bb55752ceb71cb30a75121fff36">More...</a><br /></td></tr>
 <tr class="separator:a2e749bb55752ceb71cb30a75121fff36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface of country information that supports real name auth. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2e749bb55752ceb71cb30a75121fff36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e749bb55752ceb71cb30a75121fff36">&#9670;&nbsp;</a></span>GetCountryCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const zTCHAR* IZoomRealNameAuthCountryInfo::GetCountryCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the country code of the current information. </p>
+<dl class="section return"><dt>Returns</dt><dd>The country code. </dd></dl>
+
+</div>
+</div>
+<a id="ae9501fea0eaef5a42450b4a2db5705eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9501fea0eaef5a42450b4a2db5705eb">&#9670;&nbsp;</a></span>GetCountryID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const zTCHAR* IZoomRealNameAuthCountryInfo::GetCountryID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the country ID of the current information. </p>
+<dl class="section return"><dt>Returns</dt><dd>The country ID. </dd></dl>
+
+</div>
+</div>
+<a id="a7192eb40c3ef0cbcb4ec7578b761f88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7192eb40c3ef0cbcb4ec7578b761f88b">&#9670;&nbsp;</a></span>GetCountryName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const zTCHAR* IZoomRealNameAuthCountryInfo::GetCountryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the country name of the current information. </p>
+<dl class="section return"><dt>Returns</dt><dd>The country name. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__sms__helper__interface_8h_source.html">zoom_sdk_sms_helper_interface.h</a></li>
 </ul>

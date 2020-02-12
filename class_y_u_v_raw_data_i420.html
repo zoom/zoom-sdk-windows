@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,49 +97,421 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">YUVRawDataI420 Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The YUV raw data handler interface.  
+ <a href="class_y_u_v_raw_data_i420.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a10f0697a6a95a584caa15c7323fcf797"><td class="memItemLeft" align="right" valign="top"><a id="a10f0697a6a95a584caa15c7323fcf797"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanAddRef</b> ()=0</td></tr>
+<tr class="memitem:a10f0697a6a95a584caa15c7323fcf797"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a10f0697a6a95a584caa15c7323fcf797">CanAddRef</a> ()=0</td></tr>
+<tr class="memdesc:a10f0697a6a95a584caa15c7323fcf797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the reference count can be increased.  <a href="#a10f0697a6a95a584caa15c7323fcf797">More...</a><br /></td></tr>
 <tr class="separator:a10f0697a6a95a584caa15c7323fcf797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1306075855970587e256f3a642010d1f"><td class="memItemLeft" align="right" valign="top"><a id="a1306075855970587e256f3a642010d1f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddRef</b> ()=0</td></tr>
+<tr class="memitem:a1306075855970587e256f3a642010d1f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a1306075855970587e256f3a642010d1f">AddRef</a> ()=0</td></tr>
+<tr class="memdesc:a1306075855970587e256f3a642010d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one to the reference count.  <a href="#a1306075855970587e256f3a642010d1f">More...</a><br /></td></tr>
 <tr class="separator:a1306075855970587e256f3a642010d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5aaccc8ea8121b04c240a586d6f8b8c"><td class="memItemLeft" align="right" valign="top"><a id="ac5aaccc8ea8121b04c240a586d6f8b8c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()=0</td></tr>
+<tr class="memitem:ac5aaccc8ea8121b04c240a586d6f8b8c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#ac5aaccc8ea8121b04c240a586d6f8b8c">Release</a> ()=0</td></tr>
+<tr class="memdesc:ac5aaccc8ea8121b04c240a586d6f8b8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract one from the reference count.  <a href="#ac5aaccc8ea8121b04c240a586d6f8b8c">More...</a><br /></td></tr>
 <tr class="separator:ac5aaccc8ea8121b04c240a586d6f8b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cf011e9413fe1d924d18fffe91c7fd7"><td class="memItemLeft" align="right" valign="top"><a id="a6cf011e9413fe1d924d18fffe91c7fd7"></a>
-virtual char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetYBuffer</b> ()=0</td></tr>
+<tr class="memitem:a6cf011e9413fe1d924d18fffe91c7fd7"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a6cf011e9413fe1d924d18fffe91c7fd7">GetYBuffer</a> ()=0</td></tr>
+<tr class="memdesc:a6cf011e9413fe1d924d18fffe91c7fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y-data of the YUV raw data.  <a href="#a6cf011e9413fe1d924d18fffe91c7fd7">More...</a><br /></td></tr>
 <tr class="separator:a6cf011e9413fe1d924d18fffe91c7fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6096bd6f7f53d640c1de4d2a8ddb9f39"><td class="memItemLeft" align="right" valign="top"><a id="a6096bd6f7f53d640c1de4d2a8ddb9f39"></a>
-virtual char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetUBuffer</b> ()=0</td></tr>
+<tr class="memitem:a6096bd6f7f53d640c1de4d2a8ddb9f39"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a6096bd6f7f53d640c1de4d2a8ddb9f39">GetUBuffer</a> ()=0</td></tr>
+<tr class="memdesc:a6096bd6f7f53d640c1de4d2a8ddb9f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the u-data of the YUV raw data.  <a href="#a6096bd6f7f53d640c1de4d2a8ddb9f39">More...</a><br /></td></tr>
 <tr class="separator:a6096bd6f7f53d640c1de4d2a8ddb9f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8392d5a45bdf84d19c14327c42b8e845"><td class="memItemLeft" align="right" valign="top"><a id="a8392d5a45bdf84d19c14327c42b8e845"></a>
-virtual char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetVBuffer</b> ()=0</td></tr>
+<tr class="memitem:a8392d5a45bdf84d19c14327c42b8e845"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a8392d5a45bdf84d19c14327c42b8e845">GetVBuffer</a> ()=0</td></tr>
+<tr class="memdesc:a8392d5a45bdf84d19c14327c42b8e845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the v-data of the YUV raw data.  <a href="#a8392d5a45bdf84d19c14327c42b8e845">More...</a><br /></td></tr>
 <tr class="separator:a8392d5a45bdf84d19c14327c42b8e845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62d457bc1d9c7f0b2f631adbc3601641"><td class="memItemLeft" align="right" valign="top"><a id="a62d457bc1d9c7f0b2f631adbc3601641"></a>
-virtual char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetBuffer</b> ()=0</td></tr>
+<tr class="memitem:a62d457bc1d9c7f0b2f631adbc3601641"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a62d457bc1d9c7f0b2f631adbc3601641">GetBuffer</a> ()=0</td></tr>
+<tr class="memdesc:a62d457bc1d9c7f0b2f631adbc3601641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the YUV raw data.  <a href="#a62d457bc1d9c7f0b2f631adbc3601641">More...</a><br /></td></tr>
 <tr class="separator:a62d457bc1d9c7f0b2f631adbc3601641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a276d6ddc5dace393055e80d0f5978fd9"><td class="memItemLeft" align="right" valign="top"><a id="a276d6ddc5dace393055e80d0f5978fd9"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetBufferLen</b> ()=0</td></tr>
+<tr class="memitem:a276d6ddc5dace393055e80d0f5978fd9"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a276d6ddc5dace393055e80d0f5978fd9">GetBufferLen</a> ()=0</td></tr>
+<tr class="memdesc:a276d6ddc5dace393055e80d0f5978fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer length of the YUV raw data.  <a href="#a276d6ddc5dace393055e80d0f5978fd9">More...</a><br /></td></tr>
 <tr class="separator:a276d6ddc5dace393055e80d0f5978fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac33e2f58b31839497dd15b1306f21ab4"><td class="memItemLeft" align="right" valign="top"><a id="ac33e2f58b31839497dd15b1306f21ab4"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLimitedI420</b> ()=0</td></tr>
+<tr class="memitem:ac33e2f58b31839497dd15b1306f21ab4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#ac33e2f58b31839497dd15b1306f21ab4">IsLimitedI420</a> ()=0</td></tr>
+<tr class="memdesc:ac33e2f58b31839497dd15b1306f21ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the YUV raw data is limited range mode.  <a href="#ac33e2f58b31839497dd15b1306f21ab4">More...</a><br /></td></tr>
 <tr class="separator:ac33e2f58b31839497dd15b1306f21ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf642aa2b09953721e519e1cdea1005d"><td class="memItemLeft" align="right" valign="top"><a id="acf642aa2b09953721e519e1cdea1005d"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetStreamWidth</b> ()=0</td></tr>
+<tr class="memitem:acf642aa2b09953721e519e1cdea1005d"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#acf642aa2b09953721e519e1cdea1005d">GetStreamWidth</a> ()=0</td></tr>
+<tr class="memdesc:acf642aa2b09953721e519e1cdea1005d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stream width.  <a href="#acf642aa2b09953721e519e1cdea1005d">More...</a><br /></td></tr>
 <tr class="separator:acf642aa2b09953721e519e1cdea1005d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a02e6d5bdb018fc2fa616f77d856370"><td class="memItemLeft" align="right" valign="top"><a id="a5a02e6d5bdb018fc2fa616f77d856370"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetStreamHeight</b> ()=0</td></tr>
+<tr class="memitem:a5a02e6d5bdb018fc2fa616f77d856370"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a5a02e6d5bdb018fc2fa616f77d856370">GetStreamHeight</a> ()=0</td></tr>
+<tr class="memdesc:a5a02e6d5bdb018fc2fa616f77d856370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stream height.  <a href="#a5a02e6d5bdb018fc2fa616f77d856370">More...</a><br /></td></tr>
 <tr class="separator:a5a02e6d5bdb018fc2fa616f77d856370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a047ffe5b9b4a8246d32d4308ed69a54a"><td class="memItemLeft" align="right" valign="top"><a id="a047ffe5b9b4a8246d32d4308ed69a54a"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotation</b> ()=0</td></tr>
+<tr class="memitem:a047ffe5b9b4a8246d32d4308ed69a54a"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a047ffe5b9b4a8246d32d4308ed69a54a">GetRotation</a> ()=0</td></tr>
+<tr class="memdesc:a047ffe5b9b4a8246d32d4308ed69a54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rotation angle of the local video device.  <a href="#a047ffe5b9b4a8246d32d4308ed69a54a">More...</a><br /></td></tr>
 <tr class="separator:a047ffe5b9b4a8246d32d4308ed69a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a049083350a611d36d288e2f7d6a9ed46"><td class="memItemLeft" align="right" valign="top"><a id="a049083350a611d36d288e2f7d6a9ed46"></a>
-virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetSourceID</b> ()=0</td></tr>
+<tr class="memitem:a049083350a611d36d288e2f7d6a9ed46"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_y_u_v_raw_data_i420.html#a049083350a611d36d288e2f7d6a9ed46">GetSourceID</a> ()=0</td></tr>
+<tr class="memdesc:a049083350a611d36d288e2f7d6a9ed46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the source_id of the current YUV raw data.  <a href="#a049083350a611d36d288e2f7d6a9ed46">More...</a><br /></td></tr>
 <tr class="separator:a049083350a611d36d288e2f7d6a9ed46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The YUV raw data handler interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1306075855970587e256f3a642010d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1306075855970587e256f3a642010d1f">&#9670;&nbsp;</a></span>AddRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool YUVRawDataI420::AddRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add one to the reference count. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+
+</div>
+</div>
+<a id="a10f0697a6a95a584caa15c7323fcf797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f0697a6a95a584caa15c7323fcf797">&#9670;&nbsp;</a></span>CanAddRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool YUVRawDataI420::CanAddRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if the reference count can be increased. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates to the reference count can be increased. </dd></dl>
+
+</div>
+</div>
+<a id="a62d457bc1d9c7f0b2f631adbc3601641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d457bc1d9c7f0b2f631adbc3601641">&#9670;&nbsp;</a></span>GetBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* YUVRawDataI420::GetBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the YUV raw data. </dd></dl>
+
+</div>
+</div>
+<a id="a276d6ddc5dace393055e80d0f5978fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276d6ddc5dace393055e80d0f5978fd9">&#9670;&nbsp;</a></span>GetBufferLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int YUVRawDataI420::GetBufferLen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the buffer length of the YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>The length of the YUV raw data. </dd></dl>
+
+</div>
+</div>
+<a id="a047ffe5b9b4a8246d32d4308ed69a54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047ffe5b9b4a8246d32d4308ed69a54a">&#9670;&nbsp;</a></span>GetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int YUVRawDataI420::GetRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the rotation angle of the local video device. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return is enumerated in LocalVideoDeviceRotation enum </dd></dl>
+
+</div>
+</div>
+<a id="a049083350a611d36d288e2f7d6a9ed46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049083350a611d36d288e2f7d6a9ed46">&#9670;&nbsp;</a></span>GetSourceID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int YUVRawDataI420::GetSourceID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the source_id of the current YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>The source_id. </dd></dl>
+
+</div>
+</div>
+<a id="a5a02e6d5bdb018fc2fa616f77d856370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a02e6d5bdb018fc2fa616f77d856370">&#9670;&nbsp;</a></span>GetStreamHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int YUVRawDataI420::GetStreamHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the stream height. </p>
+<dl class="section return"><dt>Returns</dt><dd>The stream height. </dd></dl>
+
+</div>
+</div>
+<a id="acf642aa2b09953721e519e1cdea1005d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf642aa2b09953721e519e1cdea1005d">&#9670;&nbsp;</a></span>GetStreamWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int YUVRawDataI420::GetStreamWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the stream width. </p>
+<dl class="section return"><dt>Returns</dt><dd>The stream width. </dd></dl>
+
+</div>
+</div>
+<a id="a6096bd6f7f53d640c1de4d2a8ddb9f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6096bd6f7f53d640c1de4d2a8ddb9f39">&#9670;&nbsp;</a></span>GetUBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* YUVRawDataI420::GetUBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the u-data of the YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the u-data of the YUV raw data. </dd></dl>
+
+</div>
+</div>
+<a id="a8392d5a45bdf84d19c14327c42b8e845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8392d5a45bdf84d19c14327c42b8e845">&#9670;&nbsp;</a></span>GetVBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* YUVRawDataI420::GetVBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the v-data of the YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the v-data of the YUV raw data. </dd></dl>
+
+</div>
+</div>
+<a id="a6cf011e9413fe1d924d18fffe91c7fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf011e9413fe1d924d18fffe91c7fd7">&#9670;&nbsp;</a></span>GetYBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* YUVRawDataI420::GetYBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the y-data of the YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the y-data of the YUV raw data. </dd></dl>
+
+</div>
+</div>
+<a id="ac33e2f58b31839497dd15b1306f21ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33e2f58b31839497dd15b1306f21ab4">&#9670;&nbsp;</a></span>IsLimitedI420()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool YUVRawDataI420::IsLimitedI420 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine if the YUV raw data is limited range mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates to the YUV raw data is limited range mode. </dd></dl>
+
+</div>
+</div>
+<a id="ac5aaccc8ea8121b04c240a586d6f8b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5aaccc8ea8121b04c240a586d6f8b8c">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int YUVRawDataI420::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtract one from the reference count. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current reference count. If the currrent reference count is 0, the SDK will delete this object instance. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>

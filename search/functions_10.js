@@ -16,17 +16,20 @@ var searchData=
   ['redirectwebinarneedregister',['RedirectWebinarNeedRegister',['../class_i_join_meeting_behavior_configuration.html#aa34903d1224accd870c8f0bc9569e7e4',1,'IJoinMeetingBehaviorConfiguration']]],
   ['redo',['Redo',['../class_i_customized_annotation_obj.html#ac7d84feb1531893a6027252728245655',1,'ICustomizedAnnotationObj::Redo()'],['../class_i_annotation_controller.html#ad6e167403d82159fa4651a56913122aa',1,'IAnnotationController::Redo()']]],
   ['registernetworkconnectionhandler',['RegisterNetworkConnectionHandler',['../class_i_network_connection_helper.html#a53e1980370288349238f942cb18cf844',1,'INetworkConnectionHelper']]],
-  ['release',['Release',['../class_i_webinar_need_register_handler_by_url.html#a510cee37712d5e8d5fe5a018e5946ce4',1,'IWebinarNeedRegisterHandlerByUrl']]],
+  ['release',['Release',['../class_i_webinar_need_register_handler_by_url.html#a510cee37712d5e8d5fe5a018e5946ce4',1,'IWebinarNeedRegisterHandlerByUrl::Release()'],['../class_y_u_v_raw_data_i420.html#ac5aaccc8ea8121b04c240a586d6f8b8c',1,'YUVRawDataI420::Release()'],['../class_audio_raw_data.html#ab3114188e9c411daedea91740a20d76d',1,'AudioRawData::Release()']]],
   ['removebgimage',['RemoveBGImage',['../class_i_virtual_b_g_setting_context.html#af56fcbdd221c1730e9cb17e8649d81ef',1,'IVirtualBGSettingContext']]],
   ['removedefaultdialincountry',['RemoveDefaultDialInCountry',['../class_i_select_meeting_item_tel_audio_helper.html#af0b6be952492f9a1a716b0f030a00f50',1,'ISelectMeetingItemTelAudioHelper']]],
+  ['reopenquestion',['ReopenQuestion',['../class_i_meeting_q_a_controller.html#a6d6b9f130b991581db7b11ccbf03a776',1,'IMeetingQAController']]],
   ['requestcustomizedlocalrecordingsource',['RequestCustomizedLocalRecordingSource',['../class_i_meeting_recording_controller.html#aa4e63f5e1e60ee1d4209be8392af13fc',1,'IMeetingRecordingController']]],
   ['requestremotecontrol',['RequestRemoteControl',['../class_i_meeting_remote_controller.html#a29e8645e1bf0b409c7db4673c6f803a2',1,'IMeetingRemoteController']]],
   ['reset',['Reset',['../class_i_meeting_configuration.html#a9fefbc010bb6fae0207859f90a721435',1,'IMeetingConfiguration']]],
   ['resize',['Resize',['../class_i_customized_share_render.html#aba1ae342ecd2b1bb052df73e2d947043',1,'ICustomizedShareRender::Resize()'],['../class_i_customized_video_container.html#a3ea00aef9383be1c9c339c48ac905704',1,'ICustomizedVideoContainer::Resize()'],['../class_i_embedded_browser.html#abe538d5982cc30ba2b3fd54d773f0374',1,'IEmbeddedBrowser::Resize()']]],
   ['resumecurrentsharing',['ResumeCurrentSharing',['../class_i_meeting_share_controller.html#a45226c08613c2a9453b1084f28c084d0',1,'IMeetingShareController']]],
+  ['retrieve',['Retrieve',['../class_i_zoom_retrieve_s_m_s_verification_code_handler.html#aae97bfe09575004b844f4375055b402e',1,'IZoomRetrieveSMSVerificationCodeHandler']]],
   ['retrievecalevents',['RetrieveCalEvents',['../class_i_calender_service.html#ad6d8fef1a845d6ee41b309dbd358639c',1,'ICalenderService']]],
   ['retrievecustomizedresourcehelper',['RetrieveCustomizedResourceHelper',['../zoom__sdk__ext_8h.html#a8bbab4e64bd743e7656d088d429354da',1,'zoom_sdk_ext.h']]],
   ['retrieveuihooker',['RetrieveUIHooker',['../zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb',1,'zoom_sdk_ext.h']]],
   ['revokecohost',['RevokeCoHost',['../class_i_meeting_participants_controller.html#aca3fb36bb285a63b8009211ea4b1a97e',1,'IMeetingParticipantsController']]],
-  ['revokeremotecontrol',['RevokeRemoteControl',['../class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37',1,'IMeetingRemoteController']]]
+  ['revokeremotecontrol',['RevokeRemoteControl',['../class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37',1,'IMeetingRemoteController']]],
+  ['rotatelocaldevice',['RotateLocalDevice',['../class_i_video_raw_data_channel.html#a803cad443f5695321fcf81d62eae0655',1,'IVideoRawDataChannel']]]
 ];

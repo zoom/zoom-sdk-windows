@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,19 +97,174 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IYUVRawDataI420Converter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>I420 YUV raw data converter interface.  
+ <a href="class_i_y_u_v_raw_data_i420_converter.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9dc9308df2082353bd51e298ef44506b"><td class="memItemLeft" align="right" valign="top"><a id="a9dc9308df2082353bd51e298ef44506b"></a>
-virtual <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ConvertToYUV</b> ()=0</td></tr>
+<tr class="memitem:a9dc9308df2082353bd51e298ef44506b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_y_u_v_raw_data_i420_converter.html#a9dc9308df2082353bd51e298ef44506b">ConvertToYUV</a> ()=0</td></tr>
+<tr class="memdesc:a9dc9308df2082353bd51e298ef44506b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the intermediate YUV raw data to YUV raw data.  <a href="#a9dc9308df2082353bd51e298ef44506b">More...</a><br /></td></tr>
 <tr class="separator:a9dc9308df2082353bd51e298ef44506b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4eea6de0b62effd06c4305802249e94"><td class="memItemLeft" align="right" valign="top"><a id="ad4eea6de0b62effd06c4305802249e94"></a>
-virtual <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ConvertToYUVViaExternalBuffer</b> (char *buffer_, int size_)=0</td></tr>
+<tr class="memitem:ad4eea6de0b62effd06c4305802249e94"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_y_u_v_raw_data_i420_converter.html#ad4eea6de0b62effd06c4305802249e94">ConvertToYUVViaExternalBuffer</a> (char *buffer_, int size_)=0</td></tr>
+<tr class="memdesc:ad4eea6de0b62effd06c4305802249e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the intermediate YUV raw data to YUV raw data via external buffer.  <a href="#ad4eea6de0b62effd06c4305802249e94">More...</a><br /></td></tr>
 <tr class="separator:ad4eea6de0b62effd06c4305802249e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae7952d0a22006f202b968af1774e6b"><td class="memItemLeft" align="right" valign="top"><a id="acae7952d0a22006f202b968af1774e6b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>FillToPixelBuffer</b> (char *ybuffer_, int ybuffer_pre_row_bytes, char *uvbuffer_, int uvbuffer_pre_row_bytes, int width, int height)=0</td></tr>
+<tr class="memitem:acae7952d0a22006f202b968af1774e6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_y_u_v_raw_data_i420_converter.html#acae7952d0a22006f202b968af1774e6b">FillToPixelBuffer</a> (char *ybuffer_, int ybuffer_pre_row_bytes, char *uvbuffer_, int uvbuffer_pre_row_bytes, int width, int height)=0</td></tr>
+<tr class="memdesc:acae7952d0a22006f202b968af1774e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill data to the pixel buffer if expanding the size of the intermediate YUV raw data.  <a href="#acae7952d0a22006f202b968af1774e6b">More...</a><br /></td></tr>
 <tr class="separator:acae7952d0a22006f202b968af1774e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>I420 YUV raw data converter interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9dc9308df2082353bd51e298ef44506b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc9308df2082353bd51e298ef44506b">&#9670;&nbsp;</a></span>ConvertToYUV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a>* IYUVRawDataI420Converter::ConvertToYUV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the intermediate YUV raw data to YUV raw data. </p>
+<dl class="section return"><dt>Returns</dt><dd>The YUV raw data. A pointer to <a class="el" href="class_y_u_v_raw_data_i420.html" title="The YUV raw data handler interface. ">YUVRawDataI420</a>. For more details, see <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ad4eea6de0b62effd06c4305802249e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4eea6de0b62effd06c4305802249e94">&#9670;&nbsp;</a></span>ConvertToYUVViaExternalBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a>* IYUVRawDataI420Converter::ConvertToYUVViaExternalBuffer </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the intermediate YUV raw data to YUV raw data via external buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Specifies the external buffer. </td></tr>
+    <tr><td class="paramname">size_</td><td>Specifies the size of the YUV raw data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The YUV raw data. A pointer to <a class="el" href="class_y_u_v_raw_data_i420.html" title="The YUV raw data handler interface. ">YUVRawDataI420</a>. For more details, see <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a>. </dd></dl>
+
+</div>
+</div>
+<a id="acae7952d0a22006f202b968af1774e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae7952d0a22006f202b968af1774e6b">&#9670;&nbsp;</a></span>FillToPixelBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IYUVRawDataI420Converter::FillToPixelBuffer </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>ybuffer_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ybuffer_pre_row_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>uvbuffer_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>uvbuffer_pre_row_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill data to the pixel buffer if expanding the size of the intermediate YUV raw data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ybuffer_</td><td>Specifies the y-data of intermediate YUV raw data. </td></tr>
+    <tr><td class="paramname">ybuffer_pre_row_bytes</td><td>Specifies the width of the y-data. </td></tr>
+    <tr><td class="paramname">uvbuffer_</td><td>Specifies the uv-data of intermediate YUV raw data. </td></tr>
+    <tr><td class="paramname">uvbuffer_pre_row_bytes</td><td>Specifies the width of the uv-data. </td></tr>
+    <tr><td class="paramname">width</td><td>Specifies the new width to extended. </td></tr>
+    <tr><td class="paramname">height</td><td>Specifies the new height to extended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>

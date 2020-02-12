@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,22 +97,177 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IShareRawDataReceiver Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The share_raw_data callback event.  
+ <a href="class_i_share_raw_data_receiver.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae31a2707aaf6fca849472f04774f9738"><td class="memItemLeft" align="right" valign="top"><a id="ae31a2707aaf6fca849472f04774f9738"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onShareRawDataReceived</b> (<a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *data_, <a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:ae31a2707aaf6fca849472f04774f9738"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_share_raw_data_receiver.html#ae31a2707aaf6fca849472f04774f9738">onShareRawDataReceived</a> (<a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *data_, <a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:ae31a2707aaf6fca849472f04774f9738"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for receiving the share raw data.  <a href="#ae31a2707aaf6fca849472f04774f9738">More...</a><br /></td></tr>
 <tr class="separator:ae31a2707aaf6fca849472f04774f9738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8cee128986a6339be4ebc9944dddb0"><td class="memItemLeft" align="right" valign="top"><a id="a0b8cee128986a6339be4ebc9944dddb0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscribedShareUserDataOn</b> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:a0b8cee128986a6339be4ebc9944dddb0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_share_raw_data_receiver.html#a0b8cee128986a6339be4ebc9944dddb0">onSubscribedShareUserDataOn</a> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:a0b8cee128986a6339be4ebc9944dddb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for subscribed sharing user's data on.  <a href="#a0b8cee128986a6339be4ebc9944dddb0">More...</a><br /></td></tr>
 <tr class="separator:a0b8cee128986a6339be4ebc9944dddb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8524a93ee928a81d38ba00ffff60ffe"><td class="memItemLeft" align="right" valign="top"><a id="af8524a93ee928a81d38ba00ffff60ffe"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscribedShareUserDataOff</b> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:af8524a93ee928a81d38ba00ffff60ffe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_share_raw_data_receiver.html#af8524a93ee928a81d38ba00ffff60ffe">onSubscribedShareUserDataOff</a> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:af8524a93ee928a81d38ba00ffff60ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for subscribed sharing user's data off.  <a href="#af8524a93ee928a81d38ba00ffff60ffe">More...</a><br /></td></tr>
 <tr class="separator:af8524a93ee928a81d38ba00ffff60ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32fb8eb577b5c8033adfa866378ba64f"><td class="memItemLeft" align="right" valign="top"><a id="a32fb8eb577b5c8033adfa866378ba64f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscribedShareUserLeft</b> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:a32fb8eb577b5c8033adfa866378ba64f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_share_raw_data_receiver.html#a32fb8eb577b5c8033adfa866378ba64f">onSubscribedShareUserLeft</a> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:a32fb8eb577b5c8033adfa866378ba64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for subscribed sharing user left meeting.  <a href="#a32fb8eb577b5c8033adfa866378ba64f">More...</a><br /></td></tr>
 <tr class="separator:a32fb8eb577b5c8033adfa866378ba64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The share_raw_data callback event. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae31a2707aaf6fca849472f04774f9738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31a2707aaf6fca849472f04774f9738">&#9670;&nbsp;</a></span>onShareRawDataReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IShareRawDataReceiver::onShareRawDataReceived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *&#160;</td>
+          <td class="paramname"><em>data_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for receiving the share raw data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_</td><td>The share raw data. A pointer to <a class="el" href="class_y_u_v_raw_data_i420.html" title="The YUV raw data handler interface. ">YUVRawDataI420</a>. For more details, see <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a>. </td></tr>
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af8524a93ee928a81d38ba00ffff60ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8524a93ee928a81d38ba00ffff60ffe">&#9670;&nbsp;</a></span>onSubscribedShareUserDataOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IShareRawDataReceiver::onSubscribedShareUserDataOff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for subscribed sharing user's data off. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0b8cee128986a6339be4ebc9944dddb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8cee128986a6339be4ebc9944dddb0">&#9670;&nbsp;</a></span>onSubscribedShareUserDataOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IShareRawDataReceiver::onSubscribedShareUserDataOn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for subscribed sharing user's data on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32fb8eb577b5c8033adfa866378ba64f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32fb8eb577b5c8033adfa866378ba64f">&#9670;&nbsp;</a></span>onSubscribedShareUserLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IShareRawDataReceiver::onSubscribedShareUserLeft </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for subscribed sharing user left meeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>

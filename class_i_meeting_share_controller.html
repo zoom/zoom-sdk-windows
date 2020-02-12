@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -192,8 +192,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2010ec63783f3e202252b2ab8670f40b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_controller.html#a2010ec63783f3e202252b2ab8670f40b">SetMultiShareSettingOptions</a> (<a class="el" href="meeting__sharing__interface_8h.html#a6cb18658183b85c1fdfc97db567ee2fa">MultiShareOption</a> shareOption)=0</td></tr>
 <tr class="memdesc:a2010ec63783f3e202252b2ab8670f40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the options for multi-participants share.  <a href="#a2010ec63783f3e202252b2ab8670f40b">More...</a><br /></td></tr>
 <tr class="separator:a2010ec63783f3e202252b2ab8670f40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb2ddeeb9b002df4c9bba83d67306de4"><td class="memItemLeft" align="right" valign="top"><a id="adb2ddeeb9b002df4c9bba83d67306de4"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetMultiShareSettingOptions</b> (<a class="el" href="meeting__sharing__interface_8h.html#a6cb18658183b85c1fdfc97db567ee2fa">MultiShareOption</a> &amp;shareOption)=0</td></tr>
+<tr class="memitem:adb2ddeeb9b002df4c9bba83d67306de4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_controller.html#adb2ddeeb9b002df4c9bba83d67306de4">GetMultiShareSettingOptions</a> (<a class="el" href="meeting__sharing__interface_8h.html#a6cb18658183b85c1fdfc97db567ee2fa">MultiShareOption</a> &amp;shareOption)=0</td></tr>
+<tr class="memdesc:adb2ddeeb9b002df4c9bba83d67306de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the options for multi-participants share.  <a href="#adb2ddeeb9b002df4c9bba83d67306de4">More...</a><br /></td></tr>
 <tr class="separator:adb2ddeeb9b002df4c9bba83d67306de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1476b7aefd97cfc026df015424ee700"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_share_controller.html#ad1476b7aefd97cfc026df015424ee700">CanSwitchToShareNextCamera</a> (bool &amp;bCan)=0</td></tr>
 <tr class="memdesc:ad1476b7aefd97cfc026df015424ee700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether can switch to next camera, when share camera.  <a href="#ad1476b7aefd97cfc026df015424ee700">More...</a><br /></td></tr>
@@ -392,6 +392,41 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode. </dd></dl>
+
+</div>
+</div>
+<a id="adb2ddeeb9b002df4c9bba83d67306de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2ddeeb9b002df4c9bba83d67306de4">&#9670;&nbsp;</a></span>GetMultiShareSettingOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingShareController::GetMultiShareSettingOptions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="meeting__sharing__interface_8h.html#a6cb18658183b85c1fdfc97db567ee2fa">MultiShareOption</a> &amp;&#160;</td>
+          <td class="paramname"><em>shareOption</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the options for multi-participants share. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">shareOption</td><td>Options for sharing, see <a class="el" href="meeting__sharing__interface_8h.html#a6cb18658183b85c1fdfc97db567ee2fa">MultiShareOption</a> enum. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

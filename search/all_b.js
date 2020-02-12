@@ -71,6 +71,7 @@ var searchData=
   ['meeting_5fwaiting_5froom_5finterface_2eh',['meeting_waiting_room_interface.h',['../meeting__waiting__room__interface_8h.html',1,'']]],
   ['meeting_5fwebinar_5finterface_2eh',['meeting_webinar_interface.h',['../meeting__webinar__interface_8h.html',1,'']]],
   ['meetingconntype',['MeetingConnType',['../meeting__service__interface_8h.html#a38bce272819fd34c55f29eeb0f55f728',1,'meeting_service_interface.h']]],
+  ['meetingendreason',['MeetingEndReason',['../meeting__service__interface_8h.html#a1c5ba0f53a19e09dec0806b64e630403',1,'meeting_service_interface.h']]],
   ['meetingfailcode',['MeetingFailCode',['../meeting__service__interface_8h.html#af6483466bf33caf90bf3901c024780e4',1,'meeting_service_interface.h']]],
   ['meetingnumber',['meetingNumber',['../structtag_join_param4_a_p_i_user.html#a0f778ba74be0509f5c19f2dad4ce868b',1,'tagJoinParam4APIUser::meetingNumber()'],['../structtag_join_param4_normal_user.html#a3a1bef54cd5feb777972b66e3a72dade',1,'tagJoinParam4NormalUser::meetingNumber()'],['../structtag_start_param4_a_p_i_user.html#abe4e485280b82c0a38c4ba6b04d80777',1,'tagStartParam4APIUser::meetingNumber()'],['../structtag_start_param4_without_login.html#aabadfd8c4f2fdd5e76019952706e533d',1,'tagStartParam4WithoutLogin::meetingNumber()'],['../structtag_start_param4_normal_user.html#a4e7cd6af311030ec679b093aadce2e29',1,'tagStartParam4NormalUser::meetingNumber()']]],
   ['meetingstatus',['MeetingStatus',['../meeting__service__interface_8h.html#a8660ceacc1822bd66e6fd40a89252391',1,'meeting_service_interface.h']]],

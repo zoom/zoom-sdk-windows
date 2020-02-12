@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['uihookhwndtype',['UIHOOKHWNDTYPE',['../ui__hook__interface_8h.html#a44a74ee8633f8b12c79ef799b9b40b3f',1,'ui_hook_interface.h']]],
-  ['userrole',['UserRole',['../meeting__participants__ctrl__interface_8h.html#a00dd1c1a522bd6fb15ecc021ffefb775',1,'meeting_participants_ctrl_interface.h']]]
+  ['scheduleaudiotype',['SCHEDULEAUDIOTYPE',['../premeeting__service__interface_8h.html#a4a9623426801124230ec44f4de2865e0',1,'premeeting_service_interface.h']]],
+  ['schedulerectype',['SCHEDULERECTYPE',['../premeeting__service__interface_8h.html#af2763795621a98450c0870df4eba87ac',1,'premeeting_service_interface.h']]],
+  ['sdk_5fapp_5flocale',['SDK_APP_Locale',['../zoom__sdk__def_8h.html#a1befd4407b13b4e00fab29cd424fa046',1,'zoom_sdk_def.h']]],
+  ['sdk_5flanguage_5fid',['SDK_LANGUAGE_ID',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5',1,'zoom_sdk_def.h']]],
+  ['sdk_5ftestmic_5fstatus',['SDK_TESTMIC_STATUS',['../setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee',1,'setting_service_interface.h']]],
+  ['sdkcustomizedstringtype',['SDKCustomizedStringType',['../customized__resource__helper__interface_8h.html#abae1e79d3736b0217db55c41a89caba3',1,'customized_resource_helper_interface.h']]],
+  ['sdkcustomizedurltype',['SDKCustomizedURLType',['../customized__resource__helper__interface_8h.html#a5d27394834122a70fb0651223dc3dec5',1,'customized_resource_helper_interface.h']]],
+  ['sdkerror',['SDKError',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036',1,'zoom_sdk_def.h']]],
+  ['sdkfloatvideotype',['SDKFloatVideoType',['../meeting__ui__ctrl__interface_8h.html#a3f30b86ec1bc3b88d0fa26f825415a7e',1,'meeting_ui_ctrl_interface.h']]],
+  ['sdkh323tabpage',['SDKH323TabPage',['../meeting__configuration__interface_8h.html#a74b90253d82554f68facd1cbad8db3fd',1,'meeting_configuration_interface.h']]],
+  ['sdkinvitedlgtabpage',['SDKInviteDlgTabPage',['../meeting__configuration__interface_8h.html#a967a63deada4d25d8f84e4bf64a8b3a0',1,'meeting_configuration_interface.h']]],
+  ['sdkmeetinguitype',['SDKMeetingUIType',['../meeting__ui__ctrl__interface_8h.html#ae6e7bbba1825e454badcbd42c4368e41',1,'meeting_ui_ctrl_interface.h']]],
+  ['sdkminimizeuimode',['SDKMinimizeUIMode',['../meeting__ui__ctrl__interface_8h.html#a14f173ee99f4939f106af29f2fbaa950',1,'meeting_ui_ctrl_interface.h']]],
+  ['sdkusertype',['SDKUserType',['../meeting__service__interface_8h.html#a35d39b5fd37bc538254a80c1bb949836',1,'meeting_service_interface.h']]],
+  ['sdkviewtype',['SDKViewType',['../meeting__service__interface_8h.html#a30f12484b18fc49673a3f82ed9f77a34',1,'meeting_service_interface.h']]],
+  ['settingconnectiontype',['SettingConnectionType',['../setting__service__interface_8h.html#a2a688ca0d6b909157bb7f8d00fd34e3f',1,'setting_service_interface.h']]],
+  ['settingsnetworktype',['SettingsNetWorkType',['../setting__service__interface_8h.html#a943bfa6d3d08c2e1096ace5582123d4c',1,'setting_service_interface.h']]],
+  ['settingtabpage',['SettingTabPage',['../setting__service__interface_8h.html#ae6bcf6975b05017a30e879f0c47becc1',1,'setting_service_interface.h']]],
+  ['sharetype',['ShareType',['../meeting__sharing__interface_8h.html#ad9b3d6c9646f4a8e5c2e0df6a114820f',1,'meeting_sharing_interface.h']]],
+  ['sharingstatus',['SharingStatus',['../meeting__sharing__interface_8h.html#af3883373806c1fd83920292447f67ee7',1,'meeting_sharing_interface.h']]],
+  ['statisticswarningtype',['StatisticsWarningType',['../meeting__service__interface_8h.html#a892cae2aedd1a8f460cd1c7bf6f8dc1a',1,'meeting_service_interface.h']]]
 ];

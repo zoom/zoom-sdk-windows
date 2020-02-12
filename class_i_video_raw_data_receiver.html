@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,28 +97,251 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IVideoRawDataReceiver Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The video raw data callback event.  
+ <a href="class_i_video_raw_data_receiver.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6af2fbae3ebea8b3de9107900a434c5e"><td class="memItemLeft" align="right" valign="top"><a id="a6af2fbae3ebea8b3de9107900a434c5e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onDeviceRunning</b> (void *device)=0</td></tr>
+<tr class="memitem:a6af2fbae3ebea8b3de9107900a434c5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_receiver.html#a6af2fbae3ebea8b3de9107900a434c5e">onDeviceRunning</a> (void *device)=0</td></tr>
+<tr class="memdesc:a6af2fbae3ebea8b3de9107900a434c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for local video device started.  <a href="#a6af2fbae3ebea8b3de9107900a434c5e">More...</a><br /></td></tr>
 <tr class="separator:a6af2fbae3ebea8b3de9107900a434c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad07289c51c1523790804b60bd13c97bf"><td class="memItemLeft" align="right" valign="top"><a id="ad07289c51c1523790804b60bd13c97bf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onDeviceStop</b> (void *device)=0</td></tr>
+<tr class="memitem:ad07289c51c1523790804b60bd13c97bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_receiver.html#ad07289c51c1523790804b60bd13c97bf">onDeviceStop</a> (void *device)=0</td></tr>
+<tr class="memdesc:ad07289c51c1523790804b60bd13c97bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for local video device stopped.  <a href="#ad07289c51c1523790804b60bd13c97bf">More...</a><br /></td></tr>
 <tr class="separator:ad07289c51c1523790804b60bd13c97bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77833682d6a63af084ce025a2254ee3c"><td class="memItemLeft" align="right" valign="top"><a id="a77833682d6a63af084ce025a2254ee3c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscribedVideoUserDataOn</b> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:a77833682d6a63af084ce025a2254ee3c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_receiver.html#a77833682d6a63af084ce025a2254ee3c">onSubscribedVideoUserDataOn</a> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:a77833682d6a63af084ce025a2254ee3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for subscribed user's video data on.  <a href="#a77833682d6a63af084ce025a2254ee3c">More...</a><br /></td></tr>
 <tr class="separator:a77833682d6a63af084ce025a2254ee3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a170da22cdce4e65b48382bd54a8a2c80"><td class="memItemLeft" align="right" valign="top"><a id="a170da22cdce4e65b48382bd54a8a2c80"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscribedVideoUserDataOff</b> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:a170da22cdce4e65b48382bd54a8a2c80"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_receiver.html#a170da22cdce4e65b48382bd54a8a2c80">onSubscribedVideoUserDataOff</a> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:a170da22cdce4e65b48382bd54a8a2c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for subscribed user's video data off.  <a href="#a170da22cdce4e65b48382bd54a8a2c80">More...</a><br /></td></tr>
 <tr class="separator:a170da22cdce4e65b48382bd54a8a2c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addb55e9f3899b4246a9e74331fe495e2"><td class="memItemLeft" align="right" valign="top"><a id="addb55e9f3899b4246a9e74331fe495e2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscribedVideoUserLeft</b> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:addb55e9f3899b4246a9e74331fe495e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_receiver.html#addb55e9f3899b4246a9e74331fe495e2">onSubscribedVideoUserLeft</a> (<a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:addb55e9f3899b4246a9e74331fe495e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for the subscribed user left meeting.  <a href="#addb55e9f3899b4246a9e74331fe495e2">More...</a><br /></td></tr>
 <tr class="separator:addb55e9f3899b4246a9e74331fe495e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af99a05536c13e46ebac8a856afcb8709"><td class="memItemLeft" align="right" valign="top"><a id="af99a05536c13e46ebac8a856afcb8709"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onVideoRawDataReceived</b> (<a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *data_, <a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memitem:af99a05536c13e46ebac8a856afcb8709"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_receiver.html#af99a05536c13e46ebac8a856afcb8709">onVideoRawDataReceived</a> (<a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *data_, <a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *recv_handle_list)=0</td></tr>
+<tr class="memdesc:af99a05536c13e46ebac8a856afcb8709"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for receiving the video raw data.  <a href="#af99a05536c13e46ebac8a856afcb8709">More...</a><br /></td></tr>
 <tr class="separator:af99a05536c13e46ebac8a856afcb8709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The video raw data callback event. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6af2fbae3ebea8b3de9107900a434c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af2fbae3ebea8b3de9107900a434c5e">&#9670;&nbsp;</a></span>onDeviceRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoRawDataReceiver::onDeviceRunning </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for local video device started. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>A pointer to void. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad07289c51c1523790804b60bd13c97bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad07289c51c1523790804b60bd13c97bf">&#9670;&nbsp;</a></span>onDeviceStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoRawDataReceiver::onDeviceStop </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for local video device stopped. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>A pointer to void. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a170da22cdce4e65b48382bd54a8a2c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170da22cdce4e65b48382bd54a8a2c80">&#9670;&nbsp;</a></span>onSubscribedVideoUserDataOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoRawDataReceiver::onSubscribedVideoUserDataOff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for subscribed user's video data off. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77833682d6a63af084ce025a2254ee3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77833682d6a63af084ce025a2254ee3c">&#9670;&nbsp;</a></span>onSubscribedVideoUserDataOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoRawDataReceiver::onSubscribedVideoUserDataOn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for subscribed user's video data on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="addb55e9f3899b4246a9e74331fe495e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb55e9f3899b4246a9e74331fe495e2">&#9670;&nbsp;</a></span>onSubscribedVideoUserLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoRawDataReceiver::onSubscribedVideoUserLeft </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for the subscribed user left meeting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af99a05536c13e46ebac8a856afcb8709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99a05536c13e46ebac8a856afcb8709">&#9670;&nbsp;</a></span>onVideoRawDataReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVideoRawDataReceiver::onVideoRawDataReceived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a> *&#160;</td>
+          <td class="paramname"><em>data_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_vector.html">IVector</a>&lt; unsigned long long &gt; *&#160;</td>
+          <td class="paramname"><em>recv_handle_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for receiving the video raw data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_</td><td>The video raw data. A pointer to <a class="el" href="class_y_u_v_raw_data_i420.html" title="The YUV raw data handler interface. ">YUVRawDataI420</a>. For more details, see <a class="el" href="class_y_u_v_raw_data_i420.html">YUVRawDataI420</a>. </td></tr>
+    <tr><td class="paramname">recv_handle_list</td><td>The list of the render window handles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>

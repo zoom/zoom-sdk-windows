@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,16 +97,100 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IZoomRetrieveSMSVerificationCodeHandler Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Retrieve SMS verification code handler interface.  
+ <a href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__sms__helper__interface_8h_source.html">zoom_sdk_sms_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae97bfe09575004b844f4375055b402e"><td class="memItemLeft" align="right" valign="top"><a id="aae97bfe09575004b844f4375055b402e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Retrieve</b> (const zTCHAR *country_code, const zTCHAR *phone_number)=0</td></tr>
+<tr class="memitem:aae97bfe09575004b844f4375055b402e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html#aae97bfe09575004b844f4375055b402e">Retrieve</a> (const zTCHAR *country_code, const zTCHAR *phone_number)=0</td></tr>
+<tr class="memdesc:aae97bfe09575004b844f4375055b402e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the sms verification code.  <a href="#aae97bfe09575004b844f4375055b402e">More...</a><br /></td></tr>
 <tr class="separator:aae97bfe09575004b844f4375055b402e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac100948e04723c45a120aa7794606a1f"><td class="memItemLeft" align="right" valign="top"><a id="ac100948e04723c45a120aa7794606a1f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>CancelAndLeaveMeeting</b> ()=0</td></tr>
+<tr class="memitem:ac100948e04723c45a120aa7794606a1f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_zoom_retrieve_s_m_s_verification_code_handler.html#ac100948e04723c45a120aa7794606a1f">CancelAndLeaveMeeting</a> ()=0</td></tr>
+<tr class="memdesc:ac100948e04723c45a120aa7794606a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore the prompt of retrieving the verification code and leave meeting.  <a href="#ac100948e04723c45a120aa7794606a1f">More...</a><br /></td></tr>
 <tr class="separator:ac100948e04723c45a120aa7794606a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Retrieve SMS verification code handler interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac100948e04723c45a120aa7794606a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac100948e04723c45a120aa7794606a1f">&#9670;&nbsp;</a></span>CancelAndLeaveMeeting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IZoomRetrieveSMSVerificationCodeHandler::CancelAndLeaveMeeting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ignore the prompt of retrieving the verification code and leave meeting. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The handler will become invalid and destroied after calling this function successfully. </dd></dl>
+
+</div>
+</div>
+<a id="aae97bfe09575004b844f4375055b402e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae97bfe09575004b844f4375055b402e">&#9670;&nbsp;</a></span>Retrieve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IZoomRetrieveSMSVerificationCodeHandler::Retrieve </td>
+          <td>(</td>
+          <td class="paramtype">const zTCHAR *&#160;</td>
+          <td class="paramname"><em>country_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const zTCHAR *&#160;</td>
+          <td class="paramname"><em>phone_number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the sms verification code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">country_code</td><td>Specifies the country code. </td></tr>
+    <tr><td class="paramname">phone_number</td><td>Specifies the phone number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is TRUE. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The handler will become invalid after calling this function successfully. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__sms__helper__interface_8h_source.html">zoom_sdk_sms_helper_interface.h</a></li>
 </ul>

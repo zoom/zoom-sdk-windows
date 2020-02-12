@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,16 +97,98 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IAudioRawDataChannel Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Audio raw data channel interface.  
+ <a href="class_i_audio_raw_data_channel.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a020ed850bada8831a7408b6d35e78d34"><td class="memItemLeft" align="right" valign="top"><a id="a020ed850bada8831a7408b6d35e78d34"></a>
-virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> (RawDataMemoryMode mode, <a class="el" href="class_i_audio_raw_data_receiver.html">IAudioRawDataReceiver</a> *data_receiver)=0</td></tr>
+<tr class="memitem:a020ed850bada8831a7408b6d35e78d34"><td class="memItemLeft" align="right" valign="top">virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_raw_data_channel.html#a020ed850bada8831a7408b6d35e78d34">Start</a> (RawDataMemoryMode mode, <a class="el" href="class_i_audio_raw_data_receiver.html">IAudioRawDataReceiver</a> *data_receiver)=0</td></tr>
+<tr class="memdesc:a020ed850bada8831a7408b6d35e78d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start audio raw data channel for the service.  <a href="#a020ed850bada8831a7408b6d35e78d34">More...</a><br /></td></tr>
 <tr class="separator:a020ed850bada8831a7408b6d35e78d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab48e6a548cf11572725a57f00a7c05ad"><td class="memItemLeft" align="right" valign="top"><a id="ab48e6a548cf11572725a57f00a7c05ad"></a>
-virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()=0</td></tr>
+<tr class="memitem:ab48e6a548cf11572725a57f00a7c05ad"><td class="memItemLeft" align="right" valign="top">virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_raw_data_channel.html#ab48e6a548cf11572725a57f00a7c05ad">Stop</a> ()=0</td></tr>
+<tr class="memdesc:ab48e6a548cf11572725a57f00a7c05ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop audio raw data channel for the service.  <a href="#ab48e6a548cf11572725a57f00a7c05ad">More...</a><br /></td></tr>
 <tr class="separator:ab48e6a548cf11572725a57f00a7c05ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Audio raw data channel interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a020ed850bada8831a7408b6d35e78d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a020ed850bada8831a7408b6d35e78d34">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SDKRawDataError IAudioRawDataChannel::Start </td>
+          <td>(</td>
+          <td class="paramtype">RawDataMemoryMode&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_audio_raw_data_receiver.html">IAudioRawDataReceiver</a> *&#160;</td>
+          <td class="paramname"><em>data_receiver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start audio raw data channel for the service. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>Specifies the memory mode type. For more details, see <a class="el" href="">RawDataMemoryMode</a>. </td></tr>
+    <tr><td class="paramname">data_receiver</td><td>A pointer to <a class="el" href="class_i_audio_raw_data_receiver.html" title="Audio raw data callback event. ">IAudioRawDataReceiver</a>. Specifies the audio raw data receiver. For more details, see <a class="el" href="class_i_audio_raw_data_receiver.html">IAudioRawDataReceiver</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKRawDataError_SUCCESS. Otherwise failed. To get extended error information, see <a class="el" href="">SDKRawDataError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ab48e6a548cf11572725a57f00a7c05ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48e6a548cf11572725a57f00a7c05ad">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SDKRawDataError IAudioRawDataChannel::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop audio raw data channel for the service. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKRawDataError_SUCCESS. Otherwise failed. To get extended error information, see <a class="el" href="">SDKRawDataError</a> enum. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>

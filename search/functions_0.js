@@ -5,6 +5,8 @@ var searchData=
   ['addcustomizedpictureresource',['AddCustomizedPictureResource',['../class_i_customized_resource_helper.html#a8c7766166e0e1019621437be31607061',1,'ICustomizedResourceHelper']]],
   ['addcustomizedstringresource',['AddCustomizedStringResource',['../class_i_customized_resource_helper.html#a687a3184c4f515f9204ccef45b3cdaa4',1,'ICustomizedResourceHelper']]],
   ['addcustomizedurlresource',['AddCustomizedURLResource',['../class_i_customized_resource_helper.html#a8450215f576f54fcd9bc03c72ab4b2ea',1,'ICustomizedResourceHelper']]],
+  ['addquestion',['AddQuestion',['../class_i_meeting_q_a_controller.html#a3f21c9c6b2207b89d4123e867bba2926',1,'IMeetingQAController']]],
+  ['addref',['AddRef',['../class_y_u_v_raw_data_i420.html#a1306075855970587e256f3a642010d1f',1,'YUVRawDataI420::AddRef()'],['../class_audio_raw_data.html#a79ca03079e4244901bb1ee4ce185ea33',1,'AudioRawData::AddRef()']]],
   ['addvideosourcetoreclist',['AddVideoSourceToRecList',['../class_i_customized_local_recording_layout_helper.html#a0bada5e6e82b4909130904a77d9f6d54',1,'ICustomizedLocalRecordingLayoutHelper']]],
   ['admittomeeting',['AdmitToMeeting',['../class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4',1,'IMeetingWaitingRoomController']]],
   ['allowattendeechat',['AllowAttendeeChat',['../class_i_meeting_webinar_controller.html#abed3ca7b5d3da977d8d4deafdf17c43f',1,'IMeetingWebinarController']]],
@@ -12,6 +14,9 @@ var searchData=
   ['allowlocalrecording',['AllowLocalRecording',['../class_i_meeting_recording_controller.html#a98ea0dd9343ac688dd7b00782d3cca93',1,'IMeetingRecordingController']]],
   ['allowpaneliststartvideo',['AllowPanelistStartVideo',['../class_i_meeting_webinar_controller.html#af8461cca994251c6a092c595100b5382',1,'IMeetingWebinarController']]],
   ['alwaysshowiconontaskbar',['AlwaysShowIconOnTaskBar',['../class_i_meeting_u_i_elem_configuration.html#aff6f63c58b1846e5794789610c9193ed',1,'IMeetingUIElemConfiguration']]],
+  ['amiliveanswering',['AmILiveAnswering',['../class_i_q_a_item_info.html#a53442c3003d80301d70558399f226240',1,'IQAItemInfo']]],
+  ['answerquestionprivate',['AnswerQuestionPrivate',['../class_i_meeting_q_a_controller.html#a50c970507651bef1dbfc35059f12b768',1,'IMeetingQAController']]],
+  ['answerquestionpublic',['AnswerQuestionPublic',['../class_i_meeting_q_a_controller.html#a5cc0fd128a2ea72ae8278e16720d7274',1,'IMeetingQAController']]],
   ['askattendeetostartvideo',['AskAttendeeToStartVideo',['../class_i_meeting_video_controller.html#a6fbbaf6a3d3b9dd5598ebbf28e41c32c',1,'IMeetingVideoController']]],
   ['assignccpriviledge',['AssignCCPriviledge',['../class_i_closed_caption_controller.html#ae3f9ff0824a7aab3dfa49207a6ecd2d9',1,'IClosedCaptionController']]],
   ['assigncohost',['AssignCoHost',['../class_i_meeting_participants_controller.html#a897789ec29954e794e28d435554b2b2f',1,'IMeetingParticipantsController']]]

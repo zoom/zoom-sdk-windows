@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -148,6 +148,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a3ca67e5b3ed85693a3f49e3dd7f8094d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a3ca67e5b3ed85693a3f49e3dd7f8094d">SetMaxDurationForOnlyHostInMeeting</a> (int nDuration)=0</td></tr>
 <tr class="memdesc:a3ca67e5b3ed85693a3f49e3dd7f8094d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum duration of the meeting when there is no attendee in the meeting. Default: 24*60.  <a href="#a3ca67e5b3ed85693a3f49e3dd7f8094d">More...</a><br /></td></tr>
 <tr class="separator:a3ca67e5b3ed85693a3f49e3dd7f8094d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627a431dc7c6a2c89ae0e952ef9ba216"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a627a431dc7c6a2c89ae0e952ef9ba216">EnableLeaveMeetingWhenScreenLocked</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:a627a431dc7c6a2c89ae0e952ef9ba216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to leave the meeting when the screen is locked or the screen saver is shown. Default: TRUE.  <a href="#a627a431dc7c6a2c89ae0e952ef9ba216">More...</a><br /></td></tr>
+<tr class="separator:a627a431dc7c6a2c89ae0e952ef9ba216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_meeting_u_i_elem_configuration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_meeting_u_i_elem_configuration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_meeting_u_i_elem_configuration.html">IMeetingUIElemConfiguration</a></td></tr>
 <tr class="memitem:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a2e906b3fe6c7297f414063597d7436d1">SetMeetingUIPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
 <tr class="memdesc:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the primary view meeting window.  <a href="class_i_meeting_u_i_elem_configuration.html#a2e906b3fe6c7297f414063597d7436d1">More...</a><br /></td></tr>
@@ -543,6 +546,41 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<a id="a627a431dc7c6a2c89ae0e952ef9ba216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627a431dc7c6a2c89ae0e952ef9ba216">&#9670;&nbsp;</a></span>EnableLeaveMeetingWhenScreenLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingConfiguration::EnableLeaveMeetingWhenScreenLocked </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set if it is able to leave the meeting when the screen is locked or the screen saver is shown. Default: TRUE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable to share on the white board. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>No matter what value you set for API, the callback IMeetingServiceEvent::onOSSessionChangedNotification will be triggered. </dd></dl>
+
+</div>
+</div>
 <a id="adf54a9c1e85525f0f88e0e90266105bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf54a9c1e85525f0f88e0e90266105bf">&#9670;&nbsp;</a></span>EnableLengthLimitationOfMeetingNumber()</h2>
 
@@ -574,7 +612,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If it is enabled, the length of the meeting ID depends on the ID type. The ID shall be more than nine(9) figures or five(5) letters. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If it is enabled, the length of the meeting ID depends on the ID type. The ID shall be more than nine(9) figures or five(5) letters. Also, The meeting ID will be displayed as it is (not formatted). </dd></dl>
 
 </div>
 </div>

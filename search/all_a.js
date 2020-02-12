@@ -9,6 +9,7 @@ var searchData=
   ['language_5ffrench',['LANGUAGE_French',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a12e4a08c02caa1ac071e7305f74d5496',1,'zoom_sdk_def.h']]],
   ['language_5fgerman',['LANGUAGE_German',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a79840a6e6881ca0c3dda569ca95c8435',1,'zoom_sdk_def.h']]],
   ['language_5fjapanese',['LANGUAGE_Japanese',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a3a6842027771a23b09b78a7a40085771',1,'zoom_sdk_def.h']]],
+  ['language_5fkorean',['LANGUAGE_Korean',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5ac293beae0f1ade49627a8c93a3263fd4',1,'zoom_sdk_def.h']]],
   ['language_5fportuguese',['LANGUAGE_Portuguese',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a7f746484b712c91fa4b3c77ebba63e77',1,'zoom_sdk_def.h']]],
   ['language_5frussian',['LANGUAGE_Russian',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a063ba5dcf0b751d1692eb1c55696a8eb',1,'zoom_sdk_def.h']]],
   ['language_5fspanish',['LANGUAGE_Spanish',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a1631ec88d8de2657df4481e9f9f59c18',1,'zoom_sdk_def.h']]],

@@ -42,6 +42,7 @@ var searchData=
   ['preview_5fvideo_5frotation_5faction_5fclock180',['PREVIEW_VIDEO_ROTATION_ACTION_CLOCK180',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1a7f5e0c3219d2fa5b9d8edcf26c63c1a9',1,'setting_service_interface.h']]],
   ['preview_5fvideo_5frotation_5faction_5fclock90',['PREVIEW_VIDEO_ROTATION_ACTION_CLOCK90',['../setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1abb18a2f976da8508a0cff777ad3a6f8b',1,'setting_service_interface.h']]],
   ['promptattendee2panelist',['PromptAttendee2Panelist',['../class_i_meeting_webinar_controller.html#a8feb84523ef0ac4cb6ae271e3913977f',1,'IMeetingWebinarController']]],
+  ['proxy',['proxy',['../structtag_proxy_settings.html#a70ec7670b30b3e9ca8e933799a83d923',1,'tagProxySettings']]],
   ['proxy_5faddr_5f',['proxy_addr_',['../structtag_overall_statistic_info.html#ada4a5d6d6c2f3c61d3fda974022a09fb',1,'tagOverallStatisticInfo']]],
   ['psw',['psw',['../structtag_join_param4_a_p_i_user.html#a153fbd01ae306e402d93b4a95cfe2417',1,'tagJoinParam4APIUser::psw()'],['../structtag_join_param4_normal_user.html#a765c5c50e2def4a8522dfbf258b76031',1,'tagJoinParam4NormalUser::psw()']]],
   ['putinwaitingroom',['PutInWaitingRoom',['../class_i_meeting_waiting_room_controller.html#a4b1d3388c12bc5c85932143f73143f8b',1,'IMeetingWaitingRoomController']]]

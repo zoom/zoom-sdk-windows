@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['webinarchatmsgtype',['WebinarChatMsgType',['../meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433',1,'meeting_chat_interface.h']]],
-  ['webinarneedregistertype',['WebinarNeedRegisterType',['../class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9',1,'IWebinarNeedRegisterHandler']]]
+  ['videorenderdatatype',['VideoRenderDataType',['../customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdc',1,'customized_video_container.h']]],
+  ['videorenderelementtype',['VideoRenderElementType',['../customized__video__container_8h.html#afb64bcadb09272f34cdde19e542c82d5',1,'customized_video_container.h']]],
+  ['videostatus',['VideoStatus',['../meeting__video__interface_8h.html#ab2c40afd7ac2f54f637c13d41e4a194a',1,'meeting_video_interface.h']]]
 ];

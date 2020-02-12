@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.4.57220.1211</span>
+   &#160;<span id="projectnumber">4.6.15074.0203</span>
    </div>
   </td>
  </tr>
@@ -97,16 +97,103 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IAudioRawDataReceiver Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Audio raw data callback event.  
+ <a href="class_i_audio_raw_data_receiver.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14d601b55df9682f4f78cc0d52d912ff"><td class="memItemLeft" align="right" valign="top"><a id="a14d601b55df9682f4f78cc0d52d912ff"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onMixedAudioRawDataReceived</b> (<a class="el" href="class_audio_raw_data.html">AudioRawData</a> *data_)=0</td></tr>
+<tr class="memitem:a14d601b55df9682f4f78cc0d52d912ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_raw_data_receiver.html#a14d601b55df9682f4f78cc0d52d912ff">onMixedAudioRawDataReceived</a> (<a class="el" href="class_audio_raw_data.html">AudioRawData</a> *data_)=0</td></tr>
+<tr class="memdesc:a14d601b55df9682f4f78cc0d52d912ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for receiving the mixed audio raw data.  <a href="#a14d601b55df9682f4f78cc0d52d912ff">More...</a><br /></td></tr>
 <tr class="separator:a14d601b55df9682f4f78cc0d52d912ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3001f3e398f75fd6992b1c3065038853"><td class="memItemLeft" align="right" valign="top"><a id="a3001f3e398f75fd6992b1c3065038853"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onOneWayAudioRawDataReceived</b> (<a class="el" href="class_audio_raw_data.html">AudioRawData</a> *data_, unsigned int node_id)=0</td></tr>
+<tr class="memitem:a3001f3e398f75fd6992b1c3065038853"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_raw_data_receiver.html#a3001f3e398f75fd6992b1c3065038853">onOneWayAudioRawDataReceived</a> (<a class="el" href="class_audio_raw_data.html">AudioRawData</a> *data_, unsigned int node_id)=0</td></tr>
+<tr class="memdesc:a3001f3e398f75fd6992b1c3065038853"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback event for receiving the one way audio raw data.  <a href="#a3001f3e398f75fd6992b1c3065038853">More...</a><br /></td></tr>
 <tr class="separator:a3001f3e398f75fd6992b1c3065038853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Audio raw data callback event. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a14d601b55df9682f4f78cc0d52d912ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d601b55df9682f4f78cc0d52d912ff">&#9670;&nbsp;</a></span>onMixedAudioRawDataReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IAudioRawDataReceiver::onMixedAudioRawDataReceived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_audio_raw_data.html">AudioRawData</a> *&#160;</td>
+          <td class="paramname"><em>data_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for receiving the mixed audio raw data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_</td><td>The mixed audio raw data. A pointer to <a class="el" href="class_audio_raw_data.html" title="The audio raw data handler interface. ">AudioRawData</a>. For more details, see <a class="el" href="class_audio_raw_data.html">AudioRawData</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3001f3e398f75fd6992b1c3065038853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3001f3e398f75fd6992b1c3065038853">&#9670;&nbsp;</a></span>onOneWayAudioRawDataReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IAudioRawDataReceiver::onOneWayAudioRawDataReceived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_audio_raw_data.html">AudioRawData</a> *&#160;</td>
+          <td class="paramname"><em>data_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>node_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The callback event for receiving the one way audio raw data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_</td><td>The one way audio raw data. A pointer to <a class="el" href="class_audio_raw_data.html" title="The audio raw data handler interface. ">AudioRawData</a>. For more details, see <a class="el" href="class_audio_raw_data.html">AudioRawData</a>. </td></tr>
+    <tr><td class="paramname">node_id</td><td>The related user id of the audio raw data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>h/<a class="el" href="zoom__sdk__raw__data__helper__interface_8h_source.html">zoom_sdk_raw_data_helper_interface.h</a></li>
 </ul>
