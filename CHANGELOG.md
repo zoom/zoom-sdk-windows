@@ -90,6 +90,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
 * Add support for the share page and the keyboard shortcut page under the setting tab.
 
 ## Changed & Fixed:
+* Enhanced security and upgraded OpenSSL to 1.0.2u.
 * Fixed an issue where the webinar chat was freezing for some users when the webinar had a large number of attendees.
 * Fixed an issue where copy/paste was not working consistently for some users on Windows 10.
 
