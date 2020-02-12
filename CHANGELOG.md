@@ -65,7 +65,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
 
 
 
-## 2020-02-20 @ [v4.6.15074.0203](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.6.15074.0203)
+## 2020-02-10 @ [v4.6.15074.0203](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.6.15074.0203)
 
 ## Added:
 * Add new features in Zoom default UI
