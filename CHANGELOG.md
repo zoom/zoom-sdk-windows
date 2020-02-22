@@ -15,7 +15,7 @@
    * **CptService.exe** / **zCSCptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
-   * **zzplugin.dll**
+   * **zzplugin.dll**(Deprecated since v4.6.15074.0203)
    * **aomhost64.exe**
    * **zCrashReport.dll**
    * **libeay32.dll**
