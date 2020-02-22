@@ -17,7 +17,7 @@ Kindly advise that **please do not re-sign / assign new digital signature to** t
    * **CptService.exe** / **zCSCptService.exe**
    * **CptShare.dll**
    * **zzhost.dll**
-   * **zzplugin.dll**
+   * **zzplugin.dll**(Deprecated since v4.6.15074.0203)
    * **aomhost64.exe**
    * **zCrashReport.dll**
    * **libeay32.dll**
@@ -113,7 +113,7 @@ Please refer to our [CHANGELOG](https://github.com/zoom/zoom-sdk-windows/blob/ma
      * **CptService.exe** / **zCSCptService.exe**
      * **CptShare.dll**
      * **zzhost.dll**
-     * **zzplugin.dll**
+     * **zzplugin.dll**(Deprecated since v4.6.15074.0203)
      * **aomhost64.exe**
      * **zCrashReport.dll**
      * **libeay32.dll**
