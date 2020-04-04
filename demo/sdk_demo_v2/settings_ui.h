@@ -427,6 +427,8 @@ public:
 	void DoRemainingMeetingTimeButtonChkClick();
 	void DoSettingDlgTopmostAttributeChkClick();
 	void DoFullPhoneNumberChkClick();
+	void DoReactionChkClick();
+	void DoMeetingInfoChkClick();
 protected:
 	CVerticalLayoutUI* m_UICustomCurrentPage;
 	CVerticalLayoutUI* m_settingsUICustomPage;
@@ -478,6 +480,8 @@ protected:
 	CCheckBoxUI* m_chkRemainingMeetingTimeButton;
 	CCheckBoxUI* m_chkSettingDlgTopmostAttribute;
 	CCheckBoxUI* m_chkFullPhoneNumber;
+	CCheckBoxUI* m_chkReaction;
+	CCheckBoxUI* m_chkMeetingInfo;
 };
 class CSDKFeatureCustomSettingsUIGroup
 {

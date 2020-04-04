@@ -28,7 +28,7 @@ class ICustomizedAnnotationObjEvent
 public:
 	/// \brief Callback event that the annotation tool changes.
 	/// \param type_ The type of annotation tool. For more details, see \link AnnotationToolType \endlink enum.
-	virtual void onAnnotationObjToolChange(AnnotationToolType type_);
+	virtual void onAnnotationObjToolChange(AnnotationToolType type_) = 0;
 };
 
 /// \brief Annotation object interface.

@@ -4,12 +4,14 @@
 </div>
 
 ## Latest SDK Notifications
-1.Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
+1. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
+
+2. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
 * `CptHost.exe` -> `zcscpthost.exe`
 * `airhost.exe` -> `zcsairhost.exe`
 * `CptService.exe` -> `zCSCptService.exe`
-2. 
-Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+
+3. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptInstall.exe**
    * **CptHost.exe** / **zcscpthost.exe**
@@ -22,7 +24,7 @@ Kindly advise that **please do not re-sign / assign new digital signature to** t
    * **zCrashReport.dll**
    * **libeay32.dll**
    * **ssleay32.dll**
-3. **Variable Name Changes**: Since [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325), we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
+3. **Variable Name Changes**: Since v4.3.1.47204.0325, we have renamed the term "APP" to "SDK" in our demo to avoid confusion between the term "API" and "APP".
 4. Our brand new [Zoom Developer Community Forum](https://devforum.zoom.us/) is now online!!! Check it out! We are here to help! :D
 
 ## Full Documentation && Community Support
@@ -105,21 +107,9 @@ Please refer to our [CHANGELOG](https://github.com/zoom/zoom-sdk-windows/blob/ma
 ## Frequently Asked Questions (FAQ)
 
 * :one: `Getting ERROR Code: 105035 while using Windows SDK`:
-  * **In most of the cases, this is caused by resigning or adding new signature to the following files while integrating and deploying our SDK**:
-     * **CptControl.exe**
-     * **CptInstall.exe**
-     * **CptHost.exe** / **zcscpthost.exe**
-     * **airhost.exe** / **zcsairhost.exe**
-     * **CptService.exe** / **zCSCptService.exe**
-     * **CptShare.dll**
-     * **zzhost.dll**
-     * **zzplugin.dll**(Deprecated since v4.6.15074.0203)
-     * **aomhost64.exe**
-     * **zCrashReport.dll**
-     * **libeay32.dll**
-     * **ssleay32.dll**
+  * **In most of the cases, this is caused by resigning or adding new signature to the SDK DLL files(\*.dll) and EXE files(\*.exe)**
    
-   **Please skip signing / do not add any new signatures to the above files. If the error code appears even if the above files are not being re-signed, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) and seek help.**
+   **Please skip signing / do not add any new signatures to the DLL files(\*.dll) and EXE files(\*.exe). If the error code appears even if the files are not being re-signed, please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) and seek help.**
    
    
 * Please visit our [Zoom Developer Community Forum](https://devforum.zoom.us/) for further assistance.

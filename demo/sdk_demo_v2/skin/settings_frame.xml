@@ -406,6 +406,10 @@
 		    <Control height="5"/>
 		    <CheckBox name="chk_enter_or_exit_the_full_screen_buttons" text="Display the buttons to enter or exit the full screen in the meeting window" height="40" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
 		    <Control height="5"/>
+			<CheckBox name="chk_recation_button" text="Hide the 'Reaction' button" height="25" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
+		    <Control height="5"/>
+			<CheckBox name="chk_meetinginfo_button" text="Hide the 'Meeting Info' button" height="25" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
+		    <Control height="5"/>
  	  	   </VerticalLayout>
 		  
 

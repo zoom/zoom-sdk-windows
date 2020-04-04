@@ -75,9 +75,25 @@ public:
 	virtual ~ISpeakerInfo() {};
 };
 
+/*! \enum LimitFPSValue
+    \brief Specify the values of available limit fps.
+    Here are more detailed enum descriptions.
+*/ 
+enum LimitFPSValue
+{
+	limitfps_Not_Enable, ///<The feature is not enabled.
+	limitfps_1_frame,///<1 frame per second.
+	limitfps_2_frame,///<2 frames per second.
+	limitfps_4_frame,///<4 frames per second.
+	limitfps_6_frame,///<6 frames per second.
+	limitfps_8_frame,///<8 frames per second.
+	limitfps_10_frame,///<10 frames per second.
+	limitfps_15_frame,///<15 frames per second.
+};
+
 /*! \enum SettingTabPage
     \brief Specify the shown tab page at the top of the displayed setting dialog.
-    Here are more detailed structural descriptions.
+    Here are more detailed enum descriptions.
 */ 
 enum SettingTabPage
 {
@@ -96,6 +112,7 @@ typedef struct tagShowSettingDlgParam
 	int left;///<The X-axis value of the top-left corner of the dialog uses the coordinate system of the monitor.
 	HWND hSettingWnd;///<Window handle of the dialog setting.
 	bool bShow;///<Enable to display or nor.
+	bool bCenter;///<Enable to display the dialog at the center of the screen and discard the value of top and left 
 	SettingTabPage eTabPageType; ///<The tab page shown at the top of the displayed setting dialog.
 	tagShowSettingDlgParam()
 	{
@@ -104,6 +121,7 @@ typedef struct tagShowSettingDlgParam
 		left = 0;
 		hSettingWnd = NULL;
 		bShow = true;
+		bCenter = false;
 		eTabPageType = SettingTabPage_General;
 	}
 }ShowSettingDlgParam;
@@ -344,7 +362,30 @@ public:
 	/// \brief Determine if remote control of all applications is enabled.
 	/// \return TRUE indicates enabled. FALSE not.
 	virtual bool IsRemoteControlAllApplicationsEnabled() = 0;
-	
+
+	/// \brief Set the visibility of the green border when sharing the application.	/// \param bShow TRUE indicates to display the frame. FALSE hide.	/// \return If the function succeeds, the return value is SDKErr_Success.	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableGreenBorderWhenShare(bool bEnable) = 0;
+
+	/// \brief Determine if the green border is enabled when user shares.
+	/// \return TRUE indicates support. FALSE not.
+	virtual bool IsGreenBorderEnabledWhenShare() = 0;
+
+	/// \brief Determine if the 'limited sharing fps' feature is enabled when user shares.
+	/// \return TRUE indicates support. FALSE not.
+	virtual bool IsLimitFPSEnabledWhenShare() = 0;
+
+	/// \brief Enable/disable the 'limited sharing fps' feature when uses shares.	/// \param bEnable TRUE indicates to enable the litmited fps feature. FALSE hide.	/// \return If the function succeeds, the return value is SDKErr_Success.	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableLimitFPSWhenShare(bool bEnable) = 0;	
+
+	/// \brief Get the limited sharing fps value when the 'limited sharing fps' feature is enabled.
+	virtual LimitFPSValue GetLimitFPSValueWhenShare() = 0;
+
+	/// \brief Set the limited sharing fps value when the 'limited sharing fps' feature is enabled.
+	/// \param value Specifies the limited fps value. It validates only when the 'limited sharing fps' feature is enabled.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SetLimitFPSValueWhenShare(LimitFPSValue value) = 0;
+
 };
 
 /*! \enum PREVIEW_VIDEO_ROTATION_ACTION

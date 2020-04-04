@@ -1,6 +1,7 @@
 #ifndef _ZOOM_SDK_RAW_DATA_HELPER_INTERFACE_H_
 #define _ZOOM_SDK_RAW_DATA_HELPER_INTERFACE_H_
 #include "zoom_sdk_platform.h"
+#include "zoom_sdk_raw_data_def.h"
 BEGIN_ZOOM_RAWDATA_NAMESPACE
 class IAudioRawDataChannel;
 class IVideoRawDataChannel;
@@ -31,6 +32,11 @@ enum SDKRawDataError
 	SDKRawDataError_AUDIO_MODULE_NOT_READY,///<The audio module is not ready.
 	SDKRawDataError_AUDIO_MODULE_ERROR,///<Audio module is in error.
 	SDKRawDataError_NO_AUDIO_DATA,///<There is no raw data of audio.
+    
+    SDKRawDataError_PREPROCESS_RAWDATA_ERROR,
+    SDKRawDataError_NO_DEVICE_RUNNING,
+    SDKRawDataError_INIT_DEVICE,
+    SDKRawDataError_VIRTUAL_DEVICE,
 };
 #ifdef __cplusplus
 extern "C"
@@ -87,96 +93,24 @@ enum RawDataResolution
 	RawDataResolution_1080,///<The resolution is 1080p.
 #endif
 };
-/// \brief The YUV raw data handler interface.
-class YUVRawDataI420
-{
-public:
-	/// \brief Determine if the reference count can be increased.
-	/// \return TRUE indicates to the reference count can be increased.
-	virtual bool CanAddRef() = 0;
-	
-	/// \brief Add one to the reference count.
-	/// \return If the function succeeds, the return value is TRUE.
-	virtual bool AddRef() = 0;
-	
-	/// \brief Subtract one from the reference count.
-	/// \return The current reference count. If the currrent reference count is 0, the SDK will delete this object instance.
-	virtual int Release() = 0;
-	
-	/// \brief Get the y-data of the YUV raw data.
-	/// \return A pointer to the y-data of the YUV raw data.
-	virtual char* GetYBuffer() = 0;
-	
-	/// \brief Get the u-data of the YUV raw data.
-	/// \return A pointer to the u-data of the YUV raw data.
-	virtual char* GetUBuffer() = 0;
-	
-	/// \brief Get the v-data of the YUV raw data.
-	/// \return A pointer to the v-data of the YUV raw data.
-	virtual char* GetVBuffer() = 0;
-	
-	/// \brief Get the YUV raw data.
-	/// \return A pointer to the YUV raw data.
-	virtual char* GetBuffer() = 0;
-	
-	/// \brief Get the buffer length of the YUV raw data.
-	/// \return The length of the YUV raw data.
-	virtual unsigned int GetBufferLen() = 0;
-	
-	/// \brief Determine if the YUV raw data is limited range mode.
-	/// \return TRUE indicates to the YUV raw data is limited range mode.
-	virtual bool IsLimitedI420() = 0;
-	
-	/// \brief Get the stream width.
-	/// \return The stream width.
-	virtual unsigned int GetStreamWidth() =0;
-	
-	/// \brief Get the stream height.
-	/// \return The stream height.
-	virtual unsigned int GetStreamHeight() = 0;
-	
-	/// \brief Get the rotation angle of the local video device.
-	/// \return If the function succeeds, the return is enumerated in LocalVideoDeviceRotation enum 
-	virtual unsigned int GetRotation() = 0;
-	
-	/// \brief Get the source_id of the current YUV raw data.
-	/// \return The source_id.
-	virtual unsigned int GetSourceID() = 0;
-	virtual ~YUVRawDataI420(){}
-};
 
-/// \brief The audio raw data handler interface.
-class AudioRawData
+class YUVProcessDataI420
 {
 public:
-	/// \brief Determine if the reference count can be increased.
-	/// \return TRUE indicates to the reference count can be increased.
-	virtual bool CanAddRef() = 0;
-	
-	/// \brief Add one to the reference count.
-	/// \return If the function succeeds, the return value is TRUE.
-	virtual bool AddRef() = 0;
-	
-	/// \brief Subtract one from the reference count.
-	/// \return The current reference count. If the currrent reference count is 0, the SDK will delete this object instance.
-	virtual int Release() = 0;
-	
-	/// \brief Get the audio raw data.
-	/// \return A pointer to the audio raw data.
-	virtual char* GetBuffer() = 0;
-	
-	/// \brief Get the buffer length of the audio raw data.
-	/// \return The length of the audio raw data.
-	virtual unsigned int GetBufferLen() = 0;
-	
-	/// \brief Get the sample rate of the audio raw data.
-	/// \return The sample rate of the audio raw data.
-	virtual unsigned int GetSampleRate() = 0;
-	
-	/// \brief Get the channel number of the audio raw data.
-	/// \return The channel number of the audio raw data.
-	virtual unsigned int GetChannelNum() = 0;
-	virtual ~AudioRawData(){}
+    virtual unsigned int GetWidth() =0;
+    virtual unsigned int GetHeight() = 0;
+    
+    virtual char* GetYBuffer(unsigned int lineNum = 0) = 0;
+    virtual char* GetUBuffer(unsigned int lineNum = 0) = 0;
+    virtual char* GetVBuffer(unsigned int lineNum = 0) = 0;
+    
+    virtual unsigned int GetYStride() = 0;
+    virtual unsigned int GetUStride() = 0;
+    virtual unsigned int GetVStride() = 0;
+    
+    virtual unsigned int GetRotation() = 0;
+    virtual bool IsLimitedI420() = 0;
+    virtual ~YUVProcessDataI420(){}
 };
 
 /// \brief Audio raw data callback event.
@@ -331,6 +265,75 @@ public:
 	/// \param data_ The video raw data. A pointer to YUVRawDataI420. For more details, see \link YUVRawDataI420 \endlink.
 	/// \param recv_handle_list The list of the render window handles.
 	virtual void onVideoRawDataReceived(YUVRawDataI420* data_, IVector<unsigned long long >* recv_handle_list) = 0;
+    
+    virtual void onPreProcessRawData(YUVProcessDataI420* data_, IVector<unsigned long long >* recv_handle_list) = 0;
+};
+
+struct VideoCapabilityItem
+{
+    bool efficient;
+    unsigned int width;
+    unsigned int height;
+    unsigned int frame;
+    
+    VideoCapabilityItem()
+    {
+        Reset();
+    }
+    
+    VideoCapabilityItem(bool e, unsigned int w, unsigned int h, unsigned int f)
+    {
+        efficient = e;
+        width = w;
+        height = h;
+        frame = f;
+    }
+
+	VideoCapabilityItem& operator=(const VideoCapabilityItem& ins)
+	{
+		efficient = ins.efficient;
+		width = ins.width;
+		height = ins.height;
+		frame = ins.frame;
+		return *this;
+	}
+
+	VideoCapabilityItem(const VideoCapabilityItem& ins)
+	{
+		*this = ins;  
+	}
+
+    void Reset()
+    {
+        efficient = false;
+        width = 0;
+        height = 0;
+        frame = 0;
+    }
+};
+
+class IVideoCapabilityHelper
+{
+public:
+    virtual unsigned int GetMaxCapabilityCount() = 0;
+    virtual VideoCapabilityItem GetCapability(unsigned int index) = 0;
+    virtual bool SetCapability(unsigned int index, VideoCapabilityItem cap) = 0;
+};
+
+class IRawDataSender
+{
+public:
+    virtual void SendRawData(char * data, unsigned int width, unsigned int height, unsigned int data_length, LocalVideoDeviceRotation rotation_flag = LOCAL_DEVICE_ROTATION_ACTION_UNKnown) = 0;
+};
+
+class IVirtualVideoSource
+{
+public:
+    virtual void onInitialize(IRawDataSender *rawdata_sender, IVideoCapabilityHelper *capHelper) = 0;
+    virtual void onPropertyChange(VideoCapabilityItem cap) = 0;
+    virtual void onStartSend() = 0;
+    virtual void onStopSend() = 0;
+    virtual void onUninitialize() = 0;
 };
 
 /// \brief Video raw data channel interface.
@@ -358,13 +361,18 @@ public:
 	/// \return If the function succeeds, the return value is SDKRawDataError_SUCCESS.
 	///Otherwise failed. To get extended error information, see \link SDKRawDataError \endlink enum.
 	virtual SDKRawDataError UnSubscribe(unsigned int node_id, unsigned long long recver_handle) = 0;
-	
-	/// \brief Get the status of the local video device.
-	/// \param device Specifies the local video device.
-	/// \param [out] status If the function succeeds, the parameter will save the status of the local video device. For more details, see \link LocalVideoDeviceStatus \endlink structure.
-	/// \return If the function succeeds, the return value is SDKRawDataError_SUCCESS.
-	///Otherwise failed. To get extended error information, see \link SDKRawDataError \endlink enum.
-	virtual SDKRawDataError GetLocalDeviceStatus(void* device, LocalVideoDeviceStatus& status) = 0;
+    
+    virtual SDKRawDataError RegisterRawDataPreProcessor(unsigned long long recver_handle) = 0;
+    virtual SDKRawDataError UnRegisterRawDataPreProcessor(unsigned long long recver_handle) = 0;
+
+    virtual SDKRawDataError SetExternalVideoSource(IVirtualVideoSource *video_srouce) = 0;
+    
+    /// \brief Get the status of the local video device.
+    /// \param device Specifies the local video device.
+    /// \param [out] status If the function succeeds, the parameter will save the status of the local video device. For more details, see \link LocalVideoDeviceStatus \endlink structure.
+    /// \return If the function succeeds, the return value is SDKRawDataError_SUCCESS.
+    ///Otherwise failed. To get extended error information, see \link SDKRawDataError \endlink enum.
+    virtual SDKRawDataError GetLocalDeviceStatus(void* device, LocalVideoDeviceStatus& status) = 0;
 	
 	/// \brief Rotate the local video device.
 	/// \param device Specifies the local video device.
@@ -388,32 +396,6 @@ public:
 	/// \return If the function succeeds, the return value is SDKRawDataError_SUCCESS.
 	///Otherwise failed. To get extended error information, see \link SDKRawDataError \endlink enum.
 	virtual SDKRawDataError EnableIntermediateRawDataCB(bool enable) = 0;
-};
-
-/// \brief I420 YUV raw data converter interface.
-class IYUVRawDataI420Converter
-{
-public:
-	/// \brief Convert the intermediate YUV raw data to YUV raw data.
-	/// \return The YUV raw data. A pointer to YUVRawDataI420. For more details, see \link YUVRawDataI420 \endlink.
-	virtual YUVRawDataI420* ConvertToYUV() = 0;
-	
-	/// \brief Convert the intermediate YUV raw data to YUV raw data via external buffer.
-	/// \param buffer Specifies the external buffer.
-	/// \param size_ Specifies the size of the YUV raw data.
-	/// \return The YUV raw data. A pointer to YUVRawDataI420. For more details, see \link YUVRawDataI420 \endlink.
-	virtual YUVRawDataI420* ConvertToYUVViaExternalBuffer(char* buffer_, int size_) = 0;
-	
-	/// \brief Fill data to the pixel buffer if expanding the size of the intermediate YUV raw data.
-	/// \param ybuffer_ Specifies the y-data of intermediate YUV raw data.
-	/// \param ybuffer_pre_row_bytes Specifies the width of the y-data.
-	/// \param uvbuffer_ Specifies the uv-data of intermediate YUV raw data.
-	/// \param uvbuffer_pre_row_bytes Specifies the width of the uv-data.
-	/// \param width Specifies the new width to extended.
-	/// \param height Specifies the new height to extended.
-	virtual void FillToPixelBuffer(char* ybuffer_, int ybuffer_pre_row_bytes, char* uvbuffer_, int uvbuffer_pre_row_bytes,int width, int height) = 0;
-
-	virtual ~IYUVRawDataI420Converter(){}
 };
 
 END_ZOOM_RAWDATA_NAMESPACE

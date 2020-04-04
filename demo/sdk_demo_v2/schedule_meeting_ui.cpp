@@ -36,6 +36,15 @@ CSDKSheduleMeetingUIGroup::CSDKSheduleMeetingUIGroup()
 	m_dial_in_country_lb = NULL;
 	m_edit_dial_in_btn = NULL;
 	m_dial_in_country = NULL;
+	m_enable_waiting_room = NULL;
+	m_enable_meeting_to_public = NULL;
+	m_get_public_event_list_url_btn = NULL;
+	m_enable_language_interpreter = NULL;
+	m_input_interpreter_email = NULL;
+	m_combo_first_language = NULL;
+	m_combo_second_language = NULL;
+	m_interpreter_to = NULL;
+	m_input_alter_hosts = NULL;
 	m_pScheduelMeetingItem = m_shedule_meeting_workflow.GetScheduleMeetingItem();
 }
 
@@ -74,6 +83,15 @@ CSDKSheduleMeetingUIGroup::~CSDKSheduleMeetingUIGroup()
 	m_dial_in_country_lb = NULL;
 	m_edit_dial_in_btn = NULL;
 	m_dial_in_country = NULL;
+	m_enable_waiting_room = NULL;
+	m_enable_meeting_to_public = NULL;
+	m_get_public_event_list_url_btn = NULL;
+	m_enable_language_interpreter = NULL;
+	m_input_interpreter_email = NULL;
+	m_combo_first_language = NULL;
+	m_combo_second_language = NULL;
+	m_interpreter_to = NULL;
+	m_input_alter_hosts = NULL;
 
 	if (m_dial_in_country)
 	{
@@ -127,6 +145,16 @@ void CSDKSheduleMeetingUIGroup::InitWindow( CPaintManagerUI& ui_mgr, CSDKShedule
 
 	m_dial_in_country_lb = static_cast<CLabelUI* >(ui_mgr.FindControl(L"dial_in_country_lb"));
 	m_edit_dial_in_btn = static_cast<CButtonUI* >(ui_mgr.FindControl(L"edit_dial_in_country_btn"));
+
+	m_enable_waiting_room = static_cast<CCheckBoxUI* >(ui_mgr.FindControl(L"option_enable_waiting_room"));
+	m_enable_meeting_to_public = static_cast<CCheckBoxUI* >(ui_mgr.FindControl(L"option_enable_meeting_to_public"));
+	m_get_public_event_list_url_btn = static_cast<CButtonUI* >(ui_mgr.FindControl(L"view_public_list_btn"));
+	m_enable_language_interpreter = static_cast<CCheckBoxUI* >(ui_mgr.FindControl(L"option_enable_language_interpreter"));
+	m_input_interpreter_email = static_cast<CRichEditUI* >(ui_mgr.FindControl(L"edit_set_interpreter"));
+	m_combo_first_language = static_cast<CComboUI* >(ui_mgr.FindControl(L"combo_first_language"));
+	m_combo_second_language = static_cast<CComboUI* >(ui_mgr.FindControl(L"combo_second_language"));
+	m_interpreter_to = static_cast<CLabelUI* >(ui_mgr.FindControl(L"lable_to"));
+	m_input_alter_hosts = static_cast<CRichEditUI* >(ui_mgr.FindControl(L"edit_set_alt_hosts"));
 
 	//set start time
 	ShowLocaltime();
@@ -200,6 +228,36 @@ void CSDKSheduleMeetingUIGroup::Notify( TNotifyUI& msg )
 		else if(msg.pSender == m_edit_dial_in_btn)
 		{
 			DoClickEditDialInCountryBtn();
+		}
+		
+		else if (msg.pSender == m_enable_meeting_to_public)
+		{
+			if(m_enable_meeting_to_public->GetCheck() == false)
+				m_get_public_event_list_url_btn->SetVisible(true);
+			else
+				m_get_public_event_list_url_btn->SetVisible(false);
+		}
+		else if(msg.pSender == m_get_public_event_list_url_btn)
+		{
+			DoClickViewPublicListBtn();
+		}
+
+		else if (msg.pSender == m_enable_language_interpreter)
+		{
+			if(m_enable_language_interpreter->GetCheck() == false)
+			{
+				m_input_interpreter_email->SetVisible(true);
+				m_combo_first_language->SetVisible(true);
+				m_combo_second_language->SetVisible(true);
+				m_interpreter_to->SetVisible(true);
+			}
+			else
+			{
+				m_input_interpreter_email->SetVisible(false);
+				m_combo_first_language->SetVisible(false);
+				m_combo_second_language->SetVisible(false);
+				m_interpreter_to->SetVisible(false);
+			}
 		}
 	}
 	else if (msg.sType == _T("itemselect"))
@@ -433,6 +491,95 @@ void CSDKSheduleMeetingUIGroup::DoClickEditMeetingBtn()
 			{
 				m_enable_join_before_host->Selected(false);
 			}
+		}
+
+		if (m_enable_waiting_room)
+		{
+			if( pMeetingItemInfo->IsWaitingRoomEnabled(can_change) && m_enable_waiting_room)
+			{
+				m_enable_waiting_room->Selected(true);
+			}
+			else
+			{
+				m_enable_waiting_room->Selected(false);
+			}
+		}
+		if (m_enable_meeting_to_public)
+		{
+			if( pMeetingItemInfo->IsMeetingToPublicEnabled(can_change) && m_enable_meeting_to_public)
+			{
+				m_enable_meeting_to_public->Selected(true);
+				m_get_public_event_list_url_btn->SetVisible(true);
+			}
+			else
+			{
+				m_enable_meeting_to_public->Selected(false);
+				m_get_public_event_list_url_btn->SetVisible(false);
+			}
+		}
+		if (m_enable_language_interpreter)
+		{
+			if( pMeetingItemInfo->IsLanguageInterpretationEnabled(can_change) && m_enable_language_interpreter)
+			{
+				m_enable_language_interpreter->Selected(true);
+				m_input_interpreter_email->SetVisible(true);
+				m_combo_first_language->SetVisible(true);
+				m_combo_second_language->SetVisible(true);
+				m_interpreter_to->SetVisible(true);
+
+				ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* lst_interpreter = pMeetingItemInfo->GetInterpreterInfoList();
+				int nCount = lst_interpreter->GetCount();
+				for(int i=0; i<nCount; i++)
+				{
+					ZOOM_SDK_NAMESPACE::IInterpreterInfo* pItem = lst_interpreter->GetItem(i);
+					if(NULL != pItem)
+					{
+						ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo firstlang = pItem->GetFirstLanguageInfo();
+						ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo seclang = pItem->GetSecendLanguageInfo();
+						m_input_interpreter_email->SetText(pItem->GetEmail());
+						m_combo_first_language->SetInternVisible();
+						m_combo_second_language->SetInternVisible();
+						m_combo_first_language->SelectItem((int)firstlang,true);
+						m_combo_second_language->SelectItem((int)seclang,true);
+					}
+				}
+			}
+			else
+			{
+				m_enable_language_interpreter->Selected(false);
+				m_input_interpreter_email->SetText(L"");
+				m_input_interpreter_email->SetVisible(false);
+				m_combo_first_language->SetVisible(false);
+				m_combo_second_language->SetVisible(false);
+				m_interpreter_to->SetVisible(false);
+			}
+		}
+
+		if (m_input_alter_hosts)
+		{
+			ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* lst_althosts = pMeetingItemInfo->GetAlternativeHostInfoList();
+			int nCount = lst_althosts->GetCount();
+			
+			std::wstring str_hosts;
+			std::wstring str_host;
+			std::wstring str_delim = L";";
+			for(int i=0; i<nCount; i++)
+			{
+				ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pItem = lst_althosts->GetItem(i);
+				if(NULL != pItem)
+				{
+					str_host = pItem->GetEmail();
+					if (0 == i)
+					{
+						str_hosts = str_hosts + str_host;
+					}
+					else
+					{
+						str_hosts = str_hosts +str_delim + str_host;
+					}
+				}
+			}
+			m_input_alter_hosts->SetText(str_hosts.c_str());
 		}
 
 		if (m_mute_meeting)
@@ -703,6 +850,24 @@ void CSDKSheduleMeetingUIGroup::UpdateRecurringMeetingUI()
 	}
 }
 
+void CSDKSheduleMeetingUIGroup::DoClickViewPublicListBtn()
+{
+	if (NULL == m_pScheduelMeetingItem)
+	{
+		if(m_main_frame)
+			m_main_frame->ShowErrorMessage(ScheduleMeetingFailed);
+		return;
+	}
+	if (m_get_public_event_list_url_btn)
+	{
+		m_pPublicEventListURL = m_pScheduelMeetingItem->GetPublicEventListUrl();
+		if(m_pPublicEventListURL)
+		{
+			ShellExecute(NULL, _T("open"), m_pPublicEventListURL, _T(""), _T(""), SW_SHOW);
+		}
+	}
+}
+
 void CSDKSheduleMeetingUIGroup::DoClickEditDialInCountryBtn()
 {//todo
 
@@ -875,6 +1040,119 @@ void CSDKSheduleMeetingUIGroup::DoSchedule()
 		}
 	}
 
+	if (m_enable_waiting_room && m_enable_waiting_room->IsSelected())
+	{
+		if (!m_pScheduelMeetingItem->IsWaitingRoomEnabled(can_change) && can_change)
+		{
+			m_pScheduelMeetingItem->EnableWaitingRoom(true);
+		}
+	}
+	else
+	{
+		if (m_pScheduelMeetingItem->IsWaitingRoomEnabled(can_change) && can_change)
+		{
+			m_pScheduelMeetingItem->EnableWaitingRoom(false);
+		}
+	}
+
+	if (m_enable_meeting_to_public && m_enable_meeting_to_public->IsSelected())
+	{
+		if (!m_pScheduelMeetingItem->IsMeetingToPublicEnabled(can_change) && can_change)
+		{
+			m_pScheduelMeetingItem->EnableMeetingToPublic(true);
+		}
+	}
+	else
+	{
+		if (m_pScheduelMeetingItem->IsMeetingToPublicEnabled(can_change) && can_change)
+		{
+			m_pScheduelMeetingItem->EnableMeetingToPublic(false);
+		}
+	}
+
+	if (m_enable_language_interpreter && m_enable_language_interpreter->IsSelected())
+	{
+		if (!m_pScheduelMeetingItem->IsLanguageInterpretationEnabled(can_change) && can_change)
+		{
+			m_pScheduelMeetingItem->EnableLanguageInterpretation(true);
+			if (m_input_interpreter_email && m_combo_first_language && m_combo_second_language)
+			{
+				ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* pList(NULL);
+				TListImpl<ZOOM_SDK_NAMESPACE::IInterpreterInfo* > lstInterpreters;
+				TInterpreterInfo* pInfo = new TInterpreterInfo;
+				if(pInfo)
+				{
+					std::wstring email = m_input_interpreter_email->GetText().GetData();
+					if (email.size()<=0)
+					{
+						return;
+					}
+					pInfo->email = email.c_str();
+					pInfo->firstlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_first_language->GetCurSel();
+					pInfo->secondlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_second_language->GetCurSel();
+				}
+				ZOOM_SDK_NAMESPACE::IInterpreterInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >(pInfo);
+				if (NULL == pInfoInterface)
+				{
+					delete pInfo;
+				}
+				else
+				{
+					lstInterpreters.m_List.push_back(pInfoInterface);
+				}
+				pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* >(&lstInterpreters);
+				m_pScheduelMeetingItem->SetInterpreterInfoList(pList);
+			}
+		}
+	}
+	else
+	{
+		if (m_pScheduelMeetingItem->IsLanguageInterpretationEnabled(can_change) && can_change)
+		{
+			m_pScheduelMeetingItem->EnableLanguageInterpretation(false);
+		}
+	}
+
+	if (m_input_alter_hosts)
+	{
+		std::wstring alt_hosts = m_input_alter_hosts->GetText().GetData();
+		if (alt_hosts.size()<=0)
+		{
+			return;
+		}
+
+		TCHAR tdelim = L';';
+		std::wstringstream ss;
+		ss.str(alt_hosts);
+		std::wstring titem;
+		std::vector<std::wstring> elemts;
+		while(std::getline(ss, titem, tdelim))
+		{
+			elemts.push_back(titem);
+		}
+
+		ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* pList(NULL);
+		TListImpl<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* > lstAltHosts;
+
+		int nCount = elemts.size();
+		for(int i=0; i<nCount; i++)
+		{
+			TAlternativeHostInfo* pInfo = new TAlternativeHostInfo;
+			if (NULL == pInfo)
+				continue;
+			pInfo->m_email = elemts[i];
+			ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >(pInfo);
+			if (NULL == pInfoInterface)
+			{
+				delete pInfo;
+				continue;
+			}
+			lstAltHosts.m_List.push_back(pInfoInterface);
+		}
+		pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* >(&lstAltHosts);
+		m_pScheduelMeetingItem->SetAlternativeHostList(pList);
+	}
+
 	if (m_mute_meeting && m_mute_meeting->IsSelected() )
 	{
 		if (!m_pScheduelMeetingItem->IsMuteUponEntryEnabled(can_change) && can_change)
@@ -1032,6 +1310,114 @@ void CSDKSheduleMeetingUIGroup::DoEdit()
 		}
 	}
 
+	if (m_enable_waiting_room && m_enable_waiting_room->IsSelected())
+	{
+		if (!m_pEditMeetingItem->IsWaitingRoomEnabled(can_change) && can_change)
+		{
+			m_pEditMeetingItem->EnableWaitingRoom(true);
+		}
+	}
+	else
+	{
+		if (m_pEditMeetingItem->IsWaitingRoomEnabled(can_change) && can_change)
+		{
+			m_pEditMeetingItem->EnableWaitingRoom(false);
+		}
+	}
+
+	if (m_enable_meeting_to_public && m_enable_meeting_to_public->IsSelected())
+	{
+		if (!m_pEditMeetingItem->IsMeetingToPublicEnabled(can_change) && can_change)
+		{
+			m_pEditMeetingItem->EnableMeetingToPublic(true);
+		}
+	}
+	else
+	{
+		if (m_pEditMeetingItem->IsMeetingToPublicEnabled(can_change) && can_change)
+		{
+			m_pEditMeetingItem->EnableMeetingToPublic(false);
+		}
+	}
+
+	if (m_enable_language_interpreter && m_enable_language_interpreter->IsSelected())
+	{
+		if (!m_pEditMeetingItem->IsLanguageInterpretationEnabled(can_change) && can_change)
+		{
+			m_pEditMeetingItem->EnableLanguageInterpretation(true);
+		}
+		if (m_input_interpreter_email && m_combo_first_language && m_combo_second_language)
+		{
+			ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* pList(NULL);
+			TListImpl<ZOOM_SDK_NAMESPACE::IInterpreterInfo* > lstInterpreters;
+			TInterpreterInfo* pInfo = new TInterpreterInfo;
+			std::wstring email = m_input_interpreter_email->GetText().GetData();
+			if(email.size() > 0)
+			{
+				if(pInfo)
+				{
+					pInfo->email = email.c_str();
+					pInfo->firstlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_first_language->GetCurSel();
+					pInfo->secondlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_second_language->GetCurSel();
+				}
+				ZOOM_SDK_NAMESPACE::IInterpreterInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >(pInfo);
+				if (NULL == pInfoInterface)
+				{
+					delete pInfo;
+				}
+				else
+				{
+					lstInterpreters.m_List.push_back(pInfoInterface);
+				}
+			}
+			pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* >(&lstInterpreters);
+			m_pEditMeetingItem->SetInterpreterInfoList(pList);
+		}
+	}
+	else
+	{
+		if (m_pEditMeetingItem->IsLanguageInterpretationEnabled(can_change) && can_change)
+		{
+			m_pEditMeetingItem->EnableLanguageInterpretation(false);
+		}
+	}
+
+	if (m_input_alter_hosts)
+	{
+		std::wstring alt_hosts = m_input_alter_hosts->GetText().GetData();
+
+		TCHAR tdelim = L';';
+		std::wstringstream ss;
+		ss.str(alt_hosts);
+		std::wstring titem;
+		std::vector<std::wstring> elemts;
+		while(std::getline(ss, titem, tdelim))
+		{
+			elemts.push_back(titem);
+		}
+
+		ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* pList(NULL);
+		TListImpl<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* > lstAltHosts;
+
+		int nCount = elemts.size();
+		for(int i=0; i<nCount; i++)
+		{
+			TAlternativeHostInfo* pInfo = new TAlternativeHostInfo;
+			if (NULL == pInfo)
+				continue;
+			pInfo->m_email = elemts[i];
+			ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >(pInfo);
+			if (NULL == pInfoInterface)
+			{
+				delete pInfo;
+				continue;
+			}
+			lstAltHosts.m_List.push_back(pInfoInterface);
+		}
+		pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* >(&lstAltHosts);
+		m_pEditMeetingItem->SetAlternativeHostList(pList);
+	}
+
 	if (m_mute_meeting && m_mute_meeting->IsSelected() )
 	{
 		if (!m_pEditMeetingItem->IsMuteUponEntryEnabled(can_change) && can_change)
@@ -1117,7 +1503,7 @@ void CSDKSheduleMeetingUIMgr::InitWindow()
 	RECT rc = { 0 };
 	if( !::GetClientRect(m_hWnd, &rc) ) return;
 	rc.right = rc.left + 524;
-	rc.bottom = rc.top + /*376*/700;
+	rc.bottom = rc.top + /*376*/840;
 	if( !::AdjustWindowRectEx(&rc, GetWindowStyle(m_hWnd), (!(GetWindowStyle(m_hWnd) & WS_CHILD) && (::GetMenu(m_hWnd) != NULL)), GetWindowExStyle(m_hWnd)) ) return;
 	int ScreenX = GetSystemMetrics(SM_CXSCREEN);
 	int ScreenY = GetSystemMetrics(SM_CYSCREEN);

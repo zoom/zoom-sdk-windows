@@ -99,6 +99,10 @@ public:
 	/// \return TRUE indicates that the user is the sender of Closed Caption.
 	virtual bool IsClosedCaptionSender() = 0;
 
+	/// \brief Determine whether the user specified by the current information is talking or not.
+	/// \return TRUE indicates that the specified user is talking.
+	virtual bool IsTalking() = 0;
+
 	/// \brief Get the webinar status of the user specified by the current information.
 	/// \return The status of the specified user. For more details, see \link WebinarAttendeeStatus \endlink structure.
 	virtual WebinarAttendeeStatus* GetWebinarAttendeeStauts() = 0;

@@ -32,6 +32,8 @@ public:
 	void EnableShowShareSwitchMultiToSingleConfirmDlg(bool bEnable);
 	void DisableFreeMeetingRemainTimeNotify(bool bDisable);
 	void HideChatItemOnMeetingUI(bool bHide);
+	void HideReactionItemOnMeetingUI(bool bHide);
+	void HideMeetingInfoItemOnMeetingUI(bool bHide);
 	void HideRecordItemOnMeetingUI(bool bHide);
 	void HideUpgradeFreeMeetingButton(bool bHide);
 	void SetShowInviteDlgTabPage(ZOOM_SDK_NAMESPACE::SDKInviteDlgTabPage tabPage, bool bShow);

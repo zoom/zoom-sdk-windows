@@ -517,6 +517,7 @@ class IMeetingLiveStreamController;
 class IMeetingWebinarController;
 class IClosedCaptionController;
 class IMeetingQAController;
+class IMeetingBOController;
 /// \brief Meeting Service Interface
 ///
 class IMeetingService
@@ -668,6 +669,10 @@ public:
 	/// \brief Get the Q&A controller.
 	/// \return If the function succeeds, the return value is a pointer to IMeetingQAController. Otherwise returns NULL.
 	virtual IMeetingQAController* GetMeetingQAController() = 0;
+
+	/// \brief Get the Breakout Room controller.
+	/// \return If the function succeeds, the return value is a pointer to IMeetingBOController. Otherwise returns NULL.
+	virtual IMeetingBOController* GetMeetingBOController() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

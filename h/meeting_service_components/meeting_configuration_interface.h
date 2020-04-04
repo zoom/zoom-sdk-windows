@@ -498,6 +498,19 @@ public:
 	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
 	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onAudioMenuBtnClicked(), and the user shall deal with the subsequent logic himself.
 	virtual void RedirectClickAudioMenuBTNEvent(bool bRedirect) = 0;
+
+	/// \brief Set if it is able to handle the event with SDK user's own program by clicking Breakout Room button in the meeting. Default value: FALSE.
+	/// \param bRedirect TRUE indicates to handle with user's own program. FALSE not.
+	/// \remarks If the user calls this function to convert, the SDK will trigger the IMeetingUIControllerEvent::onBreakoutRoomBtnClicked(), and the user shall deal with the subsequent logic himself.
+	virtual void RedirectClickBreakoutRoomButtonEvent(bool bRedirect) = 0;
+
+	/// \brief Set the visibility of reaction on meeting UI. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideReactionsOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Set the visibility of meeting info button on meeting UI. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideMeetingInfoOnMeetingUI(bool bHide) = 0;
 };
 
 /// \brief Meeting connect configuration Interface

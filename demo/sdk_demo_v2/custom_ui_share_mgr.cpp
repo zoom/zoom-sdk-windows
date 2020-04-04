@@ -405,9 +405,10 @@ void CCustomizeUIShareMgr::DestroyCustomShareRender()
 {
 	if(!m_pMainUI)
 		return;
-	if(m_pMainUI->GetCustomizedMgr())
+	if(m_pMainUI->GetCustomizedMgr() && m_pCustomizedShareRender)
 	{
 		m_pMainUI->GetCustomizedMgr()->DestroyShareRender(m_pCustomizedShareRender);
+		m_pCustomizedShareRender = NULL;
 	}
 }
 
@@ -541,6 +542,7 @@ void CCustomizeUIShareMgr::HandleShareRenderDestroyed(ZOOM_SDK_NAMESPACE::ICusto
 {
 	DestroySelectShareUI();
 	DestroyShareRenderUI();
+	m_pCustomizedShareRender = NULL;
 }
 
 void CCustomizeUIShareMgr::HandleSharingShareAnnotationStatusChanged(ZOOM_SDK_NAMESPACE::ICustomizedShareRender* share_render_, ZOOM_SDK_NAMESPACE::CustomizedShareAnnotationStatus status_)

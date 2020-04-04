@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<Window size="524,700" caption="0,0,0,32">
+<Window size="524,840" caption="0,0,0,32">
   <!--Font size 9-->
   <Font id="0" name="Segoe UI" size="12" bold="true"/>
   <Font id="1" name="Segoe UI" size="12" bold="false"/>
@@ -127,7 +127,7 @@
               </HorizontalLayout>
           </HorizontalLayout>
           <Control float="true" pos="1,388,0,0" width="526" height="8" />
-          <HorizontalLayout name="meeting_options" width="525" height="200">
+          <HorizontalLayout name="meeting_options" width="525" height="340">
               <Label name="label_meeting_options" text="Meeting options" float="true" pos="21,10,0,0" width="120" height="19" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="7"/>
               <Control float="true" pos="145,19,0,0" width="402" height="1" bkcolor="#FFA0A0A4" />
               <CheckBox name="option_set_meeting_pwd" text="Set meeting password" float="true" pos="23,39,0,0" width="200" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter"  normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
@@ -135,9 +135,41 @@
               <CheckBox name="option_mute_meeting" text="Mute meeting when join" float="true" pos="23,89,0,0" width="200" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
               <CheckBox name="option_use_PMI" text="Use personal meeting ID" float="true" pos="23,115,0,0" width="200" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter"  normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
               <CheckBox name="option_record_auto" text="Record meeting automatically" float="true" pos="23,146,0,0" width="250" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter"  normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
-              <RichEdit name="edit_set_meeting_pwd" promptext="input pwd" visible="false" float="true" pos="262,39,0,0" width="200" height="30" textcolor="##FFB7B7B7" disabledtextcolor="#FFA7A6AA"  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" font="6" bordersize="1" bordercolor="FFB7B7B7"/>
+              <CheckBox name="option_enable_waiting_room" text="Enable waiting room" float="true" pos="23,176,0,0" width="200" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter"  normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
+			  <CheckBox name="option_enable_meeting_to_public" text="Enable meeting to public list" float="true" pos="23,206,0,0" width="200" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter"  normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
+			  <Button name="view_public_list_btn" text="View public list" visible="false" float="true" pos="262,206,0,0" width="100" height="20" font="6" bkcolor="#FFFFFFFF" hotbkcolor="#FFFFFFFF" pushedbkcolor="#FFFFFFFF" focusedbkcolor="#FFFFFFFF" textcolor="#ff0027c2" hottextcolor="#FF179FF5"/>
+			  <CheckBox name="option_enable_language_interpreter" text="Enable language interpretation" float="true" pos="23,236,0,0" width="230" height="20" textpadding="25,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="left,singleline" valign="vcenter"  normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'"  selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
+			  <RichEdit name="edit_set_interpreter" prompttext="john@company.com" visible="false" float="true" pos="53,266,0,0" width="150" height="30" textcolor="##FFB7B7B7" disabledtextcolor="#FFA7A6AA"  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" font="6" bordersize="1" bordercolor="FFB7B7B7"/>
+			  <Combo name="combo_first_language" float="true" visible="false" pos="232,266,0,0" width="80" height="30" textpadding="6,0,0,0" bkcolor="#FFEAECEE" bordersize="1" bordercolor="FFC0C0C0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150" >
+                    <ListLabelElement text="English" height="23" padding="6,0,0,0" selected="true" />
+                    <ListLabelElement text="Chinese" height="23" padding="6,0,0,0" />
+                    <ListLabelElement text="Japanese" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="German" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="French" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Russian" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Portuguese" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Spanish" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Korean" height="23" padding="6,0,0,0"  />
+
+              </Combo>
+			  <Combo name="combo_second_language" float="true" visible="false" pos="342,266,0,0" width="80" height="30" textpadding="6,0,0,0" bkcolor="#FFEAECEE" bordersize="1" bordercolor="FFC0C0C0" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150" >
+                    <ListLabelElement text="English" height="23" padding="6,0,0,0" />
+                    <ListLabelElement text="Chinese" height="23" padding="6,0,0,0" selected="true" />
+                    <ListLabelElement text="Japanese" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="German" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="French" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Russian" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Portuguese" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Spanish" height="23" padding="6,0,0,0"  />
+                    <ListLabelElement text="Korean" height="23" padding="6,0,0,0"  />
+
+              </Combo>
+			  <Label name="lable_to" text="to" float="true" visible="false" pos="313,270,0,0" width="120" height="19" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="6"/>
+			  <Label name="lable_alter_host" text="Alternative Hosts :" float="true" pos="21,306,0,0" width="120" height="19" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="6"/>
+			  <RichEdit name="edit_set_alt_hosts" prompttext="e.g. john@company.com;peter@company.com" visible="true" float="true" pos="152,306,0,0" width="340" height="30" textcolor="##FFB7B7B7" disabledtextcolor="#FFA7A6AA"  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" font="6" bordersize="1" bordercolor="FFB7B7B7"/>
+			  <RichEdit name="edit_set_meeting_pwd" prompttext="input pwd" visible="false" float="true" pos="262,39,0,0" width="200" height="30" textcolor="##FFB7B7B7" disabledtextcolor="#FFA7A6AA"  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" font="6" bordersize="1" bordercolor="FFB7B7B7"/>
           </HorizontalLayout>
-          <Control float="true" pos="1,587,0,0" width="526" height="8" />
+          <Control float="true" pos="1,707,0,0" width="526" height="8" />
           <HorizontalLayout name="calendar" width="525" height="73">
               <Label text="Calendar" float="true" pos="21,11,0,0" width="120" height="18" textpadding="6,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="7"/>
               <Control float="true" pos="100,19,0,0" width="440" height="1" bkcolor="#FFA0A0A4" />
@@ -145,7 +177,7 @@
               <Option name="option_google" text="Google" float="true" pos="189,38,0,0" width="65" height="21" textpadding="20,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'" group="calendar" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
               <Option name="option_other_calendar" text="Other" float="true" pos="329,38,0,0" width="65" height="21" textpadding="20,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='2,2,20,20'" group="calendar" selected="true" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='2,2,20,20'" font="6"/>
           </HorizontalLayout>
-          <Button name="btn_schedule" text="Schedule" float="true" pos="411,620,0,0" width="100" height="30" bkcolor="#FF179FF5" textcolor="#FF000000" disabledtextcolor="#FF808080" align="center" borderround="2,2" font="6"/>
+          <Button name="btn_schedule" text="Schedule" float="true" pos="411,760,0,0" width="100" height="30" bkcolor="#FF179FF5" textcolor="#FF000000" disabledtextcolor="#FF808080" align="center" borderround="2,2" font="6"/>
         </VerticalLayout>
 
         <VerticalLayout name="edit_meeting_panel" visible="false">

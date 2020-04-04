@@ -10,16 +10,14 @@ void CCustomizeInMeetingUIMgr::onVideoContainerDestroyed(ZOOM_SDK_NAMESPACE::ICu
 	if(m_pCustomizeUIVideoMgr)
 	{
 		m_pCustomizeUIVideoMgr->HandleVideoContainerDestroyed(pContainer);
-		m_pCustomizeUIVideoMgr = NULL;
 	}	
 }
 
 void CCustomizeInMeetingUIMgr::onShareRenderDestroyed(ZOOM_SDK_NAMESPACE::ICustomizedShareRender* pRender)
-{   //TODO: now it can not get here!!
+{
 	if(m_pCustomizeShareMgr)
 	{
 		m_pCustomizeShareMgr->HandleShareRenderDestroyed(pRender);
-		m_pCustomizeShareMgr = NULL;
 	}
 }
 
@@ -451,15 +449,14 @@ void CCustomizeInMeetingUIMgr::Start()
 
 		if (NULL == m_pCustomUIMgr || ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS != m_pCustomUIMgr->HasLicense())
 			break;
-		
+	
+		m_pCustomUIMgr->SetEvent(this);
+
 		create_owner_hwnd(this, Custom_MeetingUI_Width, Custom_MeetingUI_Height);
 		if (NULL == m_hOwnerHwnd || !::IsWindow(m_hOwnerHwnd))
 			break;
 		
 		if(!InitCustomizeUIVideoMgr())
-			break;
-
-		if(!InitCustomShareRender())
 			break;
 
 		m_bUIIsReady = true;
@@ -573,6 +570,7 @@ void CCustomizeInMeetingUIMgr::SetSDKMeetingService(ZOOM_SDK_NAMESPACE::IMeeting
 
 void CCustomizeInMeetingUIMgr::HandleInMeeting()
 {
+	InitCustomShareRender();
 	m_bInMeeting = true;
 	if (NULL == m_pCustomizeUIVideoMgr || NULL == m_pCustomizeShareMgr)
 		return;
@@ -598,6 +596,7 @@ void CCustomizeInMeetingUIMgr::HandleMoveToWaitingRoom()
 		if(m_pCustomizeUIVideoMgr)
 			m_pCustomizeUIVideoMgr->uninit();
 		InitCustomizeUIVideoMgr();
+
 		if(m_bUIIsReady)
 			ShowPreview();
 		UpdateMeetingTitle(true);

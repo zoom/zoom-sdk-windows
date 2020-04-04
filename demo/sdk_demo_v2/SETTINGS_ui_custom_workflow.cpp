@@ -187,6 +187,20 @@ void CSDKUICustomSettingsWorkFlow::HideChatItemOnMeetingUI(bool bHide)
 		m_pMeetingConfiguration->HideChatItemOnMeetingUI(bHide);
 	}
 }
+void CSDKUICustomSettingsWorkFlow::HideReactionItemOnMeetingUI(bool bHide)
+{
+	if(m_pMeetingConfiguration)
+	{
+		m_pMeetingConfiguration->HideReactionsOnMeetingUI(bHide);
+	}
+}
+void CSDKUICustomSettingsWorkFlow::HideMeetingInfoItemOnMeetingUI(bool bHide)
+{
+	if(m_pMeetingConfiguration)
+	{
+		m_pMeetingConfiguration->HideMeetingInfoOnMeetingUI(bHide);
+	}
+}
 void CSDKUICustomSettingsWorkFlow::HideRecordItemOnMeetingUI(bool bHide)
 {
 	if(m_pMeetingConfiguration)

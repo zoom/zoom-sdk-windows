@@ -121,6 +121,7 @@ public:
 	virtual void onCCBTNClicked() {}
 	virtual void onAudioBtnClicked(ZOOM_SDK_NAMESPACE::AudioBtnClickedCallbackInfo info) {}
 	virtual void onAudioMenuBtnClicked() {}
+	virtual void onBreakoutRoomBtnClicked() {}
 
 	//ITestAudioDeviceHelperEvent
 	virtual void OnMicSpkVolumnChanged(unsigned int MicVolume, unsigned int SpkVolume)  {}

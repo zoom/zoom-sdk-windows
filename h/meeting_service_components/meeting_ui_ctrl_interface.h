@@ -159,6 +159,10 @@ public:
 	/// \brief Callback event for clicking Audio Menu button in the meeting.
 	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the Audio Menu button in the meeting. For more details, see \link IMeetingUIElemConfiguration::RedirectClickAudioMenuBTNEvent() \endlink.
 	virtual void onAudioMenuBtnClicked() = 0;
+
+	/// \brief Callback event for clicking Breakout Room button in the meeting.
+	/// \remarks The user won't receive this callback event unless he sets to redirect the process of clicking the Breakout Room button in the meeting. For more details, see \link IMeetingUIElemConfiguration::RedirectClickBreakoutRoomButtonEvent() \endlink.
+	virtual void onBreakoutRoomBtnClicked() = 0;
 	
 };
 

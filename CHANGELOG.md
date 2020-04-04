@@ -2,12 +2,14 @@
 
 ## Note
 
-1. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
+1. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
+
+2. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
 * `CptHost.exe` -> `zcscpthost.exe`
 * `airhost.exe` -> `zcsairhost.exe`
 * `CptService.exe` -> `zCSCptService.exe`
 
-2. Kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+3. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptInstall.exe**
    * **CptHost.exe** / **zcscpthost.exe**
@@ -63,9 +65,48 @@ HMACSHA256(
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
 
+## 2020-04-04 @ [v4.6.15798.0403](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.6.15798.0403)
+
+## Added:
+* Add a new interface to center the setting dialog
+  * `ShowSettingDlgParam.bCenter`
+* Add a new interface to enable the green border while performing screen sharing for Zoom UI and Custom UI
+  * `IGeneralSettingContext.EnableGreenBorderWhenShare(bool bEnable)`
+* Add new interfaces for the `Limit FPS when share` feature in the setting dialog
+  * `IGeneralSettingContext.IsLimitFPSEnabledWhenShare()`
+  * `IGeneralSettingContext.EnableLimitFPSWhenShare(bool bEnable)`
+  * `IGeneralSettingContext.GetLimitFPSValueWhenShare()`
+  * `IGeneralSettingContext.SetLimitFPSValueWhenShare(LimitFPSValue value)`
+* Add a new interface to hide the "Find problem? Send report" button
+  * `IMeetingConfiguration.HideSendingStatisticInfoReport(bool bHide)`
+* Add new interfaces for customizing [breakout room](https://support.zoom.us/hc/en-us/articles/206476093-Getting-Started-with-Breakout-Rooms)
+  * Interfaces can be found in `meeting_breakout_rooms_interface_v2.h`
+
+* Add new callbacks for breakout room button events
+  * `IMeetingUIElemConfiguration.RedirectClickBreakoutRoomButtonEvent(bool bRedirect)`
+  * `IMeetingUIControllerEvent.onBreakoutRoomBtnClicked()`
+* Add new interfaces and options for schedule meeting
+  * New interfaces can be found in `premeeting_service_interface.h`
+
+* Add new fields in `initParam`
+  * `initParam.locale`
+  * `initParam.log_file_size`
+* Add a new interface to hide the Reaction button
+  * `IMeetingUIElemConfiguration.HideReactionsOnMeetingUI(bool bHide)`
+* Add a new interface to hide the meeting info button
+  * `IMeetingUIElemConfiguration.HideMeetingInfoOnMeetingUI(bool bHide)`
+* Add a new interface to check whether a user is talking or not
+  * `IUserInfo.IsTalking()`
+* Add a new interface `disableToolbarInviteButtonClickOriginAction`
 
 
-## 2020-02-10 @ [v4.6.15074.0203](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.6.15074.0203)
+## Changed & Fixed:
+* Fixed the UNC link issue
+* Fixed an issue that user could not join a meeting with vanityID
+* Fixed an issue that certain features could still be available via short-cuts even if the corresponding button has hidden
+
+
+## 2020-02-10 @ v4.6.15074.0203
 
 ## Added:
 * Add new features in Zoom default UI
@@ -94,7 +135,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
 * Fixed an issue where the webinar chat was freezing for some users when the webinar had a large number of attendees.
 * Fixed an issue where copy/paste was not working consistently for some users on Windows 10.
 
-## 2019-12-16 @ [v4.4.57220.1211](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.57220.1211)
+## 2019-12-16 @ v4.4.57220.1211
 
 ## Added:
 * Add new interfaces for SDK initialization with JWT token.
@@ -116,7 +157,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
 ## Changed & Fixed:
 * Fixed an issue that the meeting restarts for a few times after pressing the end meeting button.
 
-## 2019-11-04 @ [v4.4.56616.1028](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.56616.1028)
+## 2019-11-04 @ v4.4.56616.1028
 
 ## Added
 * Add a new interface to determine whether the user can do annotation in Custom UI
@@ -140,7 +181,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
 * Add a default parameter to `GetCustomizedAnnotationController(ICustomizedShareRender* pShareRender = NULL)`
   * `IAnnotationController.GetCustomizedAnnotationController(ICustomizedShareRender* pShareRender = NULL)`
 
-## 2019-09-04 @ [v4.4.55968.0904](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55968.0904)
+## 2019-09-04 @ v4.4.55968.0904
 
 ## Added
 *  Add a new interface to hide switch-camera-button on `ShareCameraWindow`
@@ -175,7 +216,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
 *  Changed to hide the "Pause/Stop" buttons when the auto-recording feature is turned on
 
 
-## 2019-07-15 @ [v4.4.55130.0712](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.4.55130.0712)
+## 2019-07-15 @ v4.4.55130.0712
 
 **Note**
 
@@ -256,7 +297,7 @@ Some default behavior in Zoom meeting has changed:
 
 
 
-## 2019-03-25 @ [v4.3.1.47204.0325](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.1.47204.0325)
+## 2019-03-25 @ v4.3.1.47204.0325
 
 **Added**
 
@@ -284,7 +325,7 @@ Some default behavior in Zoom meeting has changed:
 * IMeetingConfigurationFreeMeetingEvent.onFreeMeetingEndingReminderNotification
 * SetUICustomizedString
 
-## 2019-01-23 @ [v4.3.0.30730.0118](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.3.0.30730.0118)
+## 2019-01-23 @ v4.3.0.30730.0118
 
 **Added**
 *	Support for closed caption
@@ -305,7 +346,7 @@ Some default behavior in Zoom meeting has changed:
 **Coming in the future releases**
 *	A new refactorized demo project that provides clear instructions on how to implement major features will come in the next release
 
-## 2018-10-29 @ [v4.1.30384.1029](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.30384.1029)
+## 2018-10-29 @ v4.1.30384.1029
 
 * Support advanced share at API level
 1. Share a selected area of desktop
@@ -317,7 +358,7 @@ Some default behavior in Zoom meeting has changed:
 * Bug fixes
 
 
-## 2018-09-11 @ [v4.1.31872.0905](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.31872.0905)
+## 2018-09-11 @ v4.1.31872.0905
 
 * Support to direct share with ultrasonic
 
@@ -327,7 +368,7 @@ Some default behavior in Zoom meeting has changed:
 
 * Bug fixes
 
-## 2018-08-20 @ [v4.1.30420.0817](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.30420.0817)
+## 2018-08-20 @ v4.1.30420.0817
 
 * Custom Meeting UI (support basic meeting function, except for Webinar and Breakout Session)
 
@@ -389,7 +430,7 @@ Customized UI support
 7.now don't support Polling
 ```
 
-## 2018-07-26 @ [v4.1.28966.0727](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.28966.0727)
+## 2018-07-26 @ v4.1.28966.0727
 
 The start meeting logic for API users has changed. Please read below before upgrading to this version.
 
@@ -502,7 +543,7 @@ ZOOM_SDK_NAMESPACE.IMeetingVideoCtrlEvent.onHostRequestStartVideo
 ```
 
 
-## 2018-05-22 @ [v4.1.25013.0522](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.25013.0522)
+## 2018-05-22 @ v4.1.25013.0522
 ### Added
 1.c++ sdk
 a> Configuration of Meeting Service Interface
@@ -554,7 +595,7 @@ add new language support(Italian Portuguese Russian)
 
 add new c++ interface wrap
 
-## 2017-12-25 @ [v4.1.18127.1225](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.18127.1225)
+## 2017-12-25 @ v4.1.18127.1225
 ### Added
 
 1.c++ sdk
@@ -609,7 +650,7 @@ a>wrap new c++ interface and callback event
 b>fix callback event does not worked issue
 
 
-## 2017-11-01 @ [v4.1.12147.1101](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.1.12147.1101)
+## 2017-11-01 @ v4.1.12147.1101
 
 ### Added
 
@@ -623,7 +664,7 @@ b>onMeetingSecureKeyNotification : Meeting secure key notification, need to web 
 
 3.minor bug fix
 
-## 2017-10-10 @ [v4.1.9658.1010](https://github.com/zoom/zoom-sdk-windows/releases/tag/v.4.1.9658.1010)
+## 2017-10-10 @ v4.1.9658.1010
 
 ### Added
 
@@ -669,7 +710,7 @@ for details, please visit: https://developer.zoom.us/docs/windows/windows-sdk-re
 
 20.bug fix
 
-## 2017-06-08 @ [v4.0.35674.0608](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.0.35674.0608)
+## 2017-06-08 @ v4.0.35674.0608
 
 ### Added
 
@@ -696,7 +737,7 @@ for details, please visit: https://developer.zoom.us/docs/windows/windows-sdk-re
 
 10. Bug fix
 
-## 2017-04-12 @ [v4.0.29637.0413](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.0.29637.0413)
+## 2017-04-12 @ v4.0.29637.0413
 
 ### Added
 
@@ -710,7 +751,7 @@ for details, please visit: https://developer.zoom.us/docs/windows/windows-sdk-re
 
 5. Bug Fix
 
-## 2017-03-10 @ [4.0.26042.0307](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.0.26042.0307)
+## 2017-03-10 @ 4.0.26042.0307
 
 ### Added
 
@@ -724,7 +765,7 @@ for details, please visit: https://developer.zoom.us/docs/windows/windows-sdk-re
 
 5. Bug Fix
 
-## 2017-03-02 @ [v4.0.22918.0213](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.0.22918.0213)
+## 2017-03-02 @ v4.0.22918.0213
 
 ### Added
 
@@ -752,7 +793,7 @@ for details, please visit: https://developer.zoom.us/docs/windows/windows-sdk-re
 
 4. Bugs fix
 
-## 2017-02-10 @ [v4.0.21754.0118](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.0.21754.0118)
+## 2017-02-10 @ v4.0.21754.0118
 
 ### Added
 
@@ -764,7 +805,7 @@ for details, please visit: https://developer.zoom.us/docs/windows/windows-sdk-re
 
 5. Bug Fix
 
-## 2017-01-20 @ [v3.6.12148.1115](https://github.com/zoom/zoom-sdk-windows/releases/tag/v3.6.12148.1115)
+## 2017-01-20 @ v3.6.12148.1115
 
 ### Added
 

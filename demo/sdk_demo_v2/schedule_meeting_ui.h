@@ -6,6 +6,7 @@
 #include "resource.h"
 #include "mess_info.h"
 #include "dial_in_country_ui.h"
+#include <sstream>
 
 enum ErrorMessageType
 {
@@ -50,6 +51,7 @@ public:
 	bool GetEditMeetingStatus();
 	void UpdateRecurringMeetingUI();
 	void DoClickEditDialInCountryBtn();
+	void DoClickViewPublicListBtn();
 	void InitDialInCountry();
 	void DoSchedule();
 	void DoEdit();
@@ -102,6 +104,17 @@ protected:
 	CVerticalLayoutUI* m_start_time_layout;
 	CHorizontalLayoutUI* m_recurring_meeting_notice;
 
+	CCheckBoxUI* m_enable_waiting_room;
+	CCheckBoxUI* m_enable_meeting_to_public;
+	CButtonUI* m_get_public_event_list_url_btn;
+	const wchar_t* m_pPublicEventListURL;
+	CCheckBoxUI* m_enable_language_interpreter;
+	CRichEditUI* m_input_interpreter_email;
+	CComboUI*  m_combo_first_language;
+	CComboUI*  m_combo_second_language;
+	CLabelUI* m_interpreter_to;
+	CRichEditUI* m_input_alter_hosts;
+
 	UINT64 m_pmi;
 	
 };
@@ -150,4 +163,78 @@ protected:
 	CButtonUI* m_btn_schedule;
 	CGifAnimUI*	m_gifWaiting;
 	CVerticalLayoutUI* m_waiting_page;
+};
+
+class TInterpreterInfo : public ZOOM_SDK_NAMESPACE::IInterpreterInfo
+{
+public:
+	TInterpreterInfo(){
+		firstlanguageinfo = ZOOM_SDK_NAMESPACE::LANGUAGEINFO_NONE;
+		secondlanguageinfo = ZOOM_SDK_NAMESPACE::LANGUAGEINFO_NONE;
+	};
+	virtual ~TInterpreterInfo(){};
+	virtual const wchar_t* GetEmail(){return email.c_str();};
+
+	virtual ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo GetFirstLanguageInfo(){return firstlanguageinfo;};
+
+	virtual ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo GetSecendLanguageInfo(){return secondlanguageinfo;};
+
+public:
+	std::wstring email;
+	ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo firstlanguageinfo;
+	ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo secondlanguageinfo;
+};
+class TAlternativeHostInfo : public ZOOM_SDK_NAMESPACE::IAlternativeHostInfo
+{
+public:
+	TAlternativeHostInfo(){};
+	virtual ~TAlternativeHostInfo(){};
+
+	virtual const wchar_t* GetEmail(){return m_email.c_str();};
+
+public:
+	std::wstring m_email;	
+};
+template<class T>
+void GetDefaultValueT(T& tmp)
+{
+}
+template<class T>
+class TListImpl : public ZOOM_SDK_NAMESPACE::IList<T >
+{
+public:
+	TListImpl()
+	{
+
+	}
+
+	virtual ~TListImpl()
+	{
+	}
+
+	virtual int GetCount()
+	{
+		return m_List.size();
+	}
+
+	virtual T  GetItem(int index)
+	{
+		T elem;
+		GetDefaultValueT<T>(elem);
+		if (index >= 0 
+			&& index < (int)m_List.size())
+		{
+			elem = m_List[index];
+		}
+
+		return elem;
+	}
+
+	void Clear()
+	{
+		m_List.clear();
+	}
+
+public:
+	std::vector<T > m_List;
 };

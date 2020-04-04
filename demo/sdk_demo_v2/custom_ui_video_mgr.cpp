@@ -173,11 +173,7 @@ void CCustomizeUIVideoMgr::HideActiveViewVideo()
 
 void CCustomizeUIVideoMgr::ShowGalleryViewVideo(GalleryViewSubscribeType nType)
 {	
-	if(m_bNeedInitGalleryView)
-	{
-		CreateGalleryViewVideo();
-		m_bNeedInitGalleryView = false;
-	}
+	CreateGalleryViewVideo();
 	ReSubscribeNormalUser(nType);
 	int nElementHight = (m_rcGalleryView.bottom-m_rcGalleryView.top)/m_iVideoCountInOnePage;
 	int iShowed = 0;

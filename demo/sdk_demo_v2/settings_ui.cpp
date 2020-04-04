@@ -1988,6 +1988,8 @@ CSDKUICustomSettingsUIGroup::CSDKUICustomSettingsUIGroup()
 	m_chkRemainingMeetingTimeButton = NULL;
 	m_chkSettingDlgTopmostAttribute = NULL;
 	m_chkFullPhoneNumber = NULL;
+	m_chkReaction = NULL;
+	m_chkMeetingInfo = NULL;
 }
 CSDKUICustomSettingsUIGroup::~CSDKUICustomSettingsUIGroup()
 {
@@ -2040,6 +2042,8 @@ CSDKUICustomSettingsUIGroup::~CSDKUICustomSettingsUIGroup()
 	m_chkRemainingMeetingTimeButton = NULL;
 	m_chkSettingDlgTopmostAttribute = NULL;
 	m_chkFullPhoneNumber = NULL;
+	m_chkReaction = NULL;
+	m_chkMeetingInfo = NULL;
 }
 void CSDKUICustomSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKSettingsUIMgr* main_frame_)
 {
@@ -2090,6 +2094,8 @@ void CSDKUICustomSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKSettin
 	m_chkRemainingMeetingTimeButton = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_remaining_meeting_time_button")));
 	m_chkSettingDlgTopmostAttribute = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_setting_dialog_topmost_attribute")));
 	m_chkFullPhoneNumber = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_full_phone_number_for_phone_user")));
+	m_chkReaction = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_recation_button")));
+	m_chkMeetingInfo = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_meetinginfo_button")));
 	m_parentFrame = main_frame_;
 	SetUICustomSettingsFlags();
 }
@@ -2242,7 +2248,15 @@ void CSDKUICustomSettingsUIGroup::SetUICustomSettingsFlags()
 	if(m_chkFullPhoneNumber)
 	{
 		m_chkFullPhoneNumber->SetCheck(false);
-	}	
+	}
+	if(m_chkReaction)
+	{
+		m_chkReaction->SetCheck(false);
+	}
+	if(m_chkMeetingInfo)
+	{
+		m_chkMeetingInfo->SetCheck(false);
+	}
 }
 void CSDKUICustomSettingsUIGroup::Show()
 {
@@ -2474,6 +2488,14 @@ void CSDKUICustomSettingsUIGroup::Notify(TNotifyUI& msg)
 		{
 			DoFullPhoneNumberChkClick();
 		}
+		else if(msg.pSender == m_chkReaction)
+		{
+			DoReactionChkClick();
+		}
+		else if(msg.pSender == m_chkMeetingInfo)
+		{
+			DoMeetingInfoChkClick();
+		}
 	}
 }
 void CSDKUICustomSettingsUIGroup::DoBottomToolbarChkClick()
@@ -2531,6 +2553,20 @@ void CSDKUICustomSettingsUIGroup::DoChatAndMenuChkClick()
 		return;
 	bool bChecked = !m_chkChatAndMenu->GetCheck();
 	m_UICustomSettingsWorkFlow.HideChatItemOnMeetingUI(bChecked);
+}
+void CSDKUICustomSettingsUIGroup::DoReactionChkClick()
+{
+	if(NULL == m_chkReaction)
+		return;
+	bool bChecked = !m_chkReaction->GetCheck();
+	m_UICustomSettingsWorkFlow.HideReactionItemOnMeetingUI(bChecked);
+}
+void CSDKUICustomSettingsUIGroup::DoMeetingInfoChkClick()
+{
+	if(NULL == m_chkMeetingInfo)
+		return;
+	bool bChecked = !m_chkMeetingInfo->GetCheck();
+	m_UICustomSettingsWorkFlow.HideMeetingInfoItemOnMeetingUI(bChecked);
 }
 void CSDKUICustomSettingsUIGroup::DoRecordAndMenuChkClick()
 {

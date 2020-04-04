@@ -19,6 +19,38 @@ enum PremeetingAPIResult
 	PREMETAPIRET_SUCCESS,///<Calls API successfully.
 };
 
+enum InterpreteLanguageInfo{
+	LANGUAGEINFO_NONE = -1,
+	LANGUAGEINFO_US,	//English
+	LANGUAGEINFO_CN,	//Chinese
+	LANGUAGEINFO_JP,	//Japanese
+	LANGUAGEINFO_DE,	//German
+	LANGUAGEINFO_FR,	//French
+	LANGUAGEINFO_RU,	//Russian
+	LANGUAGEINFO_PT,	//Portuguese
+	LANGUAGEINFO_ES,	//Spanish
+	LANGUAGEINFO_KR,	//Korean
+	LANGUAGEINFO_NUM
+};
+class IInterpreterInfo
+{
+public:
+	virtual const wchar_t* GetEmail() = 0;
+
+	virtual InterpreteLanguageInfo GetFirstLanguageInfo() = 0;
+
+	virtual InterpreteLanguageInfo GetSecendLanguageInfo() = 0;
+
+	virtual ~IInterpreterInfo() {};
+};
+class IAlternativeHostInfo
+{
+public:
+	virtual const wchar_t* GetEmail() = 0;
+
+	virtual ~IAlternativeHostInfo() {};
+};
+
 /// \brief The interface to query the basic information of meeting.
 class IQueryMeetingItemDateInfoHelper
 {
@@ -253,6 +285,12 @@ public:
 	/// \brief The callback event that the status SPECIFY OTHERS AS THE HOST changes.
 	/// \param can_use TRUE indicates to enable to specify others as the host.
 	virtual void onSupportScheduleForNotification(bool can_use) = 0;
+
+	virtual void onWaitingRoomEnabledStatusNotification(bool enable) = 0;
+
+	virtual void onMeetingToPublicEnabledStatusNotification(bool enable) = 0;
+
+	virtual void onLanguageInterpretationEnabledStatusNotification(bool enable) = 0;
 };
 	
 /// \brief The interface of the user who can be specified as the host.
@@ -358,6 +396,18 @@ public:
 	/// \brief Get the recording type supported by the meeting.
 	/// \return The recording type supported by the meeting. For more details, see \link SCHEDULERECTYPE \endlink enum.
 	virtual SCHEDULERECTYPE GetSelectedAutoRecordType() = 0;
+
+	virtual bool     IsWaitingRoomEnabled(bool& can_change) = 0;
+
+	virtual bool	 IsMeetingToPublicEnabled(bool& can_change) = 0;
+
+	virtual const wchar_t* GetPublicEventListUrl() = 0;
+
+	virtual bool     IsLanguageInterpretationEnabled(bool& can_change) = 0;
+
+	virtual IList<IInterpreterInfo* >* GetInterpreterInfoList() = 0;
+
+	virtual IList<IAlternativeHostInfo* >* GetAlternativeHostInfoList() = 0;
 	
 	/// \brief Get the meeting information interface for the specified meeting. 
 	/// \return A pointer to the IQueryMeetingItemScheduleForHelper. For more details, see \link IQueryMeetingItemScheduleForHelper \endlink.
@@ -433,6 +483,16 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SelectAutoRecordType(SCHEDULERECTYPE type_) = 0;
+
+	virtual SDKError EnableWaitingRoom(bool bEnable) = 0;
+
+	virtual SDKError EnableMeetingToPublic(bool bEnable) = 0;
+
+	virtual SDKError EnableLanguageInterpretation(bool bEnable) = 0;
+
+	virtual SDKError SetInterpreterInfoList(IList<IInterpreterInfo* >* lst_interpreters) = 0;
+
+	virtual SDKError SetAlternativeHostList(IList<IAlternativeHostInfo* >* lst_althosts) = 0;
 	
 	/// \brief Get the specified meeting information interface.
 	/// \return A pointer to the ISelectMeetingItemScheduleForHelper. For more details, see \link ISelectMeetingItemScheduleForHelper \endlink.
