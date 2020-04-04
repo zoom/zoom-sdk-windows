@@ -112,6 +112,7 @@ var searchData=
   ['setfiletransfersessionkey',['SetFileTransferSessionKey',['../class_i_meeting_external_secure_key_handler.html#a2aab7d9c21904835714c0ebe02b847e6',1,'IMeetingExternalSecureKeyHandler']]],
   ['setfloatvideopos',['SetFloatVideoPos',['../class_i_meeting_u_i_elem_configuration.html#afae3c3b0593ce8f7ebedb00e7b6caeb2',1,'IMeetingUIElemConfiguration']]],
   ['setfloatvideowndvisibility',['SetFloatVideoWndVisibility',['../class_i_meeting_u_i_elem_configuration.html#a693a4af94d27153f85e53d1bde060711',1,'IMeetingUIElemConfiguration']]],
+  ['setlimitfpsvaluewhenshare',['SetLimitFPSValueWhenShare',['../class_i_general_setting_context.html#a1bd090e31cfb8066981fe5d323fa9b49',1,'IGeneralSettingContext']]],
   ['setlinewidth',['SetLineWidth',['../class_i_customized_annotation_obj.html#aa4a3767d7cb3cf86304a3e2617f8e982',1,'ICustomizedAnnotationObj::SetLineWidth()'],['../class_i_annotation_controller.html#a193f0b76cd7615ab2fc9765ce78d43fe',1,'IAnnotationController::SetLineWidth()']]],
   ['setmaxdurationforonlyhostinmeeting',['SetMaxDurationForOnlyHostInMeeting',['../class_i_meeting_configuration.html#a3ca67e5b3ed85693a3f49e3dd7f8094d',1,'IMeetingConfiguration']]],
   ['setmeetingidformeetinguititle',['SetMeetingIDForMeetingUITitle',['../class_i_meeting_u_i_elem_configuration.html#a8790999464063dbbff1bfcd7206bcb7a',1,'IMeetingUIElemConfiguration']]],

@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.6.15074.0203</span>
+   &#160;<span id="projectnumber">4.6.15798.0403</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0511d3cd94fb80323c75bb1648486dcd"><td class="memItemLeft" align="right" valign="top">virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_channel.html#a0511d3cd94fb80323c75bb1648486dcd">UnSubscribe</a> (unsigned int node_id, unsigned long long recver_handle)=0</td></tr>
 <tr class="memdesc:a0511d3cd94fb80323c75bb1648486dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe some user's video raw data.  <a href="#a0511d3cd94fb80323c75bb1648486dcd">More...</a><br /></td></tr>
 <tr class="separator:a0511d3cd94fb80323c75bb1648486dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bacc475dbd9b01a9d752a0f0f7e1cda"><td class="memItemLeft" align="right" valign="top"><a id="a8bacc475dbd9b01a9d752a0f0f7e1cda"></a>
+virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterRawDataPreProcessor</b> (unsigned long long recver_handle)=0</td></tr>
+<tr class="separator:a8bacc475dbd9b01a9d752a0f0f7e1cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfa6affe8e04a84a9e5f44535f35a2c"><td class="memItemLeft" align="right" valign="top"><a id="afcfa6affe8e04a84a9e5f44535f35a2c"></a>
+virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><b>UnRegisterRawDataPreProcessor</b> (unsigned long long recver_handle)=0</td></tr>
+<tr class="separator:afcfa6affe8e04a84a9e5f44535f35a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5c29e3859d0759a7d355f160802b72"><td class="memItemLeft" align="right" valign="top"><a id="a2a5c29e3859d0759a7d355f160802b72"></a>
+virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><b>SetExternalVideoSource</b> (<a class="el" href="class_i_virtual_video_source.html">IVirtualVideoSource</a> *video_srouce)=0</td></tr>
+<tr class="separator:a2a5c29e3859d0759a7d355f160802b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fbcd259547096a2f5c9c9fc092b0ca3"><td class="memItemLeft" align="right" valign="top">virtual SDKRawDataError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_raw_data_channel.html#a5fbcd259547096a2f5c9c9fc092b0ca3">GetLocalDeviceStatus</a> (void *device, <a class="el" href="struct_local_video_device_status.html">LocalVideoDeviceStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:a5fbcd259547096a2f5c9c9fc092b0ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of the local video device.  <a href="#a5fbcd259547096a2f5c9c9fc092b0ca3">More...</a><br /></td></tr>
 <tr class="separator:a5fbcd259547096a2f5c9c9fc092b0ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>

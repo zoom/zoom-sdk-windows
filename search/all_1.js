@@ -1,6 +1,7 @@
 var searchData=
 [
   ['backtomeeting',['BackToMeeting',['../class_i_meeting_u_i_controller.html#af84e3c88f76429fcd00a5de7366e9149',1,'IMeetingUIController']]],
+  ['bcenter',['bCenter',['../structtag_show_setting_dlg_param.html#a4a576af1800c5285699d55b99b11202e',1,'tagShowSettingDlgParam']]],
   ['beginselectreplacevbcolor',['BeginSelectReplaceVBColor',['../class_i_virtual_b_g_setting_context.html#ac5620961a2268cfdb5c7c334893b093b',1,'IVirtualBGSettingContext']]],
   ['beginturndown',['BeginTurnDown',['../class_i_camera_controller.html#a460e56f0270292338d8cf578cb46e5f9',1,'ICameraController']]],
   ['beginturnleft',['BeginTurnLeft',['../class_i_camera_controller.html#a6ec38f4bffe4c58aa8fdfbc24d00f1de',1,'ICameraController']]],

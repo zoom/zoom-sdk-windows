@@ -6,7 +6,7 @@ var searchData=
   ['addcustomizedstringresource',['AddCustomizedStringResource',['../class_i_customized_resource_helper.html#a687a3184c4f515f9204ccef45b3cdaa4',1,'ICustomizedResourceHelper']]],
   ['addcustomizedurlresource',['AddCustomizedURLResource',['../class_i_customized_resource_helper.html#a8450215f576f54fcd9bc03c72ab4b2ea',1,'ICustomizedResourceHelper']]],
   ['addquestion',['AddQuestion',['../class_i_meeting_q_a_controller.html#a3f21c9c6b2207b89d4123e867bba2926',1,'IMeetingQAController']]],
-  ['addref',['AddRef',['../class_y_u_v_raw_data_i420.html#a1306075855970587e256f3a642010d1f',1,'YUVRawDataI420::AddRef()'],['../class_audio_raw_data.html#a79ca03079e4244901bb1ee4ce185ea33',1,'AudioRawData::AddRef()']]],
+  ['addref',['AddRef',['../class_audio_raw_data.html#a79ca03079e4244901bb1ee4ce185ea33',1,'AudioRawData::AddRef()'],['../class_y_u_v_raw_data_i420.html#a1306075855970587e256f3a642010d1f',1,'YUVRawDataI420::AddRef()']]],
   ['addvideosourcetoreclist',['AddVideoSourceToRecList',['../class_i_customized_local_recording_layout_helper.html#a0bada5e6e82b4909130904a77d9f6d54',1,'ICustomizedLocalRecordingLayoutHelper']]],
   ['admittomeeting',['AdmitToMeeting',['../class_i_meeting_waiting_room_controller.html#aecd2696a927e648cc73c7751789c61e4',1,'IMeetingWaitingRoomController']]],
   ['allowattendeechat',['AllowAttendeeChat',['../class_i_meeting_webinar_controller.html#abed3ca7b5d3da977d8d4deafdf17c43f',1,'IMeetingWebinarController']]],

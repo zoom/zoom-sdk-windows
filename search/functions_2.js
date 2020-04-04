@@ -2,7 +2,7 @@ var searchData=
 [
   ['callme',['CallMe',['../class_i_meeting_phone_helper.html#a3c611df480c304d15c831e417cddd734',1,'IMeetingPhoneHelper']]],
   ['callouth323',['CallOutH323',['../class_i_meeting_h323_helper.html#aec0aaf694f286f805567655c79386dbc',1,'IMeetingH323Helper']]],
-  ['canaddref',['CanAddRef',['../class_y_u_v_raw_data_i420.html#a10f0697a6a95a584caa15c7323fcf797',1,'YUVRawDataI420::CanAddRef()'],['../class_audio_raw_data.html#a5a8ead575b90e1874cf58626c91958e0',1,'AudioRawData::CanAddRef()']]],
+  ['canaddref',['CanAddRef',['../class_audio_raw_data.html#a5a8ead575b90e1874cf58626c91958e0',1,'AudioRawData::CanAddRef()'],['../class_y_u_v_raw_data_i420.html#a10f0697a6a95a584caa15c7323fcf797',1,'YUVRawDataI420::CanAddRef()']]],
   ['canallowdisallowlocalrecording',['CanAllowDisAllowLocalRecording',['../class_i_meeting_recording_controller.html#ab13e7b97e1d3c7cee1f7232c6d468716',1,'IMeetingRecordingController']]],
   ['canaskattendeetostartvideo',['CanAskAttendeeToStartVideo',['../class_i_meeting_video_controller.html#a2160fc3701affb1fe0f9d85c062d1d37',1,'IMeetingVideoController']]],
   ['canassignotherstosendcc',['CanAssignOthersToSendCC',['../class_i_closed_caption_controller.html#a4876bcd771d6aa25138a778f9fa184fb',1,'IClosedCaptionController']]],

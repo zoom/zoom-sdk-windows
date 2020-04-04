@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.6.15074.0203</span>
+   &#160;<span id="projectnumber">4.6.15798.0403</span>
    </div>
   </td>
  </tr>
@@ -133,6 +133,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a520573725fdf694c4d75bac6fe770fe1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a520573725fdf694c4d75bac6fe770fe1">onAudioMenuBtnClicked</a> ()=0</td></tr>
 <tr class="memdesc:a520573725fdf694c4d75bac6fe770fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event for clicking Audio Menu button in the meeting.  <a href="#a520573725fdf694c4d75bac6fe770fe1">More...</a><br /></td></tr>
 <tr class="separator:a520573725fdf694c4d75bac6fe770fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568be8b0e175cfbef261b289959cb948"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_controller_event.html#a568be8b0e175cfbef261b289959cb948">onBreakoutRoomBtnClicked</a> ()=0</td></tr>
+<tr class="memdesc:a568be8b0e175cfbef261b289959cb948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event for clicking Breakout Room button in the meeting.  <a href="#a568be8b0e175cfbef261b289959cb948">More...</a><br /></td></tr>
+<tr class="separator:a568be8b0e175cfbef261b289959cb948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Callback Event of Meeting UI Controller. </p>
@@ -191,6 +194,34 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Callback event for clicking Audio Menu button in the meeting. </p>
 <dl class="section remark"><dt>Remarks</dt><dd>The user won't receive this callback event unless he sets to redirect the process of clicking the Audio Menu button in the meeting. For more details, see <a class="el" href="class_i_meeting_u_i_elem_configuration.html#a794f9f363cfee0f2ab71c3801295c706">IMeetingUIElemConfiguration::RedirectClickAudioMenuBTNEvent()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a568be8b0e175cfbef261b289959cb948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a568be8b0e175cfbef261b289959cb948">&#9670;&nbsp;</a></span>onBreakoutRoomBtnClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIControllerEvent::onBreakoutRoomBtnClicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event for clicking Breakout Room button in the meeting. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>The user won't receive this callback event unless he sets to redirect the process of clicking the Breakout Room button in the meeting. For more details, see <a class="el" href="class_i_meeting_u_i_elem_configuration.html#a700701aa8c21b0423d7c4fbcd83072d5">IMeetingUIElemConfiguration::RedirectClickBreakoutRoomButtonEvent()</a>. </dd></dl>
 
 </div>
 </div>

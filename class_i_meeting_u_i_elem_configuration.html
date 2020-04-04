@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.6.15074.0203</span>
+   &#160;<span id="projectnumber">4.6.15798.0403</span>
    </div>
   </td>
  </tr>
@@ -267,6 +267,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a794f9f363cfee0f2ab71c3801295c706"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a794f9f363cfee0f2ab71c3801295c706">RedirectClickAudioMenuBTNEvent</a> (bool bRedirect)=0</td></tr>
 <tr class="memdesc:a794f9f363cfee0f2ab71c3801295c706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to handle the event with SDK user's own program by clicking Audio Menu button in the meeting. Default value: FALSE.  <a href="#a794f9f363cfee0f2ab71c3801295c706">More...</a><br /></td></tr>
 <tr class="separator:a794f9f363cfee0f2ab71c3801295c706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700701aa8c21b0423d7c4fbcd83072d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a700701aa8c21b0423d7c4fbcd83072d5">RedirectClickBreakoutRoomButtonEvent</a> (bool bRedirect)=0</td></tr>
+<tr class="memdesc:a700701aa8c21b0423d7c4fbcd83072d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to handle the event with SDK user's own program by clicking Breakout Room button in the meeting. Default value: FALSE.  <a href="#a700701aa8c21b0423d7c4fbcd83072d5">More...</a><br /></td></tr>
+<tr class="separator:a700701aa8c21b0423d7c4fbcd83072d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e38240cb92c73cd1fcd13298eea8701"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a9e38240cb92c73cd1fcd13298eea8701">HideReactionsOnMeetingUI</a> (bool bHide)=0</td></tr>
+<tr class="memdesc:a9e38240cb92c73cd1fcd13298eea8701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of reaction on meeting UI. Default is displaying.  <a href="#a9e38240cb92c73cd1fcd13298eea8701">More...</a><br /></td></tr>
+<tr class="separator:a9e38240cb92c73cd1fcd13298eea8701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec31b82a6f900871267034f9dcecccd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a4ec31b82a6f900871267034f9dcecccd">HideMeetingInfoOnMeetingUI</a> (bool bHide)=0</td></tr>
+<tr class="memdesc:a4ec31b82a6f900871267034f9dcecccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the visibility of meeting info button on meeting UI. Default is displaying.  <a href="#a4ec31b82a6f900871267034f9dcecccd">More...</a><br /></td></tr>
+<tr class="separator:a4ec31b82a6f900871267034f9dcecccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting user configuration interface. </p>
@@ -1121,6 +1130,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4ec31b82a6f900871267034f9dcecccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec31b82a6f900871267034f9dcecccd">&#9670;&nbsp;</a></span>HideMeetingInfoOnMeetingUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::HideMeetingInfoOnMeetingUI </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bHide</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of meeting info button on meeting UI. Default is displaying. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bHide</td><td>TRUE means hiding, otherwise not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0be389b3ff5cc3e28170ba5da6e37336"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0be389b3ff5cc3e28170ba5da6e37336">&#9670;&nbsp;</a></span>HidePollOnMeetingUI()</h2>
 
@@ -1180,6 +1223,40 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the visibility of Q&amp;A on meeting UI. Default is displaying. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bHide</td><td>TRUE means hiding, otherwise not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e38240cb92c73cd1fcd13298eea8701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e38240cb92c73cd1fcd13298eea8701">&#9670;&nbsp;</a></span>HideReactionsOnMeetingUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::HideReactionsOnMeetingUI </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bHide</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the visibility of reaction on meeting UI. Default is displaying. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">bHide</td><td>TRUE means hiding, otherwise not. </td></tr>
@@ -1425,6 +1502,41 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>If the user calls this function to convert, the SDK will trigger the <a class="el" href="class_i_meeting_u_i_controller_event.html#a520573725fdf694c4d75bac6fe770fe1" title="Callback event for clicking Audio Menu button in the meeting. ">IMeetingUIControllerEvent::onAudioMenuBtnClicked()</a>, and the user shall deal with the subsequent logic himself. </dd></dl>
+
+</div>
+</div>
+<a id="a700701aa8c21b0423d7c4fbcd83072d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700701aa8c21b0423d7c4fbcd83072d5">&#9670;&nbsp;</a></span>RedirectClickBreakoutRoomButtonEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingUIElemConfiguration::RedirectClickBreakoutRoomButtonEvent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRedirect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set if it is able to handle the event with SDK user's own program by clicking Breakout Room button in the meeting. Default value: FALSE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bRedirect</td><td>TRUE indicates to handle with user's own program. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the user calls this function to convert, the SDK will trigger the <a class="el" href="class_i_meeting_u_i_controller_event.html#a568be8b0e175cfbef261b289959cb948" title="Callback event for clicking Breakout Room button in the meeting. ">IMeetingUIControllerEvent::onBreakoutRoomBtnClicked()</a>, and the user shall deal with the subsequent logic himself. </dd></dl>
 
 </div>
 </div>

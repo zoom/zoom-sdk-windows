@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['bcenter',['bCenter',['../structtag_show_setting_dlg_param.html#a4a576af1800c5285699d55b99b11202e',1,'tagShowSettingDlgParam']]],
   ['binsplitscreenmode',['bInSplitScreenMode',['../structtag_split_screen_info.html#a93f26993613c0c0a4a2b9c6b881a7408',1,'tagSplitScreenInfo']]],
   ['bredirectbadnetwork',['bRedirectBadNetwork',['../structtag_redirect_warning_msg_option.html#a551c7c6afeab8e7a8133c5304c9d06ca',1,'tagRedirectWarningMsgOption']]],
   ['bredirectwarnhighcpu',['bRedirectWarnHighCPU',['../structtag_redirect_warning_msg_option.html#a6ae35b7c07c43124dd0c31ffbde14897',1,'tagRedirectWarningMsgOption']]],

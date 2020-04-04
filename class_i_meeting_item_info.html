@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.6.15074.0203</span>
+   &#160;<span id="projectnumber">4.6.15798.0403</span>
    </div>
   </td>
  </tr>
@@ -188,6 +188,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88680d0385457edf64f08b4f1ad812f8 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="premeeting__service__interface_8h.html#af2763795621a98450c0870df4eba87ac">SCHEDULERECTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_query_meeting_item_meeting_option_helper.html#a88680d0385457edf64f08b4f1ad812f8">GetSelectedAutoRecordType</a> ()=0</td></tr>
 <tr class="memdesc:a88680d0385457edf64f08b4f1ad812f8 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recording type supported by the meeting.  <a href="class_i_query_meeting_item_meeting_option_helper.html#a88680d0385457edf64f08b4f1ad812f8">More...</a><br /></td></tr>
 <tr class="separator:a88680d0385457edf64f08b4f1ad812f8 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b99aa883ef49845ec9db4689699c23d inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top"><a id="a1b99aa883ef49845ec9db4689699c23d"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsWaitingRoomEnabled</b> (bool &amp;can_change)=0</td></tr>
+<tr class="separator:a1b99aa883ef49845ec9db4689699c23d inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02337e64c0946615a4b9935287a5bae8 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top"><a id="a02337e64c0946615a4b9935287a5bae8"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsMeetingToPublicEnabled</b> (bool &amp;can_change)=0</td></tr>
+<tr class="separator:a02337e64c0946615a4b9935287a5bae8 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0993af00bd5724837cdad4e3704091fa inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top"><a id="a0993af00bd5724837cdad4e3704091fa"></a>
+virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPublicEventListUrl</b> ()=0</td></tr>
+<tr class="separator:a0993af00bd5724837cdad4e3704091fa inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85784a793ebf483811e9d8252694dd98 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top"><a id="a85784a793ebf483811e9d8252694dd98"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLanguageInterpretationEnabled</b> (bool &amp;can_change)=0</td></tr>
+<tr class="separator:a85784a793ebf483811e9d8252694dd98 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67321bc02a029aa17e5207446918721 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top"><a id="ab67321bc02a029aa17e5207446918721"></a>
+virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_interpreter_info.html">IInterpreterInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>GetInterpreterInfoList</b> ()=0</td></tr>
+<tr class="separator:ab67321bc02a029aa17e5207446918721 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db84e9accccfc131a3cf512560acc70 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top"><a id="a6db84e9accccfc131a3cf512560acc70"></a>
+virtual <a class="el" href="class_i_list.html">IList</a>&lt; <a class="el" href="class_i_alternative_host_info.html">IAlternativeHostInfo</a> *&gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>GetAlternativeHostInfoList</b> ()=0</td></tr>
+<tr class="separator:a6db84e9accccfc131a3cf512560acc70 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bff06a537fb83be23d4ee753d3fe427 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_query_meeting_item_schedule_for_helper.html">IQueryMeetingItemScheduleForHelper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_query_meeting_item_meeting_option_helper.html#a1bff06a537fb83be23d4ee753d3fe427">GetQueryScheduleForHelper</a> ()=0</td></tr>
 <tr class="memdesc:a1bff06a537fb83be23d4ee753d3fe427 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the meeting information interface for the specified meeting.  <a href="class_i_query_meeting_item_meeting_option_helper.html#a1bff06a537fb83be23d4ee753d3fe427">More...</a><br /></td></tr>
 <tr class="separator:a1bff06a537fb83be23d4ee753d3fe427 inherit pub_methods_class_i_query_meeting_item_meeting_option_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>

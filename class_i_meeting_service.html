@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">4.6.15074.0203</span>
+   &#160;<span id="projectnumber">4.6.15798.0403</span>
    </div>
   </td>
  </tr>
@@ -201,6 +201,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afad35ee3c5d8a90398db3ee94936faf3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_q_a_controller.html">IMeetingQAController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#afad35ee3c5d8a90398db3ee94936faf3">GetMeetingQAController</a> ()=0</td></tr>
 <tr class="memdesc:afad35ee3c5d8a90398db3ee94936faf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Q&amp;A controller.  <a href="#afad35ee3c5d8a90398db3ee94936faf3">More...</a><br /></td></tr>
 <tr class="separator:afad35ee3c5d8a90398db3ee94936faf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c885326c06e5316f5b62664c347833"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_b_o_controller.html">IMeetingBOController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ae4c885326c06e5316f5b62664c347833">GetMeetingBOController</a> ()=0</td></tr>
+<tr class="memdesc:ae4c885326c06e5316f5b62664c347833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Breakout Room controller.  <a href="#ae4c885326c06e5316f5b62664c347833">More...</a><br /></td></tr>
+<tr class="separator:ae4c885326c06e5316f5b62664c347833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Service Interface. </p>
@@ -322,6 +325,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the audio controller interface. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_audio_controller.html" title="Meeting audio controller interface. ">IMeetingAudioController</a>. Otherwise returns NULL. </dd></dl>
+
+</div>
+</div>
+<a id="ae4c885326c06e5316f5b62664c347833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c885326c06e5316f5b62664c347833">&#9670;&nbsp;</a></span>GetMeetingBOController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_meeting_b_o_controller.html">IMeetingBOController</a>* IMeetingService::GetMeetingBOController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Breakout Room controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_b_o_controller.html">IMeetingBOController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>
