@@ -42,7 +42,7 @@ enum SDKCustomizedURLType
 class ICustomizedResourceHelper
 {
 public:
-	///\brief Add the custom photo files, currently, support only PNG format.
+	///\brief Add the custom photo files, currently, support PNG and SVG formats.
 	///\param key_ Resource ID corresponding to the custom resource.
 	///\param absolute_resource_path The location of the customized resource file must be an absolute path and include the file name with suffix.
 	/// \remarks You must call the function first before calling ZOOM_SDK_NAMESPACE::InitSDK(), or no, it won't work.

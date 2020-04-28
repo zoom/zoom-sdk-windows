@@ -45,11 +45,6 @@ public:
 	///Otherwise failed, the return value is NULL.
 	virtual const wchar_t* GetUserName() = 0;
 
-	/// \brief Get the email matched with the current user information.
-	/// \return If the function succeeds, the return value is user email.
-	///Otherwise failed, the return value is NULL.
-	virtual const wchar_t* GetEmail() = 0;
-
 	/// \brief Determine whether the member corresponding with the current information is the host or not.
 	/// \return TRUE indicates the host.
 	virtual bool IsHost() = 0;

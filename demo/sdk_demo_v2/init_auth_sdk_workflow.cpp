@@ -22,8 +22,8 @@ void CInitSDKWorkFlow::CustomizeDemoResource()
 	ZOOM_SDK_NAMESPACE::RetrieveCustomizedResourceHelper(&pCustomizeResHelper);
 	if(&pCustomizeResHelper && NULL != pCustomizeResHelper)
 	{
-		std::wstring strPNGID = _T("ZOOMAPPICON.PNG"); //**** Refer for zWinRes.dll for the id of the icon you want to customize 
-		std::wstring strFileName = _T("D:\\Call.png"); //**** You should modify this value to make sure the file specified is a real png file !!!
+		std::wstring strPNGID = _T("G_LOGO_ZOOM.SVG"); //**** Refer for zWinRes.dll for the id of the icon you want to customize 
+		std::wstring strFileName = _T("D:\\test.svg"); //**** You should modify this value to make sure the file specified is a real png/svg file !!!
 		std::wstring strCopyURL = _T("Click me to copy live stream URL(by ******)");
 		pCustomizeResHelper->AddCustomizedPictureResource(strPNGID.c_str(), strFileName.c_str());
 		pCustomizeResHelper->AddCustomizedStringResource(ZOOM_SDK_NAMESPACE::SDK_Customized_LiveStream_MenuString_CopyURL_String, strCopyURL.c_str());

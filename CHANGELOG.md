@@ -50,8 +50,8 @@ Please follow this template to compose your payload for SDK initialization:
 {
 	       "appKey": "string", // Your SDK key
          "iat": long, // access token issue timestamp
-         "exp": long, // access token expire time
-         "tokenExp": long // token expire time, MIN:30 minutes
+         "exp": long, // access token expire timestamp
+         "tokenExp": long // token expire timestamp, MIN:30 minutes
 }
 ```
 **The minimum value of `tokenExp` should be at least 30 minutes, otherwise, SDK will reject the authentication request.**
@@ -65,7 +65,20 @@ HMACSHA256(
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
 
-## 2020-04-04 @ [v4.6.15798.0403](https://github.com/zoom/zoom-sdk-windows/releases/tag/v4.6.15798.0403)
+## 2020-04-27 @ v4.6.21666.0427
+
+## Added:
+* Added support for AES 256-bit GCM encryption.
+  * **Please plan to upgrade your SDK accordingly. See the announcement in [README](https://github.com/zoom/zoom-sdk-windows) for more information**
+
+## Changed & Fixed:
+* Upgraded OpenSSL to version 1.1.1e
+
+## Deprecated
+* Deprecated the interface to get user's email: `IUserInfo.GetEmail()`
+
+
+## 2020-04-04 @ v4.6.15798.0403
 
 ## Added:
 * Add a new interface to center the setting dialog
