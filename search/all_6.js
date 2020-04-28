@@ -66,7 +66,7 @@ var searchData=
   ['getdisplaynumber',['GetDisplayNumber',['../class_i_meeting_call_in_phone_number_info.html#a485283d61df5b3b18b40eb4fe50c997b',1,'IMeetingCallInPhoneNumberInfo']]],
   ['getdurationinminutes',['GetDurationInMinutes',['../class_i_query_meeting_item_date_info_helper.html#a8c4d40440be3aab5ba62ad1bc04492d1',1,'IQueryMeetingItemDateInfoHelper']]],
   ['gete164num',['GetE164Num',['../class_i_h323_device.html#aa90aa557397646c2ef6cd7c868093abe',1,'IH323Device::GetE164Num()'],['../class_customized_h323_device.html#ae7906f8c6a6c12dee0d63100c07229fd',1,'CustomizedH323Device::GetE164Num()']]],
-  ['getemail',['GetEmail',['../class_i_user_info.html#a569a4fdc6887874ff2112f0831d6d616',1,'IUserInfo::GetEmail()'],['../class_i_schedule_for_user.html#a9328cd4d20a10538db21d8923de2947b',1,'IScheduleForUser::GetEmail()']]],
+  ['getemail',['GetEmail',['../class_i_schedule_for_user.html#a9328cd4d20a10538db21d8923de2947b',1,'IScheduleForUser']]],
   ['getendtime',['GetEndTime',['../class_i_calender_event.html#a32ad6801d1d95823ba46902504b57b7f',1,'ICalenderEvent']]],
   ['geterrorcode',['GetErrorCode',['../class_i_zoom_last_error.html#ad74d894135c7f5db81f3b70884c04d25',1,'IZoomLastError']]],
   ['geterrordescription',['GetErrorDescription',['../class_i_zoom_last_error.html#a588918362152c0ac8cccabb9f4c5848e',1,'IZoomLastError']]],
