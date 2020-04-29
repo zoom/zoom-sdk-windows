@@ -65,7 +65,7 @@ HMACSHA256(
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
 
-## 2020-04-27 @ v4.6.21666.0427
+## 2020-04-28 @ v4.6.21666.0428
 
 ## Added:
 * Added support for AES 256-bit GCM encryption.
