@@ -138,6 +138,7 @@ public:
 	virtual void onCCBTNClicked(){}
 	virtual void onAudioBtnClicked(ZOOM_SDK_NAMESPACE::AudioBtnClickedCallbackInfo info) {}
 	virtual void onAudioMenuBtnClicked() {}
+	virtual void onBreakoutRoomBtnClicked() {}
 
 private:
 	IMeetingserviceMgrEvent* m_pSink;
