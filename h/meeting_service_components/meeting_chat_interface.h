@@ -53,6 +53,10 @@ public:
 	/// \return TRUE indicates that the current message is sent to all the panelists. Otherwise not. 
 	virtual bool IsChatToAllPanelist() = 0;
 
+	/// \brief Determine if the current message is sent to waiting room.
+	/// \return TRUE indicates that the current message is sent to waiting room. Otherwise not.
+	virtual bool IsChatToWaitingroom() = 0;
+
 	virtual ~IChatMsgInfo() {};
 };
 

@@ -63,13 +63,11 @@
 			</VerticalLayout>
 			<VerticalLayout name="panel_RestAPI_Without_Login" visible="false" >
 				<Control />
-				<RichEdit name="edit_restapi_key" prompttext="REST API key" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="30"
-				  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
 				<Control height="10"/>
-				<RichEdit name="edit_restapi_secret" prompttext="REST API secret" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="30"
+				<RichEdit name="edit_restapi_user_zak" prompttext="user zak" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="30"
 				  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" password="true"/>
 				<Control height="10"/>
-				<RichEdit name="edit_restapi_email" prompttext="email account" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="30"
+				<RichEdit name="edit_restapi_meeting_number" prompttext="meeting number" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="30"
 				  inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
 				<Control height="10"/>
 				<RichEdit name="edit_restapi_ScreenName" prompttext="Name to display in the meeting" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="30"

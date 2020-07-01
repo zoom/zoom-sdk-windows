@@ -386,10 +386,6 @@
  	  		    </HorizontalLayout>
  	  		<Control height="1" bkcolor="#FF000000"/>
  	  		<Control height="10" bkcolor="#FFEFEFEF"/>
- 	  		<CheckBox name="chk_title-bar_meeting_ID" text="Hide the meeting ID in the title-bar"  textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10" multiline="true"/>
-		    <Control height="5"/>
-		    <CheckBox name="chk_always_display_title_meeting_ID" text="Always display the meeting ID on the title bar of the window during the meeting" height="40" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
-		    <Control height="5"/>
 		    <CheckBox name="chk_bottom_toolbar" text="Hide the toolbar at the bottom of the meeting window" height="25" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
 		    <Control height="5"/>
 		    <CheckBox name="chk_tool-tip" text="Show tool-tip in the meeting" height="25" multiline="true" textcolor="#FF000000" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" textpadding="28,4,0,0" font="2" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='0,6,18,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' source='90,0,108,18' dest='0,6,18,24'" noprefix="true"  focuspadding="22,10,0,10"/>
@@ -575,12 +571,6 @@
  	  					<RichEdit name="edit_set_meeting_ID" prompttext="meeting ID" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="110" height="30"
               inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
             		</HorizontalLayout>
-		    		<Control height="5"/>
-		    		<HorizontalLayout bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF" height="25" width="380">
-            			<control />
-            		    <Button name="btn_confirm_meeting_ID" text="Confirm" textcolor="#FFFFFFFF" font="6" height="20" width="80" borderround="2,2"/>
-            		    <control />
-            		</HorizontalLayout>	
             		<control height="10"/>
  	  				<Label name="text_meeting_window_position" text="Set the position of the primary view meeting window:" font="3" textcolor="#FF000000" height="20"/>
  	  		  	    <HorizontalLayout bkcolor="#FFEFEFEF" bkcolor2="#FFEFEFEF" height="30" width="380">

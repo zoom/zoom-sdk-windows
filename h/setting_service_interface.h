@@ -603,6 +603,16 @@ public:
 	///For more details, see \link IVideoSettingContextEvent \endlink.
 	/// \remarks You must call the function if you want to monitor the video device plugged in/out.
 	virtual SDKError SetVideoDeviceEvent(IVideoSettingContextEvent* pEvent) = 0;
+
+	/// \brief Enable or disable to show the video preview dialog when join meeting
+	/// \param bEnable TRUE indicates to enable to show the video preview dialog when join meeting
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableVideoPreviewDialog(bool bEnable) = 0;
+
+	/// \brief Get the flag to enable to show the video preview dialog when join meeting.
+	/// \return Enabled or disabled.
+	virtual bool IsVideoPreviewDialogEnabled() = 0;
 };
 
 /// \brief Audio setting context callback event.

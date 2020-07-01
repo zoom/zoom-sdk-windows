@@ -44,13 +44,7 @@ void CSDKFeatureCustomSettingsWorkFlow::SetFloatVideoPos(ZOOM_SDK_NAMESPACE::Wnd
 		m_pMeetingConfiguration->SetFloatVideoPos(pos);
 	}
 }
-void CSDKFeatureCustomSettingsWorkFlow::SetMeetingIDForMeetingUITitle(UINT64 meetingNumber)
-{
-	if(m_pMeetingConfiguration)
-	{
-		m_pMeetingConfiguration->SetMeetingIDForMeetingUITitle(meetingNumber);
-	}
-}
+
 void CSDKFeatureCustomSettingsWorkFlow::EnableLButtonDBClick4SwitchFullScreenMode(bool bEnable)
 {
 	if(m_pMeetingConfiguration)

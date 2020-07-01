@@ -40,18 +40,13 @@ public:
 	void Hide();
 	void Notify( TNotifyUI& msg );
 
-	void DoAuth();
 	void DoAuthBtnClick();
-	void DoJWTTokenBtnClick();
-	void DoUseJWTTokenChkClick();
 	virtual void onSDKAuthed(ZOOM_SDK_NAMESPACE::AuthResult ret);
 protected:
 	CVerticalLayoutUI* m_AuthSDKPage;
 	CButtonUI*		   m_btnAuth;
 	std::wstring	   m_strOldValue;
-	CRichEditUI*	   m_editSDKKey;
-	CRichEditUI*	   m_editSDKSecret;
-	CCheckBoxUI*	   m_chkUseJWTToken;
+	CRichEditUI*	   m_editSDKJWTToken;
 	CSDKInitAuthUIMgr*	   m_mainFrame;
 	CAuthSDKWorkFlow   m_AuthSDKWorkFlow;
 };

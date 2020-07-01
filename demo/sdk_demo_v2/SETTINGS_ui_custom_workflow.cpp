@@ -44,13 +44,7 @@ void CSDKUICustomSettingsWorkFlow::SetBottomFloatToolbarWndVisibility(bool bShow
 		m_pMeetingConfiguration->SetBottomFloatToolbarWndVisibility(bShow);
 	}
 }
-void CSDKUICustomSettingsWorkFlow::HideMeetingInfoFromMeetingUITitle(bool bHide)
-{
-	if(m_pMeetingConfiguration)
-	{
-		m_pMeetingConfiguration->HideMeetingInfoFromMeetingUITitle(bHide);
-	}
-}
+
 void CSDKUICustomSettingsWorkFlow::EnableApproveRemoteControlDlg(bool bEnable)
 {
 	if(m_pMeetingConfiguration)
@@ -149,13 +143,7 @@ void CSDKUICustomSettingsWorkFlow::SetShowCallMeTab(bool bShow)
 		m_pMeetingConfiguration->SetShowCallMeTab(bShow);
 	}
 }
-void CSDKUICustomSettingsWorkFlow::SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow)
-{
-	if(m_pMeetingConfiguration)
-	{
-		m_pMeetingConfiguration->SetAlwaysShowMeetingIDOnTitle(bAlwaysShow);
-	}
-}
+
 ZOOM_SDK_NAMESPACE::SDKError CSDKUICustomSettingsWorkFlow::DisableTopMostAttr4SettingDialog(bool bDisable)
 {
 	if(m_pMeetingConfiguration)

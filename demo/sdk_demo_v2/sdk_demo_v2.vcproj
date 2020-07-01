@@ -603,22 +603,6 @@
 			<Filter
 				Name="5_utility"
 				>
-				<File
-					RelativePath=".\HttpRequestHelper.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\HttpRequestHelper.h"
-					>
-				</File>
-				<File
-					RelativePath=".\zoomHmacSHA256.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\zoomHmacSHA256.h"
-					>
-				</File>
 			</Filter>
 			<Filter
 				Name="3_how_to_start_join_meeting"

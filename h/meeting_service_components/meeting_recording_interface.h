@@ -128,6 +128,26 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	/// \remarks Valid only for custom style user interface mode only when recording.
 	virtual SDKError RequestCustomizedLocalRecordingSource() = 0;
+
+	/// \brief Pause recording.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError PauseRecording() = 0;
+
+	/// \brief Resume recording.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError ResumeRecording() = 0;
+
+	/// \brief Pause cloud recording.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError PauseCloudRecording() = 0;
+
+	/// \brief Resume cloud recording.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError ResumeCloudRecording() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

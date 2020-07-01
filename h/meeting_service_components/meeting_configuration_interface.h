@@ -243,6 +243,35 @@ typedef struct tagRedirectWarningMsgOption
 
 }RedirectWarningMsgOption;
 
+
+/*! \struct tagPanelistMenuItemOption
+    \brief Define the strategy to show the menu items for panelist.
+    Here are more detailed structural descriptions.
+*/
+typedef struct tagPanelistMenuItemOption
+{
+	bool bNotShowDowngradePanelist;///<True indicates to hide 'Change role to attendee' menu item
+	tagPanelistMenuItemOption()
+	{
+		bNotShowDowngradePanelist = false;
+	}
+
+}PanelistMenuItemOption;
+
+/*! \struct tagAttendeeMenuItemOption
+    \brief Define the strategy to show the menu items for attendee.
+    Here are more detailed structural descriptions.
+*/
+typedef struct tagAttendeeMenuItemOption
+{
+	bool bNotShowPromoteToPanelist;///<True indicates to hide 'Promote to panelist'menu item
+	tagAttendeeMenuItemOption()
+	{
+		bNotShowPromoteToPanelist = false;
+	}
+
+}AttendeeMenuItemOption;
+
 /// \brief Meeting user configuration interface.
 ///
 class IMeetingUIElemConfiguration
@@ -264,14 +293,6 @@ public:
 	/// \param bShow TRUE means to enable the feature to display always the toolbar at the bottom. Otherwise not. 
 	virtual void SetBottomFloatToolbarWndVisibility(bool bShow) = 0;
 
-	/// \brief Set the visibility of the meeting ID in the title-bar. Default value: FALSE.
-	/// \param bHide FALSE means to display the content. Otherwise not.
-	virtual void HideMeetingInfoFromMeetingUITitle(bool bHide) = 0;
-
-	/// \brief Set the meeting ID in the title-bar of the meeting window. 
-	/// \param meetingNumber Specify the meeting ID in the title-bar of the meeting window.
-	virtual void SetMeetingIDForMeetingUITitle(UINT64 meetingNumber) = 0;
-
 	/// \brief Set the visibility of the dialog box when receiving the request of remote control during the meeting. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the dialog box. FALSE not.
 	///If it is FALSE, the user can deal with this request in the IMeetingRemoteCtrlEvent::onRemoteControlStatus() callback event sent by SDK when receiving the request of the remote control and then enters the sharing status at the end of callback event.
@@ -285,7 +306,7 @@ public:
 	/// \brief Set the visibility of the LEAVE MEETING button on the pop-up dialogue box when the host leaves the meeting. Default value: TRUE.	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	virtual void EnableLeaveMeetingOptionForHost(bool bEnable) = 0;
 
-	/// \brief Set the visibility of the INVITE button in the toolbar during the meeting. Default value: TRUE.
+	/// \brief Set the visibility of the INVITE button in the panelist action bar during the meeting. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the button. Otherwise not.
 	/// \remarks The user will receive the IMeetingUIControllerEvent::onInviteBtnClicked() callback event when he clicks the INVITE button. If the callback event is not handled, the SDK will pop up a ZOOM custom invitation dialog.
 	///The user will receive the IMeetingUIControllerEvent::onZoomInviteDialogFailed() callback event if the dialog box is failed to display.
@@ -388,11 +409,6 @@ public:
 	/// \brief Set the visibility of CALL ME tab in the audio dialog box when joining the meeting. Default value: TRUE.
 	/// \param bShow TRUE indicates to display the tab. FALSE not.
 	virtual void SetShowCallMeTab(bool bShow) = 0;
-
-	/// \brief Set if it is able to display always the meeting ID on the title bar of the window during the meeting. Default: False.
-	/// \param bAlwaysShow TRUE indicates to display always the meeting ID. FALSE not.
-	/// \remarks If it is FALSE, the program will execute ZOOM's default logic.
-	virtual void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow) = 0;
 	
 	///	\deprecated This function will be deprecated, please use ICustomizedResourceHelper.AddCustomizedStringResouce() instead.
 	/// \brief Use the custom string to replace the specified menu item.
@@ -511,6 +527,18 @@ public:
 	/// \brief Set the visibility of meeting info button on meeting UI. Default is displaying.
 	/// \param [in] bHide TRUE means hiding, otherwise not.
 	virtual void HideMeetingInfoOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Set the visibility of share button on meeting UI. Default is displaying.
+	/// \param [in] bHide TRUE means hiding, otherwise not.
+	virtual void HideShareButtonOnMeetingUI(bool bHide) = 0;
+
+	/// \brief Custom the menu items show or hide for panelist.
+	/// \param menuOption True indicates to hide the corresponding menu item for each item.
+	virtual void DisablePanelistMenuItem(PanelistMenuItemOption menuOption) = 0;
+
+	/// \brief Custom the menu items show or hide for attendee.
+	/// \param menuOption True indicates to hide the corresponding menu item for each item.
+	virtual void DisableAttendeeMenuItem(AttendeeMenuItemOption menuOption) = 0;
 };
 
 /// \brief Meeting connect configuration Interface

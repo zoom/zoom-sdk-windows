@@ -54,6 +54,7 @@ enum SDKError
 	SDKERR_MEETING_VIEWTYPE_PARAMETER_IS_WRONG, ///<Incorrect ViewType parameters.
 	SDKERR_MEETING_ANNOTATION_IS_OFF, ///<Annotation is disabled.
 	SDKERR_SETTING_OS_DONT_SUPPORT, ///<Current OS doesn't support the setting.
+	SDKERR_EMAIL_LOGIN_IS_DISABLED, //Email login is disable
 };
 
 /*! \enum SDK_LANGUAGE_ID
@@ -166,6 +167,7 @@ typedef struct tagInitParam
 	unsigned int uiWindowIconSmallID;///<The ID of the small icon on the window.
 	unsigned int uiWindowIconBigID;///<The ID of the big Icon on the window.
 	SDK_LANGUAGE_ID emLanguageID;///<The ID of the SDK language.
+	bool enableGenerateDump; ///<Enable generate dump file if the app crashed.
 	bool enableLogByDefault;///<Enable log feature.
 	unsigned int uiLogFileSize; ///<Size of a log file in M(megabyte). The default size is 5M. There are 5 log files in total and the file size varies from 1M to 50M. 
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
@@ -180,6 +182,7 @@ typedef struct tagInitParam
 		uiWindowIconSmallID = 0;
 		uiWindowIconBigID = 0;
 		emLanguageID = LANGUAGE_Unknow;
+		enableGenerateDump = false;
 		enableLogByDefault = false;
 		uiLogFileSize = 5;
 		locale = SDK_APP_Locale_Default;

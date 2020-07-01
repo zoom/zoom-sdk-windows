@@ -335,6 +335,12 @@ public:
 	/// \return SDKErr_Success means success, otherwise not
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError CanSwapToShowShareViewOrVideo(bool& bCan) = 0;
+
+	/// \brief Set the meeting topic in the meeting information page. 
+	/// \param meetingtopic Specify the meeting topic in the meeting information page.
+	/// \return SDKErr_Success means success, otherwise not
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SetMeetingTopic(const wchar_t* meetingtopic) = 0;
 };
 
 END_ZOOM_SDK_NAMESPACE

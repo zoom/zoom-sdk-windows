@@ -1072,38 +1072,44 @@ void CSDKSheduleMeetingUIGroup::DoSchedule()
 
 	if (m_enable_language_interpreter && m_enable_language_interpreter->IsSelected())
 	{
-		if (!m_pScheduelMeetingItem->IsLanguageInterpretationEnabled(can_change) && can_change)
+		do 
 		{
-			m_pScheduelMeetingItem->EnableLanguageInterpretation(true);
-			if (m_input_interpreter_email && m_combo_first_language && m_combo_second_language)
+			if (!m_pScheduelMeetingItem->IsLanguageInterpretationEnabled(can_change) && can_change)
 			{
-				ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* pList(NULL);
-				TListImpl<ZOOM_SDK_NAMESPACE::IInterpreterInfo* > lstInterpreters;
-				TInterpreterInfo* pInfo = new TInterpreterInfo;
-				if(pInfo)
+				m_pScheduelMeetingItem->EnableLanguageInterpretation(true);
+				if (m_input_interpreter_email && m_combo_first_language && m_combo_second_language)
 				{
-					std::wstring email = m_input_interpreter_email->GetText().GetData();
-					if (email.size()<=0)
+					ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* pList(NULL);
+					TListImpl<ZOOM_SDK_NAMESPACE::IInterpreterInfo* > lstInterpreters;
+					TInterpreterInfo* pInfo = new TInterpreterInfo;
+					if(pInfo)
 					{
-						return;
+						std::wstring email = m_input_interpreter_email->GetText().GetData();
+						if (email.size()<=0)
+						{
+							if(m_main_frame)
+								m_main_frame->ShowErrorMessage(InterpreterEmailIsEmpty);
+							break;
+						}
+						pInfo->email = email.c_str();
+						pInfo->firstlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_first_language->GetCurSel();
+						pInfo->secondlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_second_language->GetCurSel();
 					}
-					pInfo->email = email.c_str();
-					pInfo->firstlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_first_language->GetCurSel();
-					pInfo->secondlanguageinfo = (ZOOM_SDK_NAMESPACE::InterpreteLanguageInfo)m_combo_second_language->GetCurSel();
+					ZOOM_SDK_NAMESPACE::IInterpreterInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >(pInfo);
+					if (NULL == pInfoInterface)
+					{
+						delete pInfo;
+					}
+					else
+					{
+						lstInterpreters.m_List.push_back(pInfoInterface);
+					}
+					pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* >(&lstInterpreters);
+					m_pScheduelMeetingItem->SetInterpreterInfoList(pList);
 				}
-				ZOOM_SDK_NAMESPACE::IInterpreterInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >(pInfo);
-				if (NULL == pInfoInterface)
-				{
-					delete pInfo;
-				}
-				else
-				{
-					lstInterpreters.m_List.push_back(pInfoInterface);
-				}
-				pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IInterpreterInfo* >* >(&lstInterpreters);
-				m_pScheduelMeetingItem->SetInterpreterInfoList(pList);
 			}
-		}
+		} while (false);
+		
 	}
 	else
 	{
@@ -1115,42 +1121,45 @@ void CSDKSheduleMeetingUIGroup::DoSchedule()
 
 	if (m_input_alter_hosts)
 	{
-		std::wstring alt_hosts = m_input_alter_hosts->GetText().GetData();
-		if (alt_hosts.size()<=0)
+		do 
 		{
-			return;
-		}
-
-		TCHAR tdelim = L';';
-		std::wstringstream ss;
-		ss.str(alt_hosts);
-		std::wstring titem;
-		std::vector<std::wstring> elemts;
-		while(std::getline(ss, titem, tdelim))
-		{
-			elemts.push_back(titem);
-		}
-
-		ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* pList(NULL);
-		TListImpl<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* > lstAltHosts;
-
-		int nCount = elemts.size();
-		for(int i=0; i<nCount; i++)
-		{
-			TAlternativeHostInfo* pInfo = new TAlternativeHostInfo;
-			if (NULL == pInfo)
-				continue;
-			pInfo->m_email = elemts[i];
-			ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >(pInfo);
-			if (NULL == pInfoInterface)
+			std::wstring alt_hosts = m_input_alter_hosts->GetText().GetData();
+			if (alt_hosts.size()<=0)
 			{
-				delete pInfo;
-				continue;
+				break;
 			}
-			lstAltHosts.m_List.push_back(pInfoInterface);
-		}
-		pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* >(&lstAltHosts);
-		m_pScheduelMeetingItem->SetAlternativeHostList(pList);
+
+			TCHAR tdelim = L';';
+			std::wstringstream ss;
+			ss.str(alt_hosts);
+			std::wstring titem;
+			std::vector<std::wstring> elemts;
+			while(std::getline(ss, titem, tdelim))
+			{
+				elemts.push_back(titem);
+			}
+
+			ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* pList(NULL);
+			TListImpl<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* > lstAltHosts;
+
+			int nCount = elemts.size();
+			for(int i=0; i<nCount; i++)
+			{
+				TAlternativeHostInfo* pInfo = new TAlternativeHostInfo;
+				if (NULL == pInfo)
+					continue;
+				pInfo->m_email = elemts[i];
+				ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >(pInfo);
+				if (NULL == pInfoInterface)
+				{
+					delete pInfo;
+					continue;
+				}
+				lstAltHosts.m_List.push_back(pInfoInterface);
+			}
+			pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* >(&lstAltHosts);
+			m_pScheduelMeetingItem->SetAlternativeHostList(pList);
+		} while (false);
 	}
 
 	if (m_mute_meeting && m_mute_meeting->IsSelected() )
@@ -1385,37 +1394,43 @@ void CSDKSheduleMeetingUIGroup::DoEdit()
 	if (m_input_alter_hosts)
 	{
 		std::wstring alt_hosts = m_input_alter_hosts->GetText().GetData();
-
-		TCHAR tdelim = L';';
-		std::wstringstream ss;
-		ss.str(alt_hosts);
-		std::wstring titem;
-		std::vector<std::wstring> elemts;
-		while(std::getline(ss, titem, tdelim))
+		do 
 		{
-			elemts.push_back(titem);
-		}
-
-		ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* pList(NULL);
-		TListImpl<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* > lstAltHosts;
-
-		int nCount = elemts.size();
-		for(int i=0; i<nCount; i++)
-		{
-			TAlternativeHostInfo* pInfo = new TAlternativeHostInfo;
-			if (NULL == pInfo)
-				continue;
-			pInfo->m_email = elemts[i];
-			ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >(pInfo);
-			if (NULL == pInfoInterface)
+			if (alt_hosts.size() <= 0)
 			{
-				delete pInfo;
-				continue;
+				break;
 			}
-			lstAltHosts.m_List.push_back(pInfoInterface);
-		}
-		pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* >(&lstAltHosts);
-		m_pEditMeetingItem->SetAlternativeHostList(pList);
+			TCHAR tdelim = L';';
+			std::wstringstream ss;
+			ss.str(alt_hosts);
+			std::wstring titem;
+			std::vector<std::wstring> elemts;
+			while(std::getline(ss, titem, tdelim))
+			{
+				elemts.push_back(titem);
+			}
+
+			ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* pList(NULL);
+			TListImpl<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* > lstAltHosts;
+
+			int nCount = elemts.size();
+			for(int i=0; i<nCount; i++)
+			{
+				TAlternativeHostInfo* pInfo = new TAlternativeHostInfo;
+				if (NULL == pInfo)
+					continue;
+				pInfo->m_email = elemts[i];
+				ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* pInfoInterface = dynamic_cast<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >(pInfo);
+				if (NULL == pInfoInterface)
+				{
+					delete pInfo;
+					continue;
+				}
+				lstAltHosts.m_List.push_back(pInfoInterface);
+			}
+			pList = dynamic_cast<ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IAlternativeHostInfo* >* >(&lstAltHosts);
+			m_pEditMeetingItem->SetAlternativeHostList(pList);
+		} while (false);
 	}
 
 	if (m_mute_meeting && m_mute_meeting->IsSelected() )
@@ -1700,6 +1715,9 @@ void CSDKSheduleMeetingUIMgr::ShowErrorMessage( ErrorMessageType _type )
 		break;
 	case LeaveEditMeeting:
 		::MessageBox(NULL, L"Leave edit meeting page and don't save !", L"error", MB_OK);
+		break;
+	case InterpreterEmailIsEmpty:
+		::MessageBox(NULL, L"Interpreter email is empty!", L"error", MB_OK);
 		break;
 	}
 }

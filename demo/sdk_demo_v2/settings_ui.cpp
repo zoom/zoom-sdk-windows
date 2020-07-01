@@ -1953,8 +1953,6 @@ CSDKUICustomSettingsUIGroup::CSDKUICustomSettingsUIGroup()
 	m_btnInvite = NULL;
 	m_btnOthers = NULL;
 	m_chkBottomToolbar = NULL;
-	m_chkTitlebarMeetingID = NULL;
-	m_chkAlwaysDisplayTitleMeetingID = NULL;
 	m_chkLeaveMeetingButton = NULL;
 	m_chkEnterOrExitTheFullScreenButtons = NULL;
 	m_chkAlwaysDisplayTaskbarIcon = NULL;
@@ -2007,8 +2005,6 @@ CSDKUICustomSettingsUIGroup::~CSDKUICustomSettingsUIGroup()
 	m_btnInvite = NULL;
 	m_btnOthers = NULL;
 	m_chkBottomToolbar = NULL;
-	m_chkTitlebarMeetingID = NULL;
-	m_chkAlwaysDisplayTitleMeetingID = NULL;
 	m_chkLeaveMeetingButton = NULL;
 	m_chkEnterOrExitTheFullScreenButtons = NULL;
 	m_chkAlwaysDisplayTaskbarIcon = NULL;
@@ -2059,8 +2055,6 @@ void CSDKUICustomSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKSettin
 	m_btnInvite = static_cast<COptionUI*>(ui_mgr.FindControl(_T("tabbtn_UI_Invite")));
 	m_btnOthers = static_cast<COptionUI*>(ui_mgr.FindControl(_T("tabbtn_UI_Others")));
 	m_chkBottomToolbar = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_bottom_toolbar")));
-	m_chkTitlebarMeetingID = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_title-bar_meeting_ID")));
-	m_chkAlwaysDisplayTitleMeetingID = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_always_display_title_meeting_ID")));
 	m_chkLeaveMeetingButton = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_leave_meeting_button")));
 	m_chkEnterOrExitTheFullScreenButtons = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_enter_or_exit_the_full_screen_buttons")));
 	m_chkAlwaysDisplayTaskbarIcon = static_cast<CCheckBoxUI*>(ui_mgr.FindControl(_T("chk_always_display_task-bar_icon")));
@@ -2108,14 +2102,6 @@ void CSDKUICustomSettingsUIGroup::SetUICustomSettingsFlags()
 	if(m_chkBottomToolbar)
 	{
 		m_chkBottomToolbar->SetCheck(false);
-	}
-	if(m_chkTitlebarMeetingID)
-	{
-		m_chkTitlebarMeetingID->SetCheck(false);
-	}
-	if(m_chkAlwaysDisplayTitleMeetingID)
-	{
-		m_chkAlwaysDisplayTitleMeetingID->SetCheck(false);
 	}
 	if(m_chkLeaveMeetingButton)
 	{
@@ -2348,14 +2334,6 @@ void CSDKUICustomSettingsUIGroup::Notify(TNotifyUI& msg)
 		{
 			DoBottomToolbarChkClick();
 		}
-		else if(msg.pSender == m_chkTitlebarMeetingID)
-		{
-			DoTitlebarMeetingIDChkClick();
-		}
-		else if(msg.pSender == m_chkAlwaysDisplayTitleMeetingID)
-		{
-			DoAlwaysDisplayTitleMeetingIDChkClick();
-		}
 		else if(msg.pSender == m_chkLeaveMeetingButton)
 		{
 			DoLeaveMeetingButtonChkClick();
@@ -2505,20 +2483,7 @@ void CSDKUICustomSettingsUIGroup::DoBottomToolbarChkClick()
 	bool bChecked = m_chkBottomToolbar->GetCheck();
 	m_UICustomSettingsWorkFlow.SetBottomFloatToolbarWndVisibility(bChecked);
 }
-void CSDKUICustomSettingsUIGroup::DoTitlebarMeetingIDChkClick()
-{
-	if(NULL == m_chkTitlebarMeetingID)
-		return;
-	bool bChecked = !m_chkTitlebarMeetingID->GetCheck();
-	m_UICustomSettingsWorkFlow.HideMeetingInfoFromMeetingUITitle(bChecked);
-}
-void CSDKUICustomSettingsUIGroup::DoAlwaysDisplayTitleMeetingIDChkClick()
-{
-	if(NULL == m_chkAlwaysDisplayTitleMeetingID)
-		return;
-	bool bChecked = !m_chkAlwaysDisplayTitleMeetingID->GetCheck();
-	m_UICustomSettingsWorkFlow.SetAlwaysShowMeetingIDOnTitle(bChecked);
-}
+
 void CSDKUICustomSettingsUIGroup::DoLeaveMeetingButtonChkClick()
 {
 	if(NULL == m_chkLeaveMeetingButton)
@@ -2821,7 +2786,6 @@ CSDKFeatureCustomSettingsUIGroup::CSDKFeatureCustomSettingsUIGroup()
 	m_btnBackToMeeting = NULL;
 	m_btnConfirmMeetingWndPos = NULL;
 	m_btnConfirmSharingFloatingVideoWndPos = NULL;
-	m_btnConfirmMeetingID = NULL;
 	m_btnConfirmMoveFloatingVideoWndPos = NULL;
 	m_btnConfirmVideoWallMode = NULL;
 	m_btnCurrentSpeakerMode = NULL;
@@ -2876,7 +2840,6 @@ CSDKFeatureCustomSettingsUIGroup::~CSDKFeatureCustomSettingsUIGroup()
 	m_btnBackToMeeting = NULL;
 	m_btnConfirmMeetingWndPos = NULL;
 	m_btnConfirmSharingFloatingVideoWndPos = NULL;
-	m_btnConfirmMeetingID = NULL;
 	m_btnConfirmMoveFloatingVideoWndPos = NULL;
 	m_btnConfirmVideoWallMode = NULL;
 	m_btnCurrentSpeakerMode = NULL;
@@ -2929,7 +2892,6 @@ void CSDKFeatureCustomSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKS
 	m_btnBackToMeeting = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_confirm_back_to_meeting")));
 	m_btnConfirmMeetingWndPos = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_confirm_meeting_window_pos")));
 	m_btnConfirmSharingFloatingVideoWndPos = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_confirm_sharing_floating_video_window_pos")));
-	m_btnConfirmMeetingID = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_confirm_meeting_ID")));
 	m_btnConfirmMoveFloatingVideoWndPos = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_confirm_move_floating_video_window_pos")));
 	m_btnConfirmVideoWallMode = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_confirm_video_wall_mode")));
 	m_btnCurrentSpeakerMode = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_current_speaker_mode")));
@@ -3133,10 +3095,6 @@ void CSDKFeatureCustomSettingsUIGroup::Notify(TNotifyUI& msg)
 		{
 			DoConfirmSharingFloatingVideoWndPosBtnClick();
 		}
-		else if(msg.pSender == m_btnConfirmMeetingID)
-		{
-			DoConfirmMeetingIDBtnClick();
-		}
 		else if(msg.pSender == m_btnConfirmMoveFloatingVideoWndPos)
 		{
 			DoConfirmMoveFloatingVideoWndPosBtnClick();
@@ -3275,14 +3233,7 @@ void CSDKFeatureCustomSettingsUIGroup::DoConfirmSharingFloatingVideoWndPosBtnCli
 	pos.top = _wtoi(windowTop.c_str());
 	m_FeatureCustomSettingsWorkFlow.SetFloatVideoPos(pos);
 }
-void CSDKFeatureCustomSettingsUIGroup::DoConfirmMeetingIDBtnClick()
-{
-	if(NULL == m_editSetMeetingID)
-		return;
-	std::wstring meetingID = m_editSetMeetingID->GetText().GetData();
-	UINT64 meetingNumber = _wtoi64(meetingID.c_str());
-	m_FeatureCustomSettingsWorkFlow.SetMeetingIDForMeetingUITitle(meetingNumber);
-}
+
 void CSDKFeatureCustomSettingsUIGroup::DoConfirmMoveFloatingVideoWndPosBtnClick()
 {
 	if(NULL == m_editFloatingVideoWndLeft || NULL == m_editFloatingVideoWndTop)

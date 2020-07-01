@@ -43,16 +43,9 @@
 		</VerticalLayout>
 		<VerticalLayout name="page_sdkauth">
 			<Control />
-			<RichEdit name="edit_sdk_key" prompttext="sdk key" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35"
+			<RichEdit name="edit_sdk_jwttoken" prompttext="sdk jwt token" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35"
               inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false"/>
-			<Control height="10"/>
-			<RichEdit name="edit_sdk_secret" prompttext="sdk secret" bkcolor="#FFFFFFFF" textcolor="#FFB7B7B7" font="6" width="300" height="35"
-              inset="4,5,0,4" multiline="false" autohscroll="true"  wanttab="false" rich="false" password="true"/>
-			<Control height="10"/>
-			<CheckBox name="chk_jwttoken_auth" text="Auth with JWT token" textcolor="#FF333333" padding="9,0,8,0" font="2" disabledtextcolor="#FF808080" align="left,singleline" valign="vcenter" 
-					textpadding="28,4,0,0" normalimage="res='checkbox_bk.png' restype='ZPIMGRES' source='0,0,18,18' dest='4,6,22,24'" selectedimage="res='checkbox_bk.png' restype='ZPIMGRES' 
-					source='90,0,108,18' dest='4,6,22,24'" noprefix="true" focuspadding="22,10,0,10"/>			
-			<Control height="10"/>
+			<Control height="25"/>
 			<Button name="btn_auth" text="Auth" textcolor="#FFFFFFFF" font="6" height="35" width="300"/>
 			<Control />
 		</VerticalLayout>

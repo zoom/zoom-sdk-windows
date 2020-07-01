@@ -65,6 +65,43 @@ HMACSHA256(
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
 
+## 2020-06-30 @ v5.0.24433.0616
+
+## Added
+* Upgraded Zoom default UI to match Zoom client 5.0.
+* Optimized the status of H.323 call out.
+* Added new interfaces to allow the host to send messages to the attendees in the waiting room.
+* Added a new interface to modify the 'meeting topic' in the 'meeting information' page.
+  * `IMeetingUIController.SetMeetingTopic(const wchar_t* meetingtopic)`
+* Added a new interface to hide the share button
+  * `IMeetingUIElemConfiguration.HideShareButtonOnMeetingUI(bool bHide)`
+* Added new interfaces to pause/resume the recording.
+  * `IMeetingRecordingController.PauseRecording()`
+  * `IMeetingRecordingController.ResumeRecording()`
+  * `IMeetingRecordingController.PauseCloudRecording()`
+  * `IMeetingRecordingController.ResumeCloudRecording()`
+* Added new interfaces related to setting 'Always show video preview when joining a video meeting' feature.
+  * `IVideoSettingContext.EnableVideoPreviewDialog(bool bEnable)`
+  * `IVideoSettingContext.IsVideoPreviewDialogEnabled()`
+* Added new interfaces to check whether the PMI option is enabled on the account.
+  * `IQueryMeetingItemMeetingOptionHelper.isDisabledPMI()`
+
+
+## Changed & Fixed
+
+* Disable the "Remember Screen Name" feature.
+* Fixed an issue that the “hide meeting information” interface does not work for the audio-only meeting.
+* Fixed an issue that the `ChangeUserName` interface does not work for webinar attendee.
+* Temporary remove the "Unmute all" interfaces.
+  * Calling `IMeetingAudioController.UnMuteAudio(0)` won't unmute all.
+
+## Deprecated & Removed
+* `tagStartParam4WithoutLogin.userToken`
+* `tagStartParam.apiuserStart`
+* `IMeetingUIElemConfiguration.HideMeetingInfoFromMeetingUITitle(bool bHide)`
+* `IMeetingUIElemConfiguration.SetMeetingIDForMeetingUITitle(UINT64 meetingNumber)`
+* `IMeetingUIElemConfiguration.SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow)`
+
 ## 2020-04-28 @ v4.6.21666.0428
 
 ## Added:

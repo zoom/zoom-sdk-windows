@@ -1012,7 +1012,7 @@ void CCustomizeInMeetingUIMgr::UpdateMeetingTitle(bool bInWaitingRoom)
 		if(bInWaitingRoom)
 			wsprintf(strTitle,_T("zoom_sdk_demo_ui -- You are in waiting room now"));
 		else if(0 != iMeetingID)
-			wsprintf(strTitle,_T("zoom_sdk_demo_ui -- meeting ID %u"), iMeetingID);
+			wsprintf(strTitle,_T("zoom_sdk_demo_ui -- meeting ID %I64u"), iMeetingID);
 		else
 			wsprintf(strTitle,_T("zoom_sdk_demo_ui"));
 		bool BRet = ::SetWindowText(m_hOwnerHwnd, strTitle);

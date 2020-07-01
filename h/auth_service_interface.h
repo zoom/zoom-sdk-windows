@@ -25,6 +25,7 @@ enum AuthResult
 	AUTHRET_NONE,///<Initial status.
 	AUTHRET_OVERTIME,///<Time out.
 	AUTHRET_NETWORKISSUE,///<Network issues.
+	AUTHRET_CLIENT_INCOMPATIBLE, ///Account does not support this SDK version
 };
 
 /*! \enum LOGINSTATUS
@@ -213,6 +214,13 @@ public:
 	/// \brief Get SDK identity.
 	/// \return The SDK identity.
 	virtual const wchar_t* GetSDKIdentity() = 0;
+
+	/// \brief Call the interface to determine whether email login is enabled.
+	/// \param [out]bEnabled, if bEnabled is true indicates email login is enabled, otherwise disabled.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	///You need to call this APIs after IAuthServiceEvent::onAuthenticationReturn(AuthResult ret) and ret is equal to AUTHRET_SUCCESS.
+	virtual SDKError IsEmailLoginEnabled(bool& bEnabled) = 0;
 
 	/// \brief Account login.
 	/// \param param For the parameter to be used for account login, see \link LoginParam \endlink structure. 

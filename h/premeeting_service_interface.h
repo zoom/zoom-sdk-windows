@@ -409,6 +409,8 @@ public:
 
 	virtual IList<IAlternativeHostInfo* >* GetAlternativeHostInfoList() = 0;
 	
+	virtual bool isDisabledPMI() = 0;
+	
 	/// \brief Get the meeting information interface for the specified meeting. 
 	/// \return A pointer to the IQueryMeetingItemScheduleForHelper. For more details, see \link IQueryMeetingItemScheduleForHelper \endlink.
 	virtual IQueryMeetingItemScheduleForHelper* GetQueryScheduleForHelper() = 0;

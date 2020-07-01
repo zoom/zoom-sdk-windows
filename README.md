@@ -5,8 +5,7 @@
 
 
 ## Table of Contents
-- [:rotating_light: Announcement :rotating_light:](#rotating_light-announcement-rotating_light)   
-- [Latest SDK Notifications](#latest-sdk-notifications)   
+- [Latest SDK News](#latest-sdk-news)   
 - [Full Documentation && Community Support](#full-documentation-community-support)   
 - [What is Zoom Windows SDK?](#what-is-zoom-windows-sdk)   
 - [Disclaimer](#disclaimer)   
@@ -24,24 +23,19 @@
 - [Acknowledgments](#acknowledgments)   
 
 
+## Latest SDK News
+1. Starting from Client SDK 5.0, if you are using tokens to start a meeting, you will only need to retrieve ZAK from Zoom API. The user token has been deprecated. 
+2. To follow with Zoom client's recent changes, Zoom SDK has temporary remove the "Unmute All" interface in Client SDK 5.0.
+3. To align with Zoom’s [recent announcement](https://blog.zoom.us/wordpress/2020/04/22/zoom-hits-milestone-on-90-day-security-plan-releases-zoom-5-0/) pertaining to our security initiative, Zoom Client SDKs have added **AES 256-bit GCM encryption** support, which provides more protection for meeting data and greater resistance to tampering. **The system-wide account enablement of AES 256-bit GCM encryption will take place on June 01, 2020.** You are **strongly recommended** to start the required upgrade to this latest version 4.6.21666.0428 at your earliest convenience. Please note that any Client SDK versions below 4.6.21666.0428 will **no longer be operational** from June 01.
 
-## :rotating_light: Announcement :rotating_light:
-To align with Zoom’s [recent announcement](https://blog.zoom.us/wordpress/2020/04/22/zoom-hits-milestone-on-90-day-security-plan-releases-zoom-5-0/) pertaining to our security initiative, Zoom Client SDKs have added **AES 256-bit GCM encryption** support, which provides more protection for meeting data and greater resistance to tampering. **The system-wide account enablement of AES 256-bit GCM encryption will take place on June 01, 2020.** You are **strongly recommended** to start the required upgrade to this latest version 4.6.21666.0428 at your earliest convenience. Please note that any Client SDK versions below 4.6.21666.0428 will **no longer be operational** from June 01.
+4. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
 
-> If you would like to test the latest SDK with AES 256-bit GCM encryption meeting before 05/30, you may:
-> 1. Download the latest version of Zoom client: https://zoom.us/download
-> 2. Visit https://zoom.us/testgcm and launch a GCM enabled meeting with your Zoom client, you will see a Green Shield icon that indicates the GCM encryption is enabled
-> 3. Use SDK to join this meeting
-
-## Latest SDK Notifications
-1. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
-
-2. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
+5. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
 * `CptHost.exe` -> `zcscpthost.exe`
 * `airhost.exe` -> `zcsairhost.exe`
 * `CptService.exe` -> `zCSCptService.exe`
 
-3. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+6. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptInstall.exe**
    * **CptHost.exe** / **zcscpthost.exe**

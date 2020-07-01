@@ -118,10 +118,8 @@ CAuthSDKUIGroup::CAuthSDKUIGroup()
 {
 	m_AuthSDKPage = NULL;
 	m_btnAuth = NULL;
-	m_editSDKKey = NULL;
-	m_editSDKSecret = NULL;
+	m_editSDKJWTToken = NULL;
 	m_mainFrame = NULL;
-	m_chkUseJWTToken = NULL;
 }
 
 CAuthSDKUIGroup::~CAuthSDKUIGroup()
@@ -133,9 +131,7 @@ void CAuthSDKUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKInitAuthUIMgr* mai
 {
 	m_AuthSDKPage = static_cast<CVerticalLayoutUI* >(ui_mgr.FindControl(_T("page_sdkauth")));
 	m_btnAuth = static_cast<CButtonUI* >(ui_mgr.FindControl(_T("btn_auth")));
-	m_editSDKKey = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_sdk_key")));
-	m_editSDKSecret = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_sdk_secret")));
-	m_chkUseJWTToken = static_cast<CCheckBoxUI* >(ui_mgr.FindControl(_T("chk_jwttoken_auth")));
+	m_editSDKJWTToken = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_sdk_jwttoken")));
 	m_mainFrame = main_frame_;
 	m_AuthSDKWorkFlow.SetUIEvent(this);
 }
@@ -172,87 +168,20 @@ void CAuthSDKUIGroup::Notify( TNotifyUI& msg )
 	{
 		if(msg.pSender == m_btnAuth)
 		{
-			DoAuth();
-		}
-		if(msg.pSender == m_chkUseJWTToken)
-		{
-			DoUseJWTTokenChkClick();
+			DoAuthBtnClick();
 		}
 	}
 }
 
-void CAuthSDKUIGroup::DoUseJWTTokenChkClick()
+void CAuthSDKUIGroup::DoAuthBtnClick()
 {
-	if(NULL == m_chkUseJWTToken)
+	if(NULL == m_editSDKJWTToken)
 		return;
-	if(!m_chkUseJWTToken->GetCheck())
-	{
-		if(m_editSDKSecret)
-		{
-			m_strOldValue = m_editSDKSecret->GetText().GetData();
-			m_editSDKSecret->SetAttribute(_T("password"), _T("false"));
-			m_editSDKSecret->SetReadOnly(true);
-			m_editSDKSecret->SetText(_T(""));
-			m_editSDKSecret->SetAttribute(_T("prompttext"), _T("No Use"));
-			m_editSDKKey->SetAttribute(_T("prompttext"), _T("JWT token"));
-			m_editSDKSecret->Invalidate();
-			m_editSDKKey->Invalidate();
-		}
-	}
-	else
-	{
-		if(m_editSDKSecret)
-		{
-			m_editSDKSecret->SetAttribute(_T("password"), _T("true"));
-			m_editSDKSecret->SetText(m_strOldValue.c_str());
-			m_editSDKSecret->SetReadOnly(false);
-			m_editSDKSecret->SetAttribute(_T("prompttext"), _T("sdk secret"));
-			m_editSDKKey->SetAttribute(_T("prompttext"), _T("sdk key"));
-			m_editSDKSecret->Invalidate();
-			m_editSDKKey->Invalidate();
-		}
-	}
-}
-
-void CAuthSDKUIGroup::DoAuth()
-{
-	if(m_chkUseJWTToken && m_chkUseJWTToken->GetCheck())
-		DoJWTTokenBtnClick();
-	else
-		DoAuthBtnClick();		
-}
-void CAuthSDKUIGroup::DoJWTTokenBtnClick()
-{
-	if(NULL == m_editSDKKey)
-		return;
-	std::wstring strToken = m_editSDKKey->GetText().GetData();
+	std::wstring strToken = m_editSDKJWTToken->GetText().GetData();
 	if (strToken.size() > 0 )
 	{
 		ZOOM_SDK_NAMESPACE::AuthContext param;
 		param.jwt_token = strToken.c_str();
-		if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS != m_AuthSDKWorkFlow.Auth(param))
-		{
-			if (m_mainFrame)
-				m_mainFrame->ShowErrorMessage(L"auth sdk failed");
-		}
-		else
-		{
-			m_mainFrame->SwitchToWaitingPage(L"waiting auth result...", true);
-		}
-	}
-}
-void CAuthSDKUIGroup::DoAuthBtnClick()
-{
-	if(NULL == m_editSDKKey || NULL == m_editSDKSecret)
-		return;
-	std::wstring strKey = m_editSDKKey->GetText().GetData();
-	std::wstring strSecret = m_editSDKSecret->GetText().GetData();
-
-	if (strKey.size() > 0 && strSecret.size() > 0)
-	{
-		ZOOM_SDK_NAMESPACE::AuthParam param;
-		param.appKey = strKey.c_str();
-		param.appSecret = strSecret.c_str();
 		if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS != m_AuthSDKWorkFlow.Auth(param))
 		{
 			if (m_mainFrame)

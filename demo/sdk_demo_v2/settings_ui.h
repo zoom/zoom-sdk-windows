@@ -392,8 +392,6 @@ public:
 	void ShowOthersPage();
 
 	void DoBottomToolbarChkClick();
-	void DoTitlebarMeetingIDChkClick();
-	void DoAlwaysDisplayTitleMeetingIDChkClick();
 	void DoLeaveMeetingButtonChkClick();
 	void DoEnterOrExitTheFullScreenButtonsChkClick();
 	void DoAlwaysDisplayTaskbarIconChkClick();
@@ -445,8 +443,6 @@ protected:
 	COptionUI* m_btnInvite;
 	COptionUI* m_btnOthers;
 	CCheckBoxUI* m_chkBottomToolbar;
-	CCheckBoxUI* m_chkTitlebarMeetingID;
-	CCheckBoxUI* m_chkAlwaysDisplayTitleMeetingID;
 	CCheckBoxUI* m_chkLeaveMeetingButton;
 	CCheckBoxUI* m_chkEnterOrExitTheFullScreenButtons;
 	CCheckBoxUI* m_chkAlwaysDisplayTaskbarIcon;
@@ -514,7 +510,6 @@ public:
 	void DoConfirmMoveFloatingVideoWndPosBtnClick();
 	void DoConfirmMeetingWndPosBtnClick();
 	void DoConfirmSharingFloatingVideoWndPosBtnClick();
-	void DoConfirmMeetingIDBtnClick();
 	void DoConfirmVideoWallModeBtnClick();
 	void DoCurrentSpeakerModeBtnClick();
 	void DoSwitchToPreviousPageBtnClick();
@@ -567,7 +562,6 @@ private:
 	CButtonUI* m_btnBackToMeeting;
 	CButtonUI* m_btnConfirmMeetingWndPos;
 	CButtonUI* m_btnConfirmSharingFloatingVideoWndPos;
-	CButtonUI* m_btnConfirmMeetingID;
 	CButtonUI* m_btnConfirmMoveFloatingVideoWndPos;
 	CButtonUI* m_btnConfirmVideoWallMode;
 	CButtonUI* m_btnCurrentSpeakerMode;

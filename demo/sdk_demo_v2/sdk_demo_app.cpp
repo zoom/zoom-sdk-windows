@@ -146,6 +146,12 @@ void CSDKDemoApp::onSwitchToLoginUI(SwitchToLoginUIType type_)
 	{
 		hwndUI = m_sdk_login_ui_mgr->GetHWND();
 		m_sdk_login_ui_mgr->SwitchToWaitingPage(L"",false);
+
+        bool isEmailLoginDEnable = false;
+        if (SDKInterfaceWrap::GetInst().GetAuthService())
+           SDKInterfaceWrap::GetInst().GetAuthService()->IsEmailLoginEnabled(isEmailLoginDEnable);
+        m_sdk_login_ui_mgr->EnableEmailLoginUI(isEmailLoginDEnable);
+
 		m_sdk_login_ui_mgr->ShowWindow(true);
 		ActiveWindowToTop(hwndUI);
 	}

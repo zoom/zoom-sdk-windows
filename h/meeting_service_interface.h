@@ -117,39 +117,30 @@ enum LeaveMeetingCmd
 */
 enum SDKUserType
 {
-	SDK_UT_APIUSER     = 99,///<API user type, quits later.
 	SDK_UT_NORMALUSER = 100,///<Type of ordinary user who needs to login.
 	SDK_UT_WITHOUT_LOGIN,///<Start meeting without login.
 };
 
-/*! \struct tagJoinParam4APIUser
-    \brief The parameter of API user when joins the meeting.
+/*! \struct tagJoinParam4WithoutLogin
+    \brief The parameters of non-login user when joins the meeting.
     Here are more detailed structural descriptions.
 */
-typedef struct tagJoinParam4APIUser
+typedef struct tagJoinParam4WithoutLogin
 {
 	UINT64		   meetingNumber;///< Meeting number.
 	const wchar_t* vanityID;///<Meeting vanity ID
 	const wchar_t* userName;///<Username when logged in the meeting.
 	const wchar_t* psw;///<Meeting password.
 	HWND		   hDirectShareAppWnd;///<The window handle of the direct Sharing application.
-	const wchar_t* toke4enfrocelogin;///<Use the token if the meeting requests to login.
+	const wchar_t* userZAK;///<ZOOM access token.
 	const wchar_t* participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
 	const wchar_t* webinarToken;///<Webinar token.
 	bool		   isDirectShareDesktop;///<Share the desktop directly or not. True indicates to Share.
 	bool		   isVideoOff;///<Turn off the video of not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
 	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
-}JoinParam4APIUser;
-
-/*! \struct tagJoinParam4WithoutLogin
-    \brief The parameters of non-login user when joins the meeting.
-    Here are more detailed structural descriptions.
-*/
-typedef struct tagJoinParam4WithoutLogin : public tagJoinParam4APIUser
-{
 }JoinParam4WithoutLogin;
 
-/*! \struct tagJoinParam4APIUser
+/*! \struct tagJoinParam4NormalUser
     \brief The parameter of ordinary logged-in user.
     Here are more detailed structural descriptions.
 */
@@ -176,34 +167,15 @@ typedef struct tagJoinParam
 	SDKUserType userType;///<User type. For more details, see \link SDKUserType \endlink enum.
 	union 
 	{
-		JoinParam4APIUser apiuserJoin;///<The parameter of API user when joins the meeting.
 		JoinParam4NormalUser normaluserJoin;///<The parameter of ordinary user when joins the meeting.
 		JoinParam4WithoutLogin withoutloginuserJoin;///<The parameters of unlogged-in user when joins the meeting.
 	} param;    
 	tagJoinParam()
 	{
-		userType = SDK_UT_APIUSER;
+		userType = SDK_UT_WITHOUT_LOGIN;
 		memset(&param, 0, sizeof(param));
 	}
 }JoinParam;
-
-/*! \struct tagStartParam4APIUser
-    \brief The parameter used by API user when starts the meeting.
-    Here are more detailed structural descriptions.
-*/
-typedef struct tagStartParam4APIUser
-{
-	const wchar_t* userID;///<User ID.
-	const wchar_t* userToken;///<User token
-	const wchar_t* userName;///<Username when logged in.
-	UINT64		   meetingNumber;///<Meeting number.
-	const wchar_t* vanityID;///<Meeting vanity ID.
-	HWND		   hDirectShareAppWnd;///<The window handle of the direct sharing application.
-	const wchar_t* participantId;///<The ID of attendees. The SDK will set this value when the associated settings are turned on.
-	bool		   isDirectShareDesktop;///<Share the desktop directly or not. True indicates to Share.
-	bool		   isVideoOff;///<Turn off the video or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
-	bool		   isAudioOff;///<Turn off the audio or not. True indicates to turn off. In addition, this flag is affected by meeting attributes.
-}StartParam4APIUser;
 
 
 /*! \enum ZoomUserType
@@ -227,7 +199,6 @@ enum ZoomUserType
 typedef struct tagStartParam4WithoutLogin
 {
 	const wchar_t* userID;///<User ID.
-	const wchar_t* userToken;///<User token.
 	const wchar_t* userZAK;///<ZOOM access token.
 	const wchar_t* userName;///<Username when logged in the meeting.
 	ZoomUserType   zoomuserType;///<User type.
@@ -265,13 +236,12 @@ typedef struct tagStartParam
 	SDKUserType userType;///<User type.
 	union 
 	{
-		StartParam4APIUser apiuserStart;///<The parameter for API user when starts the meeting.
 		StartParam4NormalUser normaluserStart;///<The parameter for ordinary user when starts the meeting.
-	StartParam4WithoutLogin withoutloginStart;///<The parameter for unlogged-in user when starts the meeting. 
+		StartParam4WithoutLogin withoutloginStart;///<The parameter for unlogged-in user when starts the meeting. 
 	}param;    
 	tagStartParam()
 	{
-		userType = SDK_UT_APIUSER;
+		userType = SDK_UT_WITHOUT_LOGIN;
 		memset(&param, 0, sizeof(param));
 	}
 }StartParam;

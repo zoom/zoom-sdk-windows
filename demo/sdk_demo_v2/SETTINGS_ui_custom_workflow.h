@@ -12,7 +12,6 @@ public:
 	///meeting_configuration_interface.h
 	void SetSharingToolbarVisibility(bool bShow);
 	void SetBottomFloatToolbarWndVisibility(bool bShow);
-	void HideMeetingInfoFromMeetingUITitle(bool bHide);
 	void EnableApproveRemoteControlDlg(bool bEnable);
 	void EnableDeclineRemoteControlResponseDlg(bool bEnable);
 	void EnableLeaveMeetingOptionForHost(bool bEnable);
@@ -27,7 +26,6 @@ public:
 	void SetShowVideoOptimizeChkbox(bool bShow);
 	void SetShowCallInTab(bool bShow);
 	void SetShowCallMeTab(bool bShow);
-	void SetAlwaysShowMeetingIDOnTitle(bool bAlwaysShow);
 	ZOOM_SDK_NAMESPACE::SDKError DisableTopMostAttr4SettingDialog(bool bDisable);
 	void EnableShowShareSwitchMultiToSingleConfirmDlg(bool bEnable);
 	void DisableFreeMeetingRemainTimeNotify(bool bDisable);

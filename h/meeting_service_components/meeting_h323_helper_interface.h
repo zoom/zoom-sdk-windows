@@ -23,6 +23,8 @@ enum H323CalloutStatus
 	H323Callout_Ring,   ///<Bell during the call.
 	H323Callout_Timeout, ///<Call timeout.
 	H323Callout_Failed, ///<Call fails.
+	H323Callout_Busy,	///<Busy
+	H323Callout_Decline, ///<Decline
 };
 
 /*! \enum H323ParingResult

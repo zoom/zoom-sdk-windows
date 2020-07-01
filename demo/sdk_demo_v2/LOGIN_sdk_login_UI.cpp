@@ -2,8 +2,6 @@
 #include "LOGIN_sdk_login_UI.h"
 #include <stdarg.h>
 #include "auth_service_interface.h"
-#include "httpRequestHelper.h"
-#include "zoomHmacSHA256.h"
 #include "mess_info.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -94,12 +92,15 @@ void CSDKLoginWithEmailUIGroup::DoLoginWithEmailBtnClick()
 		loginParam.ut.emailLogin.userName = userAccount.c_str();
 		loginParam.ut.emailLogin.password = userPassword.c_str();
 		loginParam.ut.emailLogin.bRememberMe = remember;
-		if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS != m_loginEmailWorkFlow.Login(loginParam))
+		ZOOM_SDK_NAMESPACE::SDKError err = m_loginEmailWorkFlow.Login(loginParam);
+		if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS != err)
 		{
-			//if (m_parentFrame)
-			//{
-			//	m_parentFrame->ShowErrorMessage(_T("login failed!"));
-			//}
+			if (m_parentFrame)
+			{
+				TCHAR szDbg[128] = {0};
+				wsprintf(szDbg, _T("email login fail, err=%d"), err);
+				m_parentFrame->ShowErrorMessage(szDbg);
+			}
 		}
 		else
 		{
@@ -312,7 +313,7 @@ void CSDKWithoutLoginStartJoinMeetingUIGroup::DoWithoutLoginStartJoinMeetingBtnC
 	withoutloginParam.userName = ScreenName.c_str();
 	withoutloginParam.psw = MeetingPassword.c_str();
 	withoutloginParam.hDirectShareAppWnd = NULL;
-	withoutloginParam.toke4enfrocelogin = NULL;
+	//withoutloginParam.toke4enfrocelogin = NULL;
 	withoutloginParam.participantId = NULL;
 	withoutloginParam.webinarToken = NULL;
 	withoutloginParam.isDirectShareDesktop = false;
@@ -409,9 +410,9 @@ void CSDKWithoutLoginStartJoinMeetingUIGroup::onMeetingStatusChanged(ZOOM_SDK_NA
 CSDKRestAPIUserUIGroup::CSDKRestAPIUserUIGroup()
 {
 	m_WithoutLoginRestAPIPage = NULL;
-	m_editRestAPIKey = NULL;
-	m_editRestAPISecret = NULL;
-	m_editEmail = NULL;
+	
+	m_editRestAPIUserZAK = NULL;
+	m_editMeetingNumber = NULL;
 	m_chkRemember = NULL;
 	m_editScreenName = NULL;
 	m_btnStartMeeting = NULL;
@@ -420,9 +421,8 @@ CSDKRestAPIUserUIGroup::CSDKRestAPIUserUIGroup()
 CSDKRestAPIUserUIGroup::~CSDKRestAPIUserUIGroup()
 {
 	m_WithoutLoginRestAPIPage = NULL;
-	m_editRestAPIKey = NULL;
-	m_editRestAPISecret = NULL;
-	m_editEmail = NULL;
+	m_editRestAPIUserZAK = NULL;
+	m_editMeetingNumber = NULL;
 	m_chkRemember = NULL;
 	m_editScreenName = NULL;
 	m_btnStartMeeting = NULL;
@@ -431,14 +431,11 @@ CSDKRestAPIUserUIGroup::~CSDKRestAPIUserUIGroup()
 void CSDKRestAPIUserUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKLoginUIMgr* main_frame_)
 {
 	m_WithoutLoginRestAPIPage = static_cast<CVerticalLayoutUI* >(ui_mgr.FindControl(_T("panel_RestAPI_Without_Login")));
-	m_editRestAPIKey = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_key")));
-	if(m_editRestAPIKey)
-		m_editRestAPIKey->SetLimitText(KEY_SECRET_LIMIT_LENGTH_MAX);
-	m_editRestAPISecret = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_secret")));
-	if(m_editRestAPISecret)
-		m_editRestAPISecret->SetLimitText(KEY_SECRET_LIMIT_LENGTH_MAX);
+	m_editRestAPIUserZAK = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_user_zak")));
+	if(m_editRestAPIUserZAK)
+		m_editRestAPIUserZAK->SetLimitText(KEY_SECRET_LIMIT_LENGTH_MAX);
 	m_editScreenName = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_ScreenName")));	
-	m_editEmail = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_email")));
+	m_editMeetingNumber = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_meeting_number")));
 	m_btnStartMeeting = static_cast<CButtonUI* >(ui_mgr.FindControl(_T("btn_login")));
 	m_chkRemember = static_cast<CCheckBoxUI* >(ui_mgr.FindControl(_T("chk_remember_me")));
 	m_parentFrame = main_frame_;
@@ -488,100 +485,43 @@ void CSDKRestAPIUserUIGroup::Notify( TNotifyUI& msg )
 
 void CSDKRestAPIUserUIGroup::DoWithoutLoginStartMeetingBtnClick()
 {
-	if ( NULL == m_editRestAPIKey || NULL == m_editRestAPISecret || NULL == m_editEmail || NULL == m_editScreenName)
+	if (NULL == m_editRestAPIUserZAK || NULL == m_editMeetingNumber || NULL == m_editScreenName)
 		return;
-	std::wstring userKey = m_editRestAPIKey->GetText().GetData();
-	std::wstring userSecret = m_editRestAPISecret->GetText().GetData();
-	std::wstring userEmail = m_editEmail->GetText().GetData();
-	std::wstring userScreenName = m_editScreenName->GetText().GetData();
-	zoomHmacSHA256* hmacHelper = new zoomHmacSHA256();
-	CZoomHttpRequestHelper* zoomHttpHelper = new CZoomHttpRequestHelper();
-	if (userKey.size()> 0&& userSecret.size()>0 )
+
+	std::wstring _restAPIUserZAK = m_editRestAPIUserZAK->GetText().GetData();
+	std::wstring _meetingNumber = m_editMeetingNumber->GetText().GetData();
+	std::wstring _userScreenName = m_editScreenName->GetText().GetData();
+	
+	bool bNeedWaiting = false;
+	ZOOM_SDK_NAMESPACE::StartParam startParam;
+	startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_WITHOUT_LOGIN;
+
+	ZOOM_SDK_NAMESPACE::StartParam4WithoutLogin& RestAPIUserStartParam = startParam.param.withoutloginStart;
+
+	RestAPIUserStartParam.userID = L"0";
+	RestAPIUserStartParam.userZAK = _restAPIUserZAK.c_str();
+	RestAPIUserStartParam.userName = _userScreenName.c_str();
+	RestAPIUserStartParam.zoomuserType =ZOOM_SDK_NAMESPACE:: ZoomUserType_APIUSER;
+	RestAPIUserStartParam.meetingNumber = _wtoi64(_meetingNumber.c_str());
+
+	if (SDKInterfaceWrap::GetInst().IsSelectCustomizedUIMode() && m_parentFrame)
 	{
-		if(m_parentFrame)
-		{
-			m_parentFrame->SetCurrentPage(m_WithoutLoginRestAPIPage);
-			m_parentFrame->SwitchToWaitingPage(_T("waiting to start meeting...."), true);
-		}
-		//here is the flow to get the real rest api token
-		bool bGetTokenSucc = false;
-		char pcUserKey[ZOOM_ENCODE_DEFAULT_BUFFER];
-		char pcUserSecret[ZOOM_ENCODE_DEFAULT_BUFFER];
-		char* pcUserTokenForRestAPI;
-		wchar_t userTokenForRestAPI[1024];
-		UINT64 uPMI = 0;
-		std::wstring userFinalToken;
-		std::wstring userZaktoken;
-		std::wstring userRealID;
-		do 
-		{
-			if(NULL == hmacHelper || NULL == zoomHttpHelper)
-				break;
-			hmacHelper->WcharToChar(userKey.c_str(), pcUserKey);
-			hmacHelper->WcharToChar(userSecret.c_str(), pcUserSecret);
-			if(false == hmacHelper->SetRestAPIKey(&pcUserKey[0]) || false == hmacHelper->SetRestAPISecret(&pcUserSecret[0]))
-				break;
-			//set the period of token validify to be 1 hour
-			hmacHelper->SetTokenValidityPeriod(3600);
-			if( 0 != hmacHelper->MakeToken())
-				break;
-			pcUserTokenForRestAPI = hmacHelper->GetToken();	
-			if(NULL == pcUserTokenForRestAPI)
-				break;
-			hmacHelper->CharToWchar(pcUserTokenForRestAPI, userTokenForRestAPI);
-			zoomHttpHelper->SetRestAPIDomain(_T("zoom.us"));
-			zoomHttpHelper->SetRestAPIAccessToken(userTokenForRestAPI);
-			zoomHttpHelper->SetUserEmail((wchar_t*)m_editEmail->GetText().GetData());
-			if(!zoomHttpHelper->MakeAPIUrlTokens())
-				break;
-			//now we get the final useful token
-			userFinalToken = zoomHttpHelper->GetSDKURLUserToken();
-			userZaktoken = zoomHttpHelper->GetSDKURLZakToken();
-			userRealID = zoomHttpHelper->GetSDKURLUserID();
-			uPMI = zoomHttpHelper->GetSDKUserPMI();
-			bGetTokenSucc = true;
-		} while (0);
-
-		bool bNeedWaiting = false;
-		if(bGetTokenSucc)
-		{
-			ZOOM_SDK_NAMESPACE::StartParam startParam;
-			startParam.userType = ZOOM_SDK_NAMESPACE::SDK_UT_WITHOUT_LOGIN;
-
-			ZOOM_SDK_NAMESPACE::StartParam4WithoutLogin& RestAPIUserStartParam = startParam.param.withoutloginStart;
-
-			RestAPIUserStartParam.userID = userRealID.c_str();
-			RestAPIUserStartParam.userToken = userFinalToken.c_str();
-			RestAPIUserStartParam.userZAK = userZaktoken.c_str();
-			RestAPIUserStartParam.userName = userScreenName.c_str();
-			RestAPIUserStartParam.zoomuserType =ZOOM_SDK_NAMESPACE:: ZoomUserType_APIUSER;
-			RestAPIUserStartParam.meetingNumber = uPMI;
-
-			if (SDKInterfaceWrap::GetInst().IsSelectCustomizedUIMode() && m_parentFrame)
-			{
-				CSDKDemoAppEvent* pAppEvent = m_parentFrame->GetAppEvent();
-				if(pAppEvent)
-					pAppEvent->InitCustomizedUI();
-			}
-
-			if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS == m_RestAPIUserWorkFlow.RestAPIStartMeeting(startParam))
-			{
-				bNeedWaiting = true;
-			}
-		}
-		if(!bNeedWaiting)
-		{
-			m_parentFrame->ShowErrorMessage(L"Rest API start meeting failed");
-			m_parentFrame->SetCurrentPage(m_WithoutLoginRestAPIPage);
-			m_parentFrame->SwitchToWaitingPage(NULL, false);
-		}
+		CSDKDemoAppEvent* pAppEvent = m_parentFrame->GetAppEvent();
+		if(pAppEvent)
+			pAppEvent->InitCustomizedUI();
 	}
 
-	if(hmacHelper)
-		delete hmacHelper;
-	if(zoomHttpHelper)
-		delete zoomHttpHelper;
-
+	if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS == m_RestAPIUserWorkFlow.RestAPIStartMeeting(startParam))
+	{
+		bNeedWaiting = true;
+	}
+		
+	if(!bNeedWaiting)
+	{
+		m_parentFrame->ShowErrorMessage(L"Rest API start meeting failed");
+		m_parentFrame->SetCurrentPage(m_WithoutLoginRestAPIPage);
+		m_parentFrame->SwitchToWaitingPage(NULL, false);
+	}
 }
 
 void CSDKRestAPIUserUIGroup::onMeetingStatusChanged(ZOOM_SDK_NAMESPACE::MeetingStatus status, int iResult)
@@ -901,6 +841,14 @@ void CSDKLoginUIMgr::NotifyAuthDone()
 	{
 		SwitchToWaitingPage(L"auto login...", true);
 	}
+}
+
+void CSDKLoginUIMgr::EnableEmailLoginUI(bool visible)
+{
+   if (m_btnLoginWithEmail)
+      m_btnLoginWithEmail->SetVisible(visible);
+   if(!visible)
+      SwitchToPage(login_UseSSO_Page);
 }
 /////////////////////////////////////////////////////////////////
 CSDKLoginCBHandler::CSDKLoginCBHandler()
