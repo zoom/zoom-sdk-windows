@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="zoomHmacSHA256.cpp">
-      <Filter>Source Files\5_utility</Filter>
-    </ClCompile>
-    <ClCompile Include="HttpRequestHelper.cpp">
-      <Filter>Source Files\5_utility</Filter>
-    </ClCompile>
     <ClCompile Include="init_auth_sdk_workflow.cpp">
       <Filter>Source Files\1_how_to_init_auth_sdk\1_how_to_init_sdk</Filter>
     </ClCompile>
@@ -190,6 +184,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SETTINGS_virtualBG_workflow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk_demo_v2.h">
@@ -203,12 +198,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="zoomHmacSHA256.h">
-      <Filter>Source Files\5_utility</Filter>
-    </ClInclude>
-    <ClInclude Include="HttpRequestHelper.h">
-      <Filter>Source Files\5_utility</Filter>
     </ClInclude>
     <ClInclude Include="init_auth_sdk_workflow.h">
       <Filter>Source Files\1_how_to_init_auth_sdk\1_how_to_init_sdk</Filter>
@@ -393,6 +382,7 @@
     <ClInclude Include="sdk_util.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="SETTINGS_virtualBG_workflow.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

@@ -197,7 +197,6 @@
     <ClCompile Include="custom_ui_video_mgr.cpp" />
     <ClCompile Include="dial_in_country_ui.cpp" />
     <ClCompile Include="display_cc_ui.cpp" />
-    <ClCompile Include="HttpRequestHelper.cpp" />
     <ClCompile Include="init_auth_sdk_workflow.cpp" />
     <ClCompile Include="invitation_ui.cpp" />
     <ClCompile Include="invitation_workflow.cpp" />
@@ -244,7 +243,6 @@
     <ClCompile Include="user_manager.cpp" />
     <ClCompile Include="util_window.cpp" />
     <ClCompile Include="ViewOptionsWindow.cpp" />
-    <ClCompile Include="zoomHmacSHA256.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnnotateBarWindow.h" />
@@ -269,7 +267,6 @@
     <ClInclude Include="custom_ui_video_mgr.h" />
     <ClInclude Include="dial_in_country_ui.h" />
     <ClInclude Include="display_cc_ui.h" />
-    <ClInclude Include="HttpRequestHelper.h" />
     <ClInclude Include="init_auth_sdk_workflow.h" />
     <ClInclude Include="invitation_ui.h" />
     <ClInclude Include="invitation_workflow.h" />
@@ -314,7 +311,6 @@
     <ClInclude Include="user_manager.h" />
     <ClInclude Include="util_window.h" />
     <ClInclude Include="ViewOptionsWindow.h" />
-    <ClInclude Include="zoomHmacSHA256.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="sdk_demo_v2.rc" />
