@@ -96,6 +96,7 @@ You do not need to secret base64 encoded your signature. Once the JWT token is g
   * Calling `IMeetingAudioController.UnMuteAudio(0)` won't unmute all.
 
 ## Deprecated & Removed
+* `tagStartParam4APIUser` - Please use `tagStartParam4WithoutLogin`
 * `tagStartParam4WithoutLogin.userToken`
 * `tagStartParam.apiuserStart`
 * `IMeetingUIElemConfiguration.HideMeetingInfoFromMeetingUITitle(bool bHide)`
