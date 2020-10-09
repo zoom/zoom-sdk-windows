@@ -11,6 +11,5 @@ var searchData=
   ['webinarreg_5fnone',['WebinarReg_NONE',['../class_i_webinar_need_register_handler.html#a393563c702938a80088e8a9ed5d988d9aacfa49dbdbc9890fee160ceba4bda3f6',1,'IWebinarNeedRegisterHandler']]],
   ['webinartoken',['webinarToken',['../structtag_join_param4_without_login.html#a2e4ecde774c827329a4a7ba96b6ac803',1,'tagJoinParam4WithoutLogin::webinarToken()'],['../structtag_join_param4_normal_user.html#a65b7e6729686f85c9a9b6da544282ed7',1,'tagJoinParam4NormalUser::webinarToken()']]],
   ['withoutloginstart',['withoutloginStart',['../structtag_start_param.html#aef58ad62c9f2c9a45eb9a53d6961dc46',1,'tagStartParam']]],
-  ['withoutloginuserjoin',['withoutloginuserJoin',['../structtag_join_param.html#acb53aa094aa91c440a6a2407c74eb4cd',1,'tagJoinParam']]],
-  ['working',['working',['../struct_local_video_device_status.html#a4cc34babdfe72bbb39d2c14bf717daf0',1,'LocalVideoDeviceStatus']]]
+  ['withoutloginuserjoin',['withoutloginuserJoin',['../structtag_join_param.html#acb53aa094aa91c440a6a2407c74eb4cd',1,'tagJoinParam']]]
 ];

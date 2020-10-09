@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -138,6 +138,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a033d5b62741ab6590f8e085fff5fe06e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller_event.html#a033d5b62741ab6590f8e085fff5fe06e">OnRevokeUpvoteQuestion</a> (const wchar_t *question_id, bool order_changed)=0</td></tr>
 <tr class="memdesc:a033d5b62741ab6590f8e085fff5fe06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of revoking voting up question.  <a href="#a033d5b62741ab6590f8e085fff5fe06e">More...</a><br /></td></tr>
 <tr class="separator:a033d5b62741ab6590f8e085fff5fe06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef86ea106a9abfc72fcef4013bda4f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller_event.html#aeef86ea106a9abfc72fcef4013bda4f1">OnDeleteQuestion</a> (<a class="el" href="class_i_list.html">IList</a>&lt; const wchar_t *&gt; *lstQuestionID)=0</td></tr>
+<tr class="memdesc:aeef86ea106a9abfc72fcef4013bda4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of deleting question(s).  <a href="#aeef86ea106a9abfc72fcef4013bda4f1">More...</a><br /></td></tr>
+<tr class="separator:aeef86ea106a9abfc72fcef4013bda4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e966125ca6bb29e440e5b7e7cf3e56"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller_event.html#a78e966125ca6bb29e440e5b7e7cf3e56">OnDeleteAnswer</a> (<a class="el" href="class_i_list.html">IList</a>&lt; const wchar_t *&gt; *lstAnswerID)=0</td></tr>
+<tr class="memdesc:a78e966125ca6bb29e440e5b7e7cf3e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of deleting answer(s).  <a href="#a78e966125ca6bb29e440e5b7e7cf3e56">More...</a><br /></td></tr>
+<tr class="separator:a78e966125ca6bb29e440e5b7e7cf3e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a448d9df8573c7e22d4ae4ecd89d849e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller_event.html#a448d9df8573c7e22d4ae4ecd89d849e1">OnAllowAskQuestionAnonymousStatus</a> (bool bEnabled)=0</td></tr>
 <tr class="memdesc:a448d9df8573c7e22d4ae4ecd89d849e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of enabling to ask question anonymously.  <a href="#a448d9df8573c7e22d4ae4ecd89d849e1">More...</a><br /></td></tr>
 <tr class="separator:a448d9df8573c7e22d4ae4ecd89d849e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -378,6 +384,74 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnabled</td><td>Enbabled or not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a78e966125ca6bb29e440e5b7e7cf3e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e966125ca6bb29e440e5b7e7cf3e56">&#9670;&nbsp;</a></span>OnDeleteAnswer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingQAControllerEvent::OnDeleteAnswer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_list.html">IList</a>&lt; const wchar_t *&gt; *&#160;</td>
+          <td class="paramname"><em>lstAnswerID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of deleting answer(s). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lstAnswerID</td><td>The list of answer ids. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeef86ea106a9abfc72fcef4013bda4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef86ea106a9abfc72fcef4013bda4f1">&#9670;&nbsp;</a></span>OnDeleteQuestion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMeetingQAControllerEvent::OnDeleteQuestion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_list.html">IList</a>&lt; const wchar_t *&gt; *&#160;</td>
+          <td class="paramname"><em>lstQuestionID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of deleting question(s). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lstQuestionID</td><td>The list of question ids. </td></tr>
   </table>
   </dd>
 </dl>

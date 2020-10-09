@@ -1,7 +1,9 @@
 var searchData=
 [
   ['declineremotecontrolrequest',['DeclineRemoteControlRequest',['../class_i_meeting_remote_controller.html#ae4c749a8ee488d260992e55fff1aeb2b',1,'IMeetingRemoteController']]],
+  ['deleteanswer',['DeleteAnswer',['../class_i_meeting_q_a_controller.html#a3005f9248affaa586aaaf52065824202',1,'IMeetingQAController']]],
   ['deletemeeting',['DeleteMeeting',['../class_i_pre_meeting_service.html#ad3268417a127fe091dc77783b478fa27',1,'IPreMeetingService']]],
+  ['deletequestion',['DeleteQuestion',['../class_i_meeting_q_a_controller.html#ac6e13d5fd5ec27187cb8a30215b44dca',1,'IMeetingQAController']]],
   ['depromptpanelist2attendee',['DepromptPanelist2Attendee',['../class_i_meeting_webinar_controller.html#a596077c48020800571cc7b93d85c799e',1,'IMeetingWebinarController']]],
   ['destoryeditmeetingitem',['DestoryEditMeetingItem',['../class_i_pre_meeting_service.html#ab7d87c0259ac115e1c81e3ced038cdef',1,'IPreMeetingService']]],
   ['destoryschedulemeetingitem',['DestoryScheduleMeetingItem',['../class_i_pre_meeting_service.html#a2cfc5f48430ce74f3d5b2e5437eb7016',1,'IPreMeetingService']]],
@@ -25,6 +27,7 @@ var searchData=
   ['disableadvancedfeatures4generalsetting',['DisableAdvancedFeatures4GeneralSetting',['../class_i_setting_u_i_strategy.html#a8e3225c8ca8c912a80d87dc0d7c48a52',1,'ISettingUIStrategy']]],
   ['disableattendeemenuitem',['DisableAttendeeMenuItem',['../class_i_meeting_u_i_elem_configuration.html#aa1d79ecd9435d1ea3e55c489f01f023d',1,'IMeetingUIElemConfiguration']]],
   ['disableautoshowselectjoinaudiodlgwhenjoinmeeting',['DisableAutoShowSelectJoinAudioDlgWhenJoinMeeting',['../class_i_join_meeting_behavior_configuration.html#a75a7c39cf7cb9f9fb6e0b4962922ac9f',1,'IJoinMeetingBehaviorConfiguration']]],
+  ['disableconfidentialwatermark',['DisableConfidentialWatermark',['../class_i_meeting_configuration.html#a971176d5a9795818349203fd5a2ee517',1,'IMeetingConfiguration']]],
   ['disablefreemeetingremaintimenotify',['DisableFreeMeetingRemainTimeNotify',['../class_i_meeting_u_i_elem_configuration.html#ae8d95c6d40ca9a75a09e10a355f12a87',1,'IMeetingUIElemConfiguration']]],
   ['disablepanelistmenuitem',['DisablePanelistMenuItem',['../class_i_meeting_u_i_elem_configuration.html#aef901019eb0a94c2f67e50db7d576783',1,'IMeetingUIElemConfiguration']]],
   ['disablepopupmeetingwrongpswdlg',['DisablePopupMeetingWrongPSWDlg',['../class_i_join_meeting_behavior_configuration.html#abfa5fa7264754cf14f30a938368a4668',1,'IJoinMeetingBehaviorConfiguration']]],
@@ -34,7 +37,6 @@ var searchData=
   ['disabletopmostattr4settingdialog',['DisableTopMostAttr4SettingDialog',['../class_i_meeting_u_i_elem_configuration.html#a55b101c298a15f81fd87f5f2e87eec28',1,'IMeetingUIElemConfiguration']]],
   ['disableviewerannotation',['DisableViewerAnnotation',['../class_i_annotation_controller.html#ab71797c93dbd9de68217dccd15157211',1,'IAnnotationController']]],
   ['disablewaitingforhostdialog',['DisableWaitingForHostDialog',['../class_i_join_meeting_behavior_configuration.html#a64454354179c06240bdc770db623d7eb',1,'IJoinMeetingBehaviorConfiguration']]],
-  ['disallowattendeechat',['DisallowAttendeeChat',['../class_i_meeting_webinar_controller.html#a5072d1e0c08be53b8d6e6d3b19378d05',1,'IMeetingWebinarController']]],
   ['disallowattendeetalk',['DisallowAttendeeTalk',['../class_i_meeting_webinar_controller.html#aa8c6ba835a04c77200023473dd25ed80',1,'IMeetingWebinarController']]],
   ['disallowlocalrecording',['DisAllowLocalRecording',['../class_i_meeting_recording_controller.html#a7ccf6b7f38bf50f77dd6d44ef8453237',1,'IMeetingRecordingController']]],
   ['disallowpaneliststartvideo',['DisallowPanelistStartVideo',['../class_i_meeting_webinar_controller.html#aa0bd607f8a7e246cd950e6408eebcb4d',1,'IMeetingWebinarController']]],

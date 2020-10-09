@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['video_5fmute_5fbyhost',['Video_Mute_ByHost',['../meeting__video__interface_8h.html#ab2c40afd7ac2f54f637c13d41e4a194aada59855b39a7884fe6d34c4ff1ba8faa',1,'meeting_video_interface.h']]],
   ['video_5foff',['Video_OFF',['../meeting__video__interface_8h.html#ab2c40afd7ac2f54f637c13d41e4a194aa7b87a4809299baf95101c31dc75be19b',1,'meeting_video_interface.h']]],
   ['video_5fon',['Video_ON',['../meeting__video__interface_8h.html#ab2c40afd7ac2f54f637c13d41e4a194aa2d10dcff9898d6addb9160c04b7ef68d',1,'meeting_video_interface.h']]],
   ['videorenderdata_5favatar',['VideoRenderData_Avatar',['../customized__video__container_8h.html#a0c23a9782d7752a114c7c6a4dd8e4cdcaabf03ebcb3b087c45c3819033959178f',1,'customized_video_container.h']]],

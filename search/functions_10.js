@@ -33,6 +33,5 @@ var searchData=
   ['retrievecustomizedresourcehelper',['RetrieveCustomizedResourceHelper',['../zoom__sdk__ext_8h.html#a8bbab4e64bd743e7656d088d429354da',1,'zoom_sdk_ext.h']]],
   ['retrieveuihooker',['RetrieveUIHooker',['../zoom__sdk__ext_8h.html#a480b96870f76f1fbe0d51b5d4e440acb',1,'zoom_sdk_ext.h']]],
   ['revokecohost',['RevokeCoHost',['../class_i_meeting_participants_controller.html#aca3fb36bb285a63b8009211ea4b1a97e',1,'IMeetingParticipantsController']]],
-  ['revokeremotecontrol',['RevokeRemoteControl',['../class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37',1,'IMeetingRemoteController']]],
-  ['rotatelocaldevice',['RotateLocalDevice',['../class_i_video_raw_data_channel.html#a803cad443f5695321fcf81d62eae0655',1,'IVideoRawDataChannel']]]
+  ['revokeremotecontrol',['RevokeRemoteControl',['../class_i_meeting_remote_controller.html#a4bc9426033f72b2a39362590f6de9f37',1,'IMeetingRemoteController']]]
 ];

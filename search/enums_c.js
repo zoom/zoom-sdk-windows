@@ -5,6 +5,8 @@ var searchData=
   ['sdk_5fapp_5flocale',['SDK_APP_Locale',['../zoom__sdk__def_8h.html#a1befd4407b13b4e00fab29cd424fa046',1,'zoom_sdk_def.h']]],
   ['sdk_5flanguage_5fid',['SDK_LANGUAGE_ID',['../zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5',1,'zoom_sdk_def.h']]],
   ['sdk_5ftestmic_5fstatus',['SDK_TESTMIC_STATUS',['../setting__service__interface_8h.html#a9b31724919f9219534affe62ee894eee',1,'setting_service_interface.h']]],
+  ['sdkchatmessagetype',['SDKChatMessageType',['../meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732d',1,'meeting_chat_interface.h']]],
+  ['sdkchatpriviledge',['SDKChatPriviledge',['../meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcc',1,'meeting_chat_interface.h']]],
   ['sdkcustomizedstringtype',['SDKCustomizedStringType',['../customized__resource__helper__interface_8h.html#abae1e79d3736b0217db55c41a89caba3',1,'customized_resource_helper_interface.h']]],
   ['sdkcustomizedurltype',['SDKCustomizedURLType',['../customized__resource__helper__interface_8h.html#a5d27394834122a70fb0651223dc3dec5',1,'customized_resource_helper_interface.h']]],
   ['sdkerror',['SDKError',['../zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036',1,'zoom_sdk_def.h']]],

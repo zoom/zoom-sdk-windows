@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_configurable_options.html">tagConfigurableOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK configuration options.  <a href="structtag_configurable_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_raw_data_options.html">tagRawDataOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_init_param.html">tagInitParam</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the SDK Parameter. Here are more detailed structural descriptions.  <a href="structtag_init_param.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,6 +171,9 @@ typedef struct <a class="el" href="structtag_customized_language_info.html">tagC
 <tr class="memitem:aadbdab5105e3ed609fa5e44374c31b52"><td class="memItemLeft" align="right" valign="top"><a id="aadbdab5105e3ed609fa5e44374c31b52"></a>
 typedef struct <a class="el" href="structtag_configurable_options.html">tagConfigurableOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConfigurableOptions</b></td></tr>
 <tr class="separator:aadbdab5105e3ed609fa5e44374c31b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1edea8f759a004213c9f96b0456850"><td class="memItemLeft" align="right" valign="top"><a id="a0c1edea8f759a004213c9f96b0456850"></a>
+typedef struct <a class="el" href="structtag_raw_data_options.html">tagRawDataOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RawDataOptions</b></td></tr>
+<tr class="separator:a0c1edea8f759a004213c9f96b0456850"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18da275d45f5c249e6bc85c21438f2ea"><td class="memItemLeft" align="right" valign="top"><a id="a18da275d45f5c249e6bc85c21438f2ea"></a>
 typedef struct <a class="el" href="structtag_init_param.html">tagInitParam</a>&#160;</td><td class="memItemRight" valign="bottom"><b>InitParam</b></td></tr>
 <tr class="separator:a18da275d45f5c249e6bc85c21438f2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,7 +231,10 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a7f746484b712c91fa4b3c77ebba63e77">LANGUAGE_Portuguese</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a063ba5dcf0b751d1692eb1c55696a8eb">LANGUAGE_Russian</a>, 
-<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5ac293beae0f1ade49627a8c93a3263fd4">LANGUAGE_Korean</a>
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5ac293beae0f1ade49627a8c93a3263fd4">LANGUAGE_Korean</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a53f5fb9eed9dbf797747f0576ed72151">LANGUAGE_Vietnamese</a>, 
+<br />
+&#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5a6fd25e2a464db959160f45239fd0817f">LANGUAGE_Italian</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a9747f9758092fe2d88bb5e2d45e717c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The text resource type used by the SDK. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#a9747f9758092fe2d88bb5e2d45e717c5">More...</a><br /></td></tr>
@@ -242,6 +250,21 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a1befd4407b13b4e00fab29cd424fa046"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK_APP locale type. Here are more detailed structural descriptions. <br /></td></tr>
 <tr class="separator:a1befd4407b13b4e00fab29cd424fa046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb38def298dd5e24c7f33b458ea7c959"><td class="memItemLeft" align="right" valign="top"><a id="adb38def298dd5e24c7f33b458ea7c959"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ZoomSDKRawDataMemoryMode</b> { <b>ZoomSDKRawDataMemoryModeStack</b>, 
+<b>ZoomSDKRawDataMemoryModeHeap</b>
+ }</td></tr>
+<tr class="separator:adb38def298dd5e24c7f33b458ea7c959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390ec77b3cb5329350d1ef755478f681"><td class="memItemLeft" align="right" valign="top"><a id="a390ec77b3cb5329350d1ef755478f681"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ZoomSDKVideoRenderMode</b> { <br />
+&#160;&#160;<b>ZoomSDKVideoRenderMode_None</b> = 0, 
+<b>ZoomSDKVideoRenderMode_Auto</b>, 
+<b>ZoomSDKVideoRenderMode_D3D11EnableFLIP</b>, 
+<b>ZoomSDKVideoRenderMode_D3D11</b>, 
+<br />
+&#160;&#160;<b>ZoomSDKVideoRenderMode_D3D9</b>, 
+<b>ZoomSDKVideoRenderMode_GDI</b>
+<br />
+ }</td></tr>
+<tr class="separator:a390ec77b3cb5329350d1ef755478f681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31314dfd3a5f42586ec29e0c53a532c3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a> { <br />
 &#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a9fe99757cb97dec931b50f3f2423d75d">LastErrorType_None</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a16a9dc54c4e5c8ca05030e82a98ff0ca">LastErrorType_Auth</a>, 
@@ -351,6 +374,10 @@ const RECT&#160;</td><td class="memItemRight" valign="bottom"><b>_SDK_TEST_VIDEO
 <tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a063ba5dcf0b751d1692eb1c55696a8eb"></a>LANGUAGE_Russian&#160;</td><td class="fielddoc"><p>In Russian. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5ac293beae0f1ade49627a8c93a3263fd4"></a>LANGUAGE_Korean&#160;</td><td class="fielddoc"><p>In Korean. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a53f5fb9eed9dbf797747f0576ed72151"></a>LANGUAGE_Vietnamese&#160;</td><td class="fielddoc"><p>In Vietnamese. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9747f9758092fe2d88bb5e2d45e717c5a6fd25e2a464db959160f45239fd0817f"></a>LANGUAGE_Italian&#160;</td><td class="fielddoc"><p>In Italian. </p>
 </td></tr>
 </table>
 

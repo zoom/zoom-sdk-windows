@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['localvideodevicestatus',['LocalVideoDeviceStatus',['../struct_local_video_device_status.html',1,'']]]
+  ['normalmeetingchatstaus',['NormalMeetingChatStaus',['../struct_normal_meeting_chat_staus.html',1,'']]]
 ];

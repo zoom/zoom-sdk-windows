@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -151,6 +151,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a627a431dc7c6a2c89ae0e952ef9ba216"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a627a431dc7c6a2c89ae0e952ef9ba216">EnableLeaveMeetingWhenScreenLocked</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a627a431dc7c6a2c89ae0e952ef9ba216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if it is able to leave the meeting when the screen is locked or the screen saver is shown. Default: TRUE.  <a href="#a627a431dc7c6a2c89ae0e952ef9ba216">More...</a><br /></td></tr>
 <tr class="separator:a627a431dc7c6a2c89ae0e952ef9ba216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971176d5a9795818349203fd5a2ee517"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_configuration.html#a971176d5a9795818349203fd5a2ee517">DisableConfidentialWatermark</a> (bool bDisable)=0</td></tr>
+<tr class="memdesc:a971176d5a9795818349203fd5a2ee517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to forbid confidential watermark. Default: FALSE.  <a href="#a971176d5a9795818349203fd5a2ee517">More...</a><br /></td></tr>
+<tr class="separator:a971176d5a9795818349203fd5a2ee517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_meeting_u_i_elem_configuration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_meeting_u_i_elem_configuration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_meeting_u_i_elem_configuration.html">IMeetingUIElemConfiguration</a></td></tr>
 <tr class="memitem:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_u_i_elem_configuration.html#a2e906b3fe6c7297f414063597d7436d1">SetMeetingUIPos</a> (<a class="el" href="structtag_wnd_position.html">WndPosition</a> pos)=0</td></tr>
 <tr class="memdesc:a2e906b3fe6c7297f414063597d7436d1 inherit pub_methods_class_i_meeting_u_i_elem_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the primary view meeting window.  <a href="class_i_meeting_u_i_elem_configuration.html#a2e906b3fe6c7297f414063597d7436d1">More...</a><br /></td></tr>
@@ -416,6 +419,41 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<a id="a971176d5a9795818349203fd5a2ee517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971176d5a9795818349203fd5a2ee517">&#9670;&nbsp;</a></span>DisableConfidentialWatermark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IMeetingConfiguration::DisableConfidentialWatermark </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bDisable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set whether to forbid confidential watermark. Default: FALSE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bDisable</td><td>TRUE indicates to forbid confidential watermark. FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If watermark confidential is forbidden, the return value is TRUE. Otherwise FALSE. </dd></dl>
+
+</div>
+</div>
 <a id="a460c08c46a71cca73956795fcaa45365"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a460c08c46a71cca73956795fcaa45365">&#9670;&nbsp;</a></span>DisableRemoteCtrlCopyPasteFeature()</h2>
 
@@ -580,6 +618,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 
 <p>Set if it is able to leave the meeting when the screen is locked or the screen saver is shown. Default: TRUE. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>The interface is deprecated to follow zoom client logic. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable to share on the white board. FALSE not. </td></tr>

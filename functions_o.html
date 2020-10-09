@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -253,17 +253,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>onDefaultSpeakerDeviceChanged()
 : <a class="el" href="class_i_audio_setting_context_event.html#a68bbf29994e96864c1b388255672ab87">IAudioSettingContextEvent</a>
 </li>
+<li>OnDeleteAnswer()
+: <a class="el" href="class_i_meeting_q_a_controller_event.html#a78e966125ca6bb29e440e5b7e7cf3e56">IMeetingQAControllerEvent</a>
+</li>
 <li>onDeleteMeeting()
 : <a class="el" href="class_i_pre_meeting_service_event.html#a9fb45d4b82e45c529363e4d8f42af438">IPreMeetingServiceEvent</a>
 </li>
+<li>OnDeleteQuestion()
+: <a class="el" href="class_i_meeting_q_a_controller_event.html#aeef86ea106a9abfc72fcef4013bda4f1">IMeetingQAControllerEvent</a>
+</li>
 <li>onDepromptPanelist2AttendeeResult()
 : <a class="el" href="class_i_meeting_webinar_ctrl_event.html#a7ee5edd01e37ff892a0920f4b2874882">IMeetingWebinarCtrlEvent</a>
-</li>
-<li>onDeviceRunning()
-: <a class="el" href="class_i_video_raw_data_receiver.html#a6af2fbae3ebea8b3de9107900a434c5e">IVideoRawDataReceiver</a>
-</li>
-<li>onDeviceStop()
-: <a class="el" href="class_i_video_raw_data_receiver.html#ad07289c51c1523790804b60bd13c97bf">IVideoRawDataReceiver</a>
 </li>
 <li>OnDirectShareStatusUpdate()
 : <a class="el" href="class_i_direct_share_service_helper_event.html#a5bafc99f91b9da66edfae9ab0fca421d">IDirectShareServiceHelperEvent</a>
@@ -367,9 +367,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>OnMicSpkVolumnChanged()
 : <a class="el" href="class_i_test_audio_device_helper_event.html#a4dd5d99a9b554bf14f931e8a8a16c716">ITestAudioDeviceHelperEvent</a>
 </li>
-<li>onMixedAudioRawDataReceived()
-: <a class="el" href="class_i_audio_raw_data_receiver.html#a14d601b55df9682f4f78cc0d52d912ff">IAudioRawDataReceiver</a>
-</li>
 <li>onMultiShareSwitchToSingleShareNeedConfirm()
 : <a class="el" href="class_i_meeting_share_ctrl_event.html#a2ff195a28727bbac3e0f15f9054251d9">IMeetingShareCtrlEvent</a>
 </li>
@@ -387,9 +384,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>OnNoWindowToShowPreview()
 : <a class="el" href="class_i_test_video_device_helper_event.html#a419e8c4ed4ee098f86bc55f45dab3cf1">ITestVideoDeviceHelperEvent</a>
-</li>
-<li>onOneWayAudioRawDataReceived()
-: <a class="el" href="class_i_audio_raw_data_receiver.html#a3001f3e398f75fd6992b1c3065038853">IAudioRawDataReceiver</a>
 </li>
 <li>onOnlySignedInUserCanJoinEnabledStatusNotification()
 : <a class="el" href="class_i_select_meeting_item_meeting_option_helper_event.html#ab699550bfe22fd9d7379a6766c4f715c">ISelectMeetingItemMeetingOptionHelperEvent</a>
@@ -451,6 +445,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>onRenderDataTypeChanged()
 : <a class="el" href="class_i_customized_video_container_event.html#a2525a7f159c913b6bc37ecc99df8091c">ICustomizedVideoContainerEvent</a>
 </li>
+<li>onRendererBeDestroyed()
+: <a class="el" href="class_i_zoom_s_d_k_renderer_delegate.html#a6db583c631d3cc2b1a7eaf2eac682403">IZoomSDKRendererDelegate</a>
+</li>
 <li>onRenderUserChanged()
 : <a class="el" href="class_i_customized_video_container_event.html#a015d08277fa7f00b57bc28cdf1a7f837">ICustomizedVideoContainerEvent</a>
 </li>
@@ -490,9 +487,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>onShareContentNotification()
 : <a class="el" href="class_i_meeting_share_ctrl_event.html#a1424695c7881e14821f27ee48eefbe0e">IMeetingShareCtrlEvent</a>
 </li>
-<li>onShareRawDataReceived()
-: <a class="el" href="class_i_share_raw_data_receiver.html#ae31a2707aaf6fca849472f04774f9738">IShareRawDataReceiver</a>
-</li>
 <li>onShareRenderDestroyed()
 : <a class="el" href="class_i_customized_u_i_mgr_event.html#a88b8059980fad8cc5983005bea77ff63">ICustomizedUIMgrEvent</a>
 </li>
@@ -516,24 +510,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>onStartShareBtnClicked()
 : <a class="el" href="class_i_meeting_u_i_controller_event.html#a19c1a8e29ed6f3c100599fc2fcaeda49">IMeetingUIControllerEvent</a>
-</li>
-<li>onSubscribedShareUserDataOff()
-: <a class="el" href="class_i_share_raw_data_receiver.html#af8524a93ee928a81d38ba00ffff60ffe">IShareRawDataReceiver</a>
-</li>
-<li>onSubscribedShareUserDataOn()
-: <a class="el" href="class_i_share_raw_data_receiver.html#a0b8cee128986a6339be4ebc9944dddb0">IShareRawDataReceiver</a>
-</li>
-<li>onSubscribedShareUserLeft()
-: <a class="el" href="class_i_share_raw_data_receiver.html#a32fb8eb577b5c8033adfa866378ba64f">IShareRawDataReceiver</a>
-</li>
-<li>onSubscribedVideoUserDataOff()
-: <a class="el" href="class_i_video_raw_data_receiver.html#a170da22cdce4e65b48382bd54a8a2c80">IVideoRawDataReceiver</a>
-</li>
-<li>onSubscribedVideoUserDataOn()
-: <a class="el" href="class_i_video_raw_data_receiver.html#a77833682d6a63af084ce025a2254ee3c">IVideoRawDataReceiver</a>
-</li>
-<li>onSubscribedVideoUserLeft()
-: <a class="el" href="class_i_video_raw_data_receiver.html#addb55e9f3899b4246a9e74331fe495e2">IVideoRawDataReceiver</a>
 </li>
 <li>onSupportAnnotationStatus()
 : <a class="el" href="class_i_meeting_annotation_support_event.html#a37a907da0f46197cc5536939a40cce13">IMeetingAnnotationSupportEvent</a>
@@ -588,9 +564,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>onVideoContainerDestroyed()
 : <a class="el" href="class_i_customized_u_i_mgr_event.html#af1e0fbf447a2c006efd1fa566629cbd8">ICustomizedUIMgrEvent</a>
-</li>
-<li>onVideoRawDataReceived()
-: <a class="el" href="class_i_video_raw_data_receiver.html#af99a05536c13e46ebac8a856afcb8709">IVideoRawDataReceiver</a>
 </li>
 <li>onVideoRenderElementDestroyed()
 : <a class="el" href="class_i_customized_video_container_event.html#a465c4c1a38d647cec1955cb441bbbf7d">ICustomizedVideoContainerEvent</a>

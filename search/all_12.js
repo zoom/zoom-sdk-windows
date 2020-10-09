@@ -22,6 +22,7 @@ var searchData=
   ['tagoverallstatisticinfo',['tagOverallStatisticInfo',['../structtag_overall_statistic_info.html',1,'']]],
   ['tagpanelistmenuitemoption',['tagPanelistMenuItemOption',['../structtag_panelist_menu_item_option.html',1,'']]],
   ['tagproxysettings',['tagProxySettings',['../structtag_proxy_settings.html',1,'']]],
+  ['tagrawdataoptions',['tagRawDataOptions',['../structtag_raw_data_options.html',1,'']]],
   ['tagredirectwarningmsgoption',['tagRedirectWarningMsgOption',['../structtag_redirect_warning_msg_option.html',1,'']]],
   ['tagsendchatitem4webinar',['tagSendChatItem4Webinar',['../structtag_send_chat_item4_webinar.html',1,'']]],
   ['tagsettingdlgshowtabpageoption',['tagSettingDlgShowTabPageOption',['../structtag_setting_dlg_show_tab_page_option.html',1,'']]],

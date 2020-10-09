@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -141,9 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f700103fe0731d53495ed51445f5a5d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_obj.html#a1f700103fe0731d53495ed51445f5a5d">CanSaveSnapshot</a> ()=0</td></tr>
 <tr class="memdesc:a1f700103fe0731d53495ed51445f5a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if it is enabled to save the screenshot.  <a href="#a1f700103fe0731d53495ed51445f5a5d">More...</a><br /></td></tr>
 <tr class="separator:a1f700103fe0731d53495ed51445f5a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68190e2c7b56e0e1a06df8e307abe6bb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_obj.html#a68190e2c7b56e0e1a06df8e307abe6bb">SaveSnapshot</a> (const wchar_t *path)=0</td></tr>
-<tr class="memdesc:a68190e2c7b56e0e1a06df8e307abe6bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the screenshot in the specified path.  <a href="#a68190e2c7b56e0e1a06df8e307abe6bb">More...</a><br /></td></tr>
-<tr class="separator:a68190e2c7b56e0e1a06df8e307abe6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460d9da67b9c8d4330c5c54bc5150e1e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_obj.html#a460d9da67b9c8d4330c5c54bc5150e1e">SaveSnapshot</a> (const wchar_t *path, SDKAnnoSaveType nType)=0</td></tr>
+<tr class="memdesc:a460d9da67b9c8d4330c5c54bc5150e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the screenshot in the specified path.  <a href="#a460d9da67b9c8d4330c5c54bc5150e1e">More...</a><br /></td></tr>
+<tr class="separator:a460d9da67b9c8d4330c5c54bc5150e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a014a42934b306da3c731bab73339cad2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_customized_annotation_obj.html#a014a42934b306da3c731bab73339cad2">CanDoAnnotation</a> (bool &amp;bCan)=0</td></tr>
 <tr class="memdesc:a014a42934b306da3c731bab73339cad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if can do annotate.  <a href="#a014a42934b306da3c731bab73339cad2">More...</a><br /></td></tr>
 <tr class="separator:a014a42934b306da3c731bab73339cad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -448,8 +448,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a68190e2c7b56e0e1a06df8e307abe6bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68190e2c7b56e0e1a06df8e307abe6bb">&#9670;&nbsp;</a></span>SaveSnapshot()</h2>
+<a id="a460d9da67b9c8d4330c5c54bc5150e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460d9da67b9c8d4330c5c54bc5150e1e">&#9670;&nbsp;</a></span>SaveSnapshot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,8 +461,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> ICustomizedAnnotationObj::SaveSnapshot </td>
           <td>(</td>
           <td class="paramtype">const wchar_t *&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">SDKAnnoSaveType&#160;</td>
+          <td class="paramname"><em>nType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>

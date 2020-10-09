@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -153,6 +153,30 @@ typedef struct <a class="el" href="structtag_send_chat_item4_webinar.html">tagSe
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a0b79f593d2c4fad7ceda0671f852732d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732d">SDKChatMessageType</a> { <br />
+&#160;&#160;<b>SDKChatMessageType_To_None</b>, 
+<a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732da75c4d3da5fbae942c7ec85425f7e0426">SDKChatMessageType_To_All</a>, 
+<a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732dab992fea0ef98b52067a7ff6fc120bd51">SDKChatMessageType_To_All_Panelist</a>, 
+<a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732dab73b3c5c94dcdf804c59704baf7d6501">SDKChatMessageType_To_Individual_Panelist</a>, 
+<br />
+&#160;&#160;<a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732da6d55249d19985b6975e493be9120f95a">SDKChatMessageType_To_Individual</a>, 
+<a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732da52fbab2f33da61df88e4d146c65bd6db">SDKChatMessageType_To_WaitingRoomUsers</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a0b79f593d2c4fad7ceda0671f852732d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerations of the type for chat message.  <a href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732d">More...</a><br /></td></tr>
+<tr class="separator:a0b79f593d2c4fad7ceda0671f852732d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806f828c7c0a453b359b18e50dd1dfcc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcc">SDKChatPriviledge</a> { <br />
+&#160;&#160;<b>SDK_CHAT_PRIVILEDGE_ALL</b> = 1, 
+<a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfccaf34989787bad16e3db93bfa9ca74b405">SDK_CHAT_PRIVILEDGE_ALL_PANELIST</a> = 2, 
+<a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcca986ae56906b9e2bf0482d2fa1cc8a4f7">SDK_CHAT_PRIVILEDGE_HOST</a> = 3, 
+<a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcca599d167b9292988c956e31175001f91e">SDK_CHAT_PRIVILEDGE_DISABLE_ATTENDEE_CHAT</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcca6d63251751ffc43af188a9ccc56088b1">SDK_CHAT_PRIVILEDGE_HOST_PUBLIC</a> = 5, 
+<a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcca4efeb2c175dca64fa535cd6c913ce3d4">SDK_CHAT_PRIVILEDGE_END</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a806f828c7c0a453b359b18e50dd1dfcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerations of the chat priviledge.  <a href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcc">More...</a><br /></td></tr>
+<tr class="separator:a806f828c7c0a453b359b18e50dd1dfcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f078e0c18379bbb0275b701240a8433"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433">WebinarChatMsgType</a> { <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433aafa9964a23192d072a248dc0d5814bfd">WebinarChatMsgType_None</a>, 
 <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433af384387c9339a191bdf9974feb374906">WebinarChatMsgType_ToAllPanelist</a>, 
 <a class="el" href="meeting__chat__interface_8h.html#a9f078e0c18379bbb0275b701240a8433a89e94265014ec4a63cb34090029ebd9c">WebinarChatMsgType_ToAllPanelistAndAttendee</a>, 
@@ -165,6 +189,62 @@ Enumerations</h2></td></tr>
 <div class="textblock"><p>Meeting Service Chat Interface. </p>
 <dl class="section remark"><dt>Remarks</dt><dd>Valid for both ZOOM style and user custom interface mode. </dd></dl>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a0b79f593d2c4fad7ceda0671f852732d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b79f593d2c4fad7ceda0671f852732d">&#9670;&nbsp;</a></span>SDKChatMessageType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__chat__interface_8h.html#a0b79f593d2c4fad7ceda0671f852732d">SDKChatMessageType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerations of the type for chat message. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0b79f593d2c4fad7ceda0671f852732da75c4d3da5fbae942c7ec85425f7e0426"></a>SDKChatMessageType_To_All&#160;</td><td class="fielddoc"><p>For initialize. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0b79f593d2c4fad7ceda0671f852732dab992fea0ef98b52067a7ff6fc120bd51"></a>SDKChatMessageType_To_All_Panelist&#160;</td><td class="fielddoc"><p>Chat message is send to all. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0b79f593d2c4fad7ceda0671f852732dab73b3c5c94dcdf804c59704baf7d6501"></a>SDKChatMessageType_To_Individual_Panelist&#160;</td><td class="fielddoc"><p>Chat message is send to all panelists. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0b79f593d2c4fad7ceda0671f852732da6d55249d19985b6975e493be9120f95a"></a>SDKChatMessageType_To_Individual&#160;</td><td class="fielddoc"><p>Chat message is send to individual attendee and cc panelists. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0b79f593d2c4fad7ceda0671f852732da52fbab2f33da61df88e4d146c65bd6db"></a>SDKChatMessageType_To_WaitingRoomUsers&#160;</td><td class="fielddoc"><p>Chat message is send to individual user. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a806f828c7c0a453b359b18e50dd1dfcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806f828c7c0a453b359b18e50dd1dfcc">&#9670;&nbsp;</a></span>SDKChatPriviledge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="meeting__chat__interface_8h.html#a806f828c7c0a453b359b18e50dd1dfcc">SDKChatPriviledge</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerations of the chat priviledge. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a806f828c7c0a453b359b18e50dd1dfccaf34989787bad16e3db93bfa9ca74b405"></a>SDK_CHAT_PRIVILEDGE_ALL_PANELIST&#160;</td><td class="fielddoc"><p>allow attendee to chat with everyone [meeting &amp; webinar] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a806f828c7c0a453b359b18e50dd1dfcca986ae56906b9e2bf0482d2fa1cc8a4f7"></a>SDK_CHAT_PRIVILEDGE_HOST&#160;</td><td class="fielddoc"><p>allow attendee to chat with all panelists only, but cannot to "all panelists and attendees" [webinar] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a806f828c7c0a453b359b18e50dd1dfcca599d167b9292988c956e31175001f91e"></a>SDK_CHAT_PRIVILEDGE_DISABLE_ATTENDEE_CHAT&#160;</td><td class="fielddoc"><p>allow attendee to chat with host only [meeting] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a806f828c7c0a453b359b18e50dd1dfcca6d63251751ffc43af188a9ccc56088b1"></a>SDK_CHAT_PRIVILEDGE_HOST_PUBLIC&#160;</td><td class="fielddoc"><p>allow attendee to chat with no one [meeting &amp; webinar] </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a806f828c7c0a453b359b18e50dd1dfcca4efeb2c175dca64fa535cd6c913ce3d4"></a>SDK_CHAT_PRIVILEDGE_END&#160;</td><td class="fielddoc"><p>allow attendee to chat with host and public [meeting] </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a9f078e0c18379bbb0275b701240a8433"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f078e0c18379bbb0275b701240a8433">&#9670;&nbsp;</a></span>WebinarChatMsgType</h2>
 

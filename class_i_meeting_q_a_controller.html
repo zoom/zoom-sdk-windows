@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -129,6 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae5f89c62bed6633ab6b20ca072f2fa4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller.html#aae5f89c62bed6633ab6b20ca072f2fa4">DismissQuestion</a> (const wchar_t *questionID)=0</td></tr>
 <tr class="memdesc:aae5f89c62bed6633ab6b20ca072f2fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The host dismisses the question.  <a href="#aae5f89c62bed6633ab6b20ca072f2fa4">More...</a><br /></td></tr>
 <tr class="separator:aae5f89c62bed6633ab6b20ca072f2fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e13d5fd5ec27187cb8a30215b44dca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller.html#ac6e13d5fd5ec27187cb8a30215b44dca">DeleteQuestion</a> (const wchar_t *questionID)=0</td></tr>
+<tr class="memdesc:ac6e13d5fd5ec27187cb8a30215b44dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The host deletes the question.  <a href="#ac6e13d5fd5ec27187cb8a30215b44dca">More...</a><br /></td></tr>
+<tr class="separator:ac6e13d5fd5ec27187cb8a30215b44dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3005f9248affaa586aaaf52065824202"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller.html#a3005f9248affaa586aaaf52065824202">DeleteAnswer</a> (const wchar_t *answerID)=0</td></tr>
+<tr class="memdesc:a3005f9248affaa586aaaf52065824202"><td class="mdescLeft">&#160;</td><td class="mdescRight">The host deletes the answerID.  <a href="#a3005f9248affaa586aaaf52065824202">More...</a><br /></td></tr>
+<tr class="separator:a3005f9248affaa586aaaf52065824202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d6b9f130b991581db7b11ccbf03a776"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_q_a_controller.html#a6d6b9f130b991581db7b11ccbf03a776">ReopenQuestion</a> (const wchar_t *questionID)=0</td></tr>
 <tr class="memdesc:a6d6b9f130b991581db7b11ccbf03a776"><td class="mdescLeft">&#160;</td><td class="mdescRight">The host reopens the question.  <a href="#a6d6b9f130b991581db7b11ccbf03a776">More...</a><br /></td></tr>
 <tr class="separator:a6d6b9f130b991581db7b11ccbf03a776"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -383,6 +389,76 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>The comment will be cut off if it is over long. </dd></dl>
+
+</div>
+</div>
+<a id="a3005f9248affaa586aaaf52065824202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3005f9248affaa586aaaf52065824202">&#9670;&nbsp;</a></span>DeleteAnswer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingQAController::DeleteAnswer </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>answerID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The host deletes the answerID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">answerID</td><td>Specifies the answer id. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ac6e13d5fd5ec27187cb8a30215b44dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e13d5fd5ec27187cb8a30215b44dca">&#9670;&nbsp;</a></span>DeleteQuestion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingQAController::DeleteQuestion </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>questionID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The host deletes the question. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">questionID</td><td>Specifies the question id. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

@@ -43,6 +43,7 @@ var searchData=
   ['isemailloginenabled',['IsEmailLoginEnabled',['../class_i_auth_service.html#af1695312b0a3c441b9ddea74736700a8',1,'IAuthService']]],
   ['isfacebeautyeffectenabled',['IsFaceBeautyEffectEnabled',['../class_i_video_setting_context.html#ae2c7cfb4086c9c6e90d497b06d9d8304',1,'IVideoSettingContext']]],
   ['isgreenborderenabledwhenshare',['IsGreenBorderEnabledWhenShare',['../class_i_general_setting_context.html#a553c12602dec2efd8a7654c1f4e89d39',1,'IGeneralSettingContext']]],
+  ['ish323user',['IsH323User',['../class_i_user_info.html#a41adf0f5c95ca5f5bad81912040f2f05',1,'IUserInfo']]],
   ['ishardwareencodeenabled',['IsHardwareEncodeEnabled',['../class_i_video_setting_context.html#a9962ebc44027085f075d552775f6d682',1,'IVideoSettingContext']]],
   ['ishaveremotecontrolright',['IsHaveRemoteControlRight',['../class_i_meeting_remote_controller.html#a5445899424f72d38f02c0f245207907b',1,'IMeetingRemoteController']]],
   ['ishdvideoenabled',['IsHDVideoEnabled',['../class_i_video_setting_context.html#aed7fd830c17706e84f18b4b0c0f00a22',1,'IVideoSettingContext']]],

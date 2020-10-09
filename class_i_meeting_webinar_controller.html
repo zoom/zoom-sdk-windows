@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -129,12 +129,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0bd607f8a7e246cd950e6408eebcb4d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_controller.html#aa0bd607f8a7e246cd950e6408eebcb4d">DisallowPanelistStartVideo</a> ()=0</td></tr>
 <tr class="memdesc:aa0bd607f8a7e246cd950e6408eebcb4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forbid the panelist to start video.  <a href="#aa0bd607f8a7e246cd950e6408eebcb4d">More...</a><br /></td></tr>
 <tr class="separator:aa0bd607f8a7e246cd950e6408eebcb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed3ca7b5d3da977d8d4deafdf17c43f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_controller.html#abed3ca7b5d3da977d8d4deafdf17c43f">AllowAttendeeChat</a> ()=0</td></tr>
-<tr class="memdesc:abed3ca7b5d3da977d8d4deafdf17c43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The attendees are permitted to chat.  <a href="#abed3ca7b5d3da977d8d4deafdf17c43f">More...</a><br /></td></tr>
-<tr class="separator:abed3ca7b5d3da977d8d4deafdf17c43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5072d1e0c08be53b8d6e6d3b19378d05"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_controller.html#a5072d1e0c08be53b8d6e6d3b19378d05">DisallowAttendeeChat</a> ()=0</td></tr>
-<tr class="memdesc:a5072d1e0c08be53b8d6e6d3b19378d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forbid the attendees to chat.  <a href="#a5072d1e0c08be53b8d6e6d3b19378d05">More...</a><br /></td></tr>
-<tr class="separator:a5072d1e0c08be53b8d6e6d3b19378d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a045f0f02dc2388293ce058e06b123af1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structtag_webinar_meeting_status.html">WebinarMeetingStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_webinar_controller.html#a045f0f02dc2388293ce058e06b123af1">GetWebinarMeetingStatus</a> ()=0</td></tr>
 <tr class="memdesc:a045f0f02dc2388293ce058e06b123af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the webinar status.  <a href="#a045f0f02dc2388293ce058e06b123af1">More...</a><br /></td></tr>
 <tr class="separator:a045f0f02dc2388293ce058e06b123af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,35 +136,6 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Webinar controller interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="abed3ca7b5d3da977d8d4deafdf17c43f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abed3ca7b5d3da977d8d4deafdf17c43f">&#9670;&nbsp;</a></span>AllowAttendeeChat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingWebinarController::AllowAttendeeChat </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The attendees are permitted to chat. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If the function succeeds, the user will receive the <a class="el" href="class_i_meeting_webinar_ctrl_event.html#aeca24fd82c0a2d1b1f20c5e1a1353ea7" title="Callback to enable the attendees to chat. Available only for the host and the co-host. ">IMeetingWebinarCtrlEvent::onAllowAttendeeChatNotification()</a> callback event. Available only for the host. </dd></dl>
-
-</div>
-</div>
 <a id="a5125548b2a613639f7c9d5198a4d6b81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5125548b2a613639f7c9d5198a4d6b81">&#9670;&nbsp;</a></span>AllowAttendeeTalk()</h2>
 
@@ -269,35 +234,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>If the function succeeds, the user will receive the <a class="el" href="class_i_meeting_webinar_ctrl_event.html#a7ee5edd01e37ff892a0920f4b2874882" title="Callback to demote attendees to panelist. ">IMeetingWebinarCtrlEvent::onDepromptPanelist2AttendeeResult()</a> callback event. </dd></dl>
-
-</div>
-</div>
-<a id="a5072d1e0c08be53b8d6e6d3b19378d05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5072d1e0c08be53b8d6e6d3b19378d05">&#9670;&nbsp;</a></span>DisallowAttendeeChat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IMeetingWebinarController::DisallowAttendeeChat </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Forbid the attendees to chat. </p>
-<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If the function succeeds, the user will receive the <a class="el" href="class_i_meeting_webinar_ctrl_event.html#a726d39c56819670ef0c57d54b9782878" title="Callback to disable the attendees to chat. Available only for the host and the co-host. ">IMeetingWebinarCtrlEvent::onDisallowAttendeeChatNotification()</a> callback event. Available only for the host. </dd></dl>
 
 </div>
 </div>

@@ -7,7 +7,7 @@ var searchData=
   ['unmuteaudio',['UnMuteAudio',['../class_i_meeting_audio_controller.html#adaebfe39b02fd039b71a987aa2297ec9',1,'IMeetingAudioController']]],
   ['unmutevideo',['UnmuteVideo',['../class_i_meeting_video_controller.html#ad8765f8b4a3eaba1dce699efe4e9617c',1,'IMeetingVideoController']]],
   ['unregisternetworkconnectionhandler',['UnRegisterNetworkConnectionHandler',['../class_i_network_connection_helper.html#a9dd857503da7a91248db6b4dfd52f7b0',1,'INetworkConnectionHelper']]],
-  ['unsubscribe',['Unsubscribe',['../class_i_normal_video_render_element.html#af4ee0fce2583b294c61272eaad6ab61a',1,'INormalVideoRenderElement::Unsubscribe()'],['../class_i_share_raw_data_channel.html#ad841bc0117c5196d7aee3614fe21616f',1,'IShareRawDataChannel::UnSubscribe()'],['../class_i_video_raw_data_channel.html#a0511d3cd94fb80323c75bb1648486dcd',1,'IVideoRawDataChannel::UnSubscribe()']]],
+  ['unsubscribe',['Unsubscribe',['../class_i_normal_video_render_element.html#af4ee0fce2583b294c61272eaad6ab61a',1,'INormalVideoRenderElement']]],
   ['upgradeaccount',['UpgradeAccount',['../class_i_free_meeting_ending_reminder_handler.html#a7a223023cc2366889e7cbd0e8b121c41',1,'IFreeMeetingEndingReminderHandler']]],
   ['upgrademeeting',['UpgradeMeeting',['../class_i_free_meeting_ending_reminder_handler.html#a268c78eb84efddf5bd90fd443f69369c',1,'IFreeMeetingEndingReminderHandler']]],
   ['usebgimage',['UseBGImage',['../class_i_virtual_b_g_setting_context.html#afaae5dfe0d70902efa84f4ea424a2e1e',1,'IVirtualBGSettingContext']]]

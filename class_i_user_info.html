@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.0.24433.0616</span>
+   &#160;<span id="projectnumber">5.2.41727.0928</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a529c83af69b48ec984c498f8c44e1ee0"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a529c83af69b48ec984c498f8c44e1ee0">GetUserID</a> ()=0</td></tr>
 <tr class="memdesc:a529c83af69b48ec984c498f8c44e1ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the user ID matched with the current user information.  <a href="#a529c83af69b48ec984c498f8c44e1ee0">More...</a><br /></td></tr>
 <tr class="separator:a529c83af69b48ec984c498f8c44e1ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d7c3bd44d09bc60a7359ff169b34bb"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#ad3d7c3bd44d09bc60a7359ff169b34bb">GetParticipantID</a> ()=0</td></tr>
+<tr class="memdesc:ad3d7c3bd44d09bc60a7359ff169b34bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the participant ID matched with the current user information. If you assign a participant ID for a user in the start/join meeting parameter, the value you assigned will be returned. Otherwise a Zoom assigned id or NULL will be returned.  <a href="#ad3d7c3bd44d09bc60a7359ff169b34bb">More...</a><br /></td></tr>
+<tr class="separator:ad3d7c3bd44d09bc60a7359ff169b34bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a144eab618774c9652e9fcdaaeffa91be"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a144eab618774c9652e9fcdaaeffa91be">IsVideoOn</a> ()=0</td></tr>
 <tr class="memdesc:a144eab618774c9652e9fcdaaeffa91be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the video status of the user specified by the current information.  <a href="#a144eab618774c9652e9fcdaaeffa91be">More...</a><br /></td></tr>
 <tr class="separator:a144eab618774c9652e9fcdaaeffa91be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a646df55461d7dc267f41ec3461b72d52"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a646df55461d7dc267f41ec3461b72d52">IsTalking</a> ()=0</td></tr>
 <tr class="memdesc:a646df55461d7dc267f41ec3461b72d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the user specified by the current information is talking or not.  <a href="#a646df55461d7dc267f41ec3461b72d52">More...</a><br /></td></tr>
 <tr class="separator:a646df55461d7dc267f41ec3461b72d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41adf0f5c95ca5f5bad81912040f2f05"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a41adf0f5c95ca5f5bad81912040f2f05">IsH323User</a> ()=0</td></tr>
+<tr class="memdesc:a41adf0f5c95ca5f5bad81912040f2f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the user specified by the current information is H323 user or not.  <a href="#a41adf0f5c95ca5f5bad81912040f2f05">More...</a><br /></td></tr>
+<tr class="separator:a41adf0f5c95ca5f5bad81912040f2f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a623fb4f7021e1b067b4838333a4c6c01"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structtag_webinar_attendee_status.html">WebinarAttendeeStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a623fb4f7021e1b067b4838333a4c6c01">GetWebinarAttendeeStauts</a> ()=0</td></tr>
 <tr class="memdesc:a623fb4f7021e1b067b4838333a4c6c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the webinar status of the user specified by the current information.  <a href="#a623fb4f7021e1b067b4838333a4c6c01">More...</a><br /></td></tr>
 <tr class="separator:a623fb4f7021e1b067b4838333a4c6c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +213,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the Mic level of the user corresponding to the current information. </p>
 <dl class="section return"><dt>Returns</dt><dd>The mic level of the user. </dd></dl>
+
+</div>
+</div>
+<a id="ad3d7c3bd44d09bc60a7359ff169b34bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d7c3bd44d09bc60a7359ff169b34bb">&#9670;&nbsp;</a></span>GetParticipantID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const wchar_t* IUserInfo::GetParticipantID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the participant ID matched with the current user information. If you assign a participant ID for a user in the start/join meeting parameter, the value you assigned will be returned. Otherwise a Zoom assigned id or NULL will be returned. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the participant ID. Otherwise failed, the return value is ZERO(0). </dd></dl>
 
 </div>
 </div>
@@ -375,6 +409,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Determine whether the user corresponding to the current information is the sender of Closed Caption or not. </p>
 <dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the user is the sender of Closed Caption. </dd></dl>
+
+</div>
+</div>
+<a id="a41adf0f5c95ca5f5bad81912040f2f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41adf0f5c95ca5f5bad81912040f2f05">&#9670;&nbsp;</a></span>IsH323User()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IUserInfo::IsH323User </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether the user specified by the current information is H323 user or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the specified user is H323 user. </dd></dl>
 
 </div>
 </div>
