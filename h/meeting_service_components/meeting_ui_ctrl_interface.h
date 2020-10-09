@@ -291,7 +291,7 @@ public:
 	/// \remarks The function does not work if the window shows the first or last page. The return value is SDKErr_Success in this case.
 	virtual SDKError ShowPreOrNextPageVideo(bool bPageUp) = 0;
 
-	/// \brief Set the visibility of the green frame when sharing the application.	/// \param bShow TRUE indicates to display the frame. FALSE hide.	/// \return If the function succeeds, the return value is SDKErr_Success.	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \brief Set the visibility of the green frame when sharing the desktop.	/// \param bShow TRUE indicates to display the frame. FALSE hide.	/// \return If the function succeeds, the return value is SDKErr_Success.	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError ShowSharingFrameWindows(bool bShow) = 0;
 
 	/// \brief Determines the minimize state of the first view.

@@ -183,7 +183,15 @@ public:
 	/// \param question_id The question id.
 	/// \param order_changed The order of the question in question list is changed or not.
 	virtual void OnRevokeUpvoteQuestion(const wchar_t* question_id, bool order_changed) = 0;
-	
+
+	/// \brief Callback event of deleting question(s).
+	/// \param lstQuestionID The list of question ids.
+	virtual void OnDeleteQuestion(IList<const wchar_t*>* lstQuestionID) = 0;
+
+	/// \brief Callback event of  deleting answer(s).
+	/// \param lstAnswerID The list of answer ids.
+	virtual void OnDeleteAnswer(IList<const wchar_t*>* lstAnswerID) = 0;
+
 	/// \brief Callback event of enabling to ask question anonymously.
 	/// \param bEnabled Enbabled or not.
 	virtual void OnAllowAskQuestionAnonymousStatus(bool bEnabled) = 0;
@@ -263,7 +271,19 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError DismissQuestion(const wchar_t* questionID) = 0;
-	
+
+	/// \brief The host deletes the question.
+	/// \param questionID Specifies the question id.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError DeleteQuestion(const wchar_t* questionID) = 0;
+
+	/// \brief The host deletes the answerID.
+	/// \param answerID Specifies the answer id.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError DeleteAnswer(const wchar_t* answerID) = 0;
+
 	/// \brief The host reopens the question.
 	/// \param questionID Specifies the question id.
 	/// \return If the function succeeds, the return value is SDKErr_Success.

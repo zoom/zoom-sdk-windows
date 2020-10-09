@@ -643,6 +643,7 @@ public:
 	/// \brief Get the Breakout Room controller.
 	/// \return If the function succeeds, the return value is a pointer to IMeetingBOController. Otherwise returns NULL.
 	virtual IMeetingBOController* GetMeetingBOController() = 0;
+
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

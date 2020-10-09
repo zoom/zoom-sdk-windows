@@ -213,6 +213,7 @@ public:
 	/// \param pHandler A pointer to the instance, the user may use this object to operate. For more details, see \link IMeetingPasswordAndScreenNameHandler \endlink.
 	virtual void onInputMeetingPasswordAndScreenNameNotification(IMeetingPasswordAndScreenNameHandler* pHandler) = 0;
 
+	/// \deprecated Don't support this feature any more.
 	/// \brief This callback event may be triggered when the user enables the AirPlay introduction.
 	/// \param bShow Show or hide the AirPlay instruction window. 
 	/// \param airhostName The air-host name displayed on IOS device.
@@ -371,6 +372,7 @@ public:
 	/// \param bEnable TRUE indicates to enable to show the tooltip in the meeting. FALSE not.
 	virtual void EnableToolTipsShow(bool bEnable) = 0;
 
+	/// \deprecated Don't support this feature any more.
 	/// \brief Set the visibility of the introduction window when sharing on the iOS device. Default value: TRUE.
 	/// \param bEnable TRUE indicates to display the introduction window when sharing on the iOS device. FALSE not.
 	///	\remarks The SDK will trigger the IMeetingConfigurationEvent::onAirPlayInstructionWndNotification() callback event if the user calls this function to set to false, he shall deal with the subsequent logic himself.
@@ -665,10 +667,16 @@ public:
 	/// \param nDuration Specify the maximum duration in minutes.
 	virtual void SetMaxDurationForOnlyHostInMeeting(int nDuration) = 0;
 
+	/// \deprecated The interface is deprecated to follow zoom client logic.
 	/// \brief Set if it is able to leave the meeting when the screen is locked or the screen saver is shown. Default: TRUE.
 	/// \param bEnable TRUE indicates to enable to share on the white board. FALSE not.
 	/// \remarks No matter what value you set for API, the callback IMeetingServiceEvent::onOSSessionChangedNotification will be triggered.
 	virtual void EnableLeaveMeetingWhenScreenLocked(bool bEnable) = 0;
+
+	/// \brief Set whether to forbid confidential watermark. Default: FALSE.
+	/// \param bDisable TRUE indicates to forbid confidential watermark. FALSE not.
+	/// \return If watermark confidential is forbidden, the return value is TRUE. Otherwise FALSE.
+	virtual bool DisableConfidentialWatermark(bool bDisable) = 0;
 };
 
 END_ZOOM_SDK_NAMESPACE

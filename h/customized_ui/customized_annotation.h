@@ -21,6 +21,15 @@ enum CustomizedShareAnnotationStatus
 	CS_ANNO_CLOSE,///<The toolbar will be destroyed.  
 };
 
+enum SDKAnnoSaveType
+{
+	SDK_ANNO_SAVE_NONE = 0,
+	SDK_ANNO_SAVE_PNG,
+	SDK_ANNO_SAVE_PDF,
+	SDK_ANNO_SAVE_PNG_MEMORY,
+	SDK_ANNO_SAVE_PDF_MEMORY,
+	SDK_ANNO_SAVE_BITMAP_MEMORY,
+};
 /// \brief Annotation object callback event.
 ///                                      
 class ICustomizedAnnotationObjEvent
@@ -109,7 +118,7 @@ public:
 	/// \param path Specify the path to store the screenshot. If the specified path is wrong, the SDKERR_INVALID_PARAMETER will be returned. 
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	virtual SDKError SaveSnapshot(const wchar_t* path) = 0;
+	virtual SDKError SaveSnapshot(const wchar_t* path, SDKAnnoSaveType nType) = 0;
 
 	/// \brief Determine if can do annotate.
 	/// \param [out] bCan, true means can do annotate, false can not. 

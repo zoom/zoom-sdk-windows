@@ -74,6 +74,8 @@ enum SDK_LANGUAGE_ID
 	LANGUAGE_Portuguese,///<In Portuguese.
 	LANGUAGE_Russian,///<In Russian.
 	LANGUAGE_Korean,///<In Korean.
+	LANGUAGE_Vietnamese,///<In Vietnamese.
+	LANGUAGE_Italian,///<In Italian.
 };
 
 /*! \struct tagWndPosition
@@ -153,7 +155,37 @@ enum SDK_APP_Locale
 	SDK_APP_Locale_CN,
 };
 
+enum ZoomSDKRawDataMemoryMode 
+{
+	ZoomSDKRawDataMemoryModeStack,
+	ZoomSDKRawDataMemoryModeHeap
+};
 
+enum ZoomSDKVideoRenderMode
+{
+	ZoomSDKVideoRenderMode_None = 0,
+	ZoomSDKVideoRenderMode_Auto,
+	ZoomSDKVideoRenderMode_D3D11EnableFLIP,
+	ZoomSDKVideoRenderMode_D3D11,
+	ZoomSDKVideoRenderMode_D3D9,
+	ZoomSDKVideoRenderMode_GDI,
+};
+
+typedef struct tagRawDataOptions
+{
+	bool enableRawdataIntermediateMode; ///<false -- YUV420data, true -- intermediate data
+	ZoomSDKRawDataMemoryMode  videoRawdataMemoryMode;
+	ZoomSDKRawDataMemoryMode  shareRawdataMemoryMode;
+	ZoomSDKRawDataMemoryMode  audioRawdataMemoryMode;
+	tagRawDataOptions()
+	{
+		enableRawdataIntermediateMode = false;
+		videoRawdataMemoryMode = ZoomSDKRawDataMemoryModeStack;
+		shareRawdataMemoryMode = ZoomSDKRawDataMemoryModeStack;
+		audioRawdataMemoryMode = ZoomSDKRawDataMemoryModeStack;
+	}
+}RawDataOptions;
+		
 /*! \struct tagInitParam
     \brief Initialize the SDK Parameter.
     Here are more detailed structural descriptions.
@@ -173,6 +205,8 @@ typedef struct tagInitParam
 	ConfigurableOptions obConfigOpts;///<The configuration options of the SDK.
 	SDK_APP_Locale locale;
 	bool permonitor_awareness_mode;
+	ZoomSDKVideoRenderMode    videoRenderMode;
+	RawDataOptions rawdataOpts;
 	tagInitParam()
 	{
 		strWebDomain = NULL;
@@ -187,6 +221,7 @@ typedef struct tagInitParam
 		uiLogFileSize = 5;
 		locale = SDK_APP_Locale_Default;
 		permonitor_awareness_mode = true;
+		videoRenderMode = ZoomSDKVideoRenderMode_None;
 	}
 }InitParam;
 

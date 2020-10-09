@@ -24,18 +24,22 @@
 
 
 ## Latest SDK News
-1. Starting from Client SDK 5.0, if you are using tokens to start a meeting, you will only need to retrieve ZAK from Zoom API. The user token has been deprecated. 
-2. To follow with Zoom client's recent changes, Zoom SDK has temporary remove the "Unmute All" interface in Client SDK 5.0.
-3. To align with Zoom’s [recent announcement](https://blog.zoom.us/wordpress/2020/04/22/zoom-hits-milestone-on-90-day-security-plan-releases-zoom-5-0/) pertaining to our security initiative, Zoom Client SDKs have added **AES 256-bit GCM encryption** support, which provides more protection for meeting data and greater resistance to tampering. **The system-wide account enablement of AES 256-bit GCM encryption will take place on June 01, 2020.** You are **strongly recommended** to start the required upgrade to this latest version 4.6.21666.0428 at your earliest convenience. Please note that any Client SDK versions below 4.6.21666.0428 will **no longer be operational** from June 01.
+1.  Starting from 5.2.41727.0928, the Windows SDK requires building with Visual Studio 2019.
+2. If you would like to run the Windows SDK demo app directly, you may install the VS2019 runtime library:
+    * https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
 
-4. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
+3. Starting from Client SDK 5.0, if you are using tokens to start a meeting, you will only need to retrieve ZAK from Zoom API. The user token has been deprecated. 
+4. To follow with Zoom client's recent changes, Zoom SDK has temporary remove the "Unmute All" interface in Client SDK 5.0.
+5. To align with Zoom’s [recent announcement](https://blog.zoom.us/wordpress/2020/04/22/zoom-hits-milestone-on-90-day-security-plan-releases-zoom-5-0/) pertaining to our security initiative, Zoom Client SDKs have added **AES 256-bit GCM encryption** support, which provides more protection for meeting data and greater resistance to tampering. **The system-wide account enablement of AES 256-bit GCM encryption will take place on June 01, 2020.** You are **strongly recommended** to start the required upgrade to this latest version 4.6.21666.0428 at your earliest convenience. Please note that any Client SDK versions below 4.6.21666.0428 will **no longer be operational** from June 01.
 
-5. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
+6. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
+
+7. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
 * `CptHost.exe` -> `zcscpthost.exe`
 * `airhost.exe` -> `zcsairhost.exe`
 * `CptService.exe` -> `zCSCptService.exe`
 
-6. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+8. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptInstall.exe**
    * **CptHost.exe** / **zcscpthost.exe**
@@ -85,6 +89,7 @@ Before you try out our SDK, you would need the following to get started:
   * Once you have your Zoom Account, sign up for a 60-days free trial at [https://marketplace.zoom.us/](https://marketplace.zoom.us/)
 * **A device with Windows OS**:
   * OS: Windows XP or later. Currently Windows 10 UWP is not supported.
+  * Visual Studio: 2019
 
 
 ### Installing

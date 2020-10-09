@@ -126,6 +126,10 @@ public:
     void DoEvent(TEventUI& event);
     bool DoPaint(HDC hDC, const RECT& rcPaint, CControlUI* pStopControl);
 
+    //
+    void SetPromptText(LPCTSTR pstrText);
+    LPCTSTR GetPromptText();
+
     void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
 
     LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& bHandled);
@@ -151,10 +155,10 @@ protected:
 	bool m_bDrawCaret;
 	bool m_bInited;
 	RECT	m_rcTextPadding;
-	CDuiString m_sPromptText;
-	DWORD m_dwPromptTextColor;
-	UINT	m_uPromptTextStyle;
-	CDuiString m_sValids;
+    
+    CDuiString m_sPromptText;
+    DWORD m_dwPromptTextColor;
+    UINT	m_uPromptTextStyle;
 };
 
 } // namespace DuiLib

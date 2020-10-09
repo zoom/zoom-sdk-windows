@@ -57,7 +57,7 @@ class IDirectShareServiceHelperEvent
 public:
 	/// \brief The callback event will be triggered if the status of direct sharing changes.
 	/// \param status Specifies the status of direct sharing. For more details, see \link DirectShareStatus \endlink enum.
-	/// \param handler A pointer to the IDirectShareViaMeetingIDOrPairingCodeHandler. It is only valid when the value of status is DirectShare_Need_MeetingID_Or_ParingCode.
+	/// \param handler A pointer to the IDirectShareViaMeetingIDOrPairingCodeHandler. It is only valid when the value of status is DirectShare_Need_MeetingID_Or_PairingCode.
 	///The SDK user must set the value of the _paring_code or _meeting_number via the functions of IDirectShareViaMeetingIDOrPairingCodeHandler to start direct sharing. For more details, see \link IDirectShareViaMeetingIDOrPairingCodeHandler \endlink.
 	virtual void OnDirectShareStatusUpdate(DirectShareStatus status, IDirectShareViaMeetingIDOrPairingCodeHandler* handler) = 0;
 

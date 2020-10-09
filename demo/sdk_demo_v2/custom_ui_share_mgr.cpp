@@ -342,6 +342,7 @@ CCustomizeUIShareMgr::CCustomizeUIShareMgr(CCustomizeInMeetingUIMgr* pMainUI)
 	m_pCustomizedShareRender = NULL;
 	m_pViewOptionsWindow = NULL;
 	m_pShareToolbarWin = NULL;
+	m_pSelectShareUI = NULL;
 }
 
 CCustomizeUIShareMgr::~CCustomizeUIShareMgr()

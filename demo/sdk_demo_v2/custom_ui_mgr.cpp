@@ -489,9 +489,12 @@ void CCustomizeInMeetingUIMgr::Stop()
 		m_bShowGalleryView = false;
 		m_bInMeeting = false;
 		m_bNeedCallEndMeeting = false;
-		m_pCustomUIMgr->DestroyAllVideoContainer();
-		m_pCustomizeShareMgr->DestroyAllShareWindows();
-		m_pCustomUIMgr->DestroyAllShareRender();
+		if (m_pCustomUIMgr)
+			m_pCustomUIMgr->DestroyAllVideoContainer();
+		if (m_pCustomizeShareMgr)
+			m_pCustomizeShareMgr->DestroyAllShareWindows();
+		if (m_pCustomUIMgr)
+			m_pCustomUIMgr->DestroyAllShareRender();
 		DestroyAllSubWindow();
 		Reset();
 		ZOOM_SDK_NAMESPACE::DestroyCustomizedUIMgr(m_pCustomUIMgr);

@@ -17,6 +17,7 @@ enum VideoStatus
 {
 	Video_ON, ///<Video is on.
 	Video_OFF, ///<Video is off.
+	Video_Mute_ByHost, ///<Video is muted by host.
 };
 
 /// \brief Process after the user receives the requirement from the host to turn on the video.

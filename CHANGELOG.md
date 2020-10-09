@@ -2,14 +2,18 @@
 
 ## Note
 
-1. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
+1.   Starting from 5.2.41727.0928, the Windows SDK requires building with Visual Studio 2019.
+2.   If you would like to run the Windows SDK demo app directly, you may install the VS2019 runtime library:
+     * https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
 
-2. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
+3. **Starting from 4.6.15798.0403, all DLL files(\*.dll) and EXE files(\*.exe) cannot be re-signed. Please DO NOT re-sign or assign new digital signature to those files as assigning new digital signature on these files could lead to fatal errors.**
+
+4. Our Zoom SDK and Zoom Client share some common resources in the OS, in order to allow Zoom client and Zoom client SDK app work at the same time, since v4.4.56616.1028, we renamed the filename of the following shared resources:
 * `CptHost.exe` -> `zcscpthost.exe`
 * `airhost.exe` -> `zcsairhost.exe`
 * `CptService.exe` -> `zCSCptService.exe`
 
-3. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
+5. If you are using SDK versions before 4.6.15798.0403, kindly advise that **please do not re-sign / assign new digital signature to** the following files as assigning new digital signature on these files could lead to fatal errors:
    * **CptControl.exe**
    * **CptInstall.exe**
    * **CptHost.exe** / **zcscpthost.exe**
@@ -23,7 +27,7 @@
    * **libeay32.dll**
    * **ssleay32.dll**
 
-3. SDK file structure has changed
+6. SDK file structure has changed
 
 **In order to further optimize the size of our SDK package, starting from this version, Zoom Windows SDK removes the installation package of `Microsoft VC90 runtime`. Please visit Microsoft's website to download and install the `Microsoft VC90 runtime` on your machine. Please also kindly consider adding the `Microsoft VC90 runtime` installation packages in your installation package when you publish your applications developed using Zoom Windows SDK.**
 
@@ -50,7 +54,7 @@ Please follow this template to compose your payload for SDK initialization:
 {
 	       "appKey": "string", // Your SDK key
          "iat": long, // access token issue timestamp
-         "exp": long, // access token expire timestamp
+         "exp": long, // access token expire timestamp, max: iat + 2 days
          "tokenExp": long // token expire timestamp, MIN:30 minutes
 }
 ```
@@ -64,6 +68,83 @@ HMACSHA256(
 )
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
+
+## 2020-10-09 @ v5.2.41727.0928
+
+## Added
+* Upgraded Zoom default UI to match Zoom client 5.2.1.
+* Added new video status to represent the case when the user is being asked to mute/unmute by the host/co-host.
+```
+enum VideoStatus
+{
+Video_ON, ///<Video is on.
+Video_OFF, ///<Video is off.
+Video_Mute_ByHost, ///<Video is muted by host.
+};
+```
+* Added a new interface in IUserInfo to retrieve participantID
+  * `IUserInfo.GetParticipantID()`
+* Added Vietnamese and Italian language support.
+```
+enum SDK_LANGUAGE_ID
+{
+LANGUAGE_Unknow = 0,///<For initialization.
+LANGUAGE_English,///<In English.
+LANGUAGE_Chinese_Simplified,///<In simplified Chinese.
+LANGUAGE_Chinese_Traditional,///<In traditional Chinese.
+LANGUAGE_Japanese,///<In Japanese.
+LANGUAGE_Spanish,///<In Spanish.
+LANGUAGE_German,///<In German.
+LANGUAGE_French,///<In French.
+LANGUAGE_Portuguese,///<In Portuguese.
+LANGUAGE_Russian,///<In Russian.
+LANGUAGE_Korean,///<In Korean.
+LANGUAGE_Vietnamese,///<In Vietnamese.
+LANGUAGE_Italian,///<In Italian.
+};
+```
+* Added a new interface for the feature "Allow participants to rename Themselves".
+  * `IMeetingParticipantsController.AllowParticipantsToRename`
+* Added a new interface for the feature "Allow participants to unmute Themselves".
+  * `IMeetingParticipantsController.AllowParticipantsToUnmuteSelf`
+* Added a new interface for the feature "Allow participants to chat".
+  * `IMeetingChatController.SetParticipantsChatPriviledge(SDKChatPriviledge priviledge)`
+* Added a new interface to allow the host/co-host to ask to unmute all participant's audio.
+  * `IMeetingParticipantsController.AskAllToUnmute()`
+* Added new interfaces to delete questions and answers in the webinar Q&A.
+  * `IMeetingQAController.DeleteQuestion(const wchar_t* questionID)`
+  * `IMeetingQAController.DeleteAnswer(const wchar_t* answerID)`
+  * `IMeetingQAControllerEvent.OnDeleteQuestion(IList<const wchar_t*>* lstQuestionID, bool bSuccess)`
+  * `IMeetingQAControllerEvent.OnDeleteAnswer(IList<const wchar_t*>* lstAnswerID, bool bSuccess)`
+* Added new parameters in the initParam object to specify the video rendering mode.
+  * `tagInitParam.videoRenderMode`
+* Added a new interface to allow users to set the suppress background noise level.
+  * `IAudioSettingContext.GetSuppressBackgroundNoiseLevel()`
+  * `IAudioSettingContext.SetSuppressBackgroundNoiseLevel(Suppress_Background_Noise_Level level)`
+* Added a new interface isH323User in IUser to check whether the user is an H.323 user.
+  * `IUserInfo.IsH323User()`
+
+## Changed & Fixed
+* Refined the breakout room interfaces
+  * `IMeetingBOControllerEvent.OnNewBroadcastMessageReceived(const wchar_t* strMsg)`
+  * `IBOAttendee.SetEvent(IBOAttendeeEvent* pEvent)`
+  * `IBOAttendee.RequestForHelp()`
+  * `IBOAttendee.IsHostInThisBO()`
+  * `IBOAdmin.SetEvent(IBOAdminEvent* pEvent)`
+  * `IBOAdmin.JoinBOByUserRequest(const wchar_t* strUserID)`
+  * `IBOAdmin.IgnoreUserHelpRequest(const wchar_t* strUserID)`
+  * `IBOAdmin.BroadcastMessage(const wchar_t* strMsg)`
+  * `IBOData.IsBOUserMyself(const wchar_t* strUserID)`
+  * `IBOData.GetCurrentBoName()`
+* Fixed an issue that passing the password and username with special characters results in error.
+* Fixed an issue that passing NULL as the parameter of StartAppShare and StartMonitorShare in Custom UI results in error.
+* Fixed an issue that using the customized xml file to customize the language may force SDK to use English as the default language.
+* Fixed an issue that the password dialog cannot be shown correctly.
+* Fixed an issue that the watermark is shown in the incorrect position after resizing the video view size.
+
+## Deprecated & Removed:
+* Removed `IMeetingWebinarController.AllowAttendeeChat()`
+* Removed `IMeetingWebinarController.DisallowAttendeeChat()`
 
 ## 2020-06-30 @ v5.0.24433.0616
 

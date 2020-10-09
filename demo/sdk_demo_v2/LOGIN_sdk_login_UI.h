@@ -183,7 +183,7 @@ public:
 	void ChangeUIforJoinFailed();
 
 	void NotifyAuthDone();
-    void EnableEmailLoginUI(bool);
+    void EnableEmailLoginUI(bool, SwitchToLoginUIType);
 
 protected:
 	CPaintManagerUI m_PaintManager;

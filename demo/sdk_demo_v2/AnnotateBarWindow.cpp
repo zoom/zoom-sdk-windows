@@ -268,7 +268,7 @@ void AnnotateBarWindow::Notify( TNotifyUI& msg )
 		else if (msg.pSender == m_btnSave)
 		{
 			if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS == m_customerAnnoObj->CanSaveSnapshot())
-				m_customerAnnoObj->SaveSnapshot(L"d:\\");
+				m_customerAnnoObj->SaveSnapshot(L"d:\\", ZOOM_SDK_NAMESPACE::SDK_ANNO_SAVE_PNG);
 		}
 	}
 }

@@ -197,7 +197,7 @@ public:
 	/// \brief Start sharing camera.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	/// \remarks Valid for both ZOOM style and user custom interface mode.	
+	/// \remarks Valid for both ZOOM style only.	
 	virtual SDKError StartShareCamera() = 0;
 	
 	/// \brief Stop the current sharing.

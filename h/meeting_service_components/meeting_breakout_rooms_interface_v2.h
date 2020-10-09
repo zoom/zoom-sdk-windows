@@ -17,6 +17,14 @@ typedef enum
 	BO_CTRL_USER_STATUS_UNKNOWN             = 4,
 }BO_CTRL_USER_STATUS;
 
+typedef enum
+{
+	ATTENDEE_REQUEST_FOR_HELP_RESULT_IDLE,	            //host receive the help request and there is no other one currently requesting for help
+	ATTENDEE_REQUEST_FOR_HELP_RESULT_BUSY,	            //host is handling other's request with the request dialog
+	ATTENDEE_REQUEST_FOR_HELP_RESULT_IGNORE,	        //host click "later" button or close the request dialog directly
+	ATTENDEE_REQUEST_FOR_HELP_RESULT_HOST_ALREADY_IN_BO	//host already in your BO meeting
+}ATTENDEE_REQUEST_FOR_HELP_RESULT;
+
 class IBOMeeting
 {
 public:
@@ -39,6 +47,12 @@ public:
 };
 
 ////////////////////////////////////////// IBOAdmin //////////////////////////////////////////
+class IBOAdminEvent
+{
+public:
+	virtual void OnHelpRequestReceived(const wchar_t* strUserID) = 0;
+};
+
 class IBOAdmin
 {
 public:
@@ -47,6 +61,10 @@ public:
 	virtual bool AssignNewUserToRunningBO(const wchar_t* strUserID, const wchar_t* strBOID) = 0;
 	virtual bool SwitchAssignedUserToRunningBO(const wchar_t* strUserID, const wchar_t* strBOID) = 0;
 	virtual bool CanStartBO() = 0;
+	virtual void SetEvent(IBOAdminEvent* pEvent) = 0;
+	virtual bool JoinBOByUserRequest(const wchar_t* strUserID) = 0;
+	virtual bool IgnoreUserHelpRequest(const wchar_t* strUserID) = 0;
+	virtual bool BroadcastMessage(const wchar_t* strMsg) = 0;
 };
 
 ////////////////////////////////////////// IBOAssistant //////////////////////////////////////////
@@ -58,12 +76,23 @@ public:
 };
 
 ////////////////////////////////////////// IBOAttendee //////////////////////////////////////////
+class IBOAttendeeEvent
+{
+public:
+	virtual void OnHelpRequestHandleResultReceived(ATTENDEE_REQUEST_FOR_HELP_RESULT eResult) = 0;
+	virtual void OnHostJoinedThisBOMeeting() = 0;
+	virtual void OnHostLeaveThisBOMeeting() = 0;
+};
+
 class IBOAttendee
 {
 public:
 	virtual bool JoinBo() = 0;
 	virtual bool LeaveBo() = 0;
 	virtual const wchar_t* GetBoName() = 0;
+	virtual void SetEvent(IBOAttendeeEvent* pEvent) = 0;
+	virtual bool RequestForHelp() = 0;
+	virtual bool IsHostInThisBO() = 0;
 };
 
 ////////////////////////////////////////// IBOData //////////////////////////////////////////
@@ -83,7 +112,9 @@ public:
 	virtual IList<const wchar_t*>* GetBOMeetingIDList() = 0;
 	virtual const wchar_t* GetBOUserName(const wchar_t* strUserID) = 0;
 	virtual BO_CTRL_USER_STATUS GetBOUserStatus(const wchar_t* strUserID) = 0;
+	virtual bool IsBOUserMyself(const wchar_t* strUserID) = 0;
 	virtual IBOMeeting* GetBOMeetingByID(const wchar_t* strBOID) = 0;
+	virtual const wchar_t* GetCurrentBoName() = 0;
 };
 
 ////////////////////////////////////////// IMeetingBOController //////////////////////////////////////////
@@ -101,6 +132,8 @@ public:
 	virtual void onLostAssistantRightsNotification() = 0;
 	virtual void onLostAttendeeRightsNotification() = 0;
 	virtual void onLostDataHelperRightsNotification() = 0;
+
+	virtual void OnNewBroadcastMessageReceived(const wchar_t* strMsg) = 0;
 };
 
 class IMeetingBOController

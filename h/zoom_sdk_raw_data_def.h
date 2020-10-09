@@ -93,6 +93,25 @@ public:
 	virtual ~YUVRawDataI420(){}
 };
 
+class YUVProcessDataI420
+{
+public:
+	virtual unsigned int GetWidth() =0;
+	virtual unsigned int GetHeight() = 0;
+
+	virtual char* GetYBuffer(unsigned int lineNum = 0) = 0;
+	virtual char* GetUBuffer(unsigned int lineNum = 0) = 0;
+	virtual char* GetVBuffer(unsigned int lineNum = 0) = 0;
+
+	virtual unsigned int GetYStride() = 0;
+	virtual unsigned int GetUStride() = 0;
+	virtual unsigned int GetVStride() = 0;
+
+	virtual unsigned int GetRotation() = 0;
+	virtual bool IsLimitedI420() = 0;
+	virtual ~YUVProcessDataI420(){}
+};
+
 /// \brief I420 YUV raw data converter interface.
 class IYUVRawDataI420Converter
 {

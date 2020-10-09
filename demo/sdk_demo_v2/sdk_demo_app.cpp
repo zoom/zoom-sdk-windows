@@ -150,7 +150,7 @@ void CSDKDemoApp::onSwitchToLoginUI(SwitchToLoginUIType type_)
         bool isEmailLoginDEnable = false;
         if (SDKInterfaceWrap::GetInst().GetAuthService())
            SDKInterfaceWrap::GetInst().GetAuthService()->IsEmailLoginEnabled(isEmailLoginDEnable);
-        m_sdk_login_ui_mgr->EnableEmailLoginUI(isEmailLoginDEnable);
+        m_sdk_login_ui_mgr->EnableEmailLoginUI(isEmailLoginDEnable, type_);
 
 		m_sdk_login_ui_mgr->ShowWindow(true);
 		ActiveWindowToTop(hwndUI);

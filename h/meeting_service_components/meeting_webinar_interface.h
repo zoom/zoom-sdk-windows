@@ -122,18 +122,6 @@ public:
 	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDisallowPanelistStartVideoNotification() callback event. Available only for the host.
 	virtual SDKError DisallowPanelistStartVideo() = 0;
 
-	/// \brief The attendees are permitted to chat.
-	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onAllowAttendeeChatNotification() callback event. Available only for the host.
-	virtual SDKError AllowAttendeeChat() = 0;
-
-	/// \brief Forbid the attendees to chat.
-	/// \return If the function succeeds, the return value is SDKErr_Success.
-	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	/// \remarks If the function succeeds, the user will receive the IMeetingWebinarCtrlEvent::onDisallowAttendeeChatNotification() callback event. Available only for the host.
-	virtual SDKError DisallowAttendeeChat() = 0;
-
 	/// \brief Get the webinar status.
 	/// \return The status of webinar. For more details, see \link WebinarMeetingStatus \endlink.
 	virtual WebinarMeetingStatus* GetWebinarMeetingStatus() = 0;

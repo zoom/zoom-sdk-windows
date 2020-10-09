@@ -432,8 +432,6 @@ void CSDKRestAPIUserUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKLoginUIMgr*
 {
 	m_WithoutLoginRestAPIPage = static_cast<CVerticalLayoutUI* >(ui_mgr.FindControl(_T("panel_RestAPI_Without_Login")));
 	m_editRestAPIUserZAK = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_user_zak")));
-	if(m_editRestAPIUserZAK)
-		m_editRestAPIUserZAK->SetLimitText(KEY_SECRET_LIMIT_LENGTH_MAX);
 	m_editScreenName = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_ScreenName")));	
 	m_editMeetingNumber = static_cast<CRichEditUI* >(ui_mgr.FindControl(_T("edit_restapi_meeting_number")));
 	m_btnStartMeeting = static_cast<CButtonUI* >(ui_mgr.FindControl(_T("btn_login")));
@@ -843,11 +841,11 @@ void CSDKLoginUIMgr::NotifyAuthDone()
 	}
 }
 
-void CSDKLoginUIMgr::EnableEmailLoginUI(bool visible)
+void CSDKLoginUIMgr::EnableEmailLoginUI(bool visible, SwitchToLoginUIType type_)
 {
    if (m_btnLoginWithEmail)
       m_btnLoginWithEmail->SetVisible(visible);
-   if(!visible)
+   if(!visible && SwitchToLoginUIType_AUTHDONE == type_)
       SwitchToPage(login_UseSSO_Page);
 }
 /////////////////////////////////////////////////////////////////

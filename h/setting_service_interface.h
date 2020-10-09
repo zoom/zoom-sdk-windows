@@ -196,6 +196,14 @@ public:
 	virtual void OnSelectedAudioDeviceIsChanged() = 0;
 };
 
+enum Suppress_Background_Noise_Level
+{
+	Suppress_BGNoise_Level_None = 0,
+	Suppress_BGNoise_Level_Auto,
+	Suppress_BGNoise_Level_Low,
+	Suppress_BGNoise_Level_Medium,
+	Suppress_BGNoise_Level_High,
+};
 /// \brief Audio device test interface.
 ///
 class ITestAudioDeviceHelper
@@ -779,7 +787,8 @@ public:
 	/// \return If it is TRUE, it means the echo cancellation is enabled 
 	virtual bool IsEchoCancellationEnabled() = 0;
 	
-
+	virtual Suppress_Background_Noise_Level GetSuppressBackgroundNoiseLevel() = 0;
+	virtual SDKError SetSuppressBackgroundNoiseLevel(Suppress_Background_Noise_Level level) = 0;
 };
 
 /// \brief Recording setting context callback event.
