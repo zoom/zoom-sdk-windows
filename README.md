@@ -224,7 +224,7 @@ For any issues regarding our SDK, please visit our new Community Support Forum a
 
 Use of this software is subject to important terms and conditions as set forth in the License file
 
-Please refer to [LICENSE.md](LICENSE.md) file for details
+Please refer to [LICENSE.pdf](LICENSE.pdf) file for details
 
 ## Acknowledgments
 
