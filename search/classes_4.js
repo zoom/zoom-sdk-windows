@@ -39,5 +39,6 @@ var searchData=
   ['tagwebinarattendeestatus',['tagWebinarAttendeeStatus',['../structtag_webinar_attendee_status.html',1,'']]],
   ['tagwebinarmeetingstatus',['tagWebinarMeetingStatus',['../structtag_webinar_meeting_status.html',1,'']]],
   ['tagwebinarotheruserrolechatstatus',['tagWebinarOtherUserRoleChatStatus',['../structtag_webinar_other_user_role_chat_status.html',1,'']]],
-  ['tagwndposition',['tagWndPosition',['../structtag_wnd_position.html',1,'']]]
+  ['tagwndposition',['tagWndPosition',['../structtag_wnd_position.html',1,'']]],
+  ['tagzoomsdkrenderoptions',['tagZoomSDKRenderOptions',['../structtag_zoom_s_d_k_render_options.html',1,'']]]
 ];

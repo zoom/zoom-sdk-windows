@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -116,6 +116,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_virtual_b_g_setting_context_event.html#a7d4ce067570d6120a2a1b9af4529fc3c">onSelectedVBImageChanged</a> ()=0</td></tr>
 <tr class="memdesc:a7d4ce067570d6120a2a1b9af4529fc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of notification that the virtual background image is changed. <br /></td></tr>
 <tr class="separator:a7d4ce067570d6120a2a1b9af4529fc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3d6129345fab03fb5de1a3ad5510c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_virtual_b_g_setting_context_event.html#a2b3d6129345fab03fb5de1a3ad5510c1">OnVideoThumbReady</a> (const wchar_t *file_path)</td></tr>
+<tr class="memdesc:a2b3d6129345fab03fb5de1a3ad5510c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of notification that creating the thumb of a virtual background video is success.  <a href="#a2b3d6129345fab03fb5de1a3ad5510c1">More...</a><br /></td></tr>
+<tr class="separator:a2b3d6129345fab03fb5de1a3ad5510c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872847ee4b1550aa0892f404c83c45ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_virtual_b_g_setting_context_event.html#a872847ee4b1550aa0892f404c83c45ab">OnVideoThumbError</a> (const wchar_t *file_path, VBVideoError error)</td></tr>
+<tr class="memdesc:a872847ee4b1550aa0892f404c83c45ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of notification that creating the thumb of a virtual background video is failed.  <a href="#a872847ee4b1550aa0892f404c83c45ab">More...</a><br /></td></tr>
+<tr class="separator:a872847ee4b1550aa0892f404c83c45ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3ad0fc1f205ab730d0ea35b3c02c09"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_virtual_b_g_setting_context_event.html#ada3ad0fc1f205ab730d0ea35b3c02c09">OnVideoPlayError</a> (const wchar_t *file_path, VBVideoError error)</td></tr>
+<tr class="memdesc:ada3ad0fc1f205ab730d0ea35b3c02c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback event of notification that playing a virtual background video is failed.  <a href="#ada3ad0fc1f205ab730d0ea35b3c02c09">More...</a><br /></td></tr>
+<tr class="separator:ada3ad0fc1f205ab730d0ea35b3c02c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Virtual background context Callback Event. </p>
@@ -148,6 +157,130 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">selectedColor</td><td>The RGB value of the selected color, organized in the format 0xFFRRGGBB. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada3ad0fc1f205ab730d0ea35b3c02c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3ad0fc1f205ab730d0ea35b3c02c09">&#9670;&nbsp;</a></span>OnVideoPlayError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVirtualBGSettingContextEvent::OnVideoPlayError </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VBVideoError&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of notification that playing a virtual background video is failed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>The file name with full path which sdk generates from the virtual background video. </td></tr>
+    <tr><td class="paramname">error</td><td>The fail reason. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a872847ee4b1550aa0892f404c83c45ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872847ee4b1550aa0892f404c83c45ab">&#9670;&nbsp;</a></span>OnVideoThumbError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVirtualBGSettingContextEvent::OnVideoThumbError </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VBVideoError&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of notification that creating the thumb of a virtual background video is failed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>The file name with full path which sdk generates from the virtual background video. </td></tr>
+    <tr><td class="paramname">error</td><td>The fail reason. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2b3d6129345fab03fb5de1a3ad5510c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3d6129345fab03fb5de1a3ad5510c1">&#9670;&nbsp;</a></span>OnVideoThumbReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVirtualBGSettingContextEvent::OnVideoThumbReady </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback event of notification that creating the thumb of a virtual background video is success. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>The file name with full path which you can use to generate your thumb for the virtual background video. </td></tr>
   </table>
   </dd>
 </dl>

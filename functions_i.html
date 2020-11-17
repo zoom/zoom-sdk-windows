@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -182,6 +182,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>IsAeroModeInSharingTurnOff()
 : <a class="el" href="class_i_general_setting_context.html#a845bcadea3df1da3e4087e945d62cc19">IGeneralSettingContext</a>
 </li>
+<li>IsAllowToAddNewVBItem()
+: <a class="el" href="class_i_virtual_b_g_setting_context.html#a95d4cc38caec088cc762a136ef430dce">IVirtualBGSettingContext</a>
+</li>
+<li>isAllowToRemoveVBItem()
+: <a class="el" href="class_i_virtual_b_g_setting_context.html#ac4b8f646b95b7e605eef6f1f7899a02a">IVirtualBGSettingContext</a>
+</li>
 <li>IsAlwaysMuteMicWhenJoinVoipEnabled()
 : <a class="el" href="class_i_audio_setting_context.html#a1c13be2cddc1e0a9710dd3c57b213ced">IAudioSettingContext</a>
 </li>
@@ -292,7 +298,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_i_user_info.html#a41adf0f5c95ca5f5bad81912040f2f05">IUserInfo</a>
 </li>
 <li>IsHardwareEncodeEnabled()
-: <a class="el" href="class_i_video_setting_context.html#a9962ebc44027085f075d552775f6d682">IVideoSettingContext</a>
+: <a class="el" href="class_i_video_setting_context.html#ae44a00fa5ecf51163b96a2276612644e">IVideoSettingContext</a>
 </li>
 <li>IsHaveRemoteControlRight()
 : <a class="el" href="class_i_meeting_remote_controller.html#a5445899424f72d38f02c0f245207907b">IMeetingRemoteController</a>
@@ -324,11 +330,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>IsInternalMeeting()
 : <a class="el" href="class_i_meeting_info.html#a3c8eda4f5f61aa71621a80844b2a772e">IMeetingInfo</a>
 </li>
+<li>IsInterpretationEnabled()
+: <a class="el" href="class_i_meeting_interpretation_controller.html#a90d780854d9d9ee65eb9577ec984508a">IMeetingInterpretationController</a>
+</li>
+<li>IsInterpretationStarted()
+: <a class="el" href="class_i_meeting_interpretation_controller.html#acdaca4ef546e5da5ca3b799ce1cd23a1">IMeetingInterpretationController</a>
+</li>
+<li>IsInterpreter()
+: <a class="el" href="class_i_meeting_interpretation_controller.html#af0225820920b7dc6e5fdc6dd28054943">IMeetingInterpretationController</a>
+, <a class="el" href="class_i_user_info.html#a939b9635fb72b1f7afdf063ce6e0b19a">IUserInfo</a>
+</li>
 <li>IsInWaitingRoom()
 : <a class="el" href="class_i_user_info.html#a743eef3b1438bce58673e56c2d230107">IUserInfo</a>
 </li>
 <li>IsJoinBeforeHostEnabled()
 : <a class="el" href="class_i_query_meeting_item_meeting_option_helper.html#af117a5ecd2c5107fb3c29dbad6556321">IQueryMeetingItemMeetingOptionHelper</a>
+</li>
+<li>IsLightAdaptionEnabled()
+: <a class="el" href="class_i_video_setting_context.html#a023209ea47d836d683f860b34179cae7">IVideoSettingContext</a>
 </li>
 <li>IsLimitedI420()
 : <a class="el" href="class_y_u_v_raw_data_i420.html#ac33e2f58b31839497dd15b1306f21ab4">YUVRawDataI420</a>
@@ -341,6 +360,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>IsLiveAnswering()
 : <a class="el" href="class_i_q_a_item_info.html#a791eb0dd3613df5e49138cc4feb01f23">IQAItemInfo</a>
+</li>
+<li>IsMajorAudioTurnOff()
+: <a class="el" href="class_i_meeting_interpretation_controller.html#a6a555f67e6bda0ede74cd773aff2e324">IMeetingInterpretationController</a>
 </li>
 <li>IsMarkedAsAnswered()
 : <a class="el" href="class_i_q_a_item_info.html#a99d48f323ed3c753910eac5e6a837fb2">IQAItemInfo</a>
@@ -418,7 +440,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_i_query_meeting_item_meeting_option_helper.html#ab751d373f419298f5c696f97d9795e3b">IQueryMeetingItemMeetingOptionHelper</a>
 </li>
 <li>isSelected()
-: <a class="el" href="class_i_virtual_b_g_image_info.html#ab2474710434418fd1b553045f1324d9a">IVirtualBGImageInfo</a>
+: <a class="el" href="class_i_video_filter_image_info.html#afbdb6f03080927b514362983777199e1">IVideoFilterImageInfo</a>
+, <a class="el" href="class_i_virtual_b_g_image_info.html#ab2474710434418fd1b553045f1324d9a">IVirtualBGImageInfo</a>
 </li>
 <li>IsSelectedDevice()
 : <a class="el" href="class_i_camera_info.html#a71964a6dcc04c2e1e1f035a698ea7812">ICameraInfo</a>
@@ -483,6 +506,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>IsSupportSmartVirtualBG()
 : <a class="el" href="class_i_virtual_b_g_setting_context.html#ab96afad5aa21b28ade506f15018f5f74">IVirtualBGSettingContext</a>
 </li>
+<li>IsSupportVideoFilter()
+: <a class="el" href="class_i_video_filter_setting_context.html#a4694a96704bc98faea5f00b5673cdceb">IVideoFilterSettingContext</a>
+</li>
 <li>IsSupportVirtualBG()
 : <a class="el" href="class_i_virtual_b_g_setting_context.html#a6dc9dc6df42560410d37843ad55d7e8d">IVirtualBGSettingContext</a>
 </li>
@@ -492,11 +518,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>IsSuppressAudioNotifyEnabled()
 : <a class="el" href="class_i_audio_setting_context.html#a20fabb5d8212a16d7d6e2ece261dc5a7">IAudioSettingContext</a>
 </li>
+<li>IsSyncButtonsOnHeadsetEnabled()
+: <a class="el" href="class_i_audio_setting_context.html#ab46c5d005c42ddd6f796470f661f0101">IAudioSettingContext</a>
+</li>
 <li>IsTalking()
 : <a class="el" href="class_i_user_info.html#a646df55461d7dc267f41ec3461b72d52">IUserInfo</a>
 </li>
 <li>IsUsingGreenScreenOn()
 : <a class="el" href="class_i_virtual_b_g_setting_context.html#ae441faa084f4a8763df8ada2737e6181">IVirtualBGSettingContext</a>
+</li>
+<li>IsVideoFilterEnabled()
+: <a class="el" href="class_i_video_filter_setting_context.html#abb55b3403481b1e08b738a7cd34eea6f">IVideoFilterSettingContext</a>
+</li>
+<li>IsVideoFilterLocked()
+: <a class="el" href="class_i_video_filter_setting_context.html#ac5af5c4b13a142168555e65130205580">IVideoFilterSettingContext</a>
 </li>
 <li>IsVideoMirrorEffectEnabled()
 : <a class="el" href="class_i_video_setting_context.html#a506a0984f5353cd5612c6677a84028f2">IVideoSettingContext</a>

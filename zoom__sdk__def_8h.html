@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_configurable_options.html">tagConfigurableOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK configuration options.  <a href="structtag_configurable_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_zoom_s_d_k_render_options.html">tagZoomSDKRenderOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_raw_data_options.html">tagRawDataOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_init_param.html">tagInitParam</a></td></tr>
@@ -171,6 +173,9 @@ typedef struct <a class="el" href="structtag_customized_language_info.html">tagC
 <tr class="memitem:aadbdab5105e3ed609fa5e44374c31b52"><td class="memItemLeft" align="right" valign="top"><a id="aadbdab5105e3ed609fa5e44374c31b52"></a>
 typedef struct <a class="el" href="structtag_configurable_options.html">tagConfigurableOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConfigurableOptions</b></td></tr>
 <tr class="separator:aadbdab5105e3ed609fa5e44374c31b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a05ac9fd26d883cdf28312957e4e85"><td class="memItemLeft" align="right" valign="top"><a id="a09a05ac9fd26d883cdf28312957e4e85"></a>
+typedef struct <a class="el" href="structtag_zoom_s_d_k_render_options.html">tagZoomSDKRenderOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ZoomSDKRenderOptions</b></td></tr>
+<tr class="separator:a09a05ac9fd26d883cdf28312957e4e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c1edea8f759a004213c9f96b0456850"><td class="memItemLeft" align="right" valign="top"><a id="a0c1edea8f759a004213c9f96b0456850"></a>
 typedef struct <a class="el" href="structtag_raw_data_options.html">tagRawDataOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RawDataOptions</b></td></tr>
 <tr class="separator:a0c1edea8f759a004213c9f96b0456850"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,7 +218,8 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036adb97477ea7e5fdb7ae408c157a6f88ed">SDKERR_MEETING_ANNOTATION_IS_OFF</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a2dfd340bb8fd1c67474a402716b9e930">SDKERR_SETTING_OS_DONT_SUPPORT</a>, 
-<b>SDKERR_EMAIL_LOGIN_IS_DISABLED</b>
+<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a658f7507487fdd1b24b447bccc348202">SDKERR_EMAIL_LOGIN_IS_DISABLED</a>, 
+<a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036a3cc34d60b6bf0d7702499ee4accdcc0e">SDKERR_HARDWARE_NOT_MEET_FOR_VB</a>
 <br />
  }</td></tr>
 <tr class="memdesc:aea74527af3b9f22cf00d38080c896036"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK error types. Here are more detailed structural descriptions.  <a href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">More...</a><br /></td></tr>
@@ -265,6 +271,18 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a390ec77b3cb5329350d1ef755478f681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13417e5afacb2bf3291a0626d8900bb"><td class="memItemLeft" align="right" valign="top"><a id="aa13417e5afacb2bf3291a0626d8900bb"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ZoomSDKRenderPostProcessing</b> { <b>ZoomSDKRenderPostProcessing_None</b> = 0, 
+<b>ZoomSDKRenderPostProcessing_Auto</b>, 
+<b>ZoomSDKRenderPostProcessing_Enable</b>, 
+<b>ZoomSDKRenderPostProcessing_Disable</b>
+ }</td></tr>
+<tr class="separator:aa13417e5afacb2bf3291a0626d8900bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c35cb5f55971781025832c6f34bd238"><td class="memItemLeft" align="right" valign="top"><a id="a7c35cb5f55971781025832c6f34bd238"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ZoomSDKVideoCaptureMethod</b> { <b>ZoomSDKVideoCaptureMethod_None</b> = 0, 
+<b>ZoomSDKVideoCaptureMethod_Auto</b>, 
+<b>ZoomSDKVideoCaptureMethod_DirectSHow</b>, 
+<b>ZoomSDKVideoCaptureMethod_MediaFoundation</b>
+ }</td></tr>
+<tr class="separator:a7c35cb5f55971781025832c6f34bd238"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31314dfd3a5f42586ec29e0c53a532c3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3">LastErrorType</a> { <br />
 &#160;&#160;<a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a9fe99757cb97dec931b50f3f2423d75d">LastErrorType_None</a>, 
 <a class="el" href="zoom__sdk__def_8h.html#a31314dfd3a5f42586ec29e0c53a532c3a16a9dc54c4e5c8ca05030e82a98ff0ca">LastErrorType_Auth</a>, 
@@ -448,6 +466,10 @@ const RECT&#160;</td><td class="memItemRight" valign="bottom"><b>_SDK_TEST_VIDEO
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036adb97477ea7e5fdb7ae408c157a6f88ed"></a>SDKERR_MEETING_ANNOTATION_IS_OFF&#160;</td><td class="fielddoc"><p>Annotation is disabled. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a2dfd340bb8fd1c67474a402716b9e930"></a>SDKERR_SETTING_OS_DONT_SUPPORT&#160;</td><td class="fielddoc"><p>Current OS doesn't support the setting. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a658f7507487fdd1b24b447bccc348202"></a>SDKERR_EMAIL_LOGIN_IS_DISABLED&#160;</td><td class="fielddoc"><p>Email login is disable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aea74527af3b9f22cf00d38080c896036a3cc34d60b6bf0d7702499ee4accdcc0e"></a>SDKERR_HARDWARE_NOT_MEET_FOR_VB&#160;</td><td class="fielddoc"><p>Computer doesn't meet the minimum requirements to use virtual background feature. </p>
 </td></tr>
 </table>
 

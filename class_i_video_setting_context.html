@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2c7cfb4086c9c6e90d497b06d9d8304"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#ae2c7cfb4086c9c6e90d497b06d9d8304">IsFaceBeautyEffectEnabled</a> ()=0</td></tr>
 <tr class="memdesc:ae2c7cfb4086c9c6e90d497b06d9d8304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable the video facial beauty effect.  <a href="#ae2c7cfb4086c9c6e90d497b06d9d8304">More...</a><br /></td></tr>
 <tr class="separator:ae2c7cfb4086c9c6e90d497b06d9d8304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9aa004fd595eb9ebd4e3aba738ad64"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a4c9aa004fd595eb9ebd4e3aba738ad64">GetFaceBeautyStrengthValue</a> ()=0</td></tr>
+<tr class="memdesc:a4c9aa004fd595eb9ebd4e3aba738ad64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the video facial beauty strength value.  <a href="#a4c9aa004fd595eb9ebd4e3aba738ad64">More...</a><br /></td></tr>
+<tr class="separator:a4c9aa004fd595eb9ebd4e3aba738ad64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5782992ab57c22f9bcf963cfb52c8cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#ab5782992ab57c22f9bcf963cfb52c8cf">SetFaceBeautyStrengthValue</a> (unsigned int beautyStrengthValue)=0</td></tr>
+<tr class="memdesc:ab5782992ab57c22f9bcf963cfb52c8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the video facial beauty strength value.  <a href="#ab5782992ab57c22f9bcf963cfb52c8cf">More...</a><br /></td></tr>
+<tr class="separator:ab5782992ab57c22f9bcf963cfb52c8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07bbcb5401b31f0493cfe4d41b5d8ed"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#ab07bbcb5401b31f0493cfe4d41b5d8ed">EnableLightAdaption</a> (bool bEnable, VIDEO_LIGHT_ADAPTION_TYPE lightAdaptionType, double manualValue)=0</td></tr>
+<tr class="memdesc:ab07bbcb5401b31f0493cfe4d41b5d8ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable the light adaption of the video.  <a href="#ab07bbcb5401b31f0493cfe4d41b5d8ed">More...</a><br /></td></tr>
+<tr class="separator:ab07bbcb5401b31f0493cfe4d41b5d8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023209ea47d836d683f860b34179cae7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a023209ea47d836d683f860b34179cae7">IsLightAdaptionEnabled</a> ()=0</td></tr>
+<tr class="memdesc:a023209ea47d836d683f860b34179cae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable the light adaption of the video.  <a href="#a023209ea47d836d683f860b34179cae7">More...</a><br /></td></tr>
+<tr class="separator:a023209ea47d836d683f860b34179cae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445025681bc1ba19dcaf9a07e24bab67"><td class="memItemLeft" align="right" valign="top">virtual VIDEO_LIGHT_ADAPTION_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a445025681bc1ba19dcaf9a07e24bab67">GetLightAdaptionType</a> ()=0</td></tr>
+<tr class="memdesc:a445025681bc1ba19dcaf9a07e24bab67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the light adaption type of the video.  <a href="#a445025681bc1ba19dcaf9a07e24bab67">More...</a><br /></td></tr>
+<tr class="separator:a445025681bc1ba19dcaf9a07e24bab67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7be2618bb1e8cb70466b64fe5ae4665"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#aa7be2618bb1e8cb70466b64fe5ae4665">GetLightAdaptionManualValue</a> ()=0</td></tr>
+<tr class="memdesc:aa7be2618bb1e8cb70466b64fe5ae4665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the manual setting value for the light adaption of the video.  <a href="#aa7be2618bb1e8cb70466b64fe5ae4665">More...</a><br /></td></tr>
+<tr class="separator:aa7be2618bb1e8cb70466b64fe5ae4665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd885be9d8c3905ec161b59a88809b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a7dd885be9d8c3905ec161b59a88809b6">EnableHDVideo</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a7dd885be9d8c3905ec161b59a88809b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable HD video.  <a href="#a7dd885be9d8c3905ec161b59a88809b6">More...</a><br /></td></tr>
 <tr class="separator:a7dd885be9d8c3905ec161b59a88809b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,12 +171,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ff845c43aed166373accf2aac9a9020"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a8ff845c43aed166373accf2aac9a9020">IsSpotlightSelfEnabled</a> ()=0</td></tr>
 <tr class="memdesc:a8ff845c43aed166373accf2aac9a9020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable to spotlight video.  <a href="#a8ff845c43aed166373accf2aac9a9020">More...</a><br /></td></tr>
 <tr class="separator:a8ff845c43aed166373accf2aac9a9020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37e629aec11f7789443c37922926ea31"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a37e629aec11f7789443c37922926ea31">EnableHardwareEncode</a> (bool bEnable)=0</td></tr>
-<tr class="memdesc:a37e629aec11f7789443c37922926ea31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable the hardware acceleration.  <a href="#a37e629aec11f7789443c37922926ea31">More...</a><br /></td></tr>
-<tr class="separator:a37e629aec11f7789443c37922926ea31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9962ebc44027085f075d552775f6d682"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a9962ebc44027085f075d552775f6d682">IsHardwareEncodeEnabled</a> ()=0</td></tr>
-<tr class="memdesc:a9962ebc44027085f075d552775f6d682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable the hardware acceleration.  <a href="#a9962ebc44027085f075d552775f6d682">More...</a><br /></td></tr>
-<tr class="separator:a9962ebc44027085f075d552775f6d682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193e2dce354dc2cccd0d9d5e3cb16a87"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a193e2dce354dc2cccd0d9d5e3cb16a87">EnableHardwareEncode</a> (bool bEnable, VIDEO_HARDWARE_ENCODE_TYPE encodeType)=0</td></tr>
+<tr class="memdesc:a193e2dce354dc2cccd0d9d5e3cb16a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable the hardware acceleration.  <a href="#a193e2dce354dc2cccd0d9d5e3cb16a87">More...</a><br /></td></tr>
+<tr class="separator:a193e2dce354dc2cccd0d9d5e3cb16a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44a00fa5ecf51163b96a2276612644e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#ae44a00fa5ecf51163b96a2276612644e">IsHardwareEncodeEnabled</a> (VIDEO_HARDWARE_ENCODE_TYPE encodeType)=0</td></tr>
+<tr class="memdesc:ae44a00fa5ecf51163b96a2276612644e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag to enable/disable the hardware acceleration.  <a href="#ae44a00fa5ecf51163b96a2276612644e">More...</a><br /></td></tr>
+<tr class="separator:ae44a00fa5ecf51163b96a2276612644e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f505b4ef4f54d055597591be9f60556"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_setting_context.html#a2f505b4ef4f54d055597591be9f60556">Enable49VideoesInGallaryView</a> (bool bEnable)=0</td></tr>
 <tr class="memdesc:a2f505b4ef4f54d055597591be9f60556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable to show the participants in Gallery View up to 49 per screen.  <a href="#a2f505b4ef4f54d055597591be9f60556">More...</a><br /></td></tr>
 <tr class="separator:a2f505b4ef4f54d055597591be9f60556"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,8 +380,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a37e629aec11f7789443c37922926ea31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37e629aec11f7789443c37922926ea31">&#9670;&nbsp;</a></span>EnableHardwareEncode()</h2>
+<a id="a193e2dce354dc2cccd0d9d5e3cb16a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193e2dce354dc2cccd0d9d5e3cb16a87">&#9670;&nbsp;</a></span>EnableHardwareEncode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,8 +393,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IVideoSettingContext::EnableHardwareEncode </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td class="paramname"><em>bEnable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">VIDEO_HARDWARE_ENCODE_TYPE&#160;</td>
+          <td class="paramname"><em>encodeType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -460,6 +488,59 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bEnable</td><td>TRUE indicates to hide the non-video Participants. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ab07bbcb5401b31f0493cfe4d41b5d8ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07bbcb5401b31f0493cfe4d41b5d8ed">&#9670;&nbsp;</a></span>EnableLightAdaption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IVideoSettingContext::EnableLightAdaption </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VIDEO_LIGHT_ADAPTION_TYPE&#160;</td>
+          <td class="paramname"><em>lightAdaptionType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>manualValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable or disable the light adaption of the video. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>TRUE indicates to enable the light adaption of the video. </td></tr>
+    <tr><td class="paramname">lightAdaptionType</td><td>TRUE indicates the type to adjust the low light. If bEnable is TRUE, the default value of lightAdaptionType is Light_Adaption_Auto. </td></tr>
+    <tr><td class="paramname">manualValue</td><td>The value is only effective when the bAutoAdaption is FALSE. The value should between 0 to 256. </td></tr>
   </table>
   </dd>
 </dl>
@@ -597,6 +678,90 @@ Public Member Functions</h2></td></tr>
 
 <p>Get camera device list. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value the is camera device list. Otherwise failed, returns NULL. </dd></dl>
+
+</div>
+</div>
+<a id="a4c9aa004fd595eb9ebd4e3aba738ad64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9aa004fd595eb9ebd4e3aba738ad64">&#9670;&nbsp;</a></span>GetFaceBeautyStrengthValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int IVideoSettingContext::GetFaceBeautyStrengthValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the video facial beauty strength value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The video facial beauty strength value. If the video facial beauty effect is disabled, the return value is 0. </dd></dl>
+
+</div>
+</div>
+<a id="aa7be2618bb1e8cb70466b64fe5ae4665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7be2618bb1e8cb70466b64fe5ae4665">&#9670;&nbsp;</a></span>GetLightAdaptionManualValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double IVideoSettingContext::GetLightAdaptionManualValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the manual setting value for the light adaption of the video. </p>
+<dl class="section return"><dt>Returns</dt><dd>The manual setting value. If the light adaption is disabled or the type of light adaption is AUTO, the return value is 0. </dd></dl>
+
+</div>
+</div>
+<a id="a445025681bc1ba19dcaf9a07e24bab67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445025681bc1ba19dcaf9a07e24bab67">&#9670;&nbsp;</a></span>GetLightAdaptionType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual VIDEO_LIGHT_ADAPTION_TYPE IVideoSettingContext::GetLightAdaptionType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the light adaption type of the video. </p>
+<dl class="section return"><dt>Returns</dt><dd>The light adaption type. If the light adaption is disabled, the return value is Light_Adaption_None. </dd></dl>
 
 </div>
 </div>
@@ -768,8 +933,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9962ebc44027085f075d552775f6d682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9962ebc44027085f075d552775f6d682">&#9670;&nbsp;</a></span>IsHardwareEncodeEnabled()</h2>
+<a id="ae44a00fa5ecf51163b96a2276612644e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44a00fa5ecf51163b96a2276612644e">&#9670;&nbsp;</a></span>IsHardwareEncodeEnabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,7 +945,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool IVideoSettingContext::IsHardwareEncodeEnabled </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">VIDEO_HARDWARE_ENCODE_TYPE&#160;</td>
+          <td class="paramname"><em>encodeType</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -848,6 +1014,34 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the flag to enable/disable to hide non-video participants. </p>
+<dl class="section return"><dt>Returns</dt><dd>Enabled or disabled. </dd></dl>
+
+</div>
+</div>
+<a id="a023209ea47d836d683f860b34179cae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023209ea47d836d683f860b34179cae7">&#9670;&nbsp;</a></span>IsLightAdaptionEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IVideoSettingContext::IsLightAdaptionEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the flag to enable/disable the light adaption of the video. </p>
 <dl class="section return"><dt>Returns</dt><dd>Enabled or disabled. </dd></dl>
 
 </div>
@@ -964,6 +1158,41 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">deviceId</td><td>Specify a device to be selected. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
+<a id="ab5782992ab57c22f9bcf963cfb52c8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5782992ab57c22f9bcf963cfb52c8cf">&#9670;&nbsp;</a></span>SetFaceBeautyStrengthValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IVideoSettingContext::SetFaceBeautyStrengthValue </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>beautyStrengthValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the video facial beauty strength value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">beautyStrengthValue</td><td>The value is only effective when the video facial beauty effect is enabled. The value should between 0 to 100. </td></tr>
   </table>
   </dd>
 </dl>

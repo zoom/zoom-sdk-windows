@@ -6,6 +6,7 @@ var searchData=
   ['meeting_5fchat_5finterface_2eh',['meeting_chat_interface.h',['../meeting__chat__interface_8h.html',1,'']]],
   ['meeting_5fconfiguration_5finterface_2eh',['meeting_configuration_interface.h',['../meeting__configuration__interface_8h.html',1,'']]],
   ['meeting_5fh323_5fhelper_5finterface_2eh',['meeting_h323_helper_interface.h',['../meeting__h323__helper__interface_8h.html',1,'']]],
+  ['meeting_5finterpretation_5finterface_2eh',['meeting_interpretation_interface.h',['../meeting__interpretation__interface_8h.html',1,'']]],
   ['meeting_5flive_5fstream_5finterface_2eh',['meeting_live_stream_interface.h',['../meeting__live__stream__interface_8h.html',1,'']]],
   ['meeting_5fparticipants_5fctrl_5finterface_2eh',['meeting_participants_ctrl_interface.h',['../meeting__participants__ctrl__interface_8h.html',1,'']]],
   ['meeting_5fphone_5fhelper_5finterface_2eh',['meeting_phone_helper_interface.h',['../meeting__phone__helper__interface_8h.html',1,'']]],

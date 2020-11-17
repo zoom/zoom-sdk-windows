@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -184,6 +184,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_virtual_b_g_setting_context.html">IVirtualBGSettingContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual background setting interface.  <a href="class_i_virtual_b_g_setting_context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_filter_image_info.html">IVideoFilterImageInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video filter image information interface.  <a href="class_i_video_filter_image_info.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_filter_setting_context_event.html">IVideoFilterSettingContextEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video filter context Callback Event.  <a href="class_i_video_filter_setting_context_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_video_filter_setting_context.html">IVideoFilterSettingContext</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video filter setting interface.  <a href="class_i_video_filter_setting_context.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_setting_service.html">ISettingService</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meeting setting interface.  <a href="class_i_setting_service.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +263,16 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a00ea723cb3e939daf7c4055e462451c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify to rotate the video preview based on the current view. Here are more detailed structural descriptions.  <a href="setting__service__interface_8h.html#a00ea723cb3e939daf7c4055e462451c1">More...</a><br /></td></tr>
 <tr class="separator:a00ea723cb3e939daf7c4055e462451c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d39dcf3975e25ec7269ba077e5ff92"><td class="memItemLeft" align="right" valign="top"><a id="a25d39dcf3975e25ec7269ba077e5ff92"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>VIDEO_HARDWARE_ENCODE_TYPE</b> { <b>VIDEO_HARDWARE_ENCODE_RECEIVING</b> = 0, 
+<b>VIDEO_HARDWARE_ENCODE_SENDING</b>, 
+<b>VIDEO_HARDWARE_ENCODE_PROCESSING</b>
+ }</td></tr>
+<tr class="separator:a25d39dcf3975e25ec7269ba077e5ff92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce011d13fedeab1d45ddf98791cc957"><td class="memItemLeft" align="right" valign="top"><a id="a0ce011d13fedeab1d45ddf98791cc957"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>VIDEO_LIGHT_ADAPTION_TYPE</b> { <b>Light_Adaption_None</b> = 0, 
+<b>Light_Adaption_Auto</b>, 
+<b>Light_Adaption_Manual</b>
+ }</td></tr>
+<tr class="separator:a0ce011d13fedeab1d45ddf98791cc957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a943bfa6d3d08c2e1096ace5582123d4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setting__service__interface_8h.html#a943bfa6d3d08c2e1096ace5582123d4c">SettingsNetWorkType</a> { <br />
 &#160;&#160;<a class="el" href="setting__service__interface_8h.html#a943bfa6d3d08c2e1096ace5582123d4ca1ffd7d43524aecd946514fd686c30e82">SETTINGS_NETWORK_WIRED</a> = 0, 
 <a class="el" href="setting__service__interface_8h.html#a943bfa6d3d08c2e1096ace5582123d4cab1b3e78135e79d0a8bdf06221d976d56">SETTINGS_NETWORK_WIFI</a> = 1, 
@@ -272,6 +291,24 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a2a688ca0d6b909157bb7f8d00fd34e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify connection type. Here are more detailed structural descriptions.  <a href="setting__service__interface_8h.html#a2a688ca0d6b909157bb7f8d00fd34e3f">More...</a><br /></td></tr>
 <tr class="separator:a2a688ca0d6b909157bb7f8d00fd34e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0ca8ed44cbedadcc88aa51c52aa9a5"><td class="memItemLeft" align="right" valign="top"><a id="a4a0ca8ed44cbedadcc88aa51c52aa9a5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>VBVideoError</b> { <br />
+&#160;&#160;<b>VB_VideoError_None</b> = 0, 
+<b>VB_VideoError_UnknowFormat</b>, 
+<b>VB_VideoError_ResolutionBig</b>, 
+<b>VB_VideoError_ResolutionHigh720P</b>, 
+<br />
+&#160;&#160;<b>VB_VideoError_ResolutionLow</b>, 
+<b>VB_VideoError_PlayError</b>, 
+<b>VB_VideoError_OpenError</b>
+<br />
+ }</td></tr>
+<tr class="separator:a4a0ca8ed44cbedadcc88aa51c52aa9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3552fe574105d6d4f3f67dee90197875"><td class="memItemLeft" align="right" valign="top"><a id="a3552fe574105d6d4f3f67dee90197875"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ZoomSDKVideoEffectType</b> { <b>ZoomSDKVideoEffectType_None</b> = 0, 
+<b>ZoomSDKVideoEffectType_Filter</b> = 1, 
+<b>ZoomSDKVideoEffectType_Frame</b> = 2, 
+<b>ZoomSDKVideoEffectType_Sticker</b> = 4
+ }</td></tr>
+<tr class="separator:a3552fe574105d6d4f3f67dee90197875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Configure Service Interface. </p>

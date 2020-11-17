@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -183,12 +183,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8adfa9fda2f42387a3320031c8b3fa28"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a8adfa9fda2f42387a3320031c8b3fa28">IsEchoCancellationEnabled</a> ()=0</td></tr>
 <tr class="memdesc:a8adfa9fda2f42387a3320031c8b3fa28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the echo cancellation is enabled or not.  <a href="#a8adfa9fda2f42387a3320031c8b3fa28">More...</a><br /></td></tr>
 <tr class="separator:a8adfa9fda2f42387a3320031c8b3fa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dae72b61db9168107ed47003ef0391a"><td class="memItemLeft" align="right" valign="top"><a id="a1dae72b61db9168107ed47003ef0391a"></a>
-virtual Suppress_Background_Noise_Level&#160;</td><td class="memItemRight" valign="bottom"><b>GetSuppressBackgroundNoiseLevel</b> ()=0</td></tr>
+<tr class="memitem:a1dae72b61db9168107ed47003ef0391a"><td class="memItemLeft" align="right" valign="top">virtual Suppress_Background_Noise_Level&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#a1dae72b61db9168107ed47003ef0391a">GetSuppressBackgroundNoiseLevel</a> ()=0</td></tr>
+<tr class="memdesc:a1dae72b61db9168107ed47003ef0391a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the suppress background noise level.  <a href="#a1dae72b61db9168107ed47003ef0391a">More...</a><br /></td></tr>
 <tr class="separator:a1dae72b61db9168107ed47003ef0391a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb0d710466f704d8b168a8ad1991af0b"><td class="memItemLeft" align="right" valign="top"><a id="adb0d710466f704d8b168a8ad1991af0b"></a>
-virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SetSuppressBackgroundNoiseLevel</b> (Suppress_Background_Noise_Level level)=0</td></tr>
+<tr class="memitem:adb0d710466f704d8b168a8ad1991af0b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#adb0d710466f704d8b168a8ad1991af0b">SetSuppressBackgroundNoiseLevel</a> (Suppress_Background_Noise_Level level)=0</td></tr>
+<tr class="memdesc:adb0d710466f704d8b168a8ad1991af0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the suppress background noise level.  <a href="#adb0d710466f704d8b168a8ad1991af0b">More...</a><br /></td></tr>
 <tr class="separator:adb0d710466f704d8b168a8ad1991af0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac724e337642392dd60ea1c640a1514c9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ac724e337642392dd60ea1c640a1514c9">EnableSyncButtonsOnHeadset</a> (bool bEnable)=0</td></tr>
+<tr class="memdesc:ac724e337642392dd60ea1c640a1514c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to enable the function of sync buttons on headset or not.  <a href="#ac724e337642392dd60ea1c640a1514c9">More...</a><br /></td></tr>
+<tr class="separator:ac724e337642392dd60ea1c640a1514c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46c5d005c42ddd6f796470f661f0101"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_audio_setting_context.html#ab46c5d005c42ddd6f796470f661f0101">IsSyncButtonsOnHeadsetEnabled</a> ()=0</td></tr>
+<tr class="memdesc:ab46c5d005c42ddd6f796470f661f0101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the sync buttons on headset is enabled or not.  <a href="#ab46c5d005c42ddd6f796470f661f0101">More...</a><br /></td></tr>
+<tr class="separator:ab46c5d005c42ddd6f796470f661f0101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Audio setting interface. </p>
@@ -473,6 +479,41 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 
 </div>
 </div>
+<a id="ac724e337642392dd60ea1c640a1514c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac724e337642392dd60ea1c640a1514c9">&#9670;&nbsp;</a></span>EnableSyncButtonsOnHeadset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::EnableSyncButtonsOnHeadset </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set whether to enable the function of sync buttons on headset or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bEnable</td><td>True means to enable the function, FALSE not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
+
+</div>
+</div>
 <a id="abda8b60c6203ac96e667a864e0f413f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abda8b60c6203ac96e667a864e0f413f4">&#9670;&nbsp;</a></span>GetMicList()</h2>
 
@@ -594,6 +635,34 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1dae72b61db9168107ed47003ef0391a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dae72b61db9168107ed47003ef0391a">&#9670;&nbsp;</a></span>GetSuppressBackgroundNoiseLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Suppress_Background_Noise_Level IAudioSettingContext::GetSuppressBackgroundNoiseLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the suppress background noise level. </p>
+<dl class="section return"><dt>Returns</dt><dd>The suppress background noise level. </dd></dl>
 
 </div>
 </div>
@@ -733,7 +802,7 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 </div><div class="memdoc">
 
 <p>Check whether the echo cancellation is enabled or not. </p>
-<dl class="section return"><dt>Returns</dt><dd>If it is TRUE, it means the echo cancellation is enabled </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If it is TRUE, it means the echo cancellation is enabled. </dd></dl>
 
 </div>
 </div>
@@ -846,6 +915,34 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
 
 <p>Get the flag to enable/disable to prompt when the user joins the meeting using the third party audio. </p>
 <dl class="section return"><dt>Returns</dt><dd>Enabled or disabled. </dd></dl>
+
+</div>
+</div>
+<a id="ab46c5d005c42ddd6f796470f661f0101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46c5d005c42ddd6f796470f661f0101">&#9670;&nbsp;</a></span>IsSyncButtonsOnHeadsetEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IAudioSettingContext::IsSyncButtonsOnHeadsetEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether the sync buttons on headset is enabled or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>If it is TRUE, it means the sync buttons on headset is enabled </dd></dl>
 
 </div>
 </div>
@@ -1042,6 +1139,41 @@ virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c89
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="adb0d710466f704d8b168a8ad1991af0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0d710466f704d8b168a8ad1991af0b">&#9670;&nbsp;</a></span>SetSuppressBackgroundNoiseLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> IAudioSettingContext::SetSuppressBackgroundNoiseLevel </td>
+          <td>(</td>
+          <td class="paramtype">Suppress_Background_Noise_Level&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the suppress background noise level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The new suppress background noise level to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is SDKErr_Success. Otherwise failed. To get extended error information, see <a class="el" href="zoom__sdk__def_8h.html#aea74527af3b9f22cf00d38080c896036">SDKError</a> enum. </dd></dl>
 
 </div>
 </div>

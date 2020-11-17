@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -204,6 +204,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4c885326c06e5316f5b62664c347833"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_b_o_controller.html">IMeetingBOController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#ae4c885326c06e5316f5b62664c347833">GetMeetingBOController</a> ()=0</td></tr>
 <tr class="memdesc:ae4c885326c06e5316f5b62664c347833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Breakout Room controller.  <a href="#ae4c885326c06e5316f5b62664c347833">More...</a><br /></td></tr>
 <tr class="separator:ae4c885326c06e5316f5b62664c347833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c87db1c8a341febd7edc5b90f58a9ea"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_meeting_interpretation_controller.html">IMeetingInterpretationController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_meeting_service.html#a4c87db1c8a341febd7edc5b90f58a9ea">GetMeetingInterpretationController</a> ()=0</td></tr>
+<tr class="memdesc:a4c87db1c8a341febd7edc5b90f58a9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Interpretation controller.  <a href="#a4c87db1c8a341febd7edc5b90f58a9ea">More...</a><br /></td></tr>
+<tr class="separator:a4c87db1c8a341febd7edc5b90f58a9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Meeting Service Interface. </p>
@@ -493,6 +496,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Get meeting information. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is the meeting information. Otherwise returns NULL. For more details, see <a class="el" href="class_i_meeting_info.html">IMeetingInfo</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a4c87db1c8a341febd7edc5b90f58a9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c87db1c8a341febd7edc5b90f58a9ea">&#9670;&nbsp;</a></span>GetMeetingInterpretationController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_i_meeting_interpretation_controller.html">IMeetingInterpretationController</a>* IMeetingService::GetMeetingInterpretationController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Interpretation controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the function succeeds, the return value is a pointer to <a class="el" href="class_i_meeting_interpretation_controller.html" title="Meeting interpretation controller interface. ">IMeetingInterpretationController</a>. Otherwise returns NULL. </dd></dl>
 
 </div>
 </div>

@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="zoom.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ZOOM Windows SDK
-   &#160;<span id="projectnumber">5.2.41727.0928</span>
+   &#160;<span id="projectnumber">5.2.42037.1112</span>
    </div>
   </td>
  </tr>
@@ -156,6 +156,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a623fb4f7021e1b067b4838333a4c6c01"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structtag_webinar_attendee_status.html">WebinarAttendeeStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a623fb4f7021e1b067b4838333a4c6c01">GetWebinarAttendeeStauts</a> ()=0</td></tr>
 <tr class="memdesc:a623fb4f7021e1b067b4838333a4c6c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the webinar status of the user specified by the current information.  <a href="#a623fb4f7021e1b067b4838333a4c6c01">More...</a><br /></td></tr>
 <tr class="separator:a623fb4f7021e1b067b4838333a4c6c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939b9635fb72b1f7afdf063ce6e0b19a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a939b9635fb72b1f7afdf063ce6e0b19a">IsInterpreter</a> ()=0</td></tr>
+<tr class="memdesc:a939b9635fb72b1f7afdf063ce6e0b19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the user specified by the current information is a interpreter or not.  <a href="#a939b9635fb72b1f7afdf063ce6e0b19a">More...</a><br /></td></tr>
+<tr class="separator:a939b9635fb72b1f7afdf063ce6e0b19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642d7bc6629acdc35f9a45f8f36f5563"><td class="memItemLeft" align="right" valign="top">virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_user_info.html#a642d7bc6629acdc35f9a45f8f36f5563">GetInterpreterActiveLanguage</a> ()=0</td></tr>
+<tr class="memdesc:a642d7bc6629acdc35f9a45f8f36f5563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the active language, if the user is a interpreter.  <a href="#a642d7bc6629acdc35f9a45f8f36f5563">More...</a><br /></td></tr>
+<tr class="separator:a642d7bc6629acdc35f9a45f8f36f5563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>User information interface. </p>
@@ -213,6 +219,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the Mic level of the user corresponding to the current information. </p>
 <dl class="section return"><dt>Returns</dt><dd>The mic level of the user. </dd></dl>
+
+</div>
+</div>
+<a id="a642d7bc6629acdc35f9a45f8f36f5563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642d7bc6629acdc35f9a45f8f36f5563">&#9670;&nbsp;</a></span>GetInterpreterActiveLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const wchar_t* IUserInfo::GetInterpreterActiveLanguage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the active language, if the user is a interpreter. </p>
+<dl class="section return"><dt>Returns</dt><dd>If success, the return value is the active language abbreviation, Otherwise the return value is ZERO(0). </dd></dl>
 
 </div>
 </div>
@@ -465,6 +499,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Determine whether the member corresponding with the current information is the host or not. </p>
 <dl class="section return"><dt>Returns</dt><dd>TRUE indicates the host. </dd></dl>
+
+</div>
+</div>
+<a id="a939b9635fb72b1f7afdf063ce6e0b19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939b9635fb72b1f7afdf063ce6e0b19a">&#9670;&nbsp;</a></span>IsInterpreter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IUserInfo::IsInterpreter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether the user specified by the current information is a interpreter or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE indicates that the specified user is a interpreter, otherwise not. </dd></dl>
 
 </div>
 </div>

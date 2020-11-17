@@ -2,9 +2,11 @@ var searchData=
 [
   ['accept',['Accept',['../class_i_request_start_audio_handler.html#a0565e25525af95bd01919e981dd5d843',1,'IRequestStartAudioHandler::Accept()'],['../class_i_request_start_video_handler.html#a3f0f0513aee953e27516341156d7110b',1,'IRequestStartVideoHandler::Accept()']]],
   ['addbgimage',['AddBGImage',['../class_i_virtual_b_g_setting_context.html#a3a48ed0354b785ad389e9d2e1a8ced05',1,'IVirtualBGSettingContext']]],
+  ['addbgvideo',['AddBGVideo',['../class_i_virtual_b_g_setting_context.html#a0a7a497a3d2f05b62385cb8dd9dfa8f3',1,'IVirtualBGSettingContext']]],
   ['addcustomizedpictureresource',['AddCustomizedPictureResource',['../class_i_customized_resource_helper.html#a8c7766166e0e1019621437be31607061',1,'ICustomizedResourceHelper']]],
   ['addcustomizedstringresource',['AddCustomizedStringResource',['../class_i_customized_resource_helper.html#a687a3184c4f515f9204ccef45b3cdaa4',1,'ICustomizedResourceHelper']]],
   ['addcustomizedurlresource',['AddCustomizedURLResource',['../class_i_customized_resource_helper.html#a8450215f576f54fcd9bc03c72ab4b2ea',1,'ICustomizedResourceHelper']]],
+  ['addinterpreter',['AddInterpreter',['../class_i_meeting_interpretation_controller.html#ab6b17e0bf72b757a8fd5cfe65d242e0d',1,'IMeetingInterpretationController']]],
   ['addquestion',['AddQuestion',['../class_i_meeting_q_a_controller.html#a3f21c9c6b2207b89d4123e867bba2926',1,'IMeetingQAController']]],
   ['addref',['AddRef',['../class_audio_raw_data.html#a79ca03079e4244901bb1ee4ce185ea33',1,'AudioRawData::AddRef()'],['../class_y_u_v_raw_data_i420.html#a1306075855970587e256f3a642010d1f',1,'YUVRawDataI420::AddRef()']]],
   ['addvideosourcetoreclist',['AddVideoSourceToRecList',['../class_i_customized_local_recording_layout_helper.html#a0bada5e6e82b4909130904a77d9f6d54',1,'ICustomizedLocalRecordingLayoutHelper']]],
