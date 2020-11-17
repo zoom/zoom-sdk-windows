@@ -103,3 +103,10 @@ public:
 	virtual void onShowMoreMenuWindow(int x, int y) = 0;
 	virtual void onShowCameraControlWindow() = 0;
 };
+
+enum bkItemType
+{
+	virtualbackground_type_none = 0,
+	virtualbackground_type_image,
+	virtualbackground_type_video,
+};

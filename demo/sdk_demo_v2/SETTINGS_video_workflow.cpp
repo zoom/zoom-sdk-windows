@@ -138,7 +138,7 @@ ZOOM_SDK_NAMESPACE::SDKError CSDKVideoSettingsWorkFlow::EnableHardwareEncode(boo
 	if(m_pVideoSettingsContext)
 	{
 		ZOOM_SDK_NAMESPACE::SDKError err = ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS;
-		err = m_pVideoSettingsContext->EnableHardwareEncode(bEnable);
+		err = m_pVideoSettingsContext->EnableHardwareEncode(bEnable, ZOOM_SDK_NAMESPACE::VIDEO_HARDWARE_ENCODE_SENDING);
 		return err;
 	}
 	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;
@@ -230,7 +230,7 @@ bool CSDKVideoSettingsWorkFlow::IsHardwareEncodeEnabled()
 {
 	if(m_pVideoSettingsContext)
 	{
-		bool bChecked = m_pVideoSettingsContext->IsHardwareEncodeEnabled();
+		bool bChecked = m_pVideoSettingsContext->IsHardwareEncodeEnabled(ZOOM_SDK_NAMESPACE::VIDEO_HARDWARE_ENCODE_SENDING);
 		return bChecked;
 	}
 	return false;

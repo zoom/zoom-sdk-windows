@@ -51,6 +51,7 @@ public:
 	virtual void onLayoutNotification(RECT wnd_client_rect);
 	virtual void onVideoRenderElementDestroyed(ZOOM_SDK_NAMESPACE::IVideoRenderElement* pElement);
 	virtual void onVideoContainerWindowMsgNotification(UINT uMsg, WPARAM wParam, LPARAM lParam);
+	virtual void onSubscribeUserFail(int iErrorCode, ZOOM_SDK_NAMESPACE::IVideoRenderElement* pElement) {}
 
 	virtual void onSharingContentStartRecving();
 	virtual void onSharingSourceUserIDNotification(unsigned int userid);

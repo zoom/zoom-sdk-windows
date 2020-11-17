@@ -69,6 +69,50 @@ HMACSHA256(
 ```
 You do not need to secret base64 encoded your signature. Once the JWT token is generated, please do not reveal it or publish it. **It is highly recommended to handle your SDK key and secret and generate JWT in a backend server to be consumed by your application. Do not generate JWT in a production application.**
 
+## 2020-11-17 @ v5.2.42037.1112
+
+## Added:
+* Added new feature for supporting language interpreters within meetings. For more information regarding this feature, please visit https://support.zoom.us/hc/en-us/articles/360034919791-Language-interpretation-in-meetings-and-webinars  
+The new interfaces can be found in `meeting_interpretation_interface.h`:
+  * `IMeetingService.GetMeetingInterpretationController()`
+
+* Added new interfaces to add/remove a video file as the virtual background.
+  * `IVirtualBGSettingContext.IsAllowToAddNewVBItem`
+  * `IVirtualBGSettingContext.isAllowToRemoveVBItem`
+  * `IVirtualBGSettingContext.AddBGVideo(const wchar_t* file_path)`
+  * `IVirtualBGSettingContext.RemoveBGVideo(IVirtualBGImageInfo* pRemoveVideo)`
+  * `IVirtualBGSettingContext.GetBGVideoList`
+  * `IVirtualBGSettingContext.UseBGVideo(IVirtualBGImageInfo* pImage)`
+  * `IVirtualBGSettingContextEvent.OnVideoThumbReady(const wchar_t* file_path)`
+  * `IVirtualBGSettingContextEvent.OnVideoThumbError(const wchar_t* file_path, VBVideoError error)`
+  * `IVirtualBGSettingContextEvent.OnVideoPlayError(const wchar_t* file_path, VBVideoError error)`
+
+* Added new interfaces to configure video settings.
+  * `IVideoSettingContext.EnableHardwareEncode(bool bEnable, VIDEO_HARDWARE_ENCODE_TYPE encodeType)`
+  * `IVideoSettingContext.IsHardwareEncodeEnabled(VIDEO_HARDWARE_ENCODE_TYPE encodeType)`
+  * `IVideoSettingContext.GetFaceBeautyStrengthValue()`
+  * `IVideoSettingContext.SetFaceBeautyStrengthValue(unsigned int beautyStrengthValue)`
+  * `IVideoSettingContext.EnableLightAdaption(bool bEnable, VIDEO_LIGHT_ADAPTION_TYPE lightAdaptionType, double manualValue)`
+  * `IVideoSettingContext.IsLightAdaptionEnabled()`
+  * `IVideoSettingContext.GetLightAdaptionType()`
+  * `IVideoSettingContext.GetLightAdaptionManualValue()`
+
+* Added new interfaces to configure audio settings.
+  * `IAudioSettingContext.GetSuppressBackgroundNoiseLevel()`
+  * `IAudioSettingContext.SetSuppressBackgroundNoiseLevel(Suppress_Background_Noise_Level level)`
+  * `IAudioSettingContext.EnableSyncButtonsOnHeadset(bool bEnable)`
+  * `IAudioSettingContext.IsSyncButtonsOnHeadsetEnabled()`
+
+* Added a new interface to allow user to use the video filter feature.
+  * `ISettingService.GetVideoFilterSettings()`
+
+* Added new callback to notify the end-user that their video subscription failed when using Custom Meeting UI
+  * `ICustomizedVideoContainerEvent.onVideoRenderElementDestroyed(IVideoRenderElement* pElement)`
+
+## Changed & Fixed:
+* Fixed an issue that the `IMeetingChatController.SetParticipantsChatPriviledge` is not working properly.
+* Fixed an issue that unable to send a chat to webinar using `IMeetingChatController.SendChat4WebinarMeeting`
+
 ## 2020-10-09 @ v5.2.41727.0928
 
 ## Added

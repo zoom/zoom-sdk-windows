@@ -15,6 +15,7 @@
 #endif
 #include <shellapi.h>
 #include "Shlobj.h"
+#include <map>
 
 enum settingsAudioTestingType
 {
@@ -251,12 +252,15 @@ public:
 public:
 	int GetCount();
 	ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* GetItem(unsigned int index);
-	void AddItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem);
+	bkItemType GetItemType(unsigned int index);
+	void AddItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem, bkItemType itemType);
 	ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* GetImageInfoByName(std::wstring imageName);
+	bkItemType GetItemTypeByName(std::wstring imageName);
 	void RemoveItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem);
 	void ClearAll();
 protected:
 	std::vector<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo*> m_pImageList;
+	std::map<int, bkItemType> m_mapIndexType;
 };
 
 class CSDKVirtualBGSettingsUIGroup : public CSDKVirtualBGUIEvent
@@ -284,7 +288,7 @@ public:
 	}
 	void Notify( TNotifyUI&  msg);
 
-	void DoAddImageBtnClick();
+	void DoAddImageBtnClick(bkItemType itemType);
 	void DoRemoveImageBtnClick();
 	void DoPickColorBtnClick();
 	void DoHasVirtualBGChkClick();
@@ -301,6 +305,7 @@ private:
 	CSDKVirtualBGSettingsWorkFlow m_vbgSettingsWorkFlow;
 	CSDKSettingsUIMgr* m_parentFrame;
 	CButtonUI* m_btnAddImage;
+	CButtonUI* m_btnAddVideo;
 	CButtonUI* m_btnRemoveImage;
 	CButtonUI* m_btnPickColor;
 	DWORD	m_dwPickedColor;

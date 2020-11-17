@@ -1,7 +1,7 @@
 /*!
 * \file meeting_breakout_rooms_interface.h
 * \brief Meeting Service BreakoutRooms Interface
-* 
+* \This interface is will be deprecated, please use new version: meeting_breakout_rooms_interface_v2.h
 */
 #ifndef _MEETING_BreakoutRooms_INTERFACE_H_
 #define _MEETING_BreakoutRooms_INTERFACE_H_
@@ -9,6 +9,7 @@
 
 BEGIN_ZOOM_SDK_NAMESPACE
 
+/// \deprecated This interface will be deprecated, please stop using it. 
 /// \brief Meeting breakout rooms information interface.
 class IBreakoutRoomsInfo
 {
@@ -25,6 +26,7 @@ public:
 	virtual const wchar_t* GetBreakoutRoomName() = 0;
 };
 
+/// \deprecated This interface will be deprecated, please stop using it. 
 /// \brief Meeting Breakout Room callback event
 class IMeetingBreakoutRoomsEvent
 {
@@ -35,6 +37,7 @@ public:
 	virtual void OnBreakoutRoomsStartedNotification(const wchar_t* stBID) = 0;
 };
 
+/// \deprecated This interface will be deprecated, please stop using it. 
 /// \brief Breakout Rooms controller interface
 ///
 class IMeetingBreakoutRoomsController

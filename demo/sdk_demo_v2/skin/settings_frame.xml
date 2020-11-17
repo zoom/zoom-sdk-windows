@@ -250,15 +250,17 @@
 		  <VerticalLayout name="panel_Virtual_background_Settings" visible="false">
 				<Container name="container_vb_video_preview" height="270" >
 				</Container>
-				<Control height="25"/>
+				<Control height="30"/>
 				<HorizontalLayout name="panel_virtual_buttons" visiable="true" height="35" align="center">
-					<Control width="35"/>
-					<Button name="btn_AddImage" text="Add Image" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="100"/>
-					<Control width="80"/>
-					<Button name="btn_RemoveImage" text="Remove Image" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="100"/>
-					<Control width="80"/>
-					<Button name="btn_PickColor" text="Pick Color" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="100"/>
-					<Control width="35"/>
+					<Control width="25"/>
+					<Button name="btn_AddImage" text="Add Image" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="80"/>
+					<Control width="50"/>
+					<Button name="btn_AddVideo" text="Add Video" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="80"/>
+					<Control width="50"/>
+					<Button name="btn_RemoveImage" text="Remove Item" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="80"/>
+					<Control width="50"/>
+					<Button name="btn_PickColor" text="Pick Color" textcolor="#FF000000" font="2" borderround="15,15" height="30" width="80"/>
+					<Control width="30"/>
 				</HorizontalLayout>
 				<Control height="25"/>
 				<HorizontalLayout name="panel_virtual_Images_list" visiable="true" height="220">

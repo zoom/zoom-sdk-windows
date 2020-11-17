@@ -408,6 +408,20 @@ typedef enum
 	PREVIEW_VIDEO_ROTATION_ACTION_ANTI_CLOCK90///<Rotate to the right.
 } PREVIEW_VIDEO_ROTATION_ACTION, *PPREVIEW_VIDEO_ROTATION_ACTION;
 
+typedef enum
+{
+	VIDEO_HARDWARE_ENCODE_RECEIVING = 0,
+	VIDEO_HARDWARE_ENCODE_SENDING,
+	VIDEO_HARDWARE_ENCODE_PROCESSING,
+}VIDEO_HARDWARE_ENCODE_TYPE;
+
+typedef enum 
+{
+	Light_Adaption_None = 0,
+	Light_Adaption_Auto,
+	Light_Adaption_Manual,
+}VIDEO_LIGHT_ADAPTION_TYPE;
+
 /// \brief Video Device test callback event.
 ///
 class ITestVideoDeviceHelperEvent
@@ -518,6 +532,36 @@ public:
 	/// \return Enabled or disabled.
 	virtual bool IsFaceBeautyEffectEnabled() = 0;
 
+	/// \brief Get the video facial beauty strength value.
+	/// \return The video facial beauty strength value. If the video facial beauty effect is disabled, the return value is 0.
+	virtual unsigned int GetFaceBeautyStrengthValue() = 0;
+
+	/// \brief Set the video facial beauty strength value.
+	/// \param beautyStrengthValue The value is only effective when the video facial beauty effect is enabled. The value should between 0 to 100. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError SetFaceBeautyStrengthValue(unsigned int beautyStrengthValue) = 0;
+
+	/// \brief Enable or disable the light adaption of the video.
+	/// \param bEnable TRUE indicates to enable the light adaption of the video.
+	/// \param lightAdaptionType TRUE indicates the  type to adjust the low light. If bEnable is TRUE, the default value of lightAdaptionType is Light_Adaption_Auto.
+	/// \param manualValue The value is only effective when the bAutoAdaption is FALSE. The value should between 0 to 256. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableLightAdaption(bool bEnable, VIDEO_LIGHT_ADAPTION_TYPE lightAdaptionType, double manualValue) = 0;
+
+	/// \brief Get the flag to enable/disable the light adaption of the video.
+	/// \return Enabled or disabled.
+	virtual bool IsLightAdaptionEnabled() = 0;
+
+	/// \brief Get the light adaption type of the video.
+	/// \return The light adaption type. If the light adaption is disabled, the return value is Light_Adaption_None.
+	virtual VIDEO_LIGHT_ADAPTION_TYPE GetLightAdaptionType() = 0;
+
+	/// \brief Get the manual setting value for the light adaption of the video.
+	/// \return The manual setting value. If the light adaption is disabled or the type of light adaption is AUTO, the return value is 0.
+	virtual double GetLightAdaptionManualValue() = 0;
+
 	/// \brief Enable or disable HD video.
 	/// \param bEnable TRUE indicates to enable the HD video.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
@@ -572,11 +616,11 @@ public:
 	/// \param bEnable TRUE indicates to enable the hardware acceleration.
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
-	virtual SDKError EnableHardwareEncode(bool bEnable) = 0;
+	virtual SDKError EnableHardwareEncode(bool bEnable, VIDEO_HARDWARE_ENCODE_TYPE encodeType) = 0;
 
 	/// \brief Get the flag to enable/disable the hardware acceleration.
 	/// \return Enabled or disabled.
-	virtual bool IsHardwareEncodeEnabled() = 0;
+	virtual bool IsHardwareEncodeEnabled(VIDEO_HARDWARE_ENCODE_TYPE encodeType) = 0;
 
 	/// \brief Enable or disable to show the participants in Gallery View up to 49 per screen.
 	/// \param bEnable TRUE indicates to show the participants in Gallery View up to 49 per screen.
@@ -784,11 +828,28 @@ public:
 	virtual SDKError EnableEchoCancellation(bool bEnable) = 0;
 	
 	/// \brief Check whether the echo cancellation is enabled or not.
-	/// \return If it is TRUE, it means the echo cancellation is enabled 
+	/// \return If it is TRUE, it means the echo cancellation is enabled.
 	virtual bool IsEchoCancellationEnabled() = 0;
-	
+
+	/// \brief Get the suppress background noise level.
+	/// \return The suppress background noise level.
 	virtual Suppress_Background_Noise_Level GetSuppressBackgroundNoiseLevel() = 0;
+
+	/// \brief Set the suppress background noise level.
+	/// \param level The new suppress background noise level to be set.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError SetSuppressBackgroundNoiseLevel(Suppress_Background_Noise_Level level) = 0;
+
+	/// \brief Set whether to enable the function of sync buttons on headset or not. 
+	/// \param bEnable True means to enable the function, FALSE not.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError EnableSyncButtonsOnHeadset(bool bEnable) = 0;
+
+	/// \brief Check whether the sync buttons on headset is enabled or not.
+	/// \return If it is TRUE, it means the sync buttons on headset is enabled
+	virtual bool IsSyncButtonsOnHeadsetEnabled() = 0;
 };
 
 /// \brief Recording setting context callback event.
@@ -1055,7 +1116,7 @@ public:
 	/// \param bDisable TRUE indicates to hide the account setting page.
 	virtual void DisableAccountSettingTabPage(bool bDisable) = 0;
 
-	/// \brief Custome the tab page show or hide
+	/// \brief Custom the tab page show or hide
 	/// \param showOption True indicates to show the corresponding tab page for each item.
 	virtual void ConfSettingDialogShownTabPage(SettingDlgShowTabPageOption showOption) = 0;
 };
@@ -1081,6 +1142,16 @@ public:
 	virtual ~IVirtualBGImageInfo() {};
 };
 
+enum VBVideoError {
+	VB_VideoError_None = 0,
+	VB_VideoError_UnknowFormat,
+	VB_VideoError_ResolutionBig,
+	VB_VideoError_ResolutionHigh720P,
+	VB_VideoError_ResolutionLow,
+	VB_VideoError_PlayError,
+	VB_VideoError_OpenError,
+};
+
 /// \brief Virtual background context Callback Event.
 ///
 class IVirtualBGSettingContextEvent
@@ -1095,6 +1166,20 @@ public:
 
 	/// \brief Callback event of notification that the virtual background image is changed.
 	virtual void onSelectedVBImageChanged() = 0;
+
+	/// \brief Callback event of notification that creating the thumb of a virtual background video is success.
+	/// \param file_path The file name with full path which you can use to generate your thumb for the virtual background video.
+	virtual void OnVideoThumbReady(const wchar_t* file_path);
+
+	/// \brief Callback event of notification that creating the thumb of a virtual background video is failed.
+	/// \param file_path The file name with full path which sdk generates from the virtual background video.
+	/// \param error The fail reason.
+	virtual void OnVideoThumbError(const wchar_t* file_path, VBVideoError error);
+
+	/// \brief Callback event of notification that playing a virtual background video is failed.
+	/// \param file_path The file name with full path which sdk generates from the virtual background video.
+	/// \param error The fail reason.
+	virtual void OnVideoPlayError(const wchar_t* file_path, VBVideoError error);
 };
 
 /// \brief Virtual background setting interface.
@@ -1126,6 +1211,14 @@ public:
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	///\remarks If the machine can not support smart virtual background feature, Calling of this interface with parameter 'FALSE'will return SDKERR_WRONG_USEAGE.
 	virtual SDKError SetUsingGreenScreen(bool bUse) = 0;
+
+	/// \brief Determine if the adding new virtual background item feature is supported by the meeting
+	/// \return TRUE indicates that the meeting supports adding new virtual background item feature.
+	virtual bool IsAllowToAddNewVBItem() = 0;
+
+	/// \brief Determine if the removing virtual background item feature is supported by the meeting
+	/// \return TRUE indicates that the meeting supports removing virtual background item feature.
+	virtual bool isAllowToRemoveVBItem() = 0;
 
 	/// \brief Add a new image as the virtual background image and to the image list.
 	/// \param file_path Specify the file name of the image. It must be the full path with the file name.
@@ -1159,6 +1252,128 @@ public:
 	/// \return If the function succeeds, the return value is SDKErr_Success.
 	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
 	virtual SDKError BeginSelectReplaceVBColor() = 0;
+
+	/// \brief Add a new video as the virtual background video and to the video list.
+	/// \param file_path Specify the file name of the video. It must be the full path with the file name.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError AddBGVideo(const wchar_t* file_path) = 0;
+
+	/// \brief Remove a video from the virtual background video list.
+	/// \param pRemoveVideo Specify the video to remove. To get extended error information, see \link IVirtualBGImageInfo \endlink enum.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError RemoveBGVideo(IVirtualBGImageInfo* pRemoveVideo) = 0;
+
+	/// \brief Get the list of the virtual background videoes.
+	/// \return If there are videoes in the list, the return value is a list of the poiters to IVirtualBGImageInfo.
+	///Otherwise return NULL. To get extended error information, see \link IVirtualBGImageInfo \endlink enum.
+	virtual IList<IVirtualBGImageInfo* >* GetBGVideoList() = 0;
+
+	/// \brief Specify a video to be the virtual background video.
+	/// \param pVideo Specify the video to use. To get extended error information, see \link IVirtualBGImageInfo \endlink enum.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError UseBGVideo(IVirtualBGImageInfo* pImage) = 0;
+
+	/// \brief Get the pointer to ITestVideoDeviceHelper which is used to preview the video with virtual background image.
+	/// \return If the function succeeds, the return value is the pointer to ITestVideoDeviceHelper.
+	///Otherwise failed, returns NULL.
+	///For more details, see \link ITestVideoDeviceHelper \endlink.
+	virtual ITestVideoDeviceHelper* GetTestVideoDeviceHelper() = 0;
+};
+
+////////////
+typedef enum{	ZoomSDKVideoEffectType_None = 0,	ZoomSDKVideoEffectType_Filter = 1,	ZoomSDKVideoEffectType_Frame = 2,	ZoomSDKVideoEffectType_Sticker = 4,}ZoomSDKVideoEffectType;
+
+/// \brief Video filter image information interface.
+///
+class IVideoFilterImageInfo
+{
+public:
+	/// \brief Determine the usage of current image.
+	/// \return TRUE indicates that current image is used as the video filter image.
+	virtual bool isSelected() = 0;
+
+	/// \brief Get the file path of current image.
+	/// \return If the function succeeds, the return value is the file path of current image.
+	///Otherwise failed, the return value is NULL.
+	virtual const wchar_t* GetImageFilePath() = 0;
+
+	/// \brief Get the name of current image.
+	/// \return If the function succeeds, the return value is the name of current image.
+	///Otherwise failed, the return value is NULL.
+	virtual const wchar_t* GetImageName() = 0;
+
+	/// \brief Get the type of current image.
+	/// \return If the function succeeds, the return value is the type of current image. 
+	/// \remark If select none as video filter, the type value will be ZoomSDKVideoEffectType_None.
+	virtual ZoomSDKVideoEffectType GetType() = 0;
+
+	/// \brief Get the index of current image.
+	/// \return If the function succeeds, the return value is the index of current image.
+	/// \remark If select none as video filter, the index value will be -1.
+	virtual int GetIndex() = 0;
+
+	virtual ~IVideoFilterImageInfo() {};
+};
+
+/// \brief Video filter context Callback Event.
+///
+class IVideoFilterSettingContextEvent
+{
+public:
+	/// \brief Callback event of notification that the thumbnail of the video filter item has been download
+	/// \param type The type of the video filter item.
+	/// \param index The index of the video filter item.
+	virtual void onVideoFilterItemDataDownloaded(ZoomSDKVideoEffectType type, int index) = 0;
+
+	/// \brief Callback event of notification that the selected video filter item needs to download.
+	/// \param type The type of the selected video filter item.
+	/// \param index The index of the selected video filter item. 
+	virtual void onVideoFilterItemDataNeedPrepare(ZoomSDKVideoEffectType type, int index) = 0;
+
+	/// \brief Callback event of notification that the selected video filter item whether has been downloaded successfully.
+	/// \param type The type of the selected video filter item.
+	/// \param index The index of the selected video filter item. 
+	/// \param bSuccess TRUE indicates the selected video filter item has been downloaded successfully.
+	virtual void onVideoFilterItemDataReady(bool bSuccess, ZoomSDKVideoEffectType type, int index) = 0;
+};
+
+/// \brief Video filter setting interface.
+class IVideoFilterSettingContext
+{
+public:
+	/// \brief Video filter callback handler. 
+	/// \param pEvent A pointer to the IVideoFilterSettingContextEvent that receives video filter event. 
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	/// \remarks Call the function before using any other interface of the same class.
+	virtual SDKError SetVideoFilterEvent(IVideoFilterSettingContextEvent* pEvent) = 0;
+
+
+	/// \brief Determine if the video filter feature is supported by the meeting.
+	/// \return TRUE indicates that the meeting supports the video filter feature.
+	virtual bool IsSupportVideoFilter() = 0;
+
+	/// \brief Determine if the video filter feature is enabled.
+	/// \return TRUE indicates the video filter feature is enabled.
+	virtual bool IsVideoFilterEnabled() = 0;
+
+	/// \brief Determine if the video filter feature is locked.
+	/// \return TRUE indicates the video filter feature is locked.
+	virtual bool IsVideoFilterLocked() = 0;
+
+	/// \brief Get the list of the video filter images.
+	/// \return If there are images in the list, the return value is a list of the poiters to IVideoFilterImageInfo.
+	///Otherwise return NULL. To get extended information, see \link IVideoFilterImageInfo \endlink enum.
+	virtual IList<IVideoFilterImageInfo* >* GetVideoFilterImageList() = 0;
+
+	/// \brief Specify an image to be the video filter image.
+	/// \param pImage Specify the image to use. To get extended information, see \link IVideoFilterImageInfo \endlink enum.
+	/// \return If the function succeeds, the return value is SDKErr_Success.
+	///Otherwise failed. To get extended error information, see \link SDKError \endlink enum.
+	virtual SDKError UseVideoFilterImage(IVideoFilterImageInfo* pImage) = 0;
 
 	/// \brief Get the pointer to ITestVideoDeviceHelper which is used to preview the video with virtual background image.
 	/// \return If the function succeeds, the return value is the pointer to ITestVideoDeviceHelper.
@@ -1231,6 +1446,8 @@ public:
 	///Otherwise failed, returns NULL.
 	///For more details, see \link IVirtualBGSettingContext \endlink.
 	virtual IVirtualBGSettingContext* GetVirtualBGSettings() = 0;
+
+	virtual IVideoFilterSettingContext* GetVideoFilterSettings() = 0;
 };
 END_ZOOM_SDK_NAMESPACE
 #endif

@@ -113,6 +113,14 @@ public:
 	/// \return The status of the specified user. For more details, see \link WebinarAttendeeStatus \endlink structure.
 	virtual WebinarAttendeeStatus* GetWebinarAttendeeStauts() = 0;
 	
+	/// \brief Determine whether the user specified by the current information is a interpreter or not.
+	/// \return TRUE indicates that the specified user is a interpreter, otherwise not.
+	virtual bool IsInterpreter() = 0;
+
+	/// \brief Get the active language, if the user is a interpreter.
+	/// \return If success, the return value is the active language abbreviation, Otherwise the return value is ZERO(0).
+	virtual const wchar_t* GetInterpreterActiveLanguage() = 0;
+
 	virtual ~IUserInfo(){};
 };
 

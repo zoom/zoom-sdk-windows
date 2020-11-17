@@ -83,23 +83,33 @@ ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::SetUsingGreenScreen(
 	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;
 }
 
-ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::AddBGImage(const wchar_t* file_path)
+ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::AddBGImage(const wchar_t* file_path, bkItemType itemType)
 {
 	if(m_pVBGSettingContext)
 	{
 		ZOOM_SDK_NAMESPACE::SDKError err = ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS;
-		err = m_pVBGSettingContext->AddBGImage(file_path);
+		if (virtualbackground_type_image == itemType)
+			err = m_pVBGSettingContext->AddBGImage(file_path);
+		else if (virtualbackground_type_video == itemType)
+			err = m_pVBGSettingContext->AddBGVideo(file_path);
+		else
+			err = ZOOM_SDK_NAMESPACE::SDKERR_INVALID_PARAMETER;
 		return err;
 	}
 	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;
 }
 
-ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::RemoveBGImage(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pRemoveImage)
+ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::RemoveBGImage(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pRemoveImage, bkItemType itemType)
 {
 	if(m_pVBGSettingContext)
 	{
 		ZOOM_SDK_NAMESPACE::SDKError err = ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS;
-		err = m_pVBGSettingContext->RemoveBGImage(pRemoveImage);
+		if (virtualbackground_type_image == itemType)
+			err = m_pVBGSettingContext->RemoveBGImage(pRemoveImage);
+		else if (virtualbackground_type_video == itemType)
+			err = m_pVBGSettingContext->RemoveBGVideo(pRemoveImage);
+		else
+			err = ZOOM_SDK_NAMESPACE::SDKERR_INVALID_PARAMETER;
 		return err;
 	}
 	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;
@@ -114,12 +124,26 @@ ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* >* CSDKVirtua
 	return NULL;
 }
 
-ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::UseBGImage(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImage)
+ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* >* CSDKVirtualBGSettingsWorkFlow::GetBGVideoList()
+{
+	if (m_pVBGSettingContext)
+	{
+		return m_pVBGSettingContext->GetBGVideoList();
+	}
+	return NULL;
+}
+
+ZOOM_SDK_NAMESPACE::SDKError CSDKVirtualBGSettingsWorkFlow::UseBGImage(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImage, bkItemType itemType)
 {
 	if(m_pVBGSettingContext)
 	{
 		ZOOM_SDK_NAMESPACE::SDKError err = ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS;
-		err = m_pVBGSettingContext->UseBGImage(pImage);
+		if (virtualbackground_type_image == itemType)
+			err = m_pVBGSettingContext->UseBGImage(pImage);
+		else if (virtualbackground_type_video == itemType)
+			err = m_pVBGSettingContext->UseBGVideo(pImage);
+		else
+			err = ZOOM_SDK_NAMESPACE::SDKERR_INVALID_PARAMETER;
 		return err;
 	}
 	return ZOOM_SDK_NAMESPACE::SDKERR_UNINITIALIZE;

@@ -158,6 +158,8 @@ public:
 	///WM_LBUTTONDBLCLK
 	///WM_KEYDOWN
 	virtual void onWindowMsgNotification(UINT uMsg, WPARAM wParam, LPARAM lParam) = 0;
+
+	virtual void onSubscribeUserFail(int iErrorCode, IVideoRenderElement* pElement) = 0;
 };
 
 /// \brief Video container interface.

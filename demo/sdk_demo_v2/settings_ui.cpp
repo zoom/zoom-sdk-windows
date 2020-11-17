@@ -1337,13 +1337,23 @@ ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* CSDKVBGImageList::GetItem( unsigned int
 		return NULL;
 }
 
-void CSDKVBGImageList::AddItem( ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem )
+bkItemType CSDKVBGImageList::GetItemType(unsigned int index)
+{
+	std::map<int, bkItemType >::iterator itFind = m_mapIndexType.find(index);
+	if (m_mapIndexType.end() != itFind)
+	{
+		return itFind->second;
+	}
+	return virtualbackground_type_none;
+}
+void CSDKVBGImageList::AddItem( ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem, bkItemType itemType)
 {
 	if(m_pImageList.capacity() < m_pImageList.max_size())
 	{
 		if (NULL == elem)
 			return;
 		m_pImageList.push_back(elem);
+		m_mapIndexType.insert(std::pair<int, bkItemType>(m_pImageList.size()-1, itemType));
 	}
 }
 
@@ -1353,13 +1363,21 @@ void CSDKVBGImageList::RemoveItem(ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* elem)
 		return;
 
 	std::vector<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo*>::iterator iter_ = m_pImageList.begin();
-	for (;m_pImageList.end() != iter_; iter_++)
+	for (int i=0;m_pImageList.end() != iter_; iter_++)
 	{
 		if ((*iter_) == elem)
 		{
 			m_pImageList.erase(iter_);
+
+			std::map<int, bkItemType>::iterator itFind = m_mapIndexType.find(i);
+			if (m_mapIndexType.end() != itFind)
+			{
+				m_mapIndexType.erase(itFind);
+			}
+
 			return;
 		}
+		i++;
 	}
 }
 
@@ -1380,6 +1398,20 @@ ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* CSDKVBGImageList::GetImageInfoByName( s
 			return m_pImageList[i];
 	}
 	return NULL;
+}
+
+bkItemType CSDKVBGImageList::GetItemTypeByName(std::wstring imageName)
+{
+	int nCount = GetCount();
+	for (int i = 0; i < nCount; ++i)
+	{
+		const wchar_t* image_name = m_pImageList[i]->GetImageName();
+		if (StrCmpCW(imageName.c_str(), image_name) == 0)
+		{
+			return GetItemType(i);
+		}
+	}
+	return virtualbackground_type_none;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///class CSDKVRecordingSettingsUIGroup
@@ -1415,6 +1447,7 @@ void CSDKVirtualBGSettingsUIGroup::InitWindow(CPaintManagerUI& ui_mgr, CSDKSetti
 	m_parentFrame = main_frame_;
 	m_settingsVBGPage = static_cast<CVerticalLayoutUI*>(ui_mgr.FindControl(_T("panel_Virtual_background_Settings")));
 	m_btnAddImage = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_AddImage")));
+	m_btnAddVideo = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_AddVideo")));
 	m_btnRemoveImage = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_RemoveImage")));
 	m_btnPickColor = static_cast<CButtonUI*>(ui_mgr.FindControl(_T("btn_PickColor")));
 	m_pImageListUI = static_cast<CListUI* >(ui_mgr.FindControl(_T("lst_VBGImages")));
@@ -1448,7 +1481,7 @@ void CSDKVirtualBGSettingsUIGroup::UpdateListUI()
 		m_pVBGImageList->ClearAll();
 
 	GetImageList();
-
+	bool bCanAddNoneItem = true;
 	m_pImageListUI->RemoveAll();
 	if (m_pVBGImageList)
 	{
@@ -1463,17 +1496,18 @@ void CSDKVirtualBGSettingsUIGroup::UpdateListUI()
 			CListTextElementUI* pListElement = new CListTextElementUI;
 			if(NULL == pListElement)
 				continue;
-
-			m_pImageListUI->Add(pListElement);
+			
 			std::wstring strName = pImageInfo->GetImageName();
 			std::wstring strPath = pImageInfo->GetImageFilePath();
-			if(strName == _T(""))
+			if (strName == _T(""))
 			{
 				strName = _T("None");
 				strPath = _T("No file is used");
 			}
+		
+			m_pImageListUI->Add(pListElement);
 			pListElement->SetText(0, strName.c_str());// later can can add file path to the list. Wilmer: to do
-			pListElement->SetText(1, strPath.c_str());
+			pListElement->SetText(1, strPath.c_str());				
 		}
 	}
 }
@@ -1481,14 +1515,23 @@ void CSDKVirtualBGSettingsUIGroup::UpdateListUI()
 void CSDKVirtualBGSettingsUIGroup::GetImageList()
 {
 	ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* >* lst_Image = m_vbgSettingsWorkFlow.GetBGImageList();
+	ZOOM_SDK_NAMESPACE::IList<ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* >* lst_Video = m_vbgSettingsWorkFlow.GetBGVideoList();
 	m_pVBGImageList->ClearAll();
-	int nCount = lst_Image->GetCount();
-	for(int i=0; i<nCount; i++)
+	int nCount = lst_Video->GetCount();
+	for (int i = 0; i < nCount; i++)
 	{
-		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pItem = lst_Image->GetItem(i);
-		if(NULL != pItem)
-			m_pVBGImageList->AddItem(pItem);
+		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pItem = lst_Video->GetItem(i);
+		if (NULL != pItem)
+			m_pVBGImageList->AddItem(pItem, virtualbackground_type_video);
 	}
+	nCount = lst_Image->GetCount();
+	for(int j=0; j<nCount; j++)
+	{
+		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pItem = lst_Image->GetItem(j);
+		if(NULL != pItem)
+			m_pVBGImageList->AddItem(pItem, virtualbackground_type_image);
+	}
+
 }
 
 void CSDKVirtualBGSettingsUIGroup::GetVirtualBGSettingsFlags()
@@ -1512,6 +1555,11 @@ void CSDKVirtualBGSettingsUIGroup::Show()
 			m_parentFrame->SetCurrentPage(m_settingsVBGPage);
 		}
 	}
+	if (m_btnPickColor && m_chkVbgHasGreenBackground)
+	{
+		bool bCheck = m_chkVbgHasGreenBackground->GetCheck();
+		m_btnPickColor->SetEnabled(bCheck);
+	}
 	UpdateListUI();
 	StartTestVideo();
 }
@@ -1533,9 +1581,13 @@ void CSDKVirtualBGSettingsUIGroup::Notify(TNotifyUI& msg)
 {
 	if(msg.sType == _T("click"))
 	{
-		if(msg.pSender == m_btnAddImage)
+		if(msg.pSender == m_btnAddImage )
 		{
-			DoAddImageBtnClick();
+			DoAddImageBtnClick(virtualbackground_type_image);
+		}
+		else if (msg.pSender == m_btnAddVideo)
+		{
+			DoAddImageBtnClick(virtualbackground_type_video);
 		}
 		else if(msg.pSender == m_btnRemoveImage)
 		{
@@ -1569,7 +1621,7 @@ void CSDKVirtualBGSettingsUIGroup::StopTestVideo()
 	m_vbgSettingsWorkFlow.TestVideoStopPreview();
 }
 
-void CSDKVirtualBGSettingsUIGroup::DoAddImageBtnClick()
+void CSDKVirtualBGSettingsUIGroup::DoAddImageBtnClick(bkItemType itemType)
 {
 	//open select file dialog and select an image file, then pass the file path...
 	OPENFILENAME ofn;
@@ -1583,7 +1635,10 @@ void CSDKVirtualBGSettingsUIGroup::DoAddImageBtnClick()
 	ofn.lpstrFile[0] = '\0';
 
 	ofn.nMaxFile = sizeof(szFile);
-	ofn.lpstrFilter = _T("Picture files\0*.bmp;*.png;*.jpg;*.jpe;*.jpeg\0PNG(*.png)\0*.png\0JPEG(*.jpg; *.jpe; *.jpeg)\0*.jpg;*.jpe;*.jpeg\0BMP(*.bmp)\0*.bmp\0\0");
+	if(virtualbackground_type_image == itemType)
+		ofn.lpstrFilter = _T("Picture files\0*.bmp;*.png;*.jpg;*.jpe;*.jpeg\0PNG(*.png)\0*.png\0JPEG(*.jpg; *.jpe; *.jpeg)\0*.jpg;*.jpe;*.jpeg\0BMP(*.bmp)\0*.bmp\0\0");
+	else
+		ofn.lpstrFilter = _T("Video files\0*.mp4;*.mov\0MP4(*.mp4)\0*.mp4\0MOV(*.mov)\0*.mov\0\0");
 	ofn.nFilterIndex = 1;
 	ofn.lpstrFileTitle = NULL;
 	ofn.nMaxFileTitle = 0;
@@ -1596,7 +1651,7 @@ void CSDKVirtualBGSettingsUIGroup::DoAddImageBtnClick()
 	{
 		if(wcsnlen_s(szFile, _countof(szFile)) > 0)
 		{
-			if(ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS == m_vbgSettingsWorkFlow.AddBGImage(szFile))
+			if (ZOOM_SDK_NAMESPACE::SDKERR_SUCCESS == m_vbgSettingsWorkFlow.AddBGImage(szFile, itemType))
 				UpdateListUI();
 		}
 	}
@@ -1609,9 +1664,10 @@ void CSDKVirtualBGSettingsUIGroup::DoRemoveImageBtnClick()
 		if(0 == index)
 			return;
 		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImageInfo = m_pVBGImageList->GetItem(index);
+		bkItemType itemType = m_pVBGImageList->GetItemType(index);
 		if(pImageInfo)
 		{
-			m_vbgSettingsWorkFlow.RemoveBGImage(pImageInfo);
+			m_vbgSettingsWorkFlow.RemoveBGImage(pImageInfo, itemType);
 		}
 	}
 }
@@ -1628,11 +1684,16 @@ void CSDKVirtualBGSettingsUIGroup::DoHasVirtualBGChkClick()
 	{
 		//m_chkVbgHasGreenBackground->SetCheck(!old_status);
 		m_vbgSettingsWorkFlow.SetUsingGreenScreen(!old_status);
+		if (m_btnPickColor)
+		{
+			m_btnPickColor->SetEnabled(!old_status);
+		}
 	}
 	else
 	{
 		m_chkVbgHasGreenBackground->SetCheck(old_status);
 	}
+
 }
 void CSDKVirtualBGSettingsUIGroup::onVBImageDidDownloaded()
 {
@@ -1653,9 +1714,10 @@ void CSDKVirtualBGSettingsUIGroup::UseSelectedImageAsVBG()
 	{
 		int index = m_pImageListUI->GetCurSel();
 		ZOOM_SDK_NAMESPACE::IVirtualBGImageInfo* pImageInfo = m_pVBGImageList->GetItem(index);
+		bkItemType itemType = m_pVBGImageList->GetItemType(index);
 		if(pImageInfo)
 		{
-			m_vbgSettingsWorkFlow.UseBGImage(pImageInfo);
+			m_vbgSettingsWorkFlow.UseBGImage(pImageInfo, itemType);
 		}
 	}
 }
