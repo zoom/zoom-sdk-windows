@@ -108,6 +108,8 @@ The new interfaces can be found in `meeting_interpretation_interface.h`:
 
 * Added new callback to notify the end-user that their video subscription failed when using Custom Meeting UI
   * `ICustomizedVideoContainerEvent.onVideoRenderElementDestroyed(IVideoRenderElement* pElement)`
+  
+* Removed the watermark by default. If you wish to retain the Zoom watermark, please contact us via developersupport@zoom.us.
 
 ## Changed & Fixed:
 * Fixed an issue that the `IMeetingChatController.SetParticipantsChatPriviledge` is not working properly.
